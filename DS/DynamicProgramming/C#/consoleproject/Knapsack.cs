@@ -134,5 +134,34 @@ namespace consoleproject
 
             return false;
         }
+    
+        public static int CountSubsetsWithSum(int[] set, int targetSum)
+        {
+            int n = set.Length;
+            int [,] dp = new int[n+1, targetSum+1];
+
+            //Initialize the first column to true 
+            for(int i=0; i<= n; i++)
+            {
+                dp[i, 0] = 1;
+            }
+
+            for(int i=1; i<=n; i++)
+            {
+                for(int j=1; j<=targetSum; j++)
+                {
+                    if(set[i-1] <= j)
+                    {
+                        dp[i, j] = dp[i-1, j-set[i-1]] + dp[i-1, j];
+                    }
+                    else
+                    {
+                         dp[i, j] = dp[i-1, j];
+                    }
+                }
+            }
+
+            return dp[n, targetSum];
+        }
     }
 }

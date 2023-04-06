@@ -41,6 +41,14 @@ namespace consoleproject
             Console.WriteLine("**************");
             int [] arr = {1, 5, 11, 5};
             Console.WriteLine("EqualSumPartition result : "+ Knapsack.EqualSumPartition(arr));
+
+            Console.WriteLine("**************");
+            int [] arr1 = {2,3,5,6,8,10};
+            int targetSum = 10;
+            Console.WriteLine("EqualSumPartition result : "+ Knapsack.CountSubsetsWithSum(arr1, targetSum));
         }
     }
 }
+
+
+// dotnet run  

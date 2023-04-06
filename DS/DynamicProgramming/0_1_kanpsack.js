@@ -193,6 +193,10 @@ function knapsack_TopDown(capacity, weights, values, n) {
 
    const items = [2, 3, 5, 8, 10];
    const sum = 10;
-   //   output: True/False
+   //   output: No of subset 
+   // {2, 8}, {2, 3, 5}, {10}
+   // Count: 3
+
+   
 
 
