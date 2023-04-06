@@ -1,0 +1,58 @@
+Key concepts of angular
+1. Components
+2. Component interaction
+3. Pipes- inbuilt and custom pipes
+4. Services
+5. Directives- inbuilt and custom
+6. Routing
+7. Dependency Injection and how it is achieved in angular.
+8. Modules
+9. Rxjs
+10. Ngrx (state management)
+11. Content projection
+12. AOT vs JIT
+13. Change detection
+14. Detecting Change to @Input Binding
+15. Example Child and Parent Components
+16. Using a Custom Setter
+17. Using ngOnChanges
+18. Advanced Inter Component Communication
+19. Direct Access to Child
+20. Module/Library Architecture
+
+
+https://www.webagesolutions.com/advanced-components-concepts-in-angular
+https://blog.bitsrc.io/6-concepts-to-master-to-be-an-angular-architect-807314e31ef3
+
+some advanced topics in Angular:
+
+Angular CLI: Angular Command Line Interface (CLI) is a powerful tool that provides a wide range of features to streamline the development process, including scaffolding, building, testing, and deployment.
+
+Reactive Programming: Reactive programming is a powerful programming paradigm that allows developers to build more responsive, scalable, and resilient applications. Angular provides built-in support for reactive programming using RxJS.
+
+Lazy Loading: Lazy loading is a technique used to improve the performance of an Angular application by loading only the required modules and components on demand, rather than loading the entire application at once.
+
+Server-Side Rendering (SSR): Server-side rendering is a technique used to improve the performance and SEO of an Angular application by rendering the HTML on the server-side and sending it to the client, rather than relying on the client to render the page.
+
+NgRx: NgRx is a state management library for Angular applications that provides a predictable state container pattern, inspired by Redux. It helps manage the state of the application in a centralized way, making it easier to build complex applications.
+
+Angular Universal: Angular Universal is a framework for server-side rendering Angular applications. It provides a set of tools and libraries to make it easier to build applications that can be rendered on both the client and server.
+
+Custom Directives: Directives are a powerful feature in Angular that allows developers to extend HTML with custom attributes and tags. Custom directives can be used to create reusable components and to add custom behavior to existing components.
+
+Advanced Forms: Angular provides a powerful and flexible forms module that allows developers to create complex forms with ease. Advanced topics include dynamic forms, form validation, form arrays, and custom form controls.
+
+Angular Animation: Angular provides a powerful animation module that allows developers to add animations to their applications using a declarative syntax.
+
+Performance Optimization: Angular provides several features to optimize the performance of an application, including Ahead-of-Time (AOT) compilation, Tree shaking, and Change Detection Strategies. These features help to reduce the size of the application and improve the rendering speed.
+
+
+Angular JS
+1. Flow of control between View and controller
+2. Routing
+3. Directives, Factory and Service
+4. Scope and RootScope
+5. Controllers
+6. Expressions
+7. Digest cycle
+

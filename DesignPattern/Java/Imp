@@ -1,0 +1,80 @@
+https://www.guru99.com/java-design-patterns-interview-questions.html
+https://www.javatpoint.com/java-design-pattern-interview-questions
+https://www.interviewbit.com/design-patterns-interview-questions/
+https://www.java67.com/2012/09/top-10-java-design-pattern-interview-question-answer.html
+https://www.simplilearn.com/java-design-pattern-interview-questions-article
+https://mindmajix.com/design-patterns-interview-questions
+https://javarevisited.blogspot.com/2012/06/20-design-pattern-and-software-design.html#axzz7wmf5Giop
+https://www.javaguides.net/2019/01/java-design-patterns-interview-questions-answers.html
+https://in.interviewkickstart.com/?utm_source=google&utm_medium=ppc&utm_campaign=Search_NB_Generic_NonTech_25_34_INDIA__17628314819&utm_content=138694032936__c&utm_term=interview%20prep%20questions__607278025095&hsa_acc=5832181739&hsa_cam=17628314819&hsa_grp=138694032936&hsa_ad=607278025095&hsa_src=g&hsa_tgt=aud-1651812501003:kwd-299541174611&hsa_kw=interview%20prep%20questions&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaUhaGfcbc0QtHH4OYyScdvAYU9f_Fot2L34pdSjerAnT1DlQZjNcf8aAoVIEALw_wcB
+https://www.algoexpert.io/systems/product?r=ads&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaV1VNT-rClcqk-eViLYdnpqpZ0LMajlUOPyP_H2_76cPjZdA6apta4aApSMEALw_wcB
+https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers?utm_campaign=system_design&utm_source=google&utm_medium=ppc&utm_content=search&utm_term=course&eid=5082902844932096&utm_term=system%20design%20interview%20questions&utm_campaign=%5BNew%5D+System+Design-Search-+Exc+US+CN+IND&utm_source=adwords&utm_medium=ppc&hsa_acc=5451446008&hsa_cam=18181328148&hsa_grp=142026927753&hsa_ad=618844618316&hsa_src=g&hsa_tgt=aud-1663510182913:kwd-303665240621&hsa_kw=system%20design%20interview%20questions&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaXcl7vzCbS-v7a41RBema2tShmb7YjG3P4HipJutv5ngmTl8aD_Yk4aApX-EALw_wcB
+https://www.java-success.com/01-scenarios-based-design-concepts-coding/
+https://javahungry.blogspot.com/2019/05/design-pattern-interview-questions-in-java.html
+https://in.indeed.com/career-advice/interviewing/design-pattern-interview-questions
+https://www.fullstack.cafe/blog/design-patterns-interview-questions
+https://in.indeed.com/career-advice/interviewing/design-pattern-interview-questions
+
+https://igotanoffer.com/blogs/tech/system-design-interviews
+https://in.indeed.com/career-advice/interviewing/system-design-interview-questions
+https://www.simplilearn.com/system-design-interview-questions-article
+https://www.educative.io/blog/top-10-system-design-interview-questions
+https://www.toptal.com/designers/visual/interview-questions
+https://career.guru99.com/software-design-interview-questions/
+https://www.geeksforgeeks.org/difference-between-high-level-design-and-low-level-design/
+https://unacademy.com/content/gate-cse-it/difference-between-high-level-and-low-level-design/
+
+https://leetcode.com/tag/design/discuss/3100171/Microservices-Architecture
+https://leetcode.com/tag/design/discuss/2940987/Low-Level-Design-or-LLD-or-Splitwise-or-Expense-share-or-Feedback-required
+https://leetcode.com/tag/design/discuss/2809437/PhonePe-LLD-Questions-(Pendency-System)-SDE2
+https://leetcode.com/tag/design/discuss/2660874/All-designOOD-like-questions-on-Leetcode
+https://leetcode.com/tag/design/discuss/2586307/Company-Wise-Design-Round-Info
+https://leetcode.com/tag/design/discuss/2384402/Solid-Principles-In-Java-or-OO-design
+https://leetcode.com/tag/design
+https://www.interviewbit.com/system-design-interview-questions/
+https://medium.com/javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0
+
+
+High level design and low level design are two important stages in the software development process.
+
+High level design
+High level design is the process of designing the architecture and components of a software system at a high level of abstraction. This involves identifying the major modules or components of the system, defining their interfaces, and specifying the high-level design patterns and strategies that will be used to build the system.
+For example, if you were designing an e-commerce website, the high-level design might include identifying the following components: user authentication, product catalog, shopping cart, payment gateway, and order fulfillment. You would define the interfaces between these components and decide on the high-level design patterns and strategies that will be used to build the system, such as a Model-View-Controller (MVC) architecture or a microservices architecture.
+
+Low level design
+Low level design is the process of designing the details of each module or component of a software system. This involves specifying the algorithms, data structures, and detailed designs of each module or component. Low level design is more detailed and specific than high-level design, and it focuses on the implementation details of each module or component.
+Continuing with the e-commerce website example, the low-level design might include specifying the algorithms used to search and filter the product catalog, the data structures used to store user preferences and shopping cart contents, and the detailed designs of the payment gateway and order fulfillment components.
+In summary, high-level design and low-level design are both important stages in the software development process. High-level design focuses on the overall architecture and components of a software system, while low-level design focuses on the details of each module or component. Together, these two stages help to ensure that the software system is well-designed, scalable, and maintainable.
+
+Design questions on high level and low level can be challenging and require a structured approach. Here are some steps that can help you approach these types of questions:
+Step 1: Understand the requirements
+Before starting to design a system, it's essential to understand the requirements of the system. You should ask clarifying questions and gather as much information as possible about the system's purpose, goals, and constraints.
+Step 2: Identify the actors
+The next step is to identify the actors involved in the system. An actor can be a user, another system, or a device. By identifying the actors, you can better understand how the system interacts with them.
+Step 3: Identify the high-level components
+Once you have identified the actors, you can start to identify the high-level components that make up the system. These components could be modules, services, or subsystems. You should focus on identifying the components that will help to achieve the system's requirements.
+Step 4: Define the interfaces
+For each component, you should define the interfaces that allow communication between the components. These interfaces could be APIs, protocols, or message formats.
+Step 5: Draw a high-level diagram
+Using the identified components and interfaces, draw a high-level diagram that shows the overall structure of the system. This diagram should show how the components are connected and how data flows through the system.
+Step 6: Identify the low-level details
+After defining the high-level components and interfaces, you can start to identify the low-level details of each component. This could include the data structures used, algorithms used, and the details of the implementation.
+Step 7: Draw a low-level diagram
+Using the identified low-level details, you can draw a low-level diagram for each component. This diagram should show how the component works internally, including how it processes data and communicates with other components.
+Step 8: Consider trade-offs and constraints
+Throughout the design process, you should consider trade-offs and constraints. These could include performance, scalability, maintainability, and cost. You should make design decisions that balance these trade-offs and constraints to achieve the system's requirements.
+Step 9: Review and refine the design
+Once you have completed the design, you should review it and refine it as necessary. You should ensure that the design meets the system's requirements and that it is scalable, maintainable, and efficient.
+By following these steps, you can approach design questions on high level and low level in a structured way and create a well-designed system that meets the requirements.
+
+Sure, here's a list of some popular architecture patterns in Java:
+	1	Model-View-Controller (MVC)
+	2	Model-View-ViewModel (MVVM)
+	3	Service-Oriented Architecture (SOA)
+	4	Microservices Architecture
+	5	Layered Architecture
+	6	Domain-Driven Design (DDD)
+	7	Clean Architecture
+	8	Hexagonal Architecture (Ports and Adapters)
+	9	Event-Driven Architecture (EDA)
+	10	Command Query Responsibility Segregation (CQRS)

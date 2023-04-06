@@ -1,0 +1,339 @@
+ LinkedList
+ ListNode
+ Queue
+ Stack
+ Graph
+ HashMap
+ TreeMap
+ HashSet
+ TreeSet
+ ArraySet
+ MapSet
+ BinarySearchTree
+ BinaryTreeNode
+ AvlTree
+ RedBlackTree
+ LRUCache
+ Trie
+ Heap
+ MinHeap
+ MaxHeap
+ PriorityQueue
+
+ 𝐆𝐨𝐥𝐝𝐞𝐧 𝐑𝐮𝐥𝐞𝐬 𝐟𝐨𝐫 𝐒𝐨𝐥𝐯𝐢𝐧𝐠 𝐚 𝐂𝐨𝐝𝐢𝐧𝐠 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐢𝐧 𝐚𝐧 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 ❤️
+
+➡️ If the given input is sorted (array, list, or matrix), we will use a variation of Binary Search or a Two Pointers strategy.
+
+➡️ If we’re dealing with top/maximum/minimum/closest k elements among n elements, we will use a Heap.
+
+➡️ If we need to try all combinations (or permutations) of the input, we can either use recursive Backtracking or iterative Breadth-First Search.
+
+➡️ Most of the questions related to Trees or Graphs can be solved either through Breadth First Search or Depth First Search.
+
+➡️ Every recursive solution can be converted to an iterative solution using a Stack.
+
+➡️ For a problem involving arrays, if there exists a solution in O(n^2) time and O(1) space, there must exist two other solutions :
+
+1) Using a HashMap or a Set for O(n) time and O(n) space,
+2) Using sorting for O(n log n) time and O(1) space.
+
+➡️ If a problem is asking for optimization (e.g., maximization or minimization), we will be using Dynamic Programming.
+
+➡️ If we need to find some common substring among a set of strings, we will be using a HashMap or a Trie.
+
+➡️ If we need to search/manipulate a bunch of strings, Trie will be the best data structure.
+
+➡️ If the problem is related to a LinkedList and we can't use extra space, then use the Fast & Slow Pointer approach.
+
+https://dev.to/codewithsom/10-golden-rules-for-solving-a-coding-question-in-an-interview--23ck
+https://www.enjoyalgorithms.com/blog/steps-of-problem-solving-for-cracking-the-coding-interview
+https://www.techinterviewhandbook.org/coding-interview-techniques/
+https://www.geeksforgeeks.org/how-to-approach-a-coding-problem/
+https://codeburst.io/10-steps-to-solving-a-programming-problem-8a32d1e96d74
+https://hackernoon.com/how-to-approach-any-coding-problem-9230f3ad6f9
+
+https://www.udemy.com/course/draft/1330262/learn/lecture/13778082?start=0#overview
+https://www.udemy.com/course/algorithm-design-techniques-live-problem-solving-in-java/
+https://www.udemy.com/course/algorithmic-problems-in-java/
+https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/
+https://www.udemy.com/course/data-structures-and-algorithms-deep-dive-using-java/
+https://www.udemy.com/course/dynamic-programming-java/
+https://www.udemy.com/course/the-bible-of-algorithms-and-interview-questions/
+https://www.udemy.com/course/coding-interview-question-data-structures-algorithm/
+https://www.udemy.com/course/learning-data-structures-and-algorithms/
+https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/
+https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/
+https://www.udemy.com/course/leetcode-coding-interview-question-solution-explanation/learn/lecture/21497796#overview
+
+https://drive.google.com/drive/folders/1xaSPCc05mEnImaZ-I_besOZ6zuXp5Bez
+
+https://leetcode.com/tag/design/
+https://leetcode.com/discuss/interview-question/object-oriented-design?currentPage=1&orderBy=hot&query=
+
+Coding Patterns:
+	1	Sliding Window
+	2	Islands (Matrix Traversal)
+	3	Two Pointers
+	4	Fast & Slow Pointers
+	5	Merge Intervals
+	6	Cyclic Sort
+	7	In-place Reversal of a LinkedList
+	8	Tree Breadth-First Search
+	9	Tree Depth First Search
+	10	Two Heaps
+	11	Subsets
+	12	Modified Binary Search
+	13	Bitwise XOR
+	14	Top ‘K’ Elements
+	15	K-way Merge
+	16	Topological Sort
+	17	0/1 Knapsack
+	18	Fibonacci Numbers
+	19	Palindromic Subsequence
+	20	Longest Common Substring
+
+Coding Problems
+****************
+https://www.youtube.com/watch?v=LNKqOKtKCpQ&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx
+https://www.youtube.com/watch?v=w-2buncRuOg&list=PL3JFWXGvpQ0bDzk6ptE8vFJfuboNlEpNC
+https://www.youtube.com/watch?v=LTuSPIGoDlA&list=PLpO3gASfJEIJZqTAEQnLeYyz_vaNWLfHS
+https://www.youtube.com/watch?v=s62k_3jxyi4&list=PLpO3gASfJEIKjtJqInsu1ToSVD_HDOnVo
+https://www.youtube.com/@codebix1096/playlists
+***************
+
+Here are some of the most commonly asked top sliding window questions in interviews:
+	1	Maximum Sum Subarray of Size K: Given an array of integers and a positive integer k, find the maximum sum of any contiguous subarray of size k.
+	2	Smallest Subarray with a Given Sum: Given an array of positive integers and a positive integer target sum, find the length of the smallest contiguous subarray whose sum is greater than or equal to the target sum.
+	3	Longest Substring Without Repeating Characters: Given a string, find the length of the longest substring without repeating characters.
+	4	Permutation in String: Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1.
+	5	Fruit into Baskets: You are given a list of integers representing the number of fruits in a basket. You can start with any basket, but once you have started you can only pick from that basket or a basket containing one fruit from the previous basket. Find the maximum number of fruits you can collect.
+	6	Minimum Window Substring: Given a string S and a string T, find the minimum window in S which will contain all the characters in T.
+	7	Subarrays with K Different Integers: Given an array of integers and an integer k, return the number of subarrays that have exactly k distinct integers.
+	8	Find All Anagrams in a String: Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+	9	Longest Substring with At Most Two Distinct Characters: Given a string s, find the length of the longest substring that contains at most two distinct characters.
+	10	Longest Subarray with Ones After Replacement: Given a binary array nums and an integer k, you need to find the maximum number of consecutive 1's in the array if you can flip at most k 0's.
+
+Amazon:
+-- 𝐆𝐫𝐚𝐩𝐡𝐬
+1) Process Ordering - https://lnkd.in/dN4ErKyE
+
+2) Number of Islands - https://lnkd.in/dHQJGhPJ
+
+3) k Jumps on Grid - https://lnkd.in/dKM_ETsM)
+
+-- 𝐓𝐫𝐢𝐞
+1) Finding Prefix in Dictionary - https://lnkd.in/dpRvFDq5
+
+-- 𝐓𝐫𝐞𝐞
+1) Binary Tree Top Down View - https://lnkd.in/dmun-Pn3
+
+2) Traversing binary tree in an outward manner.
+
+3) Diameter of a binary tree [Path is needed] - https://lnkd.in/dH-w_DQV
+
+-- 𝐒𝐥𝐢𝐝𝐢𝐧𝐠 𝐰𝐢𝐧𝐝𝐨𝐰
+1) Contains Duplicates III - https://lnkd.in/djcWHTaX
+
+2) Minimum Window Substring [Variation of this question] - https://lnkd.in/dPfnQZmr
+
+-- 𝐋𝐢𝐧𝐤𝐞𝐝 𝐋𝐢𝐬𝐭
+1) Reverse a Linked List II - https://lnkd.in/diHAJZUJ
+
+2) Remove Loop From Linked List - https://lnkd.in/d-zVawwX
+
+3) Reverse a Linked List in k-groups - https://lnkd.in/de99T3hQ
+
+-- 𝐁𝐢𝐧𝐚𝐫𝐲 𝐒𝐞𝐚𝐫𝐜𝐡
+1) Search In rotate sorted Array - https://lnkd.in/djxEpFxF
+
+-- 𝐀𝐫𝐫𝐚𝐲𝐬
+1) Max bandWidth [Priority Queue, Sorting] - https://lnkd.in/d6JE2xpz
+
+2) Next permutation - https://lnkd.in/dk9cHQbw
+
+3) Largest Rectangle in Histogram - https://lnkd.in/dQHQcF-5
+
+Number of Islands (145 times): 
+https://lnkd.in/dEcneG2G
+
+Partition Labels (144 times): https://lnkd.in/dx4DN95Q
+
+Two Sum (100 times): https://lnkd.in/dz-nQabK 
+ 
+Reorder Data in Log Files (89 times): https://lnkd.in/d2fGjKbv
+
+LRU Cache (81 times): https://lnkd.in/dR5RixgJ
+
+Minimum Difficulty of a JobSchedule
+(71times): https://lnkd.in/dyCcikWr
+
+Critical Connections in a Network (70 times): https://lnkd.in/dENuX9fh
+
+Pairs of Songs With Total Durations Divisible by 60 (58 times): https://lnkd.in/dUHJsw7G
+
+K Closest Points to Origin (57 times): https://lnkd.in/dFRmFD-k
+
+Merge Two Sorted Lists (56 times): https://lnkd.in/d4_vwUni
+
+Top K Frequent Words (55 times): https://lnkd.in/dQ2x3r2J
+
+Copy List with Random Pointer (54 times): https://lnkd.in/dyTdBCRb
+
+Most Common Word (49 times): https://lnkd.in/dcwBq2Ze
+
+Merge k Sorted Lists (44 times): https://lnkd.in/dmYUdma2
+
+Longest Palindromic Substring (43 times): https://lnkd.in/dFpK7Vbu
+
+Subtree of Another Tree (41 times): https://lnkd.in/dtFnYKeX
+
+Trapping Rain Water (40 times): https://lnkd.in/d6Bshc5q
+
+Word Ladder (36 times): https://lnkd.in/ds22Z3Wg
+
+Maximal Square (35 times): https://lnkd.in/dVejTu9G
+
+Friend Circles (34 times): https://lnkd.in/dz9vYppU
+
+Longest Substring Without Repeating Characters (34 times): https://lnkd.in/dAr9a5Ny
+
+Add Two Numbers (33 times): https://lnkd.in/dC6wv5Aa
+
+ Analyze User Website Visit Pattern (31 times): https://lnkd.in/dVMTBQif
+
+ Prison Cells After N Days (31 times): https://lnkd.in/dcPywxjc
+
+ Meeting Rooms II (30 times): https://lnkd.in/dd6wGyDJ
+
+ Group Anagrams (29 times): https://lnkd.in/d9wXHgK9
+
+ Sliding Window Maximum (28 times): https://lnkd.in/djFEMnQi
+
+ Median of Two Sorted Arrays (28 times): https://lnkd.in/dtF7QHsY
+
+ Best Time to Buy and Sell Stock (28 times): https://lnkd.in/d_euBy8R
+
+Product of Array Except Self (27 times): https://lnkd.in/ddtJrVQX
+
+
+60 Recently asked problems in Intuit in last 6 months
+
+Hope you find this helpful 😀
+
+Here is the list of problems -
+
+Easy Problems -
+
+1. Reverse Linked List
+2. Unique Email Addresses
+3. Merge Two Sorted Lists
+4. Diameter of Binary Tree
+5. Best Time to Buy and Sell Stock
+6. Happy Number
+7. Intersection of Two Linked Lists
+8. Climbing Stairs
+9. Two Sum
+10. Palindrome Linked List
+11. Maximum Product of Three Numbers
+12. Valid Parentheses
+
+Medium Problems -
+
+1. Subdomain Visit Count
+2. Max Area of Island
+3. Generate Parentheses
+4. Delete Nodes And Return Forest
+5. Number of Distinct Substrings in a String
+6. Two Sum II - Input Array Is Sorted
+7. Populating Next Right Pointers in Each Node
+8. Design Tic-Tac-Toe
+9. Lowest Common Ancestor of a Binary Tree
+10. Decode String
+11. Valid Sudoku
+12. My Calendar I
+13. Letter Combinations of a Phone Number
+14. Number of Islands
+15. Container With Most Water
+16. Reorganize String
+17. Boats to Save People
+18. Rotting Oranges
+19. Maximum Length of Repeated Subarray
+20. 3Sum Smaller
+21. Meeting Rooms II
+22. Design Circular Queue
+23. Course Schedule II
+24. Partition Equal Subset Sum
+25. Merge Intervals
+26. Course Schedule
+27. Spiral Matrix
+28. Find First and Last Position of Element in Sorted Array
+29. Coin Change
+30. LRU Cache
+31. Word Search
+32. Unique Paths II
+33. Search in Rotated Sorted Array
+34. Interleaving String
+35. Longest Substring Without Repeating Characters
+36. 3Sum
+
+Hard Problems -
+
+1. Employee Free Time
+2. Trapping Rain Water
+3. Basic Calculator IV
+4. Sudoku Solver
+5. Reverse Nodes in k-Group
+5. Find Median from Data Stream
+6. Reconstruct Itinerary
+7. Get the Maximum Score
+8. Text Justification
+9. Maximum Total Beauty of the Gardens
+10. Wildcard Matching
+11. Partition Array Into Two Arrays to Minimize Sum Difference
+
+
+DP:
+1) All dynamic programming (dp) problems on LeetCode.
+Link: https://lnkd.in/d8nbaynq
+
+2)Template For Dynamic programming
+Link: https://lnkd.in/dpn4yjrS
+
+3)Dynamic programming patterns
+Link: https://lnkd.in/dDUCmH3u
+
+4)Dynamic-Programming Interview questions.
+Link: https://lnkd.in/dWJPeASc.
+
+5)Recycling Cartridges
+Link: https://lnkd.in/dYhxV9Yp
+
+ Linear DP
+Link: https://lnkd.in/dNJFUBcW
+
+ DP on Strings 
+Link: https://lnkd.in/dpetSA_s
+
+ Knapsack Dp
+Link: https://lnkd.in/d5Dc4j4N
+
+ DP with Tree & Graph
+Link: https://lnkd.in/dbdAW_x3
+
+ Dp on math problems
+Link : https://lnkd.in/d_-jKvmM
+
+ Dp with bits manipulation
+Link:https://lnkd.in/dfQCrQim
+
+ Grid-based DP 
+Link:https://lnkd.in/d5DJc6Cy
+
+ Multidimensional DP 
+Link: https://lnkd.in/dGgXsjK2
+
+ Digit Problem DP 
+Link: https://lnkd.in/dW5RKihx
+
+ Classical DP problem 
+Link : htps://lnkd.in/d_iVkeUV

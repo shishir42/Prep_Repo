@@ -1,0 +1,192 @@
+In DynamoDB, a scalar data type is a single, non-decomposable value. Scalar values can be of various types, including:
+String: A sequence of Unicode characters.
+Number: A numeric value, which can be an integer, decimal, or floating-point number.
+Binary: A sequence of binary data.
+Boolean: A Boolean value that can be either true or false.
+Null: A null value, indicating the absence of a value.
+
+The four scalar data types that DynamoDB supports are as follows:
+Numbers
+Strings
+Binary
+Boolean.
+
+Data types for collections that DynamoDB supports include:
+String Set Number Set
+Heterogeneous Binary Set
+Differentiated Map
+DynamoDB accepts Null values.
+
+DynamoDB supports a range of query functionality to retrieve data from tables. Here are some of the key features:
+
+Primary Key Queries: DynamoDB allows you to retrieve items using the primary key. You can use the GetItem operation to retrieve a single item by its primary key or the Query operation to retrieve multiple items with the same partition key.
+
+Secondary Index Queries: DynamoDB also supports secondary indexes, which allow you to retrieve items based on attributes that are not part of the primary key. You can create global secondary indexes or local secondary indexes to support different query patterns.
+
+Query Filtering: You can filter the results of a query by applying conditions on non-key attributes. You can use a variety of comparison operators such as =, <, >, <=, >=, and BETWEEN.
+
+Projection Expressions: When you query a DynamoDB table, you can specify which attributes to retrieve using a projection expression. This can help reduce the amount of data returned by the query and improve performance.
+
+Sort Keys: When you create a table with a composite primary key, you can use the sort key to define the sort order of items within a partition key. You can use this feature to perform range queries, which retrieve a range of items based on the sort key.
+
+Pagination: DynamoDB supports pagination to help you retrieve large amounts of data efficiently. You can use the Limit parameter to specify the maximum number of items to retrieve per query, and the ExclusiveStartKey parameter to specify the starting point for the next query.
+
+Overall, DynamoDB provides a powerful and flexible query interface that can support a wide range of query patterns and use cases.
+
+
+Is conditional operation support available for Amazon DynamoDB?
+Yes, Amazon DynamoDB supports conditional operations. Conditional operations allow you to perform write operations (such as PutItem, UpdateItem, and DeleteItem) only if certain conditions are met. This can be useful in a number of scenarios, such as updating an item only if it has not been modified since it was last retrieved, or deleting an item only if it meets certain criteria.
+
+In DynamoDB, you can specify a conditional expression as part of a write operation. The expression includes one or more conditions that must be met in order for the write operation to be executed. The conditions can reference attributes in the item being written or updated, as well as attributes in other items in the table.
+
+Conditional expressions can use a variety of comparison operators, such as =, <, >, <=, >=, and BETWEEN, as well as logical operators such as AND, OR, and NOT.
+
+If the conditions in the conditional expression are not met, the write operation will fail and no changes will be made to the table. DynamoDB also supports atomic operations, which allow you to update multiple items in a table in a single, atomic transaction. Atomic operations can be used with conditional expressions to ensure that all updates are performed only if the specified conditions are met.
+
+Overall, conditional operations provide a powerful way to ensure that write operations only occur when certain conditions are met, helping to ensure data integrity and consistency.
+
+
+Features:
+Amazon DynamoDB is a fast, flexible, fully managed NoSQL database service offered by AWS. Here are some of the key features of DynamoDB:
+
+1. Performance: DynamoDB is designed for high-performance, low-latency applications. It can handle millions of requests per second and can scale to support massive data volumes and high-traffic workloads.
+
+2. Scalability: DynamoDB is a fully managed service, which means that it can automatically scale up or down to handle changes in demand. This makes it easy to handle sudden spikes in traffic without having to provision additional resources.
+
+3. Availability: DynamoDB is designed for high availability, with built-in replication and automatic failover. It can also be configured to provide multi-region replication for even greater resiliency.
+
+4. Security: DynamoDB provides a number of security features, including data encryption at rest and in transit, fine-grained access control using AWS Identity and Access Management (IAM), and integration with AWS Key Management Service (KMS).
+
+5. Flexible Data Model: DynamoDB supports both key-value and document data models, which allows it to be used for a wide range of use cases. It also supports complex data structures such as nested objects and arrays.
+
+6. Global Tables: DynamoDB Global Tables enables you to replicate tables across multiple AWS Regions for low-latency global access. This feature makes it easy to provide a consistent experience to users around the world.
+
+7. Streams: DynamoDB Streams allows you to capture changes to items in real-time and trigger actions in response to those changes. This feature can be used for a variety of use cases such as data replication, real-time analytics, and triggering Lambda functions.
+
+8. Integrated with AWS Ecosystem: DynamoDB integrates seamlessly with other AWS services, such as AWS Lambda, Amazon S3, and Amazon EMR. This makes it easy to build scalable, cloud-native applications using a range of AWS services.
+
+Overall, DynamoDB provides a fast, flexible, and highly scalable NoSQL database service that can be used for a wide range of applications and use cases.
+
+
+What are the APIs provided by Amazon DynamoDB?
+Amazon DynamoDB provides a number of APIs (Application Programming Interfaces) for interacting with the service. Here are some of the key APIs provided by DynamoDB:
+
+PutItem: This API is used to add a new item to a table or update an existing item in a table.
+
+GetItem: This API is used to retrieve a specific item from a table based on its primary key.
+
+DeleteItem: This API is used to delete a specific item from a table based on its primary key.
+
+UpdateItem: This API is used to update an existing item in a table based on its primary key.
+
+Query: This API is used to retrieve multiple items from a table based on a specified query condition. This API can be used to retrieve items based on the partition key, sort key, or other non-key attributes.
+
+Scan: This API is used to retrieve all items from a table or a subset of items based on a specified filter condition. This API is typically used for queries that cannot be performed using the Query API.
+
+BatchGetItem: This API is used to retrieve multiple items from one or more tables based on their primary keys.
+
+BatchWriteItem: This API is used to add, update, or delete multiple items in one or more tables in a single request.
+
+TransactGetItems: This API is used to retrieve multiple items from one or more tables in a single, atomic transaction.
+
+TransactWriteItems: This API is used to add, update, or delete multiple items in one or more tables in a single, atomic transaction.
+
+In addition to these APIs, DynamoDB also provides APIs for managing tables, indexes, and backups, as well as APIs for working with DynamoDB Streams and DynamoDB Accelerator (DAX). Overall, DynamoDB provides a comprehensive set of APIs for interacting with the service that can be used to build scalable and highly available applications.
+
+What kinds of secondary indexes does Amazon's DynamoDB support
+Amazon DynamoDB supports two types of secondary indexes:
+
+Global Secondary Indexes (GSI): A GSI is an index with a partition key and an optional sort key that can be different from the primary key of the table. It enables you to query data in a table using an alternate key, and you can create up to five GSIs per table.
+
+Local Secondary Indexes (LSI): An LSI is an index that has the same partition key as the table, but a different sort key. It enables you to query data in a table using an alternate sort key, and you can create up to five LSIs per table.
+
+Both GSIs and LSIs can be used to improve query performance and reduce the number of read operations required to retrieve data from a table. They can also be used to support different access patterns and enable more flexible query options.
+
+When creating a secondary index, you can choose to project all attributes from the table or a subset of attributes. You can also choose to enable or disable consistent reads on the index, which affects the level of read consistency for queries against the index.
+
+Overall, the support for secondary indexes in DynamoDB provides a powerful mechanism for querying and retrieving data from tables, and can be used to support a wide range of use cases and access patterns.
+
+What types of API calls does a global secondary index support?
+The API calls that Global Secondary Index supports are "Query" and "Scan."
+
+Are local secondary indexes erasable?
+Yes, local secondary indexes (LSIs) can be deleted in Amazon DynamoDB. Deleting an LSI will remove the index and all associated data, and the table will return to only having the primary index.
+
+When you delete an LSI, DynamoDB will automatically delete all items from the index, so you won't need to delete them manually. However, if the LSI was created with the ProjectionType parameter set to INCLUDE, you may need to manually delete any projected attributes that were added to the index.
+
+Note that deleting an LSI is an irreversible operation and cannot be undone. If you need to recreate the index later, you'll need to rebuild it from scratch.
+
+To delete an LSI in DynamoDB, you can use the UpdateTable API call and set the GlobalSecondaryIndexUpdates parameter to an empty array. Alternatively, you can use the AWS Management Console, AWS CLI, or any of the other supported SDKs to delete the index.
+
+
+
+What sort of query functionality is supported by DynamoDB?
+DynamoDB supports a variety of query functionalities for retrieving data from tables. Here are some of the key query features provided by DynamoDB:
+
+Query by primary key: You can use the GetItem API to retrieve a specific item from a table using its primary key. This API is useful for retrieving individual items or for retrieving a small number of items.
+
+Query by primary key and sort key: You can use the Query API to retrieve a set of items from a table that match a specific partition key value and sort key range. This API is useful for retrieving a subset of items based on a specific range of values.
+
+Query by global secondary index: You can use the Query API with a global secondary index (GSI) to retrieve items from a table based on an alternate key. This API is useful for retrieving items based on different access patterns.
+
+Query by local secondary index: You can use the Query API with a local secondary index (LSI) to retrieve items from a table based on an alternate sort key. This API is useful for retrieving items based on different access patterns.
+
+Scan: You can use the Scan API to retrieve all items from a table or a subset of items based on a specified filter condition. This API is useful for queries that cannot be performed using the Query API, but it can be less efficient for large tables or high-throughput workloads.
+
+Batch operations: You can use the BatchGetItem and BatchWriteItem APIs to retrieve or modify multiple items in a single request. These APIs are useful for improving the performance and efficiency of your application.
+
+Transactions: You can use the TransactGetItems and TransactWriteItems APIs to perform multiple read and write operations in a single, atomic transaction. These APIs are useful for maintaining data consistency and integrity in your application.
+
+Overall, DynamoDB provides a comprehensive set of query features that can be used to retrieve and manipulate data in tables, and can support a wide range of access patterns and use cases.
+
+Redis: Is it quicker than DynamoDB?
+Inserts/Delete are extremely quick because DynamoDB is a NoSQL database.
+DynamoDB permanently stores data (although it is less fast than Redis because we don't need that much speed).
+
+Are writes to DynamoDB Atomic?
+Yes, writes to DynamoDB are atomic at the item level. When you write an item to a DynamoDB table, the write operation is atomic, meaning that it either completes in its entirety or fails and is rolled back.
+
+If multiple write operations are performed on the same item at the same time, DynamoDB will apply a conflict resolution process to ensure that only one of the writes is successful. DynamoDB uses optimistic concurrency control to detect conflicts and ensure that updates are atomic and consistent.
+
+Furthermore, DynamoDB provides support for transactional writes through the TransactWriteItems API. With this API, you can perform multiple write operations as part of a single transaction. Each transaction is atomic, and if any part of the transaction fails, the entire transaction is rolled back.
+
+Overall, DynamoDB provides strong consistency guarantees and ensures that all writes are atomic and durable, which makes it a highly reliable and scalable database service for building modern applications.
+
+What do you know about DynamoDB's partition keys and sort keys?
+In Amazon DynamoDB, partition keys and sort keys are used to uniquely identify and organize data within a table. Here's a brief overview of what these keys are and how they work:
+
+Partition keys: A partition key is a primary key attribute that is used to partition data across multiple servers in a DynamoDB table. When you create a table, you specify the partition key, which determines how the data is distributed across the table's partitions. Each partition key value must be unique across all items in the table.
+
+Sort keys: A sort key is an optional primary key attribute that is used to sort and organize data within a partition. When you create a table, you can specify a sort key along with the partition key. The sort key allows you to perform range queries on data within a partition based on a specific range of values.
+
+Together, the partition key and sort key form the primary key for a DynamoDB table. This primary key uniquely identifies each item in the table and determines how the data is organized and distributed across partitions.
+
+Using a partition key and sort key, you can query data within a table based on specific criteria. For example, you can retrieve all items that have the same partition key value, or you can retrieve all items within a partition that have a sort key value within a certain range.
+
+In summary, partition keys and sort keys are key components of DynamoDB's primary key model, and they play a critical role in how data is organized, distributed, and queried within a table.
+
+What do you think provisioned throughput means?
+In Amazon DynamoDB, provisioned throughput refers to the amount of read and write capacity that you allocate to a table or index. When you create a DynamoDB table, you need to specify the amount of provisioned throughput that you want to allocate to the table.
+
+Provisioned throughput is measured in units of read capacity and write capacity, which determine how many reads and writes your application can perform per second. Each read capacity unit provides you with one strongly consistent read per second or two eventually consistent reads per second for items up to 4 KB in size. Each write capacity unit provides you with one write per second for items up to 1 KB in size.
+
+DynamoDB uses a credit-based system to track the usage of provisioned throughput. Each read or write operation that you perform on a table or index consumes a certain number of read or write capacity units, respectively. If you exceed your provisioned throughput, your application will start to receive ProvisionedThroughputExceededException errors until you either reduce your usage or increase your provisioned throughput.
+
+Provisioned throughput can be adjusted at any time based on the needs of your application. You can increase or decrease the amount of read and write capacity allocated to a table or index, and DynamoDB will automatically scale up or down to meet your application's usage patterns.
+
+Overall, provisioned throughput is a key concept in DynamoDB, as it allows you to control the amount of capacity that your application can consume, and it enables you to scale your application's performance up or down based on changing needs.
+
+https://dynobase.dev/dynamodb-interview-questions/
+https://www.onlineinterviewquestions.com/dynamodb-interview-questions/
+https://www.techgeeknext.com/db/dynamodb-interview-questions
+https://www.educba.com/dynamodb-interview-questions/
+https://cloudvikas.com/dynamodb
+https://www.freshersnow.com/dynamodb-interview-questions-and-answers/
+https://www.javainuse.com/misc/dynamodb-interview-questions
+https://climbtheladder.com/amazon-dynamodb-interview-questions/
+https://www.interviewbit.com/aws-interview-questions/
+
+https://www.besanttechnologies.com/aws-interview-questions-and-answers
+
+
+

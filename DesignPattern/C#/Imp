@@ -1,0 +1,11 @@
+Sure, here's a list of some popular architecture patterns in .NET:
+	1	Model-View-Controller (MVC)
+	2	Model-View-ViewModel (MVVM)
+	3	N-tier architecture
+	4	Microservices architecture
+	5	Event-driven architecture (EDA)
+	6	Service-oriented architecture (SOA)
+	7	Domain-driven design (DDD)
+	8	Clean Architecture
+	9	Hexagonal Architecture (Ports and Adapters)
+	10	Command Query Responsibility Segregation (CQRS)

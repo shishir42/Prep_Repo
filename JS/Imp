@@ -1,0 +1,162 @@
+Topic
+
+1. Factory function 
+2. Constructor function
+3. Object.create() vs Class - done
+4. this - 4 Ways
+5. Inheritance
+6. Pure function
+7. Higher Order Functions - Done
+8. Closures
+9. Currying
+10. Promise - Async, await, Job queue, Parallel, sequence, race, allSettled, Threads, concurrency and parallelism
+11. Module pattern - pros and cons
+12. In-depth prototype concepts
+13. Indirectly invoking functions
+14. Namespace pattern
+15. event loop, call stack
+16. Scope
+17. Hoisting
+18. Prototypical inheritance (prototype nature in js)
+19. bind(), call(), apply() - done
+20. reduce()
+21. Generators
+22. fetch()
+23. Destructuring assignment
+24. Optional chaining
+25. Coalescing operator
+26. Composition vs Inheritance
+27. Garbage Collection
+28. bubbling and capturing
+29. Pure Functions
+30. Prototype chain
+31. JS Array method - map, filter, find, reduce
+
+Below are the list of some new features of ES6,
+	i	Support for constants or immutable variables
+	ii	Block-scope support for variables, constants and functions - done
+	iii	Arrow functions  - done
+	iv	Default parameters 
+	v	Rest and Spread Parameters
+	vi	Template Literals
+	vii	Multi-line Strings
+	viii Destructuring Assignment
+	ix	Enhanced Object Literals
+	x	Promises
+	xi	Classes
+	xii	Modules
+
+
+Object-oriented programming in JavaScript
+Functional programming in JavaScript
+Asynchronous programming with Promises and Async/Await
+Event-driven programming and the Event Loop
+Higher-order functions and closures
+Web APIs and browser-specific APIs (e.g. Web Storage, Web Workers, Web Sockets, Geolocation, etc.)
+JavaScript modules and module loaders (e.g. ES6 modules, CommonJS, AMD, SystemJS, etc.)
+JavaScript frameworks and libraries (e.g. React, Vue.js, Angular, Express, Node.js, etc.)
+Regular expressions in JavaScript
+Debugging and testing JavaScript applications
+Security considerations and best practices in JavaScript
+Optimizing performance in JavaScript applications
+JavaScript data structures and algorithms (e.g. arrays, linked lists, stacks, queues, binary trees, sorting algorithms, searching algorithms, etc.)
+Error handling and exception handling in JavaScript
+TypeScript, a typed superset of JavaScript
+
+Asynchronous programming: Callbacks, Promises, Async/await, Generators, Observables
+Functional programming: Higher-order functions, Closures, Currying, Partial application, Composition, Recursion
+Object-oriented programming: Classes, Inheritance, Polymorphism, Encapsulation, Prototypes
+Event-driven programming: Event loop, Event listeners, Event emitters, Event bubbling
+Regular expressions: Pattern matching, Search, Replace, Validation
+Error handling: Throwing and catching exceptions, Error objects, Stack trace, Debugging
+Modules: Exporting and importing code, CommonJS, ES6 Modules, Dynamic imports
+Data structures: Arrays, Objects, Sets, Maps, Trees, Graphs, Queues, Stacks
+Algorithms: Sorting, Searching, Graph algorithms, Dynamic programming, Recursion
+Web APIs: DOM manipulation, AJAX, Fetch API, Web Sockets, Service Workers, Geolocation API
+
+Array all methods
+https://medium.com/@mandeepkaur1/a-list-of-javascript-array-methods-145d09dd19a0
+https://medium.com/an-idea/javascript-arrays-push-pop-shift-unshift-adc8fb815fc0
+
+String all methods
+https://www.javascripttutorial.net/javascript-string-methods/
+
+Advanced Topic:
+https://madasamy.medium.com/15-javascript-concepts-that-every-nodejs-programmer-must-to-know-6894f5157cb7
+https://hackernoon.com/12-javascript-concepts-that-will-level-up-your-development-skills-b37d16ad7104
+https://www.geeksforgeeks.org/7-javascript-concepts-that-every-developer-must-know/
+https://blog.bitsrc.io/advanced-javascript-aspect-that-helped-me-get-better-at-coding-8d5c794e4392
+
+Closure:
+https://www.linkedin.com/feed/update/urn:li:activity:7037324750863409153?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7037324750863409153%29
+
+https://www.linkedin.com/feed/update/urn:li:activity:7036239150479552512/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7036239150479552512%29
+
+Array Methods:
+https://www.linkedin.com/feed/update/urn:li:activity:7035511325489283072/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7035511325489283072%29
+
+https://www.linkedin.com/feed/update/urn:li:activity:7035584949197910016?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7035584949197910016%29
+
+Promise:
+https://dev.to/swarnaliroy94/methods-of-promise-all-any-finally-o2e
+https://medium.com/developer-rants/how-can-you-tell-which-promise-failed-in-promise-all-5a70be46e19b
+https://medium.com/swlh/dealing-with-multiple-promises-in-javascript-41d6c21f20ff
+https://www.freecodecamp.org/news/promise-all-in-javascript-with-example-6c8c5aea3e32/
+https://geshan.com.np/blog/2022/07/javascript-promise-all/
+https://gist.github.com/valera-rozuvan/5a1eafd0e82f78dd976273d4d1ab67a4
+https://codeburst.io/javascript-interview-questions-promises-1ab2fb7f0467
+https://algodaily.com/lessons/advanced-javascript-interview-questions/promise-introduction
+https://climbtheladder.com/javascript-promise-interview-questions/
+https://levelup.gitconnected.com/vimp-javascript-promise-implementation-challenges-5a4f120d8606
+https://in.indeed.com/career-advice/interviewing/javascript-promise-interview-questions
+https://testbook.com/interview/javascript-promise-interview-questions
+https://dev.to/craigmichaelmartin/the-problem-with-promises-in-javascript-5h46
+https://blog.greenroots.info/common-mistakes-in-using-javascript-promises
+https://www.toptal.com/javascript/javascript-promises
+
+
+Map:
+https://medium.com/@martin.crabtree/javascript-tracking-key-value-pairs-using-hashmaps-7de6df598257
+
+IQ:
+https://github.com/sudheerj/javascript-interview-questions
+https://github.com/ganqqwerty/123-Essential-JavaScript-Interview-Questions
+https://github.com/lydiahallie/javascript-questions
+https://github.com/rohan-paul/Awesome-JavaScript-Interviews
+https://github.com/learning-zone/javascript-basics
+https://github.com/Aakashdeveloper/JavaScript-Interview-Question
+https://github.com/jedrichards/es6
+https://github.com/lukehoban/es6features
+https://levelup.gitconnected.com/7-differences-between-arrow-functions-and-regular-functions-in-javascript-9152883a839f
+
+
+Imp ****
+
+https://github.com/vasanthk/how-web-works
+https://github.com/kamranahmedse/developer-roadmap
+https://github.com/yangshun/tech-interview-handbook **
+https://github.com/yangshun/front-end-interview-handbook **
+https://github.com/felipernb/algorithms.js
+https://github.com/loiane/javascript-datastructures-algorithms
+https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript
+https://github.com/Crizstian/data-structure-and-algorithms-with-ES6 **
+https://github.com/rohan-paul/Awesome-JavaScript-Interviews **
+https://github.com/sudheerj/javascript-interview-questions **
+https://github.com/30-seconds/30-seconds-of-interviews **
+https://github.com/sudheerj/reactjs-interview-questions **
+https://github.com/learning-zone/nodejs-basics **
+
+https://algo.monster/problems/stats
+https://www.frontendinterviewhandbook.com/introduction/
+https://www.techinterviewhandbook.org/coding-interview-study-plan/
+https://www.techinterviewhandbook.org/grind75
+
+https://www.greatfrontend.com/front-end-interview-guidebook/coding
+https://www.frontendinterviewhandbook.com/front-end-system-design
+https://www.frontendinterviewhandbook.com/trivia
+https://www.frontendinterviewhandbook.com/coding/javascript-utility-function
+https://www.frontendinterviewhandbook.com/companies/google-front-end-interview-questions/
+
+
+
+

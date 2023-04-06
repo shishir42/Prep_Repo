@@ -1,0 +1,13 @@
+Whether to use DFS or BFS for graph traversal depends on the specific requirements of the problem you are trying to solve. Here are some general guidelines for when to use each algorithm:
+
+Use DFS when:
+
+You want to visit all nodes of the graph, or a large subset of them, as quickly as possible.
+You are looking for a path from the starting node to a target node, but you don't care about finding the shortest path.
+The graph is deep rather than wide, meaning there are many levels of nodes but only a few nodes at each level. DFS will often perform better in this case because it explores one branch of the graph as deeply as possible before backtracking and exploring other branches.
+Use BFS when:
+
+You want to find the shortest path from the starting node to a target node.
+You want to find the path of minimum cost between two nodes where the cost is non-negative.
+The graph is wide rather than deep, meaning there are many nodes at each level but few levels. BFS will often perform better in this case because it explores all nodes at a given level before moving on to the next level.
+In general, BFS is a good choice when you want to find the shortest path between two nodes or when the graph is relatively small and the shortest path needs to be found quickly. DFS is a good choice when the graph is large and the goal is to visit all or most of the nodes as quickly as possible, or when you are looking for any path between two nodes, not necessarily the shortest one.

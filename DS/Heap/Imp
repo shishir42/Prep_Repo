@@ -1,0 +1,29 @@
+A heap is a specialized tree-based data structure that satisfies the heap property. The heap property states that for a binary heap, the parent node is always greater than its children (in a max heap) or lesser than its children (in a min heap).
+
+Max Heap:
+In a max heap, the value of each parent node is greater than or equal to the values of its child nodes. The maximum element in the heap is always the root node. Max heaps are useful for implementing priority queues and for efficiently finding the maximum element in a set of data.
+
+
+        10
+      /    \
+     7      5
+    / \    / \
+   3   6  4   2
+
+Min Heap:
+In a min heap, the value of each parent node is less than or equal to the values of its child nodes. The minimum element in the heap is always the root node. Min heaps are useful for implementing priority queues and for efficiently finding the minimum element in a set of data.
+
+         1
+       /   \
+      2     3
+    /  \   / \
+   7    6  4  5
+
+
+3 steps:
+1. kth - Smaller or Largest 
+2. Smallest - max heap, Largest - min heap 
+3. Convert nLogn => nLogk
+
+
+

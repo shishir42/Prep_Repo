@@ -1,0 +1,585 @@
+Topics:
+
+1. Generics
+2. Delegates
+3. Lambda expression
+4. Events
+5. Extension Methods
+6. LINQ
+7. Nullable Types
+8. Dynamic
+9. Exception Handling
+10. Asynchronous Programming with Async / Await
+11. Reflection
+12. ref vs out 
+13. Partial classes
+14. casting
+15. Inheritance
+16. Interface
+17. Abstract class
+18. Generic covariance and contravariance
+19. Unsafe Code
+20. Preprocessor Directives
+21. Attributes
+22. Classes and Structs
+23. Collection/Dictionary / Concurrent Dictionary 
+24. Memory Management 
+25. SOLID principles
+26. Singleton Pattern 
+27. CQRS 
+28. Repositories
+29. Entity Framework and  Core Performances (https://www.linkedin.com/feed/update/urn:li:activity:7047124245272768514/)
+30. Dictionary 
+31. DS API in C#
+32. Cache 
+33. Factory Pattern 
+34. Serialization 
+35. 
+
+System Design 
+https://www.linkedin.com/feed/update/urn:li:activity:7046804930434650112?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046804930434650112%29
+https://www.linkedin.com/feed/update/urn:li:activity:7046722652450766849?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046722652450766849%29
+https://www.linkedin.com/feed/update/urn:li:activity:7046099813536333824?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046099813536333824%29
+https://www.linkedin.com/feed/update/urn:li:activity:7043544970133180416?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7043544970133180416%29
+https://www.linkedin.com/feed/update/urn:li:activity:7041656767524573185?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7041656767524573185%29
+
+
+C# Code review
+https://www.linkedin.com/feed/update/urn:li:activity:7046532822655737856?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046532822655737856%29
+
+
+SQL:
+https://www.linkedin.com/feed/update/urn:li:activity:7047198678637244416?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7047198678637244416%29
+https://www.linkedin.com/feed/update/urn:li:activity:7046808211915481088?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046808211915481088%29
+https://www.linkedin.com/feed/update/urn:li:activity:7046019591738687489?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046019591738687489%29
+https://www.linkedin.com/feed/update/urn:li:activity:7044669720234536960?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7044669720234536960%29
+https://www.linkedin.com/feed/update/urn:li:activity:7042490154564882433?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7042490154564882433%29
+https://www.linkedin.com/feed/update/urn:li:activity:7041996888182505472?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7041996888182505472%29
+https://www.linkedin.com/feed/update/urn:li:activity:7042094516744450048?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7042094516744450048%29
+https://www.linkedin.com/feed/update/urn:li:activity:7041664329175212032?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7041664329175212032%29
+https://www.linkedin.com/feed/update/urn:li:activity:7041726155283906563?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7041726155283906563%29
+(Sql Server)
+https://www.linkedin.com/feed/update/urn:li:activity:7041371711329480704?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7041371711329480704%29
+
+
+
+REST:
+https://www.linkedin.com/posts/kanojiyaaakash96_coding-programming-api-activity-7044915790059323392-h2po?utm_source=share&utm_medium=member_desktop
+https://www.linkedin.com/feed/update/urn:li:activity:7045007737054711808?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7045007737054711808%29
+
+
+SOLID:
+https://www.linkedin.com/feed/update/urn:li:activity:7044422964062150656?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7044422964062150656%29
+
+Docker:
+https://www.linkedin.com/feed/update/urn:li:activity:7043796042265309184?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7043796042265309184%29
+
+LINQ
+
+https://www.tutorialsteacher.com/linq/linq-standard-query-operators
+https://sankhadip.medium.com/linq-api-in-c-44fb9618447c
+
+https://career.guru99.com/top-22-linq-interview-questions/
+https://mindmajix.com/linq-interview-questions
+https://www.fullstack.cafe/blog/linq-interview-questions-and-answers
+https://www.javatpoint.com/linq-interview-questions
+https://www.simplilearn.com/linq-interview-questions-article
+https://www.adaface.com/blog/linq-interview-questions/
+https://www.foundit.in/career-advice/13-linq-interview-questions-you-should-go-through-before-your-next-interview/
+https://www.dotnetfunda.com/interviews/cat/110/linq
+
+
+DS Prep:
+
+Linked List
+https://www.geeksforgeeks.org/top-20-linked-list-interview-question/
+https://medium.com/javarevisited/top-20-linked-list-coding-problems-from-technical-interviews-90b64d2df093
+https://leetcode.com/tag/linked-list/
+
+Stack 
+https://leetcode.com/tag/stack/
+
+Queue
+https://leetcode.com/tag/queue/
+
+
+Tree
+https://leetcode.com/tag/tree/
+
+Binary Search 
+https://leetcode.com/tag/binary-search/
+
+Hashmap 
+https://leetcode.com/tag/hash-table/
+
+Sorting and searching 
+https://leetcode.com/tag/sorting/
+
+LRU implementation 
+https://leetcode.com/problems/lru-cache/
+
+Graph
+https://leetcode.com/tag/graph/
+
+Sql Server IQ
+https://mindmajix.com/sql-server-interview-questions
+https://www.guru99.com/sql-server-questions.html
+https://www.c-sharpcorner.com/UploadFile/puranindia/sql-server-interview-questions/
+https://www.toptal.com/sql-server/interview-questions
+https://www.red-gate.com/simple-talk/opinion/career/sql-server-interview-questions-for-experienced-developers/
+https://www.edureka.co/blog/interview-questions/sql-server-interview-questions/
+https://www.softwaretestinghelp.com/sql-server-interview-question-for-testers-2/
+https://intellipaat.com/blog/interview-question/sql-server-interview-questions/
+https://intellipaat.com/blog/interview-question/sql-interview-questions/
+
+
+
+
+C#
+
+https://mindmajix.com/net-interview-questions
+https://intellipaat.com/blog/interview-question/dot-net-interview-questions/
+https://www.fullstack.cafe/blog/senior-net-developer-interview-questions
+https://www.toptal.com/dot-net/interview-questions
+https://www.interviewbit.com/dot-net-interview-questions/
+https://www.simplilearn.com/dot-net-interview-questions-and-answers-article
+https://www.shiksha.com/online-courses/articles/top-dot-net-interview-questions-answers/
+https://www.c-sharpcorner.com/UploadFile/65794e/dot-net-interview-questions-for-experienced-and-fresher/
+https://in.indeed.com/career-advice/interviewing/dot-net-interview-questions
+https://www.edureka.co/blog/interview-questions/dot-net-interview-questions/
+https://www.ambitionbox.com/profiles/dot-net-developer/interview-questions
+https://www.guru99.com/asp-net-interview-questions-answers.html
+https://www.fullstack.cafe/blog/c-sharp-interview-questions
+
+https://www.interviewkickstart.com/interview-questions/c-sharp-interview-questions-for-experienced
+
+https://www.interviewbit.com/c-sharp-interview-questions-for-5-years-experience/
+https://www.interviewbit.com/c-sharp-interview-questions/
+https://hackr.io/blog/c-sharp-interview-questions
+https://www.softwaretestinghelp.com/c-sharp-interview-questions/
+https://blog.udemy.com/c-sharp-interview-questions-2/
+https://www.mygreatlearning.com/blog/c-sharp-interview-questions/
+https://habr.com/en/post/498470/
+https://www.turing.com/interview-questions/c-sharp
+
+c# IQ
+https://www.youtube.com/watch?v=UVM5s5qtBFA&list=PLQMqUlV2_B8k9roVUFHQxEDKWpltKXslG
+https://www.youtube.com/watch?v=Pils-0myY60&list=PLQMqUlV2_B8kEJCQO7KRhwyWsTT7AZu9v
+https://www.youtube.com/watch?v=DEIrKA_FjVQ&list=PLQMqUlV2_B8lcF7i9qJHeLASsV7LDMIu_
+https://www.youtube.com/watch?v=Bai9_LSZfAI&t=4s
+
+https://unstop.com/blog/dot-net-core-interview-questions-and-answers
+https://www.dotnettricks.com/learn/aspnetcore/top-20-asp-net-core-interview-questions-and-answers
+https://www.hackertrail.com/talent/backend/net-core-interview-questions-answers/
+https://www.fullstack.cafe/blog/dot-net-core-interview-questions-and-answers
+https://www.interviewbit.com/asp-net-interview-questions/
+https://www.qfles.com/interview-question/asp-net-core-interview-questions
+https://www.qfles.com/interview-question/asp-net-core-web-api-interview-questions
+https://www.qfles.com/interview-question/asp-net-mvc-interview-questions
+https://www.qfles.com/interview-question/asp-net-core-interview-questions
+https://www.adaface.com/blog/dot-net-core-interview-questions/
+https://www.questpond.com/interview-questions---answers-series-for-c-net-fresher---experienced/cid88
+https://www.geeksforgeeks.org/c-sharp-abstract-classes/
+
+https://github.com/aershov24/net-core-interview-questions
+https://github.com/Devinterview-io/dot-net-core-interview-questions
+
+https://github.com/babula38/Dotnet-Interview-Questions/blob/main/8-to-10-years-experience/CSharp.md
+
+https://github.com/Devinterview-io/asp-net-interview-questions
+https://github.com/Devinterview-io/asp-net-web-api
+https://github.com/Khranovskiy/1001-Full-Stack-Interview-Questions-And-Answers#DataStructures
+https://github.com/kansiris/ASP.NET-webapi-Interview-Questions
+https://www.interviewbit.com/dot-net-interview-questions/
+
+https://github.com/kansiris/C-Sharp-c-interview-question
+https://github.com/quangnd/OOP-And-CSharp/blob/master/Csharp-Essential/Questions-And-Answers.md
+
+https://www.javatpoint.com/xamarin-interview-questions
+https://mindmajix.com/xamarin-interview-questions
+https://www.knowledgehut.com/interview-questions/xamarin
+https://www.fullstack.cafe/interview-questions/xamarin
+https://www.fullstack.cafe/blog/xamarin-interview-questions
+https://www.stechies.com/xamarin-interview-questions/
+https://www.educba.com/xamarin-interview-questions/
+https://www.bestinterviewquestion.com/xamarin-interview-questions
+https://www.mytectra.com/interview-question/mvvm-interview-questions-and-answers
+https://in.indeed.com/career-advice/interviewing/mvvm-interview-questions
+https://www.educba.com/mvvm-interview-questions/
+https://www.wisdomjobs.com/e-university/mvvm-interview-questions.html
+https://devinterview.io/dev/xamarin-interview-questions
+https://codecompiled.com/mvvm-common-interview-questions-and-answers
+
+https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui?view=net-maui-7.0
+https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/
+https://www.c-sharpcorner.com/UploadFile/84c85b/delegates-and-events-C-Sharp-net/
+
+https://learn.microsoft.com/en-us/dotnet/architecture/maui/micro-services
+
+
+REST API 
+https://www.youtube.com/watch?v=fhM0V2N1GpY&list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&index=2
+https://www.guru99.com/asp-net-web-api-interview-questions.html
+https://www.dotnettricks.com/learn/webapi/top-20-web-api-interview-questions-answers
+https://dotnettutorials.net/lesson/web-api-experienced-interview-questions/
+https://www.mygreatlearning.com/blog/web-api-interview-questions/
+https://hackr.io/blog/top-web-api-interview-questions
+https://www.knowledgehut.com/interview-questions/web-api
+https://www.fullstack.cafe/blog/asp-net-web-api-interview-questions
+https://www.javatpoint.com/web-api-interview-questions
+https://github.com/Devinterview-io/asp-net-web-api
+https://github.com/Devinterview-io/asp-net-interview-questions
+
+
+
+https://learn.microsoft.com/en-us/shows/c-advanced/
+https://ssw.jku.at/Teaching/Lectures/CSharp/Tutorial/Part1.pdf
+https://ssw.jku.at/Teaching/Lectures/CSharp/Tutorial/Part2.pdf
+https://www.codeproject.com/articles/1094079/an-advanced-introduction-to-csharp-lecture-notes-p
+https://cs.wmich.edu/~alfuqaha/summer13/cs5950/lectures/CSAdvanced-rev3.pdf
+
+
+
+
+
+
+02:58 Question 01 :- Why do we need OOP?
+06:47 Question 02 :- What are the important pillars in OOP?
+09:55 Question 03 :- What is a Class and Object ?
+11:01 Question 04 :- Abstraction VS Encapsulation ?
+16:28 Question 05 :- Explain Inheritance ?
+18:15 Question 06 :- Explain Virtual Keyword ?
+18:15 Question 07 :- What is Overriding ?
+19:30 Question 08 :- Explain Overloading ?
+20:50 Question 09 :- Overloading VS Overriding ?
+23:04 Question 10 :- What is Polymorphism ?
+23:53 Question 11 :- Can Polymorphism work without Inheritance ?
+24:43 Question 12 :- Explain Static VS Dynamic Polymorphism ?
+26:32 Question 13 :- Explain Operator Overloading ?
+27:18 Question 14 :- How to do Custom Operator Overloading ?
+30:16 Question 15 :- Why do we need Abstract Classes ?
+34:10 Question 16 :- Are Abstract methods Virtual ?
+35:27 Question 17 :- Can we create an instance of Abstract Classes ?
+35:27 Question 18 :- Is it compulsory to implement Abstract Methods ?
+36:44 Question 19 :- Why simple base class cannot replace Abstract Classes?
+38:51 Question 20 :- Explain Interface and Why do we need it ?
+40:11 Question 21 :- Can we write logic in Interface ?
+40:11 Question 22 :- Can we define methods as private in Interface ?
+46:58 Question 23 :- To change Interface what's the best practice ?
+47:07 Question 24 :- Explain Multiple Inheritance in Interfaces ?
+51:08 Question 25 :- Explain Interface Segregation Principle ?
+53:09 Question 26 :- Can we create instance of Interface ?
+53:33 Question 27 :- Can we do multiple inheritance of Interface ?
+02:34 Question 1  :- Explain difference between .NET and C# ?
+06:44 Question 2  :- .NET Framework vs .NET Core vs .NET 5.0
+15:08 Question 3  :- What is IL ( Intermediate Language) Code ?
+15:08 Question 4  :- What is the use of JIT ( Just in time compiler) ?
+17:03 Question 5  :- Is it possible to view IL code ?
+18:14 Question 6  :- What is the benefit of compiling in to IL code ?
+20:39 Question 7  :- Does .NET support multiple programming languages ?
+22:52 Question 8  :- What is CLR ( Common Language Runtime) ?
+24:10 Question 9  :- What is managed and unmanaged code ?
+26:21 Question 10 :- Explain the importance of Garbage collector ?
+28:11 Question 11 :- Can garbage collector claim unmanaged objects ?
+28:33 Question 12 :- What is the importance of CTS ?
+30:25 Question 13 :- Explain CLS ? 
+33:23 Question 14 :- Difference between Stack vs Heap ?
+35:27 Question 15 :- What are Value types & Reference types?
+36:15 Question 16 :- Explain boxing and unboxing ?
+37:01 Question 17 :- What is consequence of boxing and unboxing ?
+37:32 Question 18 :- Explain casting,implicit casting and explicit casting ?
+39:37 Question 19 :- What can happen during explicit casting ?
+40:48 Question 20 :- Differentiate between Array and ArrayList ?
+43:12 Question 21 :- Whose performance is better array or arraylist ?
+44:22 Question 22 :- What are generic collections ?
+46:20 Question 23 :- What are threads (Multithreading)?
+47:32 Question 24 :- How are threads different from TPL ?
+52:47 Question 25 :- How do we handle exceptions in C#(try/catch)?
+54:43 Question 26 :- What is the need of finally?
+55:49 Question 27 :- Why do we need the out keyword ?
+58:12 Question 28 :- What is the need of Delegates ?
+58:45 Question 29 :- What are events ?
+59:35 Question 30 :- Whats the difference between Abstract class and interface ?
+Part 2 - Questions on Delegates, Event & Delegates vs Events.
+Part 3 - Questions OOP, Abstraction, Encapsulation, Inheritance, Virtual, Overriding and overloading.
+Part 4 - Questions Polymorphism, Static vs Dynamic polymorphism and operator overloading.
+Part 5 - Tricky Questions around Abstract classes and Interfaces.
+Part 6 - Answering the most asked Question "Abstract classes vs Interface".
+Part 7 - Questions around constructors & in parent child which constructor fires first.
+Part 8 - Questions around Shadowing, Sealed, Nested classes and partial classes.
+Part 9 - Questions Around SOLID principles , Dependency injection (DI) and IOC
+Part 10 - Explain & Differentiate Composition, Aggregation and Association in C#.
+Part 11 - Crack questions on Stack, Heap, Boxing, Unboxing, Value &  reference types
+Part 12 - What is Garbage collector, Managed vs UnManaged code, Memory Leaks.
+
+1	What is the difference between an abstract class and an interface in C#?
+	2	What is the difference between a struct and a class in C#?
+	3	What is the difference between a delegate and an event in C#?
+	4	What is the difference between a static class and a singleton pattern in C#?
+	5	What is the difference between var and dynamic in C#?
+	6	What is the difference between readonly and const in C#?
+	7	What is the difference between override and virtual in C#?
+	8	What is the difference between IEnumerable and IQueryable in C#?
+	9	What is the difference between == and .Equals() in C#?
+	10	What is the difference between out and ref in C#?
+	11	What is the async and await keywords in C#? How do they work?
+	12	What is a closure in C#?
+	13	What is LINQ in C#? Explain its purpose.
+	14	What is an extension method in C#? Give an example of how it can be used.
+	15	What is a lambda expression in C#? Give an example of how it can be used.
+	16	What is dependency injection in C#? How does it work?
+	17	What is inversion of control in C#? How does it work?
+	18	What is the difference between a private and a protected method in C#?
+	19	What is polymorphism in C#? Give an example.
+	20	What is a virtual method in C#?
+	21	What is the difference between a thread and a task in C#?
+	22	What is a mutex in C#? Give an example of how it can be used.
+	23	What is a semaphore in C#? Give an example of how it can be used.
+	24	What is the difference between a stack and a heap in C#?
+	25	What is garbage collection in C#? How does it work?
+	26	What is the difference between a value type and a reference type in C#?
+	27	What is a nullable type in C#? Give an example of how it can be used.
+	28	What is a generic type in C#? Give an example of how it can be used.
+	29	What is a delegate in C#? Give an example of how it can be used.
+	30	What is covariance and contravariance in C#?
+	31	What is a yield return statement in C#? Give an example of how it can be used.
+	32	What is a try-catch block in C#? Give an example of how it can be used.
+	33	What is the difference between a public and a private property in C#?
+	34	What is a reflection in C#? How does it work?
+	35	What is a partial class in C#? Give an example of how it can be used.
+	36	What is an abstract class in C#? Give an example of how it can be used.
+	37	What is a sealed class in C#? Give an example of how it can be used.
+	38	What is a static constructor in C#? Give an example of how it can be used.
+	39	What is an inner join in LINQ? Give an example of how it can be used.
+	40	What is an outer join in LINQ? Give an example of how it can be used.
+	41	What is a left join in LINQ? Give an example of how it can be used.
+	42	What is a right join in LINQ? Give
+
+
+	1	What is the difference between string and StringBuilder in C#?
+	2	Explain the yield keyword in C#.
+	3	What is the difference between an abstract class and an interface in C#?
+	4	Explain the difference between virtual, override, and new in C#.
+	5	What are extension methods in C#? Give an example of how they can be used.
+	6	How do you handle exceptions in C#?
+	7	Explain the concept of delegates in C#.
+	8	What is LINQ in C#? Explain its purpose.
+	9	Explain the difference between value types and reference types in C#.
+	10	What is the difference between const and readonly in C#?
+	11	What is the async and await keywords in C#? How do they work?
+	12	Explain the Singleton design pattern in C#.
+	13	What is the difference between IEnumerable and IQueryable in C#?
+	14	How do you implement multithreading in C#?
+	15	What is the difference between lock and Monitor in C#?
+	16	What is the difference between static and instance methods in C#?
+	17	What is a lambda expression in C#? How is it used?
+	18	What is the difference between an array and a list in C#?
+	19	How do you sort an array or list in C#?
+	20	What is the difference between try-catch and try-finally in C#?
+	21	What is the difference between throw and throw ex in C#?
+	22	What is the difference between Debug and Trace in C#?
+	23	What is the difference between DateTime and DateTimeOffset in C#?
+	24	What is the difference between Action and Func in C#?
+	25	What is the difference between var and dynamic in C#?
+	26	What is the difference between abstract and sealed in C#?
+	27	What is the difference between a class and a struct in C#?
+	28	How do you implement inheritance in C#?
+	29	What is an interface in C#? How is it used?
+	30	What is the difference between a private and protected method in C#?
+	31	What is an extension method? How is it used in C#?
+	32	What is a generic type in C#? How is it used?
+	33	What is the difference between interface and abstract class in C#?
+	34	What is the difference between IEnumerable and IEnumerator in C#?
+	35	What is the difference between Dictionary and Hashtable in C#?
+	36	What is the difference between FileStream and MemoryStream in C#?
+	37	What is the difference between Stack and Queue in C#?
+	38	What is the difference between HashSet and List in C#?
+	39	What is the difference between FirstOrDefault and SingleOrDefault in C#?
+	40	What is the difference between OrderBy and OrderByDescending in C#?
+	41	What is the difference between ToList and ToArray in C#?
+	42	What is the difference between Skip and Take in C#?
+	43	What is the difference between Join and GroupJoin in C#?
+	44	What is the difference between Count and LongCount in
+
+
+	1	What is C#?
+	2	What are the advantages of using C#?
+	3	What is .NET Framework?
+	4	What is CLR?
+	5	What is CTS?
+	6	What is CLS?
+	7	What are the differences between value types and reference types?
+	8	What is boxing and unboxing in C#?
+	9	What is the difference between const and readonly in C#?
+	10	What is the difference between static and non-static members in C#?
+	11	What is the difference between abstract class and interface in C#?
+	12	What is the difference between method hiding and method overriding in C#?
+	13	What is the difference between virtual and abstract methods in C#?
+	14	What is the difference between throw and throw ex in C#?
+	15	What is the difference between catch and finally in C#?
+	16	What is the difference between try and try-finally in C#?
+	17	What is the difference between async and await in C#?
+	18	What is the difference between IEnumerable and IEnumerator in C#?
+	19	What is the difference between IQueryable and IEnumerable in C#?
+	20	What is a delegate in C#?
+	21	What is an event in C#?
+	22	What is a multicast delegate in C#?
+	23	What is a lambda expression in C#?
+	24	What is a LINQ in C#?
+	25	What is an extension method in C#?
+	26	What is partial class in C#?
+	27	What is an assembly in C#?
+	28	What is an application domain in C#?
+	29	What is a reflection in C#?
+	30	What is an attribute in C#?
+	31	What is a custom attribute in C#?
+	32	What is a serialization in C#?
+	33	What is a serialization and deserialization in C#?
+	34	What is a binary serialization in C#?
+	35	What is a XML serialization in C#?
+	36	What is a JSON serialization in C#?
+	37	What is a data contract serialization in C#?
+	38	What is a WCF in C#?
+	39	What is a RESTful service in C#?
+	40	What is a Web API in C#?
+	41	What is a .NET Core in C#?
+	42	What is a .NET Standard in C#?
+	43	What is a .NET Framework in C#?
+	44	What is a garbage collector in C#?
+	45	What is a finalizer in C#?
+	46	What is a destructor in C#?
+	47	What is a weak reference in C#?
+	48	What is a strong reference in C#?
+	49	What is a context-bound object in C#?
+	50	What is a context-free object in C#?
+	51	What is an assembly in C#?
+	52	What is a namespace in C#?
+	53	What is a class in C#?
+	54	What is an interface in C#?
+	55	What is a struct in C#?
+	56	What is an enum in C#?
+	57	What is a generic in C#?
+	58	What is a collection in C#?
+	59	What is a list in C#?
+	60	What is a dictionary in C#?
+	61	What is a queue in C#?
+	62	What is a stack in C#?
+	63	What is a thread in C#?
+	64	What is a task in C#?
+	65	What is a deadlock in C#?
+	66	What is a critical section in C#?
+	67	What is a semaphore in C#?
+
+	1	What is C# and why is it used?
+	2	Explain the differences between an abstract class and an interface in C#.
+	3	What is a delegate in C#?
+	4	What is a lambda expression in C#?
+	5	Explain the differences between value types and reference types in C#.
+	6	What is the difference between the "ref" and "out" keywords in C#?
+	7	Explain the differences between "throw" and "throw ex" in C#.
+	8	What is the difference between "foreach" and "for" loops in C#?
+	9	Explain the differences between "private" and "protected" access modifiers in C#.
+	10	What is the difference between "const" and "readonly" in C#?
+	11	What is the difference between a "static" class and a "non-static" class in C#?
+	12	What is the difference between "virtual", "override", and "new" in C#?
+	13	Explain the "using" statement in C#.
+	14	Explain the "lock" statement in C#.
+	15	Explain the "yield" keyword in C#.
+	16	What is the difference between an "abstract" method and a "virtual" method in C#?
+	17	What is the difference between "out" and "ref" in C#?
+	18	What is the difference between "string" and "String" in C#?
+	19	What is "boxing" and "unboxing" in C#?
+	20	What is a "struct" in C#?
+	21	What is a "namespace" in C#?
+	22	What is a "partial class" in C#?
+	23	What is a "Nullable" type in C#?
+	24	What is "overloading" in C#?
+	25	What is "overriding" in C#?
+	26	What is a "constructor" in C#?
+	27	What is a "destructor" in C#?
+	28	What is a "property" in C#?
+	29	What is an "indexer" in C#?
+	30	What is a "thread" in C#?
+	31	What is a "thread pool" in C#?
+	32	What is a "mutex" in C#?
+	33	What is an "event" in C#?
+	34	What is a "delegate" in C#?
+	35	What is "garbage collection" in C#?
+	36	What is a "dispose" method in C#?
+	37	What is "serialization" in C#?
+	38	What is "deserialization" in C#?
+	39	What is "LINQ" in C#?
+	40	What is "anonymous type" in C#?
+	41	What is "extension method" in C#?
+	42	What is "generics" in C#?
+	43	What is "reflection" in C#?
+	44	What is "multithreading" in C#?
+	45	What is "asynchronous programming" in C#?
+	46	What is a "Lambda expression" in C#?
+	47	What is "yield return" in C#?
+	48	What is "async" and "await" in C#?
+	49	What is the "Task Parallel Library" in C#?
+	50	What is a "Task" in C#?
+	51	What is a "TaskCompletionSource" in C#?
+	52	What is the "Parallel" class in C#?
+	53	What is "TPL Dataflow" in C#?
+	54	What is a "ConcurrentDictionary" in C#?
+	55	
+	56		1	What is C#? What are its features?
+	57	Explain the difference between .NET Core and .NET Framework.
+	58	How do you implement multithreading in C#?
+	59	What are delegates in C#? Explain with an example.
+	60	What is the difference between an abstract class and an interface in C#?
+	61	Explain the use of the "using" keyword in C#.
+	62	What is a static class in C#? How is it different from a non-static class?
+	63	What are the different types of access modifiers in C#?
+	64	What is a lambda expression in C#?
+	65	What is the difference between "ref" and "out" keywords in C#?
+	66	Explain the difference between "dynamic" and "var" in C#.
+	67	What is a nullable type in C#?
+	68	What is a generic class in C#?
+	69	How do you implement inheritance in C#?
+	70	Explain the difference between "sealed" and "static" keywords in C#.
+	71	What is a constructor in C#? How is it different from a method?
+	72	What is an indexer in C#? Explain with an example.
+	73	How do you implement exception handling in C#?
+	74	What are attributes in C#?
+	75	Explain the concept of boxing and unboxing in C#.
+	76	What is a partial class in C#? When is it used?
+	77	Explain the difference between "async" and "await" keywords in C#.
+	78	What is a LINQ in C#? How do you use it?
+	79	What is a delegate chaining in C#? Explain with an example.
+	80	What are extension methods in C#? Explain with an example.
+	81	What is an event in C#? How do you implement it?
+	82	What is a thread pool in C#? Explain with an example.
+	83	How do you implement generics in C#?
+	84	What is a collection in C#? What are the different types of collections in C#?
+	85	Explain the difference between a list and an array in C#.
+	86	What is a dictionary in C#? Explain with an example.
+	87	What is a stack in C#? Explain with an example.
+	88	What is a queue in C#? Explain with an example.
+	89	How do you implement a singleton pattern in C#?
+	90	What is an interface in C#? Explain with an example.
+	91	What is a namespace in C#? Why is it used?
+	92	How do you implement polymorphism in C#?
+	93	What is a static constructor in C#? When is it used?
+	94	What is a virtual method in C#? How is it different from an abstract method?
+	95	Explain the concept of garbage collection in C#.
+	96	What is a value type in C#? How is it different from a reference type?
+	97	How do you implement operator overloading in C#?
+	98	What is a property in C#? How do you implement it?
+	99	What is a struct in C#? Explain with an example.
+	100	What is a file stream in C#? How do you use it?
+	101	What is a memory stream in C#? How do you use it?
+	102	What is an anonymous method in C#? Explain with an example.
+	103	What is a switch statement in C#? How do you use it?
+	104	What is a try-catch-finally block in C#? How do you use it?
+	105	How do you implement a multithreaded application in C#?
+
+
+
+
+
+https://medium.com/@john_57221/cqrs-and-why-repositories-may-not-be-the-right-fit-ca8469a2379f
+https://www.c-sharpcorner.com/article/using-the-cqrs-pattern-in-c-sharp/

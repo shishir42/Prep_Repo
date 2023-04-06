@@ -1,0 +1,25 @@
+Docker
+https://www.youtube.com/watch?v=ztWZQ8sgCQI&list=PLefG3VDSLxSzboMuyD1BNfa3_yNWthR7r
+
+
+Docker and Kubernetes are both popular technologies in the world of containerization, but they serve different purposes.
+Docker is a containerization platform that allows you to package an application and its dependencies into a single image. Docker provides an easy way to build, ship, and run applications in any environment, without worrying about the underlying system dependencies. Docker makes it easy to create consistent environments for development, testing, and production.
+Kubernetes, on the other hand, is a container orchestration platform that allows you to manage, deploy, and scale containerized applications. Kubernetes provides a framework for automating the deployment, scaling, and management of containerized applications. With Kubernetes, you can easily manage multiple Docker containers, including load balancing, service discovery, and rolling updates.
+In summary, Docker is a platform for building container images, while Kubernetes is a platform for managing containerized applications. While it's possible to use Docker without Kubernetes, Kubernetes is typically used in conjunction with Docker to manage and orchestrate containers in a production environment.
+
+Sure, I can provide some examples to illustrate the difference between Docker and Kubernetes.
+Let's say you have a web application that you want to run in a containerized environment. Here's how you might use Docker and Kubernetes to accomplish this:
+Using Docker:
+	1	Write a Dockerfile that specifies the application and its dependencies.
+	2	Use the Docker CLI to build a Docker image from the Dockerfile.
+	3	Use the Docker CLI to run the Docker image as a container on a local machine or a remote server.
+For example, you might write a Dockerfile that installs the necessary packages for your web application, copies the application code into the container, and sets the container to run the application on startup. Then, you would use the Docker CLI to build the image and run it as a container on a server.
+Using Kubernetes:
+	1	Write a Kubernetes deployment configuration that specifies the Docker image, number of replicas, and other deployment options.
+	2	Use the Kubernetes CLI to create a Kubernetes deployment object from the deployment configuration.
+	3	Use the Kubernetes CLI to scale the deployment, update the deployment, or perform other management tasks.
+For example, you might write a deployment configuration that specifies the Docker image for your web application, the number of replicas you want to run, and any environment variables or secrets that the application needs. Then, you would use the Kubernetes CLI to create the deployment object, which would automatically create and manage the necessary pods and containers to run your application.
+In summary, Docker is used to build and run containerized applications, while Kubernetes is used to manage and orchestrate those containers in a production environment.
+
+
+https://github.com/veggiemonk/awesome-docker

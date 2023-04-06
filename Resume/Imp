@@ -1,0 +1,362 @@
+Gethai
+
+hai - smart spa-shower system
+
+The hai app guides you through installing your hai smart shower in minutes - no fancy tools or plumber needed. Then pair it with your showerhead to find out why it’s never been more fun to make a difference. You’ll see the eco-impact of your showers’ water use, energy use, temperature and duration – and their collective impact too. Do better for yourself and better for the planet with a wellspring of personal data, insights, inspiration and tips. Let the self-care revolution begin...
+
+• Use the companion guide for an easy install
+• Track your water and energy usage over time
+• Customize LED alerts to reach your eco goals
+• Get mobile alerts when your water is at the perfect temp
+• Elevate your life with new at-home spa rituals
+
+What's New
+- Onboarding Improvements
+- Custom Shower Name and Color: Update your profile to be as personalized as your hai shower. Change the shower's name and color in the app to match your shower vibes.
+- New Shower Sessions View: Now you can access more of your recent shower sessions at a glance. Go to "Recent Sessions" to see a snapshot of your latest sessions.
+- Easier Toggling Between Data Views: Recent Sessions and Trends are now nested in one place, so you can easily toggle between them. While you're saving the planet, why not enjoy all the views
+- Multi-Showerhead Management: Got more than one hai shower? The more the merrier. There's now an easier way to view and manage multiple hai showers in your profile.
+- Showerhead Sharing: Sharing your showerhead with others? It's a team effort. You can now share your verification code more easily so adding new users to your shower account is a breeze.
+
+iOS: https://apps.apple.com/us/app/hai-smart-spa-shower-system/id1567377425
+Android: https://play.google.com/store/apps/details?id=com.gethai&hl=en_IN&gl=US
+Site: https://gethai.com/
+admin: https://admin.gethai.com/
+
+Skills: 
+
+Mobile App Platform: iOS and Android 
+
+Programming languages: C#, Javascript(ES6), Typescript, HTML, CSS, Swift, Objective-c, Java
+
+Mobile development frameworks: React native,Google firebase dynamic links, moment-timezone, shoipfy multipassify, graphql, @aws-amplify/pushnotification, react-native-ble-manager, react-native-nordic-dfu,@react-native-firebase/analytics, @react-native-firebase/app, @react-native-firebase/dynamic-links, "react-native-qrcode-scanner": "^1.5.4",react-navigation, amazon-cognito-identity, Victory chart 
+
+Front-end frameworks: React, react-router-dom, craco, moment-timezone, aws-amplify, mui library,mui-datatables,  date-fns, Shopify, amazon-cognito-identity,create flexbox driven UI layout, Kendo,  
+
+Back-end frameworks: Node.js, aws-lambda, 
+Amazon S3 (Simple Storage Service), Amazon Lambda (compute service),Amazon Cognito (User Migration),Amazon SNS (Simple Notification Service), , AWS Amplify (AWS Amplify is a complete solution that lets frontend web and mobile developers easily build, ship, and host full-stack applications on AWS), AWS Cloudformation, Amazon CloudFront (CDN), Amazon CloudWatch (Monitoring), Amazon API Gateway, Step function,Firebase Functions
+
+Database management: SQLServer, DynamoDB, Google Bigquery
+
+Build Tool/DevOps tools: Git, CircleCI, Fastlane, Apple TestFlight, Google Internal Test, Apple Store, Google Play Console 
+
+UI Automation Tool: React native like Cavy, Detrox 
+
+IDE: VSCode, Android Studio, Xcode
+
+code analysis tool: ESLint
+
+Company Experience: 
+
+Infostretch Solutions Pvt. Ltd - 1 years 8 months
+Aveva - 9 years 7 months
+Gethai - 7 months
+
+Total - 11. 8
+
+
+Work Experience:
+Main Responsibility:
+
+Version: 1
+
+Mobile development: hai - smart spa-shower system (iOS and Android)
+1. Developing and maintaining mobile applications using React Native, reducing development time by 20% by implementing reusable components and optimizing application performance.
+2. Building cross-platform applications that work on both iOS and Android devices.
+3. Collaborating with designers to create a seamless user experience and responsive design.
+4. Developed and implemented core features, such as Onboarding what's new, in-app messaging, Support Multi-Showerhead Management, enhanced trends chart, Bluetooth API integration for data sync, Customize LED alerts, Firebase analytics for capturing events, reusable UI component, QRCode sharing using Dynamic links, customize app navigation using react navigation, integrated deep linking to handle incoming links etc.
+5. Integrated third-party libraries and APIs, such as react navigation, shopify, aws amplify, aws cognito-identity, victory chart, reanimated, refiner survey etc. 
+6. Troubleshooting and debugging issues that arise during development and after deployment.
+7. Staying up-to-date with the latest React Native trends and best practices.
+8. Worked in an Agile environment and participated in daily stand-ups and sprint reviews.
+9. Contributed to code reviews and provided feedback to team members to improve code quality and maintainability.
+
+Front-end development: 
+1. Designed and developed a responsive admin portal to manages the paired shower devices for internal and external users using react, mui library.
+2. Implemented responsive design techniques to optimize user experience on various devices like desktop and mobile browser.
+3. Some of the core feature integrated like generate Qrcode for verification, display list of paired devices with metadata, unpair and reset or paired devices, dynamic link for mobile browser etc. 
+4. Integrated third-party libraries and APIs, aws amplify, aws cognito-identity, victory chart, react dom router, mui datatable, mui etc. 
+
+Back-end: 
+1. Design and develop APIs using AWS Lambda, API Gateway, Amazon Cognito, Amazon CloudFront, to enable seamless communication between front-end and back-end systems.
+2. Design and implement scalable, fault-tolerant, and highly available AWS architectures using Simple Storage Service and DynamoDB.
+3. Troubleshoot AWS systems to identify and resolve issues using Amazon CloudWatch.
+4. Automate infrastructure provisioning, deployment, and configuration using tools like AWS CloudFormation to reduce manual work and ensure consistency.
+
+Build Tool/DevOps tools: 
+1. Git, CircleCI, Fastlane, Apple TestFlight, Google Internal Test, Apple Store, Google Play Console. 
+
+UI Automation Tool: 
+1. React native like Cavy and Detrox. 
+
+IDE: 
+1. VSCode, Android Studio, Xcode.
+
+iOS: 
+1. https://apps.apple.com/us/app/hai-smart-spa-shower-system/id1567377425
+
+Android: 
+1. https://play.google.com/store/apps/details?id=com.gethai&hl=en_IN&gl=US
+
+Site: 
+1. https://gethai.com/
+
+admin: 
+1. https://admin.gethai.com/
+
+
+
+
+
+
+
+
+
+Mobile Operator
+
+Mobile Operator 2020 is a mobile workforce and decision support system that allows field operators to input data directly to an interactive electronic mobile work process application.
+
+
+Mobile Operator 2020 app users can:
+• Download the latest versions of procedures
+• Search, select, and open procedures
+• Input and upload data for the selected procedure
+• Add notes and review the history of procedure tasks
+• Add work order requests
+• Add logs for making entries not associated with the procedure
+• Use mobile device camera to unlock and access nodes associated with an asset, populate asset information, and capture images in notes
+• Use peripheral devices to unlock and access nodes associated with an asset, and populate fields for procedure tasks
+• Transfer data to and from Sync Server
+
+What's New
+- Authentication using Azure Active Directory.
+- Certificate-based authentication for authenticating Azure Active Directory users.
+- Authentication using AVEVA Connect.
+- The Mobile Operator 2020 R1 app is supported on iOS version 15
+- Support for scanning of inverted QR codes and Barcodes using camera.
+- Enhancements made to the way titles are displayed for Tasks and Decisions within the mobile app.
+- A new setting ‘Connection Timeout’ in mobile app which allows you to set the duration till when the connection to the Mobile Operator server will be attempted.
+- Support for Cognex MX-1000
+
+iOS: https://apps.apple.com/in/app/mobile-operator-2020/id1531260762
+Android: https://play.google.com/store/apps/details?id=com.aveva.mobileoperator&hl=en&gl=US
+UWP: https://apps.microsoft.com/store/detail/mobile-operator-2020/9MTWJQB6Q23F?hl=en-us&gl=us
+
+AVEVA Mobile Maintenance V9.2
+
+Create Work Order, Work Request, timecard, update activities, and upload the data to Aveva Enterprise Asset Management when connected.
+
+
+Empowering maintenance workers with mobile solutions they need to complete the work in the field or on the plant floor. Our enterprise solution provides access to work requirements, complete activities, record readings, and review safety and procedures while helping users to limit downtime and increase productivity.
+
+Mobile Maintenance enables the user to do the following:
+• Create new or follow-up work requests and work orders
+• Enter statistics
+• Complete the work order activities
+• View procedures and safety records
+• Add a picture or video attachments
+• View or update add-on information,
+• View material and labor requirements
+• Add new material requirements from the Entity Parts List (Bill of Material) or Inventory (online or offline)
+• Issue material (depending upon the authorization)
+• Sync to Aveva Enterprise Asset Management when connected to a wireless network.
+• Security enhancements.
+• User authentication: Authentication of users through Active Directory.
+• Download data for all storerooms and search for offline Storeroom parts using wildcards.
+
+iOS: https://apps.apple.com/in/app/aveva-mobile-maintenance-v9-2/id1482234341
+Android: https://play.google.com/store/apps/details?id=com.aveva.mobilemaintenancev9&hl=en&gl=US
+UWP: https://apps.microsoft.com/store/detail/aveva-mobile-maintenance-v91/9NGKKDF2XC1T?hl=en-us&gl=us
+
+Work Tasks Pro
+
+Business professionals need to know the status of critical processes and make quick decisions on the go. Work Tasks Pro app for Workflow Management is a premium application for mobile devices, which allows authenticated users to securely access and act upon work items on the move.
+
+Features
+• View and submit fill forms and work items
+• Fill and submit a form to initiate a process
+• Set a Form as a landing page for the app
+• View all work items or view work items from one of the categories
+• View work item details and remove the work item from the list
+• Approve or reject a request
+• Search for work items in the app and on the server
+• Flag work items based on importance or for reference
+• Identify the priority of work items based on the color code
+• Group work items based on the value of work item field
+• Sort work items based on priority
+• View queue items
+• Pick, allocate, move, prioritize, or recall a queue item
+• Receive real-time notifications
+• Customize Notification Sound
+• Localization support for various languages
+
+iOS: https://apps.apple.com/in/app/work-tasks-pro/id1318555492
+Android: https://play.google.com/store/apps/details?id=com.schneiderelectric.worktaskspro&hl=en&gl=US
+UWP: https://apps.microsoft.com/store/detail/work-tasks-pro/9PMMZCHQJWQR
+
+
+
+Version: 2
+
+Mobile development: hai - smart spa-shower system (iOS and Android)
+1. Developing and maintaining mobile applications using React Native, reducing development time by 20% by implementing reusable components and optimizing application performance.
+2. Building cross-platform applications that work on both iOS and Android devices.
+3. Collaborating with designers to create a seamless user experience and responsive design.
+4. Developed and implemented core features, such as Onboarding what's new, in-app messaging, Support Multi-Showerhead Management, enhanced trends chart, Bluetooth API integration for data sync, Customize LED alerts, Firebase analytics for capturing events, reusable UI component, QRCode sharing using Dynamic links, customize app navigation using react navigation, integrated deep linking to handle incoming links etc.
+5. Integrated third-party libraries and APIs, such as react navigation, shopify, aws amplify, aws cognito-identity, victory chart, reanimated, refiner survey etc. 
+6. Troubleshooting and debugging issues that arise during development and after deployment.
+
+Front-end development: 
+1. Designed and developed a responsive admin portal to manages the paired shower devices for internal and external users using react, mui library.
+2. Implemented responsive design techniques to optimize user experience on various devices like desktop and mobile browser.
+3. Some of the core feature integrated like generate Qrcode for verification, display list of paired devices with metadata, unpair and reset or paired devices, dynamic link for mobile browser etc. 
+4. Integrated third-party libraries and APIs, aws amplify, aws cognito-identity, victory chart, react dom router, mui datatable, mui etc. 
+
+Back-end: 
+1. Design and develop APIs using AWS Lambda, API Gateway, Amazon Cognito, Amazon CloudFront, to enable seamless communication between front-end and back-end systems.
+2. Design and implement scalable, fault-tolerant, and highly available AWS architectures using Simple Storage Service and DynamoDB.
+3. Troubleshoot AWS systems to identify and resolve issues using Amazon CloudWatch.
+4. Automate infrastructure provisioning, deployment, and configuration using tools like AWS CloudFormation to reduce manual work and ensure consistency.
+
+
+Mobile development: Mobile Operator 2020 (iOS, Android and UWP)
+
+1. Developing, testing, and maintaining mobile applications for iOS, Android and UWP platforms using the Xamarin platform. 
+2. Experienced Xamarin developer with over 8 years of experience in developing, testing, and maintaining mobile applications for iOS, Android and UWP. Skilled in C# programming language, Xamarin Forms, and native iOS, Android and UWP development.
+3. Developed a Asynchronous C#-JS data binding bridge that uses patented technology (Patent No. US10394627B2) for support two-way binding in a multi-platform environment, such as with Xamarin-based hybrid multi-platform apps, in which the front-end and the C# layer are implemented on different frameworks.
+4. Experienced Angular developer with over 5 years of experience in developing, testing, and maintaining web applications using the Angular framework. Skilled in TypeScript programming language, HTML, Javascript and CSS.
+5. Strong knowledge of mobile application architecture and design patterns. Proficient in using Visual Studio and other development tools to build high-quality mobile applications.
+6. Adept at working in a team environment and collaborating with cross-functional teams to deliver projects on time and within budget.
+7. Excellent problem-solving skills and ability to quickly learn new technologies and programming languages.
+8. Experience with RESTful APIs, web services and socket. 
+9. Experience with testing frameworks like NUnit or xUnit
+10. Familiarity with mobile UI/UX design patterns and best practices.
+11. Familiarity with Agile development methodologies and experience working in a continuous integration and delivery (CI/CD) environment
+12. Strong problem-solving skills and ability to quickly learn new technologies and programming languages.
+
+Front-end development: 
+1. Designed and developed a responsive web portal for designing task so that it can consume in mobile apps. 
+2. Developed reusable components using Material Design that can be utilized by multiple team members across various projects.
+3. Experience with testing frameworks like Jasmine or Karma.
+
+Back-end: 
+1. Experienced .NET Core REST API developer with over 2 years of experience in developing, testing, and maintaining web services using the .NET Core framework. 
+2. Proficient in using Microsoft SQL Server and other database management systems to build scalable and reliable web services. 
+3. Familiarity with containerization technologies like Docker and Kubernetes.
+
+
+Version 3: 
+
+Seasoned, forward-looking Software Engineer with 11+ years of experience, I have a proven track record of developing innovative software solutions that drive business productivity. Highly experienced in all aspects of the software development lifecycle and end-to-end project management, from concept through to development and delivery. I have a hands-on approach to leadership and am skilled at collaborating with cross-functional teams to deliver projects on time.Throughout my career, I have consistently demonstrated a commitment to quality and continuous improvement. I keep up-to-date with the latest software development methodologies, tools, and technologies, and use this knowledge to drive innovation and efficiency in my work. I am excited about the opportunity to leverage my skills and experience to make meaningful contributions to a dynamic team.
+
+hai - smart spa-shower system (iOS and Android)
+
+Mobile development: 
+1. Developing and maintaining mobile applications using React Native, reducing development time by 20% by implementing reusable components and optimizing application performance.
+2. Building cross-platform applications that work on both iOS and Android devices.
+3. Collaborating with designers to create a seamless user experience and responsive design.
+4. Developed and implemented core features, such as Onboarding what's new, in-app messaging, Support Multi-Showerhead Management, enhanced trends chart, Bluetooth API integration for data sync, Customize LED alerts, Firebase analytics for capturing events, reusable UI component, QRCode sharing using Dynamic links, customize app navigation using react navigation, integrated deep linking to handle incoming links etc.
+5. Integrated third-party libraries and APIs, such as react navigation, shopify, aws amplify, aws cognito-identity, victory chart, reanimated, refiner survey etc. 
+6. Troubleshooting and debugging issues that arise during development and after deployment.
+
+Front-end development: 
+1. Designed and developed a responsive admin portal to manages the paired shower devices for internal and external users using react, mui library.
+2. Implemented responsive design techniques to optimize user experience on various devices like desktop and mobile browser.
+3. Some of the core feature integrated like generate Qrcode for verification, display list of paired devices with metadata, unpair and reset or paired devices, dynamic link for mobile browser etc. 
+4. Integrated third-party libraries and APIs, aws amplify, aws cognito-identity, victory chart, react dom router, mui datatable, mui etc. 
+
+Back-end: 
+1. Design and develop APIs using AWS Lambda, API Gateway, Amazon Cognito, Amazon CloudFront, to enable seamless communication between front-end and back-end systems.
+2. Design and implement scalable, fault-tolerant, and highly available AWS architectures using Simple Storage Service and DynamoDB.
+3. Troubleshoot AWS systems to identify and resolve issues using Amazon CloudWatch.
+4. Automate infrastructure provisioning, deployment, and configuration using tools like AWS CloudFormation to reduce manual work and ensure consistency.
+
+Mobile Operator 2020
+
+Mobile development: 
+1. Experienced Xamarin developer with over 8 years of experience in developing, testing, and maintaining mobile applications for iOS, Android and UWP. Skilled in C# programming language, Xamarin Forms, and native iOS, Android and UWP development.
+2. Developed a Asynchronous C#-JS data binding bridge that uses patented technology (Patent No. US10394627B2) for support two-way binding in a multi-platform environment, such as with Xamarin-based hybrid multi-platform apps, in which the front-end and the C# layer are implemented on different frameworks.
+3. Experienced Angular developer with over 5 years of experience in developing, testing, and maintaining web applications using the Angular framework. Skilled in TypeScript programming language, HTML, Javascript and CSS.
+4. Successfully migrated a legacy system from AngularJS to Angular 8, resulting in improved performance and enhanced user experience.
+5. Strong knowledge of mobile application architecture and design patterns. Proficient in using Visual Studio and other development tools to build high-quality mobile applications.
+6. Familiarity with Agile development methodologies and experience working in a continuous integration and delivery (CI/CD) environment
+7. Strong problem-solving skills and ability to quickly learn new technologies and programming languages.
+
+Front-end development: 
+1. Designed and developed a responsive web portal for designing task so that it can consume in mobile apps. 
+2. Developed reusable components using Material Design that can be utilized by multiple team members across various projects.
+3. Experience with testing frameworks like Jasmine or Karma.
+
+Back-end: 
+1. Experienced .NET Core REST API developer with over 2 years of experience in developing, testing, and maintaining web services using the .NET Core framework. 
+2. Proficient in using Microsoft SQL Server and other database management systems to build scalable and reliable web services. 
+3. Familiarity with containerization technologies like Docker and Kubernetes.
+
+AVEVA Mobile Maintenance V9.2
+
+Mobile development:
+1. Developing, testing, and maintaining mobile applications using Titanium SDK framework to create native mobile application in iOS, Android and UWP.
+2. Successfully upgraded a legacy system from Titanium to the latest Titanium SDK, resulting in improved performance and a better user experience.
+3. Published updated version of a mobile app to the App Store and Google Play Store, incorporating customer feedback and suggestions for enhancement.
+
+Back-end: 
+1. Developed and managed web services using the asp.net framework.
+2. Effectively address customer issues and provide timely solutions, resulting in increased customer satisfaction and retention.
+
+Work Tasks Pro
+
+Mobile development: 
+1. Able to used patented technology (Patent No. US10394627B2) for creating an asynchronous C#-JS data binding bridge that supports two-way binding in a multi-platform environment. This technology allowed for seamless data exchange between C# and JS, improving the performance and scalability of the system. By utilizing my expertise in both C# and JS, I was able to develop a robust and efficient solution that addressed the needs of a complex multi-platform system.
+2. Developed a responsive user interface design using Angular framework, resulting in improved user experience across multiple devices and platforms. Utilized best practices in front-end development including HTML5, CSS3, and JavaScript to ensure consistent and visually appealing user interface.
+
+Infostretch Solutions Pvt. Ltd.
+
+As a mobile app developer for my first company, I gained valuable experience in developing high-quality and user-friendly mobile applications for both iOS and Android platforms.
+My skills in programming languages such as Objective-c and Java, as well as experience with various mobile app development tools and frameworks such as Android Studio and Xcode.
+
+
+
+Patent Link:
+https://patents.google.com/patent/US10394627B2/en
+https://patentimages.storage.googleapis.com/32/58/a0/c6b653560602d0/US10394627.pdf
+
+
+Add Key achievements: 
+1. Able to integrate data bridge 
+2. Resolve memory issues using xamarin profiler and chrome dev tools 
+3. Able achieve app to app communication 
+4. ABle to do background sync 
+5. Able to connect multiple peripheral device 
+6. Able to integrate QRcode for all platform 
+7. Able to build complex UI like hierarychy, dynamic forms 
+8. Bluetootj and nfc communication 
+
+
+If you have used a patented technology in a project, you can mention it in your resume to highlight your expertise and experience. Here are some tips on how to mention it:
+
+Mention the patent number: If the patented technology has a unique patent number, you can mention it in your resume. For example, "Developed a machine learning algorithm that uses patented technology (Patent No. US 9,123,456) for predicting customer behavior."
+
+Describe the patented technology: If the technology is not well-known or doesn't have a patent number, you can describe it briefly in your resume. For example, "Developed a mobile app that uses a patented technology for secure messaging."
+
+Include the patent holder's name: If the technology is patented by a company or an individual, you can mention their name in your resume. For example, "Developed a blockchain-based solution using patented technology from XYZ Corp."
+
+Explain your role in the project: It's important to explain your role in the project and how you contributed to using the patented technology. For example, "As the lead developer, I integrated the patented technology into the project and optimized its performance."
+
+Highlight the benefits of using the patented technology: Finally, highlight the benefits of using the patented technology in your project. For example, "By using the patented technology, we were able to achieve a 30% increase in efficiency and reduce costs by 20%."
+
+https://novoresume.com/career-blog/software-engineer-resume
+https://www.linkedin.com/pulse/software-engineer-cv-definitive-guide-julien-bicknell/
+https://rxresu.me/shishir42/shishir-roy/build
+https://www.livecareer.com/build-resume/section/summ/ae4b4dbb-1e59-4bca-b14b-5c04bb2594d6/1862d26d-d553-4d0f-9813-4e38efd95f67
+https://docs.google.com/document/d/14RMdy38rR7hbtqSRhZO2mbyXn_LOLjbGhI4ijeP4IQQ/edit
+
+
+File name format: Robin-Walker-Marketing-Assistant-Resume.pdf
+Shishir-Roy-Senior-Software-Engineer-Resume.pdf
+
+
+Pending: 
+1. Key Achievement in Mobile operator products
+2. Data Structure and algorithm 
+3. Asp dot net 
+4. App link 
