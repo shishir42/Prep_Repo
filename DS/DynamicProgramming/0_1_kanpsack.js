@@ -222,6 +222,14 @@ function knapsack_TopDown(capacity, weights, values, n) {
    const targetSum = 10;
   console.log(countSubsetsWithSum(arr1, targetSum));
 
+  console.log('*************************');
+  //Minimum Subset Sum Difference
+   // Partition P1 -> s1
+   // Partition P2 -> s2
+   //Output -> abs(s1-s2) = min.
+   // arr = [1, 6, 11, 5]
+   // {1,6} and {11, 5} => (11+5) - (1+6) => 9
+   // 
 
 
 

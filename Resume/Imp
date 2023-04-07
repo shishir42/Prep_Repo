@@ -321,15 +321,165 @@ https://patents.google.com/patent/US10394627B2/en
 https://patentimages.storage.googleapis.com/32/58/a0/c6b653560602d0/US10394627.pdf
 
 
-Add Key achievements: 
-1. Able to integrate data bridge 
-2. Resolve memory issues using xamarin profiler and chrome dev tools 
-3. Able achieve app to app communication 
-4. ABle to do background sync 
-5. Able to connect multiple peripheral device 
-6. Able to integrate QRcode for all platform 
-7. Able to build complex UI like hierarychy, dynamic forms 
-8. Bluetootj and nfc communication 
+
+
+Version 4: 
+
+Seasoned, forward-looking Software Engineer with 11+ years of experience, I have a proven track record of developing innovative software solutions that drive business productivity. Highly experienced in all aspects of the software development lifecycle and end-to-end project management, from concept through to development and delivery. Good knowledge of data structures, algorithms, and object-oriented programming. Throughout my career, I have consistently demonstrated a commitment to quality and continuous improvement. I keep up-to-date with the latest software development methodologies, tools, and technologies, and use this knowledge to drive innovation and efficiency in my work. I am excited about the opportunity to leverage my skills and experience to make meaningful contributions to a dynamic team.
+
+
+With over 11 years of experience as a Software Engineer, I have a proven track record of creating innovative software solutions that enhance business productivity. I possess a strong grasp of data structures, algorithms, and object-oriented programming, and am adept at managing the entire software development lifecycle, from conception to delivery. I am dedicated to maintaining high quality standards and continuously improving my work. I keep myself up-to-date with the latest software development methodologies, tools, and technologies, and leverage this knowledge to drive efficiency and innovation in my projects. I am enthusiastic about utilizing my skills and experience to make valuable contributions to a dynamic team.
+
+As a Software Engineer with over 11 years of experience, I have a proven track record of developing innovative software solutions that enhance business productivity. My expertise spans the entire software development lifecycle, from concept to delivery, and I have a strong command of data structures, algorithms, and object-oriented programming principles. I consistently strive for quality and continuous improvement in my work, staying up-to-date with the latest development methodologies, tools, and technologies to drive innovation and efficiency. I am enthusiastic about applying my skills and experience to a dynamic team and making valuable contributions.
+
+
+hai - smart spa-shower system (iOS and Android)
+
+Mobile development: 
+1. Developing and maintaining mobile applications using React Native, reducing development time by 20% by implementing reusable components and optimizing application performance.
+2. Building cross-platform applications that work on both iOS and Android devices.
+3. Collaborating with designers to create a seamless user experience and responsive design.
+4. Developed and implemented core features, such as Onboarding what's new, in-app messaging, Support Multi-Showerhead Management, enhanced trends chart, Bluetooth API integration for data sync, Customize LED alerts, Firebase analytics for capturing events, reusable UI component, QRCode sharing using Dynamic links, customize app navigation using react navigation, integrated deep linking to handle incoming links etc.
+5. Integrated third-party libraries and APIs, such as react navigation, shopify, aws amplify, aws cognito-identity, victory chart, reanimated, refiner survey etc. 
+6. Troubleshooting and debugging issues that arise during development and after deployment.
+
+Front-end development: 
+1. Designed and developed a responsive admin portal to manages the paired shower devices for internal and external users using react, mui library.
+2. Implemented responsive design techniques to optimize user experience on various devices like desktop and mobile browser.
+3. Some of the core feature integrated like generate Qrcode for verification, display list of paired devices with metadata, unpair and reset or paired devices, dynamic link for mobile browser etc. 
+4. Integrated third-party libraries and APIs, aws amplify, aws cognito-identity, victory chart, react dom router, mui datatable, mui etc. 
+
+Back-end: 
+1. Design and develop APIs using AWS Lambda, API Gateway, Amazon Cognito, Amazon CloudFront, to enable seamless communication between front-end and back-end systems.
+2. Design and implement scalable, fault-tolerant, and highly available AWS architectures using Simple Storage Service and DynamoDB.
+3. Troubleshoot AWS systems to identify and resolve issues using Amazon CloudWatch.
+4. Automate infrastructure provisioning, deployment, and configuration using tools like AWS CloudFormation to reduce manual work and ensure consistency.
+
+Mobile Operator 2020
+
+Mobile development: 
+1. Experienced Xamarin developer with over 8 years of experience in developing, testing, and maintaining mobile applications for iOS, Android and UWP. Skilled in C# programming language, Xamarin Forms, and native iOS, Android and UWP development.
+2. Developed a Asynchronous C#-JS data binding bridge that uses patented technology (Patent No. US10394627B2) for support two-way binding in a multi-platform environment, such as with Xamarin-based hybrid multi-platform apps, in which the front-end and the C# layer are implemented on different frameworks.
+3. Experienced Angular developer with over 5 years of experience in developing, testing, and maintaining web applications using the Angular framework. Skilled in TypeScript programming language, HTML, Javascript and CSS.
+4. Successfully migrated a legacy system from AngularJS to Angular 8, resulting in improved performance and enhanced user experience.
+5. Strong knowledge of mobile application architecture and design patterns. Proficient in using Visual Studio and other development tools to build high-quality mobile applications.
+6. Familiarity with Agile development methodologies and experience working in a continuous integration and delivery (CI/CD) environment
+7. Strong problem-solving skills and ability to quickly learn new technologies and programming languages.
+
+Front-end development: 
+1. Designed and developed a responsive web portal for designing task so that it can consume in mobile apps. 
+2. Developed reusable components using Material Design that can be utilized by multiple team members across various projects.
+3. Experience with testing frameworks like Jasmine or Karma.
+
+Back-end: 
+1. Experienced .NET Core REST API developer with over 2 years of experience in developing, testing, and maintaining web services using the .NET Core framework. 
+2. Proficient in using Microsoft SQL Server and other database management systems to build scalable and reliable web services. 
+3. Familiarity with containerization technologies like Docker and Kubernetes.
+
+AVEVA Mobile Maintenance V9.2
+
+Mobile development:
+1. Developing, testing, and maintaining mobile applications using Titanium SDK framework to create native mobile application in iOS, Android and UWP.
+2. Successfully upgraded a legacy system from Titanium to the latest Titanium SDK, resulting in improved performance and a better user experience.
+3. Published updated version of a mobile app to the App Store and Google Play Store, incorporating customer feedback and suggestions for enhancement.
+
+Back-end: 
+1. Developed and managed web services using the asp.net framework.
+2. Effectively address customer issues and provide timely solutions, resulting in increased customer satisfaction and retention.
+
+Work Tasks Pro
+
+Mobile development: 
+1. Able to used patented technology (Patent No. US10394627B2) for creating an asynchronous C#-JS data binding bridge that supports two-way binding in a multi-platform environment. This technology allowed for seamless data exchange between C# and JS, improving the performance and scalability of the system. By utilizing my expertise in both C# and JS, I was able to develop a robust and efficient solution that addressed the needs of a complex multi-platform system.
+2. Developed a responsive user interface design using Angular framework, resulting in improved user experience across multiple devices and platforms. Utilized best practices in front-end development including HTML5, CSS3, and JavaScript to ensure consistent and visually appealing user interface.
+
+Infostretch Solutions Pvt. Ltd.
+
+As a mobile app developer for my first company, I gained valuable experience in developing high-quality and user-friendly mobile applications for both iOS and Android platforms.
+My skills in programming languages such as Objective-c and Java, as well as experience with various mobile app development tools and frameworks such as Android Studio and Xcode.
+
+
+
+Patent Link:
+https://patents.google.com/patent/US10394627B2/en
+https://patentimages.storage.googleapis.com/32/58/a0/c6b653560602d0/US10394627.pdf
+
+
+Version 5: 
+
+As a Software Engineer with over 11 years of experience, I have a proven track record of developing innovative software solutions that enhance business productivity. My expertise spans the entire software development lifecycle, from concept to delivery, and I have a strong command of data structures, algorithms, and object-oriented programming principles. I consistently strive for quality and continuous improvement in my work, staying up-to-date with the latest development methodologies, tools, and technologies to drive innovation and efficiency. I am enthusiastic about applying my skills and experience to a dynamic team and making valuable contributions.
+
+
+hai - smart spa-shower system (iOS and Android)
+
+Mobile development: 
+1. Developing and maintaining mobile applications using React Native, reducing development time by 20% by implementing reusable components and optimizing application performance.
+2. Building cross-platform applications that work on both iOS and Android devices.
+3. Collaborating with designers to create a seamless user experience and responsive design.
+4. Developed and implemented core features, such as Onboarding what's new, in-app messaging, Support Multi-Showerhead Management, enhanced trends chart, Bluetooth API integration for data sync, Customize LED alerts, Firebase analytics for capturing events, reusable UI component, QRCode sharing using Dynamic links, customize app navigation using react navigation, integrated deep linking to handle incoming links etc.
+5. Integrated third-party libraries and APIs, such as react navigation, shopify, aws amplify, aws cognito-identity, victory chart, reanimated, refiner survey etc. 
+6. Troubleshooting and debugging issues that arise during development and after deployment.
+
+Front-end development: 
+1. Designed and developed a responsive admin portal to manages the paired shower devices for internal and external users using react, mui library.
+2. Implemented responsive design techniques to optimize user experience on various devices like desktop and mobile browser.
+3. Some of the core feature integrated like generate Qrcode for verification, display list of paired devices with metadata, unpair and reset or paired devices, dynamic link for mobile browser etc. 
+4. Integrated third-party libraries and APIs, aws amplify, aws cognito-identity, victory chart, react dom router, mui datatable, mui etc. 
+
+Back-end: 
+1. Design and develop APIs using AWS Lambda, API Gateway, Amazon Cognito, Amazon CloudFront, to enable seamless communication between front-end and back-end systems.
+2. Design and implement scalable, fault-tolerant, and highly available AWS architectures using Simple Storage Service and DynamoDB.
+3. Troubleshoot AWS systems to identify and resolve issues using Amazon CloudWatch.
+4. Automate infrastructure provisioning, deployment, and configuration using tools like AWS CloudFormation to reduce manual work and ensure consistency.
+
+Mobile Operator 2020
+
+Mobile development: 
+1. Experienced Xamarin developer with over 8 years of experience in developing, testing, and maintaining mobile applications for iOS, Android and UWP. Skilled in C# programming language, Xamarin Forms, and native iOS, Android and UWP development.
+2. Developed a Asynchronous C#-JS data binding bridge that uses patented technology (Patent No. US10394627B2) for support two-way binding in a multi-platform environment, such as with Xamarin-based hybrid multi-platform apps, in which the front-end and the C# layer are implemented on different frameworks.
+3. Experienced Angular developer with over 5 years of experience in developing, testing, and maintaining web applications using the Angular framework. Skilled in TypeScript programming language, HTML, Javascript and CSS.
+4. Successfully migrated a legacy system from AngularJS to Angular 8, resulting in improved performance and enhanced user experience.
+5. Strong knowledge of mobile application architecture and design patterns. Proficient in using Visual Studio and other development tools to build high-quality mobile applications.
+6. Familiarity with Agile development methodologies and experience working in a continuous integration and delivery (CI/CD) environment
+7. Strong problem-solving skills and ability to quickly learn new technologies and programming languages.
+
+Front-end development: 
+1. Designed and developed a responsive web portal for designing task so that it can consume in mobile apps. 
+2. Developed reusable components using Material Design that can be utilized by multiple team members across various projects.
+3. Experience with testing frameworks like Jasmine or Karma.
+
+Back-end: 
+1. Experienced .NET Core REST API developer with over 2 years of experience in developing, testing, and maintaining web services using the .NET Core framework. 
+2. Proficient in using Microsoft SQL Server and other database management systems to build scalable and reliable web services. 
+3. Familiarity with containerization technologies like Docker and Kubernetes.
+
+AVEVA Mobile Maintenance V9.2
+
+Mobile development:
+1. Developing, testing, and maintaining mobile applications using Titanium SDK framework to create native mobile application in iOS, Android and UWP.
+2. Successfully upgraded a legacy system from Titanium to the latest Titanium SDK, resulting in improved performance and a better user experience.
+3. Published updated version of a mobile app to the App Store and Google Play Store, incorporating customer feedback and suggestions for enhancement.
+
+Back-end: 
+1. Developed and managed web services using the asp.net framework.
+2. Effectively address customer issues and provide timely solutions, resulting in increased customer satisfaction and retention.
+
+Work Tasks Pro
+
+Mobile development: 
+1. Able to used patented technology (Patent No. US10394627B2) for creating an asynchronous C#-JS data binding bridge that supports two-way binding in a multi-platform environment. This technology allowed for seamless data exchange between C# and JS, improving the performance and scalability of the system. By utilizing my expertise in both C# and JS, I was able to develop a robust and efficient solution that addressed the needs of a complex multi-platform system.
+2. Developed a responsive user interface design using Angular framework, resulting in improved user experience across multiple devices and platforms. Utilized best practices in front-end development including HTML5, CSS3, and JavaScript to ensure consistent and visually appealing user interface.
+
+Infostretch Solutions Pvt. Ltd.
+
+As a mobile app developer for my first company, I gained valuable experience in developing high-quality and user-friendly mobile applications for both iOS and Android platforms.
+My skills in programming languages such as Objective-c and Java, as well as experience with various mobile app development tools and frameworks such as Android Studio and Xcode.
+
+
+
+Patent Link:
+https://patents.google.com/patent/US10394627B2/en
+https://patentimages.storage.googleapis.com/32/58/a0/c6b653560602d0/US10394627.pdf
 
 
 If you have used a patented technology in a project, you can mention it in your resume to highlight your expertise and experience. Here are some tips on how to mention it:
@@ -351,12 +501,28 @@ https://www.livecareer.com/build-resume/section/summ/ae4b4dbb-1e59-4bca-b14b-5c0
 https://docs.google.com/document/d/14RMdy38rR7hbtqSRhZO2mbyXn_LOLjbGhI4ijeP4IQQ/edit
 
 
+https://www.canva.com/design/DAFfaUvTiew/LHkLr6PVrL5pVhYzpf4NDA/edit
+https://www.canva.com/design/DAFfaB335jA/RyVN7DKkjMqdJajEvj5jLQ/edit
+
+https://www.canva.com/folder/FAFfZ9q5R_o
+
 File name format: Robin-Walker-Marketing-Assistant-Resume.pdf
 Shishir-Roy-Senior-Software-Engineer-Resume.pdf
 
 
 Pending: 
 1. Key Achievement in Mobile operator products
-2. Data Structure and algorithm 
-3. Asp dot net (MVC)
+2. Asp dot net (MVC)
 4. App link 
+5. Participate hackathon
+6. Blockchain  
+
+Add Key achievements: 
+1. Able to integrate data bridge 
+2. Resolve memory issues using xamarin profiler and chrome dev tools 
+3. Able achieve app to app communication 
+4. ABle to do background sync 
+5. Able to connect multiple peripheral device 
+6. Able to integrate QRcode for all platform 
+7. Able to build complex UI like hierarychy, dynamic forms 
+8. Bluetootj and nfc communication 
