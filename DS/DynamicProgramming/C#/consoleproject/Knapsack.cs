@@ -9,6 +9,11 @@ namespace consoleproject
             return (a > b) ? a : b;
         }
 
+        static int min(int a, int b)
+        {
+            return (a < b) ? a : b;
+        }
+
         public static int KnapSackRecursion(int[] weights, int[] values, int capacity, int n)
         {
             //base condition 
@@ -162,6 +167,60 @@ namespace consoleproject
             }
 
             return dp[n, targetSum];
+        }
+
+        public static int MinSubsetSumDiff(int[] arr)
+        {
+            int n = arr.Length;
+            int sum = 0;
+            for(int i=0; i<arr.Length; i++)
+            {
+                sum = sum + arr[i];
+            }
+            bool [,] dp = new bool[n+1, sum+1];
+            //Initialize the first column to true 
+            for(int i=0; i<= n; i++)
+            {
+                dp[i, 0] = true;
+            }
+
+            for(int i=1; i<=n; i++)
+            {
+                for(int j=1; j<=sum; j++)
+                {
+                    if(arr[i-1] <= j)
+                    {
+                        dp[i, j] = dp[i-1, j-arr[i-1]] || dp[i-1, j];
+                    }
+                    else
+                    {
+                         dp[i, j] = dp[i-1, j];
+                    }
+                }
+            }
+            
+            // for (int i = 0; i <= sum ; i++)
+            // {
+            //     Console.WriteLine(dp[3,i]);
+            // }
+
+            // int diff = int.MaxValue;
+            // for (int i = sum / 2; i >= 0; i--)
+            // {
+            //     if (dp[n, i] == true)
+            //     {
+            //         diff = sum - 2 * i;
+            //         break;
+            //     }
+            // }
+
+            int diff = int.MaxValue;
+            for(int i=0; i<sum+1; i++) //Iterating last row where the sum exists
+            {
+                diff = min(diff, Math.Abs(sum - 2*i));
+            }
+
+            return diff;
         }
     }
 }

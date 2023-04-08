@@ -28,3 +28,40 @@ function userDetails(username) {
     console.log(age); //error: age is not defined(due to block scope)
   }
   userDetails("John");
+
+  //Can I redeclare let and const variables
+
+  // No, you cannot redeclare let and const variables. If you do, it throws below error
+
+// Uncaught SyntaxError: Identifier 'someVariable' has already been declared
+
+// Explanation: The variable declaration with var keyword refers to a function scope and the variable is treated as if it were declared at the top of the enclosing scope due to hoisting feature. So all the multiple declarations contributing to the same hoisted variable without any error. Let's take an example of re-declaring variables in the same scope for both var and let/const variables.
+
+var name = "John";
+function myFunc() {
+  var name = "Nick";
+  var name = "Abraham"; // Re-assigned in the same function block
+  alert(name); // Abraham
+}
+myFunc();
+alert(name); // John
+
+// The block-scoped multi-declaration throws syntax error,
+
+let name = "John";
+function myFunc() {
+  let name = "Nick";
+  let name = "Abraham"; // Uncaught SyntaxError: Identifier 'name' has already been declared
+  alert(name);
+}
+
+myFunc();
+alert(name);
+
+// Is const variable makes the value immutable
+
+// No, the const variable doesn't make the value immutable. But it disallows subsequent assignments(i.e, You can declare with assignment but can't assign another value later)
+
+const userList = [];
+userList.push("John"); // Can mutate even though it can't re-assign
+console.log(userList); // ['John']

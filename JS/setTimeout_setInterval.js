@@ -68,3 +68,7 @@ let intervalId = setInterval(function() {
 
 // The clearInterval() method is useful for stopping the execution of scheduled functions that are no longer needed or should not be executed for some reason. It is commonly used in situations where a function needs to be executed repeatedly, such as for polling data from a server or updating the UI of a web application.
 
+// What is the difference between setTimeout, setImmediate and process.nextTick?
+// Set Timeout: setTimeout() is to schedule execution of a one-time callback after delay milliseconds.
+// Set Immediate: The setImmediate function is used to execute a function right after the current event loop finishes.
+// Process NextTick: If process.nextTick() is called in a given phase, all the callbacks passed to process.nextTick() will be resolved before the event loop continues. This will block the event loop and create I/O Starvation if process.nextTick() is called recursively.

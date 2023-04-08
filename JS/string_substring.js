@@ -15,3 +15,10 @@ mainString.indexOf(subString) !== -1;
 var mainString = "hello",
   regex = /hell/;
 regex.test(mainString);
+
+// What happens if we add two arrays
+// If you add two arrays together, it will convert them both to strings and concatenate them. For example, the result of adding arrays would be as below,
+
+console.log(["a"] + ["b"]); // "ab"
+console.log([] + []); // ""
+console.log(![] + []); // "false", because ![] returns false.

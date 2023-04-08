@@ -226,10 +226,41 @@ function knapsack_TopDown(capacity, weights, values, n) {
   //Minimum Subset Sum Difference
    // Partition P1 -> s1
    // Partition P2 -> s2
-   //Output -> abs(s1-s2) = min.
+   //Output -> abs(s1-s2) = min. here is 1.
    // arr = [1, 6, 11, 5]
    // {1,6} and {11, 5} => (11+5) - (1+6) => 9
-   // 
+   // {1, 6, 5} and {11} => 12-11 =>1
+   // Range - 2(S1) = minimize 
+
+   const minSubsetSumDiff = (arr) =>{
+    const n = arr.length;
+    let sum = arr.reduce((a, b) => a + b, 0);
+    let dp = new Array(n+1);
+    for(let i=0; i<=n; i++){
+        dp[i] = new Array(sum+1).fill(false);
+        dp[i][0]= true;
+    }
+
+    for(let i=1; i<=n; i++){
+        for(let j=1; j<=sum; j++){
+            if(arr[i-1] <= j){
+                dp[i][j] = dp[i-1][j-arr[i-1]] || dp[i-1][j];
+            }else{
+                dp[i][j] = dp[i-1][j];
+            }
+        }
+    }
+
+    let diff = Number.MAX_VALUE;
+    for(let i=0; i< sum+1; i++){
+        diff = Math.min(diff, Math.abs(sum - 2*i));
+    }
+
+    return diff;
+   }
+
+   console.log(minSubsetSumDiff([1, 6, 11, 5]));
+
 
 
 

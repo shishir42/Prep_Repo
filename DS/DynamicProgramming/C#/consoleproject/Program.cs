@@ -46,6 +46,11 @@ namespace consoleproject
             int [] arr1 = {2,3,5,6,8,10};
             int targetSum = 10;
             Console.WriteLine("CountSubsetsWithSum result : "+ Knapsack.CountSubsetsWithSum(arr1, targetSum));
+
+            Console.WriteLine("**************");
+            // int [] arr2 = {1, 6, 11, 5};
+            int [] arr2 = { 3, 1, 4, 2, 2, 1};
+            Console.WriteLine("MinSubsetSumDiff result : "+ Knapsack.MinSubsetSumDiff(arr2));
         }
     }
 }

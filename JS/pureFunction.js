@@ -15,3 +15,9 @@ function incrementCounter() {
 
 // This function increments a global variable counter and returns its value. It has side effects, since it modifies external state (the value of counter), and it relies on external state (the initial value of counter).
 // Using pure functions can help make code more predictable, easier to test, and less error-prone.
+
+
+// Pure function	                        Impure function
+// It has no side effects	                It causes side effects
+// It is always return the same result	  It returns different result on each call
+// Easy to read and debug	                Difficult to read and debug because they are affected by extenal code

@@ -22,3 +22,19 @@ function myFunction() {
   }
 
 //   ES6 also allows you to declare block-scoped functions using the function keyword. However, this feature is not widely used and is generally discouraged, as it can lead to confusion and unexpected behavior. Instead, it's recommended to use arrow functions or declare functions at the top level of a module.
+
+// Below are the list of some new features of ES6,
+
+// Support for constants or immutable variables
+// Block-scope support for variables, constants and functions
+// Arrow functions
+// Default parameters
+// Rest and Spread Parameters
+// Template Literals
+// Multi-line Strings
+// Destructuring Assignment
+// Enhanced Object Literals
+// Promises
+// Classes
+// Modules
+

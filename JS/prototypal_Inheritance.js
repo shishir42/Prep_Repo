@@ -43,3 +43,6 @@ const person = {
 // To summarize, prototype is a property of constructor functions and is used to define properties and methods that will be inherited by objects created with the constructor. __proto__ is a property of every JavaScript object and is used to implement prototype chaining, allowing an object to inherit properties and methods from its prototype chain.
 
 // The __proto__ object is the actual object that is used in the lookup chain to resolve methods, etc. Whereas prototype is the object that is used to build __proto__ when you create an object with new.
+
+// Do all objects have prototypes
+// No. All objects have prototypes except for the base object which is created by the user, or an object that is created using the new keyword.

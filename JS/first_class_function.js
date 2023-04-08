@@ -62,3 +62,18 @@ const myFunctions = {
 // Function factories: First-class functions can be used to create function factories, which are functions that generate other functions. This can be used to create specialized functions for specific use cases, or to create functions that are customized for different environments.
 
 // Overall, the advantages of first-class functions in JavaScript make them a powerful tool for writing flexible, modular, and reusable code. By embracing the power of first-class functions, you can create code that is easier to read, easier to maintain, and more adaptable to changing requirements.
+
+// What is the difference between function and class declarations
+// The main difference between function declarations and class declarations is hoisting. The function declarations are hoisted but not class declarations.
+
+// Classes:
+
+const user = new User(); // ReferenceError
+
+class User {}
+
+// Constructor Function:
+
+const user = new User(); // No error
+
+function User() {}

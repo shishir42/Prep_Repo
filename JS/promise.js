@@ -1114,7 +1114,75 @@ function fetchAllData() {
 
 // Promises have error handling: Promises have built-in error handling through the use of the .catch() method. This allows you to handle errors that occur during asynchronous operations.
 
+// What are the different ways to deal with Asynchronous Code
+// Below are the list of different ways to deal with Asynchronous code.
 
+// Callbacks
+// Promises
+// Async/await
+// Third-party libraries such as async.js,bluebird etc
+
+// How to cancel a fetch request
+const controller = new AbortController();
+const { signal } = controller;
+
+fetch("http://localhost:8000", { signal })
+  .then((response) => {
+    console.log(`Request 1 is complete!`);
+  })
+  .catch((e) => {
+    if (e.name === "AbortError") {
+      // We know it's been canceled!
+    }
+  });
+
+fetch("http://localhost:8000", { signal })
+  .then((response) => {
+    console.log(`Request 2 is complete!`);
+  })
+  .catch((e) => {
+    if (e.name === "AbortError") {
+      // We know it's been canceled!
+    }
+  });
+
+// Wait 2 seconds to abort both requests
+setTimeout(() => controller.abort(), 2000);
+
+// How do you check an object is a promise or not
+
+// If you don't know if a value is a promise or not, wrapping the value as Promise.resolve(value) which returns a promise
+
+
+function isPromise(object) {
+  if (Promise && Promise.resolve) {
+    return Promise.resolve(object) == object;
+  } else {
+    throw "Promise not supported in your environment";
+  }
+}
+
+var i = 1;
+var promise = new Promise(function (resolve, reject) {
+  resolve();
+});
+
+console.log(isPromise(i)); // false
+console.log(isPromise(promise)); // true
+
+// Another way is to check for .then() handler type
+
+
+function isPromise(value) {
+  return Boolean(value && typeof value.then === "function");
+}
+var i = 1;
+var promise = new Promise(function (resolve, reject) {
+  resolve();
+});
+
+console.log(isPromise(i)); // false
+console.log(isPromise(promise)); // true
 
 
 

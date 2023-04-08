@@ -45,3 +45,16 @@ function sum(x, y, z) {
 
 
 
+[..."John Resig"];
+// The output of the array is ['J', 'o', 'h', 'n', '', 'R', 'e', 's', 'i', 'g'] Explanation: The string is an iterable type and the spread operator within an array maps every character of an iterable to one element. Hence, each character of a string becomes an element within an Array.
+
+// What are the differences between spread operator and rest parameter
+// Rest parameter collects all remaining elements into an array. Whereas Spread operator allows iterables( arrays / objects / strings ) to be expanded into single arguments/elements. i.e, Rest parameter is opposite to the spread operator.
+
+// What are the differences between arguments object and rest parameter
+// There are three main differences between arguments object and rest parameters
+
+// The arguments object is an array-like but not an array. Whereas the rest parameters are array instances.
+// The arguments object does not support methods such as sort, map, forEach, or pop. Whereas these methods can be used in rest parameters.
+// The rest parameters are only the ones that haven’t been given a separate name, while the arguments object contains all arguments passed to the function
+
