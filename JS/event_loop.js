@@ -45,3 +45,34 @@
 
 // Is Node.js completely single threaded
 // Node is a single thread, but some of the functions included in the Node.js standard library(e.g, fs module functions) are not single threaded. i.e, Their logic runs outside of the Node.js single thread to improve the speed and performance of a program.
+
+// Event loop is a fundamental concept in JavaScript that is responsible for handling asynchronous code execution in the language. In JavaScript, all I/O operations, such as user input, network requests, and timers, are handled asynchronously by the event loop.
+
+// The event loop works as follows:
+
+// When the JavaScript engine starts running, it initializes the event loop.
+
+// Asynchronous tasks, such as I/O operations and timers, are scheduled by the engine on a separate task queue. These tasks are executed by the event loop when the JavaScript engine is free to execute them.
+
+// The event loop continuously checks the task queue for pending tasks. If there are no tasks pending, the loop waits for new tasks to be added to the queue.
+
+// When a task is added to the task queue, the event loop checks the call stack to see if it is empty. If the call stack is empty, the event loop picks the first task from the task queue and executes it. If the call stack is not empty, the task is added to the end of the task queue, and the event loop moves on to the next task.
+
+// When a task is executed, it can add new tasks to the task queue, which will be executed by the event loop when it becomes free to do so.
+
+console.log('1');
+
+setTimeout(function() {
+  console.log('2');
+}, 2000);
+
+console.log('3');
+
+
+    // In this example, the console.log() statement with the value 1 is executed first. The setTimeout() function is called with a callback function that logs the value 2 to the console after a delay of 2 seconds. The console.log() statement with the value 3 is executed next.
+
+    // At this point, the call stack is empty, and the event loop checks the task queue for pending tasks. The setTimeout() function has scheduled a task to execute the callback function after 2 seconds, so the event loop waits for 2 seconds.
+
+    // After 2 seconds, the callback function is added to the task queue. The event loop checks the call stack, which is empty, and picks the callback function from the task queue to execute it. The function logs the value 2 to the console.
+
+    // In summary, the event loop is the mechanism that allows JavaScript to handle asynchronous tasks, such as I/O operations and timers, by scheduling them on a task queue and executing them when the JavaScript engine is free to do so.

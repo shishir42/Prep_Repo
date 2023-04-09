@@ -1184,7 +1184,165 @@ var promise = new Promise(function (resolve, reject) {
 console.log(isPromise(i)); // false
 console.log(isPromise(promise)); // true
 
+// Concurrency and parallelism are two related but distinct concepts in computer science, and both can be used with Promises in JavaScript.
 
+// Concurrency refers to the ability of a program to make progress on multiple tasks at the same time, without necessarily executing them simultaneously. In JavaScript, concurrency is typically achieved using asynchronous programming techniques, such as Promises, callbacks, and async/await. With Promises, we can execute multiple asynchronous operations in parallel, which allows us to take advantage of the non-blocking nature of JavaScript to avoid blocking the main thread and keep the program responsive.
+
+// Parallelism, on the other hand, refers to the ability of a program to execute multiple tasks simultaneously, typically by utilizing multiple CPU cores. In JavaScript, parallelism can be achieved using worker threads or other similar techniques.
+
+// Now, let's look at how Promises can be used to achieve concurrency and parallelism in JavaScript:
+
+// 1. Concurrency with Promises:
+// With Promises, we can execute multiple asynchronous operations in parallel and handle the results as they become available. Here's an example:
+
+Promise.all([
+  fetch('/api/data1'),
+  fetch('/api/data2'),
+  fetch('/api/data3')
+])
+  .then(responses => {
+    // handle responses here
+  })
+  .catch(error => {
+    // handle error here
+  });
+
+
+//   In this example, we are using Promise.all() to execute three HTTP requests in parallel. Promise.all() returns a Promise that resolves with an array of results once all the Promises passed to it have resolved. We can then handle the results in the then() block.
+
+// 2. Parallelism with Promises:
+// In JavaScript, parallelism can be achieved using worker threads, which allow us to execute code in parallel in a separate thread of execution. Here's an example:
+
+const { Worker } = require('worker_threads');
+
+const worker1 = new Worker('./worker1.js');
+const worker2 = new Worker('./worker2.js');
+
+Promise.all([
+  new Promise(resolve => worker1.on('message', resolve)),
+  new Promise(resolve => worker2.on('message', resolve))
+])
+  .then(results => {
+    // handle results here
+  })
+  .catch(error => {
+    // handle error here
+  });
+
+  // In this example, we are using two worker threads to execute two JavaScript files in parallel. We are also using Promise.all() to wait for both workers to finish and return their results. Once all the Promises have resolved, we can handle the results in the then() block.
+
+  // Overall, Promises provide a powerful way to achieve both concurrency and parallelism in JavaScript, allowing us to execute multiple asynchronous operations in parallel and keep our programs responsive and performant.  
+
+
+//   Promise.all() is a built-in method in JavaScript that takes an iterable (such as an array) of Promises as input and returns a new Promise that resolves with an array of results when all the input Promises have resolved, or rejects with the reason of the first Promise that rejects.
+
+// Here's the syntax for Promise.all():
+
+Promise.all(iterable)
+
+// Where iterable is an iterable object (such as an array) of Promises or other values that have a then() method.
+
+// When Promise.all() is called, it returns a new Promise that will resolve with an array of results once all the Promises in the input iterable have resolved. If any of the input Promises reject, the returned Promise will reject with the reason of the first Promise that rejects.
+
+// Here's an example of using Promise.all() to wait for multiple Promises to complete:
+
+const promise1 = Promise.resolve(1);
+const promise2 = Promise.resolve(2);
+const promise3 = Promise.resolve(3);
+
+Promise.all([promise1, promise2, promise3])
+  .then(values => {
+    console.log(values); // [1, 2, 3]
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+  // In this example, we define three Promises (promise1, promise2, and promise3) that immediately resolve with the values 1, 2, and 3 respectively. We then pass these Promises as an array to Promise.all(), which returns a new Promise that resolves with an array of the resolved values of the input Promises. In this case, the then() block will output [1, 2, 3].
+
+  // If any of the input Promises reject, the returned Promise from Promise.all() will reject with the reason of the first Promise that rejects. Here's an example:  
+
+  const promise1 = Promise.resolve(1);
+const promise2 = Promise.reject("Oops");
+const promise3 = Promise.resolve(3);
+
+Promise.all([promise1, promise2, promise3])
+  .then(values => {
+    console.log(values); // never executed
+  })
+  .catch(error => {
+    console.error(error); // "Oops"
+  });
+
+
+  // In this example, the promise2 Promise rejects with the string "Oops". When we pass all three Promises to Promise.all(), it returns a new Promise that rejects with the same "Oops" reason. In this case, the catch() block will output "Oops".
+
+  // No, Promise.all() is an asynchronous function in JavaScript. When Promise.all() is called, it returns a new Promise immediately, but the actual resolution or rejection of the returned Promise depends on the asynchronous completion of the Promises in the input iterable.
+
+  const promise1 = new Promise(resolve => {
+    setTimeout(() => {
+      resolve(1);
+    }, 1000);
+  });
+  
+  const promise2 = new Promise(resolve => {
+    setTimeout(() => {
+      resolve(2);
+    }, 500);
+  });
+  
+  Promise.all([promise1, promise2])
+    .then(values => {
+      console.log(values); // [1, 2]
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  
+  console.log("Promise.all() called"); // executed first
+  // 
+
+    // In this example, we define two Promises (promise1 and promise2) that resolve after different delays using setTimeout(). We then pass these Promises as an array to Promise.all(), which returns a new Promise. However, the then() block will not execute until both promise1 and promise2 have resolved asynchronously. Meanwhile, the console.log() statement outside of the Promise.all() call will execute immediately.
+
+// Therefore, Promise.all() is not a synchronous function in JavaScript. It returns a Promise immediately, but the resolution or rejection of that Promise depends on the asynchronous completion of the Promises in the input iterable.
+
+
+// Job queue
+
+// In JavaScript, Promise resolution and rejection are implemented using a job queue called the "PromiseJobs" queue. The PromiseJobs queue is a way to handle asynchronous callbacks that are registered during the execution of Promise resolution and rejection.
+
+// The PromiseJobs queue is a part of the event loop mechanism in JavaScript. The event loop is responsible for managing the execution of JavaScript code and handling events such as user input and network requests. When a Promise is resolved or rejected, the corresponding callback is registered in the PromiseJobs queue, which is processed by the event loop.
+
+// Here's an example of using the PromiseJobs queue to execute a callback after a Promise is resolved:
+
+
+const promise = new Promise(resolve => {
+  setTimeout(() => {
+    resolve("Hello, World!");
+  }, 1000);
+});
+
+promise.then(value => {
+  console.log(value); // "Hello, World!"
+});
+
+setTimeout(() => {
+  console.log("setTimeout callback");
+}, 0);
+
+console.log("Main thread");
+
+// Output:
+// Main thread
+// setTimeout callback
+// Hello, World!
+
+
+// In this example, we create a Promise that resolves after a delay of one second using setTimeout(). We then register a callback using the then() method, which is called when the Promise is resolved. We also register a callback using setTimeout() with a delay of zero milliseconds, which is executed after the main thread has completed. Finally, we log a message to the console from the main thread.
+
+// The output of this program demonstrates the order in which the callbacks are executed. The "Main thread" message is logged first, followed by the setTimeout() callback, and finally, the then() callback.
+
+// Note that the PromiseJobs queue is an implementation detail of the Promise mechanism and is not directly accessible in user code.
 
 // https://dev.to/swarnaliroy94/methods-of-promise-all-any-finally-o2e
 // https://medium.com/developer-rants/how-can-you-tell-which-promise-failed-in-promise-all-5a70be46e19b

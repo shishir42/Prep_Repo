@@ -159,3 +159,36 @@ class Square extends Rectangle {
     }
   }
 
+// In JavaScript, a constructor function is a special type of function that is used to create and initialize objects. When you call a constructor function using the "new" keyword, a new object is created and returned.
+
+// Here's an example of a simple constructor function in JavaScript:
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var person1 = new Person("John", 30);
+var person2 = new Person("Jane", 25);
+
+
+// In this example, the Person function is used as a constructor function to create two new Person objects, person1 and person2. The constructor function takes two parameters, name and age, which are used to set the name and age properties of the new objects using the this keyword.
+
+// When you call the constructor function using the new keyword, a new object is created and returned. The person1 and person2 variables are then set to reference these new objects.
+
+// Constructor functions can also have methods attached to them, which are inherited by the objects created by the constructor function. Here's an example:
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  
+  this.sayHello = function() {
+    console.log("Hello, my name is " + this.name);
+  }
+}
+
+var person1 = new Person("John", 30);
+person1.sayHello(); // outputs "Hello, my name is John"
+
+
+// In this example, the Person constructor function has a sayHello method attached to it using the this keyword. When you create a new Person object using the constructor function, the sayHello method is inherited by the object and can be called on it.

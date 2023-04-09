@@ -1,57 +1,59 @@
 Topic
 
-1. Factory function 
-2. Constructor function
-3. Object.create() vs Class - done
-4. this - 4 Ways
-5. Inheritance
-6. Pure function
-7. Higher Order Functions - Done
-8. Closures
-9. Currying
-10. Promise - Async, await, Job queue, Parallel, sequence, race, allSettled, Threads, concurrency and parallelism
-11. Module pattern - pros and cons
-12. In-depth prototype concepts
-13. Indirectly invoking functions
-14. Namespace pattern
-15. event loop, call stack
-16. Scope
-17. Hoisting
-18. Prototypical inheritance (prototype nature in js)
-19. bind(), call(), apply() - done
+1. Factory function (done)
+2. Constructor function (done)
+3. Object.create() vs Class - (done)
+4. this - 4 Ways (done)
+5. Inheritance (done)
+6. Pure function (done)
+7. Higher Order Functions - (done)
+8. Closures - (done)
+9. Currying - (done)
+10. Promise - Async, await, Job queue, Parallel, sequence, race, allSettled, Threads, concurrency and parallelism (done)
+11. Module pattern - pros and cons (done)
+12. In-depth prototype concepts (done)
+13. Indirectly invoking functions 
+14. Namespace pattern (done)
+15. event loop, call stack - Pending
+16. Scope (done)
+17. Hoisting (done)
+18. Prototypical inheritance (prototype nature in js) (done)
+19. bind(), call(), apply() - (done)
 20. reduce()
 21. Generators
 22. fetch()
-23. Destructuring assignment
-24. Optional chaining
-25. Coalescing operator
-26. Composition vs Inheritance
-27. Garbage Collection
-28. bubbling and capturing
-29. Pure Functions
-30. Prototype chain
-31. JS Array method - map, filter, find, reduce
+23. Destructuring assignment (done) 
+24. Optional chaining (done)
+25. Coalescing operator (done)
+26. Composition vs Inheritance (done)
+27. Garbage Collection (done)
+28. bubbling and capturing - - (done)
+29. Pure Functions (done)
+30. Prototype chain (done)
+31. JS Array method - map, filter, find, reduce - - Pending
+32. Map 
+33. Event listeners, Event emitters
 
 Below are the list of some new features of ES6,
 	i	Support for constants or immutable variables
 	ii	Block-scope support for variables, constants and functions - done
 	iii	Arrow functions  - done
-	iv	Default parameters 
-	v	Rest and Spread Parameters
-	vi	Template Literals
-	vii	Multi-line Strings
-	viii Destructuring Assignment
-	ix	Enhanced Object Literals
-	x	Promises
-	xi	Classes
-	xii	Modules
+	iv	Default parameters (done)
+	v	Rest and Spread Parameters (done)
+	vi	Template Literals (done)
+	vii	Multi-line Strings (done)
+	viii Destructuring Assignment (done)
+	ix	Enhanced Object Literals (done)
+	x	Promises (done)
+	xi	Classes (done)
+	xii	Modules (done)
 
 
-Object-oriented programming in JavaScript
-Functional programming in JavaScript
+Object-oriented programming in JavaScript (done)
+Functional programming in JavaScript (done)
 Asynchronous programming with Promises and Async/Await
 Event-driven programming and the Event Loop
-Higher-order functions and closures
+Higher-order functions and closures (done)
 Web APIs and browser-specific APIs (e.g. Web Storage, Web Workers, Web Sockets, Geolocation, etc.)
 JavaScript modules and module loaders (e.g. ES6 modules, CommonJS, AMD, SystemJS, etc.)
 JavaScript frameworks and libraries (e.g. React, Vue.js, Angular, Express, Node.js, etc.)
@@ -146,7 +148,7 @@ https://github.com/30-seconds/30-seconds-of-interviews **
 https://github.com/sudheerj/reactjs-interview-questions **
 https://github.com/learning-zone/nodejs-basics **
 
-https://algo.monster/problems/stats
+
 https://www.frontendinterviewhandbook.com/introduction/
 https://www.techinterviewhandbook.org/coding-interview-study-plan/
 https://www.techinterviewhandbook.org/grind75
