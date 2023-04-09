@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tooltip Example</title>
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      This is a <span class="tooltip">tooltip<span class="tooltiptext">This is some tooltip text.</span></span>.
+    </p>
+    <p>
+      This is a <span class="tooltip">tooltip<span class="tooltiptext">This is some tooltip text.</span></span> with a long text that wraps to the next line and should not extend beyond the edge of the viewport.
+    </p>
+    <p>
+      This is a <span class="tooltip">tooltip<span class="tooltiptext">This is some tooltip text.</span></span> that is near the edge of the viewport and should not extend beyond it.
+    </p>
+  </body>
+  <script>
+    const tooltips = document.querySelectorAll('.tooltip');
+
+    tooltips.forEach((tooltip) => {
+      const tooltipText = tooltip.querySelector('.tooltiptext');
+      const tooltipPosition = tooltip.getBoundingClientRect();
+      const viewportWidth = document.documentElement.clientWidth;
+
+      // Check if tooltip is near the right edge of the viewport
+      if (tooltipPosition.right > viewportWidth) {
+        tooltipText.style.left = 'auto';
+        tooltipText.style.right = '50%';
+        tooltipText.style.marginRight = `${viewportWidth - tooltipPosition.right + tooltipPosition.width / 2}px`;
+      }
+
+      // Check if tooltip is near the left edge of the viewport
+      if (tooltipPosition.left < 0) {
+        tooltipText.style.left = '50%';
+        tooltipText.style.right = 'auto';
+        tooltipText.style.marginLeft = `${-tooltipPosition.left + tooltipPosition.width / 2}px`;
+      }
+    });
+  </script>
+</html>
+
+
+<!-- const stars = document.querySelectorAll('.stars input[type="radio"]');
+
+stars.forEach((star) => {
+  star.addEventListener('change', (event) => {
+    const rating = event.target.value;
+    console.log(`User rated ${rating} stars.`);
+  });
+}); -->

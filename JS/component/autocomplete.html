@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Autocomplete Component</title>
+    <style>
+      #autocomplete-results {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      #autocomplete-results li {
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      #autocomplete-results li:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" placeholder="Type here...">
+    <ul id="autocomplete-results"></ul>
+    
+    <script>
+      const searchInput = document.getElementById("search-input");
+      const autocompleteResults = document.getElementById("autocomplete-results");
+
+      // Define an array of possible search terms
+      const searchTerms = [
+        "apple",
+        "banana",
+        "cherry",
+        "date",
+        "elderberry",
+        "fig",
+        "grape",
+        "honeydew",
+        "indigo",
+        "jicama",
+        "kiwi",
+        "lemon",
+        "mango",
+        "nectarine",
+        "orange",
+        "pear",
+        "quince",
+        "raspberry",
+        "strawberry",
+        "tangerine",
+        "ugli fruit",
+        "vanilla",
+        "watermelon",
+        "xigua",
+        "yellow watermelon",
+        "zucchini"
+      ];
+
+      function autocomplete(searchTerm) {
+        // Clear any existing results
+        autocompleteResults.innerHTML = "";
+
+        // Filter the search terms array based on the input value
+        const filteredTerms = searchTerms.filter(term => {
+          return term.startsWith(searchTerm.toLowerCase());
+        });
+
+        // Create a new list item for each matching search term
+        filteredTerms.forEach(term => {
+          const li = document.createElement("li");
+          li.textContent = term;
+          li.addEventListener("click", () => {
+            searchInput.value = term;
+            autocompleteResults.innerHTML = "";
+          });
+          autocompleteResults.appendChild(li);
+        });
+
+        // Show the autocomplete results if there are any
+        if(filteredTerms.length > 0) {
+          autocompleteResults.style.display = "block";
+        } else {
+          autocompleteResults.style.display = "none";
+        }
+      }
+
+      searchInput.addEventListener("input", () => {
+        autocomplete(searchInput.value);
+      });
+
+      searchInput.addEventListener("blur", () => {
+        setTimeout(() => {
+          autocompleteResults.innerHTML = "";
+          autocompleteResults.style.display = "none";
+        }, 200);
+      });
+    </script>
+  </body>
+</html>
