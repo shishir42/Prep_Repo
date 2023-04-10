@@ -3,8 +3,12 @@ https://www.youtube.com/watch?v=ztWZQ8sgCQI&list=PLefG3VDSLxSzboMuyD1BNfa3_yNWth
 
 
 Docker and Kubernetes are both popular technologies in the world of containerization, but they serve different purposes.
-Docker is a containerization platform that allows you to package an application and its dependencies into a single image. Docker provides an easy way to build, ship, and run applications in any environment, without worrying about the underlying system dependencies. Docker makes it easy to create consistent environments for development, testing, and production.
+
+Docker is a containerization platform that allows you to package an application and its dependencies into a single image. Docker provides an easy way to build, ship, and run applications in any environment, without worrying about the underlying system dependencies. 
+Docker makes it easy to create consistent environments for development, testing, and production.
+
 Kubernetes, on the other hand, is a container orchestration platform that allows you to manage, deploy, and scale containerized applications. Kubernetes provides a framework for automating the deployment, scaling, and management of containerized applications. With Kubernetes, you can easily manage multiple Docker containers, including load balancing, service discovery, and rolling updates.
+
 In summary, Docker is a platform for building container images, while Kubernetes is a platform for managing containerized applications. While it's possible to use Docker without Kubernetes, Kubernetes is typically used in conjunction with Docker to manage and orchestrate containers in a production environment.
 
 Sure, I can provide some examples to illustrate the difference between Docker and Kubernetes.
@@ -14,12 +18,59 @@ Using Docker:
 	2	Use the Docker CLI to build a Docker image from the Dockerfile.
 	3	Use the Docker CLI to run the Docker image as a container on a local machine or a remote server.
 For example, you might write a Dockerfile that installs the necessary packages for your web application, copies the application code into the container, and sets the container to run the application on startup. Then, you would use the Docker CLI to build the image and run it as a container on a server.
+
 Using Kubernetes:
 	1	Write a Kubernetes deployment configuration that specifies the Docker image, number of replicas, and other deployment options.
 	2	Use the Kubernetes CLI to create a Kubernetes deployment object from the deployment configuration.
 	3	Use the Kubernetes CLI to scale the deployment, update the deployment, or perform other management tasks.
 For example, you might write a deployment configuration that specifies the Docker image for your web application, the number of replicas you want to run, and any environment variables or secrets that the application needs. Then, you would use the Kubernetes CLI to create the deployment object, which would automatically create and manage the necessary pods and containers to run your application.
+
 In summary, Docker is used to build and run containerized applications, while Kubernetes is used to manage and orchestrate those containers in a production environment.
 
+Docker and Kubernetes are two popular tools used in modern software development and deployment, and they work together to provide a powerful and flexible platform for managing microservices-based applications.
+
+Docker is a containerization platform that allows developers to package their applications and dependencies into lightweight, portable containers that can run on any system with Docker installed. Containers provide a standardized way of packaging and deploying applications, which makes it easier to move applications between different environments such as development, staging, and production.
+
+Kubernetes, on the other hand, is a container orchestration platform that automates the deployment, scaling, and management of containerized applications. Kubernetes provides a powerful set of features such as automatic scaling, load balancing, and self-healing, which help to ensure that applications are always available and running smoothly.
+
+Together, Docker and Kubernetes provide a complete solution for managing microservices-based applications at scale. Developers can use Docker to package their applications and dependencies into containers, and then use Kubernetes to deploy and manage those containers in a distributed environment.
+
+Here's how Docker and Kubernetes work together:
+
+Docker is used to create container images of microservices-based applications and their dependencies. The container images are stored in a Docker registry such as Docker Hub or a private registry.
+
+Kubernetes is used to deploy and manage the containerized applications. Kubernetes uses a YAML file called a deployment manifest to define the desired state of the application, including the number of replicas, resource requirements, and environment variables.
+
+Kubernetes pulls the container images from the Docker registry and deploys them to the cluster. Kubernetes uses a set of controllers to manage the lifecycle of the application, including scaling up and down, rolling out updates, and monitoring the health of the application.
+
+Kubernetes provides additional features such as service discovery, load balancing, and auto-scaling, which help to ensure that the application is always available and running smoothly.
+
+Overall, Docker and Kubernetes provide a powerful combination of containerization and orchestration that makes it easier to manage microservices-based applications at scale. By using these tools together, developers can focus on writing code and building applications, while the platform takes care of the deployment and management of those applications in a distributed environment.
+
+Kubernetes
+- High availability or no downtime 
+- Scalability or high performance 
+- Disaster recovery - backup and restore 
 
 https://github.com/veggiemonk/awesome-docker
+
+
+IQ
+https://www.simplilearn.com/tutorials/docker-tutorial/docker-interview-questions
+https://www.edureka.co/blog/interview-questions/docker-interview-questions/
+https://intellipaat.com/blog/interview-question/docker-interview-questions-answers/
+https://www.toptal.com/docker/interview-questions
+https://www.guru99.com/docker-interview-questions.html
+https://www.knowledgehut.com/interview-questions/docker
+https://hackr.io/blog/docker-interview-questions
+https://www.fullstack.cafe/blog/docker-interview-questions-and-answers
+
+
+Docker:
+https://www.youtube.com/watch?v=31ieHmcTUOk&list=PL4cUxeGkcC9hxjeEtdHFNYMtCpjNBm3h7
+https://www.youtube.com/watch?v=ztWZQ8sgCQI&list=PLefG3VDSLxSzboMuyD1BNfa3_yNWthR7r
+
+
+Kubernetes Crash Course for Absolute Beginners 
+https://www.youtube.com/watch?v=s_o8dwzRlu4
+https://www.youtube.com/watch?v=VnvRFRk_51k&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC
