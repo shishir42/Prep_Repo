@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Animation</title>
+    <style>
+      body {
+        background-color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #000;
+      }
+
+      .input-container {
+        position: relative;
+        width: 300px;
+        margin: 50px auto;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid #000;
+        font-size: 16px;
+        outline: none;
+      }
+
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        font-size: 16px;
+        color: #999;
+        cursor: text;
+        transition: all 0.3s ease;
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        transform: translateY(-20px) scale(0.8);
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <input type="text" id="name" placeholder=" ">
+      <label for="name">Name</label>
+    </div>
+    <script>
+      const input = document.querySelector('input');
+      const label = document.querySelector('label');
+      input.addEventListener('focus', () => {
+        label.classList.add('focused');
+      });
+      input.addEventListener('blur', () => {
+        if (!input.value) {
+          label.classList.remove('focused');
+        }
+      });
+    </script>
+  </body>
+</html>

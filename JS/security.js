@@ -21,3 +21,15 @@
 // 10.Avoid using eval(): The use of eval() can lead to security vulnerabilities such as code injection, and should be avoided.
 
 // By following these best practices and considerations, developers can help ensure that their JavaScript applications are secure and protected from malicious attacks.
+
+// Cross-Site Request Forgery (CSRF) is a type of attack where an attacker tricks a user into performing an action on a website without their knowledge or consent. To prevent CSRF attacks in JavaScript, you can take the following steps:
+
+// Use SameSite cookies: Set the SameSite attribute on cookies to 'strict' or 'lax' to prevent them from being sent with cross-origin requests. This ensures that the cookies are only sent with requests that originate from the same site.
+
+// Use anti-CSRF tokens: Include a unique token in each form or request that requires authentication. The token is validated on the server-side before processing the request, and if the token is invalid, the request is rejected.
+
+// Check the Referer header: Check the Referer header of incoming requests to ensure that they are coming from the same site. This method is not foolproof since attackers can spoof the Referer header, but it can provide an additional layer of security.
+
+// Limit the scope of user sessions: Implement mechanisms that limit the scope of user sessions, such as session timeouts, session encryption, and session revocation.
+
+// Use Content Security Policy (CSP): Implement a CSP header that specifies which origins are allowed to execute JavaScript on your site. This can help prevent malicious code from being executed on your site by restricting the sources of executable code.

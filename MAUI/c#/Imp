@@ -150,9 +150,7 @@ https://www.edureka.co/blog/interview-questions/dot-net-interview-questions/
 https://www.ambitionbox.com/profiles/dot-net-developer/interview-questions
 https://www.guru99.com/asp-net-interview-questions-answers.html
 https://www.fullstack.cafe/blog/c-sharp-interview-questions
-
 https://www.interviewkickstart.com/interview-questions/c-sharp-interview-questions-for-experienced
-
 https://www.interviewbit.com/c-sharp-interview-questions-for-5-years-experience/
 https://www.interviewbit.com/c-sharp-interview-questions/
 https://hackr.io/blog/c-sharp-interview-questions
@@ -178,6 +176,7 @@ https://www.qfles.com/interview-question/asp-net-core-web-api-interview-question
 https://www.qfles.com/interview-question/asp-net-mvc-interview-questions
 https://www.qfles.com/interview-question/asp-net-core-interview-questions
 https://www.adaface.com/blog/dot-net-core-interview-questions/
+
 https://www.questpond.com/interview-questions---answers-series-for-c-net-fresher---experienced/cid88
 https://www.geeksforgeeks.org/c-sharp-abstract-classes/
 
@@ -241,7 +240,60 @@ https://cs.wmich.edu/~alfuqaha/summer13/cs5950/lectures/CSAdvanced-rev3.pdf
 
 
 
-
+SQL Server:
+ Question 1 :- Explain normalization ?
+ Question 2 :- How to implement normalization ?
+ Question 3 :- What is denormalization ?
+ Question 4 :- Explain OLTP vs OLAP ?
+ Question 5 :- Explain 1st,2nd and 3rd Normal form ?
+ Question 6 :- Primary Key vs Unique key ?
+ Question 7 :- Differentiate between Char vs Varchar ?
+ Question 8 :- Differentiate between Char vs NChar ?
+ Question 9 :- Whats the size of Char vs NChar ?
+ Question 10 :- What is the use of Index ?
+ Question 11 :- How does it make search faster?
+ Question 12 :- What are the two types of Indexes ?
+ Question 13 :- Clustered vs Non-Clustered index?
+  Question 14 :- Function vs Stored Procedures?
+ Question 15 :- What are triggers and why do you need it ?
+ Question 16 :- What are types of triggers ?
+ Question 17 :- Differentiate between After trigger vs Instead Of ?
+ Question 18 :- What is need of Identity ?
+ Question 19 :- Explain transactions and how to implement it ?
+ Question 20 :- What are inner joins ?
+ Question 21 :- Explain Left join ?
+ Question 22 :- Explain Right join ?
+ Question 23 :- Explain Full outer joins ?
+ Question 24 :- Explain Cross joins ?
+ Question 25 :- Why do we need UNION ?
+ Question 26 :- Differentiate between Union vs Union All ?
+ Question 27 :- Can we have unequal columns in Union?
+ Question 28 :- Can column have different data types in Union ?
+ Question 29 :- Which Aggregate function have you used ?
+ Question 30 :- When to use Group by ?
+ Question 31 :- Can we select column which is not part of group by ?
+ Question 32 :- What is having clause ?
+ Question 33 :- Having clause vs Where clause?
+ Question 34 :- How can we sort records ?
+ Question 35 :- Whats the default sort ?
+ Question 36 :- How can we remove duplicates ?
+ Question 37 :- Select the first top X records ?
+ Question 38 :- How to handle NULLS ?
+ Question 39 :- What is use of wild cards ?
+ Question 40 :- What is the use of Alias ?
+ Question 41 :- How to write a case statement ?
+ Question 42 :- What is self reference tables ?
+ Question 43 :- What is self join ?
+ Question 44 :- Explain the between clause ?
+ Question 45 :- Explain SubQuery ?
+ Question 46 :- Can inner Subquery return multiple results ?
+ Question 47 :- What is Co-related Query ?
+ Question 48 :- Differentiate between Joins and SubQuery ?
+ Question 49 :- Performance Joins vs SubQuery?
+ Question 50 :- Find NTH Highest Salary in SQL.
+ Question 51 :- Select the top nth highest salary using correlated Queries?
+ Question 52 :- Select top nth using using TSQL
+ Question 53 :- Performance comparison of all the methods.
 
 
 02:58 Question 01 :- Why do we need OOP?
@@ -579,7 +631,19 @@ Part 12 - What is Garbage collector, Managed vs UnManaged code, Memory Leaks.
 
 
 
+SOLID Principles 
+lamda
+async await 
+
 
 
 https://medium.com/@john_57221/cqrs-and-why-repositories-may-not-be-the-right-fit-ca8469a2379f
 https://www.c-sharpcorner.com/article/using-the-cqrs-pattern-in-c-sharp/
+
+
+https://www.youtube.com/watch?v=LrZwd-f0M4I&t=16s
+https://www.youtube.com/watch?v=DuNLR_NJv8U
+
+https://www.youtube.com/watch?v=KmLQLSKqvvI&list=PLwOF5UVsZWUjNR3roRK79QgBcKLyOX48I
+
+https://www.youtube.com/@binarythistle/playlists
