@@ -1,0 +1,48 @@
+Here are some advanced topics of HTML that you may want to explore for interview preparation:
+
+Semantic HTML: The use of HTML elements that convey meaning beyond their appearance for accessibility, SEO, and maintainability.
+HTML5 APIs: Application Programming Interfaces that provide additional functionality to HTML, such as Geolocation, Canvas, Web Storage, and Web Workers.
+Accessibility: Techniques and best practices for making HTML content accessible to people with disabilities.
+Web Forms: The use of HTML form elements and attributes to create interactive forms for data submission and user input.
+Responsive Design: Techniques and best practices for creating web pages that adapt to different screen sizes and devices.
+Microdata and Structured Data: A way to add additional semantic meaning to HTML content to improve SEO and enhance search results.
+Web Components: A set of standard APIs for building reusable, modular, and encapsulated components in HTML.
+Web Accessibility Initiative (WAI): Guidelines and standards for making web content more accessible to people with disabilities.
+Cross-Browser Compatibility: Techniques and best practices for ensuring HTML content works across different browsers and versions.
+SEO Optimization: Techniques and best practices for improving the visibility and ranking of HTML content in search engine results.
+HTML Preprocessors: Tools that allow you to write HTML using a simpler syntax and generate clean HTML code automatically.
+Best Practices and Code Optimization: Techniques and best practices for writing clean, optimized, and maintainable HTML code.
+Web Performance Optimization: Techniques and best practices for optimizing HTML content for fast page load times and better performance.
+Markup Validation: The process of checking HTML code for syntax errors and ensuring it conforms to HTML standards.
+HTML5 Video and Audio: Techniques and best practices for embedding and controlling multimedia content using HTML5 video and audio elements.
+
+https://github.com/adwaitya/html5-interview-questions
+
+Why do you need doctype?
+What are data-* attributes used for?
+How can you generate a public key in html?
+How do you change the direction of html text?
+How can you highlight text in html?
+Can you apply css to a part of html document only?
+Will a browser make http request for the following cases?
+Which resource would be downloaded first?
+What is an optional tag?
+What are the differences between div and span?
+How would you differentiate between div, section, and article?
+How would you select svg or canvas for your site?
+How to serve html in multiple languages?
+Explain standard and quirks mode.
+What is a semantic tag?
+
+https://github.com/rohan-paul/Awesome-JavaScript-Interviews/blob/master/HTML/Collection-of-HTML-Interview-Questions.md
+
+https://www.frontendinterviewhandbook.com/html-questions
+https://github.com/learning-zone/html-basics
+
+https://www.edureka.co/blog/interview-questions/top-50-html-interview-questions-and-answers/
+https://intellipaat.com/blog/interview-question/html-interview-questions/
+https://www.upgrad.com/blog/html-interview-questions-answers/
+https://www.softwaretestinghelp.com/html-interview-questions/
+https://www.shiksha.com/online-courses/articles/top-html-interview-questions-and-answers/
+https://career.guru99.com/top-50-html-interview-questions/
+https://hackr.io/blog/html-interview-questions

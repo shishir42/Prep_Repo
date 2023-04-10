@@ -25,6 +25,66 @@ Advanced Topic
 24. React Performance
 25. Prop Drilling
 
+React Hooks: A way to use stateful logic in functional components.
+Redux: A predictable state container for managing global state in React applications.
+React Router: A library for handling client-side routing in React applications.
+Server-Side Rendering: The process of rendering React components on the server to improve performance and SEO.
+React Context: A way to share data between components without having to pass props down through every level of the component tree.
+Higher-Order Components (HOCs): A way to reuse component logic by wrapping a component with a function that adds additional functionality.
+Error Boundaries: A way to handle errors that occur in a React component tree and prevent the entire application from crashing.
+Code Splitting: The process of breaking up a large codebase into smaller chunks to improve performance and reduce load times.
+Lazy Loading: A way to defer loading of components until they are actually needed, improving the initial load time of the application.
+React Native: A framework for building native mobile applications using React.
+Webpack: A popular build tool that can be used with React to bundle and optimize code.
+Redux-Saga: A library for managing side effects (such as making API calls) in a Redux-based application.
+React Testing Library: A library for testing React components that emphasizes testing the component as a user would interact with it.
+SSR with Next.js: A framework built on top of React that provides built-in server-side rendering, routing, and other features.
+React Performance: Techniques and best practices for optimizing the performance of React applications.
+
+
+React Native is a constantly evolving framework and new advanced topics may arise over time, but here are some advanced topics of React Native that you may want to explore:
+
+Navigation: A way to handle client-side navigation between screens and components in a mobile application.
+Redux: A predictable state container for managing global state in React Native applications.
+Animations: A way to add complex and dynamic animations to mobile applications.
+Gesture handling: A way to handle touch events and gestures in mobile applications.
+Layouts: A way to manage the layout and styling of components in a mobile application.
+Native Modules: A way to access native device functionalities (such as camera, GPS, etc.) from within a React Native application.
+Codepush: A way to update the JavaScript code of a React Native application without having to go through the App Store or Play Store review process.
+Internationalization: A way to support multiple languages and locales in a React Native application.
+Deep Linking: A way to allow users to navigate directly to specific content within an application using a URL.
+Testing: Techniques and best practices for testing React Native applications.
+Expo: A framework built on top of React Native that provides additional APIs and tools for building mobile applications.
+Performance Optimization: Techniques and best practices for optimizing the performance of React Native applications.
+Authentication and Security: Techniques and best practices for securing and authenticating users in a React Native application.
+Push Notifications: A way to send push notifications to users of a React Native application.
+Offline Capabilities: Techniques and best practices for building offline-capable React Native applications.
+
+React Native IQ
+https://www.interviewbit.com/react-native-interview-questions/
+https://www.knowledgehut.com/interview-questions/react-native
+https://www.javatpoint.com/react-native-interview-questions
+https://mindmajix.com/react-native-interview-questions
+https://www.testgorilla.com/blog/react-native-interview-questions/
+https://www.toptal.com/react-native/interview-questions
+https://www.fullstack.cafe/blog/react-native-interview-questions
+https://www.interviewkickstart.com/interview-questions/react-native-interview-questions
+https://www.educative.io/blog/top-react-native-interview-questions
+https://www.adaface.com/blog/react-native-interview-questions/
+https://github.com/samsoul16/react-native-interview-questions
+https://github.com/Devinterview-io/react-native-interview-questions
+https://medium.com/geekculture/50-react-native-interview-questions-b1fa5751b468
+https://www.positronx.io/top-react-native-interview-questions-and-answers/
+https://www.fullstack.cafe/interview-questions/react-native
+https://www.softwaretestinghelp.com/react-interview-questions/
+https://www.n-school.com/react-native-interview-questions/
+https://morioh.com/p/34480c55dbd2
+https://www.mygreatlearning.com/blog/react-js-interview-questions-and-answers/
+https://www.java67.com/2022/05/top-25-react-native-interview-questions.html
+https://www.crsinfosolutions.com/latest-50-reactjs-interview-questions-2021/
+https://career.guru99.com/reactjs-interview-questions/
+
+
 
 
 Sure, here's a list of some popular architecture patterns in React:
@@ -61,29 +121,6 @@ https://www.burhanuday.com/blog/2020/08/react-internals-part-1-the-basics-concep
 https://programmingwithmosh.com/react/react-virtual-dom-explained/
 https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html
 https://medium.com/@udit/react-internals-how-react-work-under-the-hood-8915f62306a4
-
-
-React Projects:
-
-https://www.youtube.com/watch?v=CKAn5dCK6RE
-https://www.youtube.com/watch?v=0fYi8SGA20k&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR
-https://www.youtube.com/watch?v=309beMyhXtg
-https://www.youtube.com/watch?v=a_7Z7C_JCyo&t=9s
-https://www.youtube.com/watch?v=XuFDcZABiDQ&list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb
-https://www.youtube.com/watch?v=3H3AQT4ZdDc&list=PL63c_Ws9ecIRnNHCSqmIzfsMAYZrN71L6&index=1
-
-
-Redux
-
-https://www.youtube.com/watch?v=1oU_YGhT7ck
-https://www.youtube.com/watch?v=1zCNdVhdvHE
-https://www.youtube.com/watch?v=6_a27O2WFR0&list=PL8p2I9GklV47TDYUq8RmFzeI9CgOoVgpJ
-https://www.youtube.com/watch?v=HrSRfM9WlbQ&list=PLvN7nvnjkvpRiJrzy2BhmQIByubcxCSsB
-
-React Native 
-https://www.youtube.com/watch?v=AkEnidfZnCU&t=1s
-https://www.youtube.com/watch?v=QYlEOxCfErg&t=1s
-https://www.youtube.com/watch?v=mJ3bGvy0WAY
 
 
 React Interview
@@ -138,6 +175,15 @@ https://www.adaface.com/blog/react-interview-questions/
 https://dev.to/suprabhasupi/react-redux-interview-questions-with-answers-13ba
 https://www.interviewkickstart.com/interview-questions/redux-interview-questions
 https://www.interviewbit.com/redux-interview-questions/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -488,3 +534,24 @@ Using the React Context API in this way can help to avoid prop drilling and make
 
 
 
+React Projects:
+
+https://www.youtube.com/watch?v=CKAn5dCK6RE
+https://www.youtube.com/watch?v=0fYi8SGA20k&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR
+https://www.youtube.com/watch?v=309beMyhXtg
+https://www.youtube.com/watch?v=a_7Z7C_JCyo&t=9s
+https://www.youtube.com/watch?v=XuFDcZABiDQ&list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb
+https://www.youtube.com/watch?v=3H3AQT4ZdDc&list=PL63c_Ws9ecIRnNHCSqmIzfsMAYZrN71L6&index=1
+
+
+Redux
+
+https://www.youtube.com/watch?v=1oU_YGhT7ck
+https://www.youtube.com/watch?v=1zCNdVhdvHE
+https://www.youtube.com/watch?v=6_a27O2WFR0&list=PL8p2I9GklV47TDYUq8RmFzeI9CgOoVgpJ
+https://www.youtube.com/watch?v=HrSRfM9WlbQ&list=PLvN7nvnjkvpRiJrzy2BhmQIByubcxCSsB
+
+React Native 
+https://www.youtube.com/watch?v=AkEnidfZnCU&t=1s
+https://www.youtube.com/watch?v=QYlEOxCfErg&t=1s
+https://www.youtube.com/watch?v=mJ3bGvy0WAY
