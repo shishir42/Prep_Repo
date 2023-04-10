@@ -1,0 +1,107 @@
+The KISS (Keep It Simple, Stupid) design principle states that software should be kept as simple as possible, avoiding unnecessary complexity. This principle emphasizes that simplicity is better than complexity.
+
+public class CartController : Controller
+{
+    private readonly ICartService _cartService;
+
+    public CartController(ICartService cartService)
+    {
+        _cartService = cartService;
+    }
+
+    public ActionResult Index()
+    {
+        var cartItems = _cartService.GetCartItems();
+        return View(cartItems);
+    }
+
+    [HttpPost]
+    public ActionResult AddToCart(int productId)
+    {
+        _cartService.AddToCart(productId);
+        return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult RemoveFromCart(int productId)
+    {
+        _cartService.RemoveFromCart(productId);
+        return RedirectToAction("Index");
+    }
+}
+
+public interface ICartService
+{
+    void AddToCart(int productId);
+    void RemoveFromCart(int productId);
+    List<CartItem> GetCartItems();
+}
+
+public class CartService : ICartService
+{
+    private readonly IProductRepository _productRepository;
+    private readonly List<CartItem> _cartItems;
+
+    public CartService(IProductRepository productRepository)
+    {
+        _productRepository = productRepository;
+        _cartItems = new List<CartItem>();
+    }
+
+    public void AddToCart(int productId)
+    {
+        var product = _productRepository.GetProductById(productId);
+        var existingCartItem = _cartItems.FirstOrDefault(ci => ci.ProductId == productId);
+
+        if (existingCartItem != null)
+        {
+            existingCartItem.Quantity++;
+        }
+        else
+        {
+            _cartItems.Add(new CartItem
+            {
+                ProductId = productId,
+                Quantity = 1,
+                ProductName = product.Name,
+                Price = product.Price
+            });
+        }
+    }
+
+    public void RemoveFromCart(int productId)
+    {
+        var existingCartItem = _cartItems.FirstOrDefault(ci => ci.ProductId == productId);
+
+        if (existingCartItem != null)
+        {
+            if (existingCartItem.Quantity > 1)
+            {
+                existingCartItem.Quantity--;
+            }
+            else
+            {
+                _cartItems.Remove(existingCartItem);
+            }
+        }
+    }
+
+    public List<CartItem> GetCartItems()
+    {
+        return _cartItems;
+    }
+}
+
+
+In this example, we have a CartController that handles requests related to the shopping cart. It depends on an ICartService interface to perform cart-related operations such as adding and removing items from the cart. The CartService class implements this interface and depends on an IProductRepository interface to retrieve product information.
+
+Advantages of KISS:
+
+- Easier to understand: Simpler code is easier to understand, especially for new developers who are not familiar with the system.
+- Easier to maintain: Simple code is easier to maintain and modify over time.
+- Reduced bugs: Simpler code is less prone to bugs and errors.
+
+Disadvantages of KISS:
+
+- Limitations: In some cases, keeping things simple can limit the functionality of the system, making it difficult to add new features or improve performance.
+- Oversimplification: Sometimes, trying to keep things simple can lead to oversimplification, resulting in code that is too basic and lacks the necessary functionality. It's important to find the right balance between simplicity and functionality.

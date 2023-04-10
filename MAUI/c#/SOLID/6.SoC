@@ -1,0 +1,78 @@
+The Separation of Concerns (SoC) is a design principle that states that software components should be divided into separate sections or layers, each handling a distinct set of concerns. This means that different parts of the code should have different responsibilities and should not overlap.
+
+Here's an example of how to apply the SoC principle in an e-commerce system:
+
+// Data Access Layer
+public interface IProductRepository
+{
+    List<Product> GetAllProducts();
+}
+
+public class SqlProductRepository : IProductRepository
+{
+    public List<Product> GetAllProducts()
+    {
+        // Logic to get products from SQL database
+    }
+}
+
+// Business Logic Layer
+public interface IProductService
+{
+    List<Product> GetAllProducts();
+}
+
+public class ProductService : IProductService
+{
+    private IProductRepository _productRepository;
+
+    public ProductService(IProductRepository productRepository)
+    {
+        _productRepository = productRepository;
+    }
+
+    public List<Product> GetAllProducts()
+    {
+        return _productRepository.GetAllProducts();
+    }
+}
+
+// Presentation Layer
+public class ProductController : Controller
+{
+    private IProductService _productService;
+
+    public ProductController(IProductService productService)
+    {
+        _productService = productService;
+    }
+
+    public ActionResult Index()
+    {
+        var products = _productService.GetAllProducts();
+        return View(products);
+    }
+}
+
+
+In this example, we have three layers: the Data Access Layer, the Business Logic Layer, and the Presentation Layer. Each layer has a distinct responsibility.
+
+The Data Access Layer is responsible for handling data access and interacts with the database. It contains an IProductRepository interface that defines a method to retrieve all products, and two classes that implement this interface for SQL and MongoDB databases.
+
+The Business Logic Layer is responsible for handling business logic and contains an IProductService interface that defines a method to retrieve all products. The ProductService class implements this interface and depends on the IProductRepository interface to retrieve products from the database.
+
+The Presentation Layer is responsible for handling user interaction and contains a ProductController class that depends on the IProductService interface to retrieve products from the Business Logic Layer. The Index action in the controller retrieves products from the service and returns a view with the products.
+
+Advantages of SoC:
+
+- Code is easier to maintain: By separating concerns into different layers, code becomes easier to maintain and modify over time. Changes made to one layer do not affect the other layers.
+
+- Code is more testable: SoC allows for easier unit testing because each layer can be tested separately with mocks or stubs.
+
+- Code is more modular: SoC makes code more modular, making it easier to reuse code in other parts of the system.
+
+Disadvantages of SoC:
+
+- Increased complexity: SoC can increase the complexity of code, particularly in cases where there are many layers. It's important to carefully design layers and interfaces to avoid unnecessary complexity.
+
+- Over-engineering: Sometimes, trying to separate concerns too much can lead to over-engineering, resulting in code that is difficult to understand and maintain. It's important to find the right balance between separation and simplicity.

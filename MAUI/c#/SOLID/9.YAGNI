@@ -1,0 +1,28 @@
+
+YAGNI stands for "You Aren't Gonna Need It". It is a software development principle that suggests not to add any functionality or code that is not needed at the moment.
+
+The main advantage of the YAGNI principle is that it helps to keep the codebase simple and focused on the current requirements, reducing complexity and minimizing the chances of introducing bugs.
+
+Let's consider an example in the context of an e-commerce application. Suppose we have a requirement to display a list of products on the homepage. Following the YAGNI principle, we would only implement the code that is necessary to fulfill this requirement. We wouldn't add any additional functionality that we think we might need in the future but haven't been explicitly requested.
+
+public class HomePageController : Controller
+{
+    private readonly IProductService _productService;
+
+    public HomePageController(IProductService productService)
+    {
+        _productService = productService;
+    }
+
+    public ActionResult Index()
+    {
+        var products = _productService.GetFeaturedProducts();
+        return View(products);
+    }
+}
+
+
+In the above code, we are only retrieving the featured products and returning them to the view. We aren't adding any additional functionality that isn't necessary for this specific requirement.
+
+The disadvantage of the YAGNI principle is that it can lead to inflexible code if requirements change or additional functionality is required in the future. However, this can be mitigated by following other principles such as the SOLID principles, which allow for code to be easily modified and extended.
+

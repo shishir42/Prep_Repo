@@ -1,0 +1,90 @@
+How Encapsulation works as a design Principle?
+
+Encapsulation is a design principle that focuses on hiding the implementation details of an object and exposing only the necessary information through well-defined interfaces. Encapsulation helps to achieve the following:
+
+Information hiding: Encapsulation enables the hiding of implementation details of an object, so that other parts of the system cannot access them directly. This helps to prevent unintended changes to the object's state.
+
+Modularity: Encapsulation helps to create modular code, where each object can be treated as a black box that can be used by other parts of the system without knowing its internal details.
+
+Loose coupling: Encapsulation promotes loose coupling between different parts of the system, as changes to one object do not affect other objects that depend on it, as long as the interface remains the same.
+
+Security: Encapsulation helps to protect the data of an object from unauthorized access by other parts of the system.
+
+Here's an example of how encapsulation can be used in an e-commerce system:
+
+public class Order
+{
+    private int _orderId;
+    private List<OrderItem> _orderItems;
+    private decimal _totalAmount;
+
+    public Order(int orderId, List<OrderItem> orderItems, decimal totalAmount)
+    {
+        _orderId = orderId;
+        _orderItems = orderItems;
+        _totalAmount = totalAmount;
+    }
+
+    public int OrderId => _orderId;
+
+    public decimal TotalAmount => _totalAmount;
+
+    public void AddOrderItem(OrderItem orderItem)
+    {
+        _orderItems.Add(orderItem);
+        _totalAmount += orderItem.Subtotal;
+    }
+
+    public void RemoveOrderItem(OrderItem orderItem)
+    {
+        _orderItems.Remove(orderItem);
+        _totalAmount -= orderItem.Subtotal;
+    }
+
+    public List<OrderItem> GetOrderItems()
+    {
+        return _orderItems;
+    }
+}
+
+public class OrderItem
+{
+    private int _productId;
+    private int _quantity;
+    private decimal _price;
+
+    public OrderItem(int productId, int quantity, decimal price)
+    {
+        _productId = productId;
+        _quantity = quantity;
+        _price = price;
+    }
+
+    public int ProductId => _productId;
+
+    public int Quantity => _quantity;
+
+    public decimal Price => _price;
+
+    public decimal Subtotal => _quantity * _price;
+}
+
+
+In this example, the Order class is the encapsulated object, and it hides the implementation details of the order, such as the order ID, the list of order items, and the total amount. The OrderItem class is also an encapsulated object, and it hides the implementation details of the order item, such as the product ID, quantity, price, and subtotal.
+
+The Order class provides well-defined interfaces for adding and removing order items, getting the list of order items, and getting the total amount of the order. These interfaces can be used by other parts of the system without knowing the internal details of the order.
+
+Advantages of encapsulation:
+
+Information hiding: Encapsulation helps to hide the implementation details of an object, preventing unintended changes to the object's state.
+
+Modularity: Encapsulation promotes modularity, where each object can be treated as a black box that can be used by other parts of the system without knowing its internal details.
+
+Loose coupling: Encapsulation promotes loose coupling between different parts of the system, as changes to one object do not affect other objects that depend on it, as long as the interface remains the same.
+
+Security: Encapsulation helps to protect the data of an object from unauthorized access by other parts of the system.
+
+Disadvantages of encapsulation:
+
+Performance overhead: Encapsulation can introduce a performance overhead due to the need to use getters and setters to access
+

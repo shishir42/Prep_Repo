@@ -1,0 +1,37 @@
+DRY stands for "Don't Repeat Yourself". It is a software development principle that encourages developers to avoid duplicating code, and to ensure that every piece of knowledge or logic has a single, authoritative representation within a system.
+
+The main advantage of the DRY principle is that it promotes code reuse, reducing duplication and ensuring consistency across the system. This leads to a more maintainable codebase, as changes only need to be made in one place rather than multiple locations.
+
+Let's consider an example in the context of an e-commerce application. Suppose we have a requirement to calculate the total price of a customer's cart. Following the DRY principle, we would create a reusable function that can be called from different parts of the application instead of duplicating the code:
+
+public class CartController : Controller
+{
+    private readonly ICartService _cartService;
+
+    public CartController(ICartService cartService)
+    {
+        _cartService = cartService;
+    }
+
+    public ActionResult Index()
+    {
+        var cart = _cartService.GetCart();
+        var totalPrice = CalculateTotalPrice(cart);
+        return View(totalPrice);
+    }
+
+    private decimal CalculateTotalPrice(Cart cart)
+    {
+        decimal totalPrice = 0;
+        foreach (var item in cart.Items)
+        {
+            totalPrice += item.Price * item.Quantity;
+        }
+        return totalPrice;
+    }
+}
+
+In the above code, we have created a CalculateTotalPrice method that takes a Cart object and returns the total price. This method can be called from different parts of the application where we need to calculate the total price of the cart, avoiding code duplication.
+
+The disadvantage of the DRY principle is that it can sometimes lead to over-engineering, where developers try to create overly generic or abstract code that is difficult to understand and maintain. Therefore, it's important to strike a balance between code reuse and readability/maintainability.
+

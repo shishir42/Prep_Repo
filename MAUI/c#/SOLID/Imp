@@ -1,0 +1,32 @@
+SOLID is an acronym for a set of design principles that are commonly used in object-oriented programming to create maintainable and scalable software. The principles are:
+
+S: Single Responsibility Principle
+O: Open/Closed Principle
+L: Liskov Substitution Principle
+I: Interface Segregation Principle
+D: Dependency Inversion Principle
+
+1. Single Responsibility Principle
+The SRP states that a class should have only one reason to change. In other words, a class should have only one responsibility. This principle is important because it makes code easier to understand and maintain. A class with multiple responsibilities is more complex and harder to modify.
+
+Example: A class that reads and writes data from a database violates the SRP. Instead, the class should be separated into two classes, one for reading and one for writing.
+
+2. Open/Closed Principle (OCP)
+The OCP states that software entities (classes, modules, etc.) should be open for extension but closed for modification. This means that you should be able to extend the behavior of a class without modifying its source code. This principle is important because it makes code more flexible and less fragile.
+
+Example: A class that performs a specific calculation should be designed in a way that allows other classes to extend its behavior without modifying the original class. For example, you could create a new class that inherits from the original class and overrides a specific method.
+
+3. Liskov Substitution Principle (LSP)
+The LSP states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. This principle is important because it ensures that classes can be used interchangeably and makes code more flexible.
+
+Example: A class that expects an object of a superclass should be able to accept an object of any subclass without breaking the program's behavior. For example, a method that expects an animal object should be able to accept a dog object without any issues.
+
+4. Interface Segregation Principle (ISP)
+The ISP states that clients should not be forced to depend on methods they do not use. This means that interfaces should be designed in a way that only contains methods that are relevant to the client. This principle is important because it makes code more modular and easier to test.
+
+Example: An interface that contains methods for both logging and authentication violates the ISP. Instead, the interface should be separated into two interfaces, one for logging and one for authentication.
+
+5. Dependency Inversion Principle (DIP)
+The DIP states that high-level modules should not depend on low-level modules. Both should depend on abstractions. This means that you should not depend on concrete implementations, but rather on interfaces or abstract classes. This principle is important because it makes code more flexible and easier to maintain.
+
+Example: A class that depends on a specific database implementation violates the DIP. Instead, the class should depend on an interface that defines the required database operations, allowing different implementations to be used.

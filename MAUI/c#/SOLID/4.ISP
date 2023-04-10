@@ -1,0 +1,82 @@
+The Interface Segregation Principle (ISP) is a design principle that states that clients should not be forced to depend on interfaces they do not use. In other words, an interface should be designed so that the implementing classes only need to implement the methods they require.
+
+Here's an example of how to apply the ISP in an e-commerce system:
+
+public interface IProduct
+{
+    string Name { get; set; }
+    decimal Price { get; set; }
+}
+
+public interface IDiscountableProduct : IProduct
+{
+    decimal CalculateDiscount();
+}
+
+public class Book : IDiscountableProduct
+{
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public string Author { get; set; }
+    public decimal CalculateDiscount()
+    {
+        return Price * 0.1m; // 10% discount for books
+    }
+}
+
+public class TShirt : IDiscountableProduct
+{
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    public string Size { get; set; }
+    public decimal CalculateDiscount()
+    {
+        return Price * 0.05m; // 5% discount for T-shirts
+    }
+}
+
+public class ShoppingCart
+{
+    private List<IProduct> items = new List<IProduct>();
+
+    public void AddItem(IProduct item)
+    {
+        items.Add(item);
+    }
+
+    public decimal CalculateTotal()
+    {
+        decimal total = 0;
+        foreach (IProduct item in items)
+        {
+            IDiscountableProduct discountableItem = item as IDiscountableProduct;
+            if (discountableItem != null)
+            {
+                total += item.Price - discountableItem.CalculateDiscount();
+            }
+            else
+            {
+                total += item.Price;
+            }
+        }
+        return total;
+    }
+}
+
+
+In this example, we have two interfaces: IProduct and IDiscountableProduct. IDiscountableProduct inherits from IProduct and adds a CalculateDiscount method.
+
+We have two classes that implement IDiscountableProduct: Book and TShirt. Both classes have their own implementation of CalculateDiscount.
+
+We also have a ShoppingCart class that accepts any IProduct object and calculates the total price of all items in the cart. Because IDiscountableProduct inherits from IProduct, both Book and TShirt can be used interchangeably with any IProduct object.
+
+Advantages of ISP:
+
+- Code is more flexible: By separating interfaces based on functionality, ISP makes code more flexible and adaptable to change.
+- Code is easier to maintain: ISP reduces coupling between classes, making it easier to maintain and modify code over time.
+- Code is less error-prone: ISP helps to catch design flaws early, reducing the risk of runtime errors and other bugs.
+
+Disadvantages of ISP:
+
+- Increased complexity: ISP can increase the complexity of code, particularly in cases where multiple interfaces are used. It's important to carefully design interfaces to avoid unnecessary complexity.
+- Over-engineering: Sometimes, trying to make interfaces too granular can lead to over-engineering, resulting in interfaces that are too specific and difficult to use. It's important to find the right balance between granularity and simplicity.

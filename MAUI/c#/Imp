@@ -176,7 +176,6 @@ https://www.qfles.com/interview-question/asp-net-core-web-api-interview-question
 https://www.qfles.com/interview-question/asp-net-mvc-interview-questions
 https://www.qfles.com/interview-question/asp-net-core-interview-questions
 https://www.adaface.com/blog/dot-net-core-interview-questions/
-
 https://www.questpond.com/interview-questions---answers-series-for-c-net-fresher---experienced/cid88
 https://www.geeksforgeeks.org/c-sharp-abstract-classes/
 
@@ -628,13 +627,6 @@ Part 12 - What is Garbage collector, Managed vs UnManaged code, Memory Leaks.
 	103	What is a switch statement in C#? How do you use it?
 	104	What is a try-catch-finally block in C#? How do you use it?
 	105	How do you implement a multithreaded application in C#?
-
-
-
-SOLID Principles 
-lamda
-async await 
-
 
 
 https://medium.com/@john_57221/cqrs-and-why-repositories-may-not-be-the-right-fit-ca8469a2379f
