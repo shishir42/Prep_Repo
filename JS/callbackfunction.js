@@ -1,15 +1,15 @@
 // A callback function is a function passed into another function as an argument. This function is invoked inside the outer function to complete an action. Let's take a simple example of how to use callback function
 
 function callbackFunction(name) {
-    console.log("Hello " + name);
-  }
-  
-  function outerFunction(callback) {
-    let name = prompt("Please enter your name.");
-    callback(name);
-  }
-  
-  outerFunction(callbackFunction);
+  console.log("Hello " + name);
+}
+
+function outerFunction(callback) {
+  let name = prompt("Please enter your name.");
+  callback(name);
+}
+
+outerFunction(callbackFunction);
 
 //   Callbacks are an essential concept in JavaScript because they allow you to execute code after another operation has completed. In JavaScript, many operations are asynchronous, meaning that they take some time to complete and don't block the execution of the rest of the code. Examples of asynchronous operations in JavaScript include making an HTTP request, reading from a file, or waiting for user input.
 
@@ -20,31 +20,31 @@ function callbackFunction(name) {
 // Overall, callbacks are an important concept in JavaScript because they allow you to write asynchronous code that is non-blocking and efficient.
 
 function firstFunction() {
-    // Simulate a code delay
-    setTimeout(function () {
-      console.log("First function called");
-    }, 1000);
-  }
-  function secondFunction() {
-    console.log("Second function called");
-  }
-  firstFunction();
-  secondFunction();
-  
-  Output;
-  // Second function called
-  // First function called
+  // Simulate a code delay
+  setTimeout(function () {
+    console.log("First function called");
+  }, 1000);
+}
+function secondFunction() {
+  console.log("Second function called");
+}
+firstFunction();
+secondFunction();
+
+Output;
+// Second function called
+// First function called
 
 //   Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. The callback hell looks like below,
 
-async1(function(){
-    async2(function(){
-        async3(function(){
-            async4(function(){
-                //
-            });
-        });
+async1(function () {
+  async2(function () {
+    async3(function () {
+      async4(function () {
+        //
+      });
     });
+  });
 });
 
 // There are several ways to resolve Callback Hell:

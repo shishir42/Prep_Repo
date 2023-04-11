@@ -1,57 +1,57 @@
 // The constructor method is a special method for creating and initializing an object created within a class. If you do not specify a constructor method, a default constructor is used. The example usage of constructor would be as below,
 
 class Employee {
-    constructor() {
-      this.name = "John";
-    }
+  constructor() {
+    this.name = "John";
   }
-  
-  var employeeObject = new Employee();
-  
-  console.log(employeeObject.name); // John
+}
+
+var employeeObject = new Employee();
+
+console.log(employeeObject.name); // John
 
 // What happens if you write constructor more than once in a class
 
 class Employee {
-    constructor() {
-      this.name = "John";
-    }
-    constructor() {   //  Uncaught SyntaxError: A class may only have one constructor
-      this.age = 30;
-    }
+  constructor() {
+    this.name = "John";
   }
- 
-  var employeeObject = new Employee();
- 
-  console.log(employeeObject.name);
+  constructor() {   //  Uncaught SyntaxError: A class may only have one constructor
+    this.age = 30;
+  }
+}
 
-  //How do you call the constructor of a parent class
+var employeeObject = new Employee();
+
+console.log(employeeObject.name);
+
+//How do you call the constructor of a parent class
 
 //   You can use the super keyword to call the constructor of a parent class. Remember that super() must be called before using 'this' reference. Otherwise it will cause a reference error. Let's the usage of it,
 
 class Square extends Rectangle {
-    constructor(length) {
-      super(length, length);
-      this.name = "Square";
-    }
-  
-    get area() {
-      return this.width * this.height;
-    }
-  
-    set area(value) {
-      this.area = value;
-    }
+  constructor(length) {
+    super(length, length);
+    this.name = "Square";
   }
+
+  get area() {
+    return this.width * this.height;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}
 
 //   How do you get the prototype of an object
 
 // You can use the Object.getPrototypeOf(obj) method to return the prototype of the specified object. i.e. The value of the internal prototype property. If there are no inherited properties then null value is returned.
 
 const newPrototype = {};
-const newObject = Object.create(newPrototype);
+const newObject1 = Object.create(newPrototype);
 
-console.log(Object.getPrototypeOf(newObject) === newPrototype); // true
+console.log(Object.getPrototypeOf(newObject1) === newPrototype); // true
 
 //How do you set prototype of one object to another
 
@@ -70,8 +70,8 @@ Object.setPrototypeOf({}, null);
 // How do you prevent an object to extend
 // The Object.preventExtensions() method is used to prevent new properties from ever being added to an object. In other words, it prevents future extensions to the object. Let's see the usage of this property,
 
-const newObject = {};
-Object.preventExtensions(newObject); // NOT extendable
+const newObject2 = {};
+Object.preventExtensions(newObject2); // NOT extendable
 
 try {
   Object.defineProperty(newObject, "newProperty", {
@@ -128,36 +128,36 @@ Object.defineProperties(newObject, {
 // How do you get property descriptors of an object
 
 const newObject = {
-    a: 1,
-    b: 2,
-    c: 3,
-  };
-  const descriptorsObject = Object.getOwnPropertyDescriptors(newObject);
-  console.log(descriptorsObject.a.writable); //true
-  console.log(descriptorsObject.a.configurable); //true
-  console.log(descriptorsObject.a.enumerable); //true
-  console.log(descriptorsObject.a.value); // 1
+  a: 1,
+  b: 2,
+  c: 3,
+};
+const descriptorsObject = Object.getOwnPropertyDescriptors(newObject);
+console.log(descriptorsObject.a.writable); //true
+console.log(descriptorsObject.a.configurable); //true
+console.log(descriptorsObject.a.enumerable); //true
+console.log(descriptorsObject.a.value); // 1
 
 //   How do you extend classes
 
 // The extends keyword is used in class declarations/expressions to create a class which is a child of another class. It can be used to subclass custom classes as well as built-in objects. The syntax would be as below,
 
-class ChildClass extends ParentClass {}
+class ChildClass extends ParentClass { }
 
 class Square extends Rectangle {
-    constructor(length) {
-      super(length, length);
-      this.name = "Square";
-    }
-  
-    get area() {
-      return this.width * this.height;
-    }
-  
-    set area(value) {
-      this.area = value;
-    }
+  constructor(length) {
+    super(length, length);
+    this.name = "Square";
   }
+
+  get area() {
+    return this.width * this.height;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}
 
 // In JavaScript, a constructor function is a special type of function that is used to create and initialize objects. When you call a constructor function using the "new" keyword, a new object is created and returned.
 
@@ -181,8 +181,8 @@ var person2 = new Person("Jane", 25);
 function Person(name, age) {
   this.name = name;
   this.age = age;
-  
-  this.sayHello = function() {
+
+  this.sayHello = function () {
     console.log("Hello, my name is " + this.name);
   }
 }

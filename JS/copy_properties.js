@@ -4,18 +4,18 @@
 
 // Using Object.assign():
 
-const source = { foo: 1, bar: 2 };
-const target = {};
-Object.assign(target, source);
-console.log(target); // Output: {foo: 1, bar: 2}
+const sourceA = { foo: 1, bar: 2 };
+const targetA = {};
+Object.assign(targetA, sourceA);
+console.log(targetA); // Output: {foo: 1, bar: 2}
 
 
 // In this example, the Object.assign() method is used to copy the properties of the source object to the target object. The Object.assign() method takes two or more arguments: the first argument is the target object, and the subsequent arguments are the source objects. The method copies the properties of the source objects to the target object, overwriting any existing properties with the same name.
 
 // Using spread operator (...):
 const source = { foo: 1, bar: 2 };
-const target = { ...source };
-console.log(target); // Output: {foo: 1, bar: 2}
+const targetB = { ...source };
+console.log(targetB); // Output: {foo: 1, bar: 2}
 
 
 // In this example, the spread operator (...) is used to copy the properties of the source object to the target object. The spread operator creates a new object and "spreads" the properties of the source object into it. This creates a shallow copy of the source object.

@@ -77,6 +77,44 @@ To prevent deadlocks in C#, you can follow these best practices:
 
 https://www.codeguru.com/csharp/thread-synchronization-c-sharp/#:~:text=A%20Semaphore%20can%20restrict%20the,a%20specific%20shared%20resource%20simultaneously.
 
+In C#, both Mutex and Semaphore are synchronization primitives that allow multiple threads to access shared resources in a mutually exclusive manner. However, they have some key differences.
+
+Mutex is a synchronization primitive that can be signaled and released by different threads. It allows for exclusive ownership of a shared resource, meaning that only one thread can own the mutex at a time, and other threads must wait for ownership to be released before they can acquire it. When a thread owns a mutex and attempts to acquire it again, the thread is blocked until it releases the mutex. Mutexes can be used to protect any shared resource, including critical sections, global variables, and shared memory.
+
+Semaphore, on the other hand, is a synchronization primitive that allows for a specified number of threads to access a shared resource simultaneously. A semaphore maintains a count of the number of threads that can access the shared resource at the same time. When a thread requests access to the resource, the semaphore decrements its count, and if the count is zero, the thread is blocked until a resource becomes available. When a thread releases the resource, the semaphore increments its count, allowing other waiting threads to access the resource.
+
+In summary, Mutex provides exclusive ownership of a shared resource, while Semaphore allows for a specified number of threads to access a shared resource simultaneously.
+
+Here's an example of using Mutex and Semaphore in C#:
+
+using System;
+using System.Threading;
+
+class Program {
+    static Mutex mutex = new Mutex();
+    static Semaphore semaphore = new Semaphore(2, 2);
+
+    static void Main(string[] args) {
+        // Example of using a Mutex
+        mutex.WaitOne();
+        try {
+            // Access shared resource here
+        } finally {
+            mutex.ReleaseMutex();
+        }
+
+        // Example of using a Semaphore
+        semaphore.WaitOne();
+        try {
+            // Access shared resource here
+        } finally {
+            semaphore.Release();
+        }
+    }
+}
+
+In this example, we create a Mutex and a Semaphore object, and then use them to protect access to a shared resource. The WaitOne method is used to acquire ownership of the mutex or semaphore, and the ReleaseMutex or Release method is used to release ownership. The try-finally block ensures that ownership is always released, even if an exception occurs.
+
 Thread synchronization is the process of coordinating the execution of multiple threads to ensure that they operate correctly in a multi-threaded environment. In C#, there are several ways to implement thread synchronization:
 
 1. Locks: Locks are a simple way to implement thread synchronization. In C#, you can use the lock keyword to obtain a lock on an object and ensure that only one thread can access the object at a time. For example:

@@ -79,6 +79,15 @@ let evenIndex = numbers5.findIndex(function(number) {
 
 console.log(evenIndex); // Output: 3
 
+//findIndex, on the other hand, is a method introduced in ES6 that takes a function as an argument and returns the index of the first element in the array that satisfies the provided testing function. If no element satisfies the testing function, it returns -1. Here's an example:
+
+const arr11 = [{name: 'John', age: 25}, {name: 'Jane', age: 30}, {name: 'Bob', age: 35}];
+const index = arr11.findIndex(item => item.name === 'Jane'); // returns 1
+
+const nonExistentIndex = arr11.findIndex(item => item.name === 'Alice'); // returns -1
+
+
+
 // 12.fill() - This method fills the elements in an array with a static value and returns the modified array.
 const arr = new Array(3)
 console.log(arr); //[empty, empty, empty]

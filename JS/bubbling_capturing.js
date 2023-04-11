@@ -1,6 +1,7 @@
 // Bubbling and capturing are two types of event propagation mechanisms in JavaScript that determine the order in which event handlers are executed in the DOM (Document Object Model) tree.
 
 // Bubbling: When an event is triggered on a DOM element, the event will first be handled by the innermost element where it occurred, and then propagate outward to its parent elements until it reaches the outermost element (i.e., the document object). This process is called bubbling.
+// Child --> parent
 
 // <!DOCTYPE html>
 // <html>

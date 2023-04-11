@@ -48,6 +48,9 @@ var cat = {
 
 //   When you call cat.jumps, the number of lives does not decrease. It is because this is not bound to anything, and will inherit the value of this from its parent scope.
 
+
+// However, there is an issue with the code. Arrow functions, unlike regular functions, do not bind their own this keyword. Instead, they inherit the this value from the surrounding scope. In this case, the this keyword in the jumps method will refer to the global window object instead of the cat object, which means that this.lives will be undefined and the decrement operation will have no effect.
+
 // 2. Callback functions with dynamic context
 
 var button = document.getElementById('press');
@@ -69,7 +72,7 @@ const myObject1 = {
         return new Promise((resolve, reject) => {
             // This arrow function will not work as expected
             setTimeout(() => {
-                console.log(`Hello, my name is ${this.name}`);
+                console.log(`Hello, my name is ${this.name}`); //throw error
                 resolve();
             }, 1000);
         });

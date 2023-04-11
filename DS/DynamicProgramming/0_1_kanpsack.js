@@ -292,4 +292,14 @@ console.log('*************************');
 // +1 +1 +2 -3 ---> 1
 // O/p: 3
 
+const targetSumProblem = (arr, target) => {
+    const totalSum = arr.reduce((a, b) => a + b, 0);
+    if((totalSum < Math.abs(target)) || (target+totalSum)%2!= 0) return 0;
+
+    const newTarget = (totalSum - target)/2;
+    return countSubsetsWithSum(arr, newTarget);
+}
+
+console.log(targetSumProblem([1, 1, 2, 3], 1));
+console.log(targetSumProblem([1, 1, 1, 1, 1], 3));
 

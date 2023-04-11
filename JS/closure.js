@@ -8,6 +8,16 @@
 // Outer function’s variables
 // Global variables
 
+// In JavaScript, a lexical environment is the set of variables and their values that are accessible from a certain point in the code during the runtime.
+
+// A lexical environment is created every time a function is executed, and it consists of two parts:
+
+// The Environment Record: It's an object that contains all the variables, functions, and their values declared within the scope of the function. The environment record also includes a reference to the outer lexical environment where the function was defined (if any).
+
+// A reference to the outer lexical environment: This is a reference to the environment where the function was defined, also known as the scope chain. The reference to the outer environment allows the function to access variables and functions declared in the outer scope.
+
+// The lexical environment determines which variables and functions are accessible to a particular piece of code, and it's essential for understanding the scope and closure mechanisms in JavaScript.
+
 function Welcome(name){
     var greetingInfo = function(message){
         console.log(message + " " + name);

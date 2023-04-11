@@ -1,4 +1,5 @@
 // slice() method returns the selected elements in an array as a new array object. It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. If you omit the second argument then it selects till the end. 
+
 // Slice method won't mutate the original array but it returns the subset as a new array.
 
 let arrayIntegers = [1, 2, 3, 4, 5];
@@ -48,22 +49,22 @@ console.log(newArray); // ["0", "0", "0", "0", "0"]
 
 // Using slice and reverse methods: In this case, just invoke the slice() method on the array to create a shallow copy followed by reverse() method call on the copy.
 
-const originalArray = [1, 2, 3, 4, 5];
-const newArray = originalArray.slice().reverse(); //Slice an array gives a new copy
+const originalArray1 = [1, 2, 3, 4, 5];
+const newArray = originalArray1.slice().reverse(); //Slice an array gives a new copy
 
 console.log(originalArray); // [1, 2, 3, 4, 5]
 console.log(newArray); // [ 5, 4, 3, 2, 1]
 // Using spread and reverse methods: In this case, let's use the spread syntax (...) to create a copy of the array followed by reverse() method call on the copy.
 
-const originalArray = [1, 2, 3, 4, 5];
-const newArray = [...originalArray].reverse();
+const originalArray2 = [1, 2, 3, 4, 5];
+const newArray = [...originalArray2].reverse();
 
 console.log(originalArray); // [1, 2, 3, 4, 5]
 console.log(newArray); // [ 5, 4, 3, 2, 1]
 // Using reduce and spread methods: Here execute a reducer function on an array elements and append the accumulated array on right side using spread syntax
 
-const originalArray = [1, 2, 3, 4, 5];
-const newArray = originalArray.reduce((accumulator, value) => {
+const originalArray3 = [1, 2, 3, 4, 5];
+const newArray = originalArray3.reduce((accumulator, value) => {
   return [value, ...accumulator];
 }, []);
 
@@ -71,8 +72,8 @@ console.log(originalArray); // [1, 2, 3, 4, 5]
 console.log(newArray); // [ 5, 4, 3, 2, 1]
 // Using reduceRight and spread methods: Here execute a right reducer function(i.e. opposite direction of reduce method) on an array elements and append the accumulated array on left side using spread syntax
 
-const originalArray = [1, 2, 3, 4, 5];
-const newArray = originalArray.reduceRight((accumulator, value) => {
+const originalArray4 = [1, 2, 3, 4, 5];
+const newArray = originalArray4.reduceRight((accumulator, value) => {
   return [...accumulator, value];
 }, []);
 

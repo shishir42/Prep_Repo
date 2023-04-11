@@ -235,5 +235,20 @@ namespace consoleproject
 
             return CountSubsetsWithSum(arr, sum);
         }
+
+        public static int TargetSumProblem(int[] arr, int target)
+        {
+            int totalSum = 0;
+            for(int i=0; i< arr.Length; i++)
+            {
+                totalSum += arr[i];
+            }
+
+            if((totalSum < Math.Abs(target)) || (target+totalSum)%2!= 0) return 0;
+
+            int newTarget = (totalSum-target)/2;
+
+            return CountSubsetsWithSum(arr, newTarget);
+        }
     }
 }
