@@ -386,13 +386,18 @@ readonly
 run-time constant: can be set in the constructor/init via config file i.e. App.config, but once it initializes it can't be changed
 
 
+const fields need to be initialized with declaration only, while readonly fields can be initialized at the declaration or in the constructor.
+const variables can be declared in methods, while readonly fields cannot be declared in methods.
+const fields cannot be used with a static modifier, while readonly fields can be used with a static modifier.
+const field is a compile-time constant. The readonly field can be used for run-time constants.
+
 Types in .NET Framework are either Value Type or Reference Type. A Value Type is stored in the stack and it holds the data within its own memory allocation. While a Reference Type is stored in the heap and it contains a pointer to another memory location that holds the real data.
 
 EXE is an executable file that works as an application and it runs individually as it contains an entry point. DLL is a Dynamic Link Library which is a supportive file to other applications, and it cannot run individually.
 
 The stack is used for static memory allocation and access to this memory is fast and simple to keep track of. Heap is used for dynamic memory allocation and memory allocation to variables that happen at run time. Accessing the heap memory is complex and slower compared to the stack.
 
-System. a .string is immutable and fixed-length, whereas StringBuilder is mutable and variable length. The size of the .string cannot be changed, but that of the .stringbuilder can be changed.
+string is immutable and fixed-length, whereas StringBuilder is mutable and variable length. The size of the .string cannot be changed, but that of the .stringbuilder can be changed.
 
 The base class is a class whose members and functions can be inherited, and the derived class is the class that inherits those members and may also have additional properties.  
 
@@ -511,11 +516,12 @@ Generation 2: Used for long-lived objects.
 Debug builds do not optimize and allow the accurate setting of breakpoints. They contain debugging symbols, but the code built-in "Release" mode is optimized for speed or size without any debug data.
 
 Managed code runs inside CLR and installing the .NET Framework is necessary to execute it. Unmanaged code does not depend on CLR for execution and is developed using languages outside the .NET framework.
+
 There are four main steps that include in the execution of the managed code. They are as follows:
-Choosing a compiler that can execute the code written by a user
-Conversion of the code into Intermediate Language (IL) using a compiler
-IL gets pushed to CLR, which converts it into native code using JIT
-Native code is now executed using the .NET runtime
+1.Choosing a compiler that can execute the code written by a user
+2. Conversion of the code into Intermediate Language (IL) using a compiler
+3. IL gets pushed to CLR, which converts it into native code using JIT
+4. Native code is now executed using the .NET runtime
 
 Managed Code
 1.Managed by CLR
