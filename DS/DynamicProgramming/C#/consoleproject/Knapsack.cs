@@ -222,5 +222,18 @@ namespace consoleproject
 
             return diff;
         }
+    
+        public static int CountTheNumberOfSubsetWithDiff(int[] arr, int diff)
+        {
+            int totalSum = 0;
+            for(int i=0; i< arr.Length; i++)
+            {
+                totalSum += arr[i];
+            }
+
+            int sum = (diff + totalSum)/2;
+
+            return CountSubsetsWithSum(arr, sum);
+        }
     }
 }

@@ -261,6 +261,35 @@ function knapsack_TopDown(capacity, weights, values, n) {
 
    console.log(minSubsetSumDiff([1, 6, 11, 5]));
 
+console.log('*************************');   
+//Count the number of subset with a given difference
 
+// arr[]: [1, 1, 2, 3]
+// DIff: 1
+// O/p: 3 (Count the subset which has diff of 1)
+// eg: {1,3} and {1,2}
+// {1, 3} and {1, 2} because 1 is repeated
+// {1, 1, 2} and {3}
+// S1 - S2 = diff --------1
+// S1 + S2 = sum  --------2  
+// formula: S1  = (diff + sum)/2
+// then apply countSubsetsWithSum(arr, S1);
+
+const countTheNumberOfSubsetWithDiff = (arr, diff) =>{
+    const totalSum = arr.reduce((a, b) => a + b, 0);
+    const sum = (diff+totalSum)/2;
+    return countSubsetsWithSum(arr, sum);
+}
+
+console.log(countTheNumberOfSubsetWithDiff([1, 1, 2, 3], 1));
+
+console.log('*************************');   
+//Total sum
+// arr[]: [1, 1, 2, 3]
+// sum: 1
+// +1 -1 -2 +3 ---> 1
+// -1 +1 -2 +3 ---> 1
+// +1 +1 +2 -3 ---> 1
+// O/p: 3
 
 

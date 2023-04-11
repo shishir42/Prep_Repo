@@ -1,9 +1,9 @@
 Key concepts of angular
-1. Components
+1. Components (Component Life Cycle Hooks)
 2. Component interaction
 3. Pipes- inbuilt and custom pipes
 4. Services
-5. Directives- inbuilt and custom
+5. Directives- inbuilt and custom (Attribute and Structural Directives)
 6. Routing
 7. Dependency Injection and how it is achieved in angular.
 8. Modules
@@ -18,11 +18,51 @@ Key concepts of angular
 17. Using ngOnChanges
 18. Advanced Inter Component Communication
 19. Direct Access to Child
-20. Module/Library Architecture
+20. Module/Library Architecture / Modular Angular Architecture
+21. One-way Dataflow and Immutability
+22. Http and Observable Services
+23. Template Binding
+24. Route Guards, Pre-loads, Lazy-loading
+25. @viewChild and @ContentChild Decorators
+26. Dynamic Components and ng-template
+27. @Host @Hostbinding and exportAs
+28. State Management with RxJs
+29. Dependency Injection and Zones
 
+
+
+https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular
+https://matcha.fyi/things-to-learn-angular/
 
 https://www.webagesolutions.com/advanced-components-concepts-in-angular
 https://blog.bitsrc.io/6-concepts-to-master-to-be-an-angular-architect-807314e31ef3
+https://www.webagesolutions.com/advanced-components-concepts-in-angular
+
+
+https://www.simplilearn.com/tutorials/angular-tutorial/angular-interview-questions
+https://intellipaat.com/blog/interview-question/angular-interview-questions/
+https://flexiple.com/angular/interview-questions/
+https://www.javatpoint.com/top-angular-interview-questions
+https://www.edureka.co/blog/interview-questions/top-angularjs-interview-questions/
+https://hackr.io/blog/angular-interview-questions
+https://www.interviewbit.com/angularjs-interview-questions/
+https://www.interviewkickstart.com/interview-questions/angular-interview-questions-developers
+https://www.testgorilla.com/blog/angular-interview-questions/?utm_term=&utm_campaign=Campaign+%7C+Dynamic+%7C+IN+%26+PK&utm_source=google&utm_medium=cpc&hsa_acc=4932434860&hsa_cam=13796886697&hsa_grp=128153431327&hsa_ad=531855132414&hsa_src=g&hsa_tgt=aud-922641844703:dsa-19959388920&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjw586hBhBrEiwAQYEnHV_fHvaJfm1cF9ATcIp22zI5XTyJtJTwlkKtZbEUw_9wOqoyIhtf_BoCGLYQAvD_BwE
+https://www.fullstack.cafe/interview-questions/angular
+https://www.fullstack.cafe/blog/angular-8-interview-questions
+https://in.indeed.com/career-advice/interviewing/angular-interview-questions-and-answers
+https://www.interviewbit.com/angular-8-interview-questions/
+https://www.dotnettricks.com/learn/angular/top-20-angular-interview-questions-and-answers
+https://javarevisited.blogspot.com/2021/10/top-20-angular-interview-questions-answers.html#axzz7yUPxHNfC
+https://www.odinschool.com/blog/programming/top-30-interview-questions-and-answers-on-angular-5
+https://www.devteam.space/hiring-interview-tips/angular-interview-questions-and-answers/
+https://www.naukri.com/blog/angularjs-interview-questions/
+https://www.onlineinterviewquestions.com/angular-5-interview-questions/
+https://www.turing.com/interview-questions/angular
+https://www.knowledgehut.com/interview-questions/angular-interview-questions
+https://www.interviewkickstart.com/interview-questions/angular-interview-questions
+https://www.interviewbit.com/angular-interview-questions/
+
 
 some advanced topics in Angular:
 
