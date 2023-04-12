@@ -21,3 +21,65 @@ https://www.goskills.com/Development/Resources/CSS-interview-questions-answers
 https://tutorial.techaltum.com/css-flexbox.html
 https://github.com/learning-zone/css-basics
 https://github.com/Devinterview-io/css-interview-questions
+
+*************************
+Responsive Web Design (RWD) is a method of creating websites that provide an optimal viewing experience across a wide range of devices, including desktop computers and mobile phones.
+
+Here are some CSS tips and tricks for making beautiful, responsive designs.
+➪ Use Fluid Layouts 
+
+Instead of using fixed-width layouts, which can cause horizontal scrolling on smaller screens, use percentage-based widths to create fluid layouts that adapt to any screen size.
+
+https://pbs.twimg.com/media/FtaCeF-WwAIFZYD?format=jpg&name=large
+
+➪ Flexible Images
+
+Use CSS to ensure that images scale proportionally and don't overflow their containing elements.
+
+https://pbs.twimg.com/media/FtaCedoXgAAamC1?format=jpg&name=large
+
+
+➪ Use CSS Media Queries
+
+Media queries allow you to apply CSS rules based on specific conditions, like the device's screen width. Use them to adjust the layout, font sizes, and other elements for different screen sizes.
+
+https://pbs.twimg.com/media/FtaCe3zWAAM-d9y?format=jpg&name=large
+
+
+➪ Use Flexible Typography
+
+Adjust font sizes for different screen sizes using media queries or relative units like em, rem, or vw / vh.
+
+
+https://pbs.twimg.com/media/FtaCfUzWwAUguEv?format=jpg&name=large
+
+➪ Mobile-First Approach
+
+Design your website for mobile devices first and then progressively enhance it for larger screens. This can make your CSS more efficient and easier to maintain.
+
+https://pbs.twimg.com/media/FtaCfv0XsAAsq-z?format=jpg&name=large
+
+
+➪ Use CSS Grid and Flexbox
+
+CSS Grid and Flexbox are modern layout techniques that can help you create responsive designs with less CSS code and greater flexibility.
+
+https://pbs.twimg.com/media/FtaCgc_WAAEu5w5?format=jpg&name=large
+
+
+
+https://www.creativebloq.com/rwd/responsive-web-design-tutorials-71410085
+https://99designs.com/blog/tips/responsive-web-design-key-tips-and-approaches/
+
+
+2023 IQ
+https://www.youtube.com/watch?v=5SQh7W1zuVw
+https://www.youtube.com/watch?v=7mTNt3mzC6E
+https://www.youtube.com/watch?v=ssRvlc57CCk
+https://www.youtube.com/watch?v=-njOpdpIpGI
+https://www.youtube.com/watch?v=AN1NQhJM2xI
+https://www.youtube.com/watch?v=gQ_gXiRHsko
+https://www.youtube.com/watch?v=-quAEK4U4N8
+https://www.youtube.com/shorts/F6Noni9hf0s
+https://www.youtube.com/shorts/UsfRO3plq-U
+

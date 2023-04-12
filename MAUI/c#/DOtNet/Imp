@@ -1,3 +1,5 @@
+https://www.fullstack.cafe/blog/concurrency-interview-questions
+
 some ways to write thread-safe code in .NET:
 
 1. Use the lock keyword: The lock keyword allows you to synchronize access to shared resources by ensuring that only one thread can access the resource at a time. For example:

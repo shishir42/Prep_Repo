@@ -60,6 +60,19 @@ Authentication and Security: Techniques and best practices for securing and auth
 Push Notifications: A way to send push notifications to users of a React Native application.
 Offline Capabilities: Techniques and best practices for building offline-capable React Native applications.
 
+React Native Internals
+https://reactnative.dev/architecture/overview
+https://dev.to/goodpic/understanding-react-native-architecture-22hh
+https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html
+https://blog.logrocket.com/exploring-react-natives-new-architecture/
+https://medium.com/coox-tech/deep-dive-into-react-natives-new-architecture-fb67ae615ccd
+https://reactnative.dev/docs/hermes
+https://reactnative.dev/docs/native-modules-intro
+https://reactnative.dev/docs/the-new-architecture/landing-page
+https://reactnative.dev/docs/the-new-architecture/pillars
+https://reactnative.dev/docs/new-architecture-intro
+
+
 React Native IQ
 https://www.interviewbit.com/react-native-interview-questions/
 https://www.knowledgehut.com/interview-questions/react-native
@@ -76,13 +89,16 @@ https://github.com/Devinterview-io/react-native-interview-questions
 https://medium.com/geekculture/50-react-native-interview-questions-b1fa5751b468
 https://www.positronx.io/top-react-native-interview-questions-and-answers/
 https://www.fullstack.cafe/interview-questions/react-native
-https://www.softwaretestinghelp.com/react-interview-questions/
 https://www.n-school.com/react-native-interview-questions/
-https://morioh.com/p/34480c55dbd2
-https://www.mygreatlearning.com/blog/react-js-interview-questions-and-answers/
 https://www.java67.com/2022/05/top-25-react-native-interview-questions.html
-https://www.crsinfosolutions.com/latest-50-reactjs-interview-questions-2021/
-https://career.guru99.com/reactjs-interview-questions/
+
+Hooks:
+https://www.codingninjas.com/codestudio/library/top-react-hooks-interview-questions
+https://www.fullstack.cafe/blog/react-hooks-interview-questions
+https://mindmajix.com/react-hooks-interview-questions
+https://backbencher.dev/react-hooks-interview-questions
+https://michael-pautov.medium.com/top-10-interview-questions-related-to-react-hooks-dfdada3c0040
+https://www.dotnettricks.com/learn/react/react-hooks-full-guide
 
 
 
@@ -122,8 +138,42 @@ https://programmingwithmosh.com/react/react-virtual-dom-explained/
 https://legacy.reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html
 https://medium.com/@udit/react-internals-how-react-work-under-the-hood-8915f62306a4
 
+React Native
+https://www.youtube.com/watch?v=yXuHKzBijZQ
+https://www.youtube.com/watch?v=XT625O1CDPg
+https://www.youtube.com/watch?v=qx8yG7q27js
+https://www.youtube.com/watch?v=Brx5sDAYJBI
+https://www.youtube.com/watch?v=ZAQQcX9avFQ
+https://www.youtube.com/watch?v=z4BkOEqZcE8
+https://youtube.com/watch?v=HKyhE2cDvWk&list=PLlydFsFRbxJ2gVH-9l0SURE5LcbVWPSJk
+https://www.youtube.com/watch?v=Zpvzv8Uma8Q
+https://www.youtube.com/watch?v=F-xTWfeXG9M&list=PLJ7v2fZc4L2m_xcfijGNvjoGp96SyOmZN
+
+React Hooks:
+https://www.youtube.com/watch?v=LlvBzyy-558&t=76s
+
 
 React Interview
+2023:
+https://www.youtube.com/watch?v=glv8oyL7PBI
+https://www.youtube.com/watch?v=UrY-XhB5Ed8
+https://www.youtube.com/watch?v=EirBuUUPbio
+https://www.youtube.com/watch?v=D_lpuK_Hs8U
+https://www.youtube.com/watch?v=QcNGBtnT7BI
+https://www.youtube.com/watch?v=glv8oyL7PBI
+https://www.youtube.com/watch?v=xjBSfUAkYoo
+https://www.youtube.com/watch?v=ptpAO_s8DIA
+https://www.youtube.com/watch?v=MNawipRce00
+https://www.youtube.com/watch?v=VjWDmF-ePm0
+https://www.youtube.com/watch?v=szXMBGKGTdE&t=17s
+https://www.youtube.com/watch?v=QQNjidzLZ8E
+https://www.youtube.com/watch?v=JO3RdzQvS-M
+https://www.youtube.com/watch?v=o22KRrxab18&t=2s
+https://www.youtube.com/watch?v=9ZFFeGpI6_8
+
+
+
+https://www.youtube.com/watch?v=IT8OH9wE8M8&list=PL8p2I9GklV46zcfphaPD9xA0NhU2AKeCR
 https://www.youtube.com/watch?v=szXMBGKGTdE
 https://www.youtube.com/watch?v=5UKe5BMnJgk
 https://www.youtube.com/watch?v=eOTqreB5Lp8

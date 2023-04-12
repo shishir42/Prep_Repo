@@ -1,3 +1,11 @@
+// Yes, JavaScript is an object-oriented programming language. In JavaScript, objects are created by using constructor functions or object literals, and objects can have properties and methods.
+
+// JavaScript also supports inheritance through prototypes, which is a way to create objects that inherit properties and methods from other objects. In JavaScript, every object has a prototype, and the prototype can have a prototype, and so on. This creates a prototype chain, which allows objects to inherit properties and methods from their ancestors.
+
+// JavaScript also supports encapsulation and polymorphism, which are other key concepts of object-oriented programming. Encapsulation is the practice of hiding implementation details and exposing only the necessary interfaces, and JavaScript supports this through the use of closures and modules. Polymorphism is the ability of objects to take on many forms, and JavaScript supports this through the use of prototypes and dynamic typing.
+
+// In summary, JavaScript is an object-oriented programming language that supports key concepts such as objects, inheritance, encapsulation, and polymorphism.
+
 // Object-oriented programming (OOP) is a programming paradigm that uses objects and their interactions to design applications. JavaScript is an object-oriented language, and it has several OOP concepts. Here are some of the key OOP concepts in JavaScript with examples:
 
 // Classes and Objects:

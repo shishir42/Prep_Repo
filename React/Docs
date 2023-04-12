@@ -1,0 +1,1735 @@
+JSX (JavaScript XML) is a syntax extension for JavaScript that is used in React and React Native for building user interfaces. It allows developers to write HTML-like code within JavaScript, making it easier to create and manage complex user interfaces.
+
+In React Native, JSX allows developers to write code that looks like traditional HTML, but is actually translated into JavaScript code that can be executed by the app. This means that developers can write code in a familiar syntax, but still take advantage of the power of JavaScript.
+
+JSX is not required to use React Native, but it is recommended because it makes the code more readable and easier to maintain. It also allows for better separation of concerns by keeping the UI and logic separate.
+
+JSX is short for JavaScript XML and is a javascript extension. It is used to create React Native user interfaces.
+
+**********
+
+React Native is an open source framework developed by Facebook which enables developers to build cross-platform mobile applications using Javascript. With React Native, one can develop a mobile application by using the same design principles used to develop a web application with ReactJs framework. It allows the developer to build mobile application UI by composing multiple components in a declarative way. Before React native, there were few options like Cordova, ionic available to build a hybrid application. 
+
+These applications were written using web technology but the hybrid app was not a native application and lacks performance issue. React native solves those performance issues that is why it quickly became popular in React community. Under the hood, React native bridge invokes the native rendering APIs in Objective-C (for IOS) and Java (for Android). That is why they perform better than hybrid application development frameworks. React native has a very good community of developers who actively contribute to the framework. Its code is available on Github and has 70k+ stars.
+
+React Native is an open-source JavaScript framework introduced by Facebook. It is used for developing a real, native mobile application for iOS and Android platforms. It uses only JavaScript to build a mobile app. It is like React, which uses native components rather than using web components as building blocks. It is cross-platform, which allows you to write code once and can run on any platform.
+
+*******
+Advantages:
+
+- Cross-platform compatibility
+- Native performance
+- Reusability
+- Large community
+- Hot reloading:
+
+Benefits:
+Known for Optimal Performance
+Can Reuse the Codes and Pre-Developed Components
+Large Community of Developers
+Advantage of Live and Hot Reloading
+Cost Effective Solution
+Offers Simple User Interface
+Support for Third-Party Plugins
+Modular Architecture
+Providing Handy Solutions and Libraries
+
+There is the following list of React Native features behind its use:
+
+Easy to use.
+Open-source framework
+Cross-platform compatibility
+Code Sharing
+Use a common language – JavaScript for cross-platform development.
+Faster Development
+Saves Time and efforts
+Gives Native look and feel
+
+
+********
+
+The React Native app contains the following thread:
+
+React Native UI Thread (Main Thread): This thread is used for the layout of the mobile app.
+React Native JavaScript Thread: It is a thread where our business logic will run. It means JS thread is a place where our JavaScript code is executed.
+React Native Modules Thread: Sometimes, our app needs access to platform API, which happens as a part of native module thread.
+React Native Render Thread: This thread is used to generate actual OpenGL commands used to draw the app UI.
+
+******
+
+How Virtual DOM works in React Native?
+
+Virtual DOM is a lightweight JavaScript object, which is an in-memory representation of a real DOM. It is an intermediary step between the render function being called and the displaying of elements on the screen. It is similar to a node tree, which lists the elements, their attributes, and content as objects and their properties. The render function creates a node tree of the React components and then updates this node tree in response to the mutations in the data model caused by various actions done by the user or by the system.
+
+Virtual DOM works in three steps:
+
+- Whenever any data changes in the React App, the entire UI is re-rendered in Virtual DOM representation.
+- Now, the difference between the previous DOM representation and the new DOM is calculated.
+- Once the calculations are completed, the real DOM updated with only those things which are changed.
+
+*********
+
+Element and a Component in React Native
+
+The React Element is a simple object, which describes a DOM node and its attributes or properties. It is an immutable object where you cannot apply any methods.
+
+The React Component is a function or class that takes inputs and returns a React element. It contains references to its DOM nodes and the instances of the child components.
+
+********
+
+HOC in React Native
+
+HOC Stands for Higher-Order Component. It is a technique, which allows you to reuse the component logic. It is a function that takes a component and gives back a new component.
+
+const NewComponent = higherOrderComponent(WrappedComponent);   
+
+
+*******
+
+What is meant by InteractionManager, and why it is Important?
+
+The InteractionManager is a native module in React Native, which is responsible for differing the execution of a function until an interaction has finished. To handle this deferral, we need to call InteractionManager.runAfterInteractions(() => {...}).
+
+The InteractionManager is important because React Native has two threads. One is JavaScript UI thread, which handles drawing updates to the screen, and the second thread used for all task, not on the UI thread. Since React Native has only one thread for making UI updates, it can get overloaded and drop frames, especially in navigation screen animations. So, developers use the InteractionManager to ensure that the function is executed after these animations occur. As a result, we do not drop frames on the UI thread.
+
+*******
+
+React Native provides many ways to handle screen sizes. Some of them are given below:
+
+1. Flexbox: It is used to provide a consistent layout on different screen sizes. It has three main properties:
+
+flexDirection
+justifyContent
+alignItems
+2. Pixel Ratio: It is used to get access to the device pixel density by using the PixelRatio class. We will get a higher resolution image if we are on a high pixel density device.
+
+3. Dimensions: It is used to handle different screen sizes and style the page precisely. It needs to write the code only once for working on any device.
+
+4. AspectRatio: It is used to set the height or vice versa. The aspectRatio is present only in React-Native, not a CSS standard.
+
+5. ScrollView: It is a scrolling container which contains multiple components and view. The scrollable items can be scroll both vertically and horizontally.
+
+
+********
+
+Component driven development is a methodology where we break the complete UI design into several small reusable components and develop them independently. 
+
+This methodology helps us write UI code in a modular way. UI development will be faster as we will be reusing components at multiple places. Less code also results in less effort in maintaining the code and also less number of bugs.
+
+******
+
+Props are parameters which are used to customise a component at the time of creation and on re-render. Props are like arguments passed to a React component.
+
+*****
+
+State is another way apart from props by which we can modify a React component. React component’s state value changes in the life cycle of component, unlike props. We should not directly change state value of react component. React framework gives the setState method by which state of a component should be changed.
+
+*******
+props : are immutable and are set by the parent and they are fixed throughout the lifetime of a component.
+state : is mutable. This means that state can be updated in the future while props can’t. we can initialize state in the constructor, and then call setState when we want to change it.
+
+
+*******
+ 
+ Tool available which we can use to bootstrap a React Native project
+ - Using react-native-cli 
+ - Using expo-cli
+
+*******
+Stylesheet object is provided by React native library which has the method “create”. It takes an argument of type object and this object is the collection of CSS rules. 
+
+******
+
+Element size:
+React native follows the box-model concept of CSS. 
+The size of the element is calculated based on the size of content, padding, border, margin. The simplest way to set the size of an element is to set width and height CSS property for an element. All dimensions in React Native is unit-less and represent density-independent pixels.
+
+Directly use of percentage is not supported in React native but React native does give a dimension module which can be used to give width in percentage. Dimension module gives the width and height of the mobile device. This information can be used to set the style of an element in runtime. 
+
+
+******
+
+Flexbox:
+By default, View component in React native has the display set to flex. Flex is a CSS property which is used to expand and shrink a component dynamically based on available space. If you set flex:1 then the component will take up all the available space. If a parent element is given flex:1 then all its child elements will evenly distribute available space among themselves. We can change the width of the child element by giving a higher value of flex property. The larger the flex given, the higher the ratio of space a component will take compared to its siblings. 
+
+A component can only expand to fill the available space if its parent has dimensions greater than 0. To make flex work, the parent element must have some width set to it then only flex property will evenly distribute available space. Otherwise, the element will consider width equal to zero and will not be visible on UI. Along with flex property, alignItems and justify-content CSS properties are also used to design mobile UI.
+
+******
+
+flexbox web vs react native 
+
+CSS Flexbox is used to design a responsive layout easily without using float or position CSS property. Float and position values were used to build any type of UI which are not very easy. Flexbox is added in CSS3. Flexbox is designed to provide a consistent layout on different screen sizes. You will normally use a combination of flexDirection, alignItems, and justify-content to achieve the right layout. 
+
+There are few differences in default values of few flex based CSS properties between React Native and on the browser. The default value of flexDirection is a row in the web but in case of React native, its default value is a column. Also, flex parameter only supports a single number in React native. Flexbox alignItems has few more values like flex-start which start aligning element from start and opposite of this is flex-end which places the first child element at the end. Similar to alignItems, justifyContents also have values which behaves where much similar to flexbox behaviour in a web browser.
+
+*******
+
+JustifyContent property aligns the flexible container's items when the items do not use all available space on the main axis. By default, the main axis is a vertical axis in case of React native. Which means justifyContent property aligns child elements of flex parent vertically in React native.  We can use this property to layout elements in a flex container. JustifyContent supports the following values: flex-start|flex-end|centre|space-between|space-around|initial|inherit; It also apply some control over the alignment of items when they overflow the line. Let me explain JustifyContent’s values:
+
+flex-start: this is the default value for justifyContent. It means that flex items will start from the top and evenly distributed vertically.
+Flex-end: this is just the opposite behaviour of flex-start. Elements start rendering from the bottom
+Center: Items will be placed in the middle
+Space-between: elements are evenly distributed along the main axis (vertical axis)
+Space-around: flex items will be evenly distributed with equal space around them
+
+******
+
+You can think of alignItems as justifyContent behaviour for cross axis. Cross-axis in case if React native is the horizontal axis. CSS alignItems property sets the alignSelf value on all direct children as a group. In Flexbox, it controls the alignment of items on the cross axis. By default, the cross axis is a horizontal axis in case of React native. We can use this property to layout elements in the flex container. The alignItems property supports following values: stretch|center|flex-start|flex-end|baseline|initial|inherit;  Let me explain alignItems values:
+
+flex-start: this is the default value for alignItems. It means that flex items will start from the left and evenly distributed horizontally.
+Flex-end: this is just the opposite behaviour of flex-start. Elements start rendering from the right and go up to the left end.
+Center: Items will be placed in the middle
+Space-between: elements are evenly distributed along the cross axis (horizontal  axis)
+Space-around: flex items will be evenly distributed with equal space around them
+
+******
+How can we change the default behaviour of the main axis and cross axis of flexbox layout?
+
+By default, the main axis is the vertical axis and cross axis is the horizontal axis in React native. Since justifyContent and alignItems property works based on the main axis and cross axis, so justifyContent will align flex items vertically and alignItems will layout flex item horizontally. This default value of the main axis and cross axis can be changed by changing flexDirection property. If we set flexDirection to row in the flex container then the main axis will become horizontal axis and cross axis will become vertical axis. 
+
+On changing default behaviour via flexDirection CSS property, the behaviour of alignItems and justifyContent will also get switched. The Concept of flexDirection is also present on the web. Flexbox is implemented as a single direction layout technique and this direction is managed by flexDirection CSS property. Apart from row and column, the flexDirection property has two more values: row-reverse and column-reverse. As the name suggests, the direction will remain horizontal and vertical but the direction will get changed.
+
+********
+
+Two ways of writing a react component:
+Functional component
+    - It uses a simple function which returns the JSX
+
+Class-based component
+    - It used the class keyword introduced in ES6. it implements render lifecycle method which returns the JSX.
+
+- Functional component can’t have stated ( before React hooks era ). It renders component only based on props passed. A class-based component can have a local state which can be helpful in building a bigger component
+- Functional component access directly via props argument passed. In a class-based component, props are accessible via this.props.
+- A class-based component is a more complex structure. It is an instance of a class derived from React. Component class. The class must implement a render() member function which returns a React component to be rendered
+- The class-based component can also use lifecycle methods but functional component can’t use lifecycle methods.
+- Functional components are a very light weighted component in comparison to class-based react component
+
+*******
+
+React Native storage is a simple, unencrypted, asynchronous, persistent system, which stores the data globally in the app. It stores data in the form of a key-value pair. React Native provides AsyncStorage class to store data globally. Using the AsyncStorage class, we need to have a data backup and synchronization class. It is because data saved on the device is not permanent and not encrypted.
+
+*****
+
+Redux is a state container for JavaScript applications. It is a state management tool, which helps you to write applications that behave consistently, can run in a different environment, and are easy to test.
+
+React Native use Redux because it allows developers to use one application state as a global state and interact easily with the state from any React component. It can combine with any framework or library.
+
+******  
+
+Axios is a popular library for making HTTP requests from the browser. It allows us to make GET, POST, PUT, and DELETE requests from the browser.
+
+******
+
+React Native provides the following threads:   
+
+Shadow Thread: it's a background thread. We can calculate a layout created using React library inside React Native by this thread.
+MAIN/UI Thread: It's the main thread on which our app runs.
+JavaScript Thread: it executes the main Javascript code.
+
+******
+
+What are the components of Redux available in React Native app?
+Redux has the following components:
+
+Actions
+Reducers
+Store 
+Components
+
+*****
+
+Props drilling or threading is the process of passing down the data from the parent component to its exact child component. In between, it passes through other components which own the props.
+
+The given steps can be used to avoid props drilling:
+
+- React Context API
+- Composition
+- Render props
+- HOC
+- MobX or Redux
+
+******
+
+
+Timers are essential in any application. React Native provides the provision of the following timers:
+
+setInterval, clearInterval
+
+- The setInterval method is used to create a loop of a code running after a specific time interval as the second parameter specifies.
+- clearInterval is used to stop the interval.
+
+setTimeout, clearTimeout
+
+- setTimeout is used to schedule a piece of code to run at a specific scheduled time.
+- clearTimeout is just used to clear that timer.
+
+setImmediate, clearImmediate
+- setImmediate calls or execute the function as soon as possible.
+- clearImmediate cancels the immediate actions set by setImmediate.
+
+requsetAnimationFrame, cancelAnimationFrame
+- requsetAnimationFrame updates an animation before the next one.
+- cancelAnimationFrame cancels the functions set by requsetAnimationFrame.
+
+*************
+
+Tools can be used to debug React Native apps:
+
+The developer menu
+Chrome's DevTools
+React developer tools
+React Native debugger
+
+*********
+
+Hybrid apps are developed to be used across all platforms, whereas native apps are developed for a particular platform. React Native is used for the development of hybrid apps. 
+
+While hybrid apps are faster to develop and typically require less maintenance than native apps, they may perform slightly worse than their native counterparts.
+
+Hybrid apps are deployed in a native container that uses a mobile WebView object. When the app is used, this object displays web content thanks to the use of web technologies (CSS, JavaScript, HTML).
+
+*****
+
+What are the main performance issues in React Native and what causes them?
+
+High CPU usage: Offloading complex functions to the JavaScript thread can cause performance issues
+Memory leak: Information can be lost in the Bridge during the transfer from the Primary to the React Native domains, especially in Android apps
+Slow navigation: Multiple thread bridging can also cause slower navigation times
+
+There are several performance issues that can arise in React Native applications, and some of the main causes include:
+
+1. Rendering performance: React Native relies heavily on rendering, and inefficient rendering can cause performance issues. This can happen when there are unnecessary re-renders, large numbers of components, or complex component hierarchies.
+
+2. State management: State management is another area that can cause performance issues in React Native applications. When state is poorly managed, it can lead to unnecessary re-renders or trigger other expensive operations.
+
+3. Memory usage: Memory usage is a critical issue for mobile applications, and React Native is no exception. Applications that consume too much memory can cause the device to slow down or even crash.
+
+4. Network requests: Network requests can be slow and can cause performance issues in React Native applications, especially when they are made frequently or on a slow network connection.
+
+5. JavaScript execution: JavaScript execution can also cause performance issues, especially when complex calculations are performed or when expensive operations are triggered.
+
+To address these issues, there are several best practices that React Native developers can follow, such as:
+
+1. Minimizing re-renders: By using techniques such as shouldComponentUpdate or React.memo, developers can reduce the number of re-renders and improve rendering performance.
+
+2. Optimizing state management: By using techniques such as state normalization or state selectors, developers can better manage state and reduce unnecessary re-renders.
+
+3. Reducing memory usage: By using tools such as the Chrome DevTools or the React Native Performance Monitor, developers can identify memory leaks and optimize memory usage.
+
+4. Optimizing network requests: By using techniques such as caching or batched requests, developers can reduce the number of network requests and improve network performance.
+
+5. Optimizing JavaScript execution: By using techniques such as code splitting or lazy loading, developers can optimize JavaScript execution and reduce the load on the device.
+
+**********
+
+How can app performance be optimized in React Native?
+
+Remove all console statements
+Resize and scale down images
+Cache images internally
+Compress or convert raw JSON data
+Use code splitting for large lists
+Schedule animations
+Remove unnecessary libraries and features
+
+*******
+
+How is React Native code processed to display the final output on the screen?
+The process for rendering code in React Native is the following:
+
+- When the app is opened, the main thread (or UI thread) starts execution by loading JavaScript bundles
+- Once the JavaScript code has been loaded successfully, the main thread sends it to the second JS thread where more calculations are performed
+- When React Native starts rendering, the reconciler algorithm generates a virtual DOM or layout, which is then sent to a third shadow thread
+- The shadow thread calculates a new DOM and sends the layout characteristics to the main UI thread
+- The UI thread then renders the received DOM for display on the mobile app
+
+**********
+
+What is the role of the bridge in React Native?
+
+The bridge acts as a transport layer between JavaScript and Native modules. In the rendering process: 
+
+- The bridge first receives the user response to open the app from the Native module
+- It then passes the serialized payload to the JavaScript module
+- Once the event has been processed and a virtual DOM has been generated in the JavaScript module, the bridge receives the serialized batched response
+- The bridge passes the serialized batched response to the Native module for final rendering
+
+In React Native, the bridge is a key component that enables communication between the JavaScript code and the native components that make up the user interface. The bridge acts as a message-passing mechanism that allows JavaScript code to interact with the native components.
+
+When a React Native application starts up, it initializes the bridge, which creates a bidirectional channel between the JavaScript code and the native components. This channel is used to pass messages and events between the two environments.
+
+When the JavaScript code needs to update the user interface, it sends a message over the bridge to the native components. The native components receive the message and update the user interface accordingly. Similarly, when a user interacts with the user interface, the native components send events back to the JavaScript code over the bridge.
+
+The bridge also handles data serialization and deserialization, which allows data to be passed between the JavaScript code and the native components. This is important because the two environments use different data types and representations.
+
+In addition, the bridge provides a mechanism for accessing native functionality and APIs from the JavaScript code. React Native includes a set of pre-built native modules that can be accessed from JavaScript using the bridge. Developers can also create their own native modules and expose them to the JavaScript code using the bridge.
+
+Overall, the bridge is a critical component of React Native that enables communication between the JavaScript code and the native components, and provides a mechanism for accessing native functionality and APIs.
+
+***********
+
+What is the role of fabric in React Native?
+
+Fabric is a modern type of architecture that was first created in 2018 and aims to address some of React Native’s performance issues. Fabric modernizes the framework’s rendering layer by allowing specified priority tasks to be executed synchronously and, therefore, quicker. 
+
+Fabric is a re-architecture of the React Native core aimed at improving performance, reliability, and extensibility. It is a major update to React Native that replaces many of the core components of the framework, including the JavaScript engine and the bridge.
+
+The main role of Fabric in React Native is to provide a more efficient and flexible runtime for building high-performance mobile applications. Some of the key features of Fabric include:
+
+Improved performance: Fabric provides a more lightweight runtime, optimized rendering pipeline, and improved threading model, all of which contribute to faster startup times, smoother animations, and overall better performance.
+
+Better reliability: Fabric includes improved error handling, crash reporting, and debugging tools, making it easier for developers to identify and fix issues in their applications.
+
+Enhanced extensibility: Fabric provides a more modular architecture that makes it easier for developers to extend and customize the framework with their own native components and modules.
+
+Improved developer experience: Fabric includes a number of developer-friendly features, such as better hot reloading and faster build times, that improve the overall development experience.
+
+
+The Fabric architecture is a new architecture for React Native that was introduced in version 0.60. It replaces the older bridge-based architecture and aims to improve the performance, stability, and extensibility of React Native apps.
+
+Here's a brief overview of how the Fabric architecture works:
+
+Threading model: In the Fabric architecture, React Native runs on a single background thread with a priority queue of UI operations. This helps to avoid jank (or stuttering) by prioritizing the most important UI operations and minimizing the time spent on background tasks.
+
+Improved layout engine: Fabric includes an improved layout engine that is faster and more efficient than the previous one. It uses Flexbox for layout and can handle more complex UI designs.
+
+Native modules and TurboModules: Native modules are now called TurboModules in the Fabric architecture, and they provide a way to write platform-specific code in a more efficient way. TurboModules are precompiled, which reduces the overhead of calling native code from JavaScript.
+
+Improved animations: The Fabric architecture includes a new animation system that is more performant and supports more advanced animations.
+
+Optimizations for JavaScript execution: Fabric includes several optimizations to improve the performance of JavaScript execution, including bytecode caching, faster function calls, and more efficient garbage collection.
+
+Overall, the Fabric architecture is designed to provide a more stable, performant, and extensible platform for building React Native apps. It achieves this by introducing several improvements to the underlying architecture and optimizing the performance of key components.
+
+********
+
+How can you optimize the performance of images in React Native?
+There are several useful tricks for optimizing the performance of images in React Native. These include:
+
+- Using image caching tools
+- Using PNG or WEBP formats rather than JPEG
+- Using smaller images
+- Reducing the number of renders
+
+*******
+
+How can sensitive data be stored securely in React Native?
+
+Most React Native data is stored in Async Storage. As an unencrypted, local form of storage, it’s not suitable for storing sensitive data such as tokens and passwords.
+
+Alternatively, React Native Keychain offers a secure form of storage that also works similarly to Async Storage. For iOS, Keychain storage can be used to protect sensitive data, while Android developers can use Facebook Conceal and Android Keystone.
+
+Use secure storage: React Native provides several options for secure storage, including AsyncStorage and react-native-keychain. These storage options encrypt data before storing it and require authentication before allowing access.
+
+Don't store sensitive data in plain text: Avoid storing sensitive data, such as passwords or API keys, in plain text. Instead, use techniques such as hashing or encryption to store data securely.
+
+Use HTTPS: When communicating with APIs or other servers, use HTTPS to encrypt data in transit and protect it from interception.
+
+Use two-factor authentication: Implement two-factor authentication to add an extra layer of security for sensitive actions, such as logging in or making transactions.
+
+Minimize data collection: Collect only the minimum amount of data necessary for the application to function, and delete data that is no longer needed.
+
+Use authentication and authorization: Implement user authentication and authorization to ensure that only authorized users have access to sensitive data and actions.
+
+Keep the app up to date: Regularly update the application and its dependencies to ensure that known security vulnerabilities are patched.
+
+*********
+
+What steps would you take in React Native if you have an app that crashes continually?
+
+Use a third-party error reporting integration to pull up an error report and further diagnose the bug. These plugins help collect, organize, and analyze crash reports and also provide quick fixes so the app can get back up and running. Popular error reporting plugins include:
+
+Bugsnag
+Crashlytics
+Sentry
+TestFairy
+
+*******
+
+What are the differences between Flexbox in browser and in React Native?
+
+The default value in React Native is column, whereas the default value for CSS is row
+The default value in React Native is flex-start, whereas the default value for CSS is stretch
+The default value in React Native is 0, whereas the default value for CSS is 1
+
+******
+
+What steps can you take to resolve persistent memory leak issues?
+
+A memory leak occurs when memory that is no longer needed by an app remains in the app rather than being returned to the operating system. This is one of the most common causes of performance issues.
+
+In theory, memory management is handled automatically by the garbage collector. However, this process is still prone to errors. Debugging tools can be used to identify memory leak issues. Some of the most common causes for issues are:
+
+Timers and listeners in componentDidMount
+Inline styles
+Closure scope leaks
+The use of console.log
+
+Debugging can identify the root of the memory leak; once it has been removed, the issue should be resolved.
+
+*****
+
+several techniques for optimizing the performance of FlatList items. For example, we can:
+
+Avoid using 1080P HD images
+Optimize the maxToRenderPerBatch prop
+Use the getItemLayout prop
+Use the keyExtractor prop
+Use fewer views
+Optimize the windowSize prop
+
+*****
+
+Live reloading in React Native refreshes the entire app when a file changes, whereas hot reloading only refreshes the files that were changed. 
+
+When hot reloading is used on an app, the state remains the same and the developer is returned to the page they started on. The opposite is true for live reloading.
+
+******
+
+ScrollView loads all data items on one screen for scrolling purposes. All the data is stored on RAM, which can cause performance issues for large amounts of data. 
+
+FlatList only displays items that are currently shown on the screen (10 by default), thus sidestepping any performance issues.
+
+Therefore, it is best to use FlatList for large datasets, whereas ScrollView can be used for smaller datasets.
+
+*******
+
+class GyroJs {
+    setGyroPosition(pos) {
+        if (pos === null || typeof pos === 'undefined') {
+            throw new Error('The position must be defined');
+        }
+        this.pos = pos;
+    }
+    constructor() {
+        const gyroscopePosition = NativeModules.MyGyroModule.gyroPosition();
+        this.setGyroPosition(gyroscopePosition);
+    }
+}
+
+
+This code will always throw an error because the value of gyroscopePosition will always be an unresolved Promise. It’s important to remember that the bridge that connects JavaScript and native code is asynchronous. We can either receive results from this side by passing in a callback (not done in this example), or by returning a Promise. In this case, we need to append a then() call to the gyroPosition() call and set the position inside it.
+
+*******
+
+Imagine you have an app which is a series of lists of images (e.g. like Instagram). The app seems to crash at random. What steps can we take to investigate and mitigate this in React Native?
+
+Often, and especially on the Android platform, lists of images are not properly recycled when scrolling. Their memory is never garbage collected, nor is it manually freed at a lower level. This leads to out-of-memory (OOM) crashes that can occur seemingly at random as the app’s memory is exhausted.
+
+We can investigate this by profiling the app’s heap memory usage in either Xcode or Android Studio. If you scroll through a list of images and notice the heap usage steadily climbing without ever dipping, it probably means that your images aren’t being recycled properly.
+
+To mitigate this, we can check which list implementation we are using. In modern versions of React Native, ListView should never be used; ensure that the FlatList component is handling the rendering instead. If this is not sufficient after tuning, you can try making your images lower resolution.
+
+*********
+
+React Hooks
+
+Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
+
+********
+What happens when you call setState?
+
+The first thing React will do when setState is called is merge the object you passed into setState into the current state of the component. This will kick off a process called reconciliation. The end goal of reconciliation is to, in the most efficient way possible, update the UI based on this new state.
+
+To do this, React will construct a new tree of React elements (which you can think of as an object representation of your UI). Once it has this tree, in order to figure out how the UI should change in response to the new state, React will diff this new tree against the previous element tree.
+
+By doing this, React will then know the exact changes which occurred, and by knowing exactly what changes occurred, will able to minimize its footprint on the UI by only making updates where absolutely necessary.
+
+******
+
+What is View and how important is it?
+
+In React Native, a View is a fundamental component that is used to display UI elements on the screen. It is analogous to a div element in HTML and provides a container for other UI components.
+
+
+The View component can contain other UI components such as Text, Image, and other Views, and can be nested to create complex UI structures. By combining multiple Views and other UI components, developers can create sophisticated and responsive user interfaces.
+
+In summary, the View component is a fundamental building block in React Native that provides a container for other UI components and is used extensively to structure and organize the UI of an application.
+
+******
+
+Virtual DOM
+
+Virtual DOM is about avoiding unnecessary changes to the DOM, which are expensive performance-wise, because changes to the DOM usually cause re-rendering of the page. Virtual DOM also allows to collect several changes to be applied at once, so not every single change causes a re-render, but instead re-rendering only happens once after a set of changes was applied to the DOM.
+
+Shadow DOM
+
+Shadow dom is mostly about encapsulation of the implementation. A single custom element can implement more-or-less complex logic combined with more-or-less complex DOM. An entire web application of arbitrary complexity can be added to a page by an import and <body><my-app></my-app> but also simpler reusable and composable components can be implemented as custom elements where the internal representation is hidden in the shadow DOM like <date-picker></date-picker>.
+
+Shadow DOM is a technology that allows you to encapsulate the structure and style of a web component, so that it can be used without interfering with the rest of the page. Shadow DOM creates a separate, isolated DOM tree for each web component, which allows you to style and manipulate the component without affecting the rest of the page.
+
+Virtual DOM, on the other hand, is a concept that is used in React and other front-end frameworks to optimize the rendering of the UI. Virtual DOM creates a lightweight copy of the actual DOM, which can be updated and manipulated more efficiently than the real DOM. When changes are made to the Virtual DOM, React compares it to the previous version of the Virtual DOM and calculates the minimum number of changes needed to update the actual DOM. This approach allows React to avoid expensive DOM updates and improve the performance of the application.
+
+So, the main difference between Shadow DOM and Virtual DOM is that Shadow DOM is used to encapsulate web components, while Virtual DOM is used to optimize the rendering of the UI. Shadow DOM is a native web platform technology, while Virtual DOM is a concept implemented by front-end frameworks like React. However, both technologies are aimed at improving the performance and maintainability of web applications.
+
+****
+
+What is the significance of keys in ReactJS?
+
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
+
+*****
+
+A Higher Order Component (HOC) is a function in React that takes a component and returns a new component with additional functionality. The HOC does not modify the original component, but rather creates a new component that wraps the original and provides additional features.
+
+HOCs are a powerful pattern in React because they allow developers to reuse code and add functionality to components without modifying them directly. This makes components more modular and easier to maintain.
+
+HOCs can be used for a variety of purposes, such as:
+
+Code reuse: HOCs can be used to encapsulate common functionality that is used across multiple components, such as authentication or data fetching.
+
+Prop manipulation: HOCs can be used to modify or filter props before they are passed down to the wrapped component.
+
+Rendering logic: HOCs can be used to conditionally render components based on certain conditions or to inject additional UI elements.
+
+State management: HOCs can be used to manage state that is shared across multiple components, such as a theme or language preference.
+
+To create an HOC, a function is defined that takes a component as its argument and returns a new component that wraps the original. The new component can then provide additional props or functionality to the original component.
+
+Here is an example of a simple HOC that logs the props of a component:
+
+function withLogging(Component) {
+  return function(props) {
+    console.log('Props:', props);
+    return <Component {...props} />;
+  };
+}
+
+// Usage
+const WrappedComponent = withLogging(MyComponent);
+
+
+Full example:
+
+import React from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+
+function withLogging(Component) {
+  return function(props) {
+    console.log('Props:', props);
+    return <Component {...props} />;
+  };
+}
+
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <View>
+        <TouchableOpacity onPress={() => console.log('Button pressed')}>
+          <Text>{this.props.title}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+const WrappedComponent = withLogging(MyComponent);
+
+export default function App() {
+  return (
+    <View>
+      <Text>Hello world!</Text>
+      <WrappedComponent title="Example" />
+    </View>
+  );
+}
+
+
+In this example, we define the withLogging HOC function that takes a component as its argument and returns a new component that logs its props when it is rendered.
+
+We then define a MyComponent class that renders a TouchableOpacity button and passes a title prop to it. We wrap this component with the withLogging HOC to create a new component called WrappedComponent.
+
+Finally, in our app, we render a Text component that says 'Hello world!' and the WrappedComponent component with a title prop of 'Example'. When the WrappedComponent is rendered, the withLogging HOC logs its props to the console.
+
+This is a simple example, but it demonstrates how HOCs can be used to add functionality to components without modifying them directly.
+
+*********
+
+Does React Native have a Virtual DOM?
+
+Yes, React Native has a Virtual DOM just like React for the web. The Virtual DOM is a lightweight representation of the actual DOM that React uses to keep track of changes to the UI.
+
+When you update the state of a component in React Native, React will use the Virtual DOM to determine which parts of the UI need to be updated. The Virtual DOM is updated to reflect the new state, and then React figures out which changes need to be made to the actual DOM to make it match the new Virtual DOM.
+
+Using a Virtual DOM helps improve performance by minimizing the number of updates to the actual DOM. Instead of updating the DOM for each change to the UI, React can batch updates and make them all at once, resulting in fewer overall updates and a smoother user experience.
+
+*******
+
+How does React native app deal with responsive screen sizes
+
+React Native provides several built-in tools for building responsive UIs that can adapt to different screen sizes and orientations. Here are some common techniques for dealing with responsive screen sizes in React Native:
+
+Flexbox layout: React Native uses Flexbox for layout, which allows you to create flexible, responsive UIs that can adapt to different screen sizes and orientations. By using flexbox properties like flex, flexDirection, and alignItems, you can create layouts that adjust dynamically based on the available space.
+
+Device-specific styles: React Native provides several built-in methods for detecting the dimensions and orientation of the device, such as Dimensions.get() and Orientation.getOrientationAsync(). By using these methods, you can apply device-specific styles or layouts to ensure that your UI looks good on different devices.
+
+Percentage-based dimensions: React Native supports percentage-based dimensions, which allow you to define dimensions relative to the size of the parent container. This can be useful for creating UI elements that scale smoothly across different screen sizes and orientations.
+
+Media queries: While React Native doesn't support traditional CSS media queries, you can achieve similar functionality by using libraries like react-native-responsive-screen or react-native-extended-stylesheet. These libraries allow you to define different styles or layouts based on the size of the device or screen density.
+
+By using these techniques and other best practices for responsive design, you can create React Native apps that look great on a wide range of devices and screen sizes.
+
+*****
+
+what is appregistry in react native
+
+AppRegistry is the JS entry point to running all React Native apps. App root components should register themselves with AppRegistry.registerComponent, then the native system can load the bundle for the app and then actually run the app when it's ready by invoking AppRegistry.runApplication.
+
+*******
+
+What does StyleSheet.create do?
+
+In React Native, StyleSheet.create is a method that is used to create a style object with a unique ID that can be referenced throughout the application. The purpose of StyleSheet.create is to improve the performance and efficiency of styling in React Native applications.
+
+When you use StyleSheet.create to define a style object, React Native generates a unique ID for that style object and stores it in a registry. This means that when you use the same style object in multiple places throughout your application, React Native can reference the same ID rather than creating a new style object each time.
+
+React Native can reference the unique ID for each style object, rather than creating a new style object each time. This improves the performance and efficiency of styling in your React Native application.
+
+*****
+
+What is Network Security and SSL Pinning w.r.t react native app? 
+
+Network security is a crucial aspect of any mobile application, including those built with React Native. One important aspect of network security is SSL/TLS encryption, which is used to encrypt data transmitted over the network to prevent it from being intercepted or tampered with by unauthorized parties.
+
+SSL pinning is a technique used to enhance the security of SSL/TLS connections by ensuring that the client only communicates with a specific server whose certificate has been pinned or validated. In the context of React Native apps, SSL pinning can be used to prevent man-in-the-middle (MITM) attacks, where an attacker intercepts and modifies network traffic between the app and the server.
+
+To implement SSL pinning in a React Native app, you need to perform the following steps:
+
+1. Obtain the server's SSL certificate.
+2. Convert the certificate to a base64-encoded string.
+3. Add the certificate to the app's source code as a constant or variable.
+4. Configure the networking library used by the app to validate the server's certificate against the pinned certificate.
+
+Here's an example of how to implement SSL pinning using the fetch API in React Native:
+import { Buffer } from 'buffer';
+import { fetch } from 'react-native-ssl-pinning';
+
+const cert = Buffer.from(`
+  -----BEGIN CERTIFICATE-----
+  <certificate data here>
+  -----END CERTIFICATE-----
+`).toString('base64');
+
+fetch('https://example.com', {
+  method: 'GET',
+  sslPinning: {
+    certs: [cert],
+    // Optional: set to true to allow self-signed certificates
+    allowSelfSigned: false,
+    // Optional: set to true to disable certificate validation
+    disableCertificateValidation: false,
+  },
+}).then((response) => {
+  // Handle response
+}).catch((error) => {
+  // Handle error
+});
+
+In this example, the fetch API is used to make an HTTPS request to https://example.com. The sslPinning option is used to configure SSL pinning by specifying the pinned certificate and any additional options.
+
+Note that SSL pinning can be complex to implement and can break if the server's certificate changes. Therefore, it's important to keep the pinned certificate up-to-date and to have a backup plan in case of pinning failures.
+
+***********
+
+What is the role of components in React Native?
+
+In React Native, components are the building blocks of the user interface. They define what to display on the screen and how it should look and behave. Components are written in JavaScript and can receive and manage props, and keep their own state.
+
+Each component is isolated and does not affect the others, which makes it easier to manage and maintain the code. Components can also be combined and reused, making it possible to create complex UI elements from smaller, reusable parts.
+
+*********
+
+What are the different ways to pass data between components in React Native?
+
+There are several ways to pass data between components in React Native:
+
+Props: Props are a way to pass data from a parent component to a child component. The parent component can pass any data, including primitive data types, objects, or functions, as props to the child component. The child component can then access and use the data passed to it via props.
+
+Context: Context is a feature in React that allows data to be passed down the component tree without explicitly passing props from every parent to child component. It is useful for sharing data that needs to be accessed by many components at different levels in the component tree.
+
+Redux: Redux is a state management library that can be used to manage application-level state. It provides a central store where the application's state is stored and can be accessed from any component in the application.
+
+Events: Components can emit events that other components can listen to and respond to. This can be useful for communicating between sibling or unrelated components that don't have a parent-child relationship.
+
+React Navigation: React Navigation is a library that provides a way to handle navigation and routing in a React Native app. It allows passing parameters between screens and accessing those parameters in the screen components.
+
+Async Storage: Async Storage is a simple, asynchronous, persistent, key-value storage system that can be used to store data between sessions or across different components.
+
+These are some of the common ways to pass data between components in React Native. The choice of the method depends on the specific use case and the complexity of the application.
+
+*********
+
+In React Native, there are several ways to store data, including:
+
+AsyncStorage: AsyncStorage is a simple, unencrypted, asynchronous, persistent, key-value data store that is global to the app. It can be used to store data that needs to persist across app launches, such as the user's authentication token.
+
+Realm: Realm is an open-source, object-oriented database that can be used to store data in React Native. It provides a performant alternative to SQLite and is well suited for handling large amounts of structured data.
+
+SQLite: SQLite is a software library that provides a relational database management system. It can be used to store data in React Native and can be integrated with the app through a library such as react-native-sqlite-storage.
+
+Firebase Realtime Database: Firebase Realtime Database is a cloud-hosted NoSQL database that allows data to be stored and synchronized across multiple devices in real-time. It can be used to store data in React Native and provides a simple way to persist data in the cloud.
+
+****
+
+What is code splitting and how does it work in React Native?
+
+Code splitting is a technique in which the application code is divided into smaller chunks, each of which can be loaded on demand, as and when required, instead of loading everything at once during the initial load of the application. This helps to optimize the performance of the application and reduces the initial load time.
+
+How Does Code Splitting Work in React Native?
+React Native allows developers to implement code splitting in their applications by using tools like the React Loadable library or the built-in lazy and Suspense components.
+
+The lazy component allows for a component to be loaded only when it is needed, and the Suspense component allows for the loading of the component to be handled. This means that instead of loading the entire application at once, the application will only load the parts of the code that are necessary for the user to see.
+
+To implement code splitting in a React Native application, a developer would typically start by splitting the code into smaller chunks, with each chunk corresponding to a specific feature or section of the application. Then, the code can be loaded on demand as the user navigates through the application.
+
+By utilizing code splitting, developers can improve the performance of their React Native applications and provide a better user experience, since the application will load faster and consume fewer resources on the user's device.
+
+******
+
+How do you approach scaling a React Native app?
+
+Scaling a React Native app involves making the necessary adjustments to handle an increased number of users and the corresponding increase in usage and data. Here are some steps to help you approach scaling a React Native app:
+
+Performance Optimization
+- Optimize images: Use optimized images and ensure that they are not larger than required.
+Minimize the use of native modules: Use native modules sparingly as they can slow down the performance of the app.
+- Use FlatList and SectionList instead of ListView: FlatList and SectionList are more efficient for rendering long lists, as they only render the visible items.
+- Use PureComponent or shouldComponentUpdate: Use these techniques to prevent unnecessary re-renders and optimize performance.
+
+Code Structure
+- Use code splitting: Divide the code into smaller chunks and load them on demand to reduce the initial load time and improve performance.
+- Use modular architecture: Create separate modules for different parts of the application to make it easier to maintain and scale.
+
+Backend and API
+- Use a scalable backend: Use a backend that can scale easily to handle the increasing number of users and data.
+- Cache data: Cache data to reduce the number of API calls and improve performance.
+- Use pagination: Implement pagination to reduce the amount of data returned from API calls and improve performance.
+
+Testing
+- Automated testing: Use automated testing to ensure that the app works correctly and is scalable.
+- Load testing: Load test the app to determine how it performs under increased usage and stress.
+
+**********
+
+Can you discuss integrating TypeScript into a React Native app?
+
+TypeScript is a statically typed superset of JavaScript that can help to improve the quality of code and catch errors before runtime. Here are the steps involved in integrating TypeScript into a React Native app:
+
+Installation
+- Install TypeScript: Run the command npm install -g typescript to install TypeScript globally on your system.
+- Initialize TypeScript: Run the command tsc --init to create a tsconfig.json file for your project.
+
+Configuration
+- Modify the tsconfig.json file to include the necessary options for your project.
+- Add a jsconfig.json file to the root of your project to allow TypeScript to recognize and compile .js files.
+
+Usage
+- Change the file extensions of your existing JavaScript files to .ts or .tsx.
+- Use the TypeScript syntax in your code and make use of its features, such as interfaces and classes.
+
+Compilation
+- Compile your TypeScript code using the command tsc or by using a build tool such as Webpack or Gulp.
+
+Types
+- Install type definitions for the packages and libraries used in your project using the @types namespace.
+- You can use the npm install @types/{package-name} command to install the type definitions for a specific package.
+
+************
+
+Can you talk about using Redux with React Native?
+
+Redux is a popular state management library that can be used with React Native to manage the application state in a centralized and organized manner. Here are the steps involved in using Redux with React Native:
+
+- Installation
+Install the redux and react-redux packages using the npm install redux react-redux command.
+
+- Store
+* Create a store by using the createStore method from the redux library and passing in a reducer function.
+* The reducer function takes the current state and an action and returns the next state.
+
+- Actions
+* Create action creators that return action objects that describe changes to the state.
+* Dispatch actions using the dispatch method of the store.
+
+- Reducer
+* Write a reducer function that updates the state based on the action type.
+
+- Connect
+* Connect your React Native components to the Redux store using the connect method from the react-redux library.
+* The connect method maps the state and dispatch method of the store to props in your component.
+
+- Provider
+* Wrap your React Native components with the Provider component from the react-redux library and pass the store as a prop.
+
+*************
+
+Can you discuss the implementation of secure text input, such as storing sensitive information securely, in React Native?
+
+Storing sensitive information, such as passwords and financial information, securely is an important aspect of app development. In this article, we will discuss the implementation of secure text input in React Native.
+
+Use a Secure Text Entry Field React Native provides a secureTextEntry prop for the TextInput component that can be used to mask the text entered by the user. When this prop is set to true, the text entered into the TextInput component will be masked with dots or asterisks, making it more secure.
+
+<TextInput
+  secureTextEntry={true}
+  placeholder="Password"
+/>
+
+Store Sensitive Information Securely It's important to store sensitive information securely on the device, as well as when sending it to a backend. One way to achieve this is by using encryption. React Native provides the react-native-crypto library, which can be used to encrypt and decrypt sensitive information.
+
+
+import Crypto from 'react-native-crypto';
+
+async function encryptData(data) {
+  const cipher = await Crypto.createCipher('aes-256-cbc', 'secret key');
+  let encrypted = cipher.update(data, 'utf8', 'hex');
+  encrypted += cipher.final('hex');
+  return encrypted;
+}
+
+async function decryptData(encryptedData) {
+  const decipher = await Crypto.createDecipher('aes-256-cbc', 'secret key');
+  let decrypted = decipher.update(encryptedData, 'hex', 'utf8');
+  decrypted += decipher.final('utf8');
+  return decrypted;
+}
+
+It's also important to use secure storage, such as the Keychain on iOS or the KeyStore on Android, to store sensitive information on the device. React Native provides the react-native-keychain library, which can be used to securely store sensitive information on both iOS and Android.
+
+import Keychain from 'react-native-keychain';
+
+async function storeData(data) {
+  await Keychain.setInternetCredentials(
+    'username',
+    'password',
+    data
+  );
+}
+
+async function retrieveData() {
+  return await Keychain.getInternetCredentials('username');
+}
+
+Use HTTPS for Network Requests When sending sensitive information to a backend, it's important to use HTTPS to secure the communication. This can be achieved by using the https protocol instead of http when making network requests.
+
+fetch('https://example.com/api/sensitive-data', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    data: 'sensitive information',
+  }),
+});
+
+In conclusion, implementing secure text input in React Native involves several steps, including using a secure text entry field, storing sensitive information securely, and using HTTPS for network requests. By following these steps, you can ensure that sensitive information is handled securely in your React Native app.
+
+***************
+
+ListView and FlatList are both components in React Native that are used for rendering a list of items, but they have some differences in how they work.
+
+ListView was the first component that was used for rendering lists in React Native. It has been deprecated in favor of FlatList, which is a more performant and flexible component.
+
+Here are some of the key differences between ListView and FlatList:
+
+Performance: FlatList is more performant than ListView because it uses a virtualized list concept. It only renders the items that are currently visible on the screen, reducing the amount of memory and processing power needed to render the list.
+
+Flexibility: FlatList is more flexible than ListView because it supports horizontal scrolling, multiple columns, and item separators out of the box.
+
+Data format: FlatList requires data to be in an array format, whereas ListView can accept data in the form of an object or array.
+
+Rendering: FlatList uses a renderItem prop to specify how each item in the list should be rendered, whereas ListView uses a renderRow prop.
+
+Overall, FlatList is the recommended component for rendering lists in React Native due to its better performance and flexibility. However, if you're working on an existing project that uses ListView, it may still be suitable for your use case.
+
+*******
+
+How do you implement responsive design using Flexbox in React Native?
+
+
+To implement responsive design using Flexbox in React Native, you can follow these steps:
+
+Define your component styles using Flexbox properties such as flex, justifyContent, and alignItems.
+
+Use the Dimensions API to get the width and height of the device screen.
+
+Calculate the appropriate values for your component styles based on the screen dimensions. You can use the PixelRatio API to convert between logical pixels and physical pixels.
+
+Use the StyleSheet.create method to create a stylesheet object that contains your component styles.
+
+Pass the stylesheet object to your component as a prop.
+
+import React from 'react';
+import { View, Text, StyleSheet, Dimensions, PixelRatio } from 'react-native';
+
+const App = () => {
+  const { width, height } = Dimensions.get('window');
+  const pixelRatio = PixelRatio.get();
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#fff',
+    },
+    title: {
+      fontSize: pixelRatio * 16,
+      fontWeight: 'bold',
+      marginBottom: height * 0.02,
+    },
+    subtitle: {
+      fontSize: pixelRatio * 14,
+      textAlign: 'center',
+    },
+  });
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome to my app</Text>
+      <Text style={styles.subtitle}>
+        This is a responsive layout using Flexbox in React Native
+      </Text>
+    </View>
+  );
+};
+
+export default App;
+
+In this example, we use the Dimensions API to get the width and height of the device screen, and the PixelRatio API to calculate appropriate font sizes. We then create a stylesheet object using the StyleSheet.create method, and pass it to our component as a prop. The container style uses Flexbox properties to center its child components, while the title and subtitle styles use responsive values for font size and margin.
+
+***********
+
+List the essential components of React Native.
+These are the following essential components of React Native:
+
+View is the basic built-in component used to build UI.
+Text component displays text in the app.
+Image component displays images in the app.
+TextInput is used to input text into the app via the keypad.
+ScrollView is a scrolling container used to host multiple views.
+
+*************
+
+Internals:
+
+https://reactnative.dev/architecture/overview
+
+************
+What are refs in React? When to use Refs?
+
+Refs in React provide a way to access and manipulate the DOM nodes or React components directly. Refs provide a way to interact with the underlying DOM or React component instance in a way that is similar to how you might interact with them using plain JavaScript.
+
+To create a ref in React, you use the React.createRef() method. This method returns an object that you can pass as a prop to a React component. You can then use this ref object to access the underlying DOM node or React component instance in various ways.
+
+There are several use cases where you might want to use refs in React:
+
+Managing focus: You can use refs to manage focus in your React components. For example, you might want to focus on a specific input field when a form is loaded.
+
+Triggering animations: You can use refs to trigger animations in your React components. For example, you might want to trigger an animation when a component is mounted or when a specific user action occurs.
+
+Integrating with third-party libraries: You can use refs to integrate with third-party libraries that require direct access to the underlying DOM nodes.
+
+Accessing form values: You can use refs to access form values in your React components. For example, you might want to retrieve the value of a specific input field when a form is submitted.
+
+Controlling media playback: You can use refs to control media playback in your React components. For example, you might want to play, pause, or stop a video player when a specific user action occurs.
+
+Overall, refs provide a way to access and manipulate the underlying DOM nodes or React component instances directly. While refs can be powerful tools, it's important to use them judiciously and with care, as they can also make your code harder to understand and maintain.
+
+*********
+What do you understand by React hooks?
+Hooks are the newly added features in React v16.8. They are in-built functions that allow the developers to use state and life cycle methods within the components in React. They allow you to use all React features without writing a class component. Using Hooks, we can extract the stateful logic from a component so it can be tested independently and reused. This makes it possible to share Hooks among many components.
+ 
+
+Following are some of the benefits of using React Hooks:
+- If you use React Hooks, you can code in React without using classes.
+- You can easily test and reuse existing states in your code using hooks.
+
+react hooks won’t work inside the class component.
+
+useState is one of the built-in React hooks. It allows you to track the state in a functional component in React. The term state refers to data or properties that need to be tracked. You need to pass the initial state inside the useState(), which returns variables with the state value and another function to update the current state of the variable.
+
+useState accepts an initial state and returns two values:
+
+- The current state.
+- A function that updates the state.
+
+useEffect is one of the built-in React Hooks. It allows you to manage side effects in your functional components in React. Here the term side effects refer to fetching requests, manipulating DOM, using timer functions and more.
+
+The useEffect accepts two arguments a callback function and dependencies. The callback function contains the side effects, while the dependencies are optional. If the value of the dependencies has changed between the rendering, then only useEffect() to execute the callback function.
+
+useEffect() method allows programmers to use lifecycle methods to React.
+
+useRef is one of the built-in React Hooks. It allows you to persist values between render. You can also use it to store a mutable value that does not cause a re-render when updated. You must pass the initial value inside the useRef, which returns a mutable ref object. The object has a property called "current", where the value is persisted.
+
+useCallback is one of the react hooks used to prevent functions declared within the body of function components from being recreated on every render.
+ 
+useMemo hook is used to memoise an expensive operation that we give it. The term "memoise" refers to remembering past values that have already been computed.
+
+The main reason for introducing React Hooks was to make the functional components stateful. Before React v16.8, the functional components were called stateless components as we could only do the state management and the life cycle methods using only the class components. So whenever we needed to use the state management or life cycle methods, we had to change the functional components to the class components.
+
+One of the useful application of the useRef() hook is to access DOM elements. This is performed in 3 steps:
+
+1. Define the reference to access the element const elementRef = useRef();
+2. Assign the reference to ref attribute of the element: <div ref={elementRef}></div>;
+3. After mounting, elementRef.current points to the DOM element.
+
+*************
+
+How to call loading function with React useEffect only once?
+
+If you only want to run the function given to useEffect after the initial render, you can give it an empty array [] as the second argument.
+
+function MyComponent(){
+    useEffect(() => {
+        loadDataOnlyOnce();
+    }, []);
+
+    return <div> { /*...*/} </div>;
+}
+
+*************
+
+Provide an example of any simple Custom React Hook. Why do we need Custom Hooks?
+
+A Custom Hook is a stateful function that uses other react built-in hooks (e.g. useState, useCallback etc.) that can wrap around the stateful logic that you wanted to gather in one place and avoid copying and pasting the same logic in multiple components.
+
+Consider the increment/decriment custom hook:
+
+const useCounter = () => {
+  const [counter, setCounter] = useState(0);
+
+  return {
+    counter, // counter value
+    increment: () => setCounter(counter + 1), // function 1
+    decrement: () => setCounter(counter - 1) // function 2
+  };
+};
+
+and then in your component you can use it as follows:
+
+const Component = () => {
+  const { counter, increment, decrement } = useCounter();
+
+  return (
+    <div>
+      <span onClick={decrement}>-</span>
+      <span style={{ padding: "10px" }}>{counter}</span>
+      <span onClick={increment}>+</span>
+    </div>
+  );
+}
+
+************
+Can you initialise state from a function? Provide and example
+const StateFromFn = () => {
+  const [token] = useState(() => {
+    let token = window.localStorage.getItem("my-token");
+    return token || "default#-token#"
+  })
+
+  return <div>Token is {token}</div>
+}
+
+************
+
+Do two components using the same Hook share state?
+
+No. Custom Hooks are a mechanism to reuse stateful logic (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.
+
+********
+
+Explain the difference between useState and useRef hooks?
+
+- Updating a reference created by useRef doesn't trigger re-rendering, while updating the state (setState) makes the component re-render;
+
+- useRef returns an object with a current property holding the actual value. In contrast, useState returns an array with two elements.
+
+- useRef‘s current property is mutable, but useState‘s state variable is not.
+
+- The reference update is synchronous (the updated reference value is available right away), while the state update is asynchronous (the state variable is updated after re-rendering).
+
+Using useRef - no re-renders
+
+const countRef = useRef(0);
+  
+const handle = () => {
+    countRef.current++;
+    console.log(`Clicked ${countRef.current} times`);
+};
+
+Using useState - triggers re-render
+
+const [count, setCount] = useState(0);
+  
+const handle = () => {
+    const updatedCount = count + 1;
+    console.log(`Clicked ${updatedCount} times`);
+    setCount(updatedCount);
+};
+
+***************
+
+How can I make use of Error Boundaries in functional React components?
+
+As of v16.2.0, there's no way to turn a functional component into an error boundary. The componentDidCatch() method works like a JavaScript catch {} block, but for components. Only class components can be error boundaries. In practice, most of the time you’ll want to declare an error boundary component once and use it throughout your application.
+
+Also bear in mind that try/catch blocks won't work on all cases. If a component deep in the hierarchy tries to update and fails, the try/catch block in one of the parents won't work -- because it isn't necessarily updating together with the child.
+
+*******
+
+How to use componentWillMount() in React Hooks?
+
+ou cannot use any of the existing lifecycle methods (componentDidMount, componentDidUpdate, componentWillUnmount etc.) in a hook. They can only be used in class components. And with Hooks you can only use in functional components.
+
+You can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+
+1. Code inside componentDidMount run once when the component is mounted. useEffect hook equivalent for this behaviour is
+
+useEffect(() => {
+ // Your code here
+}, []);
+
+
+2. Without the second parameter the useEffect hook will be called on every render (like componentDidUpdate) of the component which can be dangerous:
+
+useEffect(() => {
+ // Your code here
+});
+
+3. Hook equivalent of componentWillUnmount() code will be as follows
+
+useEffect(() => {
+ window.addEventListener('mousemove', () => {});
+
+ // returned function will be called on component unmount 
+ return () => {
+   window.removeEventListener('mousemove', () => {})
+ }
+}, [])
+
+
+****************
+
+What are common use cases for the useMemo?
+
+The primary purpose of useMemo hook is "performance optimization".
+
+* It returns a memoized value,
+* It accepts two arguments - create function (which should return a value to be memoized) and dependency array. It will recompute the memoized value only when one of the dependencies has changed.
+
+Using useMemo you achieve:
+
+* referential equality of the values (to further send them to props of the components to potentially avoid re-renders)
+* eliminate redoing of the computationally expensive operations for same parameters
+
+unction App() {
+    const [data, setData] = useState([....]);
+
+    function format() {
+        console.log('formatting....'); // this will print only when data has changed
+        const formattedData = [];
+        data.forEach(item => {
+            const newItem = //...do soemthing here,
+            if (newItem) {
+                formattedData.push(newItem);
+            }
+        })
+        return formattedData;
+    }
+
+    const formattedData = useMemo(format, [data])
+
+    return (
+        <>
+        {formattedData.map(item => (
+            <div key={item.id}>
+            {item.title}
+            </div>
+        ))}
+        </>
+    )  
+}
+
+*****************
+
+What are differences between React.memo() and useMemo()?
+
+React.memo() is a higher-order component (HOC) that we can use to wrap components that we do not want to re-render unless props within them change
+
+useMemo() is a React Hook that we can use to wrap functions within a component. We can use this to ensure that the values within that function are re-computed only when one of its dependencies change
+
+*************
+
+What are production use cases for the useRef?
+
+useRef simply returns a plain Javascript object. Its value can be accessed and modified (mutability) as many times as you need without worrying about rerender.
+
+useRef value will persist (won't be reset to the initialValue unlike an ordinary object defined in your function component; it persists because useRef gives you the same object instead of creating a new one on subsequent renders) for the component lifetime and across re-renders.
+
+useRef hook is often used to store values instead of DOM references. These values can either be a state that does not need to change too often or a state that should change as frequently as possible but should not trigger full re-rendering of the component.
+
+const refObject = useRef(initialValue);
+
+
+***************
+
+When would you use useContext hook?
+
+React’s useContext hook makes it easy to pass data throughout your app without manually passing props down the tree. React Context is a way to manage state globally.
+
+import { useState, createContext } from "react";
+import ReactDOM from "react-dom/client";
+
+const UserContext = createContext()
+
+Wrap child components in the Context Provider and supply the state value.
+
+function Component1() {
+  const [user, setUser] = useState("Jesse Hall");
+
+  return (
+    <UserContext.Provider value={user}>
+      <h1>{`Hello ${user}!`}</h1>
+      <Component2 user={user} />
+    </UserContext.Provider>
+  );
+}
+
+Then you can access the user Context in all components:
+
+import { useState, createContext, useContext } from "react";
+
+function Component5() {
+  const user = useContext(UserContext);
+
+  return (
+    <>
+      <h1>Component 5</h1>
+      <h2>{`Hello ${user} again!`}</h2>
+    </>
+  );
+}
+
+*****************
+
+When writing a Custom Hook, what is the difference between it and a normal function?
+Hooks use a stateful closure around the invocation of the function component to store the state on behalf of that component instance. That closure is maintained by React.
+
+- Custom hook will only be "stateful" if you use state with useState inside (or something that implements useState),
+- Hooks should be called from the React code only not from the regular JS functions. Hence, Hooks' scope is limited to the React code world and has more power to do a lot with React code,
+- In the class-based components, the Hooks won't work but regular functions will.
+- In the regular JS functions, you can't access useState, useEffect, useContext etc. but in react custom hooks I can.
+
+***************
+
+What Are The 2 Rules You Must Follow While Using Hooks?
+There are 2 rules which are imposed while you are coding with Hooks:
+
+React Hooks should only be called at the Top Level. They shouldn’t be called inside loops, nested functions or conditions.
+Hooks can only be called from React Function Components.
+
+***************
+
+Call Hooks at the top level only:
+
+Make sure not to call Hooks within loops, nested functions, or conditions. It is important to note that Hooks must always be utilized at the superior level of the React functions. It suggests that Hooks are invoked in the same order every time a component is rendered.
+
+Call Hooks from React functions only:
+
+It is not allowed to call Hooks from standard JavaScript functions. The alternative is you can call Hooks from React function components. It is allowed to call Hooks from custom Hooks.
+
+**********
+
+useState
+The useState hook is used for managing state in functional components. It takes an initial value as an argument and returns an array with two values - the current state value and a function to update the state value
+
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  function increment() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+
+useEffect
+The useEffect hook is used for managing side effects in functional components. It takes a function as an argument and runs it after every render cycle. It can also take a second argument, an array of dependencies, to control when the function should be run.
+
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(time => time + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  return <p>Time: {time} seconds</p>;
+}
+
+useContext
+The useContext hook is used for consuming a context in functional components. It takes a context object as an argument and returns the current context value.
+
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
+
+function MyComponent() {
+  const value = useContext(MyContext);
+
+  return <p>{value}</p>;
+}
+
+
+useReducer
+The useReducer hook is used for managing complex state in functional components. It takes a reducer function and an initial state value as arguments and returns an array with two values - the current state value and a dispatch function to update the state value.
+
+import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+    </div>
+  );
+}
+
+
+useCallback
+The useCallback hook is used for optimizing performance in functional components. It takes a function and an array of dependencies as arguments and returns a memoized version of the function that only changes when the dependencies change.
+
+import React, { useState, useCallback } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(() => {
+    setCount(count => count + 1);
+  }, []);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+
+useMemo is a hook in React that is used to memoize the results of a function call. 
+Memoization is an optimization technique used to cache the results of a function call, so that the function doesn't have to be called again with the same arguments. useMemo is useful when you have a function that is expensive to compute and doesn't change frequently.
+
+Here's an example of how to use useMemo:
+
+import React, { useState, useMemo } from 'react';
+
+function Fibonacci({ n }) {
+  const [fib, setFib] = useState(0);
+
+  const calculateFibonacci = (n) => {
+    if (n <= 1) return n;
+    return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+  };
+
+  const memoizedFibonacci = useMemo(() => {
+    return calculateFibonacci(n);
+  }, [n]);
+
+  return (
+    <div>
+      <p>The {n}th Fibonacci number is {memoizedFibonacci}</p>
+      <button onClick={() => setFib(fib + 1)}>Calculate next number</button>
+    </div>
+  );
+}
+
+In this example, the Fibonacci component takes a prop n which is used to calculate the nth Fibonacci number. The calculateFibonacci function is used to calculate the Fibonacci number recursively.
+
+The useMemo hook is used to memoize the result of the calculateFibonacci function. The memoizedFibonacci variable will only be recomputed when the n prop changes. This means that if the component is rerendered due to some other state change, the memoizedFibonacci value will be reused instead of recalculated.
+
+Note that useMemo should only be used when the computation is expensive or if you need to avoid unnecessary re-renders. If the computation is cheap or if you want to recompute the value on every render, use const instead of useMemo.
+
+useRef is a hook in React that provides a way to access and store a mutable value that persists across component renders. It returns a mutable ref object that can be used to store any value, similar to how ref works in a class component.
+
+Here's an example of how to use useRef:
+
+import React, { useRef } from 'react';
+
+function TextInput() {
+  const inputRef = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(inputRef.current.value);
+    inputRef.current.value = '';
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Enter some text:
+        <input type="text" ref={inputRef} />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+In this example, the TextInput component renders a form with a text input field and a submit button. The useRef hook is used to create a reference to the input field.
+
+The handleSubmit function is called when the form is submitted. It logs the value of the input field to the console and then clears the input field by setting its value to an empty string.
+
+Note that useRef should only be used when you need to store a mutable value that persists across component renders. If you only need to store a value during a single render, use a normal variable instead.
+
+*************
+
+forwardRef is a higher-order component in React that allows a parent component to pass a ref down to one of its children. This is useful when you need to access the DOM node of a child component from the parent component.
+
+import React, { forwardRef } from 'react';
+
+const TextInput = forwardRef((props, ref) => {
+  return (
+    <input type="text" ref={ref} {...props} />
+  );
+});
+
+function ParentComponent() {
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <TextInput ref={inputRef} />
+      <button onClick={handleClick}>Focus input</button>
+    </div>
+  );
+}
+
+
+In this example, the TextInput component is wrapped in forwardRef. The ref argument is passed to the input element so that the parent component can access its DOM node.
+
+The ParentComponent component creates a ref using the useRef hook and passes it down to the TextInput component. When the button is clicked, the handleClick function is called, which focuses the input element by calling its focus method.
+
+Note that forwardRef should only be used when you need to pass a ref down to a child component. If you don't need to access the child component's DOM node from the parent component, you can use a normal component instead.
+
+*********************
+
+- What is Flexbox layout in React Native?
+
+Flexbox layout is a way of arranging and aligning elements within a container in React Native. It allows you to create responsive and flexible layouts that can adapt to different screen sizes and orientations.
+
+With flexbox layout, you can specify the alignment and distribution of items within a container using a set of properties such as justifyContent, alignItems, flexDirection, and flexWrap. These properties allow you to control the placement and sizing of elements, as well as the order in which they appear.
+
+For example, you can use the flexDirection property to specify whether the elements should be arranged horizontally or vertically, and the justifyContent and alignItems properties to control their alignment within the container. You can also use the flex property to assign a flexible size to an element, which allows it to expand or shrink to fill available space.
+
+Flexbox layout is a powerful and widely used layout system in React Native, and is essential for creating responsive and adaptable user interfaces.
+
+- How do you define a flex container in React Native?
+
+In React Native, you can define a flex container using the View component, which is a basic building block for creating UI components. To create a flex container, you simply need to set the display property of the View component to 'flex' and then use the various flex properties to control the layout of its child elements.
+
+Here's an example of how to define a flex container in React Native:
+
+import React from 'react';
+import { View } from 'react-native';
+
+const FlexContainer = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+      // child elements go here
+    </View>
+  );
+};
+
+export default FlexContainer;
+
+
+In this example, we've set the display property of the View component to 'flex', and then used the flexDirection, justifyContent, and alignItems properties to control the layout of its child elements. This particular example creates a flex container that arranges its child elements in a horizontal row, centers them both horizontally and vertically, and fills the available space of the container.
+
+You can customize the flex container by adjusting the values of these properties to achieve the desired layout for your particular use case.
+
+- What are the main properties used in Flexbox layout in React Native?
+
+In React Native, the main properties used in Flexbox layout are as follows:
+
+display: Determines the display behavior of the container element. When set to 'flex', the container becomes a flex container.
+
+flexDirection: Determines the direction of the main axis along which the child elements will be placed. It can be set to 'row' (horizontal) or 'column' (vertical).
+
+justifyContent: Determines how the child elements will be distributed along the main axis. It can be set to 'flex-start' (left or top), 'center' (centered), 'flex-end' (right or bottom), 'space-between' (evenly spaced with no extra space at the ends), or 'space-around' (evenly spaced with extra space at the ends).
+
+alignItems: Determines how the child elements will be aligned along the cross axis. It can be set to 'flex-start' (top or left), 'center' (centered), 'flex-end' (bottom or right), 'stretch' (stretches the elements to fill the container), or 'baseline' (aligns the baselines of the elements).
+
+flexWrap: Determines whether the child elements should wrap to a new line if they cannot fit within the container. It can be set to 'wrap' or 'nowrap'.
+
+alignContent: Determines how the rows or columns of elements are aligned when there is extra space on the cross axis. It can be set to 'flex-start', 'center', 'flex-end', 'space-between', 'space-around', or 'stretch'.
+
+flex: Determines the flexibility of an element. It is used to set the size of the element relative to the other elements in the container. It can be set to a number to specify a flex factor, or to 'auto' to automatically size the element based on its content.
+
+By using these properties in combination, you can create a wide variety of flexible and responsive layouts in React Native.
+
+- How do you center a child element horizontally in a flex container?
+
+To center a child element horizontally in a flex container in React Native, you can use the justifyContent property of the parent container and set its value to 'center'.
+
+Here's an example of how to center a child element horizontally in a flex container:
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const CenteredChild = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+      <Text>This element is centered horizontally</Text>
+    </View>
+  );
+};
+
+export default CenteredChild;
+
+- How do you center a child element vertically in a flex container?
+
+To center a child element vertically in a flex container in React Native, you can use the alignItems property of the parent container and set its value to 'center'.
+
+Here's an example of how to center a child element vertically in a flex container:
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const CenteredChild = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Text>This element is centered vertically</Text>
+    </View>
+  );
+};
+
+export default CenteredChild;
+
+In this example, we've set the alignItems property of the parent View container to 'center', which centers the child element vertically within the container. The child element is a Text component, but it could be any other type of component.
+
+You can also center a child element vertically by using the justifyContent property and setting its value to 'center', but this will only work if the flexDirection of the container is set to 'row'. If the flexDirection is set to 'column', you should use alignItems to center the element vertically.
+
+- How do you make a child element take up all the available space in a flex container?
+
+To make a child element take up all the available space in a flex container in React Native, you can use the flex property and set its value to a positive number.
+
+Here's an example of how to make a child element take up all the available space in a flex container:
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const FullWidthChild = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'row' }}>
+      <View style={{ flex: 1 }}>
+        <Text>This element takes up all the available space</Text>
+      </View>
+      <View style={{ flex: 1 }}>
+        <Text>This element also takes up all the available space</Text>
+      </View>
+    </View>
+  );
+};
+
+export default FullWidthChild;
+
+In this example, we've set the flex property of each child View element to 1, which makes them take up an equal amount of the available space within the parent container. The flexDirection of the parent View container is set to 'row', which places the child elements side by side.
+
+You can also use the flex property to control the relative size of child elements. For example, if you set the flex property of one child element to 2 and the other to 1, the first element will take up twice as much space as the second element.
+
+- How do you make a child element wrap to a new line in a flex container when it exceeds the available space?
+
+To make a child element wrap to a new line in a flex container when it exceeds the available space in React Native, you can use the flexWrap property of the parent container and set its value to 'wrap'.
+
+Here's an example of how to make a child element wrap to a new line in a flex container:
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const WrappingChild = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+      <Text style={{ width: 100 }}>This element will wrap to a new line when it exceeds the available space</Text>
+      <Text style={{ width: 100 }}>This element will also wrap to a new line when it exceeds the available space</Text>
+      <Text style={{ width: 100 }}>This element will wrap to a new line when it exceeds the available space</Text>
+    </View>
+  );
+};
+
+export default WrappingChild;
+
+In this example, we've set the flexWrap property of the parent View container to 'wrap', which allows child elements to wrap to a new line when they exceed the available space. The child elements are Text components, but they could be any other type of component.
+
+We've also set the width property of each child Text element to 100, which ensures that they exceed the available space and cause a wrap. You can adjust the width property of child elements as needed to control when wrapping occurs.
+
+- How do you change the order of child elements in a flex container?
+
+To change the order of child elements in a flex container in React Native, you can use the order property of each child element and set its value to an integer.
+
+Here's an example of how to change the order of child elements in a flex container:
+
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const ReorderedChildren = () => {
+  return (
+    <View style={{ display: 'flex', flexDirection: 'row' }}>
+      <Text style={{ order: 2 }}>This element is third in the row</Text>
+      <Text style={{ order: 3 }}>This element is fourth in the row</Text>
+      <Text style={{ order: 1 }}>This element is first in the row</Text>
+      <Text style={{ order: 4 }}>This element is last in the row</Text>
+    </View>
+  );
+};
+
+export default ReorderedChildren;
+
+
+In this example, we've set the order property of each child Text element to a different integer value, which changes the order in which they appear in the flex container. The flexDirection of the parent View container is set to 'row', which places the child elements side by side.
+
+You can set the order property of each child element to any integer value, positive or negative, to change their order in the flex container. Elements with a lower order value will appear first in the container, and elements with a higher order value will appear later. If two or more elements have the same order value, they will appear in the order they are defined in the source code.
+
+
+
+
+
+
+
+
+
+
+
+

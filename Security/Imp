@@ -16,3 +16,20 @@ https://developer.android.com/topic/security/best-practices
 https://www.tripwire.com/state-of-security/top-mobile-app-security-best-practices-developers
 https://www.maropost.com/8-best-practices-for-your-mobile-app-security-in-2022/
 https://www.clariontech.com/blog/top-8-best-practices-to-develop-secure-mobile-apps
+
+SSL (Secure Sockets Layer) and its successor, TLS (Transport Layer Security), are protocols for establishing authenticated and encrypted links between networked computers.
+SSL/TLS works by binding the identities of entities such as websites and companies to cryptographic key pairs via digital documents known as X.509 certificates. Each key pair consists of a private key and a public key. The private key is kept secure, and the public key can be widely distributed via a certificate.
+
+Understanding of pinning 
+Pinning is an optional mechanism that can be used to improve the security of a service or site that relies on SSL Certificates. Pinning allows specifying a cryptographic identity that should be accepted by users visiting site/app
+         
+Why do we need SSL pinning?
+
+One of the inherent risks to the SSL ecosystem is mis-issuance. This is when an unauthorized certificate is issued for a domain/host you control. This can happen with both public and private PKIs (Public Key Infrastructure)
+
+
+How is SSL pinning used in Mobile applications?
+When mobile applications communicate with the server, they typically use SSL to protect the transmitted data against tampering. By default SSL implementations used, apps trust any server with a certificate trusted by the Operating systems trust store, This store is a list of certificate authorities that are shipped with the operating system.
+
+With SSL pinning, however, the application is configured to reject all but one or few predefined certificates, whenever the application connects to a server, it compares the server certificate with the pinned certificate(s) , if and only if they match the server is trusted and SSL connection is established.
+
