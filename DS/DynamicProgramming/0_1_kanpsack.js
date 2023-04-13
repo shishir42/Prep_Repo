@@ -165,7 +165,7 @@ function knapsack_TopDown(capacity, weights, values, n) {
     return dp[n][sum];
   }
 
-  console.log(subsetSum([3, 1, 7, 5], 10));
+  console.log('subsetSum ' + subsetSum([3, 1, 7, 5], 10)); //return true or false
 
 
   console.log('*************************');

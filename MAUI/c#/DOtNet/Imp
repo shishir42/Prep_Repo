@@ -711,6 +711,19 @@ To enforce garbage collection in your code manually, you can run the following c
 
 System.GC.Collect();
 
+System.GC.Collect() is a method in .NET that forces a garbage collection to occur, freeing up memory that is no longer being used by the application. When System.GC.Collect() is called, the garbage collector starts a new collection cycle and collects any objects that are no longer being used by the application.
+
+Here's what happens when System.GC.Collect() is called:
+
+1. The garbage collector suspends all application threads to perform a garbage collection.
+2 .The garbage collector determines which objects are no longer being used by the application and can be safely collected.
+3. The garbage collector releases the memory used by the collected objects, making it available for reuse by the application.
+4. The garbage collector resumes all application threads and the application continues executing.
+
+It's important to note that calling System.GC.Collect() is not always necessary, as the garbage collector in .NET is designed to automatically manage memory and free up memory as needed. However, in some cases, calling System.GC.Collect() may be necessary to optimize memory usage and improve application performance.
+
+It's also worth mentioning that calling System.GC.Collect() too frequently can have a negative impact on performance, as it can cause unnecessary overhead by suspending and resuming application threads. It's generally recommended to let the garbage collector manage memory automatically, and only call System.GC.Collect() when necessary.
+
 ***
 What do the following acronyms in .NET stand for: IL, CIL, MSIL, CLI and JIT?
 
@@ -739,6 +752,32 @@ An interface merely declares a contract or a behavior that implementing classes 
 An abstract class provides a partial implementation for a functionality and some abstract/virtual members that must be implemented by the inheriting entities. It can declare fields too.
 
 Neither interfaces nor abstract classes can be instantiated.
+
+interfaces can be used in an abstract class in C#. An abstract class can implement one or more interfaces, just like a regular class.
+
+you can implement constructors in an abstract class in C#. However, an abstract class cannot be instantiated directly, so the constructor of an abstract class is typically used to initialize fields and other members that are shared by all derived classes.
+
+List out all the difference between Interface and an Abstract Class in .NET
+
+Interfaces and abstract classes are both used to define contracts in .NET, but they have some key differences in terms of their implementation and use. Here are the main differences between interfaces and abstract classes:
+
+Implementation: An interface only defines the signature of methods, properties, and events that a class must implement. It does not provide any implementation details. An abstract class, on the other hand, can provide a partial implementation of its methods, properties, and events, and can also include non-abstract members.
+
+Inheritance: A class can inherit from multiple interfaces, but it can only inherit from a single abstract class. This is because a class can only have one direct parent, while it can implement multiple interfaces.
+
+Constructors: An interface does not have constructors, while an abstract class can have constructors that are called when a derived class is instantiated.
+
+Access Modifiers: All members of an interface are public by default, while members of an abstract class can have various access modifiers, such as public, protected, private, or internal.
+
+Multiple Implementations: A class can implement multiple interfaces, but it can only inherit from one abstract class.
+
+Implementation Details: An interface does not provide any implementation details and does not contain fields, while an abstract class can provide a partial implementation of its members and can include fields.
+
+Inheritance vs Polymorphism: Abstract classes are used to provide a common base class for a family of related classes, while interfaces are used to define a contract for unrelated classes to implement. Abstract classes support inheritance, while interfaces support polymorphism.
+
+Purpose: Abstract classes are used to provide a common base class for a family of related classes, while interfaces are used to define a contract for unrelated classes to implement.
+
+In summary, both interfaces and abstract classes are useful in different scenarios. Interfaces are used to define a contract that a class must implement, while abstract classes are used to provide a common base class for a family of related classes.
 
 ***
 Explain deferred execution vs. immediate execution in LINQ. Provide examples.
@@ -942,6 +981,54 @@ Resource usage: Creating and managing threads can be expensive in terms of resou
 Synchronization: Thread provides low-level synchronization constructs such as Monitor, Semaphore and ManualResetEvent which can be used to control access to shared resources. Task provides higher-level constructs such as async/await, TaskCompletionSource, and the Concurrent collections to simplify synchronization.
 
 Exception Handling: When an exception is thrown from a thread, it can be difficult to handle because threads are typically not associated with a specific context. Task provides a built-in exception handling mechanism that allows exceptions to be propagated and caught more easily.
+
+In C#, when using Task for asynchronous programming, you can handle exceptions in the following ways:
+
+1. Use the try-catch block: You can wrap the code that might throw an exception in a try block and catch any exceptions in the catch block. For example:
+
+Task.Run(() =>
+{
+    try
+    {
+        // Code that might throw an exception
+    }
+    catch (Exception ex)
+    {
+        // Handle the exception
+    }
+});
+
+
+2. Use the Task.ContinueWith method: You can use the Task.ContinueWith method to attach a continuation task that will be executed after the original task has completed, whether it completes successfully or with an exception. The continuation task can then handle any exceptions that occurred in the original task. For example:
+
+Task.Run(() =>
+{
+    // Code that might throw an exception
+}).ContinueWith(task =>
+{
+    if (task.Exception != null)
+    {
+        // Handle the exception
+    }
+});
+
+In this example, the ContinueWith method creates a new task that will execute after the original task has completed. If the original task threw an exception, the Exception property of the continuation task will be set, and you can handle the exception in the if statement.
+
+3. Use the async/await pattern: When using async/await, any exceptions that occur in the awaited task are automatically propagated up the call stack to the calling method, and can be caught using a try-catch block. For example:
+
+try
+{
+    await Task.Run(() =>
+    {
+        // Code that might throw an exception
+    });
+}
+catch (Exception ex)
+{
+    // Handle the exception
+}
+
+In this example, the await keyword is used to asynchronously wait for the completion of the Task returned by Task.Run. If an exception occurs in the Task, it will be propagated up to the catch block, where it can be handled.
 
 Cancellation: Task provides built-in support for cancellation through the use of a CancellationToken. Thread does not provide built-in support for cancellation.
 

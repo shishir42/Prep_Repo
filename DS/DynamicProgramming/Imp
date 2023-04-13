@@ -43,8 +43,26 @@ Select the item in such a way that you can have maximize your profit with in lim
 
 Unbounded Knapsack (5)
 - Rod cutting
-- Coin change
-- Coin change II
+- Coin change (Max no of ways)
+- Coin change II (min number of coins)
 - Maximum Ribbon cut 
+
+
+Longest common subsequence Introduction
+- Largest common substring
+- print LCS
+- shortest common super-sequence 
+- print scs
+- min no of insertion and deletion a->b
+- largest repeating subsequence 
+- length of largest subsequence of a which is a substring 
+- subsequence pattern matching 
+- count how many times 'a' appear as subsequence in 'b'
+- largest palindrome subsequence 
+- largest palindrome substring 
+- count of palindrome subsequence 
+- count of palindrome substring 
+- min no of deletion in a string to make it a palindrome 
+- min no of insertion in a string to make it a palindrome
 
 

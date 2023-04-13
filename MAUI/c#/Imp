@@ -36,6 +36,33 @@ Topics:
 34. Serialization 
 35. 
 
+Xamarin.Forms Layouts (StackLayout, Grid, AbsoluteLayout, RelativeLayout, etc.)
+Xamarin.Forms Views (Label, Button, Entry, Picker, Slider, Switch, etc.)
+Xamarin.Forms Pages (ContentPage, NavigationPage, TabbedPage, CarouselPage, etc.)
+Data Binding in Xamarin.Forms
+MVVM (Model-View-ViewModel) architecture in Xamarin.Forms
+Xamarin.Forms Navigation (Push, Pop, Modal, Master-Detail, etc.)
+Customizing Xamarin.Forms Controls
+Platform-Specific Implementations in Xamarin.Forms
+XAML (Extensible Application Markup Language) in Xamarin.Forms
+Xamarin.Forms Animations and Effects
+Custom Renderers in Xamarin.Forms
+Effects in Xamarin.Forms
+Behaviors in Xamarin.Forms
+Dependency Injection in Xamarin.Forms
+Xamarin.Forms MessagingCenter
+Xamarin.Forms Shell
+Xamarin.Forms CollectionView
+Xamarin.Forms SwipeView
+Xamarin.Forms FlexLayout
+Xamarin.Forms Accessibility
+Xamarin.Forms Continuous Integration and Deployment
+Xamarin.Forms Unit Testing and UI Testing
+Xamarin.Forms Hot Reload and Hot Restart
+Xamarin.Forms Performance Optimization
+Xamarin.Forms Localization
+Service dependency 
+
 System Design 
 https://www.linkedin.com/feed/update/urn:li:activity:7046804930434650112?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046804930434650112%29
 https://www.linkedin.com/feed/update/urn:li:activity:7046722652450766849?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7046722652450766849%29
