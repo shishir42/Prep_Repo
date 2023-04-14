@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Design;
 namespace consoleproject
 {
     public class Program
@@ -89,6 +90,32 @@ namespace consoleproject
 
             int len = LCS.LCSRecursiveMemorize(x, y, n1, m1, dpLCS);
             Console.WriteLine("LCS - Length of common subsequence Memorize : " + len);
+
+            int len1 = LCS.LCSTopDownApproach(x, y, n1, m1);
+            Console.WriteLine("LCS - Length of common subsequence Top Down Approach : " + len1);
+
+            int len2 = LCS.LongestCommonSubstring(x, y, n1, m1);
+            Console.WriteLine("LCS - Length of common substring Top Down Approach : " + len2);
+
+            string x1 = "acbcf";
+            string y1 = "abcdaf";
+            // string x1 = "AGGTAB";
+            // string y1 = "GXTXAYB";
+            String s = LCS.LCSPrint(x1,y1,x1.Length,y1.Length);
+            Console.WriteLine("LCS - Print common substring Top Down Approach : " + s);
+
+            string x2 = "AGGTAB";
+            string y2 = "GXTXAYB";
+            int shortestLength = LCS.ShortestCommonSuperSequence(x2,y2);
+            Console.WriteLine("LCS - ShortestCommonSuperSequence : " + shortestLength);
+
+            //Minimum Number of Insertion and Deletion to convert String a to String b
+            string x3 = "heap";
+            string y3 = "pea";
+            LCS.MinDelAndInsert(x3,y3);
+
+            Console.WriteLine("**************Design***************");
+            DesignParkingSystem.Test();
         }
     }
 }

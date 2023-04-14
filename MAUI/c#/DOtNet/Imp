@@ -1054,7 +1054,7 @@ In summary, the IDisposable interface is used to release unmanaged resources hel
 
 ***
 When should we use .NET Core and .NET Standard Class Library project types?
-n general, you should use .NET Core and .NET Standard Class Library project types when you want to create a reusable library that can be used by multiple .NET platforms.
+In general, you should use .NET Core and .NET Standard Class Library project types when you want to create a reusable library that can be used by multiple .NET platforms.
 
 .NET Standard Class Library project type is used when you want to create a library that can be used across multiple platforms, including .NET Framework, .NET Core, and Xamarin. This project type targets a specific version of the .NET Standard specification, which defines a set of APIs that are common across all .NET platforms. When you create a .NET Standard Class Library, you can choose the minimum version of the .NET Standard specification that you want to target, and any platform that supports that version or higher will be able to use your library.
 
@@ -1527,7 +1527,18 @@ String Interpolation in C# allows to create formatted strings with readable and 
 ****
 
 What are Covariance and Contravariance in C#?
-While covariance allows a method to have a return type, a subtype of the one defined in the delegate, contravariance allows a method to have a parameter type, i.e., a base type of the one defined in the delegate type.
+Covariance allows you to assign a more derived (more specific) type to a less derived (more general) type. This is possible when the more derived type is being used in a way that is consistent with the less derived type. For example, in C#, arrays are covariant. This means that you can assign an array of a more derived type to an array of a less derived type, as long as the array is being used in a read-only context.
+
+string[] strArray = new string[] { "foo", "bar", "baz" };
+object[] objArray = strArray; // covariance: string[] is assigned to object[]
+
+Contravariance, on the other hand, allows you to assign a less derived (more general) type to a more derived (more specific) type. This is possible when the less derived type is being used in a way that is consistent with the more derived type. Contravariance is less common in C# than covariance, but it can be useful in certain scenarios, such as with delegate types.
+
+delegate void MyDelegate(object obj);
+void Foo(string str) { Console.WriteLine(str); }
+MyDelegate d = Foo; // contravariance: method with parameter of type string is assigned to delegate with parameter of type object
+
+In summary, covariance and contravariance allow you to assign or convert types in certain scenarios where the more or less derived type is being used in a way that is consistent with the other type.
 
 ****
 What is a race condition in C#

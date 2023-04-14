@@ -46,6 +46,91 @@
 ➡️ If the problem is related to a LinkedList and we can't use extra space, then use the Fast & Slow Pointer approach.
 
 
+There are multiple ways to solve the subarray sum equal to k problem, some of which are more efficient than others depending on the input size and specific requirements of the problem. Here are a few approaches:
+
+Brute Force Approach: The brute force approach involves considering all possible subarrays and checking if their sum equals "k". This approach has a time complexity of O(n^2) where "n" is the length of the input array "nums".
+
+Prefix Sum Approach: The prefix sum approach involves computing the prefix sum of the array and then checking if there is a subarray with a sum equal to "k" by finding pairs of prefix sums that differ by "k". This approach has a time complexity of O(n) where "n" is the length of the input array "nums".
+
+Hash Table Approach: The hash table approach involves using a hash table to store the frequency of prefix sums seen so far and then checking if the difference between the current prefix sum and "k" is present in the hash table. This approach also has a time complexity of O(n) where "n" is the length of the input array "nums".
+
+Two Pointer Approach: The two pointer approach involves using two pointers to maintain a sliding window of the subarray and checking if the sum of the subarray equals "k". This approach has a time complexity of O(n) where "n" is the length of the input array "nums".
+
+Dynamic Programming Approach: The dynamic programming approach involves using dynamic programming to solve the problem by defining a recurrence relation based on the previous subproblems. This approach has a time complexity of O(n^2) and a space complexity of O(n), where "n" is the length of the input array "nums".
+
+There may be other variations and combinations of these approaches, but these are some of the most common ones used to solve the subarray sum equal to k problem.
+
+1. 𝐒𝐥𝐢𝐝𝐢𝐧𝐠 𝐖𝐢𝐧𝐝𝐨𝐰:
+    #3. Longest Substring Without Repeating Characters
+    #209. Minimum Size Subarray Sum
+    #438. Find All Anagrams in a String
+    #76. Minimum Window Substring
+    #567. Permutation in String
+    #727. Minimum Window Subsequence
+    #992. Subarrays with K Different Integers
+
+2. 𝐓𝐰𝐨 𝐏𝐨𝐢𝐧𝐭𝐞𝐫𝐬:
+    #1. Two Sum
+    #42. Trapping Rain Water
+    #15. 3Sum
+    #16. 3Sum Closest
+    #18. 4Sum
+    #167. Two Sum II - Input array is sorted
+    #633. Sum of Square Numbers
+
+3. 𝐅𝐚𝐬𝐭 𝐚𝐧𝐝 𝐒𝐥𝐨𝐰:
+    #70. Climbing Stairs
+    #509. Fibonacci Number
+    #876. Middle of the Linked List
+    #142. Linked List Cycle II
+    #19. Remove Nth Node From End of List
+    #876. Middle of the Linked List
+    #234. Palindrome Linked List
+
+4. 𝐌𝐞𝐫𝐠𝐞 𝐈𝐧𝐭𝐞𝐫𝐯𝐚𝐥𝐬:
+    #56. Merge Intervals
+    #57. Insert Interval
+    #435. Non-overlapping Intervals
+    #252. Meeting Rooms
+    #253. Meeting Rooms II
+    #352. Data Stream as Disjoint Intervals
+    #616. Add Bold Tag in String
+
+5. 𝐂𝐲𝐜𝐥𝐞 𝐒𝐨𝐫𝐭:
+    #442. Find All Duplicates in an Array
+    #41. First Missing Positive
+    #287. Find the Duplicate Number
+    #448. Find All Numbers Disappeared in an Array
+    #645. Set Mismatch
+    #153. Find Minimum in Rotated Sorted Array
+    #324. Wiggle Sort II
+
+6.𝐑𝐞𝐯𝐞𝐫𝐬𝐚𝐥 𝐨𝐟 𝐋𝐢𝐧𝐤𝐞𝐝 𝐋𝐢𝐬𝐭:
+    #206. Reverse Linked List
+    #24. Swap Nodes in Pairs
+    #25. Reverse Nodes in k-Group
+    #92. Reverse Linked List II
+    #61. Rotate List
+    #143. Reorder List
+    #234. Palindrome Linked List
+
+7.𝐓𝐫𝐞𝐞 𝐁𝐅𝐒:
+    #102. Binary Tree Level Order Traversal
+    #107. Binary Tree Level Order Traversal II
+    #199. Binary Tree Right Side View
+    #111. Minimum Depth of Binary Tree
+    #404. Sum of Left Leaves
+    #515. Find Largest Value in Each Tree Row
+    #116. Populating Next Right Pointers in Each Node
+
+
+Main: 
+https://github.com/ashuray/InterviewRoom
+https://github.com/Ishan-sinha/DSA-for-SDE-interview
+https://github.com/ankushchimnani/DSA-Must-Do-Questions
+
+
+
 https://algo.monster/problems/stats
 
 https://dev.to/codewithsom/10-golden-rules-for-solving-a-coding-question-in-an-interview--23ck

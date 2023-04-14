@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace consoleproject
 {
     public class LCS
@@ -47,5 +49,206 @@ namespace consoleproject
 
             return dp[n,m];
         }
+    
+        public static int LCSTopDownApproach(string x, string y, int m, int n)
+        {
+            int[,] dp = new int[m+1,n+1];
+
+            for(int i = 0; i<m+1; i++)
+            {
+                for(int j = 0; j<n+1; j++)
+                {
+                    if(i == 0 || j == 0)
+                    {
+                        dp[i,j] = 0;
+                    }
+                }
+            }
+
+            for(int i=1; i<m+1; i++)
+            {
+                for(int j=1; j<n+1; j++)
+                {
+                    if(x[i-1] == y[j-1])
+                    {
+                        dp[i,j] = 1 + dp[i-1,j-1];
+                    }
+                    else
+                    {
+                        int val = Math.Max(dp[i, j-1], dp[i-1,j]);
+                        dp[i,j] = val;
+                    }
+                }
+            }
+
+            return dp[m,n];
+        }
+    
+        public static int LongestCommonSubstring(string x, string y, int m, int n)
+        {
+            //Initialization 
+            int[,] dp = new int[m+1, n+1];
+            int count = 0;
+            for (int i = 0; i < m+1; i++)
+            {
+                for (int j = 0; j < n+1; j++)
+                {
+                    if(i == 0 || j == 0)
+                    {
+                        dp[i,j] = 0;
+                    }   
+                }
+            }
+
+            for (int i = 1; i < m+1; i++)
+            {
+                for (int j = 1; j < n+1; j++)
+                {
+                    if(x[i-1] == y[j-1])
+                    {
+                        dp[i,j]  = 1 + dp[i-1,j-1];
+                        count = Math.Max(dp[i,j], count);
+                    }
+                    else
+                    {
+                        dp[i,j] = 0;
+                    }
+                }
+            }
+
+            return count;
+        }
+    
+        public static string? LCSPrint(string x, string y, int m, int n)
+        {
+            //Initialized
+            int[,] dp = new int[m+1, n+1];
+            for(int i=0; i<m+1; i++)
+            {
+                for(int j=0; j<n+1; j++)
+                {
+                    if(i == 0 || j == 0)
+                    {
+                        dp[i,j] = 0;
+                    }
+                }
+            }
+
+            for(int i = 1; i<m+1; i++)
+            {
+                for(int j=1; j<n+1; j++)
+                {
+                    if(x[i-1] == y[j-1])
+                    {
+                        dp[i,j] = 1 + dp[i-1,j-1];
+                    }
+                    else
+                    {
+                        dp[i,j] = Math.Max(dp[i-1,j], dp[i,j-1]);
+                    }
+                }
+            }
+
+            int ii=m, jj=n;
+            string s = "";
+            while(ii>0 && jj>0)
+            {
+                if(x[ii-1] == y[jj-1])
+                {
+                    s += x[ii-1];
+                    ii--;
+                    jj--; 
+                }
+                else
+                {
+                    if(dp[ii,jj-1] > dp[ii-1,jj])
+                    {
+                        jj--;
+                    }
+                    else
+                    {
+                        ii--;
+                    }
+                }
+            }
+
+            while (ii > 0) {
+                s += x[ii-1];
+                ii--;
+            }
+            while (jj > 0) {
+                s += y[jj-1];
+                jj--;
+            }
+
+            //AGGXTXAYB
+            return ReversString(s);
+        }    
+
+        public static int  ShortestCommonSuperSequence(string x, string y)
+        {
+            int m = x.Length;
+            int n = y.Length;
+            int shortestLength = (m+n)-LCSTopDownApproach(x,y,m,n);
+            return shortestLength;
+        }
+
+        //Minimum Number of Insertion and Deletion to convert String a to String b
+        public static void MinDelAndInsert(string x, string y)
+        {
+            int m = x.Length;
+            int n = y.Length;
+            int lcs = LCSTopDownApproach(x,y,m,n);
+
+            Console.WriteLine($"Minimum no of deletion {m-lcs}");
+            Console.WriteLine($"Minimum no of insertion {n-lcs}");
+        }
+
+        public static int LongestPalindromicSubsequence(string x)
+        {
+            return 0;
+        }
+
+        public static string ReversString(string str)
+        {
+            char[] charArray = str.ToCharArray();
+            int leftIndex = 0;
+            int rightIndex = charArray.Length - 1;
+            while (leftIndex < rightIndex)
+            {
+                char temp = charArray[leftIndex];
+                charArray[leftIndex] = charArray[rightIndex];
+                charArray[rightIndex] = temp;
+                leftIndex++;
+                rightIndex--;
+            }
+            string reversedString = new string(charArray);
+            return reversedString;
+        }
+        public static void Reversed()
+        {
+            Stack<int> stack = new Stack<int>();
+            int[] sequence = { 1, 2, 3, 4, 5 };
+            foreach (int element in sequence)
+            {
+                stack.Push(element);
+            }
+
+            List<int> reversedSequence = new List<int>();
+            while (stack.Count > 0)
+            {
+                reversedSequence.Add(stack.Pop());
+            }
+
+            // Output the reversed sequence
+            foreach (int element in reversedSequence)
+            {
+                Console.Write(element + " ");
+            }
+            // Output: 5 4 3 2 1
+
+        }
     }
 }
+
+//https://leetcode.com/problems/shortest-common-supersequence/solutions/3362455/best-o-n-m-solution/
