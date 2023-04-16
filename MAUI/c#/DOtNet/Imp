@@ -2252,6 +2252,14 @@ What is an object pool?
 - An object pool is based on the object pool design pattern in which instead of every time creating objects when needed, commonly used objects are created beforehand and kept in an easily accessible location. This is done to reduce the cost of the application as creating objects can use a lot of resources and can sometimes lead to the slowness of the .NET application. 
 - The objects of the pool are returned to the pool, once the use is over, thus making it efficient to reuse them. If the object is not in the pool, it is then created when needed as a normal object.
 
+Both thread pool and object pool are used in software development to optimize performance and resource utilization. However, they are used for different purposes and have different implementations.
+
+A thread pool is a collection of threads that are created beforehand and maintained by a program or system. Threads are added to the pool when they are not in use and are available for executing tasks when needed. This is done to reduce the overhead of creating new threads every time a task needs to be executed. Thread pools are commonly used in server applications, where multiple clients may connect and disconnect at any time.
+
+An object pool, on the other hand, is a collection of pre-initialized objects that are stored in memory and reused when needed. This is done to avoid the overhead of creating new objects every time they are required. Object pools are commonly used in systems where the creation of new objects is expensive, such as database connections, network sockets, or graphics resources.
+
+In summary, while both thread pool and object pool are used to optimize performance and resource utilization, they are used for different purposes. Thread pool is used to reduce the overhead of creating new threads, while object pool is used to avoid the overhead of creating new objects.
+
 ****
 What is a delegate?
 A delegate is a reference type entity that is used to store the reference of a method. So whenever you need to call a method, you can easily use the delegate by initializing a pointer to that method, thereby helping to implement Encapsulation.
@@ -2312,6 +2320,18 @@ namespace DelegateExample {
 }
 
 Delegates in C# are similar to function pointers in C/C++ and can be used to pass methods as arguments to other methods, chained together, or even can be used to call methods on events.
+
+Encapsulation: Delegates allow you to encapsulate a method call, which means you can pass a method as a parameter to another method, and the method that receives the delegate can execute it without knowing anything about the method it calls.
+
+Flexibility: Delegates are extremely flexible and can be used to handle a wide variety of scenarios. For example, you can use delegates to implement event handling, asynchronous programming, and more.
+
+Code Reusability: With delegates, you can reuse a method by passing it to multiple methods. This can save time and effort in the long run, since you don't have to write the same code over and over again.
+
+Loose Coupling: Delegates help in loose coupling of code. Since the delegate provides an abstraction over the method that is called, it reduces the coupling between the caller and the callee.
+
+Easy to Extend: Delegates can be easily extended to handle new scenarios, such as adding new methods to a collection of delegates or combining multiple delegates into a single delegate.
+
+Improved Performance: Delegates can improve performance by allowing you to pass methods as parameters to other methods. This eliminates the need for expensive reflection-based techniques, which can be slower and more memory-intensive.
 
 *****
 
@@ -3198,24 +3218,19 @@ String escape sequences are as follows:
 \’’ – Double Quote
 
 ****
-
 What are the different types of Delegates?
 
 Answer: Different types of Delegates are:
 
 Single Delegate: A delegate that can call a single method.
+
 Multicast Delegate: A delegate that can call multiple methods. + and – operators are used to subscribe and unsubscribe respectively.
+
 Generic Delegate: It does not require an instance of the delegate to be defined. It is of three types, Action, Funcs and Predicate.
-Action– In the above example of delegates and events, we can replace the definition of delegate and event using Action keyword. The Action delegate defines a method that can be called on arguments but does not return a result
 
-What are the different types of Delegates?
+Action– In the above example of delegates and events, we can replace the definition of delegate and event using 
 
-Answer: Different types of Delegates are:
-
-Single Delegate: A delegate that can call a single method.
-Multicast Delegate: A delegate that can call multiple methods. + and – operators are used to subscribe and unsubscribe respectively.
-Generic Delegate: It does not require an instance of the delegate to be defined. It is of three types, Action, Funcs and Predicate.
-Action– In the above example of delegates and events, we can replace the definition of delegate and event using Action keyword. The Action delegate defines a method that can be called on arguments but does not return a result
+Action keyword. The Action delegate defines a method that can be called on arguments but does not return a result
 Public delegate void deathInfo();
 Public event deathInfo deathDate;
 //Replacing with Action//
@@ -3243,7 +3258,7 @@ Answer: Synchronization is a way to create a thread-safe code where only one thr
 
 Synchronous programming badly affects the UI operations when the user tries to perform time-consuming operations since only one thread will be used. In Asynchronous operation, the method call will immediately return so that the program can perform other operations while the called method completes its work in certain situations.
 
-In C#, Async and Await keywords are used to achieve asynchronous programming. Look at Q #43 for more details on synchronous programming.
+In C#, Async and Await keywords are used to achieve asynchronous programming.
 
 ****
 
@@ -3703,7 +3718,9 @@ Dependency injection is a design pattern. Instead of creating an object of a cla
 There are three ways to achieve dependency injection:
 
 Constructor injection: This is the most commonly used Injection type. In constructor injection, we can pass the dependency into the constructor. We have to make sure that we do not have a default constructor here, and the only one should be a parameterized constructor.
+
 Property injection: There are cases when we need the default constructor of a class, so in that case, we can use property injection.
+
 Method injection: In method injection, we need to pass the dependency in the method only. When the entire class does not require that dependency, there is no need to implement constructor injection. When we have a dependency on multiple objects, then instead of passing that dependency in the constructor, we pass that dependency in the function itself where it is required.
 
 *****
@@ -3794,6 +3811,7 @@ increase performance.
 increase type safety.
 reduce repeated code.
 make reusable code.
+
 Using generics, we can create collection classes. It is preferred to use System.Collections.Generic namespace instead of classes such as ArrayList in the System.Collections namespace to create a generic collection.
 
 Generics encourage the usage of parameterized types as seen in the example below:
@@ -3914,8 +3932,6 @@ POCO stands for Plain Old CLR Objects. A POCO is a class that doesn’t depend o
 What is a DTO?
 A Data Transfer Object (commonly known as a DTO) is usually an instance of a POCO (plain old CLR object) class used as a container to encapsulate data and pass it from one layer of the application to another. You would typically find DTOs being used in the service layer (backend) to return data back to the presentation layer (frontend).
 
-Referring to the above questions and answers gives us in-depth knowledge of all essential concepts of C# language. These technical answers can help to sharpen our knowledge and help to increase our comprehension of the language. If you need to brush up on C#, a bootcamp or refresher course can help.
-
 ****
 
 What are Nullable types?
@@ -3947,7 +3963,27 @@ A: A safe code is the one that runs by the management of CLR; and, an unsafe cod
 *****
 
 Can multiple catch blocks be implemented?
-A: Multiple catch blocks cannot be implemented. Once you execute the proper catch code, the control is moved to the final block. After this, the code following the final block is implemented.
+
+try
+{
+    // Some code that might throw exceptions
+}
+catch (ArgumentNullException ex)
+{
+    // Handle the ArgumentNullException
+    Console.WriteLine("ArgumentNullException: " + ex.Message);
+}
+catch (DivideByZeroException ex)
+{
+    // Handle the DivideByZeroException
+    Console.WriteLine("DivideByZeroException: " + ex.Message);
+}
+catch (Exception ex)
+{
+    // Handle any other exception
+    Console.WriteLine("Exception: " + ex.Message);
+}
+
 
 
 ****
@@ -4107,6 +4143,9 @@ It has good support for asynchronous programming
 Support WebSocket and SignalR
 
 Provide protection against CSRF (Cross-Site Request Forgery)
+
+CSRF (Cross-Site Request Forgery) is a type of web application vulnerability where a malicious website or attacker tricks a user into performing an unwanted action on another website where the user is currently authenticated. This type of attack is possible because most web applications use session-based authentication, where the session cookie is sent with every request to the server.
+
 
 ****
 
@@ -4271,7 +4310,7 @@ Step 3: Use this service as a dependency in the controller
 
  ******
 
- How to specify the service life for a registered service that is added as a dependency?
+How to specify the service life for a registered service that is added as a dependency?
 ASP.NET Core allows us to specify the lifetime for registered services. The service instance gets disposed of automatically based on a specified lifetime. So, we do not care about the cleaning these dependencies, it will take care of the ASP.NET Core framework. There are three types of lifetimes.
 
 Singleton
@@ -4279,16 +4318,23 @@ ASP.NET Core will create and share a single instance of the service through the 
 
 Example
  services.AddSingleton<IHelloWorldService, HelloWorldService>();
+
 Transient
 ASP.NET Core will create and share an instance of the service every time to the application when we ask for it. The service can be added as Transient using the AddTransient method of IServiceCollection. This lifetime can be used in stateless service. It is a way to add lightweight service.
 
 Example
  services.AddTransient<IHelloWorldService, HelloWorldService>();
+
 Scoped
 ASP.NET Core will create and share an instance of the service per request to the application. It means that a single instance of service is available per request. It will create a new instance in the new request. The service can be added as scoped using an AddScoped method of IServiceCollection. We need to take care while the service registered via Scoped in middleware and inject the service in the Invoke or InvokeAsync methods. If we inject dependency via the constructor, it behaves like a singleton object.
 
 services.AddScoped<IHelloWorldService, HelloWorldService>();
 
+Singleton: The Singleton lifetime means that only one instance of the service is created and used throughout the lifetime of the application. It is shared across all the classes and methods that request it. This is suitable for services that are expensive to create or that should be shared across the entire application, such as a database connection, caching service, or configuration settings.
+
+Transient: The Transient lifetime means that a new instance of the service is created each time it is requested. This is useful for services that have a short lifespan, are lightweight, or are stateless, such as a simple logger or a calculator service.
+
+Scoped: The Scoped lifetime means that a new instance of the service is created for each scope. A scope is typically defined as a request or a unit of work. This is useful for services that need to maintain state within a particular scope, such as a database transaction or an HTTP request.
 *******
 
 What is MVC (Model View Controller)?
@@ -4357,13 +4403,6 @@ One of the key advantages of using ASP.NET MVC is that it is built on top of the
 ****
 
 ASP.NET	
-ASP.NET MVC Interview Questions
-C# Curator C# Curator  Aug 03, 2022
-   8.3m 66 140 
-
-Download Free .NET & JAVA Files API
-MVC Interview Questions
-If you're planning to attend a .NET Interview, you may also be prepared for ASP.NET MVC interview questions. MVC is the framework used to build Web applications for .NET and C#. In this article, I list the top 50 MVC questions and their answers. The answers are code examples written by authors of C# Corner.  
 
 1. What is MVC (Model View Controller)?
 Model–view–controller (MVC) is a software architectural pattern for implementing user interfaces. It divides a given software application into three interconnected parts, so as to separate internal representation of information from the way that information is presented to or accepted from the user.
@@ -4464,6 +4503,30 @@ This phase has two steps executing the action and finally sending the response a
 
 https://f4n3x6c5.stackpathcdn.com/UploadFile/puranindia/ASP-NET-MVC-Interview-Questions/Images/view.jpg
 
+Here is the complete ASP.NET MVC application life cycle:
+
+Request Handling:
+The request is received by the web server.
+The ASP.NET runtime creates an instance of the HttpApplication class.
+The HttpApplication instance raises the BeginRequest event.
+The URL routing module maps the URL to an appropriate route handler.
+The controller factory creates an instance of the controller, if not already created, and returns it to the MvcHandler.
+
+Controller Execution:
+The MvcHandler calls the controller's Execute method.
+The controller determines the appropriate action method to execute based on the URL.
+The action method executes and returns an instance of the ActionResult class.
+The controller's OnActionExecuted method is called.
+
+Response Handling:
+The MvcHandler receives the ActionResult from the controller.
+The ActionResult's ExecuteResult method is called.
+The view engine renders the view.
+The view is returned to the MvcHandler.
+The MvcHandler writes the response to the client.
+The HttpApplication instance raises the EndRequest event.
+
+
 ******
 
 List out different return types of a controller action method?
@@ -4522,10 +4585,13 @@ ASP.NET MVC framework supports the following action filters,
 
 Action Filters
 Action filters are used to implement logic that gets executed before and after a controller action executes. We will look at Action Filters in detail in this chapter.
+
 Authorization Filters
 Authorization filters are used to implement authentication and authorization for controller actions.
+
 Result Filters
 Result filters contain logic that is executed before and after a view result is executed. For example, you might want to modify a view result right before the view is rendered to the browser.
+
 Exception Filters
 Exception filters are the last type of filter to run. You can use an exception filter to handle errors raised by either your controller actions or controller action results. You can also use exception filters to log errors.
 Action filters are one of the most commonly used filters to perform additional data processing, or manipulating the return values or canceling the execution of an action or modifying the view structure at run time.
@@ -4645,8 +4711,8 @@ It contains the layout page.
 Before any view is rendered, viewstart page is rendered.
 A view might have markup tags like body, HTML, head, title, meta etc.
 The view is not lightweight as compare to Partial View.
-Partial View
 
+Partial View
 It does not contain the layout page.
 Partial view does not verify for a viewstart.cshtml.We cannot put common code for a partial view within the viewStart.cshtml.page.
 Partial view is designed specially to render within the view and just because of that it does not consist any mark up.
@@ -4855,9 +4921,13 @@ The latest version of .NET Core is .NET Core 6.0, and its release date is July 1
 
 Share specific features of .NET Core?
 .NET Core has these 4 specific features:
+
 Cross-platform: It supports various platforms and is executable on windows, macOS, and Linux. You can easily port the codes from one platform to another platform.
+
 Flexibility: You can easily include codes in the desired app or install them per requirements. It means you can use one single consistent API model for all .NET applications with the help of the same library on various platforms.
+
 Open Source: You can use it by downloading it from the Github library. You don't need to pay to purchase a license. The framework has been licensed under MIT and Apache.
+
 Command-line tools: You can efficiently execute applications at the command line.
  
 
@@ -4877,7 +4947,9 @@ Discuss critical components in .NET Core?
 Since .NET Core is a modular platform thus, its components could be stacked into these three layers:
 
 A .Net runtime: It consists of different runtime libraries that allow you to perform functions such as type safety, load assemblies, garbage collections etc.
+
 A collection of Framework libraries: It also consists of libraries that offer utilities, primitive data types, etc.
+
 A collection of SDK tools and compilers: It permits you to work with .NET Core SDK quickly.
 This stack could be divided into these four components:
 
@@ -5008,8 +5080,6 @@ https://www.hackertrail.com/wp-content/uploads/2022/05/request-delegate-pipeline
 
 What are service lifetimes in .NET Core?
 .NET Core supports a design pattern called ‘Dependency Injection’ which helps in the implementation of IoC(Inversion of Control). During registration, dependencies require their lifetime to be defined. The lifetime of service decides under what condition the instance of the service will be created and till what time it will be live. 
-
- 
 
 There are three types of service lifetimes supported by .NET Core:
 
@@ -5195,7 +5265,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 What is Dependency Injection in .NET Core? Explain its advantages.
 .NET Core has been designed to support Dependency Injection(DI), which means the application is loosely coupled. It is a technique to introduce Inversion Control(IoC) between the classes and their dependencies. In other words, the object maintains only that dependency which is required during that particular task. A dependency is an object on which another object depends, by dependency injection, the application becomes better testable, maintainable, and reusable.
 
- 
 
 Dependency Injection has three steps:
 An interface or base class is present to provide an abstraction for dependency implementation.
@@ -5377,20 +5446,22 @@ What problems does Dependency Injection solve?
 
 Let's understand Dependency Injection with this C# example. A class can use a direct dependency instance as below.
 Public class A {
-MyDependency dep = new MyDependency();
+    MyDependency dep = new MyDependency();
 
-public void Test(){
-dep.SomeMethod();
+    public void Test(){
+        dep.SomeMethod();
+    }
 }
-}
+
 But these direct dependencies can be problematic for the following reasons.
-If you want to replace 'MyDependency' with a different implementation then the class must be modified.
-It's difficult to Unit Test.
-If MyDependency class has dependencies then it must be configured by class. If Multiple classes have dependency on 'MyDependency', the code becomes scattered.
+- If you want to replace 'MyDependency' with a different implementation then the class must be modified.
+- It's difficult to Unit Test.
+- If MyDependency class has dependencies then it must be configured by class. If Multiple classes have dependency on 'MyDependency', the code becomes scattered.
+
 DI framework solves these problems as below.
-Use Interfaces or base class to abstract the dependency implementation.
-Dependencies are registered in the Service Container provided by ASP.NET Core inside Startup class 'ConfigureServices' method.
-Dependencies are injected using constructor injection and the instance is created by DI and destroyed when no longer needed.
+- Use Interfaces or base class to abstract the dependency implementation.
+- Dependencies are registered in the Service Container provided by ASP.NET Core inside Startup class 'ConfigureServices' method.
+- Dependencies are injected using constructor injection and the instance is created by DI and destroyed when no longer needed.
 
 ****
 
@@ -5598,7 +5669,9 @@ Data does not use local memory
 What is XSRF or CSRF? How to prevent Cross-Site Request Forgery (XSRF/CSRF) attacks in ASP.NET Core?
 
 Cross-Site Request Forgery (XSRF/CSRF) is an attack where attacker that acts as a trusted source send some data to a website and perform some action. An attacker is considered a trusted source because it uses the authenticated cookie information stored in browser.
+
 For example a user visits some site 'www.abc.com' then browser performs authentication successfully and stores the user information in cookie and perform some actions, In between user visits some other malicious site 'www.bad-user.com' and this site contains some code to make a request to vulnerable site (www.abc.com). It's called cross site part of CSRF.
+
 How to prevent CSRF?
 
 In ASP.NET Core 2.0 or later FormTaghelper automatically inject the antiforgery tokens into HTML form element.
@@ -6775,6 +6848,7 @@ Finally, you can use the IMediator interface to send commands and queries and th
 var mediator = serviceProvider.GetService<IMediator>();
 var customer = await mediator.Send(new CreateCustomerCommand { FirstName = "John", LastName = "Doe" });
 Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} created.");
+
 Conclusion
 CQS is a software design principle that separates the responsibilities of modifying state (commands) and querying state (queries) into separate methods or classes. MediatR is a library that can be used to handle commands and queries in a decoupled manner in a .NET Core application and provides a simple and lightweight implementation of the mediator pattern.
 
@@ -6790,6 +6864,7 @@ Liskov Substitution Principle (LSP)
 Interface Segregation Principle (ISP)
 Dependency Inversion Principle (DIP)
 Single Responsibility Principle (SRP)
+
 The Single Responsibility Principle states that a class should have one and only one reason to change, meaning that a class should have only one responsibility. This helps to keep the code maintainable and easy to understand.
 
 Open-Closed Principle (OCP)

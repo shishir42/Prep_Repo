@@ -114,6 +114,21 @@ namespace consoleproject
             string y3 = "pea";
             LCS.MinDelAndInsert(x3,y3);
 
+            Console.WriteLine("**************Thread Test***************");
+            var threadTest = new ThreadTest();
+            threadTest.StartThread();
+
+            Console.WriteLine("**************Delegate Test***************");
+            var delObj = new DelegateTest();
+            DelegateTest.addTwoNumber add = new DelegateTest.addTwoNumber(delObj.Sum2Num);
+            DelegateTest.subtractTwoNumber sub = new DelegateTest.subtractTwoNumber(delObj.Sub2Num);
+
+            add(10,20);
+            sub(20,10);
+
+            add.Invoke(10,20);
+            sub.Invoke(20,10);
+
             Console.WriteLine("**************Design***************");
             DesignParkingSystem.Test();
         }
