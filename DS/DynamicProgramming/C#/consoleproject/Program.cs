@@ -121,6 +121,7 @@ namespace consoleproject
 
             int len4 = LCS.MinimumNoDeletionToMakeItPalindrome(x4);
             Console.WriteLine("LCS - Minimum number of deletion in a string to make it a palindrome : " + len4);
+            //Minimum number of insertion in a string to make it a palindrome same as above
 
 
             string x5 = "AGGTAB";
@@ -132,6 +133,10 @@ namespace consoleproject
             string x6 = "ABACDABACD";
             string? res4 = LCS.LongestRepeatingSubsequence(x6);
             Console.WriteLine("LCS - Print Longest Repeating Subsequence : Not working " + res4);
+
+            string x7 = "abc";
+            string y7 = "ahbgdc";
+            Console.WriteLine("LCS - SequencePatternMatching " + LCS.SequencePatternMatching(x7,y7));
 
             Console.WriteLine("**************Thread Test***************");
             var threadTest = new ThreadTest();

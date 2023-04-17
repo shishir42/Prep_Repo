@@ -360,6 +360,20 @@ namespace consoleproject
 
             return ReversString(sb.ToString());
         }
+        
+        public static bool SequencePatternMatching(string x, string y)
+        {
+            int m = x.Length;
+            int n = y.Length;
+
+            int length = LCSTopDownApproach(x,y,m,n);
+
+            if(m == length){
+                return true;
+            }
+            return false;
+        }
+
         public static string ReversString(string str)
         {
             char[] charArray = str.ToCharArray();
