@@ -8592,17 +8592,15 @@ The goal of the code-sharing strategy is to support the architecture where multi
 What is the difference between the portable class library and shared projects?
 Portable Class Library
 
-We create Class Library in .Net to reuse our code or to make our code reusable with the same type of application only, but that might not work for some conditions. Here we assume, we have created the class library for WPF or any other kind of application. And if we want to access the same type of class library for Windows 8 or Windows phone application, then in this scenario, we can't refer this as a class library.
+Portable Class Libraries (PCLs) and Shared Projects are two ways to share code across platforms in Xamarin.Forms.
 
-We want the same application for all the platforms to make our life easy. We want the same application used on multiple platforms. Microsoft technology is growing day by day, and it covers every device. All types of applications we can build and validate within one framework on all types of platform Windows, Web, Mobile, or Tab.
+Portable Class Libraries allow sharing code between platforms by defining a subset of .NET APIs that are supported on multiple platforms. PCLs are created as a separate project within a Xamarin.Forms solution, and they can be referenced by platform-specific projects. PCLs provide a way to share code across multiple platforms with a single binary, reducing the size of the application.
 
-PCL solves this problem. .Net 4.5 introduced the Portable Class Library (PCL) for developing the business logic in one location, and we can use this library end to end in all types of applications or all platforms (Windows, web, or Mobile) on .Net Framework.
+Shared Projects allow sharing code across platforms by including the shared code files directly in each platform-specific project. Shared Projects are created within the platform-specific project and can be included in the build process for each platform. Shared Projects provide a more fine-grained control over the shared code, allowing developers to include different code files for each platform as needed.
 
-The figure shows the flow of the Portable Class Library (PCL). All these applications run on the .Net Framework. All these applications have different environments and platforms, but they all can easily use the Portable Class Library. In other words, we can say that we only need to prepare the UI and do the DataBinding of our application for all the windows, web and mobile, because the same business logic can then use the entire platform.
+One advantage of PCLs over Shared Projects is that they provide a single binary that can be reused across different platforms, which can reduce the size of the application. However, PCLs require careful consideration of which APIs to use and can result in reduced functionality. Shared Projects, on the other hand, provide more fine-grained control over the shared code, but can lead to more maintenance effort.
 
-Shared Project
-
-A shared project is a project that contains standard code and linked to each specific platform library or App. It is compiled as a part of the platform-specific code. To develop a nice solution that is based on a shared project, there is a need to architect it to have the core features in the shared project. Here possibly, we may use partial classes, abstract classes, and interfaces to manage the objects which are specific for each platform in the platform-specific project. These kinds of projects are good when we are in a prototype phase because it is fast to implement the shareable project for the common code. We can use all the advantages of the platform-specific Framework.
+In summary, Portable Class Libraries and Shared Projects are two ways to share code across platforms in Xamarin.Forms, each with its own advantages and trade-offs. The choice between them depends on the specific requirements and constraints of the project.
 
 Shared Code can be branched base on the platform using compiler directive (e.g. #if_Android_,#if_iOS_,#if_Windows_Phone_App.etc.)
 
@@ -8653,7 +8651,9 @@ Benefits:
 
 During the development process, developers and designers can work independently on their components. Designers can concentrate on the view, and if they are using Expression Blend, they can generate sample data. On the other hand, developers can work on the view model and model components.
 Developers create the unit tests for the view model and can create the model for the view.
+
 It is easy to redesign the UI of the application without touching the code because the view is implemented entirely in XAML. A new version of the view should work with the existing view model.
+
 If there is any existing representation of the model that binds the existing business logic, this can be difficult or risky to change. In this scenario, the view model acts as an adapter for the model classes and enable us to avoid making any major changes to the code of the model.
 
 *****
@@ -8738,6 +8738,41 @@ Data Trigger: This trigger is similar to a property trigger, but it uses the dat
 Event Trigger: This trigger occurs when an event occurs on the control.
 Multi Trigger: This trigger allows us to set the conditions of multiple triggers before the action occurs.
 
+
+Here's an example of using triggers in Xamarin.Forms:
+
+Suppose we have a Button control that we want to change the background color of when it's pressed. We can use a Trigger to achieve this:
+
+<Button Text="Press me">
+    <Button.Triggers>
+        <Trigger TargetType="Button"
+                 Property="IsPressed"
+                 Value="True">
+            <Setter Property="BackgroundColor"
+                    Value="Red" />
+        </Trigger>
+    </Button.Triggers>
+</Button>
+
+
+In this example, we define a Trigger object that targets the Button control and listens for changes to its IsPressed property. When the IsPressed property becomes true (i.e., the button is pressed), the trigger activates and sets the BackgroundColor property of the button to Red using a Setter object.
+
+Another example of using triggers is to change the text color of a Label control based on its content. Suppose we want to change the text color of a Label control to Red if its text contains the word "error". We can use a DataTrigger to achieve this:
+
+<Label Text="This is an error message">
+    <Label.Triggers>
+        <DataTrigger TargetType="Label"
+                     Binding="{Binding Text}"
+                     Value="error">
+            <Setter Property="TextColor"
+                    Value="Red" />
+        </DataTrigger>
+    </Label.Triggers>
+</Label>
+
+In this example, we define a DataTrigger object that targets the Label control and binds to its Text property. When the value of the Text property is equal to "error", the trigger activates and sets the TextColor property of the label to Red using a Setter object.
+
+In summary, triggers in Xamarin.Forms allow developers to apply visual changes to a control based on a specific condition, such as a property value or data binding. Triggers consist of a Trigger object and one or more Setter objects that specify the changes to be made to the control when the trigger is activated.
 
 *****
 
@@ -8854,7 +8889,7 @@ https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/op
 *******
 What are Effects and when should they be used?
 
-ffects, like Custom Renderers, allow a developer to customize controls for a specific platform. Effects are preferred over Custom Renderers when small styling changes are required instead of a complete layout or behavior change. Custom Effects are created for platform-specific projects by extending the base class PlatformEffect. Once created, they can be attached to the control it is meant for.  
+Effects, like Custom Renderers, allow a developer to customize controls for a specific platform. Effects are preferred over Custom Renderers when small styling changes are required instead of a complete layout or behavior change. Custom Effects are created for platform-specific projects by extending the base class PlatformEffect. Once created, they can be attached to the control it is meant for.  
 
 Effects don't have any type related information about the control they are attached to and hence if they are specified with a wrong control they should gracefully degrade. Effects are reusable and can be parameterised to extend its reusability.  
 
@@ -8865,12 +8900,12 @@ https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/op
 ******
 What are Pages in Xamarin. Forms?
 
-Pages are Xamarin Forms generic representation of Cross Mobil Application Screens. A Page occupies most or all of a screen and contains a single child.
+Pages are Xamarin Forms generic representation of Cross Mobile Application Screens. A Page occupies most or all of a screen and contains a single child.
 
 On IOS, the Page is mapped to ViewController, on Android, it is mapped to somewhat like Activity and on Universal Windows Platform, it is mapped to  Page. Pages can be of several types, viz. Master /Detail Page, navigational Page, Carousel Page, Tabbed Page, Template Page, etc.
 
 Content Page
-A Content Page is the most basic type of page which contains the content in a  Stak Layout Grid Layout or Scroll View. The content is usually text or images
+A Content Page is the most basic type of page which contains the content in a  Stack Layout, Grid Layout or Scroll View. The content is usually text or images
 
 Master-Detail Page
 The Master-Detail Page is divided into two sections: Master and Detail. Master usually contains a list of items or Menu. Clicking on the item would show details about the item on the Detail Page

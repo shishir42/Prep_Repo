@@ -324,3 +324,36 @@ Mutex:
 
 Mutex stands for Mutual Exclusion. The Mutex type ensures blocks of code are executed only once at a time. It is basically used in a situation where resources have to be shared by multiple threads simultaneously.  The System.Threading.Mutex class grants exclusive access to a shared resource. 
 
+*******
+what is ConfigureAwait in task and why need to set false 
+ConfigureAwait is a method that is used in .NET when working with tasks to control how the context is captured when the task completes. By default, when a task completes, it captures the context of the thread that it completed on and uses that context when the continuation is executed. This can cause problems in certain scenarios, such as deadlocks or thread starvation, because the continuation may need to execute on a different context.
+
+When you set ConfigureAwait to false, you are telling the task not to capture the current context when it completes. This can be useful in scenarios where you want the continuation to execute on a different thread or in a different context than the one that the original task completed on.
+
+For example, if you have a web application that needs to make a network call to an external service and then update the UI based on the results of that call, you may want to set ConfigureAwait to false to avoid blocking the UI thread while the network call is being made. By doing this, the continuation will be scheduled on a different thread, allowing the UI thread to continue processing other events.
+
+In summary, you should set ConfigureAwait to false in scenarios where you want to avoid blocking the current context when the task completes and when you want to ensure that the continuation is executed on a different thread or in a different context.
+
+
+
+When calling the ConfigureAwait method on a task in .NET, you have two options: ConfigureAwait(true) and ConfigureAwait(false).
+
+The difference between them is how the task continuation will be executed when the task completes.
+
+When you call ConfigureAwait(true), the continuation will be executed in the same synchronization context as the original task. This means that if the original task was running on a UI thread, for example, the continuation will also run on the same UI thread. Similarly, if the original task was running on a background thread, the continuation will run on a background thread.
+
+On the other hand, when you call ConfigureAwait(false), the continuation will be executed on any available thread from the thread pool, without necessarily capturing the current synchronization context. This can be useful when you don't want to block the current thread, or when you don't care about the synchronization context.
+
+To summarize, if you need to ensure that the continuation runs in the same context as the original task, you should use ConfigureAwait(true). If you want to release the current context and execute the continuation on any available thread, use ConfigureAwait(false). In general, it's a good practice to use ConfigureAwait(false) when you don't need the synchronization context, as this can improve performance and prevent deadlocks.
+
+The primary use case for calling ConfigureAwait(true) on a task in .NET is when you need to ensure that the continuation of the task runs in the same synchronization context as the original task.
+
+A synchronization context is a mechanism that allows for the execution of asynchronous code in a way that is synchronized with the user interface (UI) thread in graphical user interface (GUI) applications. The UI thread is responsible for rendering the user interface and processing user input, so it's important that long-running or blocking operations are not executed on this thread to avoid freezing the UI.
+
+By default, when a task completes, the continuation is executed on the same synchronization context as the original task. This means that if the original task was running on the UI thread, the continuation will also run on the UI thread. This can be useful for updating the UI or interacting with other components that require synchronization with the UI thread.
+
+In scenarios where you need to update the UI or interact with other components that require synchronization with the UI thread after completing an asynchronous operation, you should call ConfigureAwait(true) on the task to ensure that the continuation runs on the UI thread. This can help avoid deadlocks or other synchronization issues that can occur when executing code on multiple threads.
+
+For example, if you're using an asynchronous method to retrieve data from a remote service and update a control on the UI, you would call ConfigureAwait(true) on the task to ensure that the continuation that updates the UI is executed on the UI thread. This ensures that the user interface is updated smoothly and without any delays.
+
+In summary, calling ConfigureAwait(true) is useful when you need to ensure that the continuation of a task runs on the same synchronization context as the original task, which is typically the case when working with UI or other components that require synchronization with the main thread.
