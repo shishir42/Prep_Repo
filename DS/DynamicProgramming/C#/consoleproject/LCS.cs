@@ -185,6 +185,80 @@ namespace consoleproject
             return ReversString(s);
         }    
 
+        public static string? ShortestCommonSuperSequencePrint(string x, string y)
+        {
+            int m = x.Length;
+            int n = y.Length;
+
+            int[,] dp = new int[m+1,n+1];
+            for(int i=0; i<m+1; i++)
+            {
+                for(int j=0; j<n+1; j++)
+                {
+                    if(i==0 || j==0)
+                    {
+                        dp[i,j] = 0;
+                    }
+                }
+            }
+
+            for(int i=1; i<m+1; i++)
+            {
+                for(int j=1; j<n+1; j++)
+                {
+                    if(x[i-1] == y[j-1])
+                    {
+                        dp[i,j] = 1 + dp[i-1,j-1];
+                    }
+                    else
+                    {
+                        dp[i,j] = Math.Max(dp[i-1, j], dp[i, j-1]);
+                    }
+                }
+            }
+
+            int ii = m, jj=n;
+            StringBuilder s = new StringBuilder();
+            // string s = "";
+
+            while(ii > 0 && jj > 0)
+            {
+                if(x[ii - 1] == y[jj-1])
+                {
+                    s.Append(x[ii-1]);
+                    // s += x[ii-1];
+                    ii--;
+                    jj--;
+                }
+                else
+                {
+                    if(dp[ii, jj-1] > dp[ii-1, jj])
+                    {
+                        s.Append(y[jj-1]);
+                        // s += y[jj-1];
+                        jj--;
+                    }
+                    else
+                    {
+                        s.Append(x[ii-1]);
+                        // s += x[ii-1];
+                        ii--;
+                    }
+                }
+            }
+
+            while (ii > 0) {
+                s.Append(x[ii-1]);
+                ii--;
+            }
+            while (jj > 0) {
+                s.Append(y[jj-1]);
+                jj--;
+            }
+
+           return ReversString(s.ToString());
+        }
+
         public static int  ShortestCommonSuperSequence(string x, string y)
         {
             int m = x.Length;
@@ -206,9 +280,86 @@ namespace consoleproject
 
         public static int LongestPalindromicSubsequence(string x)
         {
-            return 0;
+            string y = ReversString(x);
+            int length = LCSTopDownApproach(x, y, x.Length, y.Length);
+            return length;
         }
 
+        public static int MinimumNoDeletionToMakeItPalindrome(string x)
+        {
+            int LPS = LongestPalindromicSubsequence(x);
+            int minLenthOfDel = x.Length - LPS;
+            return minLenthOfDel;
+        }
+
+        public static string LongestRepeatingSubsequence(string x)
+        {
+            //Initialized 
+            int n = x.Length;
+            int[,] dp = new int [n+1, n+1];
+
+            for(int i=0 ; i< n+1; i++)
+            {
+                for(int j=0; j< n+1; j++)
+                {
+                    if(i==0 || j==0)
+                    {
+                        dp[i,j] = 0;
+                    }
+                }
+            }
+
+            for(int i = 1; i< n+1; i++)
+            {
+                for(int j=1; j< n+1; j++)
+                {
+                    if(x[i-1] == x[j-1] & i != j)
+                    {
+                        dp[i,j] = 1 + dp[i-1,j-1];
+                    }
+                    else
+                    {
+                        dp[i,j] = Math.Max(dp[i-1, j], dp[i,j-1]);
+                    }
+                }
+            }
+
+            int ii = n, jj = n;
+            StringBuilder sb = new StringBuilder();
+            while(ii > 0 && jj > 0)
+            {
+                if(x[ii-1] == x[jj-1])
+                {
+                    sb.Append(x[ii-1]);
+                    ii--;
+                    jj--;
+                }
+                else
+                {
+                    if(dp[ii, jj-1] > dp[ii-1,jj])
+                    {
+                        sb.Append(x[jj-1]);
+                        jj--;
+                    }
+                    else
+                    {
+                        sb.Append(x[ii-1]);
+                        ii--;
+                    }
+                }
+            }
+
+            while (ii > 0) {
+                sb.Append(x[ii-1]);
+                ii--;
+            }
+            while (jj > 0) {
+                sb.Append(x[jj-1]);
+                jj--;
+            }
+
+            return ReversString(sb.ToString());
+        }
         public static string ReversString(string str)
         {
             char[] charArray = str.ToCharArray();

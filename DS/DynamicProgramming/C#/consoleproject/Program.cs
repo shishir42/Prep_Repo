@@ -112,7 +112,26 @@ namespace consoleproject
             //Minimum Number of Insertion and Deletion to convert String a to String b
             string x3 = "heap";
             string y3 = "pea";
+            Console.WriteLine("LCS - Minimum Number of Insertion and Deletion to convert String a to String b : ");
             LCS.MinDelAndInsert(x3,y3);
+
+            string x4= "agbcba";
+            int len3 = LCS.LongestPalindromicSubsequence(x4);
+            Console.WriteLine("LCS - LongestPalindromicSubsequence : " + len3);
+
+            int len4 = LCS.MinimumNoDeletionToMakeItPalindrome(x4);
+            Console.WriteLine("LCS - Minimum number of deletion in a string to make it a palindrome : " + len4);
+
+
+            string x5 = "AGGTAB";
+            string y5 = "GXTXAYB";
+            string? printResult = LCS.ShortestCommonSuperSequencePrint(x5, y5);
+            Console.WriteLine("LCS - Print shortest common Super sequence : " + printResult);
+            //AGXGTXAYB or AGGXTXAYB
+
+            string x6 = "ABACDABACD";
+            string? res4 = LCS.LongestRepeatingSubsequence(x6);
+            Console.WriteLine("LCS - Print Longest Repeating Subsequence : Not working " + res4);
 
             Console.WriteLine("**************Thread Test***************");
             var threadTest = new ThreadTest();
