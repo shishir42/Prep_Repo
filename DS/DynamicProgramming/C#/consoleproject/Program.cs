@@ -153,8 +153,13 @@ namespace consoleproject
             add.Invoke(10,20);
             sub.Invoke(20,10);
 
-            Console.WriteLine("**************Design***************");
-            DesignParkingSystem.Test();
+            Console.WriteLine("**************Async and Await***************");
+            var asyncTest = new AsyncWait();
+            asyncTest.CallLongRunningOperationAsync();
+
+
+            // Console.WriteLine("**************Design***************");
+            // DesignParkingSystem.Test();
         }
     }
 }

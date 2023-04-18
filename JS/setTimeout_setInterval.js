@@ -72,3 +72,9 @@ let intervalId = setInterval(function() {
 // Set Timeout: setTimeout() is to schedule execution of a one-time callback after delay milliseconds.
 // Set Immediate: The setImmediate function is used to execute a function right after the current event loop finishes.
 // Process NextTick: If process.nextTick() is called in a given phase, all the callbacks passed to process.nextTick() will be resolved before the event loop continues. This will block the event loop and create I/O Starvation if process.nextTick() is called recursively.
+
+
+// setTimeout allows you to execute a block of code once after a specified delay. It takes two arguments: a callback function to execute after the delay, and the delay time in milliseconds.
+
+// setInterval, on the other hand, allows you to execute a block of code repeatedly at a specified interval. It also takes two arguments: a callback function to execute, and the interval time in milliseconds.
+

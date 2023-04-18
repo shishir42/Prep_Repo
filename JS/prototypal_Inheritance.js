@@ -6,6 +6,10 @@
 
 // prototype is a property of constructor functions. It is an object that contains properties and methods that will be inherited by objects created with the new operator and the constructor function. When you define a function, its prototype object is automatically created and assigned to the function's prototype property.
 
+// Prototype inheritance is a fundamental concept in JavaScript that allows objects to inherit properties and methods from other objects. It is a way to achieve object-oriented programming in JavaScript, without the use of classes.
+
+// In JavaScript, every object has a prototype, which is an object that serves as a template for creating new objects. When a property or method is accessed on an object, JavaScript first looks for it on the object itself. If the property or method is not found on the object, JavaScript looks for it on the object's prototype. If it is still not found, JavaScript looks for it on the prototype's prototype, and so on, until the property or method is found or until the end of the prototype chain is reached.
+
 function Person(name) {
     this.name = name;
   }

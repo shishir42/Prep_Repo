@@ -1907,7 +1907,98 @@ Finally, we add styling to the container to set the background color, height, pa
 
 This responsive navigation bar will automatically adjust to the available screen width and height, making it suitable for use in different devices and orientations. You can customize the styling and navigation items as needed to suit your specific design requirements.
 
+- Interview
 
+* class based or functional base
+* JS - Hoisting - working - only work with var- why not with let and var (+2)
+* let vs var vs const (+2)
+* What is event loop and precedence along with promise and settimeout
+* settimeout vs setinterval
+* List out the es6 features (+2)
+* rest operator 
+* string palindrome - 
+* array.reverse()
+* shallow copy and deepy copy (+2) also methods to create deep copy
+* closure (+1)
+* map vs reduce 
+* reduce parameters in functions 
+* promise vs callback
+* promise 
+* callback hell
+* currying 
+* map vs foreach
+* prototype inheritance 
+* call vs apply * bind (when to use)
+* inside usage of let and var in forloop
+* map vs filter 
+* prototype and how its works 
+* Arrow functions and advantages 
+* spread vs rest operator 
+* Get the second last element for the array
+* console.log(3+"3") and console.log(3-"3")
+* node js middleware 
+* 
+
+
+* css
+* absolute vs relative vs static position - parent child1 child2
+* flexbox
+* display: none and visibility: hidden
+
+* react - 17 and latest (18)
+* react-native - 0.69 and latest (0.70)
+* react and features (+1)
+* why it is know as one way data binding 
+* babel usage 
+* virtual dom and real dom (+2)
+* react js is library or framework 
+* usage of ES6
+* different part of components - 
+* functional vs class component (+1)
+* hooks
+* class based life cycle methods (+1)
+* pure component (+2)
+* higher-order component (+1)
+* context api (+1)
+* why we need to use redux if it is already avalable 
+* explain redux flow (+2)
+* useReducers
+* middleware in redux (+1)
+* Thunk vs Saga
+* handle error 
+* render props 
+* refs (+1)
+* forward ref
+* state (+1)
+* react portals
+* how to pass data to one component to another component (+2) ways and which one is better
+* props drilling (+1)
+* How to print data which is get from API calls 
+* How to manage an performance in react (+1)
+* useMemo vs useCallback 
+* useReducer vs useMemo vs useContext
+* useSelector vs useDispatch 
+* Lifecycle methods vs Hooks
+* unidirectional data flow in react js
+* react memo 
+* HOC and any usecase 
+* Mounting 
+* Different ways to call API in react js
+* New features in react 
+* create an two dropdown and one dropdown selected based on the other dropdown should populated (use the objects array like India has cities) 
+* generate list and delete button along with checkbox once the checkbox is checked and then appear the delete button 
+* useState (+1)
+* controlled and uncontrolled components (+1)
+* custom hooks
+* strict mode in react (react.strictMode)
+* explain react router mechanism 
+* what is JSX
+* element vs component 
+* react intercepts 
+* react fiber 
+* Lazy loading 
+* How to manage nested routes in terms of role based routing 
+* 
 
 
 

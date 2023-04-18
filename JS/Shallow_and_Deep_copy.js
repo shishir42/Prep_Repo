@@ -36,6 +36,35 @@ var empDetailsDeepCopy = {
 
 //   Now if you change empDetailsDeepCopy.name, it will only affect empDetailsDeepCopy & not empDetails
 
+// In JavaScript, there are several ways to create a deep copy of an object or array. Here are some commonly used methods:
+
+// Using the spread operator: The spread operator can be used to create a new array or object with the same properties as the original one. This method creates a shallow copy of the object, but since it creates new instances of nested objects and arrays, it effectively creates a deep copy.
+const originalObj = {a: 1, b: {c: 2}};
+const newObj = {...originalObj};
+
+// Using Object.assign(): Object.assign() can also be used to create a new object with the same properties as the original one. This method creates a shallow copy of the object, but since it creates new instances of nested objects and arrays, it effectively creates a deep copy.
+
+const originalObj1 = {a: 1, b: {c: 2}};
+const newObj1 = Object.assign({}, originalObj1);
+
+// Using JSON.parse() and JSON.stringify(): This method involves converting the object to a JSON string and then parsing it back to an object. This creates a deep copy of the object, but it only works with objects that are JSON-serializable (i.e., objects that can be converted to a JSON string).
+const originalObj2 = {a: 1, b: {c: 2}};
+const newObj2 = JSON.parse(JSON.stringify(originalObj2));
+
+// To create a shallow copy, we can use the following methods:
+
+// Spread syntax […] {…}
+// Object.assign()
+// Array.from()
+// Object.create()
+// Array.prototype.concat()
+
+// And to create a deep copy, we can use:
+// JSON.parse(JSON.stringify())
+// structuredClone()
+
+
+
 
 
 
