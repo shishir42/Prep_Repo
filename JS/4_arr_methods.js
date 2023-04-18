@@ -63,6 +63,14 @@ console.log(originalArray); // [1, 2, 3, 4, 5]
 console.log(newArray); // [ 5, 4, 3, 2, 1]
 // Using reduce and spread methods: Here execute a reducer function on an array elements and append the accumulated array on right side using spread syntax
 
+// @param callbackfn — A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+
+//(previousValue: number, currentValue: number, currentIndex: number, array: number[]) => number
+
+// @param initialValue — If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+
+// initialValue: number
+
 const originalArray3 = [1, 2, 3, 4, 5];
 const newArray = originalArray3.reduce((accumulator, value) => {
   return [value, ...accumulator];

@@ -1907,98 +1907,38 @@ Finally, we add styling to the container to set the background color, height, pa
 
 This responsive navigation bar will automatically adjust to the available screen width and height, making it suitable for use in different devices and orientations. You can customize the styling and navigation items as needed to suit your specific design requirements.
 
-- Interview
+*****************
+Hooks were introduced in React to provide a simpler and more intuitive way to manage state and lifecycle events in functional components. Before the introduction of hooks, state and lifecycle events were only available in class components, which can be more complex and harder to understand for developers who are not familiar with the class syntax.
 
-* class based or functional base
-* JS - Hoisting - working - only work with var- why not with let and var (+2)
-* let vs var vs const (+2)
-* What is event loop and precedence along with promise and settimeout
-* settimeout vs setinterval
-* List out the es6 features (+2)
-* rest operator 
-* string palindrome - 
-* array.reverse()
-* shallow copy and deepy copy (+2) also methods to create deep copy
-* closure (+1)
-* map vs reduce 
-* reduce parameters in functions 
-* promise vs callback
-* promise 
-* callback hell
-* currying 
-* map vs foreach
-* prototype inheritance 
-* call vs apply * bind (when to use)
-* inside usage of let and var in forloop
-* map vs filter 
-* prototype and how its works 
-* Arrow functions and advantages 
-* spread vs rest operator 
-* Get the second last element for the array
-* console.log(3+"3") and console.log(3-"3")
-* node js middleware 
-* 
+With hooks, developers can use state and lifecycle events directly inside functional components without needing to convert them to class components. This simplifies the code and makes it easier to reason about.
 
+Additionally, hooks can be used to share stateful logic between components, making it easier to reuse code and reducing duplication.
 
-* css
-* absolute vs relative vs static position - parent child1 child2
-* flexbox
-* display: none and visibility: hidden
+Hooks also provide better performance optimizations compared to class components, because they allow React to optimize the update process and avoid unnecessary re-renders.
 
-* react - 17 and latest (18)
-* react-native - 0.69 and latest (0.70)
-* react and features (+1)
-* why it is know as one way data binding 
-* babel usage 
-* virtual dom and real dom (+2)
-* react js is library or framework 
-* usage of ES6
-* different part of components - 
-* functional vs class component (+1)
-* hooks
-* class based life cycle methods (+1)
-* pure component (+2)
-* higher-order component (+1)
-* context api (+1)
-* why we need to use redux if it is already avalable 
-* explain redux flow (+2)
-* useReducers
-* middleware in redux (+1)
-* Thunk vs Saga
-* handle error 
-* render props 
-* refs (+1)
-* forward ref
-* state (+1)
-* react portals
-* how to pass data to one component to another component (+2) ways and which one is better
-* props drilling (+1)
-* How to print data which is get from API calls 
-* How to manage an performance in react (+1)
-* useMemo vs useCallback 
-* useReducer vs useMemo vs useContext
-* useSelector vs useDispatch 
-* Lifecycle methods vs Hooks
-* unidirectional data flow in react js
-* react memo 
-* HOC and any usecase 
-* Mounting 
-* Different ways to call API in react js
-* New features in react 
-* create an two dropdown and one dropdown selected based on the other dropdown should populated (use the objects array like India has cities) 
-* generate list and delete button along with checkbox once the checkbox is checked and then appear the delete button 
-* useState (+1)
-* controlled and uncontrolled components (+1)
-* custom hooks
-* strict mode in react (react.strictMode)
-* explain react router mechanism 
-* what is JSX
-* element vs component 
-* react intercepts 
-* react fiber 
-* Lazy loading 
-* How to manage nested routes in terms of role based routing 
-* 
+Overall, hooks have become an important tool for React developers to create more efficient and maintainable code.
+
+In React, "state" refers to an object that contains data that can change over time and affects the rendering of a component. It represents the current condition or values of a component, such as user input, network responses, or any other dynamic data.
+
+State is a fundamental concept in React, and it enables developers to create dynamic and interactive user interfaces. When the state of a component changes, React automatically updates the DOM to reflect those changes, without the developer having to manually manipulate the DOM.
+
+The state of a component can be initialized in the component's constructor, or using the useState hook (in functional components) or the setState method (in class components). State should be treated as immutable, meaning that it should not be directly modified. Instead, you should use the setState method or the useState hook to update the state.
+
+State can be passed down to child components as props, allowing the child components to reflect changes in the state. When the state of a component changes, React re-renders the component and its children to reflect the updated state.
+
+Variables in normal functions and state variables created with useState in React are not exactly the same, although they serve similar purposes of storing and manipulating data.
+
+In a normal function, variables are typically used to store data that is local to the function and can be accessed within the function scope. The value of the variable can be updated within the function using the assignment operator (=) or other operators.
+
+On the other hand, useState is a hook in React that is used to create state variables that can be updated and cause the component to re-render when their value changes. useState returns an array that contains the current state value and a setter function that can be used to update the state value.
+
+The key difference between a variable in a normal function and a state variable created with useState is that the latter is part of the React component state and triggers a re-render of the component when it is updated. This means that any changes to the state variable will cause the component to update and re-render, whereas changes to a normal variable will not cause any updates or re-renders.
+
+In summary, while variables in normal functions and state variables created with useState in React can store data, they serve different purposes and have different implications on the component rendering process.
+
+************************
+
+pure component in functional component 
 
 
 

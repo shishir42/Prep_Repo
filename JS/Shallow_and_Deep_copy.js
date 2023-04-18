@@ -51,6 +51,8 @@ const newObj1 = Object.assign({}, originalObj1);
 const originalObj2 = {a: 1, b: {c: 2}};
 const newObj2 = JSON.parse(JSON.stringify(originalObj2));
 
+// This happens because the spread operator only copies the top-level properties of an object, creating new references to any objects or arrays in those properties, but any nested objects or arrays are still shared between the original and copied objects. Therefore, any changes made to a nested object or array in one object will be reflected in the other object as well.
+
 // To create a shallow copy, we can use the following methods:
 
 // Spread syntax […] {…}

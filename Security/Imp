@@ -33,3 +33,6 @@ When mobile applications communicate with the server, they typically use SSL to 
 
 With SSL pinning, however, the application is configured to reject all but one or few predefined certificates, whenever the application connects to a server, it compares the server certificate with the pinned certificate(s) , if and only if they match the server is trusted and SSL connection is established.
 
+********************
+
+Understanding of core security concerns within a typical application (password hashing, SSL/TLS, encryption at rest, XSS, XSRF)

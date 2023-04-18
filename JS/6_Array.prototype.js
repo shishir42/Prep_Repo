@@ -70,4 +70,34 @@ Array.prototype.sort = function(callback) {
   const sortedStrings = strings.sort();
   console.log(sortedStrings); // ['apple', 'banana', 'cherry', 'date']
   
+// map vs reduce:
+  
+// In JavaScript, map and reduce are two methods that can be used to manipulate arrays.
+// map is a higher-order function that applies a provided function to each element of an array and returns a new array with the results. It doesn't modify the original array.
+
+const words = ['hello', 'world', 'how', 'are', 'you'];
+const upperCaseWords = words.map(word => word.toUpperCase());
+console.log(upperCaseWords); // Output: ['HELLO', 'WORLD', 'HOW', 'ARE', 'YOU']
+
+
+// reduce is another higher-order function that allows you to "reduce" an array to a single value. It takes two arguments: a callback function and an initial value. The callback function takes two arguments, an accumulator and a current value, and returns a new accumulator value. The initial value is the starting value of the accumulator.
+
+  // map vs foreach
+  // forEach, on the other hand, is a method that executes a provided function once for each element in an array. It does not create a new array, but it allows you to perform some action for each element of the array.
+
+const numbers_1 = [1, 2, 3, 4, 5];
+numbers_1.forEach(num => console.log(num));
+// Output: 1
+// Output: 2
+// Output: 3
+// Output: 4
+// Output: 5
+
+
+  // map vs filter
+  // filter, on the other hand, is a method that creates a new array with all elements that pass the test implemented by the provided function. The original array remains unchanged. The filter function returns a new array that contains only the elements that meet the condition specified in the callback function.
+
+  const numbers_2 = [1, 2, 3, 4, 5];
+  const evenNumbers_3 = numbers_2.filter(num => num % 2 === 0);
+  console.log(evenNumbers_3); // Output: [2, 4]
   

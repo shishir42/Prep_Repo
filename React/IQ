@@ -1,0 +1,123 @@
+- Interview
+
+* class based or functional base
+* JS - Hoisting - working - only work with var- why not with let and var (+4) also w.r.t to normal and arrow functions
+* let vs var vs const (+3)
+* this keyword
+* What is event loop and precedence along with promise and settimeout
+* settimeout vs setinterval
+* List out the es6 features (+2)
+* rest operator 
+* string palindrome - 
+* array.reverse()
+* shallow copy and deepy copy (+3) also methods to create deep copy
+* closure (+2)
+* map vs reduce 
+* reduce parameters in functions 
+* promise vs callback
+* promise 
+* callback hell(+1) and alternative 
+* currying 
+* map vs foreach
+* prototype inheritance 
+* call vs apply * bind (when to use)
+* bind vs regular function
+* inside usage of let and var in forloop
+* map vs filter 
+* prototype and how its works 
+* Arrow functions and advantages (+1) 
+* real example of arrow to use to make sense and same for normal functions
+* spread vs rest operator 
+* Get the second last element for the array
+* console.log(3+"3") and console.log(3-"3")
+* node js middleware 
+* multiple time return statement (generators ES6)
+* convert object to arrays using Object.entries and without as well
+* object destructing with complex object and also what will happen if object is null (null check while destructuring) (https://www.youtube.com/watch?v=QQNjidzLZ8E)
+* why do we need react.js w.r.t javascript 
+* null vs undefined 
+* IIFE
+* == and ===
+* remove duplicate from array 
+* why js weakly typed 
+* js is synchronous or asynchronous
+* async vs defer 
+* lexical scope vs scope chain
+
+* css
+* absolute vs relative vs static position - parent child1 child2
+* flexbox
+* display: none and visibility: hidden
+
+* react - 17 and latest (18)
+* react-native - 0.69 and latest (0.70)
+* react and features (+2)
+* compare js and react.js
+* why it is know as one way data binding 
+* babel usage 
+* virtual dom and real dom (+3)
+* react js is library or framework 
+* usage of ES6
+* different part of components - 
+* functional vs class component (+2)
+* hooks (+1) and custom hooks - 16.8
+* why hooks is introduced ()
+* class based life cycle methods (+2)
+* pure component (+3) and example with code https://www.youtube.com/watch?v=o22KRrxab18&t=2s (26:00)
+* higher-order component (+1)
+* context api (+1)
+* why we need to use redux if it is already avalable 
+* explain redux flow (+2)
+* useReducers
+* middleware in redux (+1)
+* Thunk vs Saga
+* handle error 
+* render props 
+* refs (+2)
+* forward ref
+* state (+1)
+* react portals
+* how to pass data to one component to another component (+3) ways and which one is better (parent --> child and child ---> parent)
+* props drilling (+2) and how to avoid
+* How to print data which is get from API calls 
+* How to manage an performance in react (+2)
+* useMemo vs useCallback 
+* useReducer vs useMemo vs useContext
+* useSelector vs useDispatch 
+* Lifecycle methods vs Hooks
+* unidirectional data flow in react js
+* react memo 
+* HOC and any usecase (+2)https://www.youtube.com/watch?v=o22KRrxab18&t=2s(40:00)
+* Mounting 
+* Different ways to call API in react js
+* New features in react 
+* create an two dropdown and one dropdown selected based on the other dropdown should populated (use the objects array like India has cities) 
+* generate list and delete button along with checkbox once the checkbox is checked and then appear the delete button 
+* useState (+2): It is functions
+* controlled and uncontrolled components (+1)
+* custom hooks
+* strict mode in react (react.strictMode)
+* explain react router mechanism 
+* what is JSX
+* element vs component 
+* react intercepts 
+* react fiber 
+* Lazy loading 
+* How to manage nested routes in terms of role based routing 
+* print html string along with styles using dangerouslySetInnerHtml and check the Cross site scripting(XSS) attacks 
+* Implement the pagination using react hooks alone with page numbers (https://www.youtube.com/watch?v=szXMBGKGTdE&t=17s)
+* Implement the input box and print the value only when user has stopped typing (https://www.youtube.com/watch?v=QQNjidzLZ8E)
+* why we need to use keys, explain w.r.t react components
+* syntactic events in react  
+* reconciliation  - It's is process of tree comparison which is used by react to update the real dom.
+
+
+HTML
+* sematic tags
+* html elements and tags
+* meta tag and properties 
+* document.createElement and document.createFragments  
+
+CSS
+* display none and visibility hidden
+* 
