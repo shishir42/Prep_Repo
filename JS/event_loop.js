@@ -76,3 +76,16 @@ console.log('3');
     // After 2 seconds, the callback function is added to the task queue. The event loop checks the call stack, which is empty, and picks the callback function from the task queue to execute it. The function logs the value 2 to the console.
 
     // In summary, the event loop is the mechanism that allows JavaScript to handle asynchronous tasks, such as I/O operations and timers, by scheduling them on a task queue and executing them when the JavaScript engine is free to do so.
+
+    // https://www.youtube.com/watch?v=vFJbKR6zfCE&pp=ygUVZXZlbnQgbG9vcCBpbiBkZXRhaWwg
+    // https://www.youtube.com/watch?v=8zKuNo4ay8E
+    //  https://www.youtube.com/watch?v=W-HQC_YUGBY
+    // https://www.youtube.com/watch?v=8aGhZQkoFbQ
+    //  https://www.youtube.com/watch?v=fuTWE0Mupzk
+    //  https://www.youtube.com/watch?v=6YgsqXlUoTM
+    //  https://www.youtube.com/watch?v=mR1SQn5nDIA
+    //  https://www.youtube.com/watch?v=kWIt9uReHzY
+    // https://www.youtube.com/watch?v=EQL9r8UlrPA
+    //  https://www.youtube.com/watch?v=lqLSNG_79lI
+    // https://www.youtube.com/watch?v=rUpxAeoR7PU
+    //  https://www.youtube.com/watch?v=w-jULX0D5cg

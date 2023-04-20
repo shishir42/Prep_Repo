@@ -78,3 +78,11 @@ let intervalId = setInterval(function() {
 
 // setInterval, on the other hand, allows you to execute a block of code repeatedly at a specified interval. It also takes two arguments: a callback function to execute, and the interval time in milliseconds.
 
+(function(){
+  console.log(1);
+  setTimeout(function(){console.log(2)}, 1000);
+  setTimeout(function(){console.log(3)}, 0);
+  console.log(4);
+})();
+
+// 1, 4, 3, 2

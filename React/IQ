@@ -1,24 +1,29 @@
 - Interview
 
 * class based or functional base
-* JS - Hoisting - working - only work with var- why not with let and var (+4) also w.r.t to normal and arrow functions
+* JS - Hoisting - working - only work with var- why not with let and var (+5) also w.r.t to normal and arrow functions (let or const or var are hoisted but var are initialized with undefined and let are const are in temporal zone where access are not possible, until the let and const are defined you will not be able to access)
+* unction are hoisted, why function need to be hoisted 
+* arrow function are hoisted or not (+1)
 * let vs var vs const (+3)
-* this keyword
+* this keyword (+1)
 * What is event loop and precedence along with promise and settimeout
+* settimeout - JS is single threaded interpreted language
+* asynchronous - setTimeout, setInterval, promise, observable 
 * settimeout vs setinterval
 * List out the es6 features (+2)
 * rest operator 
 * string palindrome - 
 * array.reverse()
-* shallow copy and deepy copy (+3) also methods to create deep copy
-* closure (+2)
+* shallow copy and deep copy (+3) also methods to create deep copy
+* closure (+4)
 * map vs reduce 
 * reduce parameters in functions 
 * promise vs callback
-* promise 
+* promise (+1)
+* callback
 * callback hell(+1) and alternative 
 * currying 
-* map vs foreach
+* map vs foreach (+2) with example 
 * prototype inheritance 
 * call vs apply * bind (when to use)
 * bind vs regular function
@@ -43,11 +48,19 @@
 * js is synchronous or asynchronous
 * async vs defer 
 * lexical scope vs scope chain
-
-* css
-* absolute vs relative vs static position - parent child1 child2
-* flexbox
-* display: none and visibility: hidden
+* ES5 vs ES6
+* Methods of arrays 
+* remove the duplicate from string or array 
+* const name = "rahul kumar"; const res = [...new Set(name.split(""))]; console.log(res);
+* use strict
+* why can't browser read jsx 
+* micro frontend 
+* mono repo
+* why code bundling is important 
+* input box code like validation and error 
+*  Local Scope, Lexical Scope and Global Scope
+* How JavaScript Engine works
+* destructuring with complex data
 
 * react - 17 and latest (18)
 * react-native - 0.69 and latest (0.70)
@@ -55,39 +68,40 @@
 * compare js and react.js
 * why it is know as one way data binding 
 * babel usage 
-* virtual dom and real dom (+3)
+* virtual dom and real dom (+4) https://medium.com/devinder/react-virtual-dom-vs-real-dom-23749ff7adc9 https://www.educative.io/answers/what-is-the-difference-between-virtual-and-real-dom-react https://www.youtube.com/watch?v=dxz9HZ40h4I
+
 * react js is library or framework 
 * usage of ES6
 * different part of components - 
-* functional vs class component (+2)
+* functional vs class component (+3)
 * hooks (+1) and custom hooks - 16.8
 * why hooks is introduced ()
-* class based life cycle methods (+2)
+* class based life cycle methods (+3)
 * pure component (+3) and example with code https://www.youtube.com/watch?v=o22KRrxab18&t=2s (26:00)
 * higher-order component (+1)
-* context api (+1)
+* context api (+2)
 * why we need to use redux if it is already avalable 
-* explain redux flow (+2)
+* explain redux flow (+3)
 * useReducers
 * middleware in redux (+1)
 * Thunk vs Saga
 * handle error 
 * render props 
-* refs (+2)
+* refs (+3)
 * forward ref
 * state (+1)
 * react portals
-* how to pass data to one component to another component (+3) ways and which one is better (parent --> child and child ---> parent)
+* how to pass data to one component to another component (+7) ways and which one is better (parent --> child and child ---> parent)
 * props drilling (+2) and how to avoid
 * How to print data which is get from API calls 
 * How to manage an performance in react (+2)
-* useMemo vs useCallback 
+* useMemo vs useCallback (+1)
 * useReducer vs useMemo vs useContext
 * useSelector vs useDispatch 
 * Lifecycle methods vs Hooks
 * unidirectional data flow in react js
 * react memo 
-* HOC and any usecase (+2)https://www.youtube.com/watch?v=o22KRrxab18&t=2s(40:00)
+* HOC and any usecase (+4)https://www.youtube.com/watch?v=o22KRrxab18&t=2s(40:00)
 * Mounting 
 * Different ways to call API in react js
 * New features in react 
@@ -96,9 +110,9 @@
 * useState (+2): It is functions
 * controlled and uncontrolled components (+1)
 * custom hooks
-* strict mode in react (react.strictMode)
+* strict mode in react (react.strictMode), js(useStrict) vs (react.strictMode)
 * explain react router mechanism 
-* what is JSX
+* what is JSX (+1)
 * element vs component 
 * react intercepts 
 * react fiber 
@@ -110,14 +124,211 @@
 * why we need to use keys, explain w.r.t react components
 * syntactic events in react  
 * reconciliation  - It's is process of tree comparison which is used by react to update the real dom.
+* context API vs redux
+* actions and reducers in redux
+* import "./styles.css";
+import { useState, useEffect } from "react";
+
+export default function App() {
+  const [users, setUsers] = useState(null);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((json) => setUsers(json));
+  }, []);
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      {users && users.map((user) => <div>{user.name}</div>)}
+    </div>
+  );
+}
+* react fragments (+1)
+* Explain the purpose of render() in ReactJS
+* what is events and how to create in react
+* cases when you should use ref 
+* react vs angular (+1) and can be use both react and angular together
+* how you can create forms in react
+* flux
+* single source of truth in redux
+* switch keyword in react route 
+* react router vs conventional router 
+* why react is so popular 
+* folder structure in react 
+* state vs props
+* useMemo vs useCallback
+* profiler in react js - check the performance of app
+* js normal function vs react custom hooks (you can use react js life cycle method inside custom hook)
+* library vs framework ()
+* Can react hooks covered the all life cycle methods: No, 3 methods are not covered,  getsnapshotbeforeupdate, getderivedstatefromerror and componentdidcatch.
+* React Redux vs React-Context API (resolved for prop drilling)(we can used both)
+* Map vs forEach (in context of reactjs)
+* Will redux save the data even after the browser refresh - no, it will not saved the data after page refresh, if you using redux-persist then it will saved.
+* Why use state inside react component-> React flow is different compared to other mechanism like to reflect the data in the view, component need to re-render otherwise it will not reflect the data, Here data is store in the state, once state is updating then automatically view will re-render and you will see the updated data.
+Also props will help to update the data in the UI but its take the data from outside not the inside of component.
+* react js 18 - features https://react.dev/blog/2022/03/29/react-v18
+* can react js follow MVC: no it is only use view, you can use modal with the help of redux
+* why react js is so fast
+* useId hook 
+* challenges while working on react
+* how and significance components is used in the application
+* when page load where the api call need to implement (class and functional component) (explain the sequence of methods)
+* why useState is required.
+* how to validate the forms in react 
+* alterative of redux 
+* services in reactjs
+* UI library for react
+* Limitation of react
+* Unit test in react 
+* 
+
+
+https://www.geeksforgeeks.org/what-are-the-different-phases-of-reactjs-component-lifecycle/
+https://www.geeksforgeeks.org/explain-lifecycle-of-component-re-rendering-due-to-re-rendering-of-parent-component/?ref=rp
+https://www.geeksforgeeks.org/reactjs-lifecycle-methods-order-in-mounting/?ref=rp
+https://www.geeksforgeeks.org/explain-lifecycle-of-reactjs-due-to-all-call-to-this-setstate-function/?ref=rp
+https://www.geeksforgeeks.org/explain-the-react-component-lifecycle-techniques-in-detail/?ref=rp
+https://www.geeksforgeeks.org/explain-lifecycle-methods-of-react-components/?ref=rp
+https://www.geeksforgeeks.org/explain-new-lifecycle-methods-in-react-v16-3/?ref=rp
+https://www.geeksforgeeks.org/explain-the-new-feature-of-react-hooks-introduced-in-react-v16-8/?ref=rp
+https://www.geeksforgeeks.org/explain-new-context-api-in-react-16/?ref=rp
+https://www.geeksforgeeks.org/explain-dirty-checks-in-react-js/?ref=rp
+https://www.geeksforgeeks.org/difference-between-react-component-and-react-purecomponent/?ref=rp
+https://www.geeksforgeeks.org/explain-the-initial-cycle-in-react-which-happens-during-the-first-render/?ref=rp
+https://www.geeksforgeeks.org/how-to-convert-functional-component-to-class-component-in-reactjs/?ref=rp
+https://www.geeksforgeeks.org/when-to-use-a-class-component-over-a-function-component-in-reactjs/?ref=rp
 
 
 HTML
 * sematic tags
 * html elements and tags
 * meta tag and properties 
-* document.createElement and document.createFragments  
+* document.createElement and document.createFragments
+* DOM
+* local storage vs session storage 
+* list out the block elements
+* innerHtml 
+* make a list in js 
+*    
 
-CSS
-* display none and visibility hidden
+* css
+* absolute vs relative vs static position - parent child1 child2 (+1)
+* flexbox
+* display: none and visibility: hidden (+1)
+* advantages of css
 * 
+* put div side by side without modified the code 
+<div>
+  <h1>T1</h1>
+</div>
+<div>
+  <div>
+    <h1>T2</h1>
+  </div>
+</div>
+
+div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+*If the parent element has a relative position and the child element has an absolute position, the child element will be aligned based on the coordinates specified in its CSS code. Specifically, the top, right, bottom, and left properties of the child element's CSS code will determine its position relative to its nearest positioned ancestor, which in this case is the parent element.
+
+For example, if the child element has the following CSS code:
+position: absolute;
+top: 50px;
+left: 100px;
+
+This means that the child element will be positioned 50 pixels down from the top of the parent element, and 100 pixels to the right of the left edge of the parent element. The child element's position is absolute, which means it is taken out of the normal flow of the document and positioned relative to the nearest positioned ancestor (in this case, the parent element).
+
+* Here are some coding approaches you can use to design a screen using responsive design:
+
+Use a Mobile-First Approach: Start by designing for the smallest screen size (mobile devices) and then scale up to larger screen sizes. This approach will help you to prioritize the most important content and ensure that it is easily accessible on smaller screens.
+
+Use CSS Media Queries: CSS Media Queries are used to apply styles based on the screen size. You can use Media Queries to define different styles for different screen sizes. For example:
+
+@media only screen and (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+}
+
+@media only screen and (min-width: 768px) {
+  /* Styles for screens larger than 768px */
+}
+Use a Responsive Grid System: Use a responsive grid system like Bootstrap or Foundation to layout content. A grid system allows you to create a layout that is flexible and adaptable to different screen sizes. For example:
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    Content
+  </div>
+  <div class="col-xs-12 col-md-6">
+    Content
+  </div>
+</div>
+
+In this example, the content will be displayed in a two-column layout on desktop screens (col-md-6) and a one-column layout on mobile screens (col-xs-12).
+
+Use Flexible Images: Use CSS to make images flexible and adaptable to different screen sizes. For example:
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+* https://www.youtube.com/watch?v=_SyeUc6zlbs
+* https://www.youtube.com/watch?v=NygNCmM_894
+* https://www.youtube.com/watch?v=SDc6f7kE1cQ&t=24s
+* https://www.youtube.com/watch?v=6L-PAmZajfA
+* https://www.youtube.com/watch?v=HKyhE2cDvWk&list=PLlydFsFRbxJ2gVH-9l0SURE5LcbVWPSJk
+* https://www.youtube.com/watch?v=r00bBWHUzy4
+* https://www.youtube.com/watch?v=wsJIR9wML_A
+* https://www.youtube.com/shorts/bm4uuzo4ZnU
+* https://www.youtube.com/watch?v=YL4UKOPzZDQ
+
+
+
+
+
+
+* TypeScript 
+* type vs interface 
+* 
+
+JS:
+https://www.youtube.com/watch?v=qcixpy3HQ9s&list=PLmcRO0ZwQv4QMslGJQg7N8AzaHkC5pJ4t&index=2
+https://www.youtube.com/watch?v=-C_-f5aiWIY
+
+https://medium.com/geekculture/flatten-array-of-array-in-javascript-microsoft-interview-question-345c71ff9ccd
+https://mevasanth.medium.com/memoization-in-javascript-hot-topic-for-interview-815475544ab0
+https://mevasanth.medium.com/hoisting-in-javascript-hot-topic-for-interview-43b463a6a77
+https://javascript.plainenglish.io/problem-with-returning-values-from-async-await-function-javascript-e99c94a47ca5
+https://mevasanth.medium.com/how-everything-is-object-in-javascript-a4164d7e6a2d
+https://mevasanth.medium.com/prototype-and-protypal-inheritance-in-javascript-bb766097ac05
+https://mevasanth.medium.com/how-everything-is-object-in-javascript-a4164d7e6a2d
+https://javascript.plainenglish.io/array-push-in-javascript-is-it-deep-or-shallow-copy-90cd195ec5b7
+https://javascript.plainenglish.io/react-native-making-get-request-to-display-the-image-f75d4338c5e2
+https://mevasanth.medium.com/
+https://medium.com/geekculture/my-interview-experience-at-reliance-jio-react-native-jio-money-2805086d851e
+https://medium.com/geekculture/dont-skip-top-5-frontend-interview-topics-to-prepare-in-2022-8adc8801677e
+https://mevasanth.medium.com/
+
+https://www.youtube.com/watch?v=XBTJDpT2XaI (IMP)
+https://www.youtube.com/watch?v=cBsB7hhOzQI&t=2s (IMP)
+https://www.youtube.com/watch?v=KVbo-oj7TRA&list=PLlydFsFRbxJ3oz8syKnu8FVJLme2U0oYB (IMP)
+
+Redux:
+https://www.youtube.com/watch?v=1zCNdVhdvHE&t=38s&pp=ygUTcmVhY3QgbmF0aXZlIHR1cmluZw%3D%3D
+
+
+Dot net core
+https://www.youtube.com/results?search_query=dotnet+core+interview+questions
+
+AWS
+https://www.youtube.com/results?search_query=aws+interview+questions+and+answers+for+experienced&sp=EgIIBQ%253D%253D
+https://www.google.com/search?q=list+of+main+interview+questions+on+aws&oq=list+of+main+interview+questions+on+aws+&aqs=chrome..69i57j33i160l5j33i22i29i30l3.12871j0j7&sourceid=chrome&ie=UTF-8#ip=1
+
+https://www.google.com/search?sxsrf=APwXEddhKN3fPh1Y6lV8_uaafj88EegJCA:1681924379839&q=AWS+scenario+based+interview+questions&sa=X&ved=2ahUKEwin48vJuLb-AhW_3jgGHQzQDSYQ1QJ6BAgpEAE&biw=1280&bih=631&dpr=2
+
+https://github.com/kcr123/AWS-Interview-Questions-Answers/tree/master/Interview-Questions
+https://gist.github.com/devops-school/12ad7130c35b910eda38271380bbe186
+https://github.com/vladimirmukhin/aws-interview-questions
+https://gist.github.com/devops-school/48f41eabce1fb1165bc9711c7dff513c
+https://gist.github.com/devops-school/d20ded19dc3f661f08f0faaf7ce9a9e5

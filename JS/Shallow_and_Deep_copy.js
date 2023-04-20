@@ -53,7 +53,7 @@ const newObj2 = JSON.parse(JSON.stringify(originalObj2));
 
 // This happens because the spread operator only copies the top-level properties of an object, creating new references to any objects or arrays in those properties, but any nested objects or arrays are still shared between the original and copied objects. Therefore, any changes made to a nested object or array in one object will be reflected in the other object as well.
 
-// To create a shallow copy, we can use the following methods:
+// To create a deep copy, we can use the following methods:
 
 // Spread syntax […] {…}
 // Object.assign()
@@ -61,11 +61,172 @@ const newObj2 = JSON.parse(JSON.stringify(originalObj2));
 // Object.create()
 // Array.prototype.concat()
 
-// And to create a deep copy, we can use:
 // JSON.parse(JSON.stringify())
 // structuredClone()
 
+//Deep copy
+let x = 10;
+console.log('x: ', x);
 
+//Deep copy
+let y=x;
+// y=20;
+console.log('y: ', y);
+
+// primitives types 
+// Number
+// String 
+// Boolean 
+
+
+//Shallow copy
+let arr1 = [1, 2, 3];
+console.log(arr1);
+
+arr2 = arr1;
+arr2.push(4);
+console.log(arr1);  //1, 2, 3, 4
+console.log(arr2); //1,2 3,4
+
+//1. Make a deep copy
+function question1(){
+  let arr1 = [1, 2, 3];
+  arr2 = arr1;
+  arr2.push(4);
+  console.log(arr1);
+  console.log(arr2);
+}
+
+function question2(){
+  const arr1 = [1, 2, 3];
+  const arr2 = [...arr1];
+  arr2.push(4);
+  console.log(arr1);
+  console.log(arr2);
+}
+
+function question3(){
+  const user1= {
+    name:'abc',
+    channel:'A1'
+  }
+  const user2 = user1;
+  user2.name = 'xyz'; //shallow copy
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question4(){
+  const user1= {
+    name:'abc',
+    channel:'A1'
+  }
+  const user2 = {...user1}; //deep copy
+  user2.name = 'xyz'; 
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question5(){
+  const user1= {
+    name:'abc',
+    channel:'A1'
+  }
+  const user2 = Object.assign(user1);
+  user2.name = 'xyz'; 
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question6(){
+  const user1= {
+    name:'abc',
+    channel:'A1',
+    location:{
+      city: 'bangalore'
+    }
+  }
+  const user2 = user1
+  user2.location = 'mysuru'; //shallow copy
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question7(){
+  const user1= {
+    name:'abc',
+    channel:'A1',
+    location:{
+      city: 'bangalore'
+    }
+  }
+  const user2 = {...user1}; 
+  user2.location.city = 'mysuru'; //nested, deep copy won't work
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question7(){
+  const user1= {
+    name:'abc',
+    channel:'A1',
+    location:{
+      city: 'bangalore'
+    }
+  }
+  const user2 = JSON.parse(JSON.stringify(user1));
+  user2.location.city = 'mysuru'; //deep copy
+ 
+  console.log(user1);
+  console.log(user2);
+}
+
+function question8(){
+  const testObject = {
+    sampleDate: new Date()
+  };
+
+  const testObject2 = JSON.parse(JSON.stringify(testObject)); //don;t use this if you have date object
+  console.log(testObject);
+  console.log(testObject2);
+}
+
+function question9(){
+  const testObject = {
+    sampleFunc: console.log,
+    sampleUndefined: undefined
+  };
+
+  const testObject2 = JSON.parse(JSON.stringify(testObject));
+  console.log(testObject); //same object
+  console.log(testObject2); //{}
+}
+
+function question10(){
+  const testObject = {
+    sampleFunc: question9,
+    sampleInfinity: -Infinity,
+    sampleNan: NaN
+  };
+
+  const testObject2 = JSON.parse(JSON.stringify(testObject));
+  console.log(testObject); //
+  console.log(testObject2); //
+}
+
+// https://www.freecodecamp.org/news/json-stringify-method-explained/
+
+//How to deep copy json unsafe values
+//1. copying all the values one after another 
+//2. recursive copying all the values one after another 
+//3. using library like loadash
+
+//why arrays and objects are shallow copy and primitive made deep copy (number, string and boolean)
 
 
 

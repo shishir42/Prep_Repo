@@ -1,5 +1,7 @@
 // Closures are a powerful feature in JavaScript that allow inner functions to access outer function variables and parameters even after the outer function has returned. Here are some of the main features of closures:
 
+// A closure is a function having access to the parent scope, even after the parent function has executed.
+
 // A closure is the combination of a function and 
 // the lexical environment within which that function was declared. 
 // i.e, It is an inner function that has access to the outer or enclosing function’s variables. 
@@ -427,3 +429,37 @@ obj.logMessage();
 //another way 
 setTimeout(() => obj.logMessage(), 1000); //now this function is not called at regular function
 
+
+function example1(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() { console.log(i); }, 1000 + i);
+  }
+}
+
+
+function example_1(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() { console.log(i); }, 1000 * i);
+  }
+}
+
+function example2(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout((function() { 
+      console.log(i) 
+    })(), 1000 + i);
+  }
+}
+
+// In this code, the IIFE is still invoked immediately, but the setTimeout function schedules it to be executed after a 1000 millisecond delay. So the console.log statement inside the IIFE will be executed after the delay.
+
+
+
+
+function example3(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function(k) { 
+      return function() { console.log(k); } 
+    }(i), 1000 + i);
+  }  
+}
