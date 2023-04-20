@@ -1,4 +1,139 @@
-// A JavaScript Promise is an object that represents the eventual completion or failure of an asynchronous operation, and its resulting value. A Promise can be in one of three states: pending, fulfilled, or rejected. When a Promise is fulfilled, it means that the asynchronous operation was successful and the Promise returns the resulting value. When a Promise is rejected, it means that the asynchronous operation failed, and the Promise returns the reason for the failure.
+// Promise
+// why promise is necessary in javascript
+// Promise is a way to achieve asynchronous operation 
+
+// A JavaScript Promise is an object that represents the eventual completion or failure of an asynchronous operation, and its resulting value. A Promise can be in one of three states: pending, fulfilled, or rejected. 
+
+const promise_resolved = Promise.resolve('test promise');
+promise_resolved.then((data)=> console.log(data)).catch(err=> console.log(err));
+
+const promise_1 = new Promise((resolve, rejected)=>{
+  setTimeout(() =>{
+    resolve('promise resolved********');
+  }, 2000);
+});
+promise_1.then((data)=> console.log(data)).catch(err=> console.log(err));
+
+//promise chaining 
+
+
+// 
+const promise_11 = new Promise((resolve, rejected)=>{
+  setTimeout(() =>{
+    resolve('promise resolved 1');
+  }, 1000);
+});
+
+const promise_22 = new Promise((resolve, rejected)=>{
+  setTimeout(() =>{
+    resolve('promise resolved 2');
+  }, 1000);
+});
+
+const promise_33 = new Promise((resolve, rejected)=>{
+  setTimeout(() =>{
+    resolve('promise resolved 3');
+  }, 1000);
+});
+
+//async await //increase the readability of code 
+function one(){
+  const promise_11 = new Promise((resolve, rejected)=>{
+    setTimeout(() =>{
+      resolve(10);
+    }, 1000);
+  });
+  return promise_11;  
+}
+
+function two(){
+  const promise_22 = new Promise((resolve, rejected)=>{
+    setTimeout(() =>{
+      resolve(20);
+    }, 1000);
+  });
+  return promise_22
+}
+
+function three(){
+  const promise_33 = new Promise((resolve, rejected)=>{
+    setTimeout(() =>{
+      resolve(30);
+    }, 1000);
+  });
+
+  return promise_33;
+}
+
+async function test(){
+  try{
+    const res1 = await one(); 
+    const res2 = await two();
+    const res3 = await three();
+    //above is calling in sequentiality  
+    const output = (res1+res2+res3)
+    console.log('response ', output);
+  }catch(e){
+
+  }
+}
+
+test();
+
+async function test1(){
+  try{
+    const output = Promise.all([one(), two(), three()]); //call parallelly 1. if one is failed then all got failed
+    console.log('response ', output);
+  }catch(e){
+
+  }
+}
+
+
+async function test2(){
+  try{
+    const output = Promise.allSettled([one(), two(), three()]); //it give you option to status for success or rejected in result 
+    console.log('response ', output);
+  }catch(e){
+
+  }
+}
+
+// Does async await block JS main thread
+
+async function test3(){
+  try{
+    console.log("2");
+    const res1 = await one(); 
+    const res2 = await two();
+    const res3 = await three();
+    const output = (res1+res2+res3)
+    console.log('response ', output);
+    console.log("4");
+  }catch(e){
+
+  }
+}
+
+console.log("1");
+test3();
+console.log("3");
+
+// No, async/await does not block the JavaScript main thread.
+
+// async/await is a syntax for writing asynchronous code in JavaScript that makes it easier to write and read code that relies on promises. When a function is declared async, it automatically returns a promise, and when the await keyword is used inside an async function, it pauses the execution of the function until the promise is resolved.
+
+// While the await keyword may cause the function to pause, it does not block the main thread. The main thread continues to execute other code while the async function is waiting for the promise to resolve. This allows for non-blocking asynchronous code execution, which is important for building responsive and efficient applications.
+
+
+
+
+https://medium.com/geekculture/does-async-await-block-javascript-main-thread-c07db9c48c3e
+
+
+
+
+// When a Promise is fulfilled, it means that the asynchronous operation was successful and the Promise returns the resulting value. When a Promise is rejected, it means that the asynchronous operation failed, and the Promise returns the reason for the failure.
 
 // Promises are commonly used in JavaScript when working with asynchronous operations such as fetching data from an API, making network requests, or reading and writing to a file. Here's an example of a Promise that simulates fetching data from an API:
 

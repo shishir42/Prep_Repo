@@ -53,3 +53,5 @@ function expensiveCalculation(n) {
 // When we call memoizedCalculation(5) the first time, the function performs the calculation and logs "Calculating...50" to the console. When we call the function again with the same input, the function retrieves the result from the cache and logs "Retrieving from cache...50" to the console.
 
 // In summary, memoization is a technique used to optimize the performance of functions by caching the results of function calls and returning the cached result when the same inputs occur again.
+
+//https://www.youtube.com/watch?v=O7n9w_f9u9A&list=PLmcRO0ZwQv4QMslGJQg7N8AzaHkC5pJ4t&index=28

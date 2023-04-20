@@ -463,3 +463,146 @@ function example3(){
     }(i), 1000 + i);
   }  
 }
+
+//counter dilemma 
+function test(){
+  let count = 0;
+  function add(){
+    count++;
+    return count;
+  }
+  return add;
+}
+
+const output = test();
+console.log(output);
+console.log(output);
+console.log(output);
+
+let addition = (() => {
+  let count = 0;
+  return () =>{
+      count = count + 1;
+      console.log("count",count);
+      return count
+  }
+})();
+
+console.log(addition());
+console.log(addition());
+console.log(addition());
+
+// The variable add is assigned to the return value of a self-invoking function.
+// The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.
+// This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+// This is called a JavaScript closure. It makes it possible for a function to have "private" variables.
+// The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
+
+// Question 1: Lexical Scoping
+function init() {
+  var name = 'Uncommon Geeks';
+  function displayName() {
+      console.log(name);
+  }
+  displayName(); //*** */
+}
+init();
+
+// Question 2: Closure
+function makeFunc() {
+  var name = 'Uncommon Geeks';
+  function displayName() {
+      console.log(name);
+  }
+  return displayName; //*** */
+}
+
+var myFunc = makeFunc();
+console.log(myFunc());
+
+//Lexical scope vs Closure - 
+// closure is the mechanism by which a function can access variables in its parent scope even after the parent function has returned, while lexical scope is the set of rules that determine the visibility and accessibility of variables and functions based on their location in the source code.
+
+// Question 3: 
+function makeAdder(x) {
+  return function (y) {
+      return x + y;
+  };
+}
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
+console.log(add5(2)); //7
+console.log(add10(2)); //12
+
+// Question 4: 
+function outside() {
+  var x = 5;
+  function inside(x) {
+      return x * 2;
+  }
+  return inside;
+}
+
+outside()(10);
+
+
+// Question 5: 
+function timeOut() {
+  for (var i = 0; i < 3; i++) { //here var is global scope, pointing to same memory location
+      setTimeout(function log() {
+          console.log(i); // What is logged? 3,3,3
+      }, 1000);
+  }
+}
+
+function timeOut() {
+  for (var i = 0; i < 3; i++) { //here var is global scope, pointing to same memory location
+      function aa(j){
+        setTimeout(function log() {
+          console.log(j); 
+        }, 1000);
+      }
+      aa(i);
+  }
+}
+
+function timeOut() {
+  for (let i = 0; i < 3; i++) { //let is block scope, pointing to different memory location 
+      setTimeout(function log() {
+          console.log(i); // What is logged? 3,3,3
+      }, 1000);
+  }
+}
+
+// Questions 6:
+(function immediateA(a) {
+  return (function immediateB(b) {
+      console.log(a); // What is logged? //0
+  })(1);
+})(0);
+
+// Questions 7:
+function example1(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() { console.log(i); }, 1000 + i);
+  }
+}
+
+// Questions 8:
+function example2(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout((function() { 
+      console.log(i) 
+    })(), 1000 + i);
+  }
+}
+
+// Questions 9:
+function example3(){
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function(k) { 
+      return function() { console.log(k); } 
+    }(i), 1000 + i);
+  }  
+}
+

@@ -237,7 +237,7 @@ console.log("Rate is", getRate()); //6
 
 //How the JS engine works
 
-welcome(); //reference error, because of tdz
+welcome(); //reference error, because of tdz and function expression is not hoisted
 const welcome = function(){
     console.log('xyx');
 }
@@ -246,3 +246,4 @@ const welcome = function(){
 (function(){
     console.log('xyz*****');
 })()
+
