@@ -62,16 +62,18 @@
 * How JavaScript Engine works
 * destructuring with complex data
 
-* react - 17 and latest (18)
-* react-native - 0.69 and latest (0.70)
-* react and features (+2)
-* compare js and react.js
-* why it is know as one way data binding 
+***********************
+
+* react - 17 and latest (18) 
+* react-native - 0.69 and latest (0.70) - done
+* react and features (+2) - done
+* compare js and react.js - done 
+* why it is know as one way data binding - done
 * babel usage 
 * virtual dom and real dom (+4) https://medium.com/devinder/react-virtual-dom-vs-real-dom-23749ff7adc9 https://www.educative.io/answers/what-is-the-difference-between-virtual-and-real-dom-react https://www.youtube.com/watch?v=dxz9HZ40h4I
 
-* react js is library or framework 
-* usage of ES6
+* react js is library or framework - done
+* usage of ES6 - 
 * different part of components - 
 * functional vs class component (+3)
 * hooks (+1) and custom hooks - 16.8
@@ -171,7 +173,7 @@ Also props will help to update the data in the UI but its take the data from out
 * can react js follow MVC: no it is only use view, you can use modal with the help of redux
 * why react js is so fast
 * useId hook 
-* challenges while working on react
+* challenges while working on react (done)
 * how and significance components is used in the application
 * when page load where the api call need to implement (class and functional component) (explain the sequence of methods)
 * why useState is required.
@@ -181,7 +183,8 @@ Also props will help to update the data in the UI but its take the data from out
 * UI library for react
 * Limitation of react
 * Unit test in react 
-* 
+* Stop watch app
+* Counter app using redux
 
 
 https://www.geeksforgeeks.org/what-are-the-different-phases-of-reactjs-component-lifecycle/
@@ -319,7 +322,71 @@ https://www.youtube.com/watch?v=1zCNdVhdvHE&t=38s&pp=ygUTcmVhY3QgbmF0aXZlIHR1cml
 
 
 Dot net core
-https://www.youtube.com/results?search_query=dotnet+core+interview+questions
+
+OOPs
+https://www.youtube.com/watch?v=OFuPd8YiiFQ
+
+SQL: 
+https://www.youtube.com/watch?v=bfDhm6tTXtU
+
+Web API:
+https://www.youtube.com/watch?v=XStpo9VlzCI
+
+.NetCore:
+https://www.youtube.com/watch?v=hZc2WjVtZ_Q&t=2284s
+https://www.youtube.com/watch?v=nuryxBpJI_s&list=PLNV7L1YVu_jyMsQCjYuNG5PQMXMKPsePc
+https://www.youtube.com/watch?v=ThZuctN0ARU
+https://www.youtube.com/watch?v=Tm4-7b5cCTY
+https://www.youtube.com/watch?v=q30WTvk4-HY&list=PL7HS9PmaJH_q8ZwV8P4mwJzSXZRTp3O3Y
+
+https://www.youtube.com/watch?v=1r5cZ1eCPS8
+https://www.youtube.com/watch?v=7AhmAfndAdU
+https://www.youtube.com/watch?v=4DAit8nrt3M
+https://www.youtube.com/watch?v=vzcdhhNP0dQ
+https://www.youtube.com/watch?v=ZrK40mObjmQ&list=PLoJTJYl8DAG9rUlgtBsL4fSV0rBFdYy6i
+https://www.youtube.com/watch?v=P_87g1Yd1Y0&list=PLMFjsJ2uRBq1oS0dh5WARF28BiiUKaCLM
+https://www.youtube.com/watch?v=QJx4jWE6OyM
+https://www.youtube.com/watch?v=YO8kMwrm1zo
+https://www.youtube.com/watch?v=uCrZoGzQ48U
+https://www.youtube.com/watch?v=S6oIyAz2Yeg&list=PLJhxHp6j1l-_VLWA8_WNEdPZOT_tBQbA4
+https://www.youtube.com/watch?v=Sb2vbfGpAu4&list=PLJhxHp6j1l-8_kjEL2hVJDs0_4eJbHtWH
+https://www.youtube.com/watch?v=eayAZhqRHv8&list=PLJhxHp6j1l---DH1o6lLZ-f24Bm4ZD8aU
+https://www.youtube.com/watch?v=weRPPG6mOkw&list=PLJhxHp6j1l-9RHSkg_CZXZAI45aVmrQXD
+https://www.youtube.com/watch?v=fpVqecTHK9o&list=PLJhxHp6j1l-8rPDhuiVf5UuDbTjh1DDZp
+https://www.youtube.com/watch?v=ILalG3GU69A&list=PLJhxHp6j1l--55_lvr4A5IT9MqUzp_lY4
+https://www.youtube.com/shorts/Y7JNfa9_PPk
+https://www.youtube.com/watch?v=FJJlMBbhVoc&list=PLwLaCah3wxh0SkWtXUzUxjchJfpRtWSDd
+https://www.youtube.com/watch?v=jS8H67kzuKs&list=PLh25VcpDK46v1zeEIwXNt9vtzLJ0h8lMx&index=3
+https://www.youtube.com/@Interviewspreparation/shorts
+https://www.youtube.com/watch?v=RXzFfiqBVhs
+https://www.youtube.com/shorts/QeRwccaEtgU
+https://www.youtube.com/watch?v=7myI-l3Mrec
+https://www.youtube.com/watch?v=ThZuctN0ARU&t=353s
+https://www.youtube.com/watch?v=sN48W9FoXrM
+https://www.youtube.com/shorts/44SEtPgtuYY
+https://www.youtube.com/shorts/ewrh71bFdEc
+https://www.youtube.com/shorts/wl-6wAj3tgI
+https://www.youtube.com/shorts/5v8XAschvfU
+https://www.youtube.com/shorts/bn8jWIJPKjY
+https://www.youtube.com/shorts/cYkfS15a0fc
+https://www.youtube.com/shorts/UCpqX0Si5c0
+https://www.youtube.com/shorts/hOwTTNoL9W8
+https://www.youtube.com/shorts/nvLmdSx3SQQ
+https://www.youtube.com/shorts/7Eq9CbLUOQk
+https://www.youtube.com/shorts/uDt-iwKdiVA
+https://www.youtube.com/watch?v=1r5cZ1eCPS8&t=3s
+https://www.youtube.com/watch?v=n6MLHkSLWmQ
+https://www.youtube.com/watch?v=zTuxpw4Azj8
+https://www.youtube.com/watch?v=Xz_pdQ4y8HA
+https://www.youtube.com/watch?v=tips4azosew&list=PLo4twE8XBOPyqBzRaCqParpeFu488rG-H
+https://www.youtube.com/watch?v=xiXIRbRdQls&list=PLo4twE8XBOPy0HRKBPx6ktpQoJeciFd-g
+
+
+
+https://www.udemy.com/course/csharp-oops-mvc-asp-dotnet-core-webapi-sql-questions-mock-interviews/?referralCode=6922C9482CFE5A11B863
+
+
+
 
 AWS
 https://www.youtube.com/results?search_query=aws+interview+questions+and+answers+for+experienced&sp=EgIIBQ%253D%253D
@@ -339,3 +406,122 @@ https://www.youtube.com/watch?v=S6Yd5cPtXr4&list=PL0g02APOH8okXhOQLOLcB_nifs1U41
 Micro services
 https://www.youtube.com/watch?v=EXDkgjU8DDU&list=PLaLqLOj2bk9ZV2RhqXzABUP5QSg42uJEs
 https://www.youtube.com/watch?v=_fK8g2dhzvU&list=PLIGDNOJWiL19WHIxJ0Q4aP4X3oljPha5n&index=1
+
+Angular:
+* what is angular and features/building blocks 
+* AngularJs vs Angular
+* Advantages and disadvanatges 
+* Angular material 
+* Angular CLI
+* Typescript 
+* package.json
+* unit test library 
+* ng test and ng e2e
+* upgrade angular apps
+* lint
+* Unsubscribe observables
+* Optimize angular app
+* ngZone (+1)
+* Angular Modules 
+* ngModules
+* Angular components
+* @component decorator 
+* component constructor vs ngOnit
+* ngClass - how to use based on condition 
+* Angular decorator
+* RxJS - library 
+* Rxjs - Subscribing 
+* Rxjs - observable and observer
+* Rxjs - promise vs observable 
+* Rxjs - multicasting 
+* Rxjs - error handling in observable 
+* Angular Router 
+* Angular Router imports
+* Angular Router outlets
+* Angular Router link
+* Angular Router link active
+* Angular Router state
+* Angular Router events
+* Activated Route
+* Angular Directives and types 
+* component vs directive 
+* ngFor, ngIf, 
+* Angular HTTP
+* Angular Pipes and pipes parameter, chain pipes, custom pipe, 
+* Angular templates 
+* data binding 
+* Subject vs Observable 
+* async pipe
+* for in vs for of 
+* Generic types in angular 
+* Use of formBuilder and formGroup 
+* How can we add dynamic validation in form 
+* Nested reactive form 
+* formarray in reactive form angular 
+* Change detector class in angular 
+* ngOnChanges vs ngDocheck
+* 10 rxjs operators
+* shared module 
+* viewchild in angular 
+* use of interface in angular 
+* what are the entry components in angular
+* How many ways we can pass data to multiple components 
+* resolver in angular 
+* JIT vs AOT 
+* what is lazy loading 
+* HTTP interceptor
+* use of trackBy in *ngFor
+* NGCC in angular 
+* 
+
+
+
+https://kinsta.com/blog/angular-vs-react/#:~:text=1.-,Similarities,a%20piece%20of%20a%20UI.
+https://programmingwithmosh.com/react/react-vs-angular/
+https://www.simform.com/blog/angular-vs-react/
+https://appinventiv.com/blog/react-vs-angular/
+https://www.interviewbit.com/blog/angular-vs-react/
+
+
+https://www.youtube.com/watch?v=qt8bB84PnQs&list=PLp50dWW_m40VPvdJ7ph1CU8xnQkppnSAE (***)
+
+
+https://www.youtube.com/watch?v=KNmtXLOnwy8
+
+https://www.youtube.com/watch?v=uJ-TDU189C4 (***)
+https://www.youtube.com/watch?v=9cB4FVu7Yew
+https://www.youtube.com/watch?v=4UgronUwjsU
+https://www.youtube.com/watch?v=V7Qjq6e66qk
+https://www.youtube.com/watch?v=IAL9qr6Yxmc
+https://www.youtube.com/watch?v=L9EXIhabTMs
+https://www.youtube.com/watch?v=rKckYOT_JJs
+https://www.youtube.com/watch?v=GfDlxfzHi6k
+https://www.youtube.com/watch?v=FwQ7ie-6Nb8
+https://www.youtube.com/watch?v=ehaT1KFp0_Y
+https://www.youtube.com/watch?v=8cUwGfTVBYM
+https://www.youtube.com/watch?v=bwRfGlpd1vo
+https://www.youtube.com/watch?v=idVPwX0yHaY
+https://www.youtube.com/watch?v=ehaT1KFp0_Y&list=PLAgJNt0flqKdcAtyFCyZrtg9CmCqxqgqg
+https://www.youtube.com/watch?v=MSAiCicJWQA
+https://www.youtube.com/watch?v=2T3F5TfrYwI
+https://www.youtube.com/watch?v=zLAFAS5YF2M
+https://www.youtube.com/watch?v=VCy0Ct0NXik
+https://www.youtube.com/watch?v=-1HjQkARnso
+https://www.youtube.com/watch?v=PevqeI-Hxzs
+https://www.youtube.com/watch?v=zddN_4mudnw
+https://www.youtube.com/watch?v=LmBULInvDHM
+https://www.youtube.com/watch?v=FhUr3O17418
+https://www.youtube.com/watch?v=MLwC4-_6g0M
+https://www.youtube.com/watch?v=uJ-TDU189C4
+https://www.youtube.com/watch?v=CUvHGwY5EUM
+https://www.youtube.com/watch?v=IAL9qr6Yxmc&t=14s
+https://www.youtube.com/watch?v=RW6kFpqqcco
+https://www.youtube.com/watch?v=NjjSz6kC8mw&list=PLkTWTNAkAFOkZyh9zNjnrQWP8gInn0FVy
+https://www.youtube.com/watch?v=q3qoDlbX0NM&list=PL_qizAfcpJ-NsD2_46FOYIJAi68tIRFTU
+https://www.youtube.com/results?search_query=angular+interview+questions+
+https://www.youtube.com/watch?v=V7Qjq6e66qk
+https://www.youtube.com/watch?v=8HaLNtAWB6M
+https://www.youtube.com/watch?v=xVkDNQ6H7A8
+https://www.youtube.com/watch?v=x38CgkwnZyU
+
+

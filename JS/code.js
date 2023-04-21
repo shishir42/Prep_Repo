@@ -1051,6 +1051,15 @@ setTimeout(() => {
 
 /****************/
 
+console.log(1 + "2" + "2"); //122 type string 
+console.log(1 + +"2" + "2"); // 32 + or - unary plus operator converts string to a number and type string
+console.log(1 + -"1" + "2"); //02 and type string
+console.log(+"1" + "1" + "2"); //112  and type string
+console.log( "A"-"B" + "2"); //NAN2
+console.log("A"-"B" + 2);//NAN + 2 = NAN
+console.log( "A"+"B" + "2") //AB2 and type string
+
+
 /****************/
 
 /****************/

@@ -1,5 +1,7 @@
 // The undefined property indicates that a variable has not been assigned a value, or declared but not initialized at all. The type of undefined value is undefined too.
 
+// The undefined value is a primitive value used when a variable has not been assigned a value.
+
 var user; // Value is undefined, type is undefined
 console.log(typeof user); //undefined
 
@@ -12,6 +14,8 @@ console.log(x); // Output: undefined
 
 // null, on the other hand, is an object that represents the intentional absence of any object value. It is often used to indicate that a variable should have no value or that an object property should be empty. For example:
 
+// The null value is a primitive value that represents the null, empty, or non-existent reference.
+
 let y = null;
 console.log(y); // Output: null
 
@@ -22,3 +26,4 @@ console.log(y); // Output: null
 var user = null;
 console.log(typeof user); //object
 
+// https://www.scaler.com/topics/javascript/null-and-undefined-in-javascript/
