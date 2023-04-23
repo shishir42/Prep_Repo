@@ -1,0 +1,7 @@
+Caching functionality in .NET Framework allows data storage in memory for rapid access. It helps improve performance by making data available, even if the data source is temporarily unavailable, and enhances scalability.
+
+There are 3 types of caches in .NET:
+
+In-Memory Cache
+Persistent in-process Cache
+Distributed Cache

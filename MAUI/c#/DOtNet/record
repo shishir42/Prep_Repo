@@ -1,0 +1,13 @@
+In C#, a record and a class are both used to define custom types, but they have different purposes and features.
+
+A class is a reference type that encapsulates data and behavior (methods) into a single unit. Classes are used to model complex objects and systems, and they support inheritance, polymorphism, and interfaces. Classes can have properties, fields, methods, events, and constructors.
+
+On the other hand, a record is a value type that is designed to store immutable data. Records are used to represent simple data structures that hold a set of values, such as a point in 2D space or a customer's order. Records support equality comparisons and have a built-in ToString() method. Records are defined using the record keyword and have a simplified syntax for defining properties.
+
+One of the main differences between classes and records is that records are designed to be immutable, while classes are mutable by default. This means that the properties of a record cannot be changed after it is created, while the properties of a class can be modified at any time. This immutability makes records more suitable for representing values, as it ensures that the data cannot be accidentally changed.
+
+Another difference is that records have a value-based equality comparison, which means that two records with the same values are considered equal, while two classes with the same values are only equal if they reference the same object in memory.
+
+In summary, use a class when you need to encapsulate data and behavior into a single unit and support inheritance and polymorphism. Use a record when you need to represent simple data structures that are immutable and support value-based equality.
+
+********************************************************************************************************************

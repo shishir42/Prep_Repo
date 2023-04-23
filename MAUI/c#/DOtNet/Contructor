@@ -1,0 +1,8 @@
+A constructor is a special method of the class that contains a collection of instructions and gets automatically invoked when an instance of the class is created.
+There are 5 types of constructors in C#, as given below:
+
+Default Constructor: It is without any parameters.
+Parameterized Constructor: It has one parameter.
+Copy Constructor: It creates an object by copying variables from another object.
+Static Constructor: It is created using a static keyword and will be invoked only once for all of the instances of the class.
+Private Constructor: It is created with a private specifier and does not allow other classes to derive from this class or create an instance of it.

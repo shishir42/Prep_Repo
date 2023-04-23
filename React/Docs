@@ -1941,7 +1941,8 @@ In summary, while variables in normal functions and state variables created with
 pure component in functional component 
 
 
-
+https://17.reactjs.org/docs/hooks-faq.html#do-hooks-replace-render-props-and-higher-order-components
+https://legacy.reactjs.org/docs/accessibility.html
 
 
 

@@ -7,6 +7,10 @@ import ExampleUseState from './components/ExampleUseState';
 import { UserContext } from './context/UserContext';
 import ExampleUseContext from './components/ExampleUseContext';
 import ExampleUseReducer from './components/ExampleUseReducer';
+import ExampleUseCallback from './components/ExampleUseCallback';
+import ExampleUseMemo from './components/ExampleUseMemo';
+import ExampleUseRef from './components/ExampleUseRef';
+import MyHOCComponentWithData from './components/ExampleHOC';
 
 function App() {
   const [user, setUser] = useState("John");
@@ -21,6 +25,10 @@ function App() {
         <ExampleCustomHook/>
         <ExampleCustomHookFetch/>
         <ExampleUseReducer/>
+        <ExampleUseCallback/>
+        <ExampleUseMemo/>
+        <ExampleUseRef/>
+        <MyHOCComponentWithData dataSource="https://jsonplaceholder.typicode.com/users"/>
       </UserContext.Provider>
     </div>
   );

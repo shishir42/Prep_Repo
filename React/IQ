@@ -1,10 +1,10 @@
 - Interview
 
 * class based or functional base
-* JS - Hoisting - working - only work with var- why not with let and var (+5) also w.r.t to normal and arrow functions (let or const or var are hoisted but var are initialized with undefined and let are const are in temporal zone where access are not possible, until the let and const are defined you will not be able to access)
-* unction are hoisted, why function need to be hoisted 
-* arrow function are hoisted or not (+1)
-* let vs var vs const (+3)
+* JS - Hoisting - working - only work with var- why not with let and var (+5) also w.r.t to normal and arrow functions (let or const or var are hoisted but var are initialized with undefined and let are const are in temporal zone where access are not possible, until the let and const are defined you will not be able to access) - done
+* function are hoisted, why function need to be hoisted - done
+* arrow function are hoisted or not (+1) - done
+* let vs var vs const (+3) - done
 * this keyword (+1)
 * What is event loop and precedence along with promise and settimeout
 * settimeout - JS is single threaded interpreted language
@@ -70,62 +70,61 @@
 * compare js and react.js - done 
 * why it is know as one way data binding - done
 * babel usage 
-* virtual dom and real dom (+4) https://medium.com/devinder/react-virtual-dom-vs-real-dom-23749ff7adc9 https://www.educative.io/answers/what-is-the-difference-between-virtual-and-real-dom-react https://www.youtube.com/watch?v=dxz9HZ40h4I
-
+* virtual dom and real dom (+4) https://medium.com/devinder/react-virtual-dom-vs-real-dom-23749ff7adc9 https://www.educative.io/answers/what-is-the-difference-between-virtual-and-real-dom-react https://www.youtube.com/watch?v=dxz9HZ40h4I (done)
 * react js is library or framework - done
 * usage of ES6 - 
-* different part of components - 
-* functional vs class component (+3)
-* hooks (+1) and custom hooks - 16.8
-* why hooks is introduced ()
-* class based life cycle methods (+3)
-* pure component (+3) and example with code https://www.youtube.com/watch?v=o22KRrxab18&t=2s (26:00)
-* higher-order component (+1)
+* different part of components - done
+* functional vs class component (+3) - done
+* hooks (+1) and custom hooks - 16.8 - done
+* why hooks is introduced () - done
+* class based life cycle methods (+3) - done
+* pure component (+3) and example with code https://www.youtube.com/watch?v=o22KRrxab18&t=2s (26:00) - done
+* higher-order component (+1) - done
 * context api (+2)
 * why we need to use redux if it is already avalable 
 * explain redux flow (+3)
-* useReducers
+* useReducers - done
 * middleware in redux (+1)
 * Thunk vs Saga
-* handle error 
-* render props 
-* refs (+3)
-* forward ref
-* state (+1)
-* react portals
-* how to pass data to one component to another component (+7) ways and which one is better (parent --> child and child ---> parent)
-* props drilling (+2) and how to avoid
-* How to print data which is get from API calls 
-* How to manage an performance in react (+2)
-* useMemo vs useCallback (+1)
-* useReducer vs useMemo vs useContext
+* handle error - done
+* render props - done
+* refs (+3) - done
+* forward ref - done
+* state (+1) - done
+* react portals - done
+* how to pass data to one component to another component (+7) ways and which one is better (parent --> child and child ---> parent) - done
+* props drilling (+2) and how to avoid - done
+* How to print data which is get from API calls - done
+* How to manage an performance in react (+2) - done
+* useMemo vs useCallback (+1) - done
+* useReducer vs useMemo vs useContext- done
 * useSelector vs useDispatch 
-* Lifecycle methods vs Hooks
-* unidirectional data flow in react js
-* react memo 
-* HOC and any usecase (+4)https://www.youtube.com/watch?v=o22KRrxab18&t=2s(40:00)
-* Mounting 
-* Different ways to call API in react js
+* Lifecycle methods vs Hooks - done
+* unidirectional data flow in react js - done
+* react memo - done
+* HOC and any usecase (+4)https://www.youtube.com/watch?v=o22KRrxab18&t=2s(40:00) - done
+* Mounting  - done
+* Different ways to call API in react js - done
 * New features in react 
 * create an two dropdown and one dropdown selected based on the other dropdown should populated (use the objects array like India has cities) 
 * generate list and delete button along with checkbox once the checkbox is checked and then appear the delete button 
-* useState (+2): It is functions
-* controlled and uncontrolled components (+1)
-* custom hooks
-* strict mode in react (react.strictMode), js(useStrict) vs (react.strictMode)
-* explain react router mechanism 
-* what is JSX (+1)
-* element vs component 
-* react intercepts 
-* react fiber 
-* Lazy loading 
+* useState (+2): It is functions - done
+* controlled and uncontrolled components (+1) - done
+* custom hooks - done
+* strict mode in react (react.strictMode), js(useStrict) vs (react.strictMode) - done
+* explain react router mechanism - 
+* what is JSX (+1) - done
+* element vs component - done
+* react intercepts - done
+* react fiber - done
+* Lazy loading - done
 * How to manage nested routes in terms of role based routing 
-* print html string along with styles using dangerouslySetInnerHtml and check the Cross site scripting(XSS) attacks 
+* print html string along with styles using dangerouslySetInnerHtml and check the Cross site scripting(XSS) attacks - done
 * Implement the pagination using react hooks alone with page numbers (https://www.youtube.com/watch?v=szXMBGKGTdE&t=17s)
 * Implement the input box and print the value only when user has stopped typing (https://www.youtube.com/watch?v=QQNjidzLZ8E)
-* why we need to use keys, explain w.r.t react components
-* syntactic events in react  
-* reconciliation  - It's is process of tree comparison which is used by react to update the real dom.
+* why we need to use keys, explain w.r.t react components - done
+* syntactic events in react  - done
+* reconciliation  - It's is process of tree comparison which is used by react to update the real dom.(done)
 * context API vs redux
 * actions and reducers in redux
 * import "./styles.css";
@@ -146,46 +145,56 @@ export default function App() {
     </div>
   );
 }
-* react fragments (+1)
-* Explain the purpose of render() in ReactJS
-* what is events and how to create in react
-* cases when you should use ref 
-* react vs angular (+1) and can be use both react and angular together
-* how you can create forms in react
+* react fragments (+1) - done
+* Explain the purpose of render() in ReactJS - done
+* what is events and how to create in react - done
+* cases when you should use ref - done
+* react vs angular (+1) and can be use both react and angular together - done
+* how you can create forms in react - done
 * flux
 * single source of truth in redux
 * switch keyword in react route 
 * react router vs conventional router 
-* why react is so popular 
-* folder structure in react 
-* state vs props
-* useMemo vs useCallback
-* profiler in react js - check the performance of app
-* js normal function vs react custom hooks (you can use react js life cycle method inside custom hook)
-* library vs framework ()
+* why react is so popular - done
+* folder structure in react- done 
+* state vs props - done
+* useMemo vs useCallback - done 
+* profiler in react js - check the performance of app - (done)
+* js normal function vs react custom hooks (you can use react js life cycle method inside custom hook) - (done)
+* library vs framework () - done
 * Can react hooks covered the all life cycle methods: No, 3 methods are not covered,  getsnapshotbeforeupdate, getderivedstatefromerror and componentdidcatch.
 * React Redux vs React-Context API (resolved for prop drilling)(we can used both)
-* Map vs forEach (in context of reactjs)
+* Map vs forEach (in context of reactjs) - done
 * Will redux save the data even after the browser refresh - no, it will not saved the data after page refresh, if you using redux-persist then it will saved.
-* Why use state inside react component-> React flow is different compared to other mechanism like to reflect the data in the view, component need to re-render otherwise it will not reflect the data, Here data is store in the state, once state is updating then automatically view will re-render and you will see the updated data.
-Also props will help to update the data in the UI but its take the data from outside not the inside of component.
+* Why use state inside react component-> React flow is different compared to other mechanism like to reflect the data in the view, component need to re-render otherwise it will not reflect the data, Here data is store in the state, once state is updating then automatically view will re-render and you will see the updated data. (done)
+Also props will help to update the data in the UI but its take the data from outside not the inside of component.(done)
 * react js 18 - features https://react.dev/blog/2022/03/29/react-v18
-* can react js follow MVC: no it is only use view, you can use modal with the help of redux
-* why react js is so fast
+* can react js follow MVC: no it is only use view, you can use modal with the help of redux (done)
+* why react js is so fast (done)
 * useId hook 
 * challenges while working on react (done)
-* how and significance components is used in the application
-* when page load where the api call need to implement (class and functional component) (explain the sequence of methods)
-* why useState is required.
-* how to validate the forms in react 
+* how and significance components is used in the application 
+* when page load where the api call need to implement (class and functional component) (explain the sequence of methods) - (done)
+* why useState is required.(done)
+* how to validate the forms in react (done)
 * alterative of redux 
-* services in reactjs
+* services in reactjs-done
 * UI library for react
 * Limitation of react
-* Unit test in react 
+* Unit test in react (done)
 * Stop watch app
 * Counter app using redux
 
+
+Pending:
+1. React Without ES6
+2. React Without JSX
+3. Static Type Checking
+4. Web Components
+5. JSX In Depth
+6. React router
+7. React redux
+8. Apps 
 
 https://www.geeksforgeeks.org/what-are-the-different-phases-of-reactjs-component-lifecycle/
 https://www.geeksforgeeks.org/explain-lifecycle-of-component-re-rendering-due-to-re-rendering-of-parent-component/?ref=rp
@@ -220,7 +229,6 @@ HTML
 * flexbox
 * display: none and visibility: hidden (+1)
 * advantages of css
-* 
 * put div side by side without modified the code 
 <div>
   <h1>T1</h1>
@@ -319,6 +327,17 @@ https://www.youtube.com/watch?v=KVbo-oj7TRA&list=PLlydFsFRbxJ3oz8syKnu8FVJLme2U0
 
 Redux:
 https://www.youtube.com/watch?v=1zCNdVhdvHE&t=38s&pp=ygUTcmVhY3QgbmF0aXZlIHR1cmluZw%3D%3D
+
+https://github.com/ayush2390/Disney-Plus-Clone/tree/master/src/components
+https://github.com/ayush2390/Youtube-Clone
+https://github.com/ayush2390/Song-Player
+https://github.com/ayush2390/Voice-Expense-Tracker
+https://github.com/ayush2390/linkedin-clone
+https://github.com/ayush2390/Exercise-App
+https://github.com/ayush2390/Crypto-App
+https://github.com/ayush2390/Ecommerce-Dashboard
+https://github.com/Shreya-trivedi-20/Create-a-Login-Form-with-ReactJs-
+
 
 
 Dot net core
@@ -523,5 +542,5 @@ https://www.youtube.com/watch?v=V7Qjq6e66qk
 https://www.youtube.com/watch?v=8HaLNtAWB6M
 https://www.youtube.com/watch?v=xVkDNQ6H7A8
 https://www.youtube.com/watch?v=x38CgkwnZyU
-
+https://www.youtube.com/watch?v=ehaT1KFp0_Y&list=PLAgJNt0flqKdcAtyFCyZrtg9CmCqxqgqg
 

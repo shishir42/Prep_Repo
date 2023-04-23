@@ -1,0 +1,32 @@
+OOP allows .NET developers to create modular programs and classes containing methods, properties, fields, events, and other logical modules.
+
+Encapsulation: Creation of self-contained modules that bind together the data and the functions that access that data.
+
+Abstraction: Handles complexity and allows the implementation of further complex logic without disclosing it to the user object.
+
+Polymorphism: Operation performed depends upon the context at runtime to facilitate easy integration.
+
+Inheritance:  Creation of classes in a hierarchy to enable a class to inherit behavior from its parent class allowing reuse of code.
+
+Inheritance is a method for creating hierarchies of objects wherein one class, called a subclass, is based on another class, called a base class.
+Inheritance hierarchy is a singly rooted tree structure for organizing classes.
+Implementation inheritance is when a class inherits all members of the class from which it is derived. Interface inheritance is when the class inherits only signatures of the functions from another class.
+
+To prevent a class from being inherited, the sealed keyword in C# can be used.
+
+
+Method Overriding is a process that allows using the same name, return type, argument, and invoking the same functions from another class (base class) in the derived class.
+
+Shadowing makes the method of the parent class available to the child class without using the override keyword. It is also known as Method Hiding.
+
+Shadowing is used to provide a new implementation for the base class method and helps protect against subsequent base class modification. Overriding allows you to rewrite a base class function with a different definition and achieve polymorphism.
+
+
+Polymorphism refers to one interface with multiple functions. It means that the same method or property can perform different actions depending on the run-time type of the instance that invokes it.
+i. Static or compile-time polymorphism
+ii. Dynamic or runtime polymorphism
+
+No, .NET supports only single inheritance due to the diamond problem. Also, it would add complexity when used in different languages. However, multiple interfaces can solve the purpose.
+It is an ambiguity that arises due to multiple inheritances in C#. Two classes B and C inherit from A, and D inherits from both B and C but doesn’t override the method defined in A. The Diamond Problem arises when class B or C has overridden the method differently and D cannot decide to inherit from either B or C.
+
+An interface is a declaration for a set of class members. It is a reference type that contains only abstract members such as Events, Methods, Properties, etc.

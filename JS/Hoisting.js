@@ -54,7 +54,7 @@ function test4(){
 // Different ways to create variables in JavaScript
 
 // Hoisting - working - only work with var- why not with let and var (+5) also w.r.t to normal and arrow functions (let or const or var are hoisted but var are initialized with undefined and let are const are in temporal zone where access are not possible, until the let and const are defined you will not be able to access)
-// * unction are hoisted, why function need to be hoisted 
+// * function are hoisted, why function need to be hoisted 
 // * arrow function are hoisted or not
 
 
@@ -247,3 +247,57 @@ const welcome = function(){
     console.log('xyz*****');
 })()
 
+
+// Hoisting - working - only work with var- why not with let and var (+5) also w.r.t to normal and arrow functions (let or const or var are hoisted but var are initialized with undefined and let are const are in temporal zone where access are not possible, until the let and const are defined you will not be able to access)
+
+// why function need to be hoisted in javascript 
+
+// In JavaScript, function hoisting is a mechanism by which function declarations are moved to the top of their scope before any code is executed. This means that you can use a function before it is declared.
+
+// Function hoisting is useful because it allows you to write your code in a more natural and intuitive way. For example, you can declare a function at the bottom of a file or within a block of code and still use it earlier in the file or block.
+
+// Here's an example:
+
+// Function declaration
+function add(a, b) {
+    return a + b;
+  }
+  
+  // Function call
+  console.log(add(2, 3)); // Output: 5
+
+//   In this example, the add function is declared before it is called, so everything works as expected.
+
+// However, if we were to move the function call before the function declaration, we would get an error:
+
+// Function call
+console.log(add(2, 3)); // Output: Uncaught ReferenceError: add is not defined
+
+// Function declaration
+function add(a, b) {
+  return a + b;
+}
+
+// This is because the add function has not yet been declared, so the JavaScript interpreter doesn't know what to do with the function call.
+
+// Function hoisting helps to avoid this kind of error by moving function declarations to the top of their scope, allowing you to use them before they are declared. However, it's important to note that only function declarations are hoisted, not function expressions.
+
+// Arrow functions in JavaScript are not hoisted like regular function declarations. This means that you cannot use an arrow function before it is declared.
+
+// Regular function declaration
+console.log(add(2, 3)); // Output: 5
+
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+console.log(subtract(5, 2)); // Output: Uncaught ReferenceError: subtract is not defined
+
+const subtract = (a, b) => a - b;
+
+// In this example, the regular function add is hoisted to the top of the scope, so you can use it before it is declared. However, the arrow function subtract is not hoisted, and you get a ReferenceError when you try to use it before it is declared.
+
+// This is because arrow functions are created as part of an expression, and they are assigned to a variable or passed as an argument to a function. They do not have their own name, and they are not bound to a specific identifier in the same way that regular functions are.
+
+// Therefore, if you need to use an arrow function, you must declare it before you use it, just like any other variable or constant.

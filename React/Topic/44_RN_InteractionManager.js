@@ -1,0 +1,3 @@
+// The InteractionManager is a native module in React Native, which is responsible for differing the execution of a function until an interaction has finished. To handle this deferral, we need to call InteractionManager.runAfterInteractions(() => {...}).
+
+// The InteractionManager is important because React Native has two threads. One is JavaScript UI thread, which handles drawing updates to the screen, and the second thread used for all task, not on the UI thread. Since React Native has only one thread for making UI updates, it can get overloaded and drop frames, especially in navigation screen animations. So, developers use the InteractionManager to ensure that the function is executed after these animations occur. As a result, we do not drop frames on the UI thread.

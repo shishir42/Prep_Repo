@@ -1,0 +1,12 @@
+const and readonly 
+https://www.c-sharpcorner.com/UploadFile/0c1bb2/read-only-and-constant-in-C-Sharp/
+
+const: compile-time constant: absolute constant, value is set during declaration, is in the IL code itself
+readonly
+run-time constant: can be set in the constructor/init via config file i.e. App.config, but once it initializes it can't be changed
+
+
+const fields need to be initialized with declaration only, while readonly fields can be initialized at the declaration or in the constructor.
+const variables can be declared in methods, while readonly fields cannot be declared in methods.
+const fields cannot be used with a static modifier, while readonly fields can be used with a static modifier.
+const field is a compile-time constant. The readonly field can be used for run-time constants.

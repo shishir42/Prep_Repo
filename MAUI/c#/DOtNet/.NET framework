@@ -1,0 +1,36 @@
+The .NET framework is a software development platform that supports an object-oriented approach. It offers services, like memory management, networking, security, and type safety.
+
+There are a lot of components that make up the .NET framework, and some of them are as follows:
+
+.NET Class Library
+.NET Framework
+Language Runtime
+Application Domain
+Profiling
+
+JIT stands for Just In Time. It is a compiler in CLR responsible for the execution of .NET programs of different languages by converting them into machine code. It speeds up the code execution and supports multiple platforms.
+JIT is the abbreviation of Just in Time. It is a compiler that is used to convert intermediate code into native code easily.In .NET, during execution, the code is converted into the native language, also called the byte code. This is processed by the CPU, and the framework helps with the conversion.
+
+MSIL is the abbreviation of Microsoft Intermediate Language. It is used to provide the instructions required for operations such as memory handling, exception handling, and more. It can also provide instructions to initialize and store values and methods easily.
+
+CLR stands for Common Language Runtime. It forms to be the most vital component of .NET as it provides the foundation for many applications to run on.
+If a user writes an application in C#, it gets compiled and converted to intermediate code. After this, CLR takes up the code and works on it with respect to the following aspects:
+Memory management
+Security protocols
+Libraries for loading
+Thread management
+
+BCL stands for Base Class Library. It comprises classes, interface, and value types. It is the foundation for building .NET Framework applications, components, and controls.
+
+FCL stands for Framework Class Library and is a collection of reusable types, including classes, interfaces, and data types included in the .NET Framework. It is used for developing a wide variety of applications, as it provides access to system functionality.
+
+Types in .NET Framework are either Value Type or Reference Type. A Value Type is stored in the stack and it holds the data within its own memory allocation. While a Reference Type is stored in the heap and it contains a pointer to another memory location that holds the real data.
+
+EXE is an executable file that works as an application and it runs individually as it contains an entry point. DLL is a Dynamic Link Library which is a supportive file to other applications, and it cannot run individually.
+
+The stack is used for static memory allocation and access to this memory is fast and simple to keep track of. Heap is used for dynamic memory allocation and memory allocation to variables that happen at run time. Accessing the heap memory is complex and slower compared to the stack.
+
+string is immutable and fixed-length, whereas StringBuilder is mutable and variable length. The size of the .string cannot be changed, but that of the .stringbuilder can be changed.
+
+The base class is a class whose members and functions can be inherited, and the derived class is the class that inherits those members and may also have additional properties.  
+

@@ -1,0 +1,1 @@
+// Stylesheet object is provided by React native library which has the method “create”. It takes an argument of type object and this object is the collection of CSS rules. 
