@@ -89,3 +89,28 @@ console.log('3');
     //  https://www.youtube.com/watch?v=lqLSNG_79lI
     // https://www.youtube.com/watch?v=rUpxAeoR7PU
     //  https://www.youtube.com/watch?v=w-jULX0D5cg
+
+
+    // What is event loop and precedence along with promise and settimeout in javascript 
+
+//     The event loop is a mechanism in JavaScript that manages the execution of code by processing events from the queue. It enables asynchronous programming in JavaScript, where multiple tasks can be executed in parallel without blocking the main thread.
+
+// The event loop has a queue of tasks to execute, which includes both synchronous and asynchronous tasks. When a task is executed, it is removed from the queue, and its result is passed to the calling code. If the queue is empty, the event loop waits for new tasks to be added.
+
+// The event loop has a well-defined order of precedence for tasks. Synchronous tasks have the highest priority and are executed first, followed by microtasks (such as promises and process.nextTick()), and then by timer tasks (such as setTimeout() and setInterval()).
+
+// In JavaScript, promises and setTimeout() both enable asynchronous programming, but they behave differently in the event loop. Promises are microtasks, which means that they have a higher priority than timer tasks. When a promise is resolved or rejected, its callback is added to the microtask queue, which is processed before the timer queue.
+
+// On the other hand, setTimeout() is a timer task, which means that it has a lower priority than microtasks. When a timer task is triggered, it is added to the timer queue, which is processed after the microtask queue.
+
+// Here's an example to illustrate the precedence of tasks in the event loop:
+
+console.log('start');
+
+Promise.resolve().then(() => console.log('promise'));
+
+setTimeout(() => console.log('timeout'), 0);
+
+console.log('end');
+
+

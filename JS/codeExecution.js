@@ -24,7 +24,21 @@
 // In summary, while JavaScript code is not compiled by the browser in the traditional sense, it is transformed and optimized by the browser's JavaScript engine to improve its performance during runtime.
 
 
+// JavaScript is both synchronous and asynchronous.
 
+// Synchronous code is executed in a single thread, with each line of code executed one after the other in the order that they appear in the code. In synchronous code, a function call blocks the execution of subsequent code until it returns a value. This means that if there is a long-running operation in synchronous code, such as a network request or a loop that takes a long time to complete, it can cause the browser or server to become unresponsive.
+
+// Asynchronous code, on the other hand, does not block subsequent code from running. Instead, it schedules operations to run in the future and continues executing the rest of the code without waiting for those operations to complete. Asynchronous code is typically used for long-running operations that could potentially block the thread, such as network requests, file I/O, or timers.
+
+// JavaScript has several features that enable asynchronous programming, including callbacks, promises, and async/await.
+
+// Callbacks are functions that are passed as arguments to other functions and are called when an operation is complete. Callbacks allow us to write code that is executed after a long-running operation is complete without blocking the main thread.
+
+// Promises are a way to represent a value that may not be available yet, but will be at some point in the future. Promises can be used to handle asynchronous operations in a more readable and composable way than callbacks.
+
+// Async/await is a newer feature in JavaScript that allows developers to write asynchronous code that looks and feels like synchronous code. It uses the async and await keywords to enable the use of Promises in a more readable and synchronous style.
+
+// In summary, while JavaScript is primarily a synchronous language, it also has features that allow developers to write asynchronous code for long-running operations without blocking the main thread.
 
 
 

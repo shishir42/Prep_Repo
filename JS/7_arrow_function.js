@@ -112,3 +112,22 @@ const myObject2 = {
 // Hello, my name is John
 // Done!
 
+// Both arrow functions and regular functions are used in JavaScript for defining functions. However, there are some differences between them that you should be aware of to determine when to use which one.
+
+// Arrow functions are a newer feature introduced in ES6 (ECMAScript 2015). They provide a more concise syntax for defining functions and also have some advantages over regular functions.
+
+// Here are some scenarios when you might prefer to use arrow functions:
+
+// When you want a shorter syntax for defining functions
+// When you want to maintain the lexical scope of this
+// When you want to pass a function as a parameter to another function
+// When you want to define a function inside another function
+// On the other hand, regular functions have been around since the early days of JavaScript and are still widely used. They have some features that arrow functions lack, such as the ability to be used as constructors and to access their own arguments object.
+
+// Here are some scenarios when you might prefer to use regular functions:
+
+// When you need to use this as a reference to the current object
+// When you need to use the arguments object to access the arguments passed to the function
+// When you want to define a method on an object or a class constructor
+// When you want to create a generator function
+// In summary, arrow functions are generally preferred when you want a shorter syntax for defining functions and want to maintain the lexical scope of this, while regular functions are preferred when you need to use this or the arguments object, or when you need to define a method or a constructor function.

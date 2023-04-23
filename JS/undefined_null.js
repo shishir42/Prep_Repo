@@ -27,3 +27,31 @@ var user = null;
 console.log(typeof user); //object
 
 // https://www.scaler.com/topics/javascript/null-and-undefined-in-javascript/
+
+// In JavaScript, null and undefined are two distinct values that indicate different things.
+
+// undefined means a variable has been declared but has not yet been assigned a value. It is also the default value of function arguments that are not provided with a value. Here's an example:
+
+let foo;
+console.log(foo); // undefined
+
+function bar(arg) {
+  console.log(arg); // undefined
+}
+
+bar();
+
+// In the above example, we declare a variable foo but don't assign it a value, so it has the value of undefined. We also define a function bar that takes an argument arg but doesn't provide a value for it, so arg has the value of undefined.
+
+// null, on the other hand, is an explicitly assigned value that represents the absence of any object value. It can be used to indicate that a variable has no value or that an object property is intentionally empty. Here's an example:
+
+let foo = null;
+console.log(foo); // null
+
+let obj = { prop: null };
+console.log(obj.prop); // null
+
+// In the above example, we assign the value of null to the variable foo, indicating that it intentionally has no value. We also define an object obj with a property prop that has the value of null, indicating that the property is intentionally empty.
+
+// In summary, undefined means a value has not been assigned to a variable or function argument, while null means a variable or object property intentionally has no value.
+

@@ -91,3 +91,51 @@ foo();
 // In the above example, x and y are declared inside the if block and have block scope that is limited to that block. They cannot be accessed outside the block. If we try to access them outside the block, we will get a reference error.
 
 // In summary, lexical scope is determined by the position of a variable or function within the code, while block scope is determined by the block of code in which a variable or constant is declared.
+
+// lexical scope vs scope chain in javascript 
+
+// In JavaScript, scope refers to the visibility and accessibility of variables and functions within a particular block of code. There are two key concepts related to scope in JavaScript: lexical scope and scope chain.
+
+// Lexical scope refers to the static, compile-time scope that is determined by the placement of variables and functions in the code. When a variable or function is declared inside a block of code (e.g. a function or an if statement), it is only accessible within that block and any nested blocks. This is because JavaScript uses lexical scoping to determine the visibility and accessibility of variables and functions at compile-time, based on their location in the code.
+
+function outer() {
+  const x = 10;
+  
+  function inner() {
+    console.log(x);
+  }
+  
+  inner();
+}
+
+outer(); // Output: 10
+
+// In the above example, the variable x is declared in the outer function, and is accessible in the inner function because of lexical scoping. The inner function inner() has access to all variables in its lexical scope, which includes the x variable in the outer function.
+
+// Scope chain, on the other hand, refers to the runtime chain of scope objects that are created when a function is executed. Each function has its own scope object, which contains the variables and functions that are accessible within that function. When a function is executed, JavaScript creates a new scope object for that function and adds it to the scope chain.
+
+// Here's an example:
+
+const x = 10;
+
+function outer() {
+  const y = 20;
+  
+  function inner() {
+    console.log(x, y);
+  }
+  
+  inner();
+}
+
+outer(); // Output: 10 20
+
+// In the above example, the outer() function has access to the global variable x and the local variable y. When the inner() function is called inside the outer() function, JavaScript creates a new scope object for the inner() function and adds it to the scope chain. The scope chain for the inner() function includes the scope of the outer() function, which means that the inner() function has access to both the x and y variables.
+
+// In summary, lexical scope refers to the static, compile-time scope of variables and functions, while scope chain refers to the runtime chain of scope objects that are created when a function is executed. Both concepts are important for understanding how scope works in JavaScript.
+
+
+
+
+
+

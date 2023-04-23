@@ -58,3 +58,53 @@ function sum(x, y, z) {
 // The arguments object does not support methods such as sort, map, forEach, or pop. Whereas these methods can be used in rest parameters.
 // The rest parameters are only the ones that haven’t been given a separate name, while the arguments object contains all arguments passed to the function
 
+// In JavaScript, the spread and rest operators are both denoted by three dots (...) but they are used in different contexts and have different purposes.
+
+// Spread operator (...)
+// The spread operator is used to expand an array or an iterable (e.g., string, map, set) into individual elements. It can be used in the following ways:
+
+// To pass the elements of an array as separate arguments to a function:
+const arr = [1, 2, 3];
+console.log(...arr); // outputs: 1 2 3
+
+function myFunc(a, b, c) {
+  console.log(a, b, c);
+}
+myFunc(...arr); // outputs: 1 2 3
+
+// To concatenate two or more arrays:
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log(arr3); // outputs: [1, 2, 3, 4, 5, 6]
+
+// To create a copy of an array:
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+console.log(arr2); // outputs: [1, 2, 3]
+
+// Rest operator (...)
+// The rest operator is used to represent an indefinite number of arguments as an array. It can be used in the following ways:
+
+// To pass a variable number of arguments to a function:
+
+function myFunc(...args) {
+  console.log(args);
+}
+myFunc(1, 2, 3); // outputs: [1, 2, 3]
+
+// To extract the remaining elements of an array after some elements have been destructured:
+const arr = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = arr;
+console.log(first, second); // outputs: 1 2
+console.log(rest); // outputs: [3, 4, 5]
+
+// To capture the rest of the arguments after some are explicitly named in a function definition:
+function myFunc(a, b, ...rest) {
+  console.log(a, b); // outputs: 1 2
+  console.log(rest); // outputs: [3, 4, 5]
+}
+myFunc(1, 2, 3, 4, 5);
+
+// In summary, the spread operator is used to expand an array or an iterable into individual elements, while the rest operator is used to represent an indefinite number of arguments as an array.
+

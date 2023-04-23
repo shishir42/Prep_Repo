@@ -1452,6 +1452,7 @@ Promise.all([promise1, promise2, promise3])
 
 
 const promise = new Promise(resolve => {
+  console.log('Start');
   setTimeout(() => {
     resolve("Hello, World!");
   }, 1000);
@@ -1478,6 +1479,20 @@ console.log("Main thread");
 // The output of this program demonstrates the order in which the callbacks are executed. The "Main thread" message is logged first, followed by the setTimeout() callback, and finally, the then() callback.
 
 // Note that the PromiseJobs queue is an implementation detail of the Promise mechanism and is not directly accessible in user code.
+
+// Both Promises and callbacks are used in JavaScript to handle asynchronous operations, but they differ in how they manage and return the results of those operations.
+
+// A callback is a function that is passed as an argument to another function and is invoked after the completion of an asynchronous operation. Callbacks are commonly used in JavaScript to handle asynchronous operations such as AJAX requests and timeouts. A callback function is executed when the operation completes, passing the result of the operation as an argument to the function. The major disadvantage of using callbacks is that it can lead to callback hell, which is a situation where nested callbacks can become difficult to manage and debug.
+
+// On the other hand, Promises are an alternative way to handle asynchronous operations in JavaScript. A Promise is an object that represents a value that may not be available yet but will be resolved at some point in the future. A Promise object can have three states: pending, fulfilled, or rejected. When a Promise is fulfilled, it means that the operation completed successfully, and the Promise returns the value. When a Promise is rejected, it means that the operation failed, and the Promise returns an error message. The major advantage of using Promises is that they can be easily chained and combined, making it easier to manage and handle complex asynchronous operations.
+
+// To summarize, the main differences between Promises and callbacks in JavaScript are:
+
+// Promises are an alternative to callbacks for handling asynchronous operations.
+// Promises represent the result of an asynchronous operation, while callbacks are functions that are executed after the completion of an asynchronous operation.
+// Promises can be easily chained and combined, while callbacks can lead to callback hell.
+// Promises have a more structured syntax, making them easier to read and understand than callbacks.
+
 
 // https://dev.to/swarnaliroy94/methods-of-promise-all-any-finally-o2e
 // https://medium.com/developer-rants/how-can-you-tell-which-promise-failed-in-promise-all-5a70be46e19b

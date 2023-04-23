@@ -5,54 +5,54 @@
 * function are hoisted, why function need to be hoisted - done
 * arrow function are hoisted or not (+1) - done
 * let vs var vs const (+3) - done
-* this keyword (+1)
-* What is event loop and precedence along with promise and settimeout
+* this keyword (+1) - done
+* What is event loop and precedence along with promise and settimeout - done
 * settimeout - JS is single threaded interpreted language
 * asynchronous - setTimeout, setInterval, promise, observable 
 * settimeout vs setinterval
-* List out the es6 features (+2)
-* rest operator 
+* List out the es6 features (+2) - done
+* rest operator - done
 * string palindrome - 
 * array.reverse()
-* shallow copy and deep copy (+3) also methods to create deep copy
-* closure (+4)
-* map vs reduce 
-* reduce parameters in functions 
-* promise vs callback
-* promise (+1)
-* callback
-* callback hell(+1) and alternative 
-* currying 
-* map vs foreach (+2) with example 
-* prototype inheritance 
-* call vs apply * bind (when to use)
-* bind vs regular function
-* inside usage of let and var in forloop
+* shallow copy and deep copy (+3) also methods to create deep copy - done
+* closure (+4) - done
+* map vs reduce - done
+* reduce parameters in functions - done
+* promise vs callback - done
+* promise (+1) - done
+* callback -done
+* callback hell(+1) and alternative - done
+* currying - done
+* map vs foreach (+2) with example - done
+* prototype inheritance - done
+* call vs apply * bind (when to use) - done
+* bind vs regular function - done
+* inside usage of let and var in for loop
 * map vs filter 
-* prototype and how its works 
-* Arrow functions and advantages (+1) 
-* real example of arrow to use to make sense and same for normal functions
-* spread vs rest operator 
-* Get the second last element for the array
-* console.log(3+"3") and console.log(3-"3")
+* prototype and how its works  - done
+* Arrow functions and advantages (+1) - done
+* real example of arrow to use to make sense and same for normal functions - done
+* spread vs rest operator - done
+* Get the second last element for the array - done
+* console.log(3+"3") and console.log(3-"3") - done
 * node js middleware 
-* multiple time return statement (generators ES6)
+* multiple time return statement (generators ES6) - done
 * convert object to arrays using Object.entries and without as well
-* object destructing with complex object and also what will happen if object is null (null check while destructuring) (https://www.youtube.com/watch?v=QQNjidzLZ8E)
+* object destructing with complex object and also what will happen if object is null (null check while destructuring) (https://www.youtube.com/watch?v=QQNjidzLZ8E) - done
 * why do we need react.js w.r.t javascript 
-* null vs undefined 
-* IIFE
-* == and ===
-* remove duplicate from array 
-* why js weakly typed 
-* js is synchronous or asynchronous
-* async vs defer 
-* lexical scope vs scope chain
+* null vs undefined - (done)
+* IIFE - done
+* == and === done 
+* remove duplicate from array - done 
+* why js weakly typed - done
+* js is synchronous or asynchronous - done
+* async vs defer - done
+* lexical scope vs scope chain - done
 * ES5 vs ES6
-* Methods of arrays 
-* remove the duplicate from string or array 
-* const name = "rahul kumar"; const res = [...new Set(name.split(""))]; console.log(res);
-* use strict
+* Methods of arrays - done
+* remove the duplicate from string or array - done
+* const name = "rahul kumar"; const res = [...new Set(name.split(""))]; console.log(res);- done
+* use strict - done
 * why can't browser read jsx 
 * micro frontend 
 * mono repo

@@ -116,5 +116,40 @@ console.log(result); // Output: 3
 
 // In this example, we have a function sum() that takes two arguments and returns their sum. We also have an array numbers that contains the arguments we want to pass to sum(). We then use apply() to invoke sum() with the null value as the this value and numbers as the argument array. This allows us to pass the arguments dynamically at runtime, rather than hardcoding them in the function call.
 
+//regular function vs bind 
+
+// n JavaScript, there are two main ways to create functions: as regular functions or as functions that are bound to a specific context using the bind method. The main difference between them is how they handle the this keyword.
+
+// When a regular function is called, the value of this is determined by the context in which the function is called. In other words, the value of this inside a regular function depends on how the function is called. For example:
+
+const obj = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+obj.sayHello(); // logs "Hello, my name is John"
+
+const func = obj.sayHello;
+func(); // logs "Hello, my name is undefined"
+
+// In the example above, obj.sayHello() logs "Hello, my name is John" because this inside the function refers to the obj object. However, when we assign obj.sayHello to a variable and call it as a regular function (func()), this inside the function refers to the global object (or undefined in strict mode), because the function is no longer called as a method of the obj object.
+
+// On the other hand, when a function is bound to a specific context using the bind method, the value of this inside the function is always the context that was passed to bind. For example:
+
+const obj = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+const func = obj.sayHello.bind(obj);
+func(); // logs "Hello, my name is John"
+
+// In the example above, we use the bind method to create a new function func that is bound to the obj object. When we call func(), this inside the function refers to the obj object, regardless of how the function is called.
+
+// In summary, regular functions have dynamic binding of this, while functions created using bind have a fixed binding of this.
 
 

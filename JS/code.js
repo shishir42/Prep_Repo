@@ -1061,6 +1061,104 @@ console.log( "A"+"B" + "2") //AB2 and type string
 
 
 /****************/
+const arr = [1, 2, 3, 4, 5];
+const secondLast = arr[arr.length - 2];
+console.log(secondLast); // outputs: 4
+
+/****************/
+// console.log(3+"3")
+// In this case, the + operator is being used with a number and a string. When this happens, JavaScript will convert the number to a string and concatenate the two strings. Therefore, the output of console.log(3+"3") will be "33", which is a string.
+
+console.log(3+"3"); // outputs: "33"
+
+// console.log(3-"3")
+// In this case, the - operator is being used with two numbers. When this happens, JavaScript will perform a subtraction operation on the two numbers. Therefore, the output of console.log(3-"3") will be 0, which is a number.
+
+console.log(3-"3"); // outputs: 0
+
+// In summary, the + operator will concatenate two strings if one of the operands is a string, while the - operator will perform a subtraction operation on two numbers.
+
+/****************/
+// convert object to arrays using Object.entries and without as well
+// To convert an object into an array of its key-value pairs, you can use the Object.entries() method. Here's an example:
+
+const obj = { foo: 1, bar: 2, baz: 3 };
+const arr = Object.entries(obj);
+console.log(arr); // [['foo', 1], ['bar', 2], ['baz', 3]]
+
+
+// If you want to convert an object into an array of its values or keys, you can use the Object.values() or Object.keys() methods, respectively. Here are examples of each:
+
+const obj = { foo: 1, bar: 2, baz: 3 };
+
+const arrOfValues = Object.values(obj);
+console.log(arrOfValues); // [1, 2, 3]
+
+const arrOfKeys = Object.keys(obj);
+console.log(arrOfKeys); // ['foo', 'bar', 'baz']
+
+// If you don't want to use the Object.entries() method to convert an object into an array of its key-value pairs, you can use a for...in loop to manually iterate over the object's keys and build an array of arrays. Here's an example:
+
+const obj = { foo: 1, bar: 2, baz: 3 };
+const arr = [];
+
+for (let key in obj) {
+  arr.push([key, obj[key]]);
+}
+
+console.log(arr); // [['foo', 1], ['bar', 2], ['baz', 3]]
+
+/****************/
+// There are several ways to remove duplicates from an array in JavaScript. Here are a few:
+
+// Using the Set object: The Set object lets you store unique values of any type, including primitive values or object references. You can create a Set from an array, and then convert it back to an array to remove duplicates. Here's an example:
+const arr = [1, 2, 2, 3, 3, 3, 4, 5, 5];
+const uniqueArr = [...new Set(arr)];
+console.log(uniqueArr); // [1, 2, 3, 4, 5]
+
+// Using the filter() method: The filter() method lets you create a new array with all elements that pass a test. You can use it with indexOf() to only keep the first occurrence of each element in the array. Here's an example:
+const arr = [1, 2, 2, 3, 3, 3, 4, 5, 5];
+const uniqueArr = arr.filter((elem, index, self) => index === self.indexOf(elem));
+console.log(uniqueArr); // [1, 2, 3, 4, 5]
+
+// Using the reduce() method: The reduce() method lets you iterate over an array and accumulate a value based on each element. You can use it with an object to keep track of the unique values you've seen, and then convert the object back to an array. Here's an example:
+
+const arr = [1, 2, 2, 3, 3, 3, 4, 5, 5];
+const uniqueArr = Object.keys(arr.reduce((acc, curr) => {
+  acc[curr] = true;
+  return acc;
+}, {})).map(Number);
+console.log(uniqueArr); // [1, 2, 3, 4, 5]
+
+/****************/
+// To remove duplicates from a string in JavaScript, you can use several approaches:
+
+// Using Set: You can use the Set object to remove duplicates from the string.
+const str = "hello world";
+const uniqueStr = [...new Set(str)].join('');
+console.log(uniqueStr); // Output: "helo wrd"
+
+// Using filter and indexOf: You can also use filter and indexOf method to remove duplicates from the string.
+const str = "hello world";
+const uniqueStr = str
+  .split("")
+  .filter((char, index, arr) => arr.indexOf(char) === index)
+  .join("");
+console.log(uniqueStr); // Output: "helo wrd"
+
+// Using reduce and includes: You can also use reduce method and includes method to remove duplicates from the string.
+const str = "hello world";
+const uniqueStr = str.split("").reduce((acc, char) => {
+  if (!acc.includes(char)) {
+    acc.push(char);
+  }
+  return acc;
+}, []).join("");
+console.log(uniqueStr); // Output: "helo wrd"
+
+/****************/
+
+const name = "rahul kumar"; const res = [...new Set(name.split(""))]; console.log(res);
 
 /****************/
 
@@ -1069,6 +1167,16 @@ console.log( "A"+"B" + "2") //AB2 and type string
 /****************/
 
 /****************/
+
+/****************/
+
+/****************/
+
+/****************/
+
+/****************/
+
+
 
 
 

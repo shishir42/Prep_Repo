@@ -29,3 +29,13 @@ function App() {
 }
 
 // While it is possible to write React code without using JSX, it is considered best practice and is used widely in the React community due to its simplicity and ease of use.
+
+// why can't browser read jsx 
+
+// JSX is a syntax extension for JavaScript that is used by React to describe the structure and content of UI components. JSX is not natively supported by web browsers, as it is not valid JavaScript syntax. Browsers can only execute JavaScript code that adheres to the ECMAScript specification.
+
+// To use JSX in a web application, you need to transpile the JSX code into plain JavaScript using a build tool like Babel. Babel can convert JSX syntax into plain JavaScript using a process called transpilation. The transpilation process takes the JSX code and converts it into plain JavaScript code that can be understood and executed by web browsers.
+
+// In addition, React requires the react and react-dom packages to be included in your project to work with JSX code. These packages provide the necessary APIs and libraries for creating and rendering React components in the browser.
+
+// So, while web browsers cannot read JSX directly, you can use transpilation tools like Babel to convert JSX into plain JavaScript code that can be executed by web browsers.
