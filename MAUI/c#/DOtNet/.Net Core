@@ -1,3 +1,7 @@
+https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0
+
+**************
+
 .NET Core, .NET Framework, and Xamarin are all software development frameworks created by Microsoft for building different types of applications. While there is some overlap between these frameworks, each one has its own unique features and use cases.
 
 .NET Framework is the original framework for building Windows applications, and has been around since 2002. It provides a large set of class libraries and runtime services for building desktop applications, web applications, and services. The framework is optimized for running on Windows, and includes support for many Windows-specific features such as COM interop and Windows Forms.

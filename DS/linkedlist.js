@@ -147,7 +147,6 @@ console.log(list.traverse());
 //  https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 //  https://leetcode.com/problems/remove-linked-list-elements/
 //  https://leetcode.com/problems/add-two-numbers/
-
 //  https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 //  https://leetcode.com/problems/reorder-list/

@@ -1,0 +1,311 @@
+- Linked List
+- Stack
+- Queue
+- Array
+- String
+- Hashmap
+- Tree
+- Binary Search Tree
+- Heap 
+- MinHeap
+- MaxHeap
+- PriorityQueue
+- Graph
+- Greedy
+- Sliding Window
+- Two pointers
+- Fast and Slow
+- Merge Interval
+- Modified Binary Search
+- Intervals
+- Tree Breadth-First Search - Pending
+- Tree Depth First Search - Pending
+- Top ‘K’ Elements
+- 0/1 Knapsack
+- Longest Common Substring - 
+- Palindromic Subsequence - Pending
+- Fibonacci Numbers - Pending
+- Searching  
+- Sorting
+- Bitwise operator - Pending
+- Matrix - Pending
+- Math - Pending
+- 
+
+
+
+
+Here are the top 10 coding questions related to linked lists:
+
+Reverse a Linked List: Given a linked list, reverse it and return the head of the reversed linked list.
+Remove Nth Node From End of List: Given a linked list, remove the n-th node from the end of the list and return its head.
+Merge Two Sorted Lists: Given two sorted linked lists, merge them into one sorted linked list and return the head of the new list.
+Detect a Cycle in a Linked List: Given a linked list, determine if it has a cycle in it. A cycle occurs when a node in the linked list points to a previous node.
+Intersection of Two Linked Lists: Given two linked lists, determine if they intersect and return the intersection node. If they do not intersect, return null.
+Remove Duplicates from Sorted List: Given a sorted linked list, remove all duplicates such that each element appears only once and return the head of the updated list.
+Add Two Numbers: Given two linked lists representing two non-negative integers, add the two numbers and return the sum as a linked list.
+Palindrome Linked List: Given a singly linked list, determine if it is a palindrome.
+Flatten a Multilevel Doubly Linked List: Given a linked list where some of the nodes have child nodes, flatten the list such that all nodes appear in a single-level, doubly linked list.
+Sort Linked List: Given a linked list, sort it in O(n log n) time using constant space complexity.
+https://leetcode.com/problems/lru-cache/
+
+Here are the top 10 coding questions related to stacks:
+
+Valid Parentheses: Given a string of parentheses, brackets, and braces, determine if the string is valid, i.e., all opening parentheses have a corresponding closing parenthesis in the correct order.
+Evaluate Reverse Polish Notation: Given an array of strings representing reverse Polish notation expressions, evaluate the expression and return the result.
+Implement Stack using Queues: Implement a stack using two queues.
+Next Greater Element: Given an array, find the next greater element (NGE) for every element. The NGE for an element x is the first greater element to its right.
+Implement Min Stack: Implement a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+Remove All Adjacent Duplicates in String: Given a string, remove all adjacent duplicates recursively, i.e., keep removing adjacent duplicates until there are no more duplicates.
+Decode String: Given a string with encoded content, decode it and return the decoded string.
+Simplify Path: Given an absolute path for a file (Unix-style), simplify it and return the simplified path.
+Maximum Area in a Histogram: Given an array representing the heights of bars in a histogram, find the area of the largest rectangle that can be formed by the bars.
+Trapping Rain Water: Given an array representing the heights of bars in a histogram, find the amount of water that can be trapped between the bars.
+
+Here are the top 10 coding questions related to strings:
+
+Reverse a String: Given a string, reverse it.
+Valid Palindrome: Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+Longest Substring Without Repeating Characters: Given a string, find the length of the longest substring without repeating characters.
+String to Integer (atoi): Implement the atoi function, which converts a string to an integer.
+Implement strStr(): Implement the strStr() function, which returns the index of the first occurrence of a substring in a string, or -1 if the substring is not found.
+Longest Common Prefix: Given an array of strings, find the longest common prefix among them.
+Valid Anagram: Given two strings, check if they are anagrams of each other.
+Group Anagrams: Given an array of strings, group them by anagrams.
+Count and Say: The count-and-say sequence is the sequence of integers with the first five terms as following: 1, 11, 21, 1211, 111221. Given an integer n, generate the n-th term of the count-and-say sequence.
+Regular Expression Matching: Given a string s and a pattern p, implement regular expression matching with support for '.' and '*'.
+
+Here are the top 10 coding questions related to queue
+
+Implement Queue using Stacks: Implement a queue using two stacks.
+Moving Average from Data Stream: Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+Implement Circular Queue: Implement a circular queue with a fixed size.
+Number of Recent Calls: Write a RecentCounter class to count recent requests, where requests are represented by a timestamp (in milliseconds) and the RecentCounter returns the count of requests in the last 3000 milliseconds.
+Design Hit Counter: Design a hit counter that counts the number of hits received in the past 5 minutes.
+Sliding Window Maximum: Given an array of integers and a window size, find the maximum element in each sliding window of size k.
+First Unique Character in a String: Given a string, find the first non-repeating character in it and return its index.
+Queue Reconstruction by Height: Suppose you have a random list of people standing in a queue. Each person is described by a pair of integers (h, k), where h is the height of the person and k is the number of people in front of this person who have a height greater than or equal to h. Reconstruct the queue.
+Perfect Squares: Given an integer n, return the least number of perfect square numbers that sum to n.
+Shortest Subarray with Sum at Least K: Given an array of integers and an integer k, find the length of the shortest contiguous subarray whose sum is at least k.
+
+
+In-place Reveral of a Linked List :- https://lnkd.in/dxAVVeiS
+
+Here are the top 10 coding questions related to hashmaps:
+
+Two Sum: Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+Group Anagrams: Given an array of strings, group them by anagrams using a hashmap.
+Longest Substring Without Repeating Characters: Given a string, find the length of the longest substring without repeating characters using a hashmap.
+Intersection of Two Arrays II: Given two arrays, write a function to compute their intersection using a hashmap.
+Isomorphic Strings: Given two strings s and t, determine if they are isomorphic using a hashmap.
+Valid Anagram: Given two strings, check if they are anagrams of each other using a hashmap.
+Find All Anagrams in a String: Given a string s and a non-empty string p, find all the start indices of p's anagrams in s using a hashmap.
+First Unique Character in a String: Given a string, find the first non-repeating character in it and return its index using a hashmap.
+Subarray Sum Equals K: Given an array of integers and an integer k, find the total number of continuous subarrays whose sum equals to k using a hashmap.
+Four Sum II: Given four lists A, B, C, D of integer values, compute how many tuples (i, j, k, l) there are such that A[i] + B[j] + C[k] + D[l] is zero using a hashmap.
+
+
+Here are the top 10 coding questions related to sorting:
+
+Merge Sort: Implement the merge sort algorithm to sort an array of integers.
+Quick Sort: Implement the quick sort algorithm to sort an array of integers.
+Bubble Sort: Implement the bubble sort algorithm to sort an array of integers.
+Insertion Sort: Implement the insertion sort algorithm to sort an array of integers.
+Selection Sort: Implement the selection sort algorithm to sort an array of integers.
+Merge k Sorted Lists: Given k sorted linked lists, merge them into one sorted list.
+Sort Colors: Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+Kth Largest Element in an Array: Find the kth largest element in an unsorted array using sorting techniques.
+Meeting Rooms II: Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...], find the minimum number of conference rooms required.
+Relative Sort Array: Given two arrays arr1 and arr2, sort arr1 such that the elements in arr1 are sorted according to the order in arr2. If an element is not in arr2, it should be sorted in ascending order.
+
+Here are the top 10 coding questions related to searching:
+
+Binary Search: Implement the binary search algorithm to search for an element in a sorted array.
+Linear Search: Implement the linear search algorithm to search for an element in an array.
+First Bad Version: Given n versions of a product, find the first bad version using a binary search algorithm.
+Peak Index in a Mountain Array: Given an array that is definitely a mountain, find the peak index using a binary search algorithm.
+Search in Rotated Sorted Array: Given a rotated sorted array, search for a target value using a binary search algorithm.
+Find Minimum in Rotated Sorted Array: Given a rotated sorted array, find the minimum element using a binary search algorithm.
+Search for a Range: Given an array of integers sorted in ascending order, find the starting and ending position of a given target value using a binary search algorithm.
+Median of Two Sorted Arrays: Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays using a binary search algorithm.
+Find First and Last Position of Element in Sorted Array: Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value using a binary search algorithm.
+Subarray Sum Equals K: Given an array of integers and an integer k, find the total number of continuous subarrays whose sum equals to k using a hashmap or binary search.
+
+
+Here are the top 10 coding questions related to trees:
+
+Binary Tree Inorder Traversal: Given a binary tree, return the inorder traversal of its nodes' values.
+Binary Tree Level Order Traversal: Given a binary tree, return the level order traversal of its nodes' values.
+Symmetric Tree: Given a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+Maximum Depth of Binary Tree: Given a binary tree, find its maximum depth.
+Path Sum: Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+Construct Binary Tree from Preorder and Inorder Traversal: Given preorder and inorder traversal of a tree, construct the binary tree.
+Lowest Common Ancestor of a Binary Tree: Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+Binary Tree Maximum Path Sum: Given a non-empty binary tree, find the maximum path sum.
+Same Tree: Given the roots of two binary trees, write a function to check if they are the same or not.
+Validate Binary Search Tree: Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+Here are the top 10 coding questions related to binary search trees:
+
+Validate Binary Search Tree: Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+Inorder Successor in BST: Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
+Kth Smallest Element in a BST: Given the root of a binary search tree, write a function kthSmallest to find the kth smallest element in it.
+Convert Sorted Array to Binary Search Tree: Given an array where elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+Delete Node in a BST: Given a root node reference of a BST and a key, delete the node with the given key in the BST.
+Lowest Common Ancestor of a Binary Search Tree: Given a binary search tree and two nodes in it, find their lowest common ancestor (LCA).
+Search in a Binary Search Tree: Given the root node of a binary search tree and a value, search for the value in the tree and return the node that contains the value, or null if the value is not in the tree.
+Range Sum of BST: Given the root node of a binary search tree, return the sum of values of all nodes with a value in the range [low, high].
+Balanced Binary Tree: Given a binary tree, determine if it is height-balanced.
+Minimum Distance Between BST Nodes: Given the root of a Binary Search Tree (BST), return the minimum difference between the values of any two different nodes in the tree.
+
+
+
+Here are the top 10 coding questions related to heaps:
+
+Kth Largest Element in an Array: Find the kth largest element in an unsorted array using a heap data structure.
+Merge k Sorted Lists: Merge k sorted linked lists and return it as one sorted list using a heap data structure.
+Top K Frequent Elements: Given a non-empty array of integers, return the k most frequent elements using a heap data structure.
+Sliding Window Maximum: Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Find the maximum element in each window of size k using a heap data structure.
+Super Ugly Number: Write a program to find the nth super ugly number using a heap data structure.
+Find Median from Data Stream: Design a data structure that supports the following two operations: addNum(int num) - Add an integer number from the data stream to the data structure, and findMedian() - Find the median of all elements in the data structure using a heap data structure.
+Find K Pairs with Smallest Sums: Given two sorted arrays nums1 and nums2 of size m and n respectively, find the k pairs (u1,v1),(u2,v2) ...(uk,vk) with the smallest sums using a heap data structure.
+Rearrange String k Distance Apart: Given a non-empty string s and an integer k, rearrange the string such that the same characters are at least distance k from each other using a heap data structure.
+Last Stone Weight: We have a collection of stones, each stone has a positive integer weight. Each turn, we choose the two heaviest stones and smash them together. Suppose the stones have weights x and y with x <= y. The result of this smash is: If x == y, both stones are totally destroyed; If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x. At the end, there is at most 1 stone left. Return the weight of this stone (or 0 if there are no stones left) using a heap data structure.
+Maximum Performance of a Team: You are given two integers n and k and two integer arrays speed and efficiency both of length n. There are n engineers numbered from 1 to n. You will hire k engineers from the pool of n engineers. The performance of a team is the sum of their engineers' speeds multiplied by the minimum efficiency among their engineers. Return the maximum performance of this team using a heap data structure.
+
+
+Here are the top 10 coding questions related to Graph 
+What is a graph and how do you represent it in programming?
+How do you implement a graph using an adjacency list in Python?
+How do you traverse a graph using depth-first search (DFS)?
+How do you traverse a graph using breadth-first search (BFS)?
+How do you find the shortest path between two nodes in a graph?
+How do you detect cycles in a graph using DFS?
+How do you detect cycles in a graph using BFS?
+How do you implement Dijkstra's algorithm to find the shortest path in a weighted graph?
+How do you implement the Bellman-Ford algorithm to find the shortest path in a graph with negative edge weights?
+How do you implement Kruskal's algorithm to find the minimum spanning tree of a graph?
+
+Here are the top 10 coding questions related to Greedy
+What is the Greedy algorithm and how does it work?
+How do you implement the Greedy algorithm to solve the minimum coin change problem?
+How do you implement the Greedy algorithm to solve the activity selection problem?
+How do you implement the Greedy algorithm to solve the Huffman coding problem?
+How do you implement the Greedy algorithm to solve the minimum spanning tree problem?
+How do you implement the Greedy algorithm to solve the fractional knapsack problem?
+How do you implement the Greedy algorithm to solve the interval scheduling problem?
+How do you implement the Greedy algorithm to solve the job sequencing problem?
+How do you implement the Greedy algorithm to solve the minimum cost spanning tree problem?
+How do you implement the Greedy algorithm to solve the maximum disjoint interval problem?
+
+
+Here are the top 10 coding questions related to Sliding window 
+What is the sliding window technique and how does it work?
+How do you find the maximum sum subarray of a fixed size K using the sliding window technique?
+How do you find the smallest subarray with a given sum using the sliding window technique?
+How do you find the length of the longest substring without repeating characters using the sliding window technique?
+How do you find the count of distinct elements in every window of size K in an array using the sliding window technique?
+How do you find the maximum of each subarray of size K in an array using the sliding window technique?
+How do you find the smallest window in a string containing all the characters of another string using the sliding window technique?
+How do you find the minimum window in a string containing all the characters of a pattern using the sliding window technique?
+How do you find the maximum subarray product of a fixed size K using the sliding window technique?
+How do you find the longest substring with at most K distinct characters using the sliding window technique?
+
+
+Here are the top 10 coding questions related to two pointers
+What is the Two Pointers technique and how does it work?
+How do you find the two elements in a sorted array that sum up to a given target using the Two Pointers technique?
+How do you find the three elements in an array that sum up to a given target using the Two Pointers technique?
+How do you find the subarray in an array that has a given sum using the Two Pointers technique?
+How do you find the subarray in an array that has a maximum sum using the Two Pointers technique?
+How do you find the minimum size subarray in an array that has a given sum using the Two Pointers technique?
+How do you remove duplicates from a sorted array using the Two Pointers technique?
+How do you find the maximum length subarray with at most K distinct elements using the Two Pointers technique?
+How do you find the intersection of two sorted arrays using the Two Pointers technique?
+How do you merge two sorted arrays using the Two Pointers technique?
+
+Here are the top 10 coding questions related to Fast and Slow
+What is the Fast and Slow Pointers technique and how does it work?
+How do you find the middle element of a linked list using the Fast and Slow Pointers technique?
+How do you detect if a linked list has a cycle using the Fast and Slow Pointers technique?
+How do you find the length of the cycle in a linked list using the Fast and Slow Pointers technique?
+How do you find the starting node of the cycle in a linked list using the Fast and Slow Pointers technique?
+How do you check if a linked list is a palindrome using the Fast and Slow Pointers technique?
+How do you reverse a linked list using the Fast and Slow Pointers technique?
+How do you merge two sorted linked lists using the Fast and Slow Pointers technique?
+How do you delete the nth node from the end of a linked list using the Fast and Slow Pointers technique?
+How do you find the intersection of two linked lists using the Fast and Slow Pointers technique?
+
+Here are the top 10 coding questions related to Merge Interval
+What is the Merge Interval technique and how does it work?
+How do you merge overlapping intervals in an array of intervals using the Merge Interval technique?
+How do you insert a new interval into an array of intervals using the Merge Interval technique?
+How do you find the minimum number of meeting rooms required given a list of intervals using the Merge Interval technique?
+How do you find the maximum number of overlapping intervals at any point in time given a list of intervals using the Merge Interval technique?
+How do you merge intervals in a non-overlapping list of intervals using the Merge Interval technique?
+How do you find the largest interval containing all the given intervals using the Merge Interval technique?
+How do you find the intersection of two lists of intervals using the Merge Interval technique?
+How do you remove a given interval from an array of intervals using the Merge Interval technique?
+How do you find the gaps between the intervals in an array of intervals using the Merge Interval technique?
+
+Here are the top 10 coding questions related to Modified Binary Search
+What is the Modified Binary Search technique and how does it work?
+How do you find the index of the first occurrence of a number in a sorted array using the Modified Binary Search technique?
+How do you find the index of the last occurrence of a number in a sorted array using the Modified Binary Search technique?
+How do you find the count of occurrences of a number in a sorted array using the Modified Binary Search technique?
+How do you find the index of the smallest element in a rotated sorted array using the Modified Binary Search technique?
+How do you find the number of rotations in a rotated sorted array using the Modified Binary Search technique?
+How do you find the floor of a number in a sorted array using the Modified Binary Search technique?
+How do you find the ceiling of a number in a sorted array using the Modified Binary Search technique?
+How do you find the maximum element in a bitonic array using the Modified Binary Search technique?
+How do you search for an element in a nearly sorted array using the Modified Binary Search technique?
+
+Here are the top 10 coding questions related to intervals
+How do you merge overlapping intervals in an array of intervals?
+How do you insert a new interval into an array of intervals?
+How do you find the minimum number of meeting rooms required given a list of intervals?
+How do you find the maximum number of overlapping intervals at any point in time given a list of intervals?
+How do you merge intervals in a non-overlapping list of intervals?
+How do you find the largest interval containing all the given intervals?
+How do you find the intersection of two lists of intervals?
+How do you remove a given interval from an array of intervals?
+How do you find the gaps between the intervals in an array of intervals?
+How do you check if two intervals overlap?
+
+Here are the top 10 coding questions related to Top ‘K’ Elements
+What is the Top 'K' Elements technique and how does it work?
+How do you find the top 'K' largest numbers in an unsorted array using the Top 'K' Elements technique?
+How do you find the Kth smallest number in an unsorted array using the Top 'K' Elements technique?
+How do you find the frequency of the top 'K' frequent numbers in an array using the Top 'K' Elements technique?
+How do you find the top 'K' frequently occurring words in a paragraph using the Top 'K' Elements technique?
+How do you find the sum of the largest 'K' numbers in two sorted arrays using the Top 'K' Elements technique?
+How do you find the median of a stream of numbers using the Top 'K' Elements technique?
+How do you find the minimum distance between two arrays of numbers using the Top 'K' Elements technique?
+How do you find the smallest range containing at least one number from each of the 'K' arrays using the Top 'K' Elements technique?
+How do you find the Kth largest element in a binary search tree using the Top 'K' Elements technique?
+
+Here are the top 10 coding questions related to 0/1 Knapsack
+What is the 0/1 Knapsack problem and how does it work?
+How do you solve the 0/1 Knapsack problem using dynamic programming?
+How do you find the maximum profit that can be obtained from the 0/1 Knapsack problem?
+How do you find the items that should be picked to obtain the maximum profit in the 0/1 Knapsack problem?
+How do you find the minimum weight that can be obtained for a given profit in the 0/1 Knapsack problem?
+How do you find the maximum value that can be obtained for a given weight in the 0/1 Knapsack problem?
+How do you solve the fractional Knapsack problem using the 0/1 Knapsack algorithm?
+How do you solve the bounded Knapsack problem using the 0/1 Knapsack algorithm?
+How do you solve the unbounded Knapsack problem using the 0/1 Knapsack algorithm?
+How do you optimize the 0/1 Knapsack algorithm for space complexity?
+
+
+Here are the top 10 coding questions related to Longest Common Substring
+What is the Longest Common Substring problem and how does it work?
+How do you find the length of the Longest Common Substring between two strings?
+How do you find the Longest Common Substring between two strings?
+How do you find the length of the Longest Common Substring among multiple strings?
+How do you find the Longest Common Substring among multiple strings?
+How do you find the number of occurrences of the Longest Common Substring in a given string?
+How do you find the shortest string that contains all the Longest Common Substrings of a given set of strings?
+How do you find the longest string that is a concatenation of some of the given strings and contains the Longest Common Substring?
+How do you find the Longest Common Substring of two arrays of integers?
+How do you find the Longest Common Substring of two arrays of characters?
+

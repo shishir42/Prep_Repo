@@ -328,6 +328,73 @@ namespace HelloWorld
             return dummy.next;
         }
 
+        public Node RemoveNthFromEnd_1(Node head, int n)
+        {
+            int len = 0;
+            Node curr = head;
+            while(curr != null)
+            {
+                len++;
+                curr = curr.next;
+            }
+
+            // B > length, then we can't remove node
+            if(n > len)
+            {
+                Console.Write("Length of the linked list is " + len);
+                Console.Write(" we can't remove " + n + 
+                           "th node from the");
+                Console.Write(" linked list\n");
+                return head;
+            }
+            else if(n == len)
+            {
+                return head.next;
+            }
+            else
+            {
+                int diff = len - n;
+                Node prev = null;
+                Node current = head;
+
+                for(int i=0; i< diff; i++)
+                {
+                    prev = current;
+                    current = current.next;
+                }
+
+                prev.next = current.next;
+                return head;
+            }
+        }
+
+        public Node RemoveNthFromEnd_2(Node head, int n)
+        {
+            // Define two pointers, slow and fast, both pointing to the head of the linked list
+            Node slow = head;
+            Node fast = head;
+
+            for(int i=0;i<n;i++)
+            {
+                fast = fast.next;   
+            }
+
+            if(fast == null)
+            {
+                return head.next;
+            }
+
+            while(fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            slow.next = slow.next.next;
+
+            return head;
+        }
+
         private void TraverseList(Node head)
         {
             Node current = head;
@@ -455,9 +522,23 @@ namespace HelloWorld
 
              Node result =  linkedListProgram.AddTwoNumber(n1, n2);
              linkedListProgram.TraverseList(result);
-            //  2 -> 4 -> 3
-            //  5 -> 6 -> 4
-            //  7 -> 0 -> 8
+              //  2 -> 4 -> 3
+              //  5 -> 6 -> 4
+              //  7 -> 0 -> 8
+
+             Console.WriteLine("***************************");
+             Node n_1 = new Node(1);
+             n_1.next = new Node(2);
+             n_1.next.next = new Node(3);
+             n_1.next.next.next = new Node(4);
+             n_1.next.next.next.next = new Node(5);
+
+             int n = 2;
+             Node res =  linkedListProgram.RemoveNthFromEnd_1(n_1, n);
+             TraverseList(res);
+
+             Node res1 =  linkedListProgram.RemoveNthFromEnd_2(n_1, n);
+             TraverseList(res1);
         }
     }    
 }
