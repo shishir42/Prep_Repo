@@ -1,0 +1,53 @@
+How would you use Nullable Types in .NET?
+
+Nullable types in .NET allow you to represent value types (such as int, float, bool, etc.) that can also have a null value. This can be useful in situations where you need to represent missing or undefined values.
+
+Here's an example of how you might use nullable types in C#:
+
+int? nullableInt = null;
+float? nullableFloat = 3.14f;
+bool? nullableBool = true;
+
+if (nullableInt.HasValue)
+{
+    Console.WriteLine($"The value of nullableInt is: {nullableInt.Value}");
+}
+else
+{
+    Console.WriteLine("nullableInt is null");
+}
+
+if (nullableFloat.HasValue)
+{
+    Console.WriteLine($"The value of nullableFloat is: {nullableFloat.Value}");
+}
+else
+{
+    Console.WriteLine("nullableFloat is null");
+}
+
+if (nullableBool.HasValue)
+{
+    Console.WriteLine($"The value of nullableBool is: {nullableBool.Value}");
+}
+else
+{
+    Console.WriteLine("nullableBool is null");
+}
+
+
+In this example, three nullable types are declared: nullableInt, nullableFloat, and nullableBool. nullableInt is explicitly set to null, while nullableFloat and nullableBool have values assigned to them.
+
+The HasValue property is used to check if a nullable type has a value or is null. The Value property is used to access the value of a nullable type when it is not null. If a nullable type is null and you try to access its value using the Value property, an exception will be thrown.
+
+You can also use the null-coalescing operator (??) to provide a default value for a nullable type when it is null:
+
+int? nullableInt = null;
+int nonNullableInt = nullableInt ?? 0;
+
+Console.WriteLine($"The value of nonNullableInt is: {nonNullableInt}");
+
+
+In this example, nullableInt is null, so the nonNullableInt variable is assigned a default value of 0 using the null-coalescing operator. The value of nonNullableInt is then printed to the console.
+
+Overall, nullable types in .NET provide a useful way to represent value types that can also have a null value, allowing you to better handle missing or undefined values in your code.

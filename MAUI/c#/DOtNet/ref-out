@@ -1,0 +1,38 @@
+Can you return multiple values from a function in C#? Provide some examples.
+
+There are several ways.
+
+Use ref / out parameters. A return statement can be used for returning only one value from a function. However, using output parameters, you can return two values from a function.
+
+
+private static void Add_Multiply(int a, int b, ref int add, ref int multiply)
+{
+    add = a + b;
+    multiply = a * b;
+}
+
+private static void Add_Multiply(int a, int b, out int add, out int multiply)
+{
+    add = a + b;
+    multiply = a * b;
+}
+
+private static Tuple<int, int> Add_Multiply(int a, int b)
+{
+    var tuple = new Tuple<int, int>(a + b, a * b);
+    return tuple;
+}
+
+(string, string, string) LookupName(long id) // tuple return type
+{
+    ... // retrieve first, middle and last from data storage
+    return (first, middle, last); // tuple literal
+}
+
+***********
+
+What is the difference between ref and out keywords?
+
+ref tells the compiler that the object is initialized before entering the function, while
+out tells the compiler that the object will be initialized inside the function.
+So while ref is two-ways, out is out-only.

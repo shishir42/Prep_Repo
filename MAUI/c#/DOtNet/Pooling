@@ -1,0 +1,7 @@
+Object Pooling is a concept for optimal use of limited resources through software constructs. The ready-to-use objects, connections, and threads are stored in a pool (group) of objects in memory for later use. For creating a new object, it is pulled from the pool and allocated for the request. Pooling helps in improving performance and facilitates scalability.
+
+There are four main parameters that control connection pooling behaviors in .NET as given below:
+-Connect Timeout
+-Min Pool Size
+-Max Pool Size
+-Pooling

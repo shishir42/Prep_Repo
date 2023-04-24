@@ -1,0 +1,18 @@
+Both IEnumerable and IQueryable are interfaces in .NET that provide a way to query data from a data source. However, there are some key differences between the two:
+
+Deferred Execution:
+IEnumerable is used to query data from in-memory collections such as arrays or lists. It provides a read-only, forward-only cursor over a collection of objects. When you use IEnumerable, the query is executed immediately and the results are loaded into memory. This means that all the data is retrieved from the data source before any further processing is done.
+
+On the other hand, IQueryable is used to query data from external data sources such as databases or web services. It also provides a read-only, forward-only cursor over a collection of objects, but the query is not executed immediately. Instead, the query is only executed when the data is actually needed. This is called deferred execution, and it means that the data is retrieved from the data source as late as possible.
+
+Expression Trees:
+IQueryable extends IEnumerable and includes additional functionality for querying data from external data sources. One of the key features of IQueryable is that it uses Expression Trees to represent the queries. An Expression Tree is a tree-like data structure that represents a lambda expression or a query expression in a format that can be easily translated into a query language such as SQL.
+
+This allows IQueryable to perform additional optimizations on the query before executing it. For example, it can translate the query into SQL and send it to the database for execution, rather than retrieving all the data and then filtering it in memory.
+
+Query Provider:
+IQueryable also includes a Query Provider, which is responsible for translating the Expression Tree into the appropriate query language for the data source. This allows IQueryable to support a wide range of data sources, as long as a Query Provider exists for that data source.
+
+In summary, IEnumerable is used to query in-memory collections, whereas IQueryable is used to query external data sources. IQueryable uses Expression Trees and a Query Provider to enable deferred execution and efficient querying of external data sources.
+
+***

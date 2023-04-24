@@ -1,0 +1,51 @@
+
+LINQ is the abbreviated form of Language Integrated Query. It was first brought out in 2008, and it provides users with a lot of extra features when working with the .NET framework. One highlight is that it allows the users to manipulate data without any dependency on its source.
+
+let clause - In a query expression, it is sometimes useful to store the result of a sub-expression in order to use it in subsequent clauses. You can do this with the let keyword, which creates a new range variable and initializes it with the result of the expression you supply.
+
+var names = new string[] { "Dog", "Cat", "Giraffe", "Monkey", "Tortoise" };
+var result =
+    from animalName in names
+    let nameLength = animalName.Length
+    where nameLength > 3
+    orderby nameLength
+    select animalName; 
+
+
+A lambda expression is an anonymous function that you can use to create delegates or expression tree types. By using lambda expressions, you can write local functions that can be passed as arguments or returned as the value of function calls. Lambda expressions are particularly helpful for writing LINQ query expressions.
+In the following example, the lambda expression x => x * x, which specifies a parameter that's named x and returns the value of x squared, is assigned to a variable of a delegate type:
+
+Func<int, int> square = x => x * x;
+Console.WriteLine(square(5));
+
+***
+Explain what LINQ is.
+
+LINQ is an acronym for Language Integrated Query, and was introduced with Visual Studio 2008. LINQ is a set of features that extends query capabilities to the .NET language syntax by adding sets of new standard query operators that allow data manipulation, regardless of the data source. Supported data sources are: .NET Framework collections, SQL Server databases, ADO.NET Datasets, XML documents, and any collection of objects that support IEnumerable or the generic IEnumerable<T> interface, in both C# and Visual Basic. In short, LINQ bridges the gap between the world of objects and the world of data.
+
+******
+
+Explain deferred execution vs. immediate execution in LINQ. Provide examples.
+
+In LINQ, deferred execution simply means that the query is not executed at the time it is specified. Specifically, this is accomplished by assigning the query to a variable. When this is done, the query definition is stored in the variable but the query is not executed until the query variable is iterated over. For example:
+
+DataContext productContext = new DataContext();
+
+var productQuery = from product in productContext.Products
+        where product.Type == "SOAPS"
+        select product;   // Query is NOT executed here
+
+foreach (var product in productQuery)   // Query executes HERE
+{
+  Console.WriteLine(product.Name);
+}
+
+You can also force immediate execution of a query. This can be useful, for example, if the database is being updated frequently, and it is important in the logic of your program to ensure that the results you’re accessing are those returned at the point in your code where the query was specified. Immediate execution is often forced using a method such as Average, Sum, Count, List, ToList, or ToArray. For example:
+
+DataContext productContext = new DataContext();
+
+var productCountQuery = (from product in productContext.Products
+        where product.Type == "SOAPS"
+        select product).Count();   // Query executes HERE
+
+***

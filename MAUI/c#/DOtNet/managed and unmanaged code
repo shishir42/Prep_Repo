@@ -1,0 +1,28 @@
+Managed code runs inside CLR and installing the .NET Framework is necessary to execute it. Unmanaged code does not depend on CLR for execution and is developed using languages outside the .NET framework.
+
+There are four main steps that include in the execution of the managed code. They are as follows:
+1.Choosing a compiler that can execute the code written by a user
+2. Conversion of the code into Intermediate Language (IL) using a compiler
+3. IL gets pushed to CLR, which converts it into native code using JIT
+4. Native code is now executed using the .NET runtime
+
+Managed Code
+1.Managed by CLR
+2.Garbage collection is used to manage memory
+3.The .NET framework is necessary for the execution
+
+Unmanaged Code
+1.Not managed by any entity
+2.Runtime environment takes care of the management
+3.Not dependant on the .NET framework to run
+
+***************
+
+Explain the difference between managed and unmanaged code.
+
+Managed code is a code created by the .NET compiler. It does not depend on the architecture of the target machine because it is executed by the CLR (Common Language Runtime), and not by the operating system itself. CLR and managed code offers developers few benefits, like garbage collection, type checking and exceptions handling.
+
+On the other hand, unmanaged code is directly compiled to native machine code and depends on the architecture of the target machine. It is executed directly by the operating system. In the unmanaged code, the developer has to make sure he is dealing with memory usage and allocation (especially because of memory leaks), type safety and exceptions manually.
+
+In .NET, Visual Basic and C# compiler creates managed code. To get unmanaged code, the application has to be written in C or C++.
+

@@ -1,0 +1,21 @@
+
+What are generics in C#.NET?
+Generics are classes that allow you to define classes and methods with a placeholder. The purpose of generics is to make reusable code classes. These classes decrease code redundancy and increase performance and type safety. 
+
+Generics promotes the usage of parameterized types. You can also create collection classes using generic. System.Collections.The generic namespace is used instead of classes to create a generic collection. 
+
+******
+
+What are Covariance and Contravariance in C#?
+Covariance allows you to assign a more derived (more specific) type to a less derived (more general) type. This is possible when the more derived type is being used in a way that is consistent with the less derived type. For example, in C#, arrays are covariant. This means that you can assign an array of a more derived type to an array of a less derived type, as long as the array is being used in a read-only context.
+
+string[] strArray = new string[] { "foo", "bar", "baz" };
+object[] objArray = strArray; // covariance: string[] is assigned to object[]
+
+Contravariance, on the other hand, allows you to assign a less derived (more general) type to a more derived (more specific) type. This is possible when the less derived type is being used in a way that is consistent with the more derived type. Contravariance is less common in C# than covariance, but it can be useful in certain scenarios, such as with delegate types.
+
+delegate void MyDelegate(object obj);
+void Foo(string str) { Console.WriteLine(str); }
+MyDelegate d = Foo; // contravariance: method with parameter of type string is assigned to delegate with parameter of type object
+
+In summary, covariance and contravariance allow you to assign or convert types in certain scenarios where the more or less derived type is being used in a way that is consistent with the other type.

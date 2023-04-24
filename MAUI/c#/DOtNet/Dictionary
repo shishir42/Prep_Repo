@@ -1,0 +1,20 @@
+What is the difference between a Hash Table and a Dictionary?
+
+Dictionary,
+
+Returns an error if the key does not exist
+No boxing and unboxing
+Faster than a Hash table
+
+Hashtable,
+
+Returns NULL even if the key does not exist
+Requires boxing and unboxing
+Slower than a Dictionary
+
+****
+
+Is it possible to serialize hashtables?
+No, you cannot serialize a hashtable because the .NET Framework doesn't allow the serialization of an object that implements the IDictionary interface.
+
+****

@@ -1,0 +1,85 @@
+In C#, events and delegates are language constructs that allow for the implementation of the Observer design pattern. They enable decoupling of components in a software system by providing a way for objects to be notified of changes in state or actions performed by other objects.
+
+A delegate in C# is a type that represents a reference to a method with a specific signature. It can be used to encapsulate a method call and pass it as a parameter or store it in a variable. Delegates can be used to implement callbacks, asynchronous programming, and event handling.
+
+An event is a construct in C# that allows objects to raise or listen to events. It is a member that represents a delegate with specific add and remove methods to subscribe and unsubscribe listeners to the event. When an event is raised, all the subscribed listeners will be notified and can perform some action in response.
+
+For example, consider a simple scenario where a button on a user interface needs to perform an action when it is clicked. In C#, an event can be created to handle the button click event. The event can be declared in the class that contains the button as follows:
+
+public class MyForm
+{
+    public event EventHandler ButtonClicked;
+    // ...
+}
+
+
+The ButtonClicked event is declared as a member of the MyForm class with the EventHandler delegate type. The event can be raised in the code that handles the button click event as follows:
+
+private void OnButtonClick(object sender, EventArgs e)
+{
+    // Perform some action here
+    // ...
+    ButtonClicked?.Invoke(this, e);
+}
+
+The ButtonClicked event is raised by invoking the delegate with the Invoke method, passing the object that raised the event (this) and the event arguments (e) as parameters.
+
+Other objects that are interested in the button click event can subscribe to it by registering their event handler method with the ButtonClicked event, like this:
+
+myForm.ButtonClicked += MyButtonClickedHandler;
+
+In summary, events and delegates in C# provide a powerful mechanism for implementing the Observer pattern and enabling decoupling of components in a software system. They allow objects to subscribe to and be notified of changes in state or actions performed by other objects, promoting a more modular and flexible architecture.
+
+**************
+
+What is a delegate in .NET?
+
+A delegate in .NET is similar to a function pointer in C or C++. Using a delegate allows the programmer to encapsulate a reference to a method inside a delegate object. The delegate object can then be passed to code which can call the referenced method, without having to know at compile time which method will be invoked. In addition, we could use delegate to create custom event within a class. For example,
+
+public delegate void FooDelegate();
+
+class FooClass
+{
+    // custom event
+    public event FooDelegate FooEvent;
+}
+
+FooClass FooObj = new FooClass()
+FooObj.FooEvent += new FooDelegate();
+
+***
+
+***********
+Explain Anonymous type in C#
+
+Anonymous types allow us to create a new type without defining them. This is way to defining read only properties into a single object without having to define type explicitly. Here Type is generating by the compiler and it is accessible only for the current block of code. The type of properties is also inferred by the compiler.
+
+
+var anonymousData = new
+{  
+     ForeName = "Jignesh",  
+     SurName = "Trivedi"
+};  
+
+Console.WriteLine("First Name : " + anonymousData.ForeName); 
+
+***
+
+
+What is the difference between Func<string,string> and delegate
+
+In C#, a delegate is a type that represents a reference to a method with a specific signature. A Func<string, string> is a specific type of delegate that represents a method that takes a string parameter and returns a string value.
+
+So, to answer your question directly, there is no difference between a Func<string, string> and a delegate in terms of their functionality. A Func<string, string> is simply a delegate type that specifies the signature of a method that takes a string parameter and returns a string value.
+
+However, the Func<string, string> type is a predefined delegate type provided by the .NET Framework. It is equivalent to declaring a delegate type that has the same signature.
+
+Here's an example of declaring a delegate type that has the same signature as Func<string, string>:
+
+delegate string MyStringDelegate(string input);
+
+This creates a delegate type that represents a method with a string parameter and a string return value, just like Func<string, string>.
+
+So, in summary, the difference between a Func<string, string> and a delegate is that a Func<string, string> is a specific type of delegate that represents a method with a string parameter and a string return value, while a delegate is a general type that can represent any method with a specific signature.
+
+***

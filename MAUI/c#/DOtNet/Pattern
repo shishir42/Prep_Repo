@@ -1,0 +1,258 @@
+***
+Why shouldn't I use the Repository Pattern with Entity Framework? 
+
+The Repository Pattern is a widely used design pattern in software development that provides a layer of abstraction between the data access logic and the business logic of an application. It is often used in conjunction with an ORM like Entity Framework to provide a more testable and maintainable data access layer.
+
+However, there is a growing consensus among experts in the .NET community that using the Repository Pattern with Entity Framework is not necessary and can actually be harmful in certain situations. Here are some reasons why:
+
+Entity Framework already implements many features of the Repository Pattern: Entity Framework is already an implementation of the Repository Pattern, and it provides many of the same benefits, such as a level of abstraction over the data access layer, separation of concerns, and testability.
+
+Over-abstraction can lead to unnecessary complexity: Adding an additional layer of abstraction can make the code more complex and harder to understand, especially for developers who are not familiar with the Repository Pattern.
+
+Performance can be negatively impacted: The Repository Pattern can result in additional database queries and increased overhead, which can impact performance, especially in large and complex applications.
+
+Entity Framework already provides a unit of work: Entity Framework already provides a built-in unit of work pattern, which manages the transactions and changes to the database. Implementing another unit of work pattern on top of this can result in unnecessary complexity and overhead.
+
+Potential for misuse: The Repository Pattern can be misused if not implemented correctly, leading to issues such as overly complex code, increased maintenance costs, and decreased performance.
+
+Overall, while the Repository Pattern can be useful in certain situations, it is not necessary to use it with Entity Framework, and doing so can actually be harmful in some cases. Instead, it is recommended to use Entity Framework directly or to build a simple data access layer on top of Entity Framework without adding unnecessary abstractions.
+
+***
+
+***
+
+What do you understand about dependency injection?
+You can de-couple tightly linked classes using the dependency injection. Thus, it reduces the direct dependency of classes upon each other. You can achieve dependency injection via the following: 
+
+Constructor dependency
+Property dependency
+Method dependency
+
+****
+Why is the singleton pattern referred to as an anti-pattern?
+
+The Singleton pattern is often referred to as an anti-pattern because it can introduce several problems into software design and development. Some of the reasons why Singleton is considered an anti-pattern include:
+
+Tight coupling: The Singleton pattern creates tight coupling between classes, making it difficult to change the implementation or replace the Singleton with another object. This can make it difficult to maintain and test code that uses Singletons.
+
+Global state: The Singleton pattern creates global state in the application, which can make it difficult to reason about the behavior of the system as a whole. Global state can also lead to race conditions and other concurrency issues in multi-threaded environments.
+
+Difficulty in testing: The use of Singletons can make unit testing difficult since the Singleton object cannot be easily replaced with a mock object.
+
+Can lead to overuse: Developers may use the Singleton pattern when it's not really necessary, which can lead to code that's more complex than it needs to be.
+
+That being said, there are some situations where the Singleton pattern can be useful, such as when you need to ensure that only one instance of an object is created and that instance is shared across the entire application. However, it's important to use the Singleton pattern judiciously and consider other alternatives such as dependency injection or static classes.
+
+****
+
+******
+How would you implement a singleton design pattern in C#?
+
+
+public class Singleton
+{
+    private static Singleton instance;
+
+    private Singleton() { }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Singleton();
+            }
+
+            return instance;
+        }
+    }
+
+    public void DoSomething()
+    {
+        Console.WriteLine("Singleton instance is doing something.");
+    }
+}
+
+# First version - not thread-safe
+
+// Bad code! Do not use!
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Singleton();
+            }
+            return instance;
+        }
+    }
+}
+
+As hinted at before, the above is not thread-safe. Two different threads could both have evaluated the test if (instance==null) and found it to be true, then both create instances, which violates the singleton pattern. Note that in fact the instance may already have been created before the expression is evaluated, but the memory model doesn't guarantee that the new value of instance will be seen by other threads unless suitable memory barriers have been passed.
+
+# Second version - simple thread-safety
+
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+    private static readonly object padlock = new object();
+
+    Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            lock (padlock)
+            {
+                if (instance == null)
+                {
+                    instance = new Singleton();
+                }
+                return instance;
+            }
+        }
+    }
+}
+
+This implementation is thread-safe. The thread takes out a lock on a shared object, and then checks whether or not the instance has been created before creating the instance. This takes care of the memory barrier issue (as locking makes sure that all reads occur logically after the lock acquire, and unlocking makes sure that all writes occur logically before the lock release) and ensures that only one thread will create an instance (as only one thread can be in that part of the code at a time - by the time the second thread enters it,the first thread will have created the instance, so the expression will evaluate to false). Unfortunately, performance suffers as a lock is acquired every time the instance is requested.
+
+Note that instead of locking on typeof(Singleton) as some versions of this implementation do, I lock on the value of a static variable which is private to the class. Locking on objects which other classes can access and lock on (such as the type) risks performance issues and even deadlocks. This is a general style preference of mine - wherever possible, only lock on objects specifically created for the purpose of locking, or which document that they are to be locked on for specific purposes (e.g. for waiting/pulsing a queue). Usually such objects should be private to the class they are used in. This helps to make writing thread-safe applications significantly easier.
+
+# Third version - attempted thread-safety using double-check locking
+// Bad code! Do not use!
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+    private static readonly object padlock = new object();
+
+    Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                lock (padlock)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Singleton();
+                    }
+                }
+            }
+            return instance;
+        }
+    }
+}
+
+
+# Fourth version - not quite as lazy, but thread-safe without using locks
+public sealed class Singleton
+{
+    private static readonly Singleton instance = new Singleton();
+
+    // Explicit static constructor to tell C# compiler
+    // not to mark type as beforefieldinit
+    static Singleton()
+    {
+    }
+
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+}
+
+#Fifth version - fully lazy instantiation
+public sealed class Singleton
+{
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance { get { return Nested.instance; } }
+
+    private class Nested
+    {
+        // Explicit static constructor to tell C# compiler
+        // not to mark type as beforefieldinit
+        static Nested()
+        {
+        }
+
+        internal static readonly Singleton instance = new Singleton();
+    }
+}
+
+#Lazy Initialization Singleton
+
+public class Singleton
+{
+    private static readonly Lazy<Singleton> lazyInstance = 
+        new Lazy<Singleton>(() => new Singleton());
+
+    private Singleton() {}
+
+    public static Singleton Instance
+    {
+        get { return lazyInstance.Value; }
+    }
+}
+
+
+In this approach, the class also has a private constructor to prevent direct instantiation of the class from outside. The lazyInstance field is initialized lazily using the Lazy<T> class, which ensures thread-safe initialization of the instance. The public static property Instance provides access to the single instance of the class.
+
+#Double Check Locking Singleton
+public class Singleton
+{
+    private static volatile Singleton instance;
+    private static readonly object syncRoot = new object();
+
+    private Singleton() {}
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                lock (syncRoot)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Singleton();
+                    }
+                }
+            }
+            return instance;
+        }
+    }
+}
+
+
+In this approach, the class also has a private constructor to prevent direct instantiation of the class from outside. The instance field is initialized lazily using double check locking to ensure thread-safe initialization of the instance. The syncRoot object is used to synchronize access to the instance field. The public static property Instance provides access to the single instance of the class.
+
+****

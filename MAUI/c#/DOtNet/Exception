@@ -1,0 +1,23 @@
+Is there a way to catch multiple exceptions at once and without code duplication in c#
+
+Yes, in C# you can catch multiple exceptions using a single catch block by using a catch block with multiple exception types separated by the | operator. This is called a "multi-catch" block.
+
+try
+{
+    // Some code that might throw exceptions
+}
+catch (IOException | SqlException | SomeOtherException ex)
+{
+    // Handle the exception
+    Console.WriteLine($"Exception caught: {ex.Message}");
+}
+
+***************
+
+How is Exception Handling implemented in C#
+Exception handling is done using four keywords in C#:
+
+try – Contains a block of code for which an exception will be checked.
+catch – It is a program that catches an exception with the help of exception handler.
+finally – It is a block of code written to execute regardless whether an exception is caught or not.
+throw – Throws an exception when a problem occurs.

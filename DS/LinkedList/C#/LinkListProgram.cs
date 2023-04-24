@@ -127,7 +127,104 @@ namespace HelloWorld
             this.TraverseList(dummy.next);
         }
 
-        public void TraverseList(Node head)
+        public Node? GetIntersectionNode(Node l1, Node l2)
+        {
+            if(l1 == null || l2 == null)
+            {
+                return null;
+            }
+            
+            Node currNodeA = l1;
+            Node currNodeB = l2;
+
+            while(currNodeA != currNodeB)
+            {
+                currNodeA = currNodeA != null ? currNodeA.next : l2;
+                currNodeB = currNodeB != null ? currNodeB.next : l1;
+            }
+
+            return currNodeA;
+        }
+
+        public Node? GetIntersectionNode_L(Node l1, Node l2)
+        {
+            if(l1 == null || l2 == null)
+            {
+                return null;
+            }
+
+            int len1 = GetLength(l1);
+            int len2 = GetLength(l2);
+
+            Node currA = l1;
+            Node currB = l2;
+
+            if(len1 > len2)
+            {
+                int diff = len1 - len2;
+                while(diff > 0)
+                {
+                    currA = currA.next;
+                    diff--;
+                }
+            }
+            else
+            {
+                int diff = len2-len1;
+                while(diff > 0)
+                {
+                    currB = currB.next;
+                    diff--;
+                }
+            }
+
+            while(currA != currB)
+            {
+                currA = currA.next;
+                currB = currB.next;
+            }
+
+            return currA;
+        }
+        
+        public Node? ReverseLinkedList(Node head)
+        {
+            if(head == null)
+            {
+                return null;
+            }
+
+            Node? prev = null;
+            Node? curr = head;
+
+            while(curr != null)
+            {
+                Node next = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = next;
+            }
+
+            return prev;
+        }
+
+        public Node ReverseLinkedListRecursive(Node head)
+        {
+            if(head == null || head.next == null)
+            {
+                return head;
+            }
+
+            Node reversed = ReverseLinkedListRecursive(head.next);
+            head.next.next = head;
+            head.next = null;
+
+            return reversed;
+        }
+
+        
+
+        private void TraverseList(Node head)
         {
             Node current = head;
             while(current != null)
@@ -141,6 +238,19 @@ namespace HelloWorld
             }
             Console.WriteLine();
         }
+
+        private int GetLength(Node head)
+        {
+            int length = 0;
+            Node curr = head;
+            while(curr != null)
+            {
+                length++;
+                curr = curr.next;
+            }
+
+            return length;
+        } 
 
         public void Driver()
         {
@@ -176,6 +286,41 @@ namespace HelloWorld
             Node l2 = m33;
 
             linkedListProgram.MergeTwoLists(n33, m33);
+
+            Console.WriteLine("***************************");
+            Node common = new Node(8);
+            common.next = new Node(4);
+            common.next.next = new Node(5);
+
+            Node headA = new Node(4);
+            headA.next = new Node(1);
+            headA.next.next = common;
+
+            Node headB = new Node(5);
+            headB.next = new Node(0);
+            headB.next.next = new Node(1);
+            headB.next.next.next = common;
+
+            Node? intersection = linkedListProgram.GetIntersectionNode_L(headA, headB);
+            if (intersection == null) 
+            {
+                Console.WriteLine("The two linked lists do not intersect.");
+            } else 
+            {
+                Console.WriteLine("The intersection point is: " + intersection.value);
+            }
+
+            Console.WriteLine("***************************");
+            Node head1 = new Node(1);
+            head1.next = new Node(2);
+            head1.next.next = new Node(3);
+            head1.next.next.next = new Node(4);
+            head1.next.next.next.next = new Node(5);
+            // Node reversedNodeIte = linkedListProgram.ReverseLinkedList(head1);
+            // linkedListProgram.TraverseList(reversedNodeIte);
+
+            Node reversedNodeRecurrsion = linkedListProgram.ReverseLinkedListRecursive(head1);
+            linkedListProgram.TraverseList(reversedNodeRecurrsion);
         }
     }    
 }

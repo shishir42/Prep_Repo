@@ -30,3 +30,299 @@ No, .NET supports only single inheritance due to the diamond problem. Also, it w
 It is an ambiguity that arises due to multiple inheritances in C#. Two classes B and C inherit from A, and D inherits from both B and C but doesn’t override the method defined in A. The Diamond Problem arises when class B or C has overridden the method differently and D cannot decide to inherit from either B or C.
 
 An interface is a declaration for a set of class members. It is a reference type that contains only abstract members such as Events, Methods, Properties, etc.
+
+Abstract Class:
+- Provides the partial implementation of functionalities that is done by inheriting classes
+- Used to declare properties, methods, events, and fields as well
+
+Interface
+- Used to declare the behavior of an implementing class
+- Fields cannot be declared using interfaces
+
+Why Abstract class can not be sealed or static in c#
+In C#, an abstract class is a class that cannot be instantiated directly, but can be inherited by other classes. The purpose of an abstract class is to provide a base implementation for derived classes, which must provide their own implementations for any abstract members declared in the abstract class.
+
+A sealed class, on the other hand, is a class that cannot be inherited by other classes. Once a class is sealed, it cannot be further inherited, and any attempts to derive from it will result in a compile-time error.
+
+A static class is a class that cannot be instantiated at all. Instead, it contains only static members (i.e., members that belong to the class itself, rather than to any instance of the class). Static classes are commonly used to define utility methods or constants that are used throughout an application.
+
+The reason that an abstract class cannot be sealed is that these two concepts are fundamentally opposed to each other. An abstract class is designed to be inherited by other classes, whereas a sealed class is designed to prevent inheritance. If an abstract class were sealed, it would be impossible to derive from it, which would defeat the purpose of making it abstract in the first place.
+
+Similarly, an abstract class cannot be static, because a static class cannot be instantiated, and an abstract class is designed to be inherited and instantiated by derived classes. If an abstract class were static, it would be impossible to create instances of it, which would defeat the purpose of making it abstract in the first place.
+
+In summary, abstract classes cannot be sealed or static because these concepts are fundamentally opposed to the idea of an abstract class. An abstract class is designed to be inherited and instantiated, whereas a sealed class is designed to prevent inheritance, and a static class is designed to provide utility methods or constants that do not require instantiation.
+
+
+Explain what inheritance is, and why it’s important.
+
+Inheritance is one of the most important concepts in object-oriented programming, together with encapsulation and polymorphism. Inheritance allows developers to create new classes that reuse, extend, and modify the behavior defined in other classes. This enables code reuse and speeds up development. With inheritance, developers can write and debug one class only once, and then reuse that same code as the basis for the new classes. The class whose members are inherited is called the base class, and the class that inherits those members is called the derived class. By default, all classes in .NET are inheritable.
+
+***
+Explain the difference between a class and an object.
+
+In short, a class is the definition of an object, and an object is instance of a class.
+We can look at the class as a template of the object: it describes all the properties, methods, states and behaviors that the implementing object will have. As mentioned, an object is an instance of a class, and a class does not become an object until it is instantiated. There can be more instances of objects based on the one class, each with different properties.
+
+********
+
+Explain the differences between an Interface and an Abstract Class in .NET.
+
+An interface merely declares a contract or a behavior that implementing classes should have. It may declare only properties, methods, and events with no access modifiers. All the declared members must be implemented.
+
+An abstract class provides a partial implementation for a functionality and some abstract/virtual members that must be implemented by the inheriting entities. It can declare fields too.
+
+Neither interfaces nor abstract classes can be instantiated.
+
+interfaces can be used in an abstract class in C#. An abstract class can implement one or more interfaces, just like a regular class.
+
+you can implement constructors in an abstract class in C#. However, an abstract class cannot be instantiated directly, so the constructor of an abstract class is typically used to initialize fields and other members that are shared by all derived classes.
+
+List out all the difference between Interface and an Abstract Class in .NET
+
+Interfaces and abstract classes are both used to define contracts in .NET, but they have some key differences in terms of their implementation and use. Here are the main differences between interfaces and abstract classes:
+
+Implementation: An interface only defines the signature of methods, properties, and events that a class must implement. It does not provide any implementation details. An abstract class, on the other hand, can provide a partial implementation of its methods, properties, and events, and can also include non-abstract members.
+
+Inheritance: A class can inherit from multiple interfaces, but it can only inherit from a single abstract class. This is because a class can only have one direct parent, while it can implement multiple interfaces.
+
+Constructors: An interface does not have constructors, while an abstract class can have constructors that are called when a derived class is instantiated.
+
+Access Modifiers: All members of an interface are public by default, while members of an abstract class can have various access modifiers, such as public, protected, private, or internal.
+
+Multiple Implementations: A class can implement multiple interfaces, but it can only inherit from one abstract class.
+
+Implementation Details: An interface does not provide any implementation details and does not contain fields, while an abstract class can provide a partial implementation of its members and can include fields.
+
+Inheritance vs Polymorphism: Abstract classes are used to provide a common base class for a family of related classes, while interfaces are used to define a contract for unrelated classes to implement. Abstract classes support inheritance, while interfaces support polymorphism.
+
+Purpose: Abstract classes are used to provide a common base class for a family of related classes, while interfaces are used to define a contract for unrelated classes to implement.
+
+In summary, both interfaces and abstract classes are useful in different scenarios. Interfaces are used to define a contract that a class must implement, while abstract classes are used to provide a common base class for a family of related classes.
+
+***
+
+***
+Why can’t you specify access modifiers for items in an interface?
+It is always public
+
+*** 
+You would know that System.Object is the parent class of all .NET classes; In other words all types in .NET (whether implicit, explicit, or user-created) derive from the System.Object class.
+
+What are the various methods provided to System.Object’s deriving classes/types?
+
+System.Object provides the following important methods, among others:
+
+ToString—Returns a string that represents the current object
+both overrides of Equals(object), Equals(object, object)
+GetHashCode
+Finalize
+GetType
+ReferenceEquals
+MemberwiseClone
+
+Most of these methods provide the basic implementation required of any type that a developer will work with in the .NET stack.
+
+***************
+When to use an override and new in C#?
+We can use override when there is a virtual/abstract/override type of method in a base class.
+We can use New when there is no virtual/abstract/override type of method in a base class.
+
+***************
+
+What are dynamic type variables in C#
+You can store any type of value in the dynamic data type variable. Type checking for these types of variables takes place at run-time.
+
+***************
+
+What is namespace in C#
+A namespace is designed for providing a way to keep one set of names separate from another. The class names declared in one namespace does not conflict with the same class names declared in another.
+
+NET uses namespaces to organize its many classes.
+Declaring your own namespaces can help you control the scope of class and method names in larger programming projects.
+
+***
+What is the difference between a Struct and a Class in C#?
+Class and struct both are the user defined data type but have some major difference:
+
+Struct
+
+The struct is value type in C# and it inherits from System.Value Type.
+Struct is usually used for smaller amounts of data.
+Struct can't be inherited to other type.
+A structure can't be abstract.
+
+Class
+
+The class is reference type in C# and it inherits from the System.Object Type.
+Classes are usually used for large amounts of data.
+Classes can be inherited to other class.
+A class can be abstract type.
+We can create a default constructor.
+
+***
+Why to use finally block in C#?
+Finally block will be executed irrespective of exception. So while executing the code in try block when exception is occurred, control is returned to catch block and at last finally block will be executed. So closing connection to database / releasing the file handlers can be kept in finally block.
+
+*******
+
+How encapsulation is implemented in C#?
+
+Encapsulation is implemented by using access specifiers. An access specifier defines the scope and visibility of a class member.
+
+Public access specifier allows a class to expose its member variables and member functions to other functions and objects. Any public member can be accessed from outside the class.
+Private access specifier allows a class to hide its member variables and member functions from other functions and objects. Only functions of the same class can access its private members. Even an instance of a class cannot access its private members.
+Protected access specifier allows a child class to access the member variables and member functions of its base class. This way it helps in implementing inheritance.
+
+***
+
+
+What is the difference between Interface and Abstract Class?
+
+There are some differences between Abstract Class and Interface which are listed below:
+
+interfaces can have no state or implementation
+a class that implements an interface must provide an implementation of all the methods of that interface
+abstract classes may contain state (data members) and/or implementation (methods)
+abstract classes can be inherited without implementing the abstract methods (though such a derived class is abstract itself)
+interfaces may be multiple-inherited, abstract classes may not (this is probably the key concrete reason for interfaces to exist separately from abtract classes - they permit an implementation of multiple inheritance that removes many of the problems of general MI).
+
+Consider using abstract classes if :
+
+You want to share code among several closely related classes.
+You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+You want to declare non-static or non-final fields.
+Consider using interfaces if :
+
+You expect that unrelated classes would implement your interface. For example, many unrelated objects can implement Serializable interface.
+You want to specify the behaviour of a particular data type, but not concerned about who implements its behaviour.
+You want to take advantage of multiple inheritances of type.
+
+***
+What is the difference between overloading and overriding?
+
+Overloading is when you have multiple methods in the same scope, with the same name but different signatures.
+
+//Overloading
+public class test
+{
+    public void getStuff(int id)
+    {}
+    public void getStuff(string name)
+    {}
+}
+
+Overriding is a principle that allows you to change the functionality of a method in a child class.
+
+//Overriding
+public class test
+{
+        public virtual void getStuff(int id)
+        {
+            //Get stuff default location
+        }
+}
+
+public class test2 : test
+{
+        public override void getStuff(int id)
+        {
+            //base.getStuff(id);
+            //or - Get stuff new location
+        }
+}
+
+***
+
+
+****
+Why can't you specify the accessibility modifier for methods inside the Interface?
+
+In an interface, we have virtual methods that do not have method definition. All the methods are there to be overridden in the derived class. That's why they all are public.
+
+****
+What is the yield keyword used for in C#?
+other mechanisms.
+
+When the yield keyword is used in a method, it tells the compiler to generate code that returns an iterator. The method containing the yield keyword can then use a foreach loop or other mechanisms to iterate over the sequence of values that it produces.
+
+The yield keyword allows you to generate a sequence of values without having to create an entire collection in memory. Instead, the iterator produces one value at a time, as requested by the consumer of the iterator. This can be more memory-efficient and faster than creating a collection of all the values upfront.
+
+Heres an example of using the yield keyword to create an iterator that generates a sequence of integers:
+
+
+public static IEnumerable<int> GetNumbers(int start, int end)
+    {
+        for (int i = start; i <= end; i++)
+        {
+            yield return i;
+        }
+    }
+
+In this example, the GetNumbers method returns an iterator that generates a sequence of integers from start to end. The yield return statement is used to return each integer in the sequence, one at a time.
+
+You can then use a foreach loop or other mechanisms to iterate over the sequence of values produced by the iterator:
+
+foreach (int number in GetNumbers(1, 10))
+{
+    Console.WriteLine(number);
+}
+
+This will output the numbers 1 through 10 to the console, one at a time, as they are generated by the iterator.
+***
+
+How is encapsulation implemented in C#?
+
+You can implement encapsulation by using access specifiers that define the scope and visibility of a class member. Some access specifiers are as follows:
+
+Public access specifier: It allows a class to expose its member functions and variables to other objects and functions. It allows access to any public member from outside the class.
+Private access specifier: It allows a class to hide its member functions and variables from other objects and functions. It allows only functions of the same class to access its private members.
+Protected access specifier: It allows a child class to access its base class's member function and variables, thus helping in inheritance implementation. 
+
+****
+
+What do you understand about method shadowing or method hiding in C#?
+Shadowing or method hiding in C# is a VB.Net concept hiding the implementation of the base class method. You can achieve method shadowing using the 'new' keyword. If a method does not override the derived method, it hides it.
+
+****
+
+What do you understand about Polymorphism in C#?
+This is one of the most commonly asked C# interview questions and answers for experienced professionals. Polymorphism is one of the three main pillars of object-oriented programming after encapsulation and inheritance. 
+
+The term polymorphism means "many shapes." It occurs when there are many classes related to each other by inheritance. 
+
+For instance, at runtime, derived class objects may be treated as base class objects in places like collections/ method parameters/ arrays. In such polymorphism, declared and runtime types of objects are different. Thus, polymorphism allows a class to have multiple implementations with the same name.
+
+****
+
+What is interface inheritance?
+Interface inheritance is when a class inherits only the signatures of the functions from another class. It is also called type inheritance/ subtyping. It allows code reuse and polymorphism. The main advantage of interface inheritance is that it reduces coupling and implementation dependencies.
+
+****
+
+What are the advantages of using partial classes?
+The major advantages of using partial classes are as follows:
+
+They allow multiple developers to work on the same class easily.
+The code generators mainly use them to keep different concerns separate.
+It allows one developer to define the method while the other developer can implement it.
+
+****
+
+What is string interpolation in C#?
+String Interpolation in C# allows to create formatted strings with readable and convenient syntax. You can create an interpolation string containing interpolation expressions using the $ special character. On resolving, the interpolation string replaces the interpolation expression with the string representation of the interpolation item.
+
+****
+
+How is Var different from Dynamics in C#?
+
+In C#, "var" and "dynamic" are both used to declare variables, but they have different meanings and behaviors.
+
+"Var" is a keyword that allows the compiler to infer the type of a variable based on the value that it is assigned. For example, if you assign an integer value to a variable declared as "var", the compiler will infer that the variable is of type "int". This means that you don't have to explicitly specify the type of the variable when you declare it, which can save time and reduce clutter in your code.
+
+On the other hand, "dynamic" is a keyword that allows a variable to be assigned a value of any type at runtime. This means that the type of the variable is determined at runtime, rather than at compile time. This can be useful in situations where you need to work with objects of different types that have a common set of properties or methods.
+
+The main difference between "var" and "dynamic" is that "var" is used for static typing, while "dynamic" is used for dynamic typing. With static typing, the type of a variable is determined at compile time, while with dynamic typing, the type is determined at runtime.
+
+In general, it's a good idea to use "var" when the type of the variable can be inferred from the value that it's assigned, and to use "dynamic" when you need to work with objects of different types at runtime. However, it's important to use each keyword appropriately and understand their respective limitations and benefits.
+
+********

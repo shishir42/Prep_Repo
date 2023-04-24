@@ -1,0 +1,16 @@
+Explain how does Asynchronous tasks Async/Await work in .NET? 
+Asynchronous programming in .NET allows developers to write code that doesn't block the calling thread while waiting for long-running operations such as I/O or database access to complete. The two main ways to achieve asynchronous programming in .NET are through asynchronous methods and the Async/Await keywords.
+
+The Async/Await keywords were introduced in C# 5.0 and are now a standard part of the language. They allow developers to write asynchronous code that looks similar to synchronous code, making it easier to read and maintain. Here's how they work:
+
+Marking a method as async: To create an asynchronous method, you need to mark it with the async keyword. This tells the compiler that the method contains asynchronous operations and should be treated as such.
+
+Using the Await keyword: When calling a method that returns a Task or Task<T>, you can use the Await keyword to suspend the execution of the method until the task completes. While the task is running, the calling thread is free to do other work.
+
+Returning a Task: If the method itself returns a Task or Task<T>, it can be marked as async and can be awaited by calling code. When the method completes, it returns a TaskCompletionSource<T>, which contains the result of the asynchronous operation.
+
+Using async/await with parallelism: The async/await keywords can also be used with parallel programming constructs such as Parallel.ForEach and Task.WhenAll, allowing multiple asynchronous operations to be executed in parallel.
+
+Overall, Async/Await in .NET provides a simple and powerful way to write asynchronous code that is easier to read and maintain than traditional callback-based approaches. By allowing the calling thread to continue executing other work while waiting for asynchronous operations to complete, Async/Await can help improve application responsiveness and scalability.
+
+***

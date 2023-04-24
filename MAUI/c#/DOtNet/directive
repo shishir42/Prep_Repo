@@ -1,0 +1,32 @@
+What is the use of conditional preprocessor directive in C#?
+
+
+In C#, the conditional preprocessor directive (#if, #else, #elif, and #endif) allows you to selectively compile or exclude blocks of code based on compile-time constants or symbols.
+
+You can use conditional preprocessor directives to include or exclude code depending on various factors, such as the target platform, the build configuration, or the presence of certain symbols or constants. This can be useful for creating platform-specific code, enabling or disabling debug-only features, or providing alternative implementations for different scenarios.
+
+Here's an example of using the #if directive to include or exclude code based on a compilation symbol:
+
+#define DEBUG
+
+using System;
+
+public class MyClass
+{
+    public void MyMethod()
+    {
+        #if DEBUG
+            Console.WriteLine("Debug mode is enabled.");
+        #else
+            Console.WriteLine("Debug mode is disabled.");
+        #endif
+    }
+}
+
+In this example, the #if directive checks if the DEBUG symbol is defined. If it is, the code inside the #if block is included in the compilation; otherwise, the code inside the #else block is included instead.
+
+You can define compilation symbols using the #define directive, as shown in the example. Alternatively, you can define them in the project properties or through the command line options for the compiler.
+
+Using conditional preprocessor directives can help you write more flexible and maintainable code that adapts to different scenarios and conditions. However, you should use them with care, as they can make your code harder to read and debug, and can introduce subtle bugs if not used correctly.
+
+***

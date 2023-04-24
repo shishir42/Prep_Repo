@@ -1,0 +1,72 @@
+***
+Why to use of the IDisposable interface
+The IDisposable interface in C# is used to release unmanaged resources held by an object, such as file handles, database connections, or network sockets. When you create an object that uses unmanaged resources, it's important to release those resources when they're no longer needed to prevent memory leaks and resource exhaustion.
+
+By implementing the IDisposable interface, you can provide a way to release these resources explicitly. The IDisposable interface defines a single method called Dispose() that should be called when the object is no longer needed. The Dispose() method releases any unmanaged resources held by the object and can also release managed resources if needed.
+
+Here are some reasons why you might want to use the IDisposable interface in your code:
+
+To release unmanaged resources: As mentioned earlier, the IDisposable interface is commonly used to release unmanaged resources held by an object. This is important because unmanaged resources cannot be automatically managed by the garbage collector in .NET.
+
+To improve performance: By releasing unmanaged resources explicitly, you can improve the performance of your application by avoiding unnecessary memory allocations and reducing the load on system resources.
+
+To avoid memory leaks: If you don't release unmanaged resources properly, you can create memory leaks that can cause your application to run out of memory over time. By using IDisposable to release these resources, you can prevent memory leaks and improve the stability of your application.
+
+To support deterministic cleanup: By implementing IDisposable, you can provide a way for developers to release resources when they're no longer needed, even if the garbage collector hasn't yet cleaned up the object. This can be especially useful in scenarios where resources are limited or where cleanup is time-sensitive.
+
+In summary, the IDisposable interface is used to release unmanaged resources held by an object and can be used to improve performance, avoid memory leaks, and support deterministic cleanup. If your code uses unmanaged resources, it's a good practice to implement IDisposable to ensure that those resources are released properly.
+
+***
+When using DI in Controller shall I call IDisposable on any injected service
+If you are using Dependency Injection (DI) in your Controller to inject services that implement the IDisposable interface, it is generally recommended to let the DI container handle the disposal of those services.
+
+When a service is injected into a Controller via DI, the DI container is responsible for creating and disposing of that service. When the Controller is disposed of by the framework, the DI container will automatically dispose of any services that were injected into it.
+
+In most cases, you do not need to explicitly call the Dispose() method on any injected service. However, there may be some cases where you need to explicitly dispose of a service, such as when the service has a long-running operation that needs to be stopped or when the service is holding onto unmanaged resources.
+
+In those cases, you can either manually dispose of the service in the Controller's Dispose() method or you can register the service with the DI container as a "Scoped" service, which will cause the container to automatically dispose of the service when the scope ends (such as when the Controller is disposed of).
+
+In summary, it is generally recommended to let the DI container handle the disposal of services that implement IDisposable, but there may be some cases where you need to explicitly dispose of a service.
+
+****************
+
+Explain when to use Finalize vs Dispose?
+
+Both the Finalize and Dispose methods are used to release unmanaged resources in .NET applications, but they have different use cases and should be used in different scenarios.
+
+The Finalize method is part of the .NET garbage collection process and is called by the runtime before an object is destroyed. It is used to release unmanaged resources that were not explicitly disposed of by the application. The Finalize method is implemented in a class by creating a destructor that overrides the Object.Finalize method. Finalize is useful when working with unmanaged resources that cannot be freed through the .NET garbage collector.
+
+However, there are some limitations to using Finalize. Finalize methods are non-deterministic, meaning they are not guaranteed to execute at any specific time or in any specific order. This can lead to resource leaks and other issues if the resources are not properly managed.
+
+The Dispose method, on the other hand, is used to release both managed and unmanaged resources in a deterministic way. It is implemented by classes that implement the IDisposable interface and should be called explicitly by the application when the resources are no longer needed. Dispose allows you to release resources when you need them to be released, rather than waiting for the garbage collector to run.
+
+It is recommended to use the Dispose method for managing resources in .NET applications whenever possible, as it provides a more deterministic way to release resources and can help avoid issues with resource leaks.
+
+In summary, use Finalize when working with unmanaged resources that cannot be freed through the .NET garbage collector, and use Dispose for managing both managed and unmanaged resources in a deterministic way.
+
+***
+What are the uses of using in C#
+The reason for the using statement is to ensure that the object is disposed (call IDisposable) as soon as it goes out of scope, and it doesn't require explicit code to ensure that this happens.
+
+using (MyResource myRes = new MyResource())
+{
+    myRes.DoSomething();
+}
+
+{ // Limits scope of myRes
+    MyResource myRes= new MyResource();
+    try
+    {
+        myRes.DoSomething();
+    }
+    finally
+    {
+        // Check for a null resource.
+        if (myRes != null)
+            // Call the object's Dispose method.
+            ((IDisposable)myRes).Dispose();
+    }
+}
+
+
+***

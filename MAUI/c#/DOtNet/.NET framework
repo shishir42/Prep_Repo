@@ -34,3 +34,118 @@ string is immutable and fixed-length, whereas StringBuilder is mutable and varia
 
 The base class is a class whose members and functions can be inherited, and the derived class is the class that inherits those members and may also have additional properties.  
 
+Reflection objects are used for creating type instances and obtaining type information at runtime. The classes in the System.Reflection namespace gives access to the metadata of a running program.
+
+The Global Assembly Cache is a machine-wide code cache that is stored in a folder in the Windows directory. It stores the .NET assemblies that are specifically designated to be shared by all applications executed on the system.
+
+Marshaling is the process of transforming types in the managed and unmanaged code.
+
+Serialization is the process of converting the state of an object into a form (a stream of bytes) to be persisted or transported. Deserialization converts a stream into an object and is the opposite of serialization. These processes allow data to be stored and transferred.
+
+An assembly is the simple collection of all of the logical units present. Logical units are entities that are required to build an application and later deploy the same using the .NET framework. It can be considered as a collection of executables and DLL files.
+There are four main components of an assembly. They are as follows:
+Resource: A collection of related files
+MSIL: The Intermediate Language code
+Metadata: The binary data of a program
+Manifest: A collection of information about the assembly
+
+Yes, it is possible to manually set a session’s out time. It can easily be done by manipulating the web.config file.
+
+Function
+- Can only return one value
+- No support for exception handling using try-catch blocks
+- The argument consists of only one input parameter
+- A function can be called from a stored procedure
+
+Stored Procedure
+- Can return any number of values
+- Supports the usage of try-catch blocks for exception handling
+- Both input and output parameters are present
+- The stored procedure cannot be called from a function
+
+There are eight events as shown below that take place in an order to successfully render a page(page life cycle):
+Page_PreInit
+Page_Init
+Page_InitComplete
+Page_PreLoad
+Page_Load
+Page_LoadComplete
+Page_PreRender
+Render
+
+**************
+
+What do the following acronyms in .NET stand for: IL, CIL, MSIL, CLI and JIT?
+
+IL, or Intermediate Language, is a CPU independent partially compiled code. IL code will be compiled to native machine code using current environmental properties by Just-In-Time compiler (JIT). JIT compiler translates the IL code to an assembly code and uses the CPU architecture of the target machine to execute a .NET application. In .NET, IL is called Common Intermediate Language (CIL), and in the early .NET days it was called Microsoft Intermediate Language (MSIL).
+
+CLI, or Common Language Infrastructure, is an open specification developed by Microsoft. It is a compiled code library used for deployment, versioning, and security. In .NET there are two CLI types: process assemblies (EXE) and library assemblies (DLL). CLI assemblies contain code in CIL, and as mentioned, during compilation of CLI programming languages, the source code is translated into CIL code rather than into platform or processor specific object code.
+
+To summarize:
+
+1. When compiled, source code is first translated to IL (in .NET, that is CIL, and previously called MSIL).
+2. CIL is then assembled into a bytecode and a CLI assembly is created.
+3. Before code execution, CLI code is passed through the runtime’s JIT compiler to generate native machine code.
+4. The computer’s processor executes the native machine code.
+
+***
+Explain the difference between the Stack and the Heap.
+The short answer would be: in the Stack are stored value types (types inherited from System.ValueType), and in the Heap are stored reference types (types inherited from System.Object).
+
+We can say the Stack is responsible for keeping track of what is actually executing and where each executing thread is (each thread has its own Stack). The Heap, on the other hand, is responsible for keeping track of the data, or more precise objects.
+
+*****
+
+How do you implement a generic action in WebAPI?
+It’s not possible, as the WebAPI runtime needs to know the method signatures in advance.
+
+*********
+
+
+
+***
+ASP.Net
+ASP.NET is a web application framework developed by Microsoft to build dynamic websites, web applications, and services. It allows developers to build web applications using .NET languages like C# or Visual Basic.
+
+ASP.NET provides a rich set of features and tools for building modern and scalable web applications, such as:
+
+Server-side programming: Developers can write server-side code using .NET languages to create dynamic web applications that interact with databases and other server-side services.
+
+MVC architecture: ASP.NET follows a Model-View-Controller (MVC) architectural pattern that separates an application into three main components: the Model, which represents the data; the View, which represents the user interface; and the Controller, which handles user input and directs the flow of data.
+
+Web API: ASP.NET provides a powerful and flexible Web API framework that allows developers to create RESTful web services to expose data and functionality to other applications.
+
+Authentication and authorization: ASP.NET provides built-in support for authentication and authorization, including support for various authentication providers such as Microsoft, Facebook, or Google, and role-based authorization.
+
+Cross-platform support: ASP.NET Core, the latest version of ASP.NET, is a cross-platform and open-source framework that allows developers to build and run web applications on Windows, Linux, and macOS.
+
+ASP.NET is widely used by developers and organizations to build modern and scalable web applications and services. It offers a robust set of features and tools that make it easier to build complex web applications while maintaining high performance and security.
+
+https://learn.microsoft.com/en-us/dotnet/core/introduction
+https://dotnet.microsoft.com/en-us/learn/aspnet
+
+
+***
+https://www.interviewbit.com/dot-net-interview-questions/
+
+***
+https://www.simplilearn.com/dot-net-interview-questions-and-answers-article
+
+***
+BCL refers to Base Class Library. It is the foundation of .NET framework applications, components, and controls. It comprises of basic, fundamental types like System.String and System.DateTime and offers functionalities like threading, input/output, security, diagnostics, etc.
+
+***
+The main disadvantages of cookies include:
+
+Possible security risk, as they are stored in a clear text
+Not secure, as encryption & decryption is easy
+Cookies can be disabled on any user’s computer
+Can be edited or deleted
+Cookies can store limited data.
+
+***
+
+Explain Marshaling in .Net.
+Marshaling is defined as the process of transforming types in the managed and unmanaged code. It is the most important service given by CLR.
+
+*******

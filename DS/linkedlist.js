@@ -139,9 +139,9 @@ console.log(list.traverse());
 //  Problems List
 //  https://leetcode.com/problems/palindrome-linked-list/
 //  https://leetcode.com/problems/merge-two-sorted-lists/
-
 //  https://leetcode.com/problems/intersection-of-two-linked-lists/
 //  https://leetcode.com/problems/reverse-linked-list/
+
 //  https://leetcode.com/problems/design-hashmap/
 //  https://leetcode.com/problems/middle-of-the-linked-list/
 //  https://leetcode.com/problems/linked-list-cycle/

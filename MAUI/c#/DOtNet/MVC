@@ -1,0 +1,6 @@
+
+MVC stands for Model-View-Controller. It is an architectural model that is used to build applications in .NET. It serves as the foundation for the creation of applications.
+MVC consists of three entities as the name suggests:
+Model: Used to store and pull back data from a database
+View: Used to display the contents of an application
+Controllers: Entities that handle user interaction

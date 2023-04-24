@@ -1,4 +1,5 @@
-﻿namespace HelloWorld
+﻿using Design;
+namespace HelloWorld
 {
     class Program
     {
@@ -6,6 +7,8 @@
         {
             var linkedList = new LinkListProgram();
             linkedList.Driver();
+
+            HashMapL.Driver();
         }
     }
 }

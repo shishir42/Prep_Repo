@@ -40,3 +40,79 @@ The garbage collector in .NET is designed to be highly efficient and effective, 
 
 ********************************************************************************************************************
 
+Garbage Collection in .NET Framework facilitates automatic memory management. It automatically releases the memory space after all the actions related to the object in the heap memory are completed.
+The memory heap is divided into three generations.
+
+Generation 0: Used to store short-lived objects. Frequent Garbage Collection happens in this Generation.
+
+Generation 1: Used for medium-lived objects.
+
+Generation 2: Used for long-lived objects.
+
+********************************************************************************************************************
+
+Discuss what garbage collection is and how it works. Provide a code example of how you can enforce garbage collection in .NET.
+
+Garbage collection is a low-priority process that serves as an automatic memory manager which manages the allocation and release of memory for the applications. Each time a new object is created, the common language runtime allocates memory for that object from the managed Heap. As long as free memory space is available in the managed Heap, the runtime continues to allocate space for new objects. However, memory is not infinite, and once an application fills the Heap memory space, garbage collection comes into play to free some memory. When the garbage collector performs a collection, it checks for objects in the managed Heap that are no longer being used by the application and performs the necessary operations to reclaim the memory. Garbage collection will stop all running threads, it will find all objects in the Heap that are not being accessed by the main program and delete them. It will then reorganize all the objects left in the Heap to make space and adjust all the Pointers to these objects in both the Stack and the Heap.
+
+To enforce garbage collection in your code manually, you can run the following command (written in C#):
+
+System.GC.Collect();
+
+System.GC.Collect() is a method in .NET that forces a garbage collection to occur, freeing up memory that is no longer being used by the application. When System.GC.Collect() is called, the garbage collector starts a new collection cycle and collects any objects that are no longer being used by the application.
+
+Here's what happens when System.GC.Collect() is called:
+
+1. The garbage collector suspends all application threads to perform a garbage collection.
+2 .The garbage collector determines which objects are no longer being used by the application and can be safely collected.
+3. The garbage collector releases the memory used by the collected objects, making it available for reuse by the application.
+4. The garbage collector resumes all application threads and the application continues executing.
+
+It's important to note that calling System.GC.Collect() is not always necessary, as the garbage collector in .NET is designed to automatically manage memory and free up memory as needed. However, in some cases, calling System.GC.Collect() may be necessary to optimize memory usage and improve application performance.
+
+It's also worth mentioning that calling System.GC.Collect() too frequently can have a negative impact on performance, as it can cause unnecessary overhead by suspending and resuming application threads. It's generally recommended to let the garbage collector manage memory automatically, and only call System.GC.Collect() when necessary.
+
+***************
+Name the methodology used to enforce garbage collection in .NET.
+The methodology used to enforce garbage collection in .NET is System.GC.Collect().
+
+***
+What is Garbage Collector in .NET?
+The garbage collector is responsible to free up the unused code objects in the memory. Every time a new object is created, the common language runtime allocates memory for the object.
+
+***
+
+What is a Destructor in C# and when shall I create one?
+A Destructor is used to clean up the memory and free the resources. But in C# this is done by the garbage collector on its own. System.GC.Collect() is called internally for cleaning up. The answer to second question is "almost never".
+
+Typically one only creates a destructor when your class is holding on to some expensive unmanaged resource that must be cleaned up when the object goes away. It is better to use the disposable pattern to ensure that the resource is cleaned up. A destructor is then essentially an assurance that if the consumer of your object forgets to dispose it, the resource still gets cleaned up eventually.
+
+If you make a destructor be extremely careful and understand how the garbage collector works. Destructors are really weird:
+
+They don't run on your thread; they run on their own thread. Don't cause deadlocks!
+An unhandled exception thrown from a destructor is bad news. It's on its own thread; who is going to catch it?
+A destructor may be called on an object after the constructor starts but before the constructor finishes. A properly written destructor will not rely on invariants established in the constructor.
+A destructor can "resurrect" an object, making a dead object alive again. That's really weird. Don't do it.
+A destructor might never run; you can't rely on the object ever being scheduled for finalization. It probably will be, but that's not a guarantee.
+
+***
+
+How would you force Garbage Collection?
+
+In C#, garbage collection is an automatic process that is triggered by the .NET runtime to reclaim memory that is no longer being used by an application. However, you can also manually force garbage collection using the GC.Collect() method, which requests the .NET runtime to perform an immediate garbage collection cycle.
+
+Here's an example of how to force garbage collection in C#:
+
+// Call GC.Collect() to force garbage collection
+GC.Collect();
+
+// Wait for the garbage collection cycle to complete
+GC.WaitForPendingFinalizers();
+
+// Optional: Perform another garbage collection cycle to reclaim any remaining memory
+GC.Collect();
+
+
+It's important to note that forcing garbage collection manually is generally not recommended because the .NET runtime is already optimized to perform garbage collection efficiently and automatically. In most cases, the best approach is to let the garbage collector do its job and allow the .NET runtime to manage memory automatically. However, there may be some scenarios where you need to perform a manual garbage collection cycle, such as when you're working with large objects or when you need to test the behavior of your application under low memory conditions.
+
+****
