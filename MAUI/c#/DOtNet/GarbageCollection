@@ -116,3 +116,22 @@ GC.Collect();
 It's important to note that forcing garbage collection manually is generally not recommended because the .NET runtime is already optimized to perform garbage collection efficiently and automatically. In most cases, the best approach is to let the garbage collector do its job and allow the .NET runtime to manage memory automatically. However, there may be some scenarios where you need to perform a manual garbage collection cycle, such as when you're working with large objects or when you need to test the behavior of your application under low memory conditions.
 
 ****
+
+What is garbage collection in C#?
+Garbage collection is the process of freeing up memory that is captured by unwanted objects. When you create a class object, automatically some memory space is allocated to the object in the heap memory. Now, after you perform all the actions on the object, the memory space occupied by the object becomes waste. It is necessary to free up memory. Garbage collection happens in three cases:
+
+If the occupied memory by the objects exceeds the pre-set threshold value.
+If the garbage collection method is called
+If your system has low physical memory
+
+************************************
+
+
+Is Garbage collection an ongoing process? When does it occur?
+Yes, Garbage collection is an ongoing process that occurs in any of the following situations:
+
+Low physical memory
+When memory space used by allocated objects surpasses an acceptable threshold
+When the GC. Collect method is called, however, this only happens in rare testing situations since Garbage collection in itself is an ongoing process.
+
+************************************

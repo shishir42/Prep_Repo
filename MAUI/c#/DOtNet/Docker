@@ -1,0 +1,18 @@
+Explain Docker in .NET Core
+Docker is a service container that is used to develop and publish applications. Application developers can package their applications in docker containers which can then easily be managed with git and can be synchronized across machines. These containers are lightweight and include everything needed to run the respective application without dependencies.
+
+**********
+
+Explain Docker in .NET Core.
+Docker is an open platform for developing, shipping, and running applications. It allows you to quickly isolate your applications from the infrastructure to transmit software. You should leverage this feature for managing infrastructure and deploying codes fast. It would help reduce the time needed between writing and running codes in infrastructure.
+
+Three main functions:
+Quick and constant delivery of applications
+Responsive deployment and scaling
+Efficiently run more workloads on the same hardware
+ 
+
+Take care following points while using Docker in .NET Core
+You can use the Docker client's CLI for managing images and containers
+You must adequately integrate Docker images, containers, and registries while designing and containerising applications or microservices
+Use Dockerfile for rebuilding images and distribute them with others

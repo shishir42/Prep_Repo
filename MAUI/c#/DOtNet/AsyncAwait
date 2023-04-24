@@ -356,3 +356,145 @@ In scenarios where you need to update the UI or interact with other components t
 For example, if you're using an asynchronous method to retrieve data from a remote service and update a control on the UI, you would call ConfigureAwait(true) on the task to ensure that the continuation that updates the UI is executed on the UI thread. This ensures that the user interface is updated smoothly and without any delays.
 
 In summary, calling ConfigureAwait(true) is useful when you need to ensure that the continuation of a task runs on the same synchronization context as the original task, which is typically the case when working with UI or other components that require synchronization with the main thread.
+
+**********
+
+What is the role of the async method in C#?
+
+The async method in C# is used to define a method that can be executed asynchronously. An asynchronous method allows you to perform long-running tasks without blocking the main thread of execution. Instead, the method is executed in a separate thread or in a thread pool, allowing the main thread to continue executing other tasks while waiting for the async method to complete.
+
+To define an async method, you need to add the async keyword to the method signature. You can then use the await keyword to call other asynchronous methods, which will be executed in parallel with the current method. The await keyword ensures that the current method is suspended until the awaited method completes, and then resumes execution.
+
+Here's an example of how you can use an async method to download a file from a URL:
+
+public async Task DownloadFileAsync(string url, string path)
+{
+    using (var client = new HttpClient())
+    {
+        var content = await client.GetStringAsync(url);
+        File.WriteAllText(path, content);
+    }
+}
+
+In this example, we define an async method called DownloadFileAsync that takes a URL and a file path as arguments. We create an instance of the HttpClient class to download the content from the URL asynchronously using the GetStringAsync method. We then write the content to a file using the File.WriteAllText method.
+
+By using the async and await keywords, we can execute the long-running task of downloading the file asynchronously, without blocking the main thread of execution. This allows the main thread to continue executing other tasks while waiting for the file download to complete.
+
+In summary, the async method in C# allows you to write code that can be executed asynchronously, which can help improve the performance and responsiveness of your application.
+
+****
+
+How would you cancel an Async operation in C#?
+
+In C#, you can cancel an asynchronous operation by using a CancellationToken. A CancellationToken is an object that can be used to cancel an operation that is in progress.
+
+Here's an example of how to cancel an asynchronous operation using a CancellationToken:
+
+public async Task DownloadFileAsync(string url, string path, CancellationToken cancellationToken)
+{
+    using (var client = new HttpClient())
+    {
+        var request = new HttpRequestMessage(HttpMethod.Get, url);
+        var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
+
+        using (var stream = await response.Content.ReadAsStreamAsync())
+        {
+            using (var fileStream = File.Create(path))
+            {
+                await stream.CopyToAsync(fileStream, 81920, cancellationToken);
+            }
+        }
+    }
+}
+
+
+In this example, we modify the previous example by adding a CancellationToken parameter to the DownloadFileAsync method. We use the SendAsync method of the HttpClient class to send an HTTP request, passing in the cancellationToken parameter. We then use the ReadAsStreamAsync method of the HttpContent class to get a stream that contains the content of the response.
+
+We use the CopyToAsync method of the Stream class to copy the content of the response stream to a file stream, passing in the cancellationToken parameter. The CopyToAsync method will throw a TaskCanceledException if the cancellation token is cancelled while the method is running.
+
+To cancel the operation, you can call the Cancel method of the CancellationTokenSource object that was used to create the CancellationToken.
+
+Here's an example of how to use a CancellationTokenSource to cancel the operation:
+
+var cts = new CancellationTokenSource();
+
+var task = DownloadFileAsync("https://example.com/file.txt", "file.txt", cts.Token);
+
+// Cancel the task after 10 seconds
+cts.CancelAfter(TimeSpan.FromSeconds(10));
+
+try
+{
+    await task;
+}
+catch (TaskCanceledException)
+{
+    Console.WriteLine("Download cancelled.");
+}
+
+
+In this example, we create a CancellationTokenSource object and use it to create a CancellationToken object that is passed to the DownloadFileAsync method. We start the operation by calling the method, and then we cancel the operation after 10 seconds by calling the CancelAfter method of the CancellationTokenSource. We then wait for the task to complete by calling the await keyword, and catch the TaskCanceledException if it is thrown.
+
+By using a CancellationToken, you can easily cancel an asynchronous operation in C#, allowing you to gracefully handle interruptions to long-running tasks.
+
+************
+
+Explain how does Asynchronous tasks Async/Await work in .NET? 
+Asynchronous programming in .NET allows developers to write code that doesn't block the calling thread while waiting for long-running operations such as I/O or database access to complete. The two main ways to achieve asynchronous programming in .NET are through asynchronous methods and the Async/Await keywords.
+
+The Async/Await keywords were introduced in C# 5.0 and are now a standard part of the language. They allow developers to write asynchronous code that looks similar to synchronous code, making it easier to read and maintain. Here's how they work:
+
+Marking a method as async: To create an asynchronous method, you need to mark it with the async keyword. This tells the compiler that the method contains asynchronous operations and should be treated as such.
+
+Using the Await keyword: When calling a method that returns a Task or Task<T>, you can use the Await keyword to suspend the execution of the method until the task completes. While the task is running, the calling thread is free to do other work.
+
+Returning a Task: If the method itself returns a Task or Task<T>, it can be marked as async and can be awaited by calling code. When the method completes, it returns a TaskCompletionSource<T>, which contains the result of the asynchronous operation.
+
+Using async/await with parallelism: The async/await keywords can also be used with parallel programming constructs such as Parallel.ForEach and Task.WhenAll, allowing multiple asynchronous operations to be executed in parallel.
+
+Overall, Async/Await in .NET provides a simple and powerful way to write asynchronous code that is easier to read and maintain than traditional callback-based approaches. By allowing the calling thread to continue executing other work while waiting for asynchronous operations to complete, Async/Await can help improve application responsiveness and scalability.
+
+************
+
+Why Are Async and Await used in C#?
+If we have a program that requires methods to be run independently of the primary process, we need to use asynchronous programming. This allows us to run processes and, when needed, make them wait without blocking the rest of the program.
+
+To do this, we use the Async keyword to create an asynchronous method and Await to run it without blocking our program.
+
+************
+
+What are Async and Await?
+
+Async and Await keywords are used to create asynchronous methods in C.
+
+Asynchronous programming means that the process runs independently of main or other processes.
+
+Usage of Async and Await is as shown below:
+
+public async Task<int> CalculateCount()
+{
+    await Task.Delay(1000);
+    return 1;
+}
+
+public async Task myMethod()
+{
+    Task<int> count = CalculateCount();
+    int result = await count;
+}
+
+
+- Async keyword is used for the method declaration.
+- The count is of a task of type int which calls the method CalculateCount().
+- Calculatecount() starts execution and calculates something.
+- Independent work is done on my thread and then await count statement is reached.
+- If the Calculatecount is not finished, myMethod will return to its calling method, thus the main thread doesn’t get blocked.
+- If the Calculatecount is already finished, then we have the result available when the control reaches await count. So the next step will continue in the same thread. However, it is not the situation in the above case where the Delay of 1 second is involved.
+
+************
+Explain the difference between Task and Thread in .NET
+In simple terms, a task is something you want to get done, and a thread is a way to accomplish it. So in this sense, a thread is a part of the task.
+
+A thread represents the smallest unit of code processing at the OS level, with stacks and kernels. You can exercise a high degree of control over threads with Suspend() or Abort() or Resume() a thread. ThreadPool, as the name suggests is a wrapper comprising a pool of threads maintained in the runtime environment by CLR.
+
+A task in comparison is executed by a TaskScheduler and cannot create its own OS threads. A default scheduler runs on the ThreadPool and also lets you know when the task finishes and returns a result.

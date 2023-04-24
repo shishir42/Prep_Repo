@@ -18,3 +18,30 @@ Is it possible to serialize hashtables?
 No, you cannot serialize a hashtable because the .NET Framework doesn't allow the serialization of an object that implements the IDictionary interface.
 
 ****
+
+What is the difference between an Array and ArrayList in C#?
+An array is a collection of similar variables clubbed together under one common name. While ArrayList is a collection of objects that can be indexed individually. With ArrayList you can access a number of features like dynamic memory allocation, adding, searching, and sorting items in the ArrayList. 
+
+When declaring an array the size of the items is fixed therefore, the memory allocation is fixed. But with ArrayList, it can be increased or decreased dynamically.
+Array belongs to system.array namespace while ArrayList belongs to the system.collection namespace.
+All items in an array are of the same datatype while all the items in an ArrayList can be of the same or different data types.
+While arrays cannot accept null, ArrayList can accept null values.
+
+********
+
+
+
+What is a hashtable in C#?
+A hashtable is a collection of pairs, generally “keys” and “values.” Frequently, you will hear about “hashtables” in regards to passwords; a password hash can be created for a given password. But a hashtable itself is just a general-purpose collection of key objects and value objects, in which the values have to be accessed using the keys; they cannot be accessed otherwise.
+
+***********
+
+****
+
+Why do we use collections in C#?
+A: Collection classes are used to allocate memory to elements dynamically and access a list of items based on the index.
+
+****
+
+What is Anonymous type in C#?
+A: Anonymous type allows the users to create a new type without the need to define them. This is a way to define read-only properties in a single object without defining the type explicitly.

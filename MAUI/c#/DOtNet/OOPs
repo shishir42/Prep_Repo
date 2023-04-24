@@ -326,3 +326,823 @@ The main difference between "var" and "dynamic" is that "var" is used for static
 In general, it's a good idea to use "var" when the type of the variable can be inferred from the value that it's assigned, and to use "dynamic" when you need to work with objects of different types at runtime. However, it's important to use each keyword appropriately and understand their respective limitations and benefits.
 
 ********
+
+
+
+What is the use of volatile keywords?
+
+The volatile keyword in C# is used to indicate that a variable's value may be modified by multiple threads at the same time, and that the value should always be read from memory rather than from a cache.
+
+In other words, when you declare a variable as volatile, you are telling the compiler that the value of that variable may change unexpectedly at any time, and that it should always be accessed directly from memory rather than from a cached value. This is important in multi-threaded applications, where multiple threads may be accessing the same variable simultaneously.
+
+The volatile keyword ensures that the read and write operations on the variable are atomic and that changes made by one thread are immediately visible to other threads. Without the volatile keyword, the compiler may optimize the code by caching the variable's value in a register, which can lead to unpredictable behavior in a multi-threaded environment.
+
+Here's an example of how you can use the volatile keyword to declare a variable:
+
+class Program
+{
+    private volatile bool _isRunning;
+
+    static void Main(string[] args)
+    {
+        Program program = new Program();
+        program.Start();
+    }
+
+    public void Start()
+    {
+        _isRunning = true;
+
+        Thread thread1 = new Thread(DoWork);
+        Thread thread2 = new Thread(DoWork);
+
+        thread1.Start();
+        thread2.Start();
+
+        Thread.Sleep(1000);
+        _isRunning = false;
+    }
+
+    public void DoWork()
+    {
+        while (_isRunning)
+        {
+            Console.WriteLine("Working...");
+            Thread.Sleep(100);
+        }
+    }
+}
+
+In this example, we declare a private bool variable called _isRunning and mark it as volatile. We then start two threads that call the DoWork method, which loops continuously as long as _isRunning is true. We also set _isRunning to false after 1 second to stop the threads.
+
+Without the volatile keyword, the _isRunning variable may be cached by the compiler or by the CPU, which can lead to unpredictable behavior in a multi-threaded environment. By marking the variable as volatile, we ensure that changes to the variable's value are immediately visible to other threads, and that the code behaves predictably in a multi-threaded environment.
+
+****
+
+What is the use of volatile keywords?
+
+The volatile keyword in C# is used to indicate that a variable's value may be modified by multiple threads at the same time, and that the value should always be read from memory rather than from a cache.
+
+In other words, when you declare a variable as volatile, you are telling the compiler that the value of that variable may change unexpectedly at any time, and that it should always be accessed directly from memory rather than from a cached value. This is important in multi-threaded applications, where multiple threads may be accessing the same variable simultaneously.
+
+The volatile keyword ensures that the read and write operations on the variable are atomic and that changes made by one thread are immediately visible to other threads. Without the volatile keyword, the compiler may optimize the code by caching the variable's value in a register, which can lead to unpredictable behavior in a multi-threaded environment.
+
+Here's an example of how you can use the volatile keyword to declare a variable:
+
+class Program
+{
+    private volatile bool _isRunning;
+
+    static void Main(string[] args)
+    {
+        Program program = new Program();
+        program.Start();
+    }
+
+    public void Start()
+    {
+        _isRunning = true;
+
+        Thread thread1 = new Thread(DoWork);
+        Thread thread2 = new Thread(DoWork);
+
+        thread1.Start();
+        thread2.Start();
+
+        Thread.Sleep(1000);
+        _isRunning = false;
+    }
+
+    public void DoWork()
+    {
+        while (_isRunning)
+        {
+            Console.WriteLine("Working...");
+            Thread.Sleep(100);
+        }
+    }
+}
+
+In this example, we declare a private bool variable called _isRunning and mark it as volatile. We then start two threads that call the DoWork method, which loops continuously as long as _isRunning is true. We also set _isRunning to false after 1 second to stop the threads.
+
+Without the volatile keyword, the _isRunning variable may be cached by the compiler or by the CPU, which can lead to unpredictable behavior in a multi-threaded environment. By marking the variable as volatile, we ensure that changes to the variable's value are immediately visible to other threads, and that the code behaves predictably in a multi-threaded environment.
+
+***********
+
+Differentiate between static and public?
+
+The public access modifier in C# states the compiler that the element is accessible by any other element in the same or other class.
+
+When a member in C# has the Static access modifier in front of it, such as static method, static variable, or static parameters,  it means that the element has global access and any other element can access it using class directly. You don't need to create an instance of the class to access that element. The compiler stores the address of the method as the entry point and uses this information to begin execution before any objects are created.
+
+***********
+
+
+Can we override a constructor?
+No, in C#, it is necessary to define properly which constructor you are trying to call to instantiate a class and what arguments are being passed. So you cannot override a constructor in C#.
+
+Below example will lead to a compilation error.
+
+// C# program to show constructor overriding is not allowed in C#
+using System;
+// Base class
+class Parent {
+   Parent ()
+   {
+       Console.WriteLine("Parent constructor");
+   }
+}
+// Derived class
+class Child : Parent
+{
+   Parent()
+   {
+       Console.WriteLine("Child constructor");
+   }
+}
+// Driver Class
+class GFG {
+// Main Method
+static void Main()
+{
+ // Create an object of Child class
+ var obj = new Child();
+}
+}
+However, you can overload a constructor in C#, for sure.
+
+*****
+
+Which constructor is called first in C#?
+Base Constructor is always called first in C#, followed by Derived class constructor.
+
+*****
+
+How many types of constructors can a class have?
+Like functions, a class can have any number of constructors. But unlike functions, all the constructors will have the same name, the name of the class, but different parameter signatures. In other words, you can create as many valid overloads of a constructor, as you want.
+
+*****
+What is a namespace?
+Namespace in C# can be considered as a container in which you can define classes, methods, interfaces, structures, or other child namespaces, such that classes with the same name but different namespaces won’t cause any error. In C#, namespaces are an efficient entity to organize codes for larger applications.
+
+The major advantages of Namespace are:
+
+Namespaces help in effectively organizing large C# code projects.
+To use any entity in a namespace, simply use <namespace name>.<entity name>
+No two classes with the same name in a different namespace will cause any error.
+
+****
+
+How to declare a private constructor in C#?
+In C#, if you don’t specify any access specifier against a constructor, that constructor is by default specified as a public constructor by the compiler.
+
+If you want to create a Private constructor explicitly, it can be declared in C# with the help of a private keyword placed before the constructor name in its signature, as shown below:
+
+private constructor_name
+{
+  // Code
+}
+
+However, to create an instance of a class with a private constructor is a tricky thing. To do so, the Singleton class is used. Singleton class is a class that has only one instance. Below is the example to create an instance of a class with a private constructor, with the help of the Singleton class.
+
+
+using System;
+public class SingletonDemo  
+{  
+   private static string CreatedOn;  
+   private static SingletonDemo instance = null;  
+ 
+   private SingletonDemo()  
+   {  
+       CreatedOn = DateTime.Now.ToLongTimeString();  
+   }  
+ 
+   public static SingletonDemo getInstance()  
+   {  
+       if (instance == null)  
+       {  
+           instance = new SingletonDemo();  
+       }  
+       Console.WriteLine(CreatedOn);  
+       return instance;  
+   }  
+}  
+
+******
+
+Why are strings in c# immutable?
+In C# Arrays have a fixed size, which means that once an array is created of some size, it cannot be dynamically increased or decreased in size. The CLR (Common Language Runtime) in C#, stores the strings as an array of characters. So whenever we delete or add a character or characters to a string, the original arrays of characters are fixed, and hence a new array of characters is created to accommodate the change. This is known as the immutability of strings in C#.
+
+*****
+What is the need for Encapsulation?
+Encapsulation is the process of binding an entity with its implementation with the aim of data hiding. It is done to hide the irrelevant details from a user, and show only the process which the user needs. By doing so, we hide the implementation details of entities and thereby help users to understand the higher-level design of the code easily, without getting bothered about the implementation details.
+
+*****
+
+What is the use of the method "hiding" in inheritance?
+Method hiding or Method shadowing is used to hide the implementation of the base class method under the shadow of the child class method, with the help of a new keyword.
+
+This is done to clear the ambiguity when the child class has a method with the same name as that of the base class and hence helps in abstraction.
+
+// C# program to illustrate the
+// concept of method hiding
+using System;
+// Base Class
+public class Parent {
+public void member()
+{
+ Console.WriteLine("Parent method");
+}
+}
+// Derived Class
+public class Child : Parent {
+// Reimplement the method of the base class
+// Using new keyword
+// It hides the method of the base class
+public new void member()
+{
+ Console.WriteLine("Child method");
+}
+}
+// Driver Class
+class DriverClass {
+// Main method
+static public void Main()
+{
+ // Creating the object of the derived class
+ Child obj = new Child();
+ // Access the method of derived class
+ obj.member();
+}
+}
+
+
+******
+
+
+How do you give a C# Autoproperty a default value?
+
+For C# 5:
+
+class Car()
+{
+public Car()
+{
+CarName="default car name";
+}
+public string CarName{get;set;}
+}
+For C# 6.0:
+
+public string CarName {get;set}="default car name";
+
+******
+
+How to declare a property in a class in C#?
+class ABC
+{
+// Declare the attribute
+private int id;
+// Declare id’s property
+public int ID
+{
+// read-only getter property
+get      { return id; }
+set      { id = value; }
+}
+} 
+
+*****
+
+What are sealed classes in C#?
+If we want to prevent any class from being inherited, it can be done with the help of a sealed keyword. So using a sealed keyword, a class denies the ability to create any child entity of this class, thereby calling itself a sealed class. If by mistake, a child of a sealed class is tried to be made, a compile-time error will occur.
+
+using System;  
+// Sealed class  
+sealed class SealedClass  
+{  
+   public int Add(int x, int y)  
+   {  
+       return x + y;  
+   }  
+}  
+class Class1: SealedClass
+{  
+   static void Main(string[] args)  
+   {  
+       SealedClass sealedCls = new SealedClass();  
+       int total = sealedCls.Add(4, 5);  
+       Console.WriteLine("Total = " + total.ToString());  
+   }  
+}  
+Compilation error:
+
+prog.cs(12,7): error CS0509: `Class1': cannot derive from sealed type `SealedClass'
+prog.cs(4,14): (Location of the symbol related to previous error)
+Compilation failed: 1 error(s), 0 warnings
+
+********
+
+What are the types of classes in C#?
+Class is an entity that encapsulates all the properties of its objects and instances as a single unit. C# has four types of such classes:
+
+Static class: Static class, defined by the keyword ‘static’ does not allow inheritance. Therefore, you cannot create an object for a static class.
+
+static class classname  
+{  
+  //static data members  
+  //static methods  
+}
+
+Partial class: Partial class, defined by the keyword ‘partial’ allows its members to partially divide or share source (.cs) files.
+Abstract class: Abstract classes are classes that cannot be instantiated where you cannot create objects. Abstract classes work on the OOPS concept of abstraction. Abstraction helps to extract essential details and hide the unessential ones.
+Sealed class: Sealed classes are classes that cannot be inherited. Use the keyword sealed to restrict access to users to inherit that class. 
+
+sealed class InterviewBit
+{
+   // data members
+   // methods
+   .
+   .
+   .
+}
+
+*********
+
+What is the difference between an abstract class and an interface?
+Let’s dig into the differences between an abstract class and an interface:
+
+Abstract classes are classes that cannot be instantiated ie. that cannot create an object. The interface is like an abstract class because all the methods inside the interface are abstract methods.
+Surprisingly, abstract classes can have both abstract and non-abstract methods but all the methods of an interface are abstract methods.
+Since abstract classes can have both abstract and non-abstract methods, we need to use the Abstract keyword to declare abstract methods. But in the interface, there is no such need.
+An abstract class has constructors while an interface encompasses none. 
+
+*********
+Difference between the Equality Operator (==) and Equals() Method in C#?
+Although both are used to compare two objects by value, still they both are used differently. 
+
+For ex.:
+
+int x = 10;
+int y = 10;
+Console.WriteLine( x == y);
+Console.WriteLine(x.Equals(y));
+Output:
+True
+True
+Equality operator (==) is a reference type which means that if equality operator is used, it will return true only if both the references point to the same object.  
+
+Equals() method: Equals method is used to compare the values carried by the objects. int x=10, int y=10. If x==y is compared then, the values carried by x and y are compared which is equal and therefore they return true. 
+
+Equality operator: Compares by reference
+
+Equals(): Compares by value 
+
+
+*****
+
+What are the different ways in which a method can be Overloaded in C#?
+Overloading means when a method has the same name but carries different values to use in a different context. Only the main() method cannot be overloaded.
+
+In order to overload methods in C#, 
+
+Change the number of parameters in a method, or
+Change the order of parameters in a method, or
+Use different data types for parameters
+In these ways, you can overload a method multiple times.
+
+*****
+Summarize the Four Access Modifiers in C#.
+Private: Only accessible from within the class
+Public: Accessible from anywhere in the code
+Internal: Only accessible at the current assembly point of the class
+Protected: Only accessible by class members and classes that inherit from it
+
+********
+
+What Are Accessors in C#?
+The two accessors in C# are get and set. These are used to retrieve or assign values for the private fields related to a property within a class or struct.
+
+Get: Used to retrieve the value of a private field
+Set: Used to assign a value to a private field
+
+******
+
+What Are Static Declared Variables in C#?
+Each C# object has member variables that have a particular scope. We can use static declared variables to ensure that each instance of a class object has the same value. This is possible because each class object shares the same instance of the static variable for the class.
+
+The name static declared variables relates to an unchanging value (static keyword) that is strongly typed (declared), but usually, these are just called static variables.
+
+******
+
+What Are Value Types & Reference Types in C#?
+Value Type: Directly stores the variable data value inside its allocated memory space
+
+Reference Type: Does not directly store the variable data in its memory location but instead stores a reference to another memory address that holds the variable data value, so the equivalent of a pointer
+
+******
+
+What Is a Virtual Method in C#?
+A method that we can redefine in a derived class, which means it can have different implementations in the base (original) and derived classes.
+
+These are used when we want to extend the functionality of an original method from a base class. We use the virtual keyword to create a virtual method in the base class, which allows the functionality to be overridden in the derived class. This is, therefore, an example of polymorphism.
+
+You cannot use the virtual keyword with static, abstract, or private methods in a base class. 
+
+***************
+
+Can You Use ‘this’ in a C# Static Method?
+No, because ‘this’ returns a reference to the current instance of the same class, and static methods do not belong to any particular instance because they can be called by the class name alone.
+
+One exception is with Extension Methods, as we can use ‘this’ with the method's first parameter.
+
+***************
+
+What are the fundamental OOP concepts?
+
+Answer: The four fundamental concepts of Object-Oriented Programming are:
+
+Encapsulation: Here, the internal representation of an object is hidden from the view outside the object’s definition. Only the required information can be accessed whereas the rest of the data implementation is hidden.
+Abstraction: It is a process of identifying the critical behavior and data of an object and eliminating the irrelevant details.
+Inheritance: It is the ability to create new classes from another class. It is done by accessing, modifying and extending the behavior of objects in the parent class.
+Polymorphism: The name means, one name, many forms. It is achieved by having multiple methods with the same name but different implementations.
+
+***************
+
+What are the different types of classes in C#?
+
+Answer: The different types of class in C# are:
+
+Partial class: It allows its members to be divided or shared with multiple .cs files. It is denoted by the keyword Partial.
+Sealed class: It is a class that cannot be inherited. To access the members of a sealed class, we need to create the object of the class.  It is denoted by the keyword Sealed.
+Abstract class: It is a class whose object cannot be instantiated. The class can only be inherited. It should contain at least one method.  It is denoted by the keyword abstract.
+Static class: It is a class that does not allow inheritance. The members of the class are also static.  It is denoted by the keyword static. This keyword tells the compiler to check for any accidental instances of the static class.
+
+***************
+
+What is an Abstract Class?
+
+Answer: An Abstract class is a class which is denoted by abstract keyword and can be used only as a Base class. This class should always be inherited. An instance of the class itself cannot be created. If we do not want any program to create an object of a class, then such classes can be made abstract.
+
+Any method in the abstract class does not have implementations in the same class. But they must be implemented in the child class.
+
+abstract class AB1
+{
+Public void Add();
+}
+Class childClass : AB1
+{
+childClass cs = new childClass ();
+int Sum = cs.Add();
+}
+All the methods in an abstract class are implicitly virtual methods. Hence, the virtual keyword should not be used with any methods in the abstract class.
+
+***************
+
+
+
+Please explain encapsulation.
+Encapsulation is a process of wrapping function and data members together in a class; it’s like a capsule, a single unit.
+
+Encapsulation prevents an unauthorized or unwanted change of data from outside of the function. It is used for better control and standardization of your code.
+
+Below is an example of encapsulation.
+
+class User
+    	{
+        private string address;
+        private string name;
+        public string Address
+        {
+            get
+            {
+                return address;
+            }
+            set
+            {
+                address = value;
+            }
+        }
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+    }
+    class MyProgram
+    {
+        static void Main(string[] args)
+        {
+            User u = new User();
+            // set accessor will invoke
+            u.Name = "Ravi";
+            // set accessor will invoke
+            u.Address = "New Delhi";
+            // get accessor will invoke
+            Console.WriteLine("Name: " + u.Name);
+            // get accessor will invoke
+            Console.WriteLine("Location: " + u.Address);
+            Console.WriteLine("\nPress Enter Key");
+            Console.ReadLine();
+        }
+}
+
+*****
+
+What is an abstraction?
+Abstraction is the method of exposing only the required features of the class and hiding unnecessary information.
+
+We can try to understand it with the example of a motorbike:
+
+A rider knows the color, name, and model of the bike. Still, they do not know the internal engine and exhaust functionality. Likewise, abstraction focuses on providing access for a specific functionality without exposing how that functionality works internally.
+
+******
+
+What is polymorphism?
+Polymorphism means the same method but different implementation. There are two types of polymorphism.
+
+Compile-time polymorphism is achieved by method overloading as seen in the example below. 
+
+public class cellphone
+    	{
+        //function with the same name but different parameters.
+        public void Typing()
+        {
+            Console.WriteLine("Using keypad");
+        }
+
+        public void Typing(bool isSmartPhone)
+        {
+            Console.WriteLine("Using qwerty keyboard");
+        }
+}
+
+Run time polymorphism is achieved by method overriding as seen in the example below. 
+
+public class CellPhone
+    	{
+        public virtual void Typing()
+        {
+            Console.WriteLine("Using keypad");
+        }
+    	}
+
+    	public class SmartPhone : CellPhone
+    	{
+        //method override
+        public override void Typing()
+        {
+            Console.WriteLine("Typing function from child class");
+        }
+}
+
+*******
+
+Define an interface and show an example. 
+An interface is another form of an abstract class that has only abstract public methods. These methods only have the declaration and not the definition. A class implementing the interface must have the implementation of all the methods of the interface.
+
+interface IPencil
+    	{
+        void Write(string text);
+        void Sharpen(string text);
+    	}
+
+    	class Pencil : IPencil
+    	{
+        public void Write(string text)
+        {
+            //some code here
+        }
+
+        public void Sharpen(string text)
+        {
+            //some code here
+        }
+    	}
+
+    	public class CellPhone
+    	{
+        public virtual void Typing()
+        {
+            Console.WriteLine("Using keypad");
+        }
+}
+
+******
+
+What is inheritance?
+A class can inherit data members and methods from another class, which is known as its parent class. The class that inherits properties and methods will be called a child class, derived class, or subclass. Some properties can be overridden in the derived class.
+
+The ability to inherit characteristics from classes makes the entire process of managing classes much easier, as you can create subclasses that are customized. The originating class will be called either a parent class or base class.
+
+Refer to the below example:
+
+class Mobile  // base class (parent) 
+    	{
+        public void call()
+        {
+            Console.WriteLine("calling...!");
+        }
+    	}
+
+    	class Nokia : Mobile  // derived class (child)
+    	{
+        public string modelName = "Nokia";
+    	}
+
+    	class MyProgram
+    	{
+        static void Main(string[] args)
+        {
+            // Create a myNokia object
+            Nokia myNokia = new Nokia();
+
+            // Calls the call() method (From the Mobile class) on the myNokia object
+            myNokia.call();
+        }
+}
+
+******
+
+How would you implement multiple interfaces with the same method name in the same class?
+To implement multiple interfaces with the same method name, you would avoid implementation within the body of the function. Instead, you would explicitly provide the name of the interface to the body of the method. The compiler will understand which interface methods are being referred to, therefore resolving the issue.
+
+This can be seen in the following example:
+
+interface myInterface1
+    	{
+        void Print();
+    	}
+    	interface myInterface2
+    	{
+        void Print();
+    	}
+    	class Student : myInterface1,
+        myInterface2
+    	{
+        void myInterface1.Print()
+        {
+            Console.WriteLine("For myInterface1 !!");
+        }
+        void myInterface2.Print()
+        {
+            Console.WriteLine("For myInterface2 !!");
+        }
+}
+
+*****
+
+What is the virtual method and how is it different from the abstract method?
+A virtual method must have a default implementation, and we can override this virtual method using the override keyword in the derived class.
+
+The abstract method is without implementation and is created inside the abstract class only. In the case of an abstract class, the class derived from the abstract class must have an implementation of that abstract method.
+
+Here’s an example of virtual method:
+
+public class CellPhone
+    	{
+        public virtual void Typing()
+        {
+            Console.WriteLine("Using old keypad");
+        }
+    	}
+
+   	public class SmartPhone : CellPhone
+    	{
+        public override void Typing()
+        {
+            Console.WriteLine("Using qwerty keyboard");
+        }
+}
+Here’s an example of an abstract method:
+
+public abstract class CellPhones
+    	{
+        //no default implementation
+        public abstract void Typing();
+    	}
+
+    	public class OldPhones : CellPhones
+    	{
+        //function override
+        public override void Typing()
+        {
+            Console.WriteLine("Using keypad");
+        }
+    	}
+
+    	public class SmartPhones : CellPhones
+    	{
+        //function override
+        public override void Typing()
+        {
+            Console.WriteLine("Using Qwerty keyboard");
+        }
+}
+
+*****
+
+What is method overloading and method overriding?
+Both method overloading and overriding are a type of polymorphism.
+
+Method overloading is when we have a function with the same name but a different signature.
+Method overriding is when we override the virtual method of a base class in the child class using the override keyword.
+
+******
+
+What is the difference between string and string builder in C#?
+A string is an immutable object. When we have to do some actions to change a string or append a new string it clears out the old value of the string object, and it creates a new instance in memory to hold the new value in a string object. It uses System.String class, for example.
+
+using System;
+namespace demoapp
+{
+    class StringClass
+    {
+        public static void main(String[] {
+            string val = "Hello";
+            //creates a new instance of the string 
+            val += "World";
+            Console.WriteLine(val);
+        }
+    }
+}
+StringBuilder is a mutable object, meaning that it creates a new instance every time for the operations like adding string (append), replace string (replace). It uses the old object only for any of the operations done to the string and thus increases the performance. It uses System.Text.StringBuilder class, for example.
+
+using System;
+using System.Text;
+namespace demoapp
+{
+    class StringClass
+    {
+        public static void main(String[] {
+            StringBuilder val = new StringBuilder("Hello");
+            val.Append("World");
+            Console.WriteLine(val);
+        }
+    }
+}
+The output of both the program is the same, “Hello World.”
+
+*****
+
+ow can you create a derived class object from a base class?
+This is a trick question! You cannot. A derived class will inherit variables and methods from the base class. Further, a derived class can have only a single base class. You would need to do your work with your base class directly.
+
+******
+
+What is an immutable string?
+An immutable string is an object that cannot be changed, although you can change the reference to it. In general, an immutable string should be used whenever you have a constant that absolutely should not be changed. However, you should use this trick sparingly because an immutable string may throw an error if you try to change it later.
+
+*********
+
+What does POCO mean?
+POCO stands for Plain Old CLR Objects. A POCO is a class that doesn’t depend on any framework-specific base class. It is like any other normal .NET class. Hence the name Plain Old CLR Objects. These POCO entities (also known as persistence-ignorant objects) support most of the same LINQ queries as Entity Object derived entities.
+
+*****
+
+
+What is a DTO?
+A Data Transfer Object (commonly known as a DTO) is usually an instance of a POCO (plain old CLR object) class used as a container to encapsulate data and pass it from one layer of the application to another. You would typically find DTOs being used in the service layer (backend) to return data back to the presentation layer (frontend).
+
+******
+
+What are Nullable types?
+A: The value types that can accept a null value are called the Nullable types.
+
+*****
+
+What is (??) operator in C#?
+A: The ?? operator is specifically known as the null coalescing operator, and is used for defining a default value for a nullable value type.
+
+*****
+
+How to check that a nullable variable is having value?
+A: To check whether a nullable variable has value or not, HasValue property is used.
+
+
+*********
+
+What do you mean by partial method?
+A: A partial method is basically a special method in a partial class, which is also called a struct. One part of a partial class has the only partial method declaration, which means signature, as well as the other part of the same struct, may have an execution.
+
+
+*****
+
+What is the difference between “as” and “is” operators in C#?
+A: “as” operators are used to cast the object to class. “is” operators are used to check the object with type. This will then return a Boolean value.
+
+********
+
+
+Why do we use a private constructor?
+
+A: A private constructor is used for putting a stop to creating instances of classes, mainly when there are instance fields or even methods, like the Math class or when a method is called for getting an instance of classes. It is majorly used for creating a singleton class. It also helps in stopping creating an instance of a class.
+
+
+

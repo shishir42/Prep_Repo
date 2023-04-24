@@ -1,0 +1,105 @@
+What is enum in C#?
+Enum is a primitive data type in C# used to define numeric constants in the .NET framework. Starting from 0, all the elements of the enum are given constant values, each increasing by 1.
+
+For example, if we declare an enum for days of the week, the first element (Sunday) will get the value 0, the next element (Monday) will get the value 1, and so on till Saturday, which will get the value 6.
+
+enum daysOfWeek { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+To access any element, all you need to do is just pass the value of the element alongside enum’s variable, such as:
+daysOfWeek[5]; // Will give the value Friday
+
+**************************
+
+What is the difference between String and StringBuilder in C#?
+The major difference between String and StringBuilder is that String objects are immutable while StringBuilder creates a mutable string of characters. StringBuilder will make the changes to the existing object rather than creating a new object.
+
+StringBuilder simplifies the entire process of making changes to the existing string object. Since the String class is immutable, it is costlier to create a new object every time we need to make a change. So, the StringBuilder class comes into picture which can be evoked using the System.Text namespace.
+
+In case, a string object will not change throughout the entire program, then use String class or else StringBuilder. 
+
+For ex:
+
+
+string s = string.Empty; 
+for (i = 0; i < 1000; i++) 
+  { 
+    s += i.ToString() + " "; 
+  }
+Here, you’ll need to create 2001 objects out of which 2000 will be of no use.
+
+The same can be applied using StringBuilder:
+
+StringBuilder sb = new StringBuilder(); 
+for (i = 0; i < 1000; i++) 
+ { 
+   sb.Append(i); sb.Append(' '); 
+ }
+
+By using StringBuilder here, you also de-stress the memory allocator.
+
+*******
+
+List Some Key C# Features.
+
+Simple language: Lacks pointers or direct memory modification vs. C++ or C
+Type-safe: Ensures variable data types are correctly defined
+Object-oriented: Define and use classes/objects
+Component-oriented: Reuse existing components without coding from scratch 
+Open-source: Can develop apps on multiple OS, inc. Mac and Linux
+Interoperability: Can develop with managed and unmanaged 3rd party code
+Structured-programming: Can break programs into functions
+Rich library: Built-in functions speed up development
+Fast: Compilation and execution are very quick
+
+*****
+
+******
+
+What is the difference between Continue and Break Statement?
+
+Answer: Break statement breaks the loop. It makes the control of the program to exit the loop. Continue statement makes the control of the program to exit only the current iteration. It does not break the loop.
+
+*****
+
+What is an Array? Give the syntax for a single and multi-dimensional array?
+
+Answer: An Array is used to store multiple variables of the same type. It is a collection of variables stored in a contiguous memory location.
+
+For Example:
+
+double numbers = new double[10];
+int[] score = new int[4] {25,24,23,25};
+
+A single dimensional array is a linear array where the variables are stored in a single row. Above example is a single dimensional array.
+
+Arrays can have more than one dimension. Multidimensional arrays are also called rectangular arrays.
+
+For Example, int[,] numbers = new int[3,2] { {1,2} ,{2,3},{3,4} };
+
+*****
+
+What is a Jagged Array?
+
+Answer: A Jagged array is an array whose elements are arrays. It is also called as the array of arrays. It can be either single or multiple dimensions.
+
+int[] jaggedArray = new int[4][];
+
+****
+
+What is an Escape Sequence? Name some String escape sequences in C#.
+
+Answer: An Escape sequence is denoted by a backslash (\). The backslash indicates that the character that follows it should be interpreted literally or it is a special character. An escape sequence is considered as a single character.
+
+String escape sequences are as follows:
+
+\n – Newline character
+\b – Backspace
+\\ – Backslash
+\’ – Single quote
+\’’ – Double Quote
+
+****************************
+What is the difference between the System.Array.CopyTo() and System.Array.Clone() ?
+Using the Clone() method, we can create a new array object containing all the elements of the original array and using the CopyTo() method. All the items of existing array copies into another existing array. Both ways create a shallow copy.
+********************************
+

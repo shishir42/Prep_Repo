@@ -1,0 +1,837 @@
+What are the development approaches in Xamarin?
+Xamarin has two approaches for app development. These are
+
+Xamarin.Forms: Forms are the choices for the developers who want to create one application for all the separate mobile platforms, which are Windows, iOS, and Android.
+Xamarin Native: This approach is used in those scenarios when we want to create a separate version of the same App for different platforms. Developers can use Xamarin.iOS, Xamarin.Android and Xamarin.Windows libraries to create the applications for each particular platform.
+
+******
+
+Xamarin
+Xamarin is an app development tool to create cross-platform mobile applications.	
+Developers can use Xamarin.iOS, Xamarin.Android and Xamarin.Windows to create the application which is based on the particular platform for which the apps are created.	
+
+Xamarin.Forms
+
+Xamarin.Forms is a UI toolkit to develop the application.
+Developers can use Xamarin. Forms to create the one native version of the App which can run the entire mobile platform.
+
+*****
+
+What is Xamarin Profiler?
+Xamarin Profiler is a tool which is used by the developers to keep an eye on the information about the particular App inside the Visual Studio. With the help of Xamarin Profiler, developers can easily analyze the App's behavior. We can use the profiler to track the application's memory information and can sample its statistics.
+
+*****
+
+What is Xamarin Insights?
+Xamarin insight is a tool that allowed the developers to identify and track the issue with the apps in real-time. We can also use this for the monitoring system to report the problems. Xamarin introduced Xamarin Insight in October 2014. However, it was closed on March 31, 2016. In today's time, developers can believe in Visual Studio App Center for the same functionality that is provided by the Xamarin Insights.
+
+
+*****
+
+What is Xamarin.Forms?
+Xamarin.Forms is a framework which is used to build the user interface in the mobile application. In the same codebase, developers have to write the UI separately for each platform. This is time consuming and difficult process. Xamarin.Forms allows the developer to create just one UI which can be used across all platforms like Android, iOS, and Windows.
+
+*****
+
+What is the role of XAML in Xamarin?
+XAML or Extensible Markup Language is a special tool that allows the developer to define the user interface in Xamarin app development. XAML has a vital role in Xamarin, but it is not necessary for app development in Xamarin.Forms. Xaml works with ModelView-ViewModel or MVVM architecture of an application.
+
+*****
+
+What is data binding in Xamarin?
+Data Binding is a technique that is used to synchronize the source of the data with the user interface. When the data binding is done and the data or our business model changes, then it shows the changes automatically to the UI elements and vice versa.
+
+*****
+
+What is the Xamarin test cloud?
+The Xamarin test cloud allows us to test the mobile application on various devices. The Test cloud is also used for automated testing in many real devices simultaneously.
+
+*****
+What are the types of layout control in the Xamarin.Forms?
+Different types of layout control in Xamarin.Forms are:
+
+Stack Layout
+ContentView
+Frame
+ScrollView
+TemplateView
+Absolute Layout
+Grid
+Relative Layout
+
+****
+
+What are the different kinds of Pages present in the Xamarin.Forms?
+The different types of pages present in the Xamarin.Forms are:
+
+Content page- This type of page displays a single view, often a container such as a stack layout or the scroll view.
+MasterDetail page- MasterDetailPage is a page that manages the information between the two related pages.
+Navigation Page- Navigation page manages the navigation of the pages.
+Tabbed Page- Tabbed Page helps the navigation of the children page using the tab.
+Template Page- The Template page helps to display the content of the full page with a control template.
+Carousal Page- This page allows the swipe gesture between the subpages, such as a gallery.
+
+*****
+
+What are the advantages of Xamarin?
+Benefits of Xamarin are:
+
+We can deliver the native iOS, Android, and Windows app using the existing skills, and code (C#, XAML).
+We can take full advantage of Native APIs with Xamarin Technology.
+Xamarin Component Store allows us to add the high-quality components to our App directly from IDE, including controls, web service APIs, and more.
+PCL/shared project makes the development easy for developers to share the same code base across different projects.
+
+*****
+
+What are the code-sharing techniques in Xamarin.Forms?
+There are two methods of sharing the code between the cross-platform applications:
+
+Portable Libraries (PCL)
+Shared Projects
+The goal of the code-sharing strategy is to support the architecture where multiple platforms can utilize a single code base.
+
+*****
+What is the difference between the portable class library and shared projects?
+Portable Class Library
+
+Portable Class Libraries (PCLs) and Shared Projects are two ways to share code across platforms in Xamarin.Forms.
+
+Portable Class Libraries allow sharing code between platforms by defining a subset of .NET APIs that are supported on multiple platforms. PCLs are created as a separate project within a Xamarin.Forms solution, and they can be referenced by platform-specific projects. PCLs provide a way to share code across multiple platforms with a single binary, reducing the size of the application.
+
+Shared Projects allow sharing code across platforms by including the shared code files directly in each platform-specific project. Shared Projects are created within the platform-specific project and can be included in the build process for each platform. Shared Projects provide a more fine-grained control over the shared code, allowing developers to include different code files for each platform as needed.
+
+One advantage of PCLs over Shared Projects is that they provide a single binary that can be reused across different platforms, which can reduce the size of the application. However, PCLs require careful consideration of which APIs to use and can result in reduced functionality. Shared Projects, on the other hand, provide more fine-grained control over the shared code, but can lead to more maintenance effort.
+
+In summary, Portable Class Libraries and Shared Projects are two ways to share code across platforms in Xamarin.Forms, each with its own advantages and trade-offs. The choice between them depends on the specific requirements and constraints of the project.
+
+Shared Code can be branched base on the platform using compiler directive (e.g. #if_Android_,#if_iOS_,#if_Windows_Phone_App.etc.)
+
+No output assembly
+Refactoring operations, not update automatically.
+
+******
+
+What are the advantages of XAML?
+The advantages of XAML are:
+
+XAML gives a clean division of the application and its code. Thus, it enables a clear developer-design flow.
+XAML is more crisp and precise than a similar code.
+XAML has the parent-child hierarchy of user-interface objects with greater visual interface simplicity
+
+*****
+
+How Xamarin.Android applications work?
+Xamarin.Android applications depend on Microsoft's Mono Virtual Machine. Mono is Microsoft's open-source implementation of the .Net Framework, which is based on open source standards of C# and CLR. Mono was launched in the year 2001. It was created to allow the .Net applications to work on the Linux platform, but was later modified to support the development on various devices, including embedded systems.
+
+In Xamarin, Mono works in parallel with Android's ART. On Android, most of the system facilities like Audio, Graphics, OpenGL, and Telephony are not available directly to the native applications. They can be added through the Android Runtime Java APIs, which is available in one of the Java.*namespaces or the Android.*namespaces. The native applications then interact with the exposed .NET APIs. These APIs then, through the Android Binding, call the Android runtime Java APIs.
+
+
+
+******
+
+What is Fresh MVVM?
+Fresh MVVM is a super light MVVM framework which is designed specifically for Xamarin.Forms only. Its design is easy, simple, and flexible. It is easy to learn and uses the convention over configuration.
+
+Fresh MVVM is a little different from MVVM. FreshMvvm uses the concept of Page and PageModel instead of View and ViewModel.
+
+
+******
+
+What is the difference between the MVVM Cross and MVVM Light?
+MVVM Cross: MVVM Cross is a .NET cross-platform MVVM framework. It allows us to make a cross-platform solution for platforms such as Xamarin. Forms, Xamarin.Android, Xamarin.iOS, Xamarin.Mac and WPF. It is an inactive state of development.
+
+MVVM Cross requires the application to be divided into two parts: Core and the UI.
+
+The Core part contains the View Models, Service, Models, and the Business logic, whereas the UI part consists of the different views and platform-specific code that interact with the core. The views are the View Screens, which contain the graphical content. In addition to Core and UI, the application may contain additional libraries for various functionalities.
+
+****
+
+What is the need of the Model-View-ViewModel (MVVM ) pattern in Xamarin?
+The Model-View-ViewModel can be used on all platforms. It intends to provide a clean separation between the user interface controls and their logic.
+
+Benefits:
+
+During the development process, developers and designers can work independently on their components. Designers can concentrate on the view, and if they are using Expression Blend, they can generate sample data. On the other hand, developers can work on the view model and model components.
+Developers create the unit tests for the view model and can create the model for the view.
+
+It is easy to redesign the UI of the application without touching the code because the view is implemented entirely in XAML. A new version of the view should work with the existing view model.
+
+If there is any existing representation of the model that binds the existing business logic, this can be difficult or risky to change. In this scenario, the view model acts as an adapter for the model classes and enable us to avoid making any major changes to the code of the model.
+
+*****
+
+What is NuGet and how this can be useful in App development?
+NuGet is the most popular package manager for the development in .Net. It is present in Xamarin Studio 5 and Visual Studio. We can easily search and add package/third party libraries to the Xamarin.Forms using IDE.
+
+*****
+
+What is ResourceDictionary?
+ResourceDictionary is used to define the XAML Resources, which can be reused more than once throughout the Xamarin.Forms application.
+
+Xaml Resources are the definition of objects which can be used more than once.
+ResourceDictionary allows all the resource objects declared at one place.
+We can define Styles, ControlTemplates, DataTemplates, Colors, and Converters into the ResourceDictionary.
+In XAML, resources can be accessed at the Element level (inside specific element), Page (inside page) level or Application Level (inside App.Xaml).
+
+*****
+
+What is the App.cs class?
+App.cs is the main class of the App which offers features like:
+
+MainPage: It helps us to set the initial page of the App.
+
+Properties Dictionary: It helps us to store the values across the state of the lifecycle.
+
+Static Current Property: It gives the instance of the current application object
+
+*****
+
+What is the lifecycle method of the Xamarin.Forms App?
+Lifecycle methods are the set of techniques which are executed when the application enters into a specific state. The ways are:
+
+OnStart: This method will run when the application starts from the beginning.
+OnSleep: This method will execute when the application goes into the background.
+OnResume: This method will execute when the application comes in the foreground from the sleeping state.
+
+*****
+
+What is the purpose of XAML compiler (XALC)?
+Using the XAML compiler, we can directly compile XAMLs into intermediate (IL) language.
+
+Benefits:
+
+It performs the compile-time checking to find the error in XAML. At compile time it notifies the user about any mistake.
+It removes the overheads and initialization time for XAML elements.
+It doesn't include the XAML file into the final assembly, and thus it reduces the assembly time.
+
+*****
+
+What is XAML namespace declaration?
+XAML namespace is the declaration of the namespaces on top of the XAML file. There are two declarations available within the root element when we create any new XAML UI. Here is the default declaration of the xmlns without any prefix:
+
+xmlns="http://xamarin.com/schemas/2014/forms"  
+The second declaration uses the x prefix:
+
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+All declaration of the namespace which uses the prefix is a non-default declaration.
+
+Suppose we want to bind the ViewModel with XAML and that ViewModel is declared inside the namespace, "XamSample.ViewModels".
+
+xmlns:vm="clr-namespace:XamSample.ViewModels; assembly=XamSample.ViewModels"  
+Then we can access the element from inside this namespace using VM prefix.
+
+*****
+
+What is the way of navigation from one page to another?
+After clicking on the button of the first page, we call the following method through which we can navigate from one page to another page.
+
+await Navigation.PushAsync(new MySecondPageXaml(), true);  
+We have to use the "Navigation" page property which is available under the ContentPage class. This code is written in the coding page of the MainPage.XAML file.
+
+*****
+
+What are the triggers? How many types of triggers are available?
+Triggers allow us to declare actions in XAML, which changes the appearance of the control when specific condition met for a particular property of the control.
+
+We can add triggers at control-level, page-level, or application-level in the resource dictionary. Here are the four types of triggers available. These are:
+
+Property Trigger: This trigger executes when the property of the control set a particular value.
+Data Trigger: This trigger is similar to a property trigger, but it uses the data binding.
+Event Trigger: This trigger occurs when an event occurs on the control.
+Multi Trigger: This trigger allows us to set the conditions of multiple triggers before the action occurs.
+
+
+Here's an example of using triggers in Xamarin.Forms:
+
+Suppose we have a Button control that we want to change the background color of when it's pressed. We can use a Trigger to achieve this:
+
+<Button Text="Press me">
+    <Button.Triggers>
+        <Trigger TargetType="Button"
+                 Property="IsPressed"
+                 Value="True">
+            <Setter Property="BackgroundColor"
+                    Value="Red" />
+        </Trigger>
+    </Button.Triggers>
+</Button>
+
+
+In this example, we define a Trigger object that targets the Button control and listens for changes to its IsPressed property. When the IsPressed property becomes true (i.e., the button is pressed), the trigger activates and sets the BackgroundColor property of the button to Red using a Setter object.
+
+Another example of using triggers is to change the text color of a Label control based on its content. Suppose we want to change the text color of a Label control to Red if its text contains the word "error". We can use a DataTrigger to achieve this:
+
+<Label Text="This is an error message">
+    <Label.Triggers>
+        <DataTrigger TargetType="Label"
+                     Binding="{Binding Text}"
+                     Value="error">
+            <Setter Property="TextColor"
+                    Value="Red" />
+        </DataTrigger>
+    </Label.Triggers>
+</Label>
+
+In this example, we define a DataTrigger object that targets the Label control and binds to its Text property. When the value of the Text property is equal to "error", the trigger activates and sets the TextColor property of the label to Red using a Setter object.
+
+In summary, triggers in Xamarin.Forms allow developers to apply visual changes to a control based on a specific condition, such as a property value or data binding. Triggers consist of a Trigger object and one or more Setter objects that specify the changes to be made to the control when the trigger is activated.
+
+*****
+
+How many types of built-in cells are there in xamarin?
+There are four types of built-in cells are there:
+
+Text cell- We can also find title text and secondary text in this cell.     
+Image cell- All the images are included in this cell.
+Switch cell- We can access the toggle switch and Label using this cell.
+Entry cell: If we want to enter any data, we have to use this entry cell.
+
+*****
+
+How to do Xamarin.Android applications work?
+
+Xamarin.Android applications depend on Microsoft's Mono Virtual Machine. Mono is Microsoft's open-source implementation of the .Net Framework based on open standards for C# and CLR. Launched in the year 2001, it was mainly created to allow .Net applications to work on Linux platform, but was later modified to support development on various devices including embedded systems.
+
+In Xamarin, Mono works in parallel with Android's ART. On Android, most of the system facilities like Audio, Graphics, OpenGL, and Telephony are not available directly to native applications, they are only exposed through the Android Runtime Java APIs residing in one of the Java.* namespaces or the Android.* namespaces. The native applications interact with the exposed .NET APIs. These APIs then, through Android Binding call the underlying Android Runtime Java APIs. The architecture is roughly like this.
+
+https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/optimized/rev-4650ca5/media/images/1563785005713-image1.jpg
+
+
+*******
+Methods to Share Code between Cross-Platform Applications on Xamarin
+
+https://www.knowledgehut.com/interview-questions/xamarin#collapse-beginner-3632
+
+Cross-Platform Applications on Xamarin
+
+While writing Xamarin Cross-Platform Applications, one might encounter a lot of instances where similar functionality needs to be implemented across various platforms, which is generic. To facilitate this and allow code reuse, it makes utmost sense to share some common piece of code between these platforms as it saves time, reduces error scope and is easy for maintenance.
+
+Xamarin provides three common approaches to share code between Cross-Platform Applications:-
+
+.NET Standard Libraries
+Shared Projects
+Portable Class Libraries (Deprecated)
+1. .NET Standard Libraries
+
+.NET Standard Libraries is a way to share common code over multiple runtimes. .NET Standard is a set of specifications which various .NET runtimes adhere to and hence code written for one version of .NET Standard works on multiple versions of .NET runtimes like .NET Core, Mono, etc.  You can write your code and compile it into .NET Class Library and share it with others.
+
+https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/optimized/rev-4650ca5/media/images/1563785289386-image3.jpg
+
+The primary benefits of using this approach are:
+
+It allows you to share code across multiple projects
+When you refactor, all affected references are updated at once.
+Disadvantage
+
+You cannot do the conditional compilation for specific platforms using the #if directive It is somewhat similar to PCL but with a simpler model for platform support.
+
+https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/optimized/rev-4650ca5/media/images/1563785384928-image2.jpg
+
+2. Using Shared Projects
+
+Shared Projects are the usual .NET application projects that contain code files and assets. Shared Projects are meant to be included in other projects and help in code reuse. It is a code level sharing technique.
+
+A cross-platform application that supports iOS, Android, and Windows would require an application project for each platform and a separate Shared Project for the code common to all.
+
+So, if you are creating a cross-platform app for Android, iOS, and Windows, you will usually have the following projects
+
+Shared Project – the Shared Project that contains the code which is common for all platforms viz iOS, UWP, Android
+AppAndroid – the Xamarin.Android project that specifically calls the underlying .NET APIs exposed for Android
+AppiOS – Xamarin.iOS application project that specifically calls the underlying .NET APIs exposed for iOS
+AppWindows – Windows application project that utilizes exposed Windows APIs and specific to UWP (Universal Windows Platform)
+A Shared Project is not directly compiled. In other words, no DLL file is produced in the compilation process. Instead, the files are compiled into the same DLL as the project that references it. This way, it is possible to write blocks of platform-specific code in the Shared Project that will only be compiled by the specific platform.
+
+The advantages of using this technique are:-
+
+Allows you to share common code across multiple projects.
+The shared code can be branched based on the platform using compiler directives (eg. using #if __ANDROID__ or #if __IOS__)
+Application projects can include platform-specific references that the shared code can utilize
+Disadvantages:-
+
+They do not produce any output assembly of their own. Hence, not used for sharing and distributing to other developers
+
+3. Portable Class Libraries (Deprecated)
+
+When you create an Application Project or a Library Projection compiles into a DLL, it is restricted to work only on a  specific platform, i.e. the one it is created for. This is attributed to the fact that the various platforms use different .NET runtime ecosystems. This prevents you from writing an assembly for one and runs it on all .NET Runtimes.
+
+Portable Class Library allows you to develop a Class Library that can run for multiple platforms. You can choose a set of platforms for the Portable Class Library while creating it. This choice is represented by the  "Profile" identifier and helps in identifying the platforms the Portable Class Library is meant to work with.
+
+ The benefits of using this approach are:-
+
+Allows you to share code across multiple projects.
+When you refactor, all affected references are updated at once.
+Disadvantages:-
+
+Deprecated in the latest versions of Visual Studio, .NET Standard libraries are recommended instead.
+You cannot do the conditional compilation for specific platforms using the #if directive
+Only a subset of the .NET framework is available to use, determined by the profile selected
+It’s possible to convert a PCL to a .NET Standard project by changing the target of your project to .Net Standard.
+
+*******
+Dependency service and how it functions on Xamarin.Forms.
+
+While developing apps with Xamarin.Forms, you will find that certain native platform-specific functionalities are not present in the Xamarin.Forms API. This is because of the generic nature of Xamarin.Forms. Xamarin.Forms allow apps to call into platform-specific functionality from shared code. This functionality enables Xamarin.Forms apps to do anything that a native app can do.   You need to necessarily define an interface and write platform-specific implementations of that interface in the platform project. Dependency service will find the correct implementation of that interface in the various platform projects.   Xamarin.Forms apps need four components to use DependencyService:
+
+Interface – The required functionality is defined by an interface in shared code. This needs to be implemented by each platform
+Implementation Per Platform – The implementation of the above-mentioned interface for each platform.
+Registration – To find the correct implementation of the interface for the suitable platform at runtime, it is required that each platform implementation  class of the interface be registered with the DependencyService at runtime
+Invoking Dependency Service- It is required that there be an explicit invocation of the Dependency service, which will then allow the Dependency service to choose the appropriate implementation based on the platform.
+
+*******
+What are Custom renderers in Xamarin.Forms ?
+
+Custom renderers allow the Generic Xamarin.Forms control to be customized in behavior and look as per the platform they are going to be used on. This enables developers to give a native look and behavior to the otherwise Generic Xamarin.Forms Control.  
+
+Xamarin Forms controls are NOT rendered directly on the native platform. Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control. The properties from the Xamarin Forms control are translated across to the native control, then the native control is placed in the native layout, which then gets rendered by the platform.  
+
+Custom Renderers allow developers to customize the appearance and/or behavior of the control by writing their custom classes. Custom Renderers can be defined to have a custom behavior or appearance for one platform while allowing the default behavior on other platforms or they can be defined for each platform and provide customization for each different platform like iOS, Android, and the Universal Windows Platform (UWP).  If instead of changing the complete behavior and appearance only some trivial changes are required then 'Effects' can be used as an alternative.
+
+https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/optimized/rev-4650ca5/media/images/1566278530576-image5.jpg
+
+*******
+What are Effects and when should they be used?
+
+Effects, like Custom Renderers, allow a developer to customize controls for a specific platform. Effects are preferred over Custom Renderers when small styling changes are required instead of a complete layout or behavior change. Custom Effects are created for platform-specific projects by extending the base class PlatformEffect. Once created, they can be attached to the control it is meant for.  
+
+Effects don't have any type related information about the control they are attached to and hence if they are specified with a wrong control they should gracefully degrade. Effects are reusable and can be parameterised to extend its reusability.  
+
+Eg The sample application demonstrates a Focus Effect that changes the background color of a control when it gains focus.  
+
+https://cdn-cllme.nitrocdn.com/fsJtPHuAIrjqkSrOmOGUpPSluVVKYWgR/assets/images/optimized/rev-4650ca5/media/images/1566278733961-image7.jpg
+
+******
+What are Pages in Xamarin. Forms?
+
+Pages are Xamarin Forms generic representation of Cross Mobile Application Screens. A Page occupies most or all of a screen and contains a single child.
+
+On IOS, the Page is mapped to ViewController, on Android, it is mapped to somewhat like Activity and on Universal Windows Platform, it is mapped to  Page. Pages can be of several types, viz. Master /Detail Page, navigational Page, Carousel Page, Tabbed Page, Template Page, etc.
+
+Content Page
+A Content Page is the most basic type of page which contains the content in a  Stack Layout, Grid Layout or Scroll View. The content is usually text or images
+
+Master-Detail Page
+The Master-Detail Page is divided into two sections: Master and Detail. Master usually contains a list of items or Menu. Clicking on the item would show details about the item on the Detail Page
+
+Navigation Page
+Navigation Page allows navigating from one page to the next by keeping a stack of all the pages. As the user goes deeper inside the app the pages get stacked one on top of the other and when the user tries to come back to the entry page thee pages are popped out in the reverse order of stacking
+
+Tabbed Page
+Tabbed Image allows viewing multiple child pages across the same page wherein each Tab represents a child page. One child page is active at a time and it is easier to navigate to the other Tab child page by clicking on the Tab
+
+Carousal Page
+Just like Tabbed page, Carousel Page is also Multipage. It is similar to the gallery. Only the difference is Instead of clicking on the tab, the Carousal allows swiping gestures on the pages to navigate between the multiple child pages
+
+Templated Page
+When a user wants to show full mobile screen say for a Game or for showing splash Screen, Template Pages are used. They cover the entire screen area.
+
+******
+What are Commands in Xamarin.Forms?
+
+While writing an application with MVVM, developers specify data bindings in the View Model to bind the UI and the underlying code. Sometimes it may be required that instead of simple properties, the app may have to react to commands initiated by a user that affect something in the View Model. Such commands are generally associated with button clicks of a button or Tap event of a gesture and are handled by the appropriate background handler. These Commands, that implement the ICommand interface, define the operation to be performed when the appropriate Click or Tap is performed. To use the command interface, one has to define a data binding that targets the Command Property of the Button whereas the source is a property in the ViewModel of type ICommand.
+
+******
+
+What is MessagingCenter?  
+
+MessagingCenter is a class in Xamarin.Forms that enables loosely coupled communication between different parts of an application. It allows components of an application to communicate with each other without having direct references to each other, making it easier to maintain and update the code.
+
+The MessagingCenter class acts as a mediator between the sender and receiver of messages. The sender can broadcast a message to any interested parties, and the receiver can subscribe to receive messages of a certain type.
+
+Messages sent through the MessagingCenter can be any object or data type, and can contain any amount of data. This makes it a flexible way to communicate between different parts of an application, whether it's sending simple status updates or complex data structures.
+
+The MessagingCenter can be used in a variety of scenarios, such as updating the UI from a background thread, notifying other components of changes in data, or triggering an action in response to a user event. It's a powerful tool for building complex, modular applications that can be easily extended and maintained over time.
+
+*****
+
+Xamarin.Essentials is a cross-platform library for Xamarin developers that provides a set of essential APIs for building mobile applications. It provides a consistent, single API surface across iOS, Android, and UWP platforms, simplifying the process of accessing native functionality from C# or .NET code.
+
+Xamarin.Essentials includes a wide range of features and APIs, including:
+
+Connectivity: APIs for checking network connectivity and monitoring changes in network status.
+
+Permissions: APIs for requesting and checking permissions for accessing device features like the camera, location, and contacts.
+
+Geolocation: APIs for accessing the device's location data, including latitude, longitude, and altitude.
+
+Accelerometer: APIs for accessing the device's accelerometer data, including motion and orientation.
+
+Compass: APIs for accessing the device's compass data, including heading and direction.
+
+Device Information: APIs for accessing device information, such as model, manufacturer, and operating system version.
+
+Preferences: APIs for saving and loading application preferences and settings.
+
+Text-to-Speech: APIs for converting text to speech using the device's built-in text-to-speech engine.
+
+Secure Storage: APIs for securely storing sensitive data, such as passwords and authentication tokens.
+******
+
+In iOS development, a provisioning profile is a digital certificate that allows an app to be installed and run on a specific device or set of devices. It contains information about the app, the devices it can run on, and the digital certificate used to sign the app.
+
+Provisioning profiles are necessary because iOS apps must be signed with a valid digital certificate in order to be installed and run on a device. The digital certificate ensures that the app comes from a trusted source and has not been tampered with.
+
+There are several types of provisioning profiles, each designed for a specific use case:
+
+Development Provisioning Profile: Used during app development to allow the app to be installed and tested on specific devices. This profile is typically used during the development and testing phase of the app.
+
+Ad Hoc Provisioning Profile: Used to distribute an app to a limited number of authorized testers for beta testing purposes. This profile allows the app to be installed on a set of specified devices.
+
+App Store Provisioning Profile: Used to submit an app to the App Store for distribution to the public. This profile ensures that the app is signed with a valid certificate and meets Apple's requirements for distribution on the App Store.
+
+Provisioning profiles are created and managed using Apple's Developer Portal. They can be created for specific apps, devices, and development teams. Once a provisioning profile is created, it must be installed on the developer's machine and included with the app during the build process.
+
+Provisioning profiles can be a complex topic for new iOS developers, but they are an essential part of the app development process. Understanding how they work and how to create and manage them is critical for building and distributing iOS apps.
+
+
+*****
+
+What is Selector in Xamarin.iOS?  
+
+In Xamarin.iOS, a Selector is a type that represents a method selector in Objective-C. Objective-C uses selectors as a way to identify and call methods on objects at runtime.
+
+Selectors are represented in C# code as strings that match the name of the Objective-C method. The Selector class in Xamarin.iOS provides a way to create and manage selectors in C# code.
+
+Selectors are commonly used in Xamarin.iOS development for a variety of purposes, such as:
+
+Binding to Objective-C APIs: Many iOS APIs are written in Objective-C, and Xamarin.iOS provides a way to call these APIs from C# code using bindings. Selectors are used to specify the Objective-C methods to call.
+
+Event Handlers: In iOS development, events are often used to handle user interactions, such as button taps or screen touches. Selectors can be used to specify the methods that should be called when these events occur.
+
+Dynamic Method Resolution: Objective-C allows for dynamic method resolution, which means that methods can be added or modified at runtime. Selectors are used to identify the new or modified methods.
+
+Reflection: Selectors can also be used for reflection purposes, such as retrieving information about an object's methods or properties at runtime.
+
+Overall, Selectors are an important part of the interop between C# and Objective-C in Xamarin.iOS development, and understanding how to create and use them is critical for building iOS applications with Xamarin.
+
+*****
+
+In Xamarin, the linking process is a step in the build process that removes unused code from the compiled app binary. This helps reduce the size of the app and improve its performance by reducing the amount of code that needs to be loaded into memory at runtime.
+
+During the build process, Xamarin's linker analyzes the compiled code to determine which classes, methods, and other code are actually used by the app. Any code that is not used by the app is marked as unused and removed from the binary.
+
+The linking process is performed in three stages:
+
+Assembly Analysis: The linker analyzes the compiled code in each assembly (i.e., DLL) to determine which classes, methods, and other code are used by the app.
+
+Marking: The linker marks all used code as "preserved", indicating that it should not be removed during the linking process. Any code that is not marked as preserved is considered unused and will be removed.
+
+Removal: The linker removes all unused code from the compiled binary, resulting in a smaller and more efficient app.
+
+The linking process can be customized by specifying different levels of linking: "Don't Link", "Link Framework SDKs Only", "Link All", and "Link SDKs and User Assemblies". The default setting is "Link SDKs and User Assemblies", which removes all unused code from both the app and the referenced libraries.
+
+It's important to note that the linking process can sometimes remove code that is actually used by the app, especially in cases where the app uses reflection, dynamic code generation, or other advanced techniques. In these cases, the linker can be instructed to preserve specific classes or methods that would otherwise be removed.
+
+Overall, the linking process is an important part of the Xamarin build process that helps optimize the size and performance of the compiled app binary.
+
+*****
+
+What are Effects and when should they be used?
+
+Effects, like Custom Renderers, allow a developer to customize controls for a specific platform. Effects are preferred over Custom Renderers when small styling changes are required instead of a complete layout or behavior change. Custom Effects are created for platform-specific projects by extending the base class PlatformEffect. Once created, they can be attached to the control it is meant for.  
+
+Effects don't have any type related information about the control they are attached to and hence if they are specified with a wrong control they should gracefully degrade.  
+
+Effects are reusable and can be parameterised to extend its reusability.  
+
+******
+
+What are Triggers? How many types of Triggers are available?
+
+Triggers allow us to declare actions in XAML which changes the appearance of the control when specific condition is met for specific control property or specific event is raised.
+
+We can add triggers to the control-level, page-level or application-level in the resource dictionary. There are four types of Triggers.
+
+Property Trigger: executed when a property on a control is set to a particular value
+Data Trigger: It is similar to the property trigger but it leverages the use of data binding
+Event Trigger: occurs when some specified event is raised on the control
+Multi Trigger: allows multiple trigger conditions to be set before an action occurs
+
+******
+
+What is XAML Markup Extensions?
+
+XAML Markup Extension helps us extend the power of providing the value to the attributes of the control from the different sources instead of just providing string literals.It is just a different way to express an attribute of an Element. Any attribute setting which is enclosed within curly braces are simply known as Markup Extensions.
+
+<BoxView Color="{StaticResource PrimaryThemeColor}" />
+
+****
+
+What is Custom Renderers and what is its purpose?
+
+Custom Renderers provide an approach for customizing the look and feel & behaviors of the Xamarin.Forms controls specific to platforms. Thus it enables for us to customize any Xamarin.Forms visual elements natively. Moreover, if something is not possible with Xamarin.Forms for some visual elements, we can achieve it using Renderers.
+
+
+*****
+
+What is the difference between PCL & _Shared Project?
+
+PCL has an output assembly as DLL while Shared Project has no output assembly.
+Files inside PCL are treated as part of PCL while in Shared Project, files are treated as part of the referencing project and compiled into that assembly.
+PCL contains neat and clean platform independent code while Shared Project consists of many #if compiler directives to differentiate code among platforms.
+PCL is the best approach if good project architecture is the main concern instead of Shared Project.
+PCL uses the Interfaces and DependencyServices to access platform specific features while Shared Project can assess them directly.
+PCL has less compile time errors while Shared Project has many chances of compile time errors while switching among platform specific projects.
+PCL is used if less platform specific code is required. Shared Project is used when lot of platform specific code is required. However, this is not true all the time. Choice is always on the developer.
+
+*******
+
+What is the difference between Xamarin.Forms and Xamarin Native?
+
+The main difference is that in Xamarin Forms, you share NOT ONLY the business logic, but also the UI. In Xamarin forms, you'll use basic components on all platforms (Button, Label, etc). That's the reason why it's called Xamarin.Forms, because it's suitable for basic forms.
+
+But for Xamarin Native (Xamarin.iOS and Xamarin.Android ), you'll create a UI per platform (One for iOS, one for Android). You can do much more with Xamarin Native, because you'll use native components.
+
+
+*****
+
+What is the purpose of InitializeComponent() method in Page?
+
+This method is auto-generated when we add any new XAML Page to the project. It instantiates and initializes all the objects which we have defined into the XAML file. It connects them with each other based on their parent child relations. It attaches the Event Handlers we defined in the code with the Events, we set in the XAML. Then, it generates the whole tree of objects like a content of a page.
+
+We should never access any control of our page before this call because before this call, none of the controls get initialized or exist and so, we will get an Exception.
+
+*****
+
+What are Services in Xamarin.Android?
+
+In Xamarin.Android, a Service is a component that performs long-running tasks in the background without a user interface. Services run independently of the UI thread and can continue running even if the app is not currently visible to the user.
+
+Services are commonly used in Xamarin.Android development for tasks such as:
+
+Playing music or audio in the background
+Downloading or uploading data
+Performing periodic tasks, such as checking for new notifications or updates
+Monitoring sensors or other device events
+Handling network operations in the background
+There are two types of Services in Xamarin.Android:
+
+Started Services: Started Services are services that are started using an intent and can run indefinitely in the background until they are explicitly stopped. Started Services do not return a result to the caller, but they can send broadcast messages or notifications to the user.
+
+Bound Services: Bound Services are services that are bound to a specific activity or component in the app. Bound Services provide a client-server interface that allows the client to send requests to the service and receive a response. Bound Services can also be used to share data between activities in the app.
+
+Services in Xamarin.Android are implemented using the Android Service API, which provides methods for starting, stopping, and communicating with services. Services can be created as separate classes or as nested classes within an Activity or other component.
+
+Overall, Services are an important component of Xamarin.Android development that allow apps to perform long-running tasks in the background, without interrupting the user experience.
+
+******
+
+So, what is the difference between MessagingCenter and Events?
+
+Both MessagingCenter and Events are mechanisms for communicating between different parts of an app in Xamarin, but they differ in several important ways:
+
+Event Handlers: Events in Xamarin are based on the .NET event model, which uses event handlers to handle events. When an event is raised, all registered event handlers are called in the order they were added. In contrast, MessagingCenter uses a publish-subscribe model, where a message is published to all subscribers, without the need for explicit event handlers.
+
+Coupling: Events are often tightly coupled to the object that raises the event and the object that handles the event, while MessagingCenter is more loosely coupled. This means that MessagingCenter can be used to send messages between different objects and components that have no direct reference to each other, making it more flexible for certain types of communication.
+
+Message Content: With Events, the event data is defined in the event arguments, which are passed along with the event. In contrast, MessagingCenter allows for passing arbitrary objects as message content, which can be more flexible.
+
+Target Platforms: Events are a standard .NET feature and can be used on any platform that supports .NET, while MessagingCenter is specific to Xamarin and can only be used on Xamarin platforms.
+
+Overall, while both MessagingCenter and Events are useful for communicating between different parts of an app in Xamarin, they differ in their approach and may be better suited for different types of communication. MessagingCenter can be a good choice for loosely-coupled communication between different components, while Events may be more appropriate for tightly-coupled communication between related objects.
+
+******
+
+What is intent in Xamarin?
+
+The intent is a functionality used for sending data from one activity to another. A developer can use intent to perform a runtime binding between all the codes of an application during its later stages. The intent is also vital for launching various activities because it connects and holds all of the activities together. If the developer creates passive data structures, intent can help hold the abstract description of the operation using these data structures.
+
+******
+
+State the disadvantages of Xaml in Xamarin.Forms.
+
+There are several disadvantages of Xaml in Xamarin. Forms which can be explained by the following points
+XAML is incapable of containing the code. Usually, the code file must contain all the event handlers.
+XAML does not have the feature of loops for repetitive processing. There are some tools such as ListView, that can generate various children and do further processing.
+Conditional processing cannot be contained by XAML. However, the data binding feature eventually allows some of the conditional processing.
+Classes that do not define parameterless constructor, cannot be instantiated by XAML.
+Generally, methods cannot be called XAML.
+
+*******
+
+What is use of ICommand in xamarin forms?
+
+ICommand is a property in a ViewModel that is used to access the command interface. For this, a ViewModel must refer a class that can implement the ICommand interface. When used with Windows Class, it allows you to share your ViewModels between Xamarin.Forms and Windows App.
+
+*****
+
+What is MVVM?
+
+The Model View ViewModel (MVVM) is an architectural pattern used in software engineering that originated from Microsoft as a specialization of the presentation model design pattern introduced by Martin Fowler.Largely based on the model–view–controller pattern (MVC),  MVVM is targeted at UI development platforms which support event-driven programming, such as HTML5,Windows Presentation Foundation (WPF), Silverlight and the ZK framework.
+
+*****
+
+What are the benefits of MVVM?
+
+The different layers View,ViewModel and Model are loosely coupled.This gives application developed using MVVM pattern following advantages:
+
+Application is easer to maintain and extend
+Application is easier to unit test
+
+******
+
+What are the elements of MVVM?
+
+Model: as in the classic MVC pattern, the model refers to either (a) a domain model which represents the real state content (an object-oriented approach), or (b) the data access layer that represents that content (a data-centric approach).
+View: as in the classic MVC pattern, the view refers to all elements displayed by the GUI such as buttons, labels, and other controls
+View model: the view model is a “model of the view” meaning it is an abstraction of the view that also serves in mediating between the view and the model which is the target of the view data bindings
+
+*****
+
+What are popular MVVM frameworks?
+
+
+Prism
+MVVM Light
+
+****
+
+What is a data binding?
+
+Data binding is used to connect data source with data target.Data source provides the data to the data target.Data source can be any CLR object.Data target is usually WPF element such as textbox or combobox.With WPF databinding data is automatically synchronized ,this means that the data changes in the source are automatically reflected in the data target.Similarly the data changes in the data target are reflected in the data source.
+
+****
+What is PRISM?
+
+PRISM is a set of guidelines for developing easy to maintain and flexible desktop applications.Applications built using PRISM are easier to change.
+
+******
+
+What is Delegate Command?
+
+Delegate Command implements ICommand and IActiveAware interface.So instead of implementing the ICommand interface we can use the Delegate Command to simplify the
+command creation in our application.
+
+*****
+
+What are advantages of MVVM over MVC?
+
+1. Increases the “Blendability” of your views (ability to use Expression Blend to design views) – This enables a separation of responsibilities on teams that are lucky enough to have a designer and a programmer… each can work independent of the other.
+2. “Lookless” view logic – Views are agnostic from the code that runs behind them, enabling the same view logic to be reused across multiple views or have a view easily retooled or replaced. Seperates concerns between “behavior” and “style”.
+3. No duplicated code to update views – In code-behind you will see a lot of calls to update view controls. With MVVM you can be assured the view is updated appropriately just by setting the underlying property and all view side-effects thereof.
+4. Testability – Since your logic is completely agnostic of your view, unit testing is made easy. You can test the behavior of a ViewModel without involving its view. This also enabled test-driven development of view behavior, which is almost impossible using code-behind.
+5. Designer-Developer Workflow – MVVM facilitates a separation of UI and presentation logic concerns from the business layer that makes it easy to streamline the development process by allowing design cycles to happen in parallel with development.
+
+
+********
+
+What is dependency property?
+
+Dependency property adds certain features in the normal CLR property system.Class defining dependency property inherits from the DependencyObject class.WPF UI controls are usually inherited from DependencyObject.So UI controls supports dependency properties.
+
+*******
+
+What is ICommand?
+
+ICommand defines a command
+The ICommand type exposes the following members.
+CanExecute  :Defines the method that determines whether the command can execute in its current state.
+Execute :Defines the method to be called when the command is invoked.
+CanExecutehanged :Occurs when changes occur that affect whether or not the command should execute.
+
+
+*****
+
+What is the key feature that differentiates MVVM from other UI separation patterns like MVC and MVP?
+
+Data binding is the key feature that differentiates MVVM from other UI separation patterns like MVC and MVP.
+
+****
+What is INotifyPropertyChanged?
+
+The INotifyPropertyChanged interface is used to notify clients, typically binding clients, that a property value has changed.
+For example, consider a Stock object with a property called StockCount. To provide generic property-change notification, the Stock type implements the INotifyPropertyChanged interface and raises a PropertyChanged event when StockCount is changed.
+For change notification to occur in a binding between a bound client and a data source, your bound type should either:
+
+Implement the INotifyPropertyChanged interface (preferred).
+Provide a change event for each property of the bound type.
+
+*****
+
+What are the responsibilities of View?
+
+The main purpose and responsibilities of views is to define the structure of what the user sees on the screen. The structure contains static and dynamic parts.
+
+Static parts are the XAML hierarchy that defines the controls and layout of controls that a view is composed of.
+Dynamic part is like animations or state changes that are defined as part of the View.
+The primary goal of MVVM is that there should be no code behind in the view.
+In view you at least need the constructor and a call to initialize component.
+The event handling, action and data manipulation logic code shouldn’t be in the code behind in View.
+There are also other kinds of code that have to go in the code behind any code that's required to have a reference to UI element. It is inherently view code
+
+*****
+
+What is the View First Construction in Code-behind?
+
+Another way is that you can do view first construction by simply constructing the view model yourself in the code behind of your View by setting the DataContext property there with the instance.
+Typically, the DataContext property is set in the constructor method of view, but you could also defer the construction until the Load event of the view fires.
+
+using SystemWindows.Controls;
+namespace MVVMDemo.Views{
+/// <summary>
+/// Interaction logic for StudentView.xaml ///
+</summary>
+public partial StudentView : UserControl {
+public StudentView() {
+InitializeComponent();
+this.DataContext = new MVVMDemo.ViewModel.StudentViewModel();
+}
+}
+}
+
+*****
+
+What is Dependency Injection / IoC Containers?
+
+Inversion of Control (IoC) and dependency injection are two design patterns that are closely related and the container is basically a chunk of infrastructure code that does both of these patterns for you. IoC pattern is about delegating responsibility for construction and the dependency injection pattern is about providing dependencies to an object that's already been constructed.
+
+*****
+
+What are the disadvantages of MVVM?
+
+Some people think that for simple UI, MVVM can be an overkill.
+Similarly in bigger cases, it can be hard to design the ViewModel.
+Debugging would be a bit difficult when we have complex data bindings.
+
+*****
+
+What Are The Responsibilities Of Viewmodel?
+ViewModel is the main point of MVVM application. The primary responsibility of ViewModel is to provide data to the view, so that view can put that data on the screen.
+
+It also allows the user to interact with data and change the data.
+The other key responsibility of ViewModel is to encapsulate the interaction logic for a view, but that does not mean all of the logic of the application should go into ViewModel.
+It should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view.
+ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view.
+
+******
+
+What Is The Main Reason Of Constructing Viewmodel In Code-behind?
+
+The main reason of constructing ViewModel in code-behind instead of XAML is that the view model constructor takes parameters, but XAML parsing can only construct elements if defined in default constructor.
+
+*****
+
+https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui?view=net-maui-7.0
+https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/
+https://www.c-sharpcorner.com/UploadFile/84c85b/delegates-and-events-C-Sharp-net/
+https://learn.microsoft.com/en-us/dotnet/architecture/maui/micro-services
+
+******
+
+What is dependency property?
+Dependency property adds certain features in the normal CLR property system.Class defining dependency property inherits from the DependencyObject class.WPF UI controls are usually inherited from DependencyObject.So UI controls supports dependency properties.
+
+*****
+
+What is Delegate Command?
+Delegate Command implements ICommand and IActiveAware interface.So instead of implementing the ICommand interface we can use the Delegate Command to simplify the
+command creation in our application.
+
+*****
+
+https://www.codeproject.com/Articles/1094079/An-advanced-introduction-to-Csharp-Lecture-Notes-P
+https://www.codeproject.com/Articles/1094359/Mastering-Csharp-Lecture-Notes-Part-of
+https://www.codeproject.com/Articles/1094625/Advanced-programming-with-Csharp-Lecture-Notes-Par
+https://www.codeproject.com/Articles/1094829/Professional-techniques-for-Csharp-Lecture-Notes-P
+
+*****

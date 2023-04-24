@@ -82,4 +82,113 @@ This creates a delegate type that represents a method with a string parameter an
 
 So, in summary, the difference between a Func<string, string> and a delegate is that a Func<string, string> is a specific type of delegate that represents a method with a string parameter and a string return value, while a delegate is a general type that can represent any method with a specific signature.
 
-***
+*************
+
+What is a delegate?
+A delegate is a reference type entity that is used to store the reference of a method. So whenever you need to call a method, you can easily use the delegate by initializing a pointer to that method, thereby helping to implement Encapsulation.
+
+// C# program to show the use of Delegates
+using System;
+namespace DelegateExample {
+
+   // Declare class "DelegateExampleClass"
+   class DelegateExampleClass {
+   
+       // Declaring the delegates -
+       // "addTwoNumbers", and "substractTwoNumbers"
+       
+       // The return type and parameter type of the
+       // delegates must be the same of the methods
+       public delegate void addTwoNumbers(int a, int b);
+       public delegate void substractTwoNumbers(int a, int b);
+       
+        // Method sumOf2Nums having same return type
+        // and parameter type as that of delegate
+        public void sumOf2Nums(int a, int b)
+        {
+         Console.WriteLine("({0} + {1}) = {2}", a, b, a + b);
+        }
+       
+        // Method differenceOf2Nums having same return type
+        // and parameter type as that of delegate
+        public void differenceOf2Nums(int a, int b)
+        {
+         Console.WriteLine("({0} - {1}) = {2}", a, b, a - b);
+        }
+       
+       // Main Method
+       public static void Main(String []args)
+       {
+        
+        // Creating object of class "DelegateExampleClass"
+        DelegateExampleClass obj = new DelegateExampleClass();
+       
+        // creating object of delegate, name as "del_obj1"
+        // for method "sum" and "del_obj2" for method "subtract" &
+        // pass the parameter as the two methods by class object "obj"
+        // instantiating the delegates
+        
+        // Create objects of declared Delegates and pass
+        // the methods of class DelegateExampleClass
+        // using the objects thereby implementing Encapsulation
+        addTwoNumbers delegateObj1 = new addTwoNumbers(obj.sumOf2Nums);
+        substractTwoNumbers delegateObj2 = new substractTwoNumbers(obj.differenceOf2Nums);
+       
+        // Call the methods of the class DelegateExampleClass
+        // using the delegate objects using appropriate values
+        delegateObj1(50, 40);
+        delegateObj2(50, 40);
+       }
+   }
+}
+
+Delegates in C# are similar to function pointers in C/C++ and can be used to pass methods as arguments to other methods, chained together, or even can be used to call methods on events.
+
+Encapsulation: Delegates allow you to encapsulate a method call, which means you can pass a method as a parameter to another method, and the method that receives the delegate can execute it without knowing anything about the method it calls.
+
+Flexibility: Delegates are extremely flexible and can be used to handle a wide variety of scenarios. For example, you can use delegates to implement event handling, asynchronous programming, and more.
+
+Code Reusability: With delegates, you can reuse a method by passing it to multiple methods. This can save time and effort in the long run, since you don't have to write the same code over and over again.
+
+Loose Coupling: Delegates help in loose coupling of code. Since the delegate provides an abstraction over the method that is called, it reduces the coupling between the caller and the callee.
+
+Easy to Extend: Delegates can be easily extended to handle new scenarios, such as adding new methods to a collection of delegates or combining multiple delegates into a single delegate.
+
+Improved Performance: Delegates can improve performance by allowing you to pass methods as parameters to other methods. This eliminates the need for expensive reflection-based techniques, which can be slower and more memory-intensive.
+
+*****
+
+What are the different types of Delegates?
+
+Answer: Different types of Delegates are:
+
+Single Delegate: A delegate that can call a single method.
+
+Multicast Delegate: A delegate that can call multiple methods. + and – operators are used to subscribe and unsubscribe respectively.
+
+Generic Delegate: It does not require an instance of the delegate to be defined. It is of three types, Action, Funcs and Predicate.
+
+Action– In the above example of delegates and events, we can replace the definition of delegate and event using 
+
+Action keyword. The Action delegate defines a method that can be called on arguments but does not return a result
+Public delegate void deathInfo();
+Public event deathInfo deathDate;
+//Replacing with Action//
+Public event Action deathDate;
+
+Action implicitly refers to a delegate.
+
+Func– A Func delegate defines a method that can be called on arguments and returns a result.
+Func <int, string, bool> myDel is same as delegate bool myDel(int a, string b);
+
+Predicate– Defines a method that can be called on arguments and always returns the bool.
+Predicate<string> myDel is same as delegate bool myDel(string s);
+
+****
+
+What do Multicast Delegates mean?
+
+Answer: A Delegate that points to more than one method is called a Multicast Delegate. Multicasting is achieved by using + and += operator.
+
+*****
+

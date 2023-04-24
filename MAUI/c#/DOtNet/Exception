@@ -21,3 +21,86 @@ try – Contains a block of code for which an exception will be checked.
 catch – It is a program that catches an exception with the help of exception handler.
 finally – It is a block of code written to execute regardless whether an exception is caught or not.
 throw – Throws an exception when a problem occurs.
+
+***************
+
+What are the key differences between the "throw" and "throw ex" in .NET?
+
+In .NET, "throw" and "throw ex" are two different ways to throw an exception, but they have different implications for the stack trace and debugging.
+
+"throw" is used to throw a new exception instance and preserve the original stack trace. When you use "throw" without an argument, it throws the most recently caught exception. This means that the original stack trace, which shows the sequence of method calls that led to the exception, is preserved. The new exception instance will be caught by the next catch block up the call stack.
+
+try
+{
+    // ...
+}
+catch (Exception ex)
+{
+    // handle the exception
+    throw; // re-throw the same exception instance
+}
+
+
+"throw ex" is used to re-throw an exception and reset the stack trace. When you use "throw ex", it re-throws the same exception instance, but resets the stack trace to the current method. This means that the original stack trace is lost, and the exception appears to have been thrown from the current method. The new exception instance will be caught by the next catch block up the call stack.
+
+try
+{
+    // ...
+}
+catch (Exception ex)
+{
+    // handle the exception
+    throw ex; // re-throw the same exception instance
+}
+
+
+Its generally recommended to use "throw" without an argument to preserve the original stack trace, unless you have a specific reason to reset the stack trace. Resetting the stack trace can make it harder to diagnose the root cause of the exception, especially in production environments where you don't have access to a debugger.
+
+Its also worth noting that when you throw an exception, you should include a descriptive error message that explains the nature of the problem. This message can be accessed by the catch block that handles the exception, and can be helpful for debugging and troubleshooting.
+
+*******************
+
+What are custom exceptions?
+Custom exceptions are used for errors that are being caught per user requirements rather than built into the compiler. Custom exceptions are an easy way to instance user-defined exceptions.
+
+Refer to the below example:
+
+public class Purchase
+{
+     public void DoPurchase(int quantity)
+     {
+         if (quantity == 0)
+         {
+             //this will throw error here with the custom message
+             throw new Exception("Quantity cannot be zero");
+         }
+     }
+}
+
+******************
+
+Can multiple catch blocks be implemented?
+
+try
+{
+    // Some code that might throw exceptions
+}
+catch (ArgumentNullException ex)
+{
+    // Handle the ArgumentNullException
+    Console.WriteLine("ArgumentNullException: " + ex.Message);
+}
+catch (DivideByZeroException ex)
+{
+    // Handle the DivideByZeroException
+    Console.WriteLine("DivideByZeroException: " + ex.Message);
+}
+catch (Exception ex)
+{
+    // Handle any other exception
+    Console.WriteLine("Exception: " + ex.Message);
+}
+
+******************
+
+

@@ -1,1 +1,40 @@
 Extension method is used to add new methods in the existing class or the structure without modifying the source code of the original type. 
+
+Is it possible to add extension methods to an existing static class?
+
+No, it is not possible to add extension methods to an existing static class directly. This is because extension methods can only be defined in a static class, and that class must be in the same namespace as the code that uses the extension method.
+
+However, you can create a new static class and define an extension method for the existing static class as a static method within the new class. The extension method should be defined with the this keyword, followed by the type of the existing static class that you want to extend.
+
+Here's an example of how you can add an extension method to the existing System.IO.File static class:
+
+namespace MyExtensions
+{
+    public static class FileExtensions
+    {
+        public static void CopyTo(this System.IO.File file, string sourcePath, string destPath)
+        {
+            System.IO.File.Copy(sourcePath, destPath);
+        }
+    }
+}
+
+In this example, we create a new static class called FileExtensions in a new namespace called MyExtensions. We then define an extension method called CopyTo that takes a source path and a destination path as arguments and copies the file from the source to the destination using the System.IO.File.Copy method. The first argument of the extension method is defined as this System.IO.File file, which means that it extends the System.IO.File static class.
+
+With this extension method defined, we can now use it on instances of the System.IO.File class as if it were a method of the class itself:
+
+using MyExtensions;
+
+// ...
+
+string sourcePath = @"C:\myFile.txt";
+string destPath = @"C:\backup\myFile.txt";
+
+System.IO.File.CopyTo(sourcePath, destPath);
+
+Note that in order to use the extension method, we need to import the namespace where the FileExtensions class is defined using the using keyword.
+
+*****
+
+Define Extension Methods.
+Extension methods are static functions of a static class. These methods can be invoked similar to the syntax of the instance method. These methods are used when a class needn’t be modified.

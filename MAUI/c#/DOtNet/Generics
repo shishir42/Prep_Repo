@@ -19,3 +19,84 @@ void Foo(string str) { Console.WriteLine(str); }
 MyDelegate d = Foo; // contravariance: method with parameter of type string is assigned to delegate with parameter of type object
 
 In summary, covariance and contravariance allow you to assign or convert types in certain scenarios where the more or less derived type is being used in a way that is consistent with the other type.
+
+************
+
+What are generics in C#?
+Generics in C#: 
+
+increase performance.
+increase type safety.
+reduce repeated code.
+make reusable code.
+
+Using generics, we can create collection classes. It is preferred to use System.Collections.Generic namespace instead of classes such as ArrayList in the System.Collections namespace to create a generic collection.
+
+Generics encourage the usage of parameterized types as seen in the example below:
+
+using System;
+namespace demoapp
+{
+    //We use < > to specify Parameter type 
+    public class GFG<T>
+    {
+        //private data members 
+        private T data;
+
+        //using properties 
+        public T value
+        {
+            /using accessors 
+            get
+            {
+                return this.data;
+            }
+            set
+            {
+                this.data = value;
+            }
+        }
+    }
+
+    //vehicle class 
+    class Vehicle
+    {
+        //Main method 
+        static void Main(string[] args)
+        {
+            //instance of string type 
+            GFG<string> company = new GFG<string>();
+            company.value = "Tata motors";
+
+            //instance of float type 
+            GFG<float> version = new GFG<float>();
+            version.value = 6.0F;
+
+            //display Tata motors 
+            Console.WriteLine(company.value);
+
+            //display 6 
+            Console.WriteLine(version.value);
+        }
+    }
+}
+
+*****
+
+Which is the parent class of all classes which we create in C#?
+
+System.object
+
+******
+
+What is a generic class?
+A generic class is a class that can handle any type. This is unique because most classes follow strict typing; you have to declare a type, and that type has to be consistent. Defining a generic class would go as follows:
+
+class dataStore<T> {
+	public T data {
+		get; set;
+	}
+}
+
+**********
+

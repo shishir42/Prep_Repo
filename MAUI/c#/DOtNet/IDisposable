@@ -70,3 +70,40 @@ using (MyResource myRes = new MyResource())
 
 
 ***
+
+
+What is the difference between dispose() and finalize() methods in C#?
+Both dispose() and finalize() methods are used for unallocating and freeing up resources but:
+
+dispose() method is called explicitly by the user, whereas finalize() method is called the system’s garbage collector at the end of execution.
+dispose() method is defined in the IDisposable interface, whereas the finalize() method is defined in the Object class.
+dispose() method is a part of the developer’s code, whereas finalize() method is a system-defined default method and not a part of the developer’s code.
+
+DISPOSE()
+- dispose() method is defined in IDisposable interface.
+- public void dispose( ){
+    // Dispose code here
+    } 
+
+- dispose() method is invoked by the user.
+- dispose() method is used to free unmanaged resources upon invoking.
+- dispose() method is implemented whenever there is a close( ) method.
+- dispose() method is declared as public.
+- dispose() method happens instantly and hence is faster.
+
+FINALIZE()
+
+- finalize() method is defined in java.lang.object class.
+- protected void finalize( ){
+    // finalization code here
+    }
+- finalize() method is invoked by the garbage collector.
+- finalize() method is used to free the unmanaged resources when invoked by the garbage collector.
+- Unlike dispose(), the finalize() method is implemented for freeing up unmanaged resources.
+- finalize() method is declared as private.
+- finalize() method is slower in comparison with dispose() method and can affect the performance.
+
+******
+
+Why Would You Implement the ‘using’ Statement in C#?
+To manage and automatically release resources once an object has finished its processing. Specifically, by implementing the using statement, we implicitly ensure that the .Dispose() method is called to automatically release unused resources. 

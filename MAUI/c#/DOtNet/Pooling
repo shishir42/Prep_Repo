@@ -5,3 +5,58 @@ There are four main parameters that control connection pooling behaviors in .NET
 -Min Pool Size
 -Max Pool Size
 -Pooling
+
+********
+What are the major differences between Object pooling and Connection pooling in C#?
+
+Object pooling and connection pooling are two different concepts in C# that are used to optimize performance and improve scalability of applications. Here are the major differences between the two:
+
+Purpose: Object pooling is used to improve performance by reusing expensive objects, such as database connections, that are frequently used in an application. Connection pooling, on the other hand, is used specifically for database connections to reduce the overhead of creating and tearing down connections.
+
+Type of resources: Object pooling can be used for any kind of object that is expensive to create or allocate, such as threads, sockets, or memory buffers. Connection pooling, on the other hand, is specifically designed for managing database connections.
+
+Lifecycle: Objects in an object pool typically have a longer lifecycle than connections in a connection pool. Object pools are typically initialized at application startup and can persist for the entire lifetime of the application. Connection pools, on the other hand, are created and destroyed dynamically as needed, depending on the connection requirements of the application.
+
+Usage patterns: Objects in an object pool can be checked out and returned to the pool multiple times during the lifetime of the application. In contrast, connections in a connection pool are typically checked out and returned to the pool for short periods of time, such as during a single database transaction.
+
+Implementation: Object pooling can be implemented in different ways, such as using the built-in ObjectPool<T> class in .NET Core, or by creating a custom pool class. Connection pooling is typically handled by the database provider, such as ADO.NET or Entity Framework, which manage the pool of database connections transparently to the application.
+
+In summary, object pooling is a more general-purpose technique that can be used for any kind of expensive object, while connection pooling is a specific technique designed for managing database connections. Object pools have a longer lifecycle and can be checked out and returned multiple times, while connection pools are typically short-lived and used for single transactions.
+
+*****
+
+What is an object pool?
+
+- An object pool is a container built to keep the most used objects for faster access and use.
+- An object pool is based on the object pool design pattern in which instead of every time creating objects when needed, commonly used objects are created beforehand and kept in an easily accessible location. This is done to reduce the cost of the application as creating objects can use a lot of resources and can sometimes lead to the slowness of the .NET application. 
+- The objects of the pool are returned to the pool, once the use is over, thus making it efficient to reuse them. If the object is not in the pool, it is then created when needed as a normal object.
+
+Both thread pool and object pool are used in software development to optimize performance and resource utilization. However, they are used for different purposes and have different implementations.
+
+A thread pool is a collection of threads that are created beforehand and maintained by a program or system. Threads are added to the pool when they are not in use and are available for executing tasks when needed. This is done to reduce the overhead of creating new threads every time a task needs to be executed. Thread pools are commonly used in server applications, where multiple clients may connect and disconnect at any time.
+
+An object pool, on the other hand, is a collection of pre-initialized objects that are stored in memory and reused when needed. This is done to avoid the overhead of creating new objects every time they are required. Object pools are commonly used in systems where the creation of new objects is expensive, such as database connections, network sockets, or graphics resources.
+
+In summary, while both thread pool and object pool are used to optimize performance and resource utilization, they are used for different purposes. Thread pool is used to reduce the overhead of creating new threads, while object pool is used to avoid the overhead of creating new objects.
+
+***************
+
+Summarize Thread Pooling in C#.
+
+When we initialize a multithreaded application, thread pooling is used to create a collection of threads that can be reused when new tasks require a thread. This removes the need to create new threads for each new task.
+
+Each of the threads within the pool is designed for a particular task, and it waits in the pool until that task type arises. Whenever a thread completes its task, it returns the pool to await future assignments to new tasks.
+
+*****************
+
+What is Thread Pooling?
+
+Thread pool is a collection of threads. These threads can be used to perform tasks without disturbing the primary thread. Once the thread completes the task, the thread returns to the pool.
+
+System.Threading.ThreadPool namespace has classes that manage the threads in the pool and its operations.
+
+System.Threading.ThreadPool.QueueUserWorkItem(new System.Threading.WaitCallback(SomeTask));
+
+The above line queues a task. SomeTask methods should have a parameter of type Object.
+
+*******

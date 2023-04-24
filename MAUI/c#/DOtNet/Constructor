@@ -6,3 +6,13 @@ Parameterized Constructor: It has one parameter.
 Copy Constructor: It creates an object by copying variables from another object.
 Static Constructor: It is created using a static keyword and will be invoked only once for all of the instances of the class.
 Private Constructor: It is created with a private specifier and does not allow other classes to derive from this class or create an instance of it.
+
+************
+
+What Is Constructor Chaining in C#?
+
+This is a way to share initialization code between different constructors within the same class or from a base class via inheritance in the derived class.
+
+If we have multiple constructors within the same class, we can chain these with the :this() keyword, which allows us to flexibly implement various constructors within the same class.
+
+If we want to chain constructors via inheritance, we can use the :base() keyword, which maps the child class constructor to the constructor of the parent class.

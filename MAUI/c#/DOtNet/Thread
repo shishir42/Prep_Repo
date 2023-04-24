@@ -498,3 +498,252 @@ In summary, while both lock and Monitor provide mechanisms for synchronizing acc
 
 ****
 
+*****
+
+What are Interlocked functions?
+Shared variables in C# are not thread-safe. It means that any operation on a variable can be corrupted due to multiple threads. To prevent these dirty reads, C# allows the use of interlocked functions to change the value of shared variables in multithreading code.
+
+Interlocked functions only support int, long, double and float data types, as shown by some of the examples below:
+
+1) Add(ref int address1, int value): Interlocked function to add a value into an int variable safely.
+
+2) Increment(ref int address1): Interlocked function to increment value of an int variable safely by 1.
+
+3) Decrement(ref int address1): Interlocked function to decrement value of an int variable safely by 1.
+
+4) Exchange(ref int address1, int value): Interlocked function to replace the value of an int variable safely.
+
+5) CompareExchange(ref int address1, int newValue, int toBeValue): Interlocked function to replace the value of an int variable safely only if the existing value is equal to passed toBeValue.
+
+******
+What is AutoResetEvent and how is it different from ManualResetEvent?
+AutoResetEvent is used to unlock a single thread when multiple threads are in a waiting blocked state, whereas ManualResetEvent is used to unlock multiple threads at once during similar instances.
+
+AutoResetEvent also calls the Reset() method by itself to unblock the thread under consideration, whereas while using ManualResetEvent, the Reset() method has to be called manually after the use of set() method.
+
+
+*****
+
+What is Mutex and how is it different from other Synchronization mechanisms?
+MuTex refers to Mutual Exclusion and as the name suggests, Mutex works on the mutual exclusion principle to lock out any other thread requesting for a resource whose access is already given to some thread. Mutex acts as a flag mechanism that prevents any second thread from accessing a resource, except for the thread which is currently working on it.
+
+Unlike other synchronization mechanisms in C#, such as Auto Reset Event which can give the exclusive access of a resource to any thread that calls the set() method, Mutex remembers the thread that gets the resource access, and only that same thread can reset it, thereby giving the true mutual exclusion synchronization. If the thread differs, a mutex exception is thrown.
+
+******
+
+Show an example of how the Mutex synchronization mechanism works.
+This example shows how a local Mutex object is used to synchronize access to a protected resource.
+
+using System;  
+using System.Collections;  
+using System.Threading;
+namespace MutexDemo
+{  
+class MutexDemoClass  
+   {  
+       private static Mutex mutex = new Mutex();  
+       private const int countOfHits = 1;  
+       private const int countOfThreads = 3;  
+       private static void ThreadProcess()  
+       {  
+           for (int i = 0; i < countOfHits; i++)  
+           {  
+               showMutexDemo();  
+           }  
+       }  
+       
+       private static void showMutexDemo()  
+       {  
+           // Wait until it is safe to enter.  
+           mutex.WaitOne();
+           
+           Console.WriteLine("{0} has got the access of resource",  
+           Thread.CurrentThread.Name);  
+           
+           // Code to access the resource mutually exclusively  
+           
+           // Wait until it is safe to enter.  
+           Thread.Sleep(100);
+           Console.WriteLine("{0}'s access of the resource has been revoked",            
+           Thread.CurrentThread.Name);  
+           // Once the work is done, release the resource from Mutex
+           mutex.ReleaseMutex();
+       }  
+       
+       // Driver code
+       static void Main(string[] args)  
+       {  
+           for (int i = 0; i < countOfThreads; i++)  
+           {  
+               Thread thread = new Thread(new ThreadStart(ThreadProcess));  
+               thread.Name = String.Format("Thread{0}", i + 1);  
+               thread.Start();  
+           }  
+       }  
+   }  
+}  
+The above code is a simple example to show how Mutex locks a resource and only that thread can release the Mutex.
+
+Thread1 has got the access of resource
+Thread1's access of the resource has been revoked
+Thread2 has got the access of resource
+Thread2's access of the resource has been revoked
+Thread2 has got the access of resource
+Thread3's access of the resource has been revoked
+
+******
+
+What is the lock statement in C#?
+During multi-threading, when a thread is inside a critical section, it must not be removed or stopped until it is completed. To implement this feature, lock statements are used in C# which prevents other threads from entering a locked code (currently in the critical section), until the object is released.
+
+static object obj = new object();
+
+public static void LockDemo()
+{
+   lock(obj)
+   {
+       Console.WriteLine("Demonstrating use of Lock statement in C#");
+   }
+}
+
+
+******
+
+Summarize the Thread Lifecycle in C#.
+Unstarted State (New): New instance of the Thread class is initialized and not started
+Runnable State: The Start() method is called, and the thread is ready to run
+Running: A thread has been selected by the scheduler to run
+Not Runnable: Sometimes referred to as WaitSleepJoin, a thread enters this state when we call Wait() or Sleep() and also when it calls Join() on another thread
+Dead State: A thread has completed its task, or the Abort() method has been called; this is the last stage of a thread’s lifecycle
+
+**********
+
+
+
+What are Synchronous and Asynchronous operations?
+
+Answer: Synchronization is a way to create a thread-safe code where only one thread can access the resource at any given time. The asynchronous call waits for the method to complete before continuing with the program flow.
+
+Synchronous programming badly affects the UI operations when the user tries to perform time-consuming operations since only one thread will be used. In Asynchronous operation, the method call will immediately return so that the program can perform other operations while the called method completes its work in certain situations.
+
+In C#, Async and Await keywords are used to achieve asynchronous programming.
+
+************
+
+What is a Thread? What is Multithreading?
+
+Answer: A Thread is a set of instructions that can be executed, which will enable our program to perform concurrent processing. Concurrent processing helps us do more than one operation at a time. By default, C# has only one thread. But the other threads can be created to execute the code in parallel with the original thread.
+
+Thread has a life cycle. It starts whenever a thread class is created and is terminated after the execution. System.Threading is the namespace which needs to be included to create threads and use its members.
+
+Threads are created by extending the Thread Class. Start() method is used to begin thread execution.
+
+//CallThread is the target method//
+ ThreadStart methodThread = new ThreadStart(CallThread);
+ Thread childThread = new Thread(methodThread);
+ childThread.Start();
+C# can execute more than one task at a time. This is done by handling different processes by different threads. This is called MultiThreading.
+
+There are several thread methods that are used to handle multi-threaded operations:
+
+Start, Sleep, Abort, Suspend, Resume and Join.
+
+Most of these methods are self-explanatory.
+
+Few Properties of thread class are:
+
+IsAlive – contains value True when a thread is Active.
+Name – Can return the name of the thread. Also, can set a name for the thread.
+Priority – returns the prioritized value of the task set by the operating system.
+IsBackground – gets or sets a value which indicates whether a thread should be a background process or foreground.
+ThreadState– describes the thread state.
+
+Different states of a thread are:
+
+Unstarted – Thread is created.
+Running – Thread starts execution.
+WaitSleepJoin – Thread calls sleep, calls wait on another object and calls join on another thread.
+Suspended – Thread has been suspended.
+Aborted – Thread is dead but not changed to state stopped.
+Stopped – Thread has stopped.
+
+************
+
+What is a Deadlock?
+
+Answer: A Deadlock is a situation where a process is not able to complete its execution because two or more processes are waiting for each other to finish. This usually occurs in multi-threading.
+
+Here a shared resource is being held by a process and another process is waiting for the first process to release it and the thread holding the locked item is waiting for another process to complete.
+
+example:
+
+private static object objA = new object();
+private static object objB = new object();
+
+private static void PerformTaskA()
+{
+    //Try to access objB
+    lock(objB)
+    {
+        Thread.sleep(1000);
+        lock(objA)
+        {
+            //some code 
+        }
+    }
+}
+
+private static void PerformTaskB()
+{
+    lock(objA)
+    {
+        Thread.sleep(1000);
+        lock(objB)
+        {
+            //some code 
+        }
+    }
+}
+
+public static void Main()
+{
+    Thread t1 = new Thread(PerformTaskA);
+    Thread t2 = new Thread(PerformTaskB);
+
+    t1.Start();
+    t2.Start();
+}
+
+- Perform tasks accesses objB and waits for 1 second.
+- Meanwhile, PerformtaskB tries to access ObjA.
+- After 1 second, PeformtaskA tries to access ObjA which is locked by PerformtaskB.
+- PerformtaskB tries to access ObjB which is locked by PerformtaskA.
+
+This creates Deadlock.
+
+********
+
+Explain Lock, Monitors, and Mutex Object in Threading.
+
+Lock keyword ensures that only one thread can enter a particular section of the code at any given time. In the above Example, lock(ObjA) means the lock is placed on ObjA until this process releases it, no other thread can access ObjA.
+
+Mutex is also like a lock but it can work across multiple processes at a time. WaitOne() is used to lock and ReleaseMutex() is used to release the lock. But Mutex is slower than lock as it takes time to acquire and release it.
+
+Monitor.Enter and Monitor.Exit implements lock internally. a lock is a shortcut for Monitors. lock(objA) internally calls.
+
+Monitor.Enter(ObjA);
+try
+{
+}
+Finally {Monitor.Exit(ObjA));}
+
+******
+
+What is a Race Condition?
+
+Race condition occurs when two threads access the same resource and are trying to change it at the same time. The thread which will be able to access the resource first cannot be predicted.
+
+If we have two threads, T1 and T2, and they are trying to access a shared resource called X. And if both the threads try to write a value to X, the last value written to X will be saved.
+
+******
+

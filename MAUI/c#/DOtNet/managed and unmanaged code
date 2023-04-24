@@ -26,3 +26,7 @@ On the other hand, unmanaged code is directly compiled to native machine code an
 
 In .NET, Visual Basic and C# compiler creates managed code. To get unmanaged code, the application has to be written in C or C++.
 
+******************
+
+What is a safe and unsafe code in C#?
+A: A safe code is the one that runs by the management of CLR; and, an unsafe code does not run by the management of CLR.

@@ -222,7 +222,111 @@ namespace HelloWorld
             return reversed;
         }
 
-        
+        public Node MiddleNode(Node head)
+        {
+           Node slow = head;
+           Node fast = head;
+
+           while(fast != null && fast.next != null)
+           {
+                slow = slow.next;
+                fast = fast.next.next;
+           }
+
+           return slow;
+        }
+
+        public bool HasCylce(Node head)
+        {
+            if(head == null || head.next == null)
+            {
+                return false;
+            }
+
+            Node slow = head;
+            Node fast = head.next;
+
+            while(slow != fast)
+            {
+                if(fast == null && fast.next == null)
+                {
+                    return false;
+                }
+
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            return true;
+        }
+
+        public void DeleteDuplicates(Node head)
+        {
+            Node currentNode = head;
+
+            while(currentNode != null && currentNode.next != null)
+            {
+                if(currentNode.value == currentNode.next.value)
+                {
+                    currentNode.next = currentNode.next.next;
+                }
+                else
+                {
+                    currentNode = currentNode.next;
+                }
+            }
+        }
+
+        public Node RemoveLinkedListElement(Node head, int val)
+        {
+            while(head != null && head.value == val)
+            {
+                head = head.next;
+            }
+
+            Node currentNode = head;
+            while(currentNode != null && currentNode.next != null)
+            {
+                if(currentNode.value == currentNode.next.value)
+                {
+                    currentNode.next = currentNode.next.next;
+                }
+                else
+                {
+                    currentNode = currentNode.next;
+                }
+            }
+
+            return currentNode;
+        }
+
+        public Node AddTwoNumber(Node l1, Node l2)
+        {
+            Node dummy = new Node();
+            Node current = dummy;
+            int carry = 0;
+            while(l1 != null || l2 != null || carry !=0)
+            {
+                int sum = carry;
+                if(l1 != null)
+                {
+                    sum += l1.value;
+                    l1 = l1.next;
+                }
+
+                if(l2 != null)
+                {
+                    sum += l2.value;
+                    l2 = l2.next;
+                }
+
+                carry = sum/10;
+                current.next = new Node(sum % 10);
+                current = current.next;
+            }
+
+            return dummy.next;
+        }
 
         private void TraverseList(Node head)
         {
@@ -321,6 +425,39 @@ namespace HelloWorld
 
             Node reversedNodeRecurrsion = linkedListProgram.ReverseLinkedListRecursive(head1);
             linkedListProgram.TraverseList(reversedNodeRecurrsion);
+
+             Console.WriteLine("***************************");
+             Node head_new = new Node(1);
+             head_new.next = new Node(2);
+             head_new.next.next = new Node(3);
+             head_new.next.next.next = new Node(4);
+             head_new.next.next.next.next = new Node(5);
+             Node middle = this.MiddleNode(head_new);
+             Console.WriteLine("Middle Node "+ middle.value);
+
+             Console.WriteLine("***************************");
+             // Create a linked list with a cycle
+             Node head_new1 = new Node(1);
+             Node node2_new1 = new Node(2);
+             Node node3_new1 = new Node(3);
+             Node node4_new1 = new Node(4);
+
+             head_new1.next = node2_new1;
+             node2_new1.next = node3_new1;
+             node3_new1.next = node4_new1;
+             node4_new1.next = node2_new1; // creates the cycle
+
+             Console.WriteLine("Has cycle "+ linkedListProgram.HasCylce(head_new1));
+             
+             Console.WriteLine("***************************");
+             Node n1 = new Node(2, new Node(4, new Node(3)));
+             Node n2 = new Node(5, new Node(6, new Node(4)));
+
+             Node result =  linkedListProgram.AddTwoNumber(n1, n2);
+             linkedListProgram.TraverseList(result);
+            //  2 -> 4 -> 3
+            //  5 -> 6 -> 4
+            //  7 -> 0 -> 8
         }
     }    
 }

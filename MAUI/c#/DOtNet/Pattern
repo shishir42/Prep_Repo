@@ -255,4 +255,287 @@ public class Singleton
 
 In this approach, the class also has a private constructor to prevent direct instantiation of the class from outside. The instance field is initialized lazily using double check locking to ensure thread-safe initialization of the instance. The syncRoot object is used to synchronize access to the instance field. The public static property Instance provides access to the single instance of the class.
 
+************************
+
+What is dependency injection, and how can it be achieved?
+Dependency injection is a design pattern. Instead of creating an object of a class in another class (dependent class) directly, we are passing the object as an argument in the constructor of the dependent class. It helps to write loosely coupled code and helps to make the code more modular and easy to test.
+
+There are three ways to achieve dependency injection:
+
+Constructor injection: This is the most commonly used Injection type. In constructor injection, we can pass the dependency into the constructor. We have to make sure that we do not have a default constructor here, and the only one should be a parameterized constructor.
+
+Property injection: There are cases when we need the default constructor of a class, so in that case, we can use property injection.
+
+Method injection: In method injection, we need to pass the dependency in the method only. When the entire class does not require that dependency, there is no need to implement constructor injection. When we have a dependency on multiple objects, then instead of passing that dependency in the constructor, we pass that dependency in the function itself where it is required.
+
+********************************
+
+Clean Architecture in .NET Core
+
+Clean Architecture is an architectural pattern that emphasizes separation of concerns and the use of SOLID principles. It is based on the idea that the architecture of a software application should be independent of any specific framework, library, or technology.
+
+The Clean Architecture pattern is divided into several layers, with the innermost layer being the most independent and the outermost layer being the most dependent. The layers are:
+
+Entities: This layer contains the business logic and domain models of the application.
+Use Cases: This layer contains the application's business logic and use cases.
+Interface Adapters: This layer adapts the use cases to the external interfaces (e.g. web controllers, database repositories)
+Frameworks and Drivers: This layer contains the external interfaces and frameworks (e.g. ASP.NET Core, Entity Framework Core)
+Each layer is only allowed to depend on the inner layers, this way the outer layers can be changed or replaced without affecting the inner layers.
+
+Implementing Clean Architecture in .NET Core
+To implement Clean Architecture in a .NET Core application, you can start by defining the Entities and Use Cases layers. The entities should contain the domain models and the business logic of the application, while the use cases should contain the application's business logic and use cases.
+
+Next, you can create an Interface Adapters layer that adapts the use cases to the external interfaces. This layer should contain classes such as web controllers, database repositories, and other types of adapters.
+
+Finally, you can create a Frameworks and Drivers layer that contains the external interfaces and frameworks, such as ASP.NET Core and Entity Framework Core.
+
+Conclusion
+Clean Architecture is an architectural pattern that emphasizes separation of concerns and the use of SOLID principles. It is based on the idea that the architecture of a software application should be independent of any specific framework, library, or technology. By implementing Clean Architecture in a .NET Core application, you can create a more maintainable and flexible application that is easier to understand and modify.
+
+*****
+Functional Programming in .NET Core
+
+Functional Programming (FP) is a programming paradigm that emphasizes the use of functions and immutability to solve problems. In contrast to Object-Oriented Programming (OOP), FP focuses on the use of pure functions that do not have side effects and work with immutable data. This makes it easier to reason about the code and test it, as well as to make it more concurrent and parallel.
+
+.NET Core has support for functional programming through the use of C# language features such as lambdas, delegates and the System.Linq namespace which contains extension methods for working with collections.
+
+Lambdas and Delegates
+Lambdas are anonymous functions that can be passed as arguments to methods, while delegates are types that can reference a method. In .NET Core, both lambdas and delegates can be used to implement functional programming concepts such as higher-order functions and function composition. For example, the following code defines a lambda and uses it with the Array.ForEach method:
+
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+Array.ForEach(numbers, x => Console.WriteLine(x));
+Linq
+Linq (Language Integrated Query) is a set of extension methods for working with collections in .NET Core. These extension methods allow you to perform functional operations on collections such as filtering, mapping, and reducing. For example, the following code uses Linq to filter and map a collection of numbers:
+
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+var evenNumbers = numbers.Where(x => x % 2 == 0).Select(x => x * 2);
+Conclusion
+Functional Programming (FP) is a programming paradigm that emphasizes the use of functions and immutability to solve problems. In .NET Core, FP can be achieved through the use of C# language features such as lambdas, delegates and the System.Linq namespace. By using these features, you can create more maintainable, testable, concurrent and parallel code. Understanding and using FP concepts in .NET Core can help to improve the quality of your code and make it more efficient.
+
+****
+
+Service-Oriented Architecture in .NET Core
+
+Service-Oriented Architecture (SOA) is an architectural pattern that emphasizes the use of services to build software systems. In SOA, services are self-contained units of functionality that can be called over a network. They are typically based on standards such as SOAP or REST and can be used by other systems or applications to perform specific tasks.
+
+In .NET Core, SOA can be implemented using the built-in support for web services such as ASP.NET Core Web API or WCF. These technologies allow you to create RESTful or SOAP-based services that can be consumed by other systems or applications. Additionally, there are several libraries and frameworks like ServiceStack or OpenRasta that can be used to create web services.
+
+Implementing SOA in .NET Core
+To implement SOA in a .NET Core application, you can use the built-in support for web services such as ASP.NET Core Web API or WCF. These technologies allow you to create RESTful or SOAP-based services that can be consumed by other systems or applications. Additionally, there are several libraries and frameworks like ServiceStack or OpenRasta that can be used to create web services.
+
+For example, you can use the ASP.NET Core Web API to create a RESTful service that exposes a set of endpoints, while WCF can be used to create a SOAP-based service.
+
+It is also important to consider the design and implementation of the services, as well as the communication and data exchange between the services. SOA requires a good understanding of service contracts, message formats, and protocols, as well as how to handle service discovery, registration, and orchestration.
+
+Conclusion
+Service-Oriented Architecture (SOA) is an architectural pattern that emphasizes the use of services to build software systems. In .NET Core, SOA can be implemented using the built-in support for web services such as ASP.NET Core Web API or WCF, or by using libraries and frameworks such as ServiceStack or OpenRasta. Implementing SOA in
+
+****
+
+How do you implement and use a Repository Pattern in .NET Core?
+
+The Repository pattern is a design pattern that provides an abstraction layer between the data access logic and the rest of the application. The main goal of this pattern is to isolate the data access logic, making it easier to test and maintain the code.
+
+In .NET Core, the repository pattern can be implemented using interfaces and classes. The interface defines the contract that the repository must implement, while the class provides the implementation of the contract.
+
+Here's an example of how the repository pattern can be implemented in .NET Core:
+
+
+public interface IPersonRepository
+{
+    Person GetById(int id);
+    void Add(Person person);
+    void Update(Person person);
+    void Delete(int id);
+}
+
+public class PersonRepository : IPersonRepository
+{
+    private readonly MyDbContext _context;
+
+    public PersonRepository(MyDbContext context)
+    {
+        _context = context;
+    }
+
+    public Person GetById(int id)
+    {
+        return _context.Persons.Find(id);
+    }
+
+    public void Add(Person person)
+    {
+        _context.Persons.Add(person);
+        _context.SaveChanges();
+    }
+
+    public void Update(Person person)
+    {
+        _context.Persons.Update(person);
+        _context.SaveChanges();
+    }
+
+    public void Delete(int id)
+    {
+        var person = _context.Persons.Find(id);
+        _context.Persons.Remove(person);
+        _context.SaveChanges();
+    }
+}
+To use the repository, you can inject an instance of IPersonRepository into the constructor of the class that needs it, and then call the methods of the repository to perform the CRUD operations on the data.
+
+Using the repository pattern can help to improve the maintainability and testability of the code by isolating the data access logic from the rest of the application. It also allows you to easily switch between different data storage technologies or databases without changing the rest of the code.
+
+It's also important to note that, the repository pattern can be used along with the Unit of Work pattern, which allows you to bundle multiple repository calls into a single transaction, ensuring data consistency and integrity.
+
+***
+
+Can you explain the concept of Inversion of Control in .NET Core?
+
+Inversion of Control (IoC) is a design principle that allows the dependencies of a class to be passed to it, rather than the class instantiating them itself. This allows for more flexibility and decoupling of the different components of the application.
+
+In .NET Core, IoC can be implemented using a Dependency Injection (DI) container. A DI container is a library that manages the creation and lifetime of objects, and resolves their dependencies. This allows the application to be more loosely coupled, making it easier to test and maintain.
+
+Implementing IoC in .NET Core
+To implement IoC in a .NET Core application, you can use a DI container such as Autofac or Microsoft.Extensions.DependencyInjection. These containers allow you to register the types that the application needs and configure how their dependencies are resolved.
+
+For example, using Microsoft.Extensions.DependencyInjection:
+
+
+public class Startup
+{
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddTransient<IPersonRepository, PersonRepository>();
+    }
+}
+In this example, the IPersonRepository interface is registered with the PersonRepository class as its implementation. The AddTransient method specifies that a new instance of PersonRepository should be created each time it is requested.
+
+You can then use the DI container to resolve the dependencies of your classes. In the constructor of your classes, you can specify the dependencies that the class needs and the DI container will instantiate them and pass them to the class.
+
+For example,
+
+
+public class PersonService
+{
+    private readonly IPersonRepository _personRepository;
+
+    public PersonService(IPersonRepository personRepository)
+    {
+        _personRepository = personRepository;
+    }
+
+    public Person GetById(int id)
+    {
+        return _personRepository.GetById(id);
+    }
+}
+In this example, the PersonService class has a dependency on the IPersonRepository interface, which is passed to it through the constructor.
+
+Conclusion
+Inversion of Control (IoC) is a design principle that allows the dependencies of a class to be passed to it, rather than the class instantiating them itself. In .NET Core, IoC can be implemented using a Dependency Injection (DI) container such as Autofac or Microsoft.Extensions.DependencyInjection. Using a DI container allows the application to be more loosely coupled, making it easier to test and maintain. It also allows for more flexibility and decoupling of the different components of the application.
+
+****
+How do you implement and use a Command Query Responsibility Segregation (CQRS) in .NET Core?
+
+Command Query Responsibility Segregation (CQRS) is an architectural pattern that separates the responsibilities of querying data and modifying data into separate objects or components. This pattern can help to improve the scalability and maintainability of an application by separating read and write operations.
+
+In .NET Core, CQRS can be implemented using libraries or frameworks such as MediatR or SimpleCQRS. These libraries provide the infrastructure for handling commands and queries, and can be used to implement the CQRS pattern in your application.
+
+Implementing CQRS in .NET Core
+To implement CQRS in a .NET Core application, you can use a library such as MediatR. MediatR provides a simple and lightweight infrastructure for handling commands and queries, and can be used to implement the CQRS pattern in your application.
+
+First, you need to install the MediatR package from NuGet.
+
+
+Install-Package MediatR
+Then, you can define the commands and queries that your application needs. A command is used to perform an action, such as creating or updating a record, while a query is used to retrieve data, such as retrieving a list of records.
+
+For example,
+
+
+public class CreatePersonCommand : IRequest<int>
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+public class GetPersonQuery : IRequest<Person>
+{
+    public int Id { get; set; }
+}
+Next, you need to define the handlers for the commands and queries. The handlers are responsible for performing the actual action or retrieving the data.
+
+For example,
+
+
+public class CreatePersonCommandHandler : IRequestHandler<CreatePersonCommand, int>
+{
+    private readonly IPersonRepository _personRepository;
+
+    public CreatePersonCommandHandler(IPersonRepository personRepository)
+    {
+        _personRepository = personRepository;
+    }
+
+    public async Task<int> Handle(CreatePersonCommand command, CancellationToken cancellationToken)
+    {
+        var person = new Person { Name = command.Name, Age = command.Age };
+        _personRepository.Add(person);
+        await _personRepository.SaveChangesAsync();
+        return person.Id;
+    }
+}
+
+public class GetPersonQueryHandler : IRequestHandler<GetPersonQuery, Person>
+{
+    private readonly IPersonRepository _personRepository;
+
+    public GetPersonQueryHandler(IPersonRepository personRepository)
+    {
+        _personRepository = personRepository;
+    }
+
+    public async Task<Person> Handle(GetPersonQuery query, CancellationToken cancellationToken)
+    {
+        return await _personRepository.GetByIdAsync(query.Id);
+    }
+}
+Finally, you need to configure MediatR to use the handlers you have defined.
+
+
+services.AddMediatR(typeof(CreatePersonCommandHandler), typeof(GetPersonQueryHandler));
+Now, you can use the IMediator interface to send commands and queries to the handlers.
+
+
+public class PersonController : Controller
+{
+    private readonly IMediator _mediator;
+
+    public PersonController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreatePersonCommand command)
+    {
+        var personId = await _mediator.Send(command);
+        return Ok(personId);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var person = await _mediator.Send(new GetPersonQuery { Id = id });
+        return Ok(person);
+    }
+}
+In this example, CreatePersonCommand and GetPersonQuery are sent to the IMediator instance through the Send method. The IMediator instance then resolves the appropriate handler for the command or query and executes it.
+
+Conclusion
+Command Query Responsibility Segregation (CQRS) is an architectural pattern that separates the responsibilities of querying data and modifying data into separate objects or components. In .NET Core, CQRS can be implemented using libraries or frameworks such as MediatR or SimpleCQRS. This pattern can help to improve the scalability and maintainability of an application by separating read and write operations and it also allows to handle multiple operations parallelly. In order to implement CQRS, we need to define the commands and queries, then we need to define the handlers for the commands and queries and finally we need to configure MediatR to use the handlers.
+
 ****

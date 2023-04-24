@@ -149,3 +149,139 @@ Explain Marshaling in .Net.
 Marshaling is defined as the process of transforming types in the managed and unmanaged code. It is the most important service given by CLR.
 
 *******
+
+What do you understand about Reflection in C#? What are the common uses of Reflection?
+
+In C#, Reflection is a powerful feature that allows a program to examine and manipulate the metadata of types, objects, and assemblies at runtime. Reflection enables a program to dynamically load and create types, access their properties, methods, and fields, and invoke their members.
+
+Reflection is commonly used in the following scenarios:
+
+Plugin architectures: Reflection enables a program to dynamically load and execute code from external assemblies, allowing for flexible and extensible architectures.
+
+Serialization: Reflection is used to serialize and deserialize objects, converting between their binary or text representations and their in-memory representations.
+
+Code generation: Reflection is used to generate code at runtime, such as dynamic proxies or code-behind classes.
+
+Testing and debugging: Reflection can be used to inspect and modify the behavior of objects at runtime, which can be useful for testing and debugging purposes.
+
+Dependency injection: Reflection is used to instantiate and inject dependencies into objects, allowing for loosely-coupled architectures and easier testing.
+
+Assembly assembly = Assembly.LoadFrom("MyLibrary.dll");
+Type type = assembly.GetType("MyLibrary.MyClass");
+object instance = Activator.CreateInstance(type);
+MethodInfo method = type.GetMethod("MyMethod");
+object result = method.Invoke(instance, null);
+
+
+In this example, the program loads an external assembly, gets a type from the assembly, creates an instance of the type, gets a method from the type, and invokes the method on the instance. This allows the program to execute code from the external assembly at runtime, without having to know the details of the assembly at compile-time.
+
+While Reflection can be a powerful tool, it also has performance and security implications. Reflection can be slower than direct invocation of code, and can expose internal details of types and assemblies that were not intended to be exposed. Therefore, it should be used judiciously and with caution.
+
+*************
+
+What is an Assembly Manifest?
+
+An Assembly Manifest is a metadata file that contains information about an assembly, such as its version, culture, strong name, dependencies, and security requirements. The manifest is an integral part of the assembly and is stored as a binary resource within the assembly file.
+
+The manifest provides important information that enables the .NET runtime to load and execute the assembly correctly. When an assembly is loaded into memory, the runtime reads the manifest to determine the assembly's identity, dependencies, and security requirements. Based on this information, the runtime can verify that the assembly is safe to execute, resolve any dependencies that the assembly requires, and load the assembly's code into memory.
+
+The Assembly Manifest contains the following information:
+
+Assembly identity: The name, version, culture, and public key token that uniquely identify the assembly.
+
+Module list: The list of modules (i.e., .NET code files) that make up the assembly.
+
+Type references: The list of all types (classes, interfaces, etc.) that are referenced by the assembly.
+
+Resource references: The list of all non-code resources (such as images, sounds, or configuration files) that are embedded in the assembly.
+
+Assembly references: The list of other assemblies that the current assembly depends on.
+
+Security information: The list of permissions and other security requirements that the assembly requires.
+
+Hashes and signatures: The digital signature and hash values that verify the authenticity and integrity of the assembly.
+
+*************
+
+What files get generated in Debug folder when you create and compile an application in C#?
+
+When you create and compile an application in C#, several files are generated in the Debug folder, depending on the type of project and its settings. The Debug folder is typically located within the project directory, under the bin folder.
+
+Here are some of the files that may be generated in the Debug folder:
+
+The application executable: This is the main executable file that contains the compiled code of your application. It has the same name as your project, with an extension of .exe. This file is what you would run to start your application.
+
+Associated DLLs: If your application references any external libraries or assemblies, the corresponding DLL files will also be generated in the Debug folder.
+
+PDB files: PDB (Program Database) files contain debugging information that is used by the Visual Studio debugger to help you debug your code. These files have the same name as the corresponding executable or DLL file, with an extension of .pdb.
+
+Configuration files: If your application uses app.config or web.config files for configuration settings, these files will also be copied to the Debug folder.
+
+Other files: Depending on the type of project and its settings, other files may be generated in the Debug folder, such as resource files, icon files, or XML documentation files.
+
+It's worth noting that the files generated in the Debug folder are meant for development and debugging purposes only. When you're ready to deploy your application, you would typically compile it in Release mode, which generates optimized and stripped-down versions of the executable and associated files. These files would be deployed to a production environment, while the Debug files would remain in your development environment.
+
+*********
+
+****
+
+Reflection in C# extracts metadata from the datatypes during runtime. 
+
+To add reflection in the .NET framework, simply use System.Refelction namespace in your program to retrieve the type which can be anything from:
+
+Assembly
+Module
+Enum
+MethodInfo
+ConstructorInfo
+MemberInfo
+ParameterInfo
+Type
+FieldInfo
+EventInfo
+PropertyInfo
+
+******
+Summarize the Four Steps for Compiling C# Code.
+Compile source code into a managed module
+Combine the newly created module from step 1 with assembly code
+Load the CLR (Common Language Runtime) 
+Execute the assembly with CLR 
+
+*****
+
+
+
+State the uses of Reflection in C#
+Reflection is the process of describing the metadata of types, methods, and fields in a code.
+
+Some of the major use of Reflection in C#:
+
+Load assemblies at the given runtime
+Help to learn about the definition of entities like class, or enumeration by groups
+Get to know about fields, properties, constructors, events, and methods in a Class
+Helps to learn about the properties of entities such as their types, read-only status, etc.
+Helps in getting and setting a property’s value
+Helps to learn about an entity’s attributes.
+
+******
+
+What is Serialization in C#?
+When we want to store any object to a memory, a database, or a file, it needs a special process known as Serialization. 
+
+Serialization is the process of converting an object into a different form to store it on to a file, database, or memory. The purpose of Serialization is to transfer the object and its state across the network and recreate it successfully when needed.
+
+The reverse of Serialization is known as Deserialization.
+
+There are many types of serialization in C#, such as:
+
+Binary serialization: To save the state of the object in binary format.  This is done using classes defined in the System.Runtime.Serialization namespace.
+
+Soap Serialization: To save the state of the object in binary format, with the use of network-related communication.
+
+XML Serialization: To save the state of the object in XML format. This is done using classes defined in the System.Xml.Serialization namespace.
+
+JSON Serialization: To save the state of the object in JSON format.  This is done using classes defined in the System.Text.Json namespace.
+
+********
+
