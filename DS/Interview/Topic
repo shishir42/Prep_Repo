@@ -30,7 +30,7 @@
 - Bitwise operator - Pending
 - Matrix - Pending
 - Math - Pending
-- 
+- Topological sort
 
 
 
@@ -309,3 +309,5 @@ How do you find the longest string that is a concatenation of some of the given 
 How do you find the Longest Common Substring of two arrays of integers?
 How do you find the Longest Common Substring of two arrays of characters?
 
+https://github.com/seanprashad/leetcode-patterns/tree/solutions/Arrays
+https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
