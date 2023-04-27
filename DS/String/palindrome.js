@@ -16,3 +16,4 @@ const checkPalindrome = (string) => {
 console.log(checkPalindrome('madam'));
 console.log(checkPalindrome('madam11'));
 console.log(checkPalindrome('aba'));
+
