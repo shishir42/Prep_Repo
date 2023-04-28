@@ -95,3 +95,7 @@
 // However, React can be used in conjunction with other libraries and frameworks to build more complete web applications. For example, React can be used with a library like React Router for routing, and with a framework like Next.js for server-side rendering and other features.
 
 // Overall, React's focus on building reusable UI components makes it a powerful tool for building dynamic and interactive web interfaces, and its flexibility allows it to be used in a wide variety of web development contexts.
+
+// command 
+//npx create-react-app my-app
+//npx react-native@latest init AwesomeProject 
