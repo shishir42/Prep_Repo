@@ -15,6 +15,8 @@ const lcsRecursive = (x, y, n, m) => {
     }
 }
 
+// O(2^(n+m))  O(n+m)
+
 const x = 'abcdgh';
 const y = 'abedfhr';
 

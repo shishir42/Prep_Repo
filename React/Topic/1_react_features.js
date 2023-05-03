@@ -97,5 +97,6 @@
 // Overall, React's focus on building reusable UI components makes it a powerful tool for building dynamic and interactive web interfaces, and its flexibility allows it to be used in a wide variety of web development contexts.
 
 // command 
+//Node Package eXecute
 //npx create-react-app my-app
 //npx react-native@latest init AwesomeProject 

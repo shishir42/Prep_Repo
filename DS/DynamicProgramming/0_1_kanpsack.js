@@ -69,6 +69,9 @@ function knapsackRecursion(weights, values, capacity, n){
     }
 }
 
+// Time Complexity: O(2N)
+// Auxiliary Space: O(N), Stack space required for recursion
+
 // function knapsackRecursion(weights, values, capacity, n){
 //     //base case
 //     if(n === 0 || capacity === 0) {
