@@ -1,5 +1,10 @@
 The Liskov Substitution Principle (LSP) is a design principle that states that objects of a superclass should be able to be replaced with objects of a subclass without affecting the correctness of the program. In other words, any derived class should be able to be used in place of its base class without any unexpected behavior.
 
+The LSP states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program. This principle is important because it ensures that classes can be used interchangeably and makes code more flexible.
+
+Example: A class that expects an object of a superclass should be able to accept an object of any subclass without breaking the program's behavior. For example, a method that expects an animal object should be able to accept a dog object without any issues.
+
+
 public abstract class Product
 {
     public string Name { get; set; }

@@ -16,3 +16,19 @@ IQueryable also includes a Query Provider, which is responsible for translating 
 In summary, IEnumerable is used to query in-memory collections, whereas IQueryable is used to query external data sources. IQueryable uses Expression Trees and a Query Provider to enable deferred execution and efficient querying of external data sources.
 
 ***
+
+IEnumerable and IEnumerator are related interfaces in C# that are used for iterating over a collection of elements. Here's how they differ:
+
+IEnumerable is an interface that represents a collection of elements that can be enumerated. It has a single method named GetEnumerator() that returns an instance of IEnumerator.
+
+IEnumerator is an interface that provides methods for iterating over the elements of a collection. It has three methods: MoveNext(), Reset(), and Current.
+
+IEnumerable provides the GetEnumerator() method that returns an instance of IEnumerator. This method is called when you want to start iterating over the collection.
+
+IEnumerator provides the MoveNext() method that advances the iterator to the next element in the collection, the Reset() method that resets the iterator to its initial position, and the Current property that returns the current element in the collection.
+
+When you implement IEnumerable in your custom class, you need to provide an implementation for the GetEnumerator() method that returns an instance of IEnumerator. This instance can be either a new object that implements IEnumerator, or it can be an existing object that implements IEnumerator and has been previously used to iterate over the collection.
+
+When you use an object that implements IEnumerable, you can call the GetEnumerator() method to get an instance of IEnumerator. You can then use the MoveNext() method to iterate over the collection and the Current property to get the current element.
+
+In summary, IEnumerable is a higher-level interface that represents a collection of elements, while IEnumerator is a lower-level interface that provides methods for iterating over the collection. IEnumerable provides the GetEnumerator() method that returns an instance of IEnumerator, which is then used to iterate over the collection using the MoveNext() and Current methods.

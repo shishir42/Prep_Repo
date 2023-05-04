@@ -1,4 +1,5 @@
 // Dependency Injection (DI) is a design pattern in software development that allows for decoupling the components of an application by creating a separate object, the injector, that is responsible for supplying dependent objects with the necessary dependencies.
+
 // In C#, dependency injection can be implemented in various ways, including constructor injection, property injection, and method injection. Here is an example of constructor injection:
 // Suppose we have an interface ILogger that defines a method for logging messages. We also have a class MyClass that depends on an instance of ILogger to log messages:
 

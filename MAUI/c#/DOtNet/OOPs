@@ -1,3 +1,7 @@
+CLASS - A class is a LOGICAL UNIT or BLUEPRINT that contains fields, methods and properties.
+
+OBJECT - An object is an INSTANCE of a class.
+
 OOP allows .NET developers to create modular programs and classes containing methods, properties, fields, events, and other logical modules.
 
 Encapsulation: Creation of self-contained modules that bind together the data and the functions that access that data.

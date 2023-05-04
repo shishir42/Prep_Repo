@@ -68,3 +68,4 @@ Disadvantages of SRP:
 
 - Increased complexity: Separating responsibilities can lead to more classes and more complexity. This can make code harder to understand if not done properly.
 - Over-engineering: Sometimes, splitting responsibilities too finely can lead to over-engineering and unnecessary complexity. It's important to find the right balance.
+

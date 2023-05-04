@@ -80,3 +80,49 @@ Disadvantages of ISP:
 
 - Increased complexity: ISP can increase the complexity of code, particularly in cases where multiple interfaces are used. It's important to carefully design interfaces to avoid unnecessary complexity.
 - Over-engineering: Sometimes, trying to make interfaces too granular can lead to over-engineering, resulting in interfaces that are too specific and difficult to use. It's important to find the right balance between granularity and simplicity.
+
+public interface IPrinter
+{
+    void Start();
+    void Stop();
+    void Pause();
+}
+
+public interface IScanner
+{
+    void Start();
+    void Stop();
+}
+
+public class Printer : IPrinter
+{
+    public void Start()
+    {
+        // Implementation of the Start method for a printer
+    }
+
+    public void Stop()
+    {
+        // Implementation of the Stop method for a printer
+    }
+
+    public void Pause()
+    {
+        // Implementation of the Pause method for a printer
+    }
+}
+
+public class Scanner : IScanner
+{
+    public void Start()
+    {
+        // Implementation of the Start method for a scanner
+    }
+
+    public void Stop()
+    {
+        // Implementation of the Stop method for a scanner
+    }
+}
+
+In this revised example, the IPrinter interface defines all the methods that are needed by the Printer class, while the IScanner interface defines only the methods that are needed by the Scanner class. This makes the interfaces more focused and the classes that implement them do not depend on methods they do not need.

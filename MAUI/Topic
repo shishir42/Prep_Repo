@@ -1,0 +1,81 @@
+1. Xamarin Support Policy
+    https://dotnet.microsoft.com/en-us/platform/support/policy/xamarin
+
+2. .Net MAUI 
+    https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui?view=net-maui-7.0
+    https://www.syncfusion.com/blogs/post/xamarin-versus-net-maui.aspx
+    https://www.syncfusion.com/blogs/post/advantages-net-maui-over-xamarin.aspx
+    https://stackoverflow.com/questions/62729794/what-is-maui-and-what-are-differences-between-maui-and-xamarin
+
+
+3. What is Xamarin and its features
+    https://learn.microsoft.com/en-us/xamarin/get-started/what-is-xamarin
+    
+    Xamarin.iOS
+    https://learn.microsoft.com/en-us/xamarin/ios/
+
+    Xamarin.Android
+    https://learn.microsoft.com/en-us/xamarin/android/
+    Android Callable Wrappers and Managed Callable Wrappers.
+
+
+
+4. Xamarin Forms 
+    https://learn.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms
+
+    Xamarin Forms vs Xamarin Native
+    https://www.telerik.com/blogs/when-to-use-xamarin-forms-vs-xamarin-native
+    https://stackoverflow.com/questions/32204807/what-is-the-difference-between-xamarin-forms-and-xamarin-native
+
+5. .NET Core Features
+    https://learn.microsoft.com/en-us/dotnet/core/introduction
+    https://www.integrativesystems.com/features-of-dot-net-core/
+    https://www.c-sharpcorner.com/article/what-is-dot-net-core/
+
+6. ASP.Net Core
+    https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-7.0
+
+7. Mono and .NET core
+    https://developer.rhino3d.com/guides/rhinocommon/what-are-mono-and-xamarin/ 
+    https://stackoverflow.com/questions/37738106/net-core-vs-mono
+
+8. C# 8,9,10,11,12
+    https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-12
+    https://www.c-sharpcorner.com/article/c-sharp-8-features/
+    https://www.desuvit.com/top-10-c-9-0-features/
+    https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9
+    https://www.c-sharpcorner.com/blogs/c-sharp-10-features
+    https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-10
+    https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11
+    https://www.c-sharpcorner.com/article/exploring-c-sharp-11-features/
+
+     - Nullable reference types
+     - Asynchronous programming
+     - Reflection and attributes
+     - Interface implementation 
+     - Expression Tree
+     - Native Interoperability
+     - LINQ
+     - Delegate and events
+     - Threads and Thread Pool
+     - OOPS
+     - Design Pattern
+     - Architecture Pattern
+     - IDisposable and Garbage Collection
+     - Extension Method
+     - Ref and Out 
+     - Pass by reference and pass by value 
+     - INotifyPropertyChanged
+     - Dependency Injection
+     - SOLID 
+     - DRY
+     - MVVM
+     - MVC 
+     - Observer pattern
+
+9. Code Analyzers 
+
+10. Projects
+
+11. Authentication 
+    https://learn.microsoft.com/en-us/aspnet/web-api/overview/security/external-authentication-services

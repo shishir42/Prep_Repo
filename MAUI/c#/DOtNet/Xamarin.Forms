@@ -1,0 +1,42 @@
+Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build Xamarin.Android, Xamarin.iOS, and Windows applications from a single shared codebase.
+
+Xamarin.Forms allows developers to create user interfaces in XAML with code-behind in C#. These interfaces are rendered as performant native controls on each platform.
+
+Who Xamarin.Forms is for
+Xamarin.Forms is for developers with the following goals:
+- Share UI layout and design across platforms.
+- Share code, test and business logic across platforms.
+- Write cross-platform apps in C# with Visual Studio.
+
+Xamarin.Forms provides a consistent API for creating UI elements across platforms. This API can be implemented in either XAML or C# and supports databinding for patterns such as Model-View-ViewModel (MVVM).
+
+At runtime, Xamarin.Forms utilizes platform renderers to convert the cross-platform UI elements into native controls on Xamarin.Android, Xamarin.iOS and UWP. This allows developers to get the native look, feel and performance while realizing the benefits of code sharing across platforms.
+
+Xamarin.Forms applications typically consist of a shared .NET Standard library and individual platform projects. The shared library contains the XAML or C# views and any business logic such as services, models or other code. The platform projects contain any platform-specific logic or packages the application requires.
+
+- Xamarin.Essentials: Xamarin.Essentials is a library that provides cross-platform APIs for native device features.
+Device info
+File system
+Accelerometer
+Phone dialer
+Text-to-speech
+Screen lock
+
+- Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most applications require.
+
+Common navigation experience
+URI-based navigation scheme
+Integrated search handler
+
+- Platform-specifics
+Xamarin.Forms provides a common API that renders native controls across platforms, but a specific platform may have functionality that doesn't exist on other platforms. For example, the Android platform has native functionality for Fast Scrolling in a ListView but iOS does not. Xamarin.Forms platform-specifics allow you to utilize functionality that is only available on a specific platform without creating custom renderers or effects.
+
+*****************************************************************************
+- Bindable properties
+- Attached Properties
+- Resource dictionaries
+- Passing Arguments
+- Generics in Xamarin.Forms XAML
+- XAML Field Modifiers in Xamarin.Forms
+- Loading XAML at Runtime in Xamarin.Forms
+

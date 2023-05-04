@@ -1,0 +1,22 @@
+Xamarin.iOS applications are fully Ahead-of-Time (AOT) compiled from C# into native ARM assembly code. Xamarin uses Selectors to expose Objective-C to managed C# and Registrars to expose managed C# code to Objective-C. Selectors and Registrars collectively are called "bindings" and allow Objective-C and C# to communicate.
+
+*****************************************************************************
+
+Xamarin.iOS applications run within the Mono execution environment, and use full Ahead of Time (AOT) compilation to compile C# code to ARM assembly language. This runs side-by-side with the Objective-C Runtime. Both runtime environments run on top of a UNIX-like kernel, specifically XNU, and expose various APIs to the user code allowing developers to access the underlying native or managed system.
+
+Native and Managed code: An Explanation
+When developing for Xamarin the terms native and managed code are often used. Managed code is code that has its execution managed by the .NET Framework Common Language Runtime, or in Xamarin’s case: the Mono Runtime. This is what we call an intermediate language.
+
+Native code is code that will run natively on the specific platform (for example, Objective-C or even AOT compiled code, on an ARM chip). This guide explores how AOT compiles your managed code to native code, and explains how a Xamarin.iOS application works, making full use of Apple’s iOS APIs through the use of bindings, while also having access to .NET’s BCL and a sophisticated language such as C#.
+
+*****************************************************************************
+
+Limitations:
+1. Limited Generics Support
+2. Generic Subclasses of NSObjects are limited
+3. No Dynamic Code Generation
+4. System.Reflection.Emit
+5. Using Delegates to call Native Functions
+6. Reverse Callbacks
+7. .NET API Limitations
+8. Runtime Disabled Features

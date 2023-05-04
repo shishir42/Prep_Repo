@@ -1,3 +1,14 @@
+// INotifyPropertyChanged is an interface in the .NET framework that allows classes to provide notifications when the values of their properties change. It is commonly used in Model-View-ViewModel (MVVM) design pattern, where the ViewModel notifies the View when changes occur in the Model.
+
+// When a class implements the INotifyPropertyChanged interface, it must provide an event named PropertyChanged. This event is raised whenever a property value changes. The event takes an instance of PropertyChangedEventArgs as its argument, which contains the name of the property that has changed.
+
+// To use INotifyPropertyChanged, you need to follow these steps:
+
+// 1. Define the properties that you want to monitor for changes in your class.
+// 2. Implement the INotifyPropertyChanged interface in your class and raise the PropertyChanged event whenever a property value changes.
+// 3. In the View, register for the PropertyChanged event of the ViewModel and update the UI elements accordingly.
+
+
 // Sure! Here's an example that demonstrates how to use the OnPropertyChanged event with subscription and unsubscription:
 
 using System;
