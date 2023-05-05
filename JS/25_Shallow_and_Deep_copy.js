@@ -230,4 +230,23 @@ function question10(){
 
 
 
+function deepCopy(obj) {
+  // Create a new object to hold the copy
+  let newObj = {};
+  
+  // Iterate over each key and value in the original object
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      // If the value is an object, recursively call the deepCopy function
+      if (typeof obj[key] === 'object' && obj[key] !== null) {
+        newObj[key] = deepCopy(obj[key]);
+      } else {
+        // If the value is not an object, simply copy it to the new object
+        newObj[key] = obj[key];
+      }
+    }
+  }
+  
+  return newObj;
+}
 

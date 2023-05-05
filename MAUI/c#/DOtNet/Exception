@@ -58,6 +58,22 @@ Its generally recommended to use "throw" without an argument to preserve the ori
 
 Its also worth noting that when you throw an exception, you should include a descriptive error message that explains the nature of the problem. This message can be accessed by the catch block that handles the exception, and can be helpful for debugging and troubleshooting.
 
+
+Catch the more specific exceptions before the less specific ones.
+
+try
+{
+    // throws IOException
+}
+catch(IOException e)
+{
+}
+catch(Exception e)
+{
+}
+
+// Exception class is the base class for all exceptions.
+
 *******************
 
 What are custom exceptions?

@@ -119,6 +119,16 @@ public Task WaitAsync() => SomeOtherMethodAsync();
 
 In this case, if an exception is thrown within asynchronous part of SomeOtherMethodAsync(), the WaitAsync() method will not be listed in the stack trace.
 
+If a method returns a Task without awaiting it, the Task will still execute asynchronously in the background, but the calling code will not wait for it to complete. This can lead to a number of issues, including:
+
+Memory leaks: If the Task creates any resources (e.g. network connections, file handles, etc.), those resources may not be released until the Task completes. If the Task is not awaited, those resources may be kept alive indefinitely, leading to memory leaks.
+
+Unhandled exceptions: If the Task throws an exception, and the exception is not caught and handled, it will be silently ignored. This can make it difficult to debug issues in your code.
+
+Race conditions: If the calling code continues executing while the Task is still running, it may lead to race conditions where the state of your program is inconsistent.
+
+Incomplete or incorrect results: If the Task is performing some operation that produces a result (e.g. downloading a file), and the calling code does not wait for the Task to complete, the result may be incomplete or incorrect.
+
 ******
 
 Task type implements IDisposable, when are we supposed to dispose tasks?
@@ -498,3 +508,32 @@ In simple terms, a task is something you want to get done, and a thread is a way
 A thread represents the smallest unit of code processing at the OS level, with stacks and kernels. You can exercise a high degree of control over threads with Suspend() or Abort() or Resume() a thread. ThreadPool, as the name suggests is a wrapper comprising a pool of threads maintained in the runtime environment by CLR.
 
 A task in comparison is executed by a TaskScheduler and cannot create its own OS threads. A default scheduler runs on the ThreadPool and also lets you know when the task finishes and returns a result.
+
+In .NET, Task and Thread are both used for multithreading and concurrency, but they have some key differences.
+
+Abstraction level: Thread is a low-level construct that directly maps to an operating system thread, while Task is a higher-level abstraction that represents an asynchronous operation.
+
+Creation and management: Creating and managing threads is more involved than creating and managing tasks. With Thread, you need to manually create and start the thread, and manage things like thread safety and synchronization. With Task, you create a delegate that represents the asynchronous operation, and then use the Task.Run or Task.Factory.StartNew methods to start the task.
+
+Performance: Because Thread is a low-level construct, it can be more performant in certain scenarios where you need fine-grained control over the scheduling and synchronization of threads. Task, on the other hand, provides a higher-level abstraction that can simplify asynchronous programming, but may have some overhead due to the additional abstraction layer.
+
+Error handling: With Thread, you need to manually handle exceptions that are thrown within the thread. With Task, any exceptions that are thrown within the task are propagated up the call stack to the code that awaits the task.
+
+Resource usage: Creating and managing threads can be resource-intensive, as each thread requires memory for its stack and other overhead. Task can be more efficient in terms of resource usage, as the .NET runtime can manage the scheduling and reuse of threads behind the scenes.
+
+************************************************************************************************************************
+Task.Run and Task.Factory.StartNew are both methods for starting a new Task in .NET, but they have some differences in their behavior and usage.
+
+Task.Run is a static method introduced in .NET 4.5, and is designed to simplify the creation and execution of a Task that runs a single asynchronous operation. It is typically used to start a new Task that will execute a delegate representing an asynchronous operation. The main advantages of using Task.Run over Task.Factory.StartNew are:
+
+Simplified syntax: Task.Run provides a simpler and more intuitive syntax for starting a new Task that runs an asynchronous operation.
+
+Better performance: Task.Run is designed to optimize the creation and execution of a Task that runs an asynchronous operation, and may be more performant than Task.Factory.StartNew in some scenarios.
+
+Task.Factory.StartNew, on the other hand, is a more general-purpose method for starting a new Task. It allows you to specify a delegate representing any kind of operation, synchronous or asynchronous, and provides a range of options for configuring the behavior of the new Task. The main advantages of using Task.Factory.StartNew over Task.Run are:
+
+Flexibility: Task.Factory.StartNew allows you to specify any kind of operation, not just an asynchronous operation.
+
+Fine-grained control: Task.Factory.StartNew provides a range of options for configuring the behavior of the new Task, such as specifying the TaskCreationOptions and TaskScheduler to use.
+
+However, it's worth noting that Task.Factory.StartNew can be more complex to use than Task.Run, and may require more care and attention to ensure correct behavior. Additionally, in some scenarios, using Task.Factory.StartNew with certain options (such as TaskCreationOptions.LongRunning) can result in worse performance than using Task.Run.

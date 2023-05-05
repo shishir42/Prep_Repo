@@ -17,6 +17,8 @@ In summary, .NET Framework is a mature framework for building Windows applicatio
 When should we use .NET Core and .NET Standard Class Library project types?
 In general, you should use .NET Core and .NET Standard Class Library project types when you want to create a reusable library that can be used by multiple .NET platforms.
 
+https://stackoverflow.com/questions/42939454/what-is-the-difference-between-net-core-and-net-standard-class-library-project
+
 .NET Standard Class Library project type is used when you want to create a library that can be used across multiple platforms, including .NET Framework, .NET Core, and Xamarin. This project type targets a specific version of the .NET Standard specification, which defines a set of APIs that are common across all .NET platforms. When you create a .NET Standard Class Library, you can choose the minimum version of the .NET Standard specification that you want to target, and any platform that supports that version or higher will be able to use your library.
 
 .NET Core Class Library project type, on the other hand, is used when you want to create a library that can be used specifically on .NET Core. This project type targets a specific version of .NET Core, which provides a runtime environment and a set of APIs that are optimized for cross-platform development.
