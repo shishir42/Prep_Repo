@@ -1,0 +1,62 @@
+In JavaScript, there are two ways to export functions, objects, or values from a module: default exports and named exports. Here's how they differ:
+
+Default exports:
+
+1. There can only be one default export per module.
+2. The default export is identified by the default keyword.
+3. When importing a default export, you can use any name you like, as it's the only export from the module.
+4. You can import a default export using the import statement without braces.
+
+// math.js
+export default function add(a, b) {
+  return a + b;
+}
+
+// app.js
+import myAddFunction from './math.js';
+
+console.log(myAddFunction(2, 3)); // output: 5
+
+Named exports:
+
+1. There can be multiple named exports per module.
+2. Named exports are identified by their name, which is specified inside braces {}.
+3. When importing a named export, you must use the same name as the one used in the module's export statement.
+4. You can import named exports using the import statement with braces.
+
+// math.js
+export function add(a, b) {
+  return a + b;
+}
+
+export function multiply(a, b) {
+  return a * b;
+}
+
+// app.js
+import { add, multiply } from './math.js';
+
+console.log(add(2, 3)); // output: 5
+console.log(multiply(2, 3)); // output: 6
+
+
+https://www.youtube.com/watch?v=1zCNdVhdvHE&t=38s
+https://github.com/coderdost/full-stack-dev-2023/blob/redux/Chapter1/index.js
+https://www.youtube.com/watch?v=6l8RWV8D-Yo
+https://www.youtube.com/watch?v=ZkXKREktmSo
+https://www.youtube.com/watch?v=ChVE-JbtYbM
+https://legacy.reactjs.org/docs/reconciliation.html
+https://reactnative.dev/docs/hermes
+https://blog.bitsrc.io/react-what-is-fiber-architecture-and-how-it-works-fab95622b0ba
+https://blog.logrocket.com/deep-dive-react-fiber/
+https://www.codingninjas.com/codestudio/library/react-fiber-architecture
+https://www.burhanuday.com/blog/2020/09/react-internals-fiber-architecture-280l
+https://www.geeksforgeeks.org/what-is-react-fiber/
+https://wcandillon.github.io/react-native-fiber/
+
+https://www.google.com/search?q=axios+vs+fetch&oq=axios+vs+fetch&aqs=chrome..69i57j0i20i263i512j0i512l2j0i20i263i512j0i512l5.3614j0j7&sourceid=chrome&ie=UTF-8
+https://www.tothenew.com/blog/fetch-vs-axios-for-making-http-requests/#:~:text=Axios%20has%20built%2Din%20XSRF,timeout%20but%20fetch%20does%20not.
+https://redux.js.org/introduction/getting-started
+
+
+npx create-react-app app-redux-api --template redux
