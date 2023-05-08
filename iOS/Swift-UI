@@ -1,0 +1,137 @@
+  How would you explain SwiftUI’s environment to a new developer?
+  What does the @Published property wrapper do?
+  What does the @State property wrapper do?
+  What's the difference between a view's initializer and onAppear()?
+  When would you use @StateObject versus @ObservedObject?
+  How can an observable object announce changes to SwiftUI?
+  How would you create programmatic navigation in SwiftUI?
+  What is the purpose of the ButtonStyle protocol?
+  When would you use GeometryReader?
+  Why does SwiftUI use structs for views?
+  What is SwiftUI, and how is it different from UIKit?
+  What is a View in SwiftUI, and how is it different from a UIView?
+  What is a State in SwiftUI, and how is it used?
+  What is a Binding in SwiftUI, and how is it used?
+  What is the difference between @State and @Binding in SwiftUI?
+  What is a ObservableObject in SwiftUI, and how is it used?
+  What is the difference between a @StateObject and a @ObservedObject in SwiftUI?
+  What is the difference between a VStack and an HStack in SwiftUI?
+  What is a modifier in SwiftUI, and how is it used?
+  What is a gesture in SwiftUI, and how is it used?
+  What is a navigation view in SwiftUI, and how is it used?
+  What is the difference between a List and a ForEach in SwiftUI?
+  What is a conditional statement in SwiftUI, and how is it used?
+  What is a preference key in SwiftUI, and how is it used?
+  What is a shape in SwiftUI, and how is it used?
+  What is a coordinator in SwiftUI, and how is it used?
+  What is an environment object in SwiftUI, and how is it used?
+  What is a view modifier, and how is it used in SwiftUI?
+  What is the difference between a ZStack and a VStack in SwiftUI?
+  What is a view builder, and how is it used in SwiftUI?  
+  What is SwiftUI, and how is it different from UIKit?
+  What is the purpose of the @State property wrapper in SwiftUI?
+  What is the difference between @State and @Binding in SwiftUI?
+  What is a View in SwiftUI, and how is it used?
+  What is the difference between a struct and a class in SwiftUI, and when should each be used?
+  What is a layout priority in SwiftUI, and how is it used?
+  What is the purpose of the GeometryReader in SwiftUI, and how is it used?
+  What is the purpose of the .onAppear and .onDisappear modifiers in SwiftUI, and how are they used?
+  What is a Gesture in SwiftUI, and how is it used?
+  What is a NavigationView in SwiftUI, and how is it used?
+  What is a TabView in SwiftUI, and how is it used?
+  What is the purpose of the @EnvironmentObject property wrapper in SwiftUI, and how is it used?
+  What is a List in SwiftUI, and how is it used?
+  What is the purpose of the .navigationBarTitle modifier in SwiftUI, and how is it used?
+  What is the purpose of the .sheet modifier in SwiftUI, and how is it used?
+  What is the purpose of the .alert modifier in SwiftUI, and how is it used?
+  What is a custom modifier in SwiftUI, and how is it created?
+  What is the purpose of the .frame modifier in SwiftUI, and how is it used?
+  What is a TextField in SwiftUI, and how is it used?
+  What is a Picker in SwiftUI, and how is it used?
+  What is the purpose of the @FetchRequest property wrapper in SwiftUI, and how is it used with Core Data?
+  What is the difference between a ViewModifier and a custom View in SwiftUI, and how are they created?
+  What is the purpose of the @Environment property wrapper in SwiftUI, and how is it used?
+  What is the purpose of the @Binding property wrapper in SwiftUI, and how is it used?
+  What is a dynamic view in SwiftUI, and how is it created?
+  What is the difference between the @ObservedObject and @StateObject property wrappers in SwiftUI, and when should each be used?
+  What is the purpose of the .transition and .animation modifiers in SwiftUI, and how are they used?
+  What is the purpose of the .background and .overlay modifiers in SwiftUI, and how are they used?
+  What is the purpose of the @FetchRequestResult property wrapper in SwiftUI, and how is it used with Core Data?
+  What is a container view in SwiftUI, and how is it created?
+  What is the purpose of the @FetchRequestFetchRequestResult property wrapper in SwiftUI, and how is it used with Core Data?
+  What is a preference key in SwiftUI, and how is it used?
+  What is the purpose of the .onPreferenceChange modifier in SwiftUI, and how is it used?
+  What is the purpose of the .navigationBarItems modifier in SwiftUI, and how is it used?
+  What is the purpose of the .backgroundPreferenceValue modifier in SwiftUI, and how is it used?
+  What is a focus state in SwiftUI, and how is it used?
+  What is the purpose of the .disabled modifier in SwiftUI, and how is it used?
+  What is the purpose of the .allowsHitTesting modifier in SwiftUI, and how is it used?
+  What is a transaction in SwiftUI, and how is it used?
+  What is the purpose of the .foregroundColor modifier in SwiftUI, and how is it used?
+  What is the purpose of the @FetchRequest property wrapper in SwiftUI, and how is it used?
+  What is the difference between a ViewModifier and a custom modifier in SwiftUI, and when should each be used?
+  What is the purpose of the @Environment and @EnvironmentObject property wrappers in SwiftUI, and how are they used?
+  What is the difference between a StateObject and an ObservedObject in SwiftUI, and when should each be used?
+  What is a @DynamicProperty in SwiftUI, and how is it used?
+  What is the purpose of the @GestureState property wrapper in SwiftUI, and how is it used?
+  What is the purpose of the @ScaledMetric property wrapper in SwiftUI, and how is it used?
+  What is the purpose of the .transition modifier in SwiftUI, and how is it used?
+  What is a PreferenceKey in SwiftUI, and how is it used?
+  What is the purpose of the .toolbar modifier in SwiftUI, and how is it used?
+  What is the purpose of the .onChange modifier in SwiftUI, and how is it used?
+  What is a Binding in SwiftUI, and how is it used?
+  What is the purpose of the @FocusState property wrapper in SwiftUI, and how is it used?
+  What is the purpose of the .accessibility modifier in SwiftUI, and how is it used?
+  What is a GestureMask in SwiftUI, and how is it used?
+  What is the purpose of the @ViewBuilder attribute in SwiftUI, and how is it used?
+  What is the purpose of the .id modifier in SwiftUI, and how is it used?
+  What is SwiftUI and what are its benefits?
+  What is the difference between SwiftUI and UIKit?
+  What are the basic building blocks of SwiftUI?
+  How do you create a new SwiftUI project in Xcode?
+  What is the role of the @State property wrapper in SwiftUI?
+  How do you pass data between views in SwiftUI?
+  What is the difference between @State, @Binding, and @EnvironmentObject in SwiftUI?
+  How do you create a custom view in SwiftUI?
+  What is the difference between a view modifier and a view transformation in SwiftUI?
+  How do you handle user input in SwiftUI?
+  How do you add animations to a SwiftUI view?
+  How do you integrate SwiftUI with Core Data?
+  How do you use SwiftUI with networking?
+  How do you handle errors in SwiftUI?
+  How do you create a navigation view in SwiftUI?
+  How do you create a tab view in SwiftUI?
+  How do you create a list view in SwiftUI?
+  What is the purpose of the @ObservedObject property wrapper in SwiftUI?
+  How do you handle image assets in SwiftUI?
+  How do you create a custom font in SwiftUI?
+  How do you use localization in SwiftUI?
+  What is the role of the @Environment property wrapper in SwiftUI?
+  How do you use the preview canvas in SwiftUI?
+  What is the difference between static and dynamic previews in SwiftUI?
+  How do you debug a SwiftUI app?
+  How do you test a SwiftUI app?
+  What is the difference between a view and a scene in SwiftUI?
+  How do you handle device orientation changes in SwiftUI?
+  How do you use the safe area in SwiftUI?
+  How do you use the accessibility features in SwiftUI?
+  How do you implement dark mode in a SwiftUI app?
+  How do you handle dynamic type in SwiftUI?
+  How do you implement a search bar in a SwiftUI app?
+  How do you create a custom navigation bar in SwiftUI?
+  How do you create a custom tab bar in SwiftUI?
+  What is the purpose of the @GestureState property wrapper in SwiftUI?
+  How do you implement drag and drop in a SwiftUI app?
+  How do you implement multi-touch gestures in a SwiftUI app?
+  What is the role of the @FetchRequest property wrapper in SwiftUI?
+  How do you use the Combine framework with SwiftUI?
+  How do you implement push notifications in a SwiftUI app?
+  How do you use the camera and photo library in a SwiftUI app?
+  How do you implement authentication in a SwiftUI app?
+  How do you implement in-app purchases in a SwiftUI app?
+  How do you implement location services in a SwiftUI app?
+  How do you use Firebase with SwiftUI?
+  How do you use GraphQL with SwiftUI?
+  What is the difference between a view model and a data model in SwiftUI?
+  How do you use gestures in SwiftUI?
+  How do you implement a custom transition animation in SwiftUI?	

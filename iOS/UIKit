@@ -1,0 +1,247 @@
+  Which is the superclass of all the view controller objects?
+    UIViewController class is the superclass of all the view controller objects. The functionality for presenting them, loading views, rotating them is a response to the device rotations. All the standard system behavior is provided by the UIViewController class.
+
+  Who calls the main function of our app during the app launch cycle?
+    The main thread calls the main function of our app. During the app launching cycle, the system will create a main thread for the app and call the app main function on that main thread.
+
+  What are the source items used by Xcode?  
+
+  Swift or Objective-C Source Files: These are the main source code files that contain the implementation of your Swift or Objective-C classes, structs, functions, and other code entities. They typically have file extensions like .swift for Swift files or .m and .h for Objective-C files.
+
+    Interface Builder Files (.xib, .storyboard): Interface Builder files are used to design user interfaces visually. They contain a graphical representation of your app's UI elements and their layout. Interface Builder files have file extensions like .xib for individual XIB files or .storyboard for storyboard files that can contain multiple view controllers and their connections.
+
+    Asset Catalogs: Asset catalogs store various assets used in your app, such as images, app icons, launch screens, and asset catalogs (.xcassets) are used to manage and organize these assets. You can create image sets, color sets, app icons sets, and other asset types within an asset catalog.
+
+    Property List Files (.plist): Property list files are used to store structured data in key-value pairs. They are often used for configuration files, data persistence, or storing app settings. Property list files have the file extension .plist and can be edited with the Property List Editor in Xcode.
+
+    Frameworks and Libraries: Xcode supports incorporating external frameworks and libraries into your project. These can be third-party libraries or system frameworks provided by Apple. Frameworks and libraries are typically added to your project as dependencies and are managed within the "Frameworks" or "Libraries" group in the Xcode project navigator.
+
+    Resource Files: Resource files include various files used by your app, such as localized strings, fonts, sounds, videos, or any other non-code files. Resource files are typically added to your project and organized in groups based on their purpose or type.
+
+    Configuration Files: Configuration files contain settings and configurations specific to your app. These can include build settings, app entitlements, localization settings, and more. Configuration files are often included in the root directory of your project and are used to customize the build process or modify app behavior.
+
+    Explain some Common features of Protocols & Superclasses.
+
+    1. Code Reusability: Both protocols and superclasses enable code reuse by defining a set of common features that can be shared among multiple types.
+
+    2. Inheritance: Superclasses support class inheritance, allowing a subclass to inherit properties, methods, and behavior from its superclass. In contrast, protocols do not provide inheritance but allow a type to declare conformance to the protocol, thus adopting the protocol's contract.
+
+    3. Method and Property Requirements: Both protocols and superclasses can define required methods and properties that must be implemented by conforming types or subclasses, respectively.
+
+    4. Polymorphism: Both protocols and superclasses support polymorphism, allowing different types to be treated as instances of a common protocol or superclass, respectively. This facilitates code flexibility and the ability to write generic code that can work with different types.
+
+    5. Type Conformance: Protocols define a contract that types can conform to by implementing the required methods and properties. Superclasses, on the other hand, enforce inheritance, where subclasses must inherit and implement the properties and methods defined in the superclass.
+
+    6. Multiple Inheritance-like Behavior: Swift protocols support multiple inheritance-like behavior through protocol composition, allowing a type to conform to multiple protocols and inherit the combined features of those protocols.
+
+    7. Flexibility: Protocols offer more flexibility than superclasses because they can be adopted by different types, including classes, structs, and enums. This allows for greater code reuse across different types and promotes a more flexible and extensible design.
+
+    8. Shared Behavior: Superclasses allow for the definition of shared behavior among subclasses, where subclasses inherit and share the common features defined in the superclass. Protocols, on the other hand, allow types to provide a shared interface without the need for a common superclass.
+
+    Explain some biggest changes in UserNotifications.
+        Allows adding images, audio, and videos.
+        Allows creating custom interfaces for notifications.
+        Allows managing the notifications with interface in the notification center.
+
+    What mechanism does iOS support for multi-threading?
+        iOS provides several mechanisms for multi-threading and concurrent programming to improve performance and responsiveness of applications. Here are some of the main mechanisms supported by iOS:
+
+        Grand Central Dispatch (GCD): GCD is a low-level concurrency framework that allows you to perform tasks concurrently using queues. It provides a simple and efficient way to execute tasks on different threads, manage workloads, and synchronize access to shared resources. GCD uses a pool of threads managed by the system to automatically distribute tasks across available cores. GCD supports serial queues, concurrent queues, and dispatch groups.
+
+        Operation Queue: Operation Queue is a higher-level abstraction built on top of GCD. It provides additional features and control over the execution of tasks. Operations can be added to a queue, and the system manages the execution of those operations concurrently or sequentially. You can define dependencies between operations, cancel or pause them, and monitor their progress.
+
+        Thread: iOS also supports traditional POSIX threads (pthread) for low-level multi-threading. Although using threads directly is less common in modern iOS development, it provides the flexibility to manage threads manually, allocate custom stack sizes, and fine-grained control over thread execution.
+
+        Dispatch Semaphores: Dispatch Semaphores, available in GCD, allow you to control the execution of concurrent tasks. A semaphore maintains a count and allows a specified number of threads to proceed while blocking the rest until signaled. Semaphores can be used to control access to critical sections, limit the number of concurrent operations, and synchronize tasks.
+
+        Atomic Operations: iOS provides atomic operations to ensure safe access to shared resources in a multi-threaded environment. Atomic operations guarantee that read and write operations on a shared variable are indivisible, preventing data races and inconsistencies. Atomic operations include atomic compare-and-swap (OSAtomicCompareAndSwap...), atomic increment/decrement (OSAtomicIncrement/Decrement...), and atomic bit operations.
+
+        It's important to choose the appropriate mechanism for multi-threading based on your specific requirements. GCD and Operation Queue are often recommended due to their simplicity, performance optimizations, and higher-level abstractions. They handle thread management and synchronization automatically, allowing you to focus on writing concurrent code without dealing with low-level thread management details.
+
+        NSThread: It can create a low-level thread which can be started by using the “start” method.
+        NSOperationQueue: It allows a pool of threads to be created and is used to execute “NSOperations” in parallel. 
+
+
+    Explain the Grand Central Dispatch (GDC).
+    GCD (Grand Central Dispatch) is a low-level API for managing the concurrent operations. This concept is used to help in improving application performance. This process is used to manage multiple tasks at the same time. Grand Central Dispatch (GCD) is the most useful API for multitasking with Async and Sync programming in iOS.
+
+    Dispatch Queue: The Dispatch Queue manages the task in FIFO(First In First Out) order. Dispatch queues are thread-safe as we can access them from multiple threads simultaneously.
+
+    Concurrent: This process has started multiple tasks at the same time but is not sure of the termination at the same time. It can be finished in any order. They execute one or more tasks at the same time concurrently. The task is completed according to the complexity, and not by the order in the queue.
+
+    Serial: Only one task will execute at a time. It can be used to synchronize access to a specific resource.
+
+    Sync: A synchronous function has return control to the caller after the task is complete.
+
+    Async: An asynchronous function returns immediately, by ordering the task to start but will not wait for it to complete.
+    
+    Grand Central Dispatch (GCD) is a low-level concurrency framework provided by Apple for multi-threading and task management in iOS. GCD simplifies the process of executing tasks concurrently by abstracting away the complexities of thread management and synchronization. It provides a simple and efficient way to perform tasks asynchronously and in parallel, improving the performance and responsiveness of iOS applications.
+
+    GCD introduces the concept of dispatch queues, which are responsible for executing tasks in a First-In-First-Out (FIFO) order. There are two types of dispatch queues:
+
+    Serial Queues: Serial queues execute tasks one at a time, in the order they are added to the queue. Each task starts only when the previous task finishes. Serial queues are useful when you want tasks to be executed in a specific sequence or when you need to synchronize access to shared resources.
+
+    Concurrent Queues: Concurrent queues execute tasks concurrently, allowing multiple tasks to run simultaneously. Tasks are still executed in the order they are added to the queue, but the queue can execute multiple tasks concurrently. Concurrent queues are ideal for parallelizing independent tasks to take advantage of multicore processors and improve performance.
+
+    Here's an example that demonstrates the use of GCD and dispatch queues:
+    // Create a serial queue
+    let serialQueue = DispatchQueue(label: "com.example.serialQueue")
+
+    // Dispatch a task asynchronously to the serial queue
+    serialQueue.async {
+        print("Task 1")
+    }
+
+    // Dispatch another task asynchronously to the same serial queue
+    serialQueue.async {
+        print("Task 2")
+    }
+
+    // Create a concurrent queue
+    let concurrentQueue = DispatchQueue(label: "com.example.concurrentQueue", attributes: .concurrent)
+
+    // Dispatch multiple tasks asynchronously to the concurrent queue
+    concurrentQueue.async {
+        print("Task A")
+    }
+
+    concurrentQueue.async {
+        print("Task B")
+    }
+
+    // Wait for a group of tasks to complete
+    let group = DispatchGroup()
+
+    group.enter()
+    concurrentQueue.async(group: group) {
+        print("Task C")
+        group.leave()
+    }
+
+    group.enter()
+    concurrentQueue.async(group: group) {
+        print("Task D")
+        group.leave()
+    }
+
+    // Notify when all tasks in the group have completed
+    group.notify(queue: .main) {
+        print("All tasks completed")
+    }
+    
+    In the above example, a serial queue (serialQueue) and a concurrent queue (concurrentQueue) are created using DispatchQueue. Tasks are dispatched asynchronously to these queues using the async method. The tasks contain simple print statements to demonstrate their execution.
+
+    Additionally, a dispatch group (group) is used to synchronize a group of tasks. Tasks are added to the group using enter() and leave() methods, and the notify method is called to specify a block of code that should be executed when all tasks in the group have completed.
+
+    GCD provides many more features, such as dispatch barriers, timers, and dispatch sources, which further enhance the capabilities of concurrent programming. It's a powerful and widely used framework in iOS development for efficient multi-threading and concurrency.
+
+
+
+    
+
+
+
+  How are XIBs different from storyboards?
+  How would you explain UIKit segues to a new iOS developer?
+  What are storyboard identifiers for?
+  What are the benefits of using child view controllers?
+  What are the pros and cons of using viewWithTag()?
+  What is the difference between @IBOutlet and @IBAction?
+  What is the difference between a UIImage and a UIImageView?
+  What is the difference between aspect fill and aspect fit when displaying an image?
+  What is the purpose of UIActivityViewController?
+  What is the purpose of UIVisualEffectView?
+  What is the purpose of reuse identifiers for table view cells?
+  When would you choose to use a collection view rather than a table view?
+  Which parts of UIKit are you least familiar with?
+  How does a view's intrinsic content size aid in Auto Layout?
+  What is the function of anchors in Auto Layout?
+  What is the purpose of IBDesignable?
+  What is the purpose of UIMenuController?  
+  What is UIKit?
+  What is the difference between UIView and UIViewController?
+  What is the difference between a frame and a bounds?
+  What is the view hierarchy in iOS?
+  What is the role of the UIApplicationDelegate?
+  How do you create a custom UIView subclass?
+  What is the difference between a UIView and a CALayer?
+  What is the difference between a UIView and a UIWindow?
+  What is the role of a UIStackView?
+  What is Auto Layout?
+  How do you add constraints in Auto Layout?
+  What is the difference between intrinsic content size and content hugging priority?
+  How do you animate a view in iOS?
+  What is the difference between implicit and explicit animations?
+  How do you handle user interactions in a view?
+  What is the responder chain in iOS?
+  How do you create custom animations?
+  How do you create a custom transition between two view controllers?
+  What is a collection view in iOS?
+  How do you create a custom UICollectionViewCell?
+  What is the difference between a UICollectionViewFlowLayout and a UICollectionViewDelegateFlowLayout?
+  What is a table view in iOS?
+  How do you create a custom UITableViewCell?
+  What is the difference between UITableView and UICollectionView?
+  How do you handle user input in a table view?
+  How do you handle cell selection in a table view?
+  What is the role of a UIActivityIndicatorView?
+  What is the role of a UIPageControl?
+  Can you explain the difference between synchronous and asynchronous programming in iOS?
+  What are the different types of memory management techniques in iOS?
+  What is the use of ARC (Automatic Reference Counting) in iOS development?
+  Can you explain the difference between retain and assign properties in iOS?
+  Can you explain the concept of delegation in iOS?
+  What are the different types of design patterns in iOS development?
+  Can you explain the concept of MVC (Model-View-Controller) in iOS development?
+  What is the use of protocols in iOS development?
+  Can you explain the concept of blocks in iOS?
+  How do you handle exceptions in iOS development?
+  What are the different types of navigation controllers in iOS?
+  Can you explain the use of Storyboards in iOS development?
+  How do you handle background tasks in iOS development?
+  Can you explain the use of Core Data in iOS development?
+  What are the different types of testing frameworks in iOS development?
+  Can you explain the use of push notifications in iOS development?
+  How do you handle network calls in iOS development?
+  Can you explain the use of URLSession in iOS development?
+  How do you handle data persistence in iOS development?
+  Can you explain the use of Keychain in iOS development?
+  Can you explain the use of GCD (Grand Central Dispatch) in iOS development?
+  What are the different types of animations in iOS development?
+  How do you handle device orientation changes in iOS development?
+  Can you explain the use of Core Graphics in iOS development?
+  Can you explain the use of Core Animation in iOS development?
+  Can you explain the use of MapKit in iOS development?
+  How do you handle user input in iOS development?
+  Can you explain the use of UIStackView in iOS development?
+  Can you explain the use of Auto Layout in iOS development?
+  What are the different types of table view cells in iOS development?
+  How do you handle background fetch in iOS development?
+  Can you explain the use of SwiftUI in iOS development?
+  Can you explain the use of Combine framework in iOS development?
+  How do you handle localization in iOS development?
+  Can you explain the use of accessibility in iOS development?
+  How do you handle debugging in iOS development?
+  Can you explain the use of the AVFoundation framework in iOS development?
+  Can you explain the use of the Core Image framework in iOS development?
+  How do you handle push notifications with attachments in iOS development?
+  Can you explain the use of the Core Location framework in iOS development?
+  Can you explain the use of the Core Motion framework in iOS development?
+  Can you explain the use of the Core ML framework in iOS development?
+  How do you handle runtime exceptions in iOS development?
+  Can you explain the use of Firebase in iOS development?
+  How do you handle device battery life in iOS development?
+  Can you explain the use of In-App Purchases in iOS development?
+  How do you handle in-app browser links in iOS development?
+  Can you explain the use of Core Bluetooth framework in iOS development?
+  Can you explain the use of HealthKit in iOS development?
+  How do you handle low memory situations in iOS development?
+  How do you create your UI layouts – storyboards or in code?
+  How would you add a shadow to one of your views?
+  How would you round the corners of one of your views?
+  What are the advantages and disadvantages of SwiftUI compared to UIKit?
+  What do you think is a sensible minimum iOS deployment target?
+  What features of recent iOS versions were you most excited to try?
+  What kind of settings would you store in your Info.plist file?
+  What is the purpose of size classes?
+  What happens when Color or UIColor has values outside 0 to 1?

@@ -39,7 +39,7 @@ import { add, multiply } from './math.js';
 console.log(add(2, 3)); // output: 5
 console.log(multiply(2, 3)); // output: 6
 
-
+https://www.youtube.com/watch?v=VLgVw2NEqCM
 https://www.youtube.com/watch?v=1zCNdVhdvHE&t=38s
 https://github.com/coderdost/full-stack-dev-2023/blob/redux/Chapter1/index.js
 https://www.youtube.com/watch?v=6l8RWV8D-Yo

@@ -1,0 +1,147 @@
+Core Java Concepts:
+Object-oriented programming
+Inheritance, polymorphism, and encapsulation
+Java collections framework
+Exception handling
+Multithreading and synchronization
+
+Android Components:
+Activities
+Fragments
+Services
+Broadcast Receivers
+Content Providers
+
+UI Development:
+XML layout files
+Views and ViewGroups
+RecyclerView and Adapters
+Custom Views and View styling
+Handling screen orientation and multiple screen sizes
+
+Android Architecture Components:
+ViewModel
+LiveData
+Room Persistence Library
+Data Binding
+Navigation Components
+WorkManager
+Paging Library
+
+Networking and Data Persistence:
+RESTful APIs and HTTP requests
+JSON parsing and serialization
+SQLite database and CRUD operations
+Network libraries (e.g., Retrofit, OkHttp)
+Firebase Realtime Database and Cloud Firestore
+Local storage options (Shared Preferences, Internal and External Storage, File I/O operations)
+
+Multithreading and Background Processing:
+AsyncTask
+Handlers and Loopers
+Thread and Runnable
+Executor Framework
+Background services and IntentService
+WorkManager and JobScheduler
+
+Notifications and Background Services:
+NotificationManager and NotificationCompat
+Foreground services
+JobScheduler and WorkManager
+Firebase Cloud Messaging (FCM)
+
+Android Storage Options:
+Shared Preferences
+Internal and External Storage
+SQLite database
+Room Persistence Library
+File I/O operations
+
+Android Security:
+Permissions and Permission handling
+Data encryption
+Network security (HTTPS, SSL/TLS)
+ProGuard and code obfuscation
+Android App Signing and APK release process
+
+Android Testing:
+Unit testing with JUnit
+UI testing with Espresso
+Testing frameworks (Mockito, Robolectric)
+Test-driven development (TDD)
+Code coverage and testing best practices
+
+Android App Lifecycle:
+Activity lifecycle and state changes
+Process lifecycle
+Handling configuration changes
+App components and their lifecycle methods
+Saving and restoring instance state
+
+Material Design and User Experience (UX):
+Material Design principles and guidelines
+RecyclerView and CardView
+Animations and transitions
+Responsive design and Adaptive layouts
+Accessibility considerations
+
+Dependency Injection and Libraries:
+Dependency Injection (DI) frameworks (e.g., Dagger, Koin)
+Third-party libraries (e.g., Retrofit, Gson, Glide)
+Library management with Gradle and Maven
+Custom library integration and usage
+
+Android Jetpack:
+WorkManager
+Paging library
+DataStore
+Compose UI toolkit
+CameraX
+
+Android Debugging and Performance Optimization:
+Debugging techniques and tools (e.g., Android Studio Debugger)
+Performance profiling (e.g., Android Profiler)
+Memory management and optimization
+App optimization techniques (e.g., reducing APK size, optimizing network requests)
+
+Android Design Patterns:
+MVC, MVP, MVVM
+Repository pattern
+Singleton pattern
+Observer pattern
+Factory pattern
+
+Android Gradle Build System:
+Build.gradle configuration
+Build flavors and variants
+Build types and product flavors
+ProGuard and minification
+Dependency management
+
+Kotlin Programming Language:
+Kotlin syntax and features
+Null safety
+Extension functions
+Coroutines
+Kotlin collections and standard library
+
+Gradle Build System:
+Basics of Gradle build system
+Build flavors and product flavors
+Build types and signing configurations
+Dependency management and resolution
+Custom build scripts and tasks
+
+Android Studio and Development Tools:
+Android Studio IDE and its features
+Android Debug Bridge (ADB)
+Android Virtual Devices (AVD)
+Profiling and debugging tools
+Memory management and optimization
+
+Advanced Android Topics:
+Custom Views and ViewGroups
+OpenGL and Graphics
+NFC (Near Field Communication)
+AR (Augmented Reality) and VR (Virtual Reality)
+Android Things and IoT (Internet of Things)

@@ -1,0 +1,68 @@
+What is Objective-C and what is it used for?
+What are the differences between Objective-C and Swift?
+What are the basic data types in Objective-C?
+What is a property in Objective-C?
+What is a protocol in Objective-C?
+What is a category in Objective-C?
+What is a class method and an instance method in Objective-C?What is the difference between “copy” and “retain” in Objective-C?What is KVO (Key-Value Observing) in Objective-C?
+What is ARC (Automatic Reference Counting) in Objective-C?
+What is the difference between weak and strong reference in Objective-C?
+What is a block in Objective-C?
+How do you create a singleton in Objective-C?
+What is the difference between synchronous and asynchronous programming in Objective-C?
+How do you handle errors in Objective-C?
+What is the difference between NSNotification and delegation in Objective-C?
+What is the difference between an interface and an implementation in Objective-C?
+What is a nil pointer in Objective-C?
+What is the purpose of @synthesize in Objective-C?
+What is the purpose of @dynamic in Objective-C?
+How do you create a custom initializer in Objective-C?
+What is the difference between designated initializer and convenience initializer in Objective-C?
+What is a runtime in Objective-C?
+What is the purpose of the “respondsToSelector” method in Objective-C?
+What is the purpose of the “performSelector” method in Objective-C?
+What is the purpose of the “performSelectorInBackground” method in Objective-C?
+What is the purpose of the “performSelectorOnMainThread” method in Objective-C?
+What is the purpose of the “didReceiveMemoryWarning” method in Objective-C?
+What is the purpose of the “dealloc” method in Objective-C?
+What is the purpose of the “load” method in Objective-C?
+What is the purpose of the “initialize” method in Objective-C?
+What is the purpose of the “copyWithZone” method in Objective-C?
+What is the purpose of the “isEqual” method in Objective-C?
+What is the purpose of the “hash” method in Objective-C?
+What is the purpose of the “description” method in Objective-C?
+What is the purpose of the “mutableCopyWithZone” method in Objective-C?
+What is the purpose of the “NSCopying” protocol in Objective-C?
+What is the purpose of the “NSCoding” protocol in Objective-C?
+What is the difference between “retain” and “assign” in Objective-C?
+What is the difference between “strong” and “weak” in Objective-C?
+What is the difference between “nonatomic” and “atomic” in Objective-C?
+What is the purpose of the “autoreleasepool” in Objective-C?
+What is a dispatch queue in Objective-C?
+What is a GCD (Grand Central Dispatch) in Objective-C?
+What is a NSOperationQueue in Objective-C?
+What is a block-based enumeration in Objective-C?
+What is a NSPredicate in Objective-C?
+What is a NSNotificationCenter in Objective-C?
+What is a NSUserDefaults in Objective-C?
+What is a NSFileManager in Objective-C?
+What is the difference between a class and an object in Objective-C?
+Can you explain the concept of message passing in Objective-C?
+How does the use of protocols help in designing a flexible architecture in Objective-C?
+Can you explain the concept of memory management in Objective-C and how it is different from other programming languages?
+What are blocks in Objective-C and how are they used?
+How do categories and extensions differ in Objective-C?
+What is the difference between nonatomic and atomic properties in Objective-C?
+Can you explain the difference between a weak and a strong reference in Objective-C?
+How does Objective-C support multiple inheritance through the use of protocols?
+Can you explain the concept of Key-Value Coding (KVC) and Key-Value Observing (KVO) in Objective-C?
+How does Objective-C support concurrency through the use of Grand Central Dispatch (GCD) and Operation Queues?
+Can you explain the use of the @synthesize keyword in Objective-C?
+What is the difference between a class method and an instance method in Objective-C?
+How does Objective-C support introspection and reflection?
+Can you explain the use of the @dynamic keyword in Objective-C?
+What are some common design patterns used in Objective-C programming?
+Can you explain the difference between a delegate and a notification in Objective-C?
+How does Objective-C support error handling through the use of exceptions and error objects?
+What is the difference between an id type and a Class type in Objective-C?
+Can you explain the use of the copy and mutableCopy methods in Objective-C?

@@ -1,0 +1,109 @@
+Swift Programming Language:
+Basic syntax and data types
+Optionals and optional chaining
+Control flow (if-else, switch, loops)
+Functions and closures
+Error handling
+Generics
+
+iOS App Architecture:
+Model-View-Controller (MVC) pattern
+Model-View-ViewModel (MVVM) pattern
+Model-View-Presenter (MVP) pattern
+Clean Architecture
+VIPER (View-Interactor-Presenter-Entity-Router) architecture
+
+UIKit Framework:
+UIViewController lifecycle
+UIView and its subclasses
+Auto Layout and Constraints
+UITableView and UICollectionView
+UINavigationController and UITabBarController
+UIImagePickerController
+
+Foundation Framework:
+Data types (String, Array, Dictionary, etc.)
+URLSession and networking
+Codable and JSON serialization/deserialization
+Grand Central Dispatch (GCD) and multithreading
+Key-Value Coding (KVC) and Key-Value Observing (KVO)
+Core Data (basics)
+
+Core Data:
+Entities, attributes, and relationships
+Fetching and querying data
+Data modeling and versioning
+Data migration
+Core Data stack setup
+
+Auto Layout and Interface Builder:
+Constraints and layout anchors
+Interface Builder usage
+Size classes and adaptive layout
+Stack views and scroll views
+Dynamic Type and accessibility
+
+Networking and APIs:
+URLSession and URLSessionDataTask
+RESTful APIs and HTTP methods
+JSON parsing and serialization
+Authentication (e.g., OAuth, JWT)
+Alamofire and other networking libraries
+
+Core Animation and Core Graphics:
+Animations and transitions
+Layers and layer properties
+Core Graphics drawing and image manipulation
+Core Animation keyframe animations
+UIKit Dynamics and physics-based animations
+
+Memory Management and Performance:
+Automatic Reference Counting (ARC)
+Strong, weak, and unowned references
+Memory management best practices
+Instruments and profiling tools
+Performance optimization techniques
+
+Push Notifications and Background Execution:
+Apple Push Notification Service (APNS)
+Remote and local notifications
+Background modes and background tasks
+Background fetch and silent push notifications
+Background URLSession
+
+App Store and App Distribution:
+App Store Connect and iTunes Connect
+App submission and review process
+Certificates and provisioning profiles
+App signing and release process
+In-app purchases and subscriptions
+
+Testing and Debugging:
+Unit testing with XCTest
+UI testing with XCUITest
+Test-driven development (TDD)
+Debugging techniques and tools
+Crash reporting and analytics (e.g., Fabric, Firebase)
+
+Apple Frameworks and APIs:
+Core Location and MapKit
+Core Bluetooth and Bluetooth Low Energy (BLE)
+Core Animation and Core Graphics
+Core ML and machine learning
+HealthKit and Health app integration
+
+Swift Package Manager and Dependency Management:
+Basics of Swift Package Manager (SPM)
+Creating and managing packages
+Adding dependencies using SPM
+Cocoapods and Carthage usage
+
+SwiftUI (if applicable):
+Basics of SwiftUI
+SwiftUI views and modifiers
+State management and data flow
+Integrating SwiftUI with UIKit
+
+
+https://developer.apple.com/documentation/technologies
+https://developer.apple.com/documentation

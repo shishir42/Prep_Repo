@@ -47,12 +47,21 @@ https://www.youtube.com/watch?v=OvLxxV7X1Is&list=PLuoeXyslFTubw4NtepDCis5tTqK37z
 https://www.youtube.com/watch?v=YwNFw_doBnw&list=PLuoeXyslFTuaIzW91CexqpWSmxOWztkkL
 https://www.youtube.com/watch?v=ug6T-iFk5OY&list=PLuoeXyslFTuaYpVr3S9wG6PkIvYn_yHbg
 https://www.youtube.com/watch?v=-B-bnQSQr90&list=PLuoeXyslFTuaX59K2KL-HK2NxbdWiz3Tm
+https://www.youtube.com/watch?v=qzXJckVxE4w&list=PL5PR3UyfTWvcjhuWaol0P3_UHht7Fe-3O
+https://www.youtube.com/watch?v=fHtF7BQLlAU&list=PL5PR3UyfTWvfgx9W8WJ9orQf6N1tx0oxN
+https://www.youtube.com/watch?v=K-4blUReYoU&list=PL5PR3UyfTWvei-pKlZN7d8r-0tHCK1EKE
+https://www.youtube.com/watch?v=7WRZpMIPqmw&list=PL5PR3UyfTWvc6DLxny-s7rcClqEGjqLfN
+https://www.youtube.com/@iOSAcademy/playlists
+https://www.youtube.com/@SwiftfulThinking/playlists
+https://www.youtube.com/watch?v=EZpZDuOAFKE&list=PL5PR3UyfTWvdl4Ya_2veOB6TM16FXuv4y
+https://www.youtube.com/watch?v=KCgYDCKqato&t=1429s
+https://www.youtube.com/watch?v=gg8sG869Nvc&list=PL5PR3UyfTWve9ZC7Yws0x6EGjBO2FGr0o
 
-https://www.hackingwithswift.com/interview-questions
-https://www.softwaretestinghelp.com/swift-interview-questions/
-https://www.interviewbit.com/swift-interview-questions/
-https://www.codingem.com/swift-interview-questions/
-https://www.toptal.com/swift/interview-questions
+https://www.hackingwithswift.com/interview-questions - ***
+https://www.softwaretestinghelp.com/swift-interview-questions/  - ***
+https://www.interviewbit.com/swift-interview-questions/ 	- ***
+https://www.codingem.com/swift-interview-questions/		- ***
+https://www.toptal.com/swift/interview-questions	
 https://www.fullstack.cafe/blog/swift-interview-questions
 https://www.devteam.space/hiring-interview-tips/swift-interview-questions-and-answers/
 https://gist.github.com/acrookston/da0652bb6a5e9b11f2e79b7dc04e533b
@@ -295,212 +304,10 @@ In summary, using struct instead of class for SwiftUI views allows for safer and
 
 
 
-	1	What is SwiftUI and what are its benefits?
-	2	What is the difference between SwiftUI and UIKit?
-	3	What are the basic building blocks of SwiftUI?
-	4	How do you create a new SwiftUI project in Xcode?
-	5	What is the role of the @State property wrapper in SwiftUI?
-	6	How do you pass data between views in SwiftUI?
-	7	What is the difference between @State, @Binding, and @EnvironmentObject in SwiftUI?
-	8	How do you create a custom view in SwiftUI?
-	9	What is the difference between a view modifier and a view transformation in SwiftUI?
-	10	How do you handle user input in SwiftUI?
-	11	How do you add animations to a SwiftUI view?
-	12	How do you integrate SwiftUI with Core Data?
-	13	How do you use SwiftUI with networking?
-	14	How do you handle errors in SwiftUI?
-	15	How do you create a navigation view in SwiftUI?
-	16	How do you create a tab view in SwiftUI?
-	17	How do you create a list view in SwiftUI?
-	18	What is the purpose of the @ObservedObject property wrapper in SwiftUI?
-	19	How do you handle image assets in SwiftUI?
-	20	How do you create a custom font in SwiftUI?
-	21	How do you use localization in SwiftUI?
-	22	What is the role of the @Environment property wrapper in SwiftUI?
-	23	How do you use the preview canvas in SwiftUI?
-	24	What is the difference between static and dynamic previews in SwiftUI?
-	25	How do you debug a SwiftUI app?
-	26	How do you test a SwiftUI app?
-	27	What is the difference between a view and a scene in SwiftUI?
-	28	How do you handle device orientation changes in SwiftUI?
-	29	How do you use the safe area in SwiftUI?
-	30	How do you use the accessibility features in SwiftUI?
-	31	How do you implement dark mode in a SwiftUI app?
-	32	How do you handle dynamic type in SwiftUI?
-	33	How do you implement a search bar in a SwiftUI app?
-	34	How do you create a custom navigation bar in SwiftUI?
-	35	How do you create a custom tab bar in SwiftUI?
-	36	What is the purpose of the @GestureState property wrapper in SwiftUI?
-	37	How do you implement drag and drop in a SwiftUI app?
-	38	How do you implement multi-touch gestures in a SwiftUI app?
-	39	What is the role of the @FetchRequest property wrapper in SwiftUI?
-	40	How do you use the Combine framework with SwiftUI?
-	41	How do you implement push notifications in a SwiftUI app?
-	42	How do you use the camera and photo library in a SwiftUI app?
-	43	How do you implement authentication in a SwiftUI app?
-	44	How do you implement in-app purchases in a SwiftUI app?
-	45	How do you implement location services in a SwiftUI app?
-	46	How do you use Firebase with SwiftUI?
-	47	How do you use GraphQL with SwiftUI?
-	48	What is the difference between a view model and a data model in SwiftUI?
-	49	How do you use gestures in SwiftUI?
-	50	How do you implement a custom transition animation in SwiftUI?
+	
 
 
-	1	Can you explain the difference between synchronous and asynchronous programming in iOS?
-	2	What are the different types of memory management techniques in iOS?
-	3	What is the use of ARC (Automatic Reference Counting) in iOS development?
-	4	Can you explain the difference between retain and assign properties in iOS?
-	5	Can you explain the concept of delegation in iOS?
-	6	What are the different types of design patterns in iOS development?
-	7	Can you explain the concept of MVC (Model-View-Controller) in iOS development?
-	8	What is the use of protocols in iOS development?
-	9	Can you explain the concept of blocks in iOS?
-	10	How do you handle exceptions in iOS development?
-	11	What are the different types of navigation controllers in iOS?
-	12	Can you explain the use of Storyboards in iOS development?
-	13	How do you handle background tasks in iOS development?
-	14	Can you explain the use of Core Data in iOS development?
-	15	What are the different types of testing frameworks in iOS development?
-	16	Can you explain the use of push notifications in iOS development?
-	17	How do you handle network calls in iOS development?
-	18	Can you explain the use of URLSession in iOS development?
-	19	How do you handle data persistence in iOS development?
-	20	Can you explain the use of Keychain in iOS development?
-	21	Can you explain the use of GCD (Grand Central Dispatch) in iOS development?
-	22	What are the different types of animations in iOS development?
-	23	How do you handle device orientation changes in iOS development?
-	24	Can you explain the use of Core Graphics in iOS development?
-	25	Can you explain the use of Core Animation in iOS development?
-	26	Can you explain the use of MapKit in iOS development?
-	27	How do you handle user input in iOS development?
-	28	Can you explain the use of UIStackView in iOS development?
-	29	Can you explain the use of Auto Layout in iOS development?
-	30	What are the different types of table view cells in iOS development?
-	31	How do you handle background fetch in iOS development?
-	32	Can you explain the use of SwiftUI in iOS development?
-	33	Can you explain the use of Combine framework in iOS development?
-	34	How do you handle localization in iOS development?
-	35	Can you explain the use of accessibility in iOS development?
-	36	How do you handle debugging in iOS development?
-	37	Can you explain the use of the AVFoundation framework in iOS development?
-	38	Can you explain the use of the Core Image framework in iOS development?
-	39	How do you handle push notifications with attachments in iOS development?
-	40	Can you explain the use of the Core Location framework in iOS development?
-	41	Can you explain the use of the Core Motion framework in iOS development?
-	42	Can you explain the use of the Core ML framework in iOS development?
-	43	How do you handle runtime exceptions in iOS development?
-	44	Can you explain the use of Firebase in iOS development?
-	45	How do you handle device battery life in iOS development?
-	46	Can you explain the use of In-App Purchases in iOS development?
-	47	How do you handle in-app browser links in iOS development?
-	48	Can you explain the use of Core Bluetooth framework in iOS development?
-	49	Can you explain the use of HealthKit in iOS development?
-	50	How do you handle low memory situations in iOS development?
-
-
-	1	What is UIKit?
-	2	What is the difference between UIView and UIViewController?
-	3	What is the difference between a frame and a bounds?
-	4	What is the view hierarchy in iOS?
-	5	What is the role of the UIApplicationDelegate?
-	6	How do you create a custom UIView subclass?
-	7	What is the difference between a UIView and a CALayer?
-	8	What is the difference between a UIView and a UIWindow?
-	9	What is the role of a UIStackView?
-	10	What is Auto Layout?
-	11	How do you add constraints in Auto Layout?
-	12	What is the difference between intrinsic content size and content hugging priority?
-	13	How do you animate a view in iOS?
-	14	What is the difference between implicit and explicit animations?
-	15	How do you handle user interactions in a view?
-	16	What is the responder chain in iOS?
-	17	How do you create custom animations?
-	18	How do you create a custom transition between two view controllers?
-	19	What is a collection view in iOS?
-	20	How do you create a custom UICollectionViewCell?
-	21	What is the difference between a UICollectionViewFlowLayout and a UICollectionViewDelegateFlowLayout?
-	22	What is a table view in iOS?
-	23	How do you create a custom UITableViewCell?
-	24	What is the difference between UITableView and UICollectionView?
-	25	How do you handle user input in a table view?
-	26	How do you handle cell selection in a table view?
-	27	What is the role of a UIActivityIndicatorView?
-	28	What is the role of a UIPageControl?
-
-
-	1	What is Objective-C and what is it used for?
-	2	What are the differences between Objective-C and Swift?
-	3	What are the basic data types in Objective-C?
-	4	What is a property in Objective-C?
-	5	What is a protocol in Objective-C?
-	6	What is a category in Objective-C?
-	7	What is a class method and an instance method in Objective-C?
-	8	What is the difference between “copy” and “retain” in Objective-C?
-	9	What is KVO (Key-Value Observing) in Objective-C?
-	10	What is ARC (Automatic Reference Counting) in Objective-C?
-	11	What is the difference between weak and strong reference in Objective-C?
-	12	What is a block in Objective-C?
-	13	How do you create a singleton in Objective-C?
-	14	What is the difference between synchronous and asynchronous programming in Objective-C?
-	15	How do you handle errors in Objective-C?
-	16	What is the difference between NSNotification and delegation in Objective-C?
-	17	What is the difference between an interface and an implementation in Objective-C?
-	18	What is a nil pointer in Objective-C?
-	19	What is the purpose of @synthesize in Objective-C?
-	20	What is the purpose of @dynamic in Objective-C?
-	21	How do you create a custom initializer in Objective-C?
-	22	What is the difference between designated initializer and convenience initializer in Objective-C?
-	23	What is a runtime in Objective-C?
-	24	What is the purpose of the “respondsToSelector” method in Objective-C?
-	25	What is the purpose of the “performSelector” method in Objective-C?
-	26	What is the purpose of the “performSelectorInBackground” method in Objective-C?
-	27	What is the purpose of the “performSelectorOnMainThread” method in Objective-C?
-	28	What is the purpose of the “didReceiveMemoryWarning” method in Objective-C?
-	29	What is the purpose of the “dealloc” method in Objective-C?
-	30	What is the purpose of the “load” method in Objective-C?
-	31	What is the purpose of the “initialize” method in Objective-C?
-	32	What is the purpose of the “copyWithZone” method in Objective-C?
-	33	What is the purpose of the “isEqual” method in Objective-C?
-	34	What is the purpose of the “hash” method in Objective-C?
-	35	What is the purpose of the “description” method in Objective-C?
-	36	What is the purpose of the “mutableCopyWithZone” method in Objective-C?
-	37	What is the purpose of the “NSCopying” protocol in Objective-C?
-	38	What is the purpose of the “NSCoding” protocol in Objective-C?
-	39	What is the difference between “retain” and “assign” in Objective-C?
-	40	What is the difference between “strong” and “weak” in Objective-C?
-	41	What is the difference between “nonatomic” and “atomic” in Objective-C?
-	42	What is the purpose of the “autoreleasepool” in Objective-C?
-	43	What is a dispatch queue in Objective-C?
-	44	What is a GCD (Grand Central Dispatch) in Objective-C?
-	45	What is a NSOperationQueue in Objective-C?
-	46	What is a block-based enumeration in Objective-C?
-	47	What is a NSPredicate in Objective-C?
-	48	What is a NSNotificationCenter in Objective-C?
-	49	What is a NSUserDefaults in Objective-C?
-	50	What is a NSFileManager in Objective-C?
-
-
-	1	What is the difference between a class and an object in Objective-C?
-	2	Can you explain the concept of message passing in Objective-C?
-	3	How does the use of protocols help in designing a flexible architecture in Objective-C?
-	4	Can you explain the concept of memory management in Objective-C and how it is different from other programming languages?
-	5	What are blocks in Objective-C and how are they used?
-	6	How do categories and extensions differ in Objective-C?
-	7	What is the difference between nonatomic and atomic properties in Objective-C?
-	8	Can you explain the difference between a weak and a strong reference in Objective-C?
-	9	How does Objective-C support multiple inheritance through the use of protocols?
-	10	Can you explain the concept of Key-Value Coding (KVC) and Key-Value Observing (KVO) in Objective-C?
-	11	How does Objective-C support concurrency through the use of Grand Central Dispatch (GCD) and Operation Queues?
-	12	Can you explain the use of the @synthesize keyword in Objective-C?
-	13	What is the difference between a class method and an instance method in Objective-C?
-	14	How does Objective-C support introspection and reflection?
-	15	Can you explain the use of the @dynamic keyword in Objective-C?
-	16	What are some common design patterns used in Objective-C programming?
-	17	Can you explain the difference between a delegate and a notification in Objective-C?
-	18	How does Objective-C support error handling through the use of exceptions and error objects?
-	19	What is the difference between an id type and a Class type in Objective-C?
-	20	Can you explain the use of the copy and mutableCopy methods in Objective-C?
+	
 
 
 In SwiftUI, @State is a property wrapper that allows you to declare a property that can be mutated and that is also used to update the user interface. When the state value changes, SwiftUI automatically refreshes the view to reflect the updated value.
@@ -1175,196 +982,6 @@ In this example, myProperty is an atomic property that is accessed using a gette
 
 
 
-Here are 20 Swift programming interview questions that you might encounter:
-	1	What is Swift, and how is it different from Objective-C?
-	2	What is the difference between a value type and a reference type in Swift?
-	3	What are optionals in Swift, and how do you handle them?
-	4	What is a guard statement, and how is it used in Swift?
-	5	What is a closure in Swift, and how is it used?
-	6	What is a protocol in Swift, and how is it used?
-	7	What is the difference between a class and a struct in Swift?
-	8	What is ARC (Automatic Reference Counting) in Swift, and how does it work?
-	9	What is the difference between synchronous and asynchronous code in Swift?
-	10	What is the difference between a function and a method in Swift?
-	11	What is a generic type in Swift, and how is it used?
-	12	What is the difference between a computed property and a stored property in Swift?
-	13	What is the difference between an extension and a protocol in Swift?
-	14	What is a delegate in Swift, and how is it used?
-	15	What is the difference between a map and a filter in Swift?
-	16	What is a lazy property in Swift, and how is it used?
-	17	What is a tuple in Swift, and how is it used?
-	18	What is a guard-let statement, and how is it used?
-	19	What is the difference between a didSet and a willSet observer in Swift?
-	20	What is a switch statement in Swift, and how is it used?
-
-	1	What is the difference between a closure and a function in Swift?
-	2	What is the difference between a type and a protocol in Swift, and how do they relate to each other?
-	3	How do you handle errors in Swift, and what is the difference between a try, a try?, and a try!?
-	4	What is protocol-oriented programming, and how does it relate to object-oriented programming in Swift?
-	5	What is type erasure, and how is it used in Swift?
-	6	How do you implement dependency injection in Swift, and what are the benefits of using it?
-	7	What is the difference between a property wrapper and a custom getter/setter in Swift?
-	8	What is the difference between a raw value and an associated value in an enum in Swift?
-	9	How do you handle concurrency in Swift, and what are some common patterns for doing so?
-	10	What is the difference between a class cluster and a regular class in Swift?
-	11	What is the difference between an instance method and a class method in Swift, and how do you implement them?
-	12	What is a closure capture list in Swift, and how is it used?
-	13	What is the difference between a lazy variable and a computed variable in Swift, and when would you use each one?
-	14	What is the difference between a generic protocol and an associated type in Swift?
-	15	What is a variadic parameter in Swift, and how is it used?
-	16	What is a recursive function in Swift, and how do you implement it?
-	17	What is the difference between a mutating method and a non-mutating method in Swift, and how do you use them?
-	18	What is a type alias in Swift, and how is it used?
-	19	What is the difference between a didSet and a willSet observer in Swift, and how do you use them?
-	20	What is a trailing closure in Swift, and how is it used?
-
-
-	1	What is the difference between a struct and a class in Swift, and when would you use one over the other?
-	2	What is a closure capture list in Swift, and how is it used to prevent retain cycles?
-	3	What is a type eraser in Swift, and how is it used to hide the underlying type of a generic value?
-	4	What is a property wrapper in Swift, and how is it used to add additional behavior to properties?
-	5	What is SwiftUI, and how does it differ from UIKit?
-	6	What is a protocol-oriented programming (POP) in Swift, and how is it used to build flexible and extensible code?
-	7	What is a key path in Swift, and how is it used to access and modify properties of an object?
-	8	What is a result type in Swift, and how is it used to handle errors and asynchronous operations?
-	9	What is a @escaping closure in Swift, and how is it used to capture and use a closure after the function returns?
-	10	What is a typealias in Swift, and how is it used to provide a more descriptive name for a type?
-	11	What is a guard statement in Swift, and how is it used to handle errors and unexpected conditions?
-	12	What is a where clause in Swift, and how is it used to filter and transform collections?
-	13	What is a generic function in Swift, and how is it used to write flexible and reusable code?
-	14	What is a lazy sequence in Swift, and how is it used to defer the computation of a sequence until it is needed?
-	15	What is a value type and a reference type in Swift, and how do they differ in terms of memory management and mutability?
-	16	What is a type-safe builder pattern in Swift, and how is it used to build complex objects using a fluent API?
-	17	What is a Swift package manager, and how is it used to manage dependencies and build projects?
-	18	What is a higher-order function in Swift, and how is it used to write functional-style code?
-	19	What is a SwiftLint, and how is it used to enforce code style and best practices in Swift projects?
-	20	What is a Swift playground, and how is it used to experiment and explore Swift code?
-
-	1	What is protocol-oriented programming, and how does it differ from object-oriented programming?
-	2	What are higher-order functions, and how are they used in Swift?
-	3	What is type erasure, and how is it used in Swift?
-	4	What is a key path in Swift, and how is it used?
-	5	What are property wrappers, and how are they used in Swift?
-	6	What is the difference between a function and a closure in Swift?
-	7	What is a variadic function, and how is it used in Swift?
-	8	What is a recursive function, and how is it used in Swift?
-	9	What is the difference between an infix, prefix, and postfix operator in Swift?
-	10	What is the difference between a static and a class method in Swift?
-	11	What is a computed property observer in Swift, and how is it used?
-	12	What is a lazy sequence in Swift, and how is it used?
-	13	What is the difference between a class and a protocol in Swift, and when would you use each one?
-	14	What is a closure capture list in Swift, and how is it used?
-	15	What is a type alias in Swift, and how is it used?
-	16	What is the difference between a reference and a value type when working with closures in Swift?
-	17	What is a function builder, and how is it used in Swift?
-	18	What is the difference between an enumeration and a struct in Swift, and when would you use each one?
-	19	What is a function signature, and how does it affect function overloading in Swift?
-	20	What is a variadic parameter in Swift, and how is it used in functions and methods?
-	
-	1	What is protocol-oriented programming, and how is it different from object-oriented programming?
-	2	What is a closure capture list, and how is it used?
-	3	What is an escaping closure, and how is it used?
-	4	What is the difference between a weak and an unowned reference in Swift?
-	5	What is a generic where clause, and how is it used?
-	6	What is a type erasure, and how is it used?
-	7	What is a function builder, and how is it used in SwiftUI?
-	8	What is the difference between a class and a AnyObject type in Swift?
-	9	What is a recursive closure, and how is it used?
-	10	What is a higher-order function, and how is it used in Swift?
-	11	What is a mutating function, and when is it used?
-	12	What is a lazy sequence, and how is it used?
-	13	What is the difference between a struct and a class in Swift, in terms of memory management and performance?
-	14	What is a key path, and how is it used?
-	15	What is a result type, and how is it used in error handling?
-	16	What is a property wrapper, and how is it used?
-	17	What is a diffable data source, and how is it used in UITableView and UICollectionView?
-	18	What is a variadic parameter, and how is it used?
-	19	What is a compiler directive, and how is it used in Swift?
-	20	What is the difference between an operator and a function in Swift?
-
-Here are 20 interview questions on SwiftUI:
-	1	What is SwiftUI, and how is it different from UIKit?
-	2	What is a View in SwiftUI, and how is it different from a UIView?
-	3	What is a State in SwiftUI, and how is it used?
-	4	What is a Binding in SwiftUI, and how is it used?
-	5	What is the difference between @State and @Binding in SwiftUI?
-	6	What is a ObservableObject in SwiftUI, and how is it used?
-	7	What is the difference between a @StateObject and a @ObservedObject in SwiftUI?
-	8	What is the difference between a VStack and an HStack in SwiftUI?
-	9	What is a modifier in SwiftUI, and how is it used?
-	10	What is a gesture in SwiftUI, and how is it used?
-	11	What is a navigation view in SwiftUI, and how is it used?
-	12	What is the difference between a List and a ForEach in SwiftUI?
-	13	What is a conditional statement in SwiftUI, and how is it used?
-	14	What is a preference key in SwiftUI, and how is it used?
-	15	What is a shape in SwiftUI, and how is it used?
-	16	What is a coordinator in SwiftUI, and how is it used?
-	17	What is an environment object in SwiftUI, and how is it used?
-	18	What is a view modifier, and how is it used in SwiftUI?
-	19	What is the difference between a ZStack and a VStack in SwiftUI?
-	20	What is a view builder, and how is it used in SwiftUI?
-
-	1	What is SwiftUI, and how is it different from UIKit?
-	2	What is the purpose of the @State property wrapper in SwiftUI?
-	3	What is the difference between @State and @Binding in SwiftUI?
-	4	What is a View in SwiftUI, and how is it used?
-	5	What is the difference between a struct and a class in SwiftUI, and when should each be used?
-	6	What is a layout priority in SwiftUI, and how is it used?
-	7	What is the purpose of the GeometryReader in SwiftUI, and how is it used?
-	8	What is the purpose of the .onAppear and .onDisappear modifiers in SwiftUI, and how are they used?
-	9	What is a Gesture in SwiftUI, and how is it used?
-	10	What is a NavigationView in SwiftUI, and how is it used?
-	11	What is a TabView in SwiftUI, and how is it used?
-	12	What is the purpose of the @EnvironmentObject property wrapper in SwiftUI, and how is it used?
-	13	What is a List in SwiftUI, and how is it used?
-	14	What is the purpose of the .navigationBarTitle modifier in SwiftUI, and how is it used?
-	15	What is the purpose of the .sheet modifier in SwiftUI, and how is it used?
-	16	What is the purpose of the .alert modifier in SwiftUI, and how is it used?
-	17	What is a custom modifier in SwiftUI, and how is it created?
-	18	What is the purpose of the .frame modifier in SwiftUI, and how is it used?
-	19	What is a TextField in SwiftUI, and how is it used?
-	20	What is a Picker in SwiftUI, and how is it used?
-
-	1	What is the purpose of the @FetchRequest property wrapper in SwiftUI, and how is it used with Core Data?
-	2	What is the difference between a ViewModifier and a custom View in SwiftUI, and how are they created?
-	3	What is the purpose of the @Environment property wrapper in SwiftUI, and how is it used?
-	4	What is the purpose of the @Binding property wrapper in SwiftUI, and how is it used?
-	5	What is a dynamic view in SwiftUI, and how is it created?
-	6	What is the difference between the @ObservedObject and @StateObject property wrappers in SwiftUI, and when should each be used?
-	7	What is the purpose of the .transition and .animation modifiers in SwiftUI, and how are they used?
-	8	What is the purpose of the .background and .overlay modifiers in SwiftUI, and how are they used?
-	9	What is the purpose of the @FetchRequestResult property wrapper in SwiftUI, and how is it used with Core Data?
-	10	What is a container view in SwiftUI, and how is it created?
-	11	What is the purpose of the @FetchRequestFetchRequestResult property wrapper in SwiftUI, and how is it used with Core Data?
-	12	What is a preference key in SwiftUI, and how is it used?
-	13	What is the purpose of the .onPreferenceChange modifier in SwiftUI, and how is it used?
-	14	What is the purpose of the .navigationBarItems modifier in SwiftUI, and how is it used?
-	15	What is the purpose of the .backgroundPreferenceValue modifier in SwiftUI, and how is it used?
-	16	What is a focus state in SwiftUI, and how is it used?
-	17	What is the purpose of the .disabled modifier in SwiftUI, and how is it used?
-	18	What is the purpose of the .allowsHitTesting modifier in SwiftUI, and how is it used?
-	19	What is a transaction in SwiftUI, and how is it used?
-	20	What is the purpose of the .foregroundColor modifier in SwiftUI, and how is it used?
-
-	1	What is the purpose of the @FetchRequest property wrapper in SwiftUI, and how is it used?
-	2	What is the difference between a ViewModifier and a custom modifier in SwiftUI, and when should each be used?
-	3	What is the purpose of the @Environment and @EnvironmentObject property wrappers in SwiftUI, and how are they used?
-	4	What is the difference between a StateObject and an ObservedObject in SwiftUI, and when should each be used?
-	5	What is a @DynamicProperty in SwiftUI, and how is it used?
-	6	What is the purpose of the @GestureState property wrapper in SwiftUI, and how is it used?
-	7	What is the purpose of the @ScaledMetric property wrapper in SwiftUI, and how is it used?
-	8	What is the purpose of the .transition modifier in SwiftUI, and how is it used?
-	9	What is a PreferenceKey in SwiftUI, and how is it used?
-	10	What is the purpose of the .toolbar modifier in SwiftUI, and how is it used?
-	11	What is the purpose of the .onChange modifier in SwiftUI, and how is it used?
-	12	What is a Binding in SwiftUI, and how is it used?
-	13	What is the purpose of the @FocusState property wrapper in SwiftUI, and how is it used?
-	14	What is the purpose of the .accessibility modifier in SwiftUI, and how is it used?
-	15	What is a GestureMask in SwiftUI, and how is it used?
-	16	What is the purpose of the @ViewBuilder attribute in SwiftUI, and how is it used?
-	17	What is the purpose of the .id modifier in SwiftUI, and how is it used?
-
-
 In SwiftUI, a property wrapper is a type that allows you to add additional functionality to a property by wrapping it in another type. Here is a list of some of the most commonly used property wrappers in SwiftUI:
 	1	@State: This property wrapper allows you to declare a stateful property in a SwiftUI view. Any changes to this property will cause the view to redraw.
 	2	@Binding: This property wrapper allows you to create a two-way connection between a property in a parent view and a child view. When the child view updates the property, the parent view is notified of the change.
@@ -1453,10 +1070,13 @@ https://www.youtube.com/@SwiftyPlace/playlists
 
 
 
+https://medium.com/@anios4991/ios-interview-questions-swift-part-1-a3e8402f85bd
+https://medium.com/@anios4991/ios-interview-questions-swift-part-2-d3a070f9dbd
 
 
+https://chetan-aggarwal.medium.com/ios-interview-questions-part-3-swift-4b00ce352122
 
-
+https://duruldalkanat.medium.com/50-ios-interview-questions-and-answers-part-2-45f952230b9f
 https://www.google.com/search?q=ios+interview&oq=ios+interview+&aqs=chrome..69i57j69i59j0i20i131i263i433i512j0i20i263i512j0i512l2j69i60l2.3938j0j7&sourceid=chrome&ie=UTF-8
 https://duruldalkanat.medium.com/ios-interview-questions-13840247a57a
 https://www.udemy.com/course/mastering-the-ios-interview/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.EN_cc.INDIA&utm_content=deal4584&utm_term=_._ag_77882236223_._ad_533093955804_._kw__._de_c_._dm__._pl__._ti_aud-1738475842996%3Adsa-1007766171032_._li_9062009_._pd__._&matchtype=&gclid=Cj0KCQjw0tKiBhC6ARIsAAOXutm88Car0xz529gdElgAtQlJ9WI3VZHcAE8TSL0mZ7Tp95J0pwilhvYaAlmxEALw_wcB
