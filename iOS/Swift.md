@@ -1,8 +1,9 @@
-  What is iOS Swift?
+# What is iOS Swift?
+
   Swift is a compiled and new programming language evolved by Apple Inc in June 2014 in order to develop apps for mobile and desktop. This language works for watchOS, macOS, iOS, and tvOS.
-  
+
   Apple created Swift language to work with both Cocoa Touch and Cocoa. Swift supports multiple operating systems such as Free BSD, Linux, Darwin, etc. This language was designed to work along with the Objective-C library and Cocoa framework in the Apple products.
-  
+
   Swift, a programming language developed by Apple, offers several advantages that make it a popular choice for iOS, macOS, watchOS, and tvOS app development. Here are some key advantages of using Swift:
 
     Safety: Swift emphasizes safety by preventing common programming errors. It provides features like optionals to handle nil values, type inference to reduce type-related errors, and automatic memory management using Automatic Reference Counting (ARC). These features make Swift code less prone to crashes and memory leaks.
@@ -17,48 +18,50 @@
 
     Playgrounds: Swift Playgrounds provide an interactive and immersive environment for experimentation and learning. Developers can quickly test code snippets or explore new ideas without the need for a full project setup. Playgrounds encourage rapid prototyping and foster an iterative development process.
 
-    Open Source: Swift is an open-source language. This allows developers to contribute to its evolution, report issues, and access the source code. The open-source nature of Swift fosters transparency and collaboration, enabling the community to shape its future and ensuring its continuous improvement.  
+    Open Source: Swift is an open-source language. This allows developers to contribute to its evolution, report issues, and access the source code. The open-source nature of Swift fosters transparency and collaboration, enabling the community to shape its future and ensuring its continuous improvement.
 
-  Explain Swift vs Objective-C.
+# Explain Swift vs Objective-C.
 
   Swift and Objective-C are both programming languages used for iOS, macOS, watchOS, and tvOS app development. Here's a comparison between Swift and Objective-C:
 
     Syntax and Readability:
     Swift: Swift has a more modern and concise syntax compared to Objective-C. It is designed to be more readable and intuitive, reducing the amount of code needed to achieve the same functionality. Swift's syntax resembles popular modern programming languages, making it easier to learn for new developers.
     Objective-C: Objective-C has a more verbose syntax with a C-like syntax combined with Smalltalk-style messaging. It uses square brackets for method invocations, which can sometimes make code harder to read and understand.
-    
+
     Safety and Error Handling:
     Swift: Swift is designed with a strong emphasis on safety. It includes features like optionals, which ensure that variables are explicitly handled as potentially containing nil values, preventing null reference errors. Swift also provides powerful error handling mechanisms using try-catch blocks and error types, making it easier to handle and recover from errors.
     Objective-C: Objective-C lacks built-in null safety and requires manual handling of nil values. It uses nil messaging, which can lead to crashes if not handled properly. Objective-C does not have native support for exception handling; instead, it relies on error codes and callbacks.
-    
+
     Performance:
     Swift: Swift is compiled to highly optimized native code, providing excellent performance. It benefits from modern compiler technologies and performs well in terms of execution speed and memory management.
     Objective-C: Objective-C is an older language that relies on a runtime environment and dynamic method dispatch. While it can still deliver good performance, Swift generally outperforms Objective-C in terms of speed and memory management.
-    
+
     Interoperability:
     Swift: Swift is fully interoperable with Objective-C. This means that Swift code can call Objective-C APIs, and Objective-C code can call Swift APIs seamlessly. This makes it possible to use existing Objective-C codebases within Swift projects and vice versa, allowing for a gradual migration from Objective-C to Swift.
     Objective-C: Objective-C has been the primary programming language for Apple platforms for a long time. While it does not directly support Swift features, it can coexist with Swift in the same project, allowing developers to leverage existing Objective-C code and frameworks.
-    
+
     Community and Support:
     Swift: Swift has gained significant popularity since its introduction and has a growing and active developer community. It benefits from extensive community-driven resources, libraries, frameworks, and tools. The community actively contributes to the language's evolution and provides strong support for Swift developers.
     Objective-C: Objective-C has a mature ecosystem with a vast amount of libraries and resources developed over the years. While the Objective-C community is still active, Swift has become the language of choice for many new projects and is receiving more attention and support.
 
-
    In summary, Swift offers a more modern, safe, and efficient development experience compared to Objective-C. While Objective-C still has   its strengths, Swift's advantages in terms of syntax, safety, performance, and interoperability have made it the preferred choice for   iOS, macOS, watchOS, and tvOS app development.
 
-  Where can we test the apple iPhone apps if we don’t have an iOS device?
+# Where can we test the apple iPhone apps if we don’t have an iOS device?
+
   If we don’t have an iOS device, we can test our application on simulators provided by Apple on the Mac system.
 
-  What are the tools that are required to develop iOS applications?
+# What are the tools that are required to develop iOS applications?
+
   Mac/MacMini: It is necessary for us to get a Mac with the Intel-based processor running on Mac OS. Not to worry, if we have our own PC, we can still develop iOS apps through Mac Mini.
 
   Xcode: Xcode is the Apple IDE (Integrated Development Environment) that is used for both iOS apps and MAC OS. It provides us a visual layout editor and a code editor that can deal with the logic, user interface and response behind the scene.
 
   Swift Programming Language: In the code editor, the logic will be written in a programming language that is invented by Apple, called Swift.
 
-  Apple Developer Program: This program allows the developer to push our app live on the App store so that the customers and downloaders all over the world can download our app and use it.  
-  
-  What are the most important features of swift?
+  Apple Developer Program: This program allows the developer to push our app live on the App store so that the customers and downloaders all over the world can download our app and use it.
+
+# What are the most important features of swift?
+
   More impressive structs and enums
   Protocol oriented
   Not required to use semicolons
@@ -72,21 +75,22 @@
 
   Modern Syntax: Swift has a clean and expressive syntax that is easy to read and write. It introduces modern language features like type inference, closures, and generics, reducing the verbosity and boilerplate code commonly associated with other programming languages. The modern syntax enhances developer productivity and code maintainability.
 
-  Optionals and Optional Chaining: Swift introduces optionals, a type that allows variables to have either a value or no value (nil). Optionals help developers write more robust code by explicitly handling cases where a value may be missing. Swift also supports optional chaining, enabling safe access to properties and methods of optional values without the need for explicit unwrapping.  
+  Optionals and Optional Chaining: Swift introduces optionals, a type that allows variables to have either a value or no value (nil). Optionals help developers write more robust code by explicitly handling cases where a value may be missing. Swift also supports optional chaining, enabling safe access to properties and methods of optional values without the need for explicit unwrapping.
 
-  Automatic Memory Management: Swift uses Automatic Reference Counting (ARC) to automatically manage memory allocation and deallocation. ARC tracks and manages references to objects, ensuring that memory is released when it is no longer in use. This reduces the likelihood of memory leaks and helps simplify memory management compared to manual memory management in other languages like Objective-C.  
+  Automatic Memory Management: Swift uses Automatic Reference Counting (ARC) to automatically manage memory allocation and deallocation. ARC tracks and manages references to objects, ensuring that memory is released when it is no longer in use. This reduces the likelihood of memory leaks and helps simplify memory management compared to manual memory management in other languages like Objective-C.
 
   Closures and Higher-Order Functions: Swift supports closures, which are self-contained blocks of functionality that can be passed around and used in code. Closures enable powerful functional programming patterns and allow developers to write more concise and expressive code. Swift also provides higher-order functions like map, filter, and reduce, making it easier to manipulate collections of data.
-  
+
   Interoperability with Objective-C: Swift is fully interoperable with Objective-C, allowing developers to use both languages within the same project. Objective-C frameworks and libraries can be used directly in Swift, and Swift code can be called from Objective-C. This interoperability facilitates the adoption of Swift in existing Objective-C codebases and enables a smooth transition to Swift.
 
-  Protocol-Oriented Programming: Swift encourages protocol-oriented programming, where protocols define a set of methods and properties that types can conform to. This approach promotes code reuse, modularity, and extensibility. Protocols in Swift can have default implementations, allowing for behavior inheritance, and they support features like protocol extensions and protocol composition.  
+  Protocol-Oriented Programming: Swift encourages protocol-oriented programming, where protocols define a set of methods and properties that types can conform to. This approach promotes code reuse, modularity, and extensibility. Protocols in Swift can have default implementations, allowing for behavior inheritance, and they support features like protocol extensions and protocol composition.
 
-  Automatic Memory Management: Swift uses Automatic Reference Counting (ARC) to automatically manage memory allocation and deallocation. ARC tracks and manages references to objects, ensuring that memory is released when it is no longer in use. This reduces the likelihood of memory leaks and helps simplify memory management compared to manual memory management in other languages like Objective-C.  
+  Automatic Memory Management: Swift uses Automatic Reference Counting (ARC) to automatically manage memory allocation and deallocation. ARC tracks and manages references to objects, ensuring that memory is released when it is no longer in use. This reduces the likelihood of memory leaks and helps simplify memory management compared to manual memory management in other languages like Objective-C.
 
   Much faster when compared to other languages.
-  
-  Explain the common execution states for a swift iOS App (iOS Application Lifecycle).
+
+# Explain the common execution states for a swift iOS App (iOS Application Lifecycle).
+
     Not Running: The app is not launched or is terminated by the user or the system. It does not occupy any system resources.
 
     Inactive: The app is running in the foreground but is not receiving events. This state occurs briefly during transitions, such as when a call or a system alert appears and temporarily interrupts the app's active state.
@@ -101,7 +105,8 @@
 
     Developers can utilize various iOS frameworks and methods to manage and respond to these lifecycle changes. For example, the AppDelegate class includes methods like application(_:didFinishLaunchingWithOptions:), applicationDidEnterBackground(_:), applicationDidBecomeActive(_:), etc., which can be overridden to perform specific actions when the app transitions between states.
 
-    AppDelegate Methods:
+# AppDelegate Methods:
+
     application(_:didFinishLaunchingWithOptions:): Called when the app finishes launching. You can perform initial setup and configuration here.
     applicationDidBecomeActive(_:): Called when the app becomes active and is ready to receive user input.
     applicationWillResignActive(_:): Called when the app is about to become inactive, such as when a phone call or notification interrupts it.
@@ -109,21 +114,25 @@
     applicationWillEnterForeground(_:): Called when the app is about to enter the foreground. Perform tasks like restoring user data or refreshing the UI here.
     applicationWillTerminate(_:): Called when the app is about to terminate. Use this method to save any necessary data or perform final cleanup tasks.
 
-    UIViewController Methods:
+# UIViewController Methods:
+
     viewDidLoad(): Called after the view controller's view is loaded into memory. Perform one-time setup tasks here.
     viewWillAppear(_:): Called just before the view appears on the screen. Perform UI updates or data reloading tasks here.
     viewDidAppear(_:): Called after the view appears on the screen. Use this method for tasks that need to occur when the view is fully visible.
     viewWillDisappear(_:): Called just before the view is about to disappear. Clean up resources or save data before the view is no longer visible.
     viewDidDisappear(_:): Called after the view has disappeared from the screen. Perform cleanup tasks or stop ongoing processes here.
-    
-    UIViewController Transition Methods:
+
+# UIViewController Transition Methods:
+
     viewWillTransition(to:with:): Called before the view controller's view transitions to a new size, such as during device rotation. Update the UI or perform layout adjustments here.
     traitCollectionDidChange(_:previousTraitCollection:): Called when the device's traits (e.g., screen size or user interface style) change. Adapt the UI or respond to trait changes here.
 
-  Is Swift an object-oriented programming language?
-     Yes, swift is an object-oriented programming language.
-  
-  What type of objects are basic data types in swift?
+# Is Swift an object-oriented programming language?
+
+Yes, swift is an object-oriented programming language.
+
+# What type of objects are basic data types in swift?
+
     Int: int is used to store the integer value.
     Double and Float: Double and Float in swift are considered when while working with the decimal numbers.
     Bool: The bool type is used to store the Boolean value. In swift, it uses true and false conditions.
@@ -133,7 +142,8 @@
     Tuples: Represents a grouping of values of different types into a single compound value.
     Optional Types: Represents a value that may or may not be present. It is used to handle the absence of a value, such as a nil value.
 
-  What is init() in Swift?
+# What is init() in Swift?
+
     Initialization is a process of preparing an instance of an enumeration, structure or class for use. Initializers are also called to create a new instance of a particular type. An initializer is an instance method with no parameters. Using the initializer, we can write the init keyword.
 
     init()
@@ -141,34 +151,37 @@
     // perform some New Instance initialization here
     }
 
-  What are the control transfer statements that are used in iOS swift?
+# What are the control transfer statements that are used in iOS swift?
+
     Continue:
     The continue statement is used in loops (such as for or while) to skip the remaining code within the loop for the current iteration and move on to the next iteration.
-    
+
     Break:
     The break statement is used to exit the current loop or switch statement. It terminates the loop or switch and transfers control to the next line of code after the loop or switch.
-    
+
     Fallthrough:
     The fallthrough statement is used in a switch statement to transfer control to the next case, even if it doesn't match the case condition. It allows execution to "fall through" to the next case without performing an explicit check.
-    
+
     Return:
     The return statement is used to exit a function or method and return a value, if applicable. It transfers control back to the calling code.
-    
+
     Throw:
     The throw statement is used in error handling to throw an error. It transfers control to the nearest error-handling catch block, where the error can be caught and handled.
-    
+
     Guard:
     The guard statement is used for early exit. It provides a way to check a condition and, if the condition is not met, transfer control out of the current scope. It is often used to validate input parameters or conditions before continuing execution.
-    
+
     Defer:
     The defer statement is used to schedule a block of code to be executed just before the current scope is exited. It allows you to perform cleanup or deferred actions, regardless of how the current scope is exited (e.g., through a return, break, or error).h
 
-  What is the difference between Let and Var in swift?
+# What is the difference between Let and Var in swift?
+
     Let: Let keyword is immutable, it’s used to declare a constant variable, and the constant variable cannot be changed once they are initialized.
 
     Var: Var keyword is mutable, and is used to declare a variant variable. These variant variables can change the run time.
 
-  Which JSON framework is supported by iOS
+# Which JSON framework is supported by iOS
+
     iOS provides native support for working with JSON data through the Foundation framework. The key classes and protocols in Foundation for JSON parsing and serialization are:
 
     JSONSerialization:
@@ -195,9 +208,10 @@
     ObjectMapper is another popular third-party library that helps with converting JSON to Swift objects and vice versa.
     It offers powerful mapping and transformation capabilities, allowing you to define mappings between JSON keys and Swift object properties.
 
-    These third-party frameworks can provide additional features and flexibility, such as simplified syntax, object mapping, and error handling. You can choose the JSON framework that best suits your project's requirements and coding style.      
+    These third-party frameworks can provide additional features and flexibility, such as simplified syntax, object mapping, and error handling. You can choose the JSON framework that best suits your project's requirements and coding style.
 
- What is PLIST in iOS?
+# What is PLIST in iOS?
+
     In iOS, a Property List (PLIST) is a file format used to store structured data. It is commonly used to store configuration settings, preferences, and other types of data in an organized and readable manner. PLIST files are written in XML or binary format and follow a specific structure defined by Apple.
 
     Property Lists can be used to store various types of data, including:
@@ -214,13 +228,14 @@
 
     Overall, PLIST files provide a convenient and structured way to store and manage data in iOS applications.
 
-  What is a dictionary?
+# What is a dictionary?
+
     Dictionaries are an association of an unordered collection of key-value pairs. Each value is associated with a unique key, which is a hashable type such as a number or string. We can use the dictionary concept in swift programming language whenever we want to obtain the values based on a key value.
 
     Syntax of Swift Dictionaries:
         Dictionary<Key, Value> ()
 
-        [Key: Value] ()
+    [Key: Value] ()
 
     // using Dictionary
     Var names = Dictonary<String,Int> ()
@@ -228,8 +243,9 @@
     print(names)
     // it prints [Ajay: 1, Mohit: 2]
 
-   What is a Protocol in swift?
-    The protocol is a very common feature of the Swift programming language and the protocol is a concept that is similar to an interface from java. A protocol defines a blueprint of properties, methods, and other requirements that a class, struct, or enum must adopt. 
+# What is a Protocol in swift?
+
+    The protocol is a very common feature of the Swift programming language and the protocol is a concept that is similar to an interface from java. A protocol defines a blueprint of properties, methods, and other requirements that a class, struct, or enum must adopt.
 
     Protocols are declared after the structure, enumeration or class type names. A single and multiple protocol declaration can be possible. Multiple protocols are separated by commas.
 
@@ -248,12 +264,12 @@
         var numberOfWheels: Int {
             return 4
         }
-    
-        func start() {
+
+    func start() {
             print("Starting the car")
         }
-        
-        func stop() {
+
+    func stop() {
             print("Stopping the car")
         }
     }
@@ -262,12 +278,12 @@
         var numberOfWheels: Int {
             return 2
         }
-        
-        func start() {
+
+    func start() {
             print("Starting the motorcycle")
         }
-        
-        func stop() {
+
+    func stop() {
             print("Stopping the motorcycle")
         }
     }
@@ -283,7 +299,8 @@
     performVehicleActions(car) // Output: Starting the car \n Stopping the car
     performVehicleActions(motorcycle) // Output: Starting the motorcycle \n Stopping the motorcycle
 
-  What is a delegate in swift?
+# What is a delegate in swift?
+
     In Swift, a delegate is a design pattern that allows one object to communicate and interact with another object on behalf of it. The delegate pattern enables loose coupling between objects and promotes code reusability and modularity. In this pattern, one object acts as a delegate for another object and handles specific tasks or provides additional functionality.
 
     protocol ShoppingCartDelegate: AnyObject {
@@ -293,7 +310,7 @@
     class ShoppingCart {
         weak var delegate: ShoppingCartDelegate?
 
-        func addItemToCart(itemName: String) {
+    func addItemToCart(itemName: String) {
             // Add item to the cart
             delegate?.didAddItemToCart(itemName: itemName)
         }
@@ -302,11 +319,11 @@
     class CheckoutViewController: ShoppingCartDelegate {
         let shoppingCart = ShoppingCart()
 
-        init() {
+    init() {
             shoppingCart.delegate = self
         }
 
-        func didAddItemToCart(itemName: String) {
+    func didAddItemToCart(itemName: String) {
             print("Item '\(itemName)' added to the cart")
             // Perform additional checkout-related tasks
         }
@@ -314,7 +331,7 @@
 
     let checkoutVC = CheckoutViewController()
     checkoutVC.shoppingCart.addItemToCart(itemName: "iPhone")
-  
+
     In this example, we have a protocol called ShoppingCartDelegate that defines a single method didAddItemToCart(itemName:). This protocol specifies the responsibilities of a delegate that handles cart-related events.
 
     The ShoppingCart class has a weak reference to an object that conforms to the ShoppingCartDelegate protocol. When an item is added to the cart using the addItemToCart(itemName:) method, the delegate's didAddItemToCart(itemName:) method is called to notify the delegate about the event.
@@ -327,7 +344,8 @@
 
     Delegates are widely used in various iOS frameworks, such as UIKit, where views, table views, and text fields use delegates to handle user interactions and provide customization and event handling capabilities. Delegates provide a way for objects to communicate and cooperate, enhancing the flexibility and extensibility of your Swift code.
 
-  What is the use of double question mark “??” in swift?
+# What is the use of double question mark “??” in swift?
+
     In Swift, the double question mark operator (??) is known as the nil-coalescing operator. It provides a concise way to handle optional values and provide a default value when the optional value is nil
 
     The nil-coalescing operator has the following syntax:
@@ -341,7 +359,8 @@
     let username = optionalName ?? "Guest"
     print(username) // Output: Guest
 
-   What is a GUARD statement? What is the benefit of using the GUARD statement in swift?
+# What is a GUARD statement? What is the benefit of using the GUARD statement in swift?
+
     In Swift, we use the guard statement to transfer program control out of scope when certain conditions are not met.
 
     The guard statement is similar to the if statement with one major difference. The if statement runs when a certain condition is met. However, the guard statement runs when a certain condition is not met.
@@ -355,8 +374,8 @@
         guard divisor != 0 else {
             return nil
         }
-    
-        return dividend / divisor
+
+    return dividend / divisor
     }
 
     https://www.programiz.com/swift-programming/guard-statement
@@ -374,94 +393,102 @@
     Overall, the guard statement provides a concise and expressive way to handle scenarios where certain conditions must be satisfied before proceeding with the main execution flow.
 
     What are the collection types that are available in swift?
-        Arrays: An array is an ordered collection of elements of the same type. Elements in an array are stored in contiguous memory locations, allowing fast random access. Arrays can grow or shrink dynamically, and they support a variety of operations such as appending, inserting, and removing elements.
 
-        Sets: A set is an unordered collection of unique elements. Sets do not allow duplicate values, and they can be useful when you want to check membership or eliminate duplicates from a collection. Swift provides both mutable and immutable sets.
+    Arrays: An array is an ordered collection of elements of the same type. Elements in an array are stored in contiguous memory locations, allowing fast random access. Arrays can grow or shrink dynamically, and they support a variety of operations such as appending, inserting, and removing elements.
 
-        Dictionaries: A dictionary is a collection of key-value pairs. Each value in a dictionary is associated with a unique key, which allows efficient lookup and retrieval of values based on their keys. Dictionaries can be mutable or immutable.
+    Sets: A set is an unordered collection of unique elements. Sets do not allow duplicate values, and they can be useful when you want to check membership or eliminate duplicates from a collection. Swift provides both mutable and immutable sets.
 
-        Tuples: A tuple is a group of values combined into a single compound value. Tuples can contain values of different types, and their elements can be accessed by index or by using named elements.
+    Dictionaries: A dictionary is a collection of key-value pairs. Each value in a dictionary is associated with a unique key, which allows efficient lookup and retrieval of values based on their keys. Dictionaries can be mutable or immutable.
 
-        Ranges: A range represents a sequence of values. Ranges are useful for expressing a range of indices, a range of values, or for iteration purposes. Swift provides two types of ranges: closed ranges (from a start value to an end value, both inclusive) and half-open ranges (from a start value up to, but not including, an end value).
+    Tuples: A tuple is a group of values combined into a single compound value. Tuples can contain values of different types, and their elements can be accessed by index or by using named elements.
 
-        Collections in Foundation framework: Swift also provides access to various collection types from the Foundation framework, such as NSArrays, NSSets, and NSDictionaries. These Foundation collection types are bridged to their Swift counterparts and can be used interchangeably.
+    Ranges: A range represents a sequence of values. Ranges are useful for expressing a range of indices, a range of values, or for iteration purposes. Swift provides two types of ranges: closed ranges (from a start value to an end value, both inclusive) and half-open ranges (from a start value up to, but not including, an end value).
 
+    Collections in Foundation framework: Swift also provides access to various collection types from the Foundation framework, such as NSArrays, NSSets, and NSDictionaries. These Foundation collection types are bridged to their Swift counterparts and can be used interchangeably.
+
+# 
     What is “defer”?
-        In Swift, the defer statement is used to define a block of code that is executed just before the current scope is exited, regardless of whether the scope is exited normally or due to an error or exception. It allows you to defer the execution of certain cleanup or finalization tasks until the end of the scope.
 
-        The defer statement is often used to ensure that resources are properly released or cleanup tasks are performed before exiting a function, even in the presence of multiple return statements or early exits.
+    In Swift, the defer statement is used to define a block of code that is executed just before the current scope is exited, regardless of whether the scope is exited normally or due to an error or exception. It allows you to defer the execution of certain cleanup or finalization tasks until the end of the scope.
 
-        Here's an example to illustrate the usage of defer:
+    The defer statement is often used to ensure that resources are properly released or cleanup tasks are performed before exiting a function, even in the presence of multiple return statements or early exits.
 
-        func processFile(atPath path: String) {
+    Here's an example to illustrate the usage of defer:
+
+    func processFile(atPath path: String) {
             let file = openFile(atPath: path)
             defer {
                 closeFile(file)
             }
 
-            // Code to process the file
+    // Code to process the file
             // ...
 
-            if someCondition {
+    if someCondition {
                 // Early return
                 return
             }
 
-            // More code to process the file
+    // More code to process the file
             // ...
 
-            // Normal exit
+    // Normal exit
         }
 
-        In the above code, the openFile function opens a file and returns a file handle. The defer statement is used immediately after opening the file handle and specifies that the closeFile function should be called before exiting the processFile function, regardless of the execution path.
+    In the above code, the openFile function opens a file and returns a file handle. The defer statement is used immediately after opening the file handle and specifies that the closeFile function should be called before exiting the processFile function, regardless of the execution path.
 
-        The benefits of using defer in Swift include:
+    The benefits of using defer in Swift include:
 
-        Cleanup tasks: defer ensures that cleanup or finalization tasks, such as releasing resources or closing files, are performed reliably before exiting a scope.
+    Cleanup tasks: defer ensures that cleanup or finalization tasks, such as releasing resources or closing files, are performed reliably before exiting a scope.
 
-        Code organization: By deferring cleanup tasks to the end of a scope, the code can be organized more naturally and maintain a clean structure, without the need for scattered cleanup code throughout the function.
+    Code organization: By deferring cleanup tasks to the end of a scope, the code can be organized more naturally and maintain a clean structure, without the need for scattered cleanup code throughout the function.
 
-        Multiple exit points: defer is particularly useful in functions with multiple exit points (e.g., early returns, throw statements). It eliminates the need to repeat cleanup code at each exit point, reducing the chance of forgetting necessary cleanup steps.
+    Multiple exit points: defer is particularly useful in functions with multiple exit points (e.g., early returns, throw statements). It eliminates the need to repeat cleanup code at each exit point, reducing the chance of forgetting necessary cleanup steps.
 
-        Execution order: Multiple defer statements within the same scope are executed in the reverse order of their appearance. The last defer statement is executed first, followed by the second-to-last, and so on. This ensures that dependencies between cleanup tasks are handled correctly.   
-   
+    Execution order: Multiple defer statements within the same scope are executed in the reverse order of their appearance. The last defer statement is executed first, followed by the second-to-last, and so on. This ensures that dependencies between cleanup tasks are handled correctly.
+
+# 
     What is Tuple? How to create a Tuple in swift?
-        In Swift, a tuple is a grouping of multiple values into a single compound value. It is a lightweight way to combine values of different types into a single value without creating a custom struct or class.
 
-        You can create a tuple in Swift by enclosing the values in parentheses and separating them with commas. Here's an example of creating a tuple that represents a person's name and age:
+    In Swift, a tuple is a grouping of multiple values into a single compound value. It is a lightweight way to combine values of different types into a single value without creating a custom struct or class.
 
-        let person: (String, Int) = ("John Doe", 30)
+    You can create a tuple in Swift by enclosing the values in parentheses and separating them with commas. Here's an example of creating a tuple that represents a person's name and age:
 
-        let person = ("John Doe", 30)
+    let person: (String, Int) = ("John Doe", 30)
+
+    let person = ("John Doe", 30)
         let name = person.0
         let age = person.1
 
-        print(name) // Output: John Doe
+    print(name) // Output: John Doe
         print(age) // Output: 30
 
-        Alternatively, you can use destructuring to assign the elements of a tuple to individual variables:
+    Alternatively, you can use destructuring to assign the elements of a tuple to individual variables:
         let person = ("John Doe", 30)
         let (name, age) = person
 
-        print(name) // Output: John Doe
+    print(name) // Output: John Doe
         print(age) // Output: 30
 
+# 
     What is the difference between Array and NSArray?
-        The main difference between Array and NSArray lies in their origins, mutability, and interoperability.
 
-        Origin: Array is a native Swift type that was introduced with the Swift programming language. It is part of the Swift Standard Library. On the other hand, NSArray is part of the Foundation framework, which is a collection of Objective-C classes that can be used in Swift through bridging.
+    The main difference between Array and NSArray lies in their origins, mutability, and interoperability.
 
-        Mutability: Array in Swift can be either mutable (var) or immutable (let). You can modify the elements, append, insert, or remove items from a mutable Swift array. In contrast, NSArray in Objective-C is immutable, meaning you cannot change its elements after it is created. If you need to make changes to an NSArray, you would typically create a new array with the desired modifications.
+    Origin: Array is a native Swift type that was introduced with the Swift programming language. It is part of the Swift Standard Library. On the other hand, NSArray is part of the Foundation framework, which is a collection of Objective-C classes that can be used in Swift through bridging.
 
-        Type Inference: Array in Swift benefits from type inference, meaning you don't always have to explicitly specify the type of elements in the array. Swift can often infer it from the values you assign to the array. NSArray, being an Objective-C class, requires explicit type annotations when working with heterogeneous elements.
+    Mutability: Array in Swift can be either mutable (var) or immutable (let). You can modify the elements, append, insert, or remove items from a mutable Swift array. In contrast, NSArray in Objective-C is immutable, meaning you cannot change its elements after it is created. If you need to make changes to an NSArray, you would typically create a new array with the desired modifications.
 
-        Interoperability: Swift arrays (Array) and Objective-C arrays (NSArray) can be used interchangeably through bridging. When bridging from NSArray to Array, the elements retain their mutability properties. However, when bridging from Array to NSArray, the resulting NSArray is immutable.
+    Type Inference: Array in Swift benefits from type inference, meaning you don't always have to explicitly specify the type of elements in the array. Swift can often infer it from the values you assign to the array. NSArray, being an Objective-C class, requires explicit type annotations when working with heterogeneous elements.
 
-        Swift-specific Features: Array in Swift offers a range of additional features and capabilities not present in NSArray. These include advanced operations, functional programming-style transformations, subscripting, higher-order functions like map, filter, reduce, and other Swift-specific language constructs.
+    Interoperability: Swift arrays (Array) and Objective-C arrays (NSArray) can be used interchangeably through bridging. When bridging from NSArray to Array, the elements retain their mutability properties. However, when bridging from Array to NSArray, the resulting NSArray is immutable.
 
-        In summary, Array is a native Swift type that is mutable and offers a wide range of Swift-specific features, while NSArray is an immutable Objective-C class that can be used in Swift through bridging. If you're working primarily in Swift, it is generally recommended to use Array due to its native support, mutability, and the additional features it provides.
+    Swift-specific Features: Array in Swift offers a range of additional features and capabilities not present in NSArray. These include advanced operations, functional programming-style transformations, subscripting, higher-order functions like map, filter, reduce, and other Swift-specific language constructs.
 
-  What is the difference between class and structure
+    In summary, Array is a native Swift type that is mutable and offers a wide range of Swift-specific features, while NSArray is an immutable Objective-C class that can be used in Swift through bridging. If you're working primarily in Swift, it is generally recommended to use Array due to its native support, mutability, and the additional features it provides.
+
+# What is the difference between class and structure
+
     In Swift, both classes and structures are used to define custom types and create objects. They have similarities but also important differences. Here are the key differences between classes and structures in Swift:
 
     Inheritance: Classes support inheritance, which means one class can inherit properties, methods, and behavior from another class. In contrast, structures do not support inheritance. They cannot inherit properties or behavior from other structures.
@@ -474,9 +501,10 @@
 
     Identity Checking: Since classes are reference types, you can check if two class instances refer to the same object by using the identity operators (=== and !==). Structures, being value types, compare their values, so identity checking is not applicable.
 
-    Protocol Conformance: Both classes and structures can conform to protocols in Swift. They can adopt and implement protocol requirements to provide certain functionalities. This allows you to define common behaviors for classes and structures.  
+    Protocol Conformance: Both classes and structures can conform to protocols in Swift. They can adopt and implement protocol requirements to provide certain functionalities. This allows you to define common behaviors for classes and structures.
 
-  What are the best ways of achieving concurrency in iOS?
+# What are the best ways of achieving concurrency in iOS?
+
     - Dispatch queues
     - Threads
     - Operation queues
@@ -488,8 +516,6 @@
     Operation Queue: Operation and OperationQueue are part of the Foundation framework and provide a higher-level abstraction over GCD. With operations and operation queues, you can define individual tasks as Operation objects and add them to an operation queue for execution. Operations can have dependencies, priorities, and can be canceled or paused. OperationQueue takes care of managing the execution of operations and provides features like concurrent and serial execution, maximum concurrent operation limits, and more.
 
     Async/await: Starting from iOS 15, Apple introduced native support for async/await, a structured concurrency model based on Swift's async/await syntax. It allows you to write asynchronous code in a more synchronous and readable manner. With async/await, you can mark functions as async, use await to suspend execution until an asynchronous task completes, and chain together multiple asynchronous operations. This modern approach simplifies concurrency and eliminates the need for callbacks or completion handlers.
-
-    
 
     Dispatch Semaphores: Dispatch semaphores, provided by GCD, can be used to control access to resources and coordinate concurrent tasks. A dispatch semaphore maintains a count and allows a specified number of threads to access a resource concurrently. You can use dispatch_semaphore_signal to increment the count and dispatch_semaphore_wait to decrement it, which blocks a thread if the count reaches zero. Dispatch semaphores are helpful in scenarios where you need to limit concurrent access to a shared resource.
 
@@ -507,7 +533,7 @@
     * They have minimal overhead and are suitable for many common concurrency scenarios.
     * Dispatch queues are well-suited for tasks that are independent, short-lived, and don't have complex dependencies.
     * They provide a high degree of flexibility and can be easily integrated into different parts of your application.
-    
+
     Operation Queues:
     * Operation queues are built on top of GCD and provide a higher-level abstraction for managing concurrent tasks using Operation and OperationQueue classes.
     * Operations represent individual units of work and can be subclassed to encapsulate complex tasks.
@@ -518,45 +544,47 @@
     * They are suitable for managing long-running, complex tasks with dependencies and managing resources.
     * Operation queues integrate well with other Foundation framework features like Key-Value Observing (KVO) and automatic dependency management.
     * Operation queues can be easily canceled or suspended as a whole, affecting all the operations in the queue.
-    
+
     In summary, dispatch queues provide a lightweight and efficient mechanism for managing concurrent tasks, especially when the tasks are independent and short-lived. Operation queues, built on top of dispatch queues, offer a higher-level abstraction and additional features for managing complex tasks with dependencies and resource management. Choosing between dispatch queues and operation queues depends on the nature of your tasks, the level of control and complexity required, and the specific needs of your application.
 
-  How to pass the data between view controllers?
+# How to pass the data between view controllers?
+
     There are several ways to pass data between view controllers in Swift. The choice of method depends on factors such as the relationship between the view controllers, the complexity of the data, and the desired lifecycle of the data. Here are some common ways to pass data between view controllers:
 
     Using Segues:
     * If you're using segues to navigate between view controllers, you can pass data by overriding the prepare(for:sender:) method in the source view controller.
     * Define a property in the destination view controller and assign the data to that property before the segue is performed.
     * In the prepare(for:sender:) method, you can access the destination view controller using the segue.destination property and set the data accordingly.
-    
+
     Delegate Pattern:
     * Create a protocol in the source view controller to define the methods that the delegate (usually the presenting view controller) will implement.
     * The presenting view controller should conform to the protocol and set itself as the delegate of the presented view controller.
     * The presented view controller can then call the delegate methods to pass data back to the presenting view controller.
-    
+
     Closure Callbacks:
     * Define a closure property in the presented view controller that takes the required data as its parameter.
     * When instantiating the presented view controller, set the closure property with a callback closure that will be executed when the data is ready.
     * The presenting view controller can provide the closure, and when the data is available in the presented view controller, it can be passed back by invoking the closure.
-    
+
     Notifications:
     * Use the NotificationCenter to post notifications from the presenting view controller with the data as the payload.
     * Register the presenting view controller as an observer to receive the notification and perform the necessary actions when the notification is received.
     * This method is suitable for loosely coupled communication between view controllers.
-    
+
     Singleton or Shared Data Model:
     * Create a shared data model or a singleton instance that can be accessed by both view controllers.
     * Store the required data in the shared data model, and each view controller can access or modify the data as needed.
-    
+
     Dependency Injection:
     * Create a property in the presented view controller to hold the required data.
     * Before presenting or pushing the view controller, set the property with the desired data from the presenting view controller.
-    
+
     Using UserDefaults or Keychain:
     * If the data is simple and needs to persist across app launches, you can store it in UserDefaults or Keychain.
-    * Each view controller can read from or write to the shared storage to access or modify the data.  
+    * Each view controller can read from or write to the shared storage to access or modify the data.
 
-  How can we define a base class in swift?
+# How can we define a base class in swift?
+
     In a swift programming language, classes are not inherited from the base class. The classes are defined by the developer without specifying the superclass and it will become the base class automatically.
 
     In Swift, you can define a base class by creating a class with properties, methods, and initializers that can be inherited by other classes. Here's how you can define a base class in Swift:
@@ -566,13 +594,13 @@
         var property1: Int
         var property2: String
 
-        // Initializer
+    // Initializer
         init(property1: Int, property2: String) {
             self.property1 = property1
             self.property2 = property2
         }
 
-        // Methods
+    // Methods
         func myMethod() {
             // Method implementation
         }
@@ -621,36 +649,38 @@ How can we make a property Optional in swift?
         print("optionalProperty or its description is nil")
     }
 
-What is Optional chaining
-        Optional chaining is a feature in Swift that provides a concise and safe way to access properties, methods, and subscripts of an optional value. It allows you to chain multiple optional values together and gracefully handle the case when any of the values in the chain is nil.
+# What is Optional chaining
 
-        Here's an example to illustrate optional chaining:
+    Optional chaining is a feature in Swift that provides a concise and safe way to access properties, methods, and subscripts of an optional value. It allows you to chain multiple optional values together and gracefully handle the case when any of the values in the chain is nil.
 
-        struct Person {
+    Here's an example to illustrate optional chaining:
+
+    struct Person {
             var name: String
             var address: Address?
         }
 
-        struct Address {
+    struct Address {
             var street: String
             var city: String
             var postalCode: String?
         }
 
-        // Creating an optional person instance
+    // Creating an optional person instance
         let person: Person? = Person(name: "John Doe", address: Address(street: "123 Main St", city: "New York", postalCode: "10001"))
 
-        // Accessing optional properties using optional chaining
+    // Accessing optional properties using optional chaining
         let postalCode = person?.address?.postalCode
 
-        // Printing the postal code
+    // Printing the postal code
         if let postalCode = postalCode {
-            print("Postal Code: \(postalCode)")
+            print("Postal Code:\(postalCode)")
         } else {
             print("Postal Code is not available")
         }
 
-  What is Optional binding?
+# What is Optional binding?
+
     Optional binding is a construct in Swift that allows you to safely unwrap an optional value and assign it to a non-optional variable or constant. It provides a way to conditionally check if an optional contains a value and, if so, safely access and use that value within a specific scope.
 
     The syntax for optional binding is if let or guard let. Here's an example that demonstrates optional binding using if let:
@@ -660,7 +690,7 @@ What is Optional chaining
     if let unwrappedValue = optionalValue {
         // The optionalValue contains a non-nil value
         // The unwrapped value is assigned to the constant 'unwrappedValue'
-        print("The value is \(unwrappedValue)")
+        print("The value is\(unwrappedValue)")
     } else {
         // The optionalValue is nil
         print("The value is nil")
@@ -679,7 +709,7 @@ What is Optional chaining
         // Both optional values contain non-nil values
         // The unwrapped values are assigned to unwrappedValue1 and unwrappedValue2
         let sum = unwrappedValue1 + unwrappedValue2
-        print("The sum is \(sum)")
+        print("The sum is\(sum)")
     } else {
         // Either optionalValue1 or optionalValue2 (or both) is nil
         print("Cannot perform addition due to nil value(s)")
@@ -688,8 +718,9 @@ What is Optional chaining
     In this example, both optionalValue1 and optionalValue2 are optional integers. The if let statement checks if both values are non-nil and unwraps them into unwrappedValue1 and unwrappedValue2. If both optional values have non-nil values, the sum of the unwrapped values is calculated and printed. Otherwise, the else block is executed, indicating that one or both values are nil.
 
     Optional binding provides a safe and concise way to unwrap and work with optional values, avoiding runtime errors due to unexpected nil values. It allows you to conditionally handle both the case when an optional contains a value and the case when it is nil.
-    
-  What are the Higher-Order functions in swift?
+
+# What are the Higher-Order functions in swift?
+
     Higher-order functions in Swift are functions that can take other functions as parameters or return functions as their results. They allow for the manipulation and composition of functions, enabling powerful and concise code.
 
     Map: The map function applies a transformation closure to each element of a collection and returns an array of the transformed elements. It allows you to transform the elements of an array without modifying the original array.
@@ -722,7 +753,8 @@ What is Optional chaining
     let sortedNumbers = numbers.sorted { $0 < $1 }
     print(sortedNumbers) // Output: [1, 2, 3, 4, 5]
 
-What are the various ways to unwrap an optional in swift?
+# What are the various ways to unwrap an optional in swift?
+
     Guard statement: safe.
     Forced unwrapping: using “!” operator, unsafe.
     Optional binding: safe.
@@ -743,7 +775,7 @@ What are the various ways to unwrap an optional in swift?
     if let unwrappedValue = optionalValue {
         // The optionalValue contains a non-nil value
         // The unwrapped value is assigned to the constant 'unwrappedValue'
-        print("The value is \(unwrappedValue)")
+        print("The value is\(unwrappedValue)")
     } else {
         // The optionalValue is nil
         print("The value is nil")
@@ -767,14 +799,15 @@ What are the various ways to unwrap an optional in swift?
     Nil Coalescing Operator (??): The nil coalescing operator allows you to provide a default value to use when an optional is nil. It unwraps the optional if it contains a value, or uses the provided default value otherwise.
 
     let optionalValue: Int? = nil
-    let unwrappedValue = optionalValue ?? 0 
+    let unwrappedValue = optionalValue ?? 0
 
 What is Swift module?
     - A module is a single unit of code distribution.
     - A framework or application is built and shipped as a single unit and that can be imported by another module using the swift import keyword.
     - Each build target in the Xcode tool is treated as a separate module in swift.
 
-Explain Core Data.
+# Explain Core Data.
+
     Core data is one of the most powerful frameworks provided by Apple for macOS and iOS apps. Core data is used for handling the model layer object in our applications. We can treat Core Data as a framework to filter, modify, save, track the data within the iOS apps. Core Data is not a relational database.
 
     Using core data, we can easily map the objects in our app to the table records in the database without knowing any SQL. Core data is the M in MVC structure.
@@ -788,12 +821,13 @@ Explain Core Data.
     First framework for managing an object graph.
     Core Data framework for managing the life cycle of the object in the object graph.
 
-    Explain MVC structure with example in swift 
+# Explain MVC structure with example in swift
+
     MVC (Model-View-Controller) is a software architectural pattern commonly used in iOS development to separate the concerns of an application into three distinct components: Model, View, and Controller. The MVC pattern promotes modular and organized code, making it easier to maintain, test, and extend the application.
 
     Here's an explanation of each component in the MVC pattern with an example in Swift:
 
-    Model: The Model represents the data and the business logic of the application. It encapsulates the data structures, algorithms, and operations that manipulate and manage the data. The Model is responsible for maintaining the state and integrity of the data. In an iOS app, the Model can be a struct or class that represents the data and may include methods for data manipulation. 
+    Model: The Model represents the data and the business logic of the application. It encapsulates the data structures, algorithms, and operations that manipulate and manage the data. The Model is responsible for maintaining the state and integrity of the data. In an iOS app, the Model can be a struct or class that represents the data and may include methods for data manipulation.
 
     struct User {
         let name: String
@@ -802,16 +836,16 @@ Explain Core Data.
 
     class UserManager {
         var users: [User] = []
-        
-        func addUser(_ user: User) {
+
+    func addUser(_ user: User) {
             users.append(user)
         }
-        
-        func removeUser(at index: Int) {
+
+    func removeUser(at index: Int) {
             users.remove(at: index)
         }
-        
-        // Other methods for managing user data...
+
+    // Other methods for managing user data...
     }
 
     In the example above, the User struct represents the data model, and the UserManager class encapsulates the operations and business logic related to managing user data.
@@ -822,16 +856,16 @@ Explain Core Data.
 
     class UserListViewController: UIViewController {
         @IBOutlet weak var tableView: UITableView!
-        
-        var users: [User] = []
-        
-        override func viewDidLoad() {
+
+    var users: [User] = []
+
+    override func viewDidLoad() {
             super.viewDidLoad()
             tableView.dataSource = self
             tableView.delegate = self
         }
-        
-        // Methods for updating the view with user data...
+
+    // Methods for updating the view with user data...
     }
 
     extension UserListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -845,34 +879,36 @@ Explain Core Data.
     class UserListController {
         let userManager = UserManager()
         let userListViewController: UserListViewController
-        
-        init(userListViewController: UserListViewController) {
+
+    init(userListViewController: UserListViewController) {
             self.userListViewController = userListViewController
         }
-        
-        func addUser(_ user: User) {
+
+    func addUser(_ user: User) {
             userManager.addUser(user)
             userListViewController.users = userManager.users
             userListViewController.tableView.reloadData()
         }
-        
-        func removeUser(at index: Int) {
+
+    func removeUser(at index: Int) {
             userManager.removeUser(at: index)
             userListViewController.users = userManager.users
             userListViewController.tableView.reloadData()
         }
-        
-        // Other methods for coordinating user interactions...
+
+    // Other methods for coordinating user interactions...
     }
 
     In the example above, the UserListController manages user interactions and coordinates between the UserManager and UserListViewController. It handles adding and removing users from the Model and updates the View accordingly.
 
     The MVC pattern promotes separation of concerns and modularity, allowing for easier maintenance, testing, and reusability of components. The Model, View, and Controller work together to provide a clear structure and organization to the codebase, making it easier to understand and enhance the application.
 
-    How is memory management done in iOS Swift?
+# How is memory management done in iOS Swift?
+
     Automatic Reference Counting is used by Swift (ARC) in order to do memory management. This is the same thing in Swift as it is in Objective C in terms of notion. When you assign or unassign instances of classes (reference types) to constants, properties, and variables, ARC keeps track of strong references to those instances and increases or decreases their reference count correspondingly. It frees up memory consumed by objects with a reference count of zero. Because value types are copied when assigned, ARC does not raise or decrease its reference count. If you don't declare differently, all references will be strong references by default.
 
     Highlight the key difference between Upcast and Downcast in ios Swift.
+
     The key difference between Upcast and Downcast in ios Swift is that upcasting from a derived to a base class can be verified at compile-time and will never fail to compile and Downcasts, on the other hand, can fail to compile since the precise class is not always known. It is possible that the UIView you have is a UITableView or a UIButton.
 
     What is the difference between the "==" operator and the "===" operator in ios Swift?
@@ -900,7 +936,7 @@ Explain Core Data.
     class MyClass {
         var value: Int
 
-        init(value: Int) {
+    init(value: Int) {
             self.value = value
         }
     }
@@ -918,10 +954,11 @@ Explain Core Data.
 
     List down three ways in which we can append two arrays in ios Swift.
     1. Using the method "append(contentsOf: )"
-    2. Using the "+=" operator 
+    2. Using the "+=" operator
     3. Appending two arrays by using the "+" operator and adding the result to a new array
 
     What are some common features in Swift structures and Swift classes?
+
     Swift structures (structs) and Swift classes (classes) are both powerful constructs for defining custom types in Swift. They share several common features:
 
     Properties: Both structs and classes can have properties to store values and state. Properties can be constants (let) or variables (var), and they can have default values. You can define stored properties, computed properties, and property observers (willSet and didSet) in both structs and classes.
@@ -943,6 +980,7 @@ Explain Core Data.
     While structs and classes share these common features, they also have some important differences. Classes support inheritance, have deinitializers, and are passed by reference, while structs are value types and do not support inheritance or deinitializers. The choice between using a struct or class depends on the specific needs of your application and the semantics that best fit your design.
 
     What are some features that Swift classes can support but Swift structs cannot?
+
     Swift classes have several features that are not available to Swift structs. Here are some notable features that are exclusive to Swift classes:
 
     Inheritance: Classes support inheritance, allowing you to create hierarchies of related types. A class can inherit properties, methods, and other characteristics from a superclass, forming an "is-a" relationship. Inheritance enables code reuse and the ability to specialize and extend functionality.
@@ -977,7 +1015,8 @@ Explain Core Data.
 
     Copy-on-Write Optimization: Structs can leverage copy-on-write optimization. When a mutable copy of a struct is created, the actual copying is deferred until a modification is made. This can optimize performance by avoiding unnecessary copying when multiple references are sharing the same struct instance.
 
-    What is the use of the "mutating" keyword in ios Swift?
+# What is the use of the "mutating" keyword in ios Swift?
+
     In Swift, the mutating keyword is used to indicate that a method or function is allowed to modify the properties of a value type (such as a struct or an enum).
 
     By default, Swift doesn't allow modifying properties within methods of value types because value types are designed to be immutable. However, there are scenarios where you may need to modify the properties of a value type from within a method. In such cases, you need to mark the method with the mutating keyword to indicate that it will mutate the instance.
@@ -995,8 +1034,8 @@ Explain Core Data.
     struct demoStruct {
     var foo: String = "Initial String"
     func transformString() {
-            foo = "Transformed String". 
-            //The above results in a compile time error: Cannot assign to property: 'self' is immutable. 
+            foo = "Transformed String".
+            //The above results in a compile time error: Cannot assign to property: 'self' is immutable.
             //We need to mark the method 'mutating' to make 'self' mutable.
         }
     }
@@ -1004,8 +1043,8 @@ Explain Core Data.
     struct Point {
         var x: Double
         var y: Double
-        
-        mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
             x += deltaX
             y += deltaY
         }
@@ -1015,7 +1054,8 @@ Explain Core Data.
     point.moveBy(x: 2.0, y: 3.0)
     print(point)  // Output: Point(x: 7.0, y: 13.0)
 
-    Explain Protocol Vs Class in ios Swift.
+# Explain Protocol Vs Class in ios Swift.
+
     In iOS Swift, protocols and classes are both fundamental constructs for defining types and providing functionality. However, they serve different purposes and have distinct characteristics. Here's an explanation of protocols and classes and their differences:
 
     Protocols:
@@ -1027,7 +1067,7 @@ Explain Core Data.
     5. Protocol conformance is checked at compile-time, ensuring that the necessary requirements are implemented.
     6. Protocols can be used as types, allowing you to create collections of different types that conform to the same protocol.
     7. Protocols can also be extended to provide default implementations for some or all of their requirements.
-    
+
     Classes:
 
     1. A class is a reference type that can have properties, methods, initializers, and more.
@@ -1038,31 +1078,32 @@ Explain Core Data.
     6. Classes can have deinitializers (deinit), which are called when an instance is deallocated from memory.
     7. Class types support runtime identity checks using the === operator to determine if two references point to the same instance.
     8. Class methods can be overridden by subclasses using the override keyword.
-    
+
     Differences:
 
     Inheritance: Classes support inheritance, allowing one class to inherit properties and methods from another class, while protocols do not support inheritance directly.
-    
+
     Value vs Reference Types: Protocols are implemented by both value types (structs and enums) and reference types (classes), while classes are reference types only.
-    
+
     Multiple Inheritance: A class can inherit from one superclass, but it can conform to multiple protocols, allowing for multiple inheritance-like behavior.
-    
+
     Protocol Conformance: Conformance to protocols is explicit and can be added to any type, including classes, structs, and enums. In contrast, class inheritance is implicit, and a class automatically inherits the properties and methods of its superclass.
-    
+
     Required vs Optional Requirements: Protocols allow you to define both required and optional requirements, while class inheritance enforces the implementation of all superclass members.
-    
+
     Compile-time vs Runtime: Protocol conformance is checked at compile-time, ensuring that the necessary requirements are implemented correctly. Class hierarchy and method dispatch involve runtime checks.
-    
+
     Dynamic Dispatch: Class methods and overriding support dynamic dispatch based on the actual runtime type, while protocol method dispatch is static and determined at compile-time.
-    
+
     In general, protocols are useful for defining common behavior and interfaces, enabling loose coupling and code reuse. Classes are powerful for creating hierarchical relationships, maintaining state, and providing shared behavior. The choice between protocols and classes depends on the specific needs and design goals of your application.
 
-    How should one consider the usage of strong, weak and unowned references?
+# How should one consider the usage of strong, weak and unowned references?
+
     Ask yourself, "Am I dealing with reference types?" to see if you need to worry about strong, weak, or unowned. If you are working with Structs or Enums, ARC is not in charge of memory management, so you do not have to worry about defining weak or unowned constants or variables.
 
     In hierarchical relationships, strong references are acceptable when the parent refers to the child, but not when the child refers to the parent. Strong references are, in fact, the most appropriate type of reference the majority of the time.
 
-    If two instances are optionally linked, make sure one of them has a weak reference to the other. 
+    If two instances are optionally linked, make sure one of them has a weak reference to the other.
 
     In Swift, references are used to establish relationships between objects and manage memory ownership. Here's an explanation of the different reference types and their uses:
 
@@ -1078,7 +1119,7 @@ Explain Core Data.
     A weak reference is a non-owning reference to an object.
     It does not increase the reference count of the referenced object, allowing the object to be deallocated when there are no strong references to it.
     Weak references are typically used in scenarios where you want to avoid strong reference cycles (retain cycles) between objects, which can lead to memory leaks.
-    Weak references are declared as weak and are always optional types (Optional<T> or T?).
+    Weak references are declared as weak and are always optional types (Optional`<T>` or T?).
     You can use optional binding (if let) or optional chaining (?.) to access the object through a weak reference safely.
     Unowned References:
 
@@ -1087,7 +1128,7 @@ Explain Core Data.
     An unowned reference does not keep a strong hold on the object it refers to.
     If you try to access an object through an unowned reference after the referenced object has been deallocated, a runtime error will occur (a "crash").
     Unowned references are useful in situations where you know that the referenced object will always be available and will not be deallocated before the unowned reference is used.
-    Unowned references are declared as unowned and are non-optional types (T, not Optional<T> or T?).
+    Unowned references are declared as unowned and are non-optional types (T, not Optional`<T>` or T?).
 
     Show the use of "self" in a method using an example.
     In Swift, the self property of an instance is a special property that holds the instance itself. In most cases, self appears in a class, structure, or enumeration's initializer or method. The most common use of self is in initializers when you are likely to want parameter names that match your type's property names, such as this:
@@ -1102,7 +1143,7 @@ Explain Core Data.
         }
     }
 
-    Explain the difference between Self and self in ios Swift. explain with example 
+# Explain the difference between Self and self in ios Swift. explain with example
 
     In Swift, Self (with a capital 'S') and self (with a lowercase 's') refer to different concepts and have distinct uses:
 
@@ -1113,7 +1154,7 @@ Explain Core Data.
     It is used when you want to refer to the type dynamically, based on the actual instance or class that is conforming to or inheriting from a protocol or superclass.
     Self is used as a placeholder in protocols to specify requirements that must be implemented by the conforming type itself.
     It allows for dynamic dispatch and enables protocols to define requirements that depend on the conforming type.
-    
+
     protocol Printable {
         func printValue()
     }
@@ -1123,7 +1164,7 @@ Explain Core Data.
             print("Printing Circle")
         }
 
-        func createAnother() -> Self {
+    func createAnother() -> Self {
             return Circle()
         }
     }
@@ -1144,22 +1185,22 @@ Explain Core Data.
     class Person {
         var name: String
 
-        init(name: String) {
+    init(name: String) {
             self.name = name
         }
 
-        func printName() {
-            print("My name is \(self.name)")
+    func printName() {
+            print("My name is\(self.name)")
         }
 
-        func performTask(completion: () -> Void) {
+    func performTask(completion: () -> Void) {
             completion()
         }
 
-        func doSomething() {
+    func doSomething() {
             self.performTask { [weak self] in
                 guard let self = self else { return }
-                print("Doing something with \(self.name)")
+                print("Doing something with\(self.name)")
             }
         }
     }
@@ -1172,7 +1213,7 @@ Explain Core Data.
 
     To summarize, Self refers to the type of the current instance or the conforming type in protocols, while self refers to the current instance itself within the methods and closures of a class, struct, or enum.
 
-    What are a few scenarios in which we can't avoid using implicitly unwrapped optionals and why so?
+# What are a few scenarios in which we can't avoid using implicitly unwrapped optionals and why so?
 
     Implicitly unwrapped optionals (IUOs) are a type in Swift that allows a variable or property to be declared as optional, but it is automatically unwrapped whenever it is used, without requiring explicit unwrapping syntax (like using if let or guard let). While it's generally recommended to use regular optionals and unwrap them safely, there are a few scenarios where using implicitly unwrapped optionals may be appropriate:
 
@@ -1188,10 +1229,10 @@ Explain Core Data.
 
     class DataProvider {
         weak var delegate: DataProviderDelegate!
-        
-        // ...
-        
-        func processReceivedData() {
+
+    // ...
+
+    func processReceivedData() {
             // Process data and notify the delegate
             delegate.didReceiveData(data: processedData)
         }
@@ -1203,10 +1244,10 @@ Explain Core Data.
 
     class DataProvider {
         weak var delegate: DataProviderDelegate!
-        
-        // ...
-        
-        func processReceivedData() {
+
+    // ...
+
+    func processReceivedData() {
             // Process data and notify the delegate
             delegate.didReceiveData(data: processedData)
         }
@@ -1216,8 +1257,8 @@ Explain Core Data.
 
     class ParentObject {
         var childObject: ChildObject!
-        
-        init() {
+
+    init() {
             // ChildObject initialization requires ParentObject to be fully initialized
             childObject = ChildObject(parent: self)
         }
@@ -1225,8 +1266,8 @@ Explain Core Data.
 
     class ChildObject {
         unowned let parent: ParentObject
-        
-        init(parent: ParentObject) {
+
+    init(parent: ParentObject) {
             self.parent = parent
             // ...
         }
@@ -1238,7 +1279,7 @@ Explain Core Data.
 
     When two instances have a strong connection to one other, a circular reference occurs, resulting in a memory leak because neither of the two instances will ever be deallocated. The reason for this is that you can't deallocate an instance if it has a strong reference to it, yet each instance maintains the other alive due to the strong reference. This might lead to a deadlock which is extremely bad for the application.
 
-    Breaking the strong circular reference by replacing one of the strong references with a weak or unowned 
+    Breaking the strong circular reference by replacing one of the strong references with a weak or unowned
     reference would fix the problem of a circular reference.
 
     https://www.codingem.com/swift-interview-questions/
@@ -1253,14 +1294,6 @@ Explain Core Data.
     https://github.com/DenisLitvin/iOS-Interview
     https://gist.github.com/funmia/8f33509d70448523e9652db1bcfcad2a
     https://github.com/kodecocodes/ios-interview/tree/master/iOS%20Specific%20Questions
-
-
-
-
-
-
-   
-
 
   How would you compare two tuples to ensure their values are identical?
   How would you explain operator overloading to a junior developer?
@@ -1418,7 +1451,7 @@ Explain Core Data.
   When would you use Swift’s Result type?
   What is type erasure and when would you use it?
 
-  Design patterns: 
+  Design patterns:
   How would you explain delegates to a new Swift developer?
   Can you explain MVC, and how it's used on Apple's platforms?
   Can you explain MVVM, and how it might be used on Apple's platforms?
@@ -1429,7 +1462,7 @@ Explain Core Data.
   Can you give some examples of where singletons might be a good idea?
   What are phantom types and when would you use them?
 
-  Frameworks: 
+  Frameworks:
   How does CloudKit differ from Core Data?
   How does SpriteKit differ from SceneKit?
   How much experience do you have using Core Data? Can you give examples?
@@ -1450,7 +1483,7 @@ Explain Core Data.
   What is the purpose of ReplayKit?
   When might you use NSSortDescriptor?
   Can you name at least three different CALayer subclasses?
-  What is the purpose of CADisplayLink?  
+  What is the purpose of CADisplayLink?
 
   Miscellaneous:
   Can you talk me through some interesting code you wrote recently?

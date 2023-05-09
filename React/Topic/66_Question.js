@@ -19,3 +19,13 @@
 // https://www.codingninjas.com/codestudio/library/react-fiber-architecture
 // https://reactnative.dev/docs/flatlist
 // https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy
+
+// React Native + Redux
+// https://www.youtube.com/watch?v=Gvxv6JCabA8
+// https://www.youtube.com/watch?v=TiSIEWSJyVk&list=PLVRD5onwuyGDhzXRB3zjdhAByP4upIjQx
+// https://www.youtube.com/watch?v=bJJkrhZ8HSo
+// https://www.youtube.com/watch?v=dqlnbglFPpU
+// https://www.youtube.com/watch?v=s65nHnnEbH4
+// https://www.youtube.com/watch?v=px5dfmvlAds&list=PL8p2I9GklV44NMx-i9-A0EN3X-s7cDdty 
+// https://www.youtube.com/watch?v=HrSRfM9WlbQ&list=PLvN7nvnjkvpRiJrzy2BhmQIByubcxCSsB
+// https://www.youtube.com/watch?v=Wahz9bZfpv8
