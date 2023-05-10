@@ -15,6 +15,8 @@
 // Component life cycle 
 // typescript 
 
+// what will happen if child component has heavy operation and its called from parent functional in react and how to avoid UI block and if parent render then child should render only once
+
 // https://legacy.reactjs.org/docs/context.html#when-to-use-context
 // https://www.codingninjas.com/codestudio/library/react-fiber-architecture
 // https://reactnative.dev/docs/flatlist

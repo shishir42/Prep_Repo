@@ -1,7 +1,7 @@
 // React is a JavaScript Library created by Facebook for creating dynamic and interactive applications and building better UI/UX design for web and mobile applications. React is an open-source and component-based front-end library. React is responsible for the UI design
 
 // Features of React:
-// JSX (JavaScript Syntax Extension)
+// JSX (JavaScript Syntax Extension)(Javascript XML)
 // Virtual DOM
 // One-way data binding
 // Performance

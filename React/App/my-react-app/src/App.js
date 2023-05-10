@@ -11,13 +11,14 @@ import ExampleUseCallback from './components/ExampleUseCallback';
 import ExampleUseMemo from './components/ExampleUseMemo';
 import ExampleUseRef from './components/ExampleUseRef';
 import MyHOCComponentWithData from './components/ExampleHOC';
+import ParentComponent from './components/ParentComponent';
 
 function App() {
-  const [user, setUser] = useState("John");
+  // const [user, setUser] = useState("John");
 
   return (
     <div className="App">
-      <UserContext.Provider value={{ user, setUser }}>
+      {/* <UserContext.Provider value={{ user, setUser }}>
         <ExampleUseContext/>
         <ExampleUseState/>
         <ExampleUseEffect/>
@@ -29,7 +30,8 @@ function App() {
         <ExampleUseMemo/>
         <ExampleUseRef/>
         <MyHOCComponentWithData dataSource="https://jsonplaceholder.typicode.com/users"/>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      <ParentComponent/>
     </div>
   );
 }

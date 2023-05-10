@@ -183,50 +183,6 @@ function innerFunction(bigArray) {
 //   This would require us to store the bigArray variable somewhere outside of innerFunction, which could take up additional memory.
 
 // So in summary, closures can help improve memory efficiency by allowing inner functions to access variables from outer functions, which can avoid the need to store those variables in memory elsewhere.
-
-// If you declare a variable outside a function in JavaScript, it will not automatically act as a closure inside the function. However, if the function is defined within the same scope as the variable, the function will have access to that variable.
-
-// Here's an example:
-var x = 10;
-
-function foo() {
-  console.log(x); // 10
-}
-
-foo();
-
-// In this example, the foo function is defined in the same scope as the x variable, so it has access to the value of x.
-
-// However, if the variable is declared inside a different scope, such as within a different function or block, the inner function will not have access to the variable unless it is passed in as a parameter or returned from the outer function.
-
-function outer() {
-  var x = 10;
-
-  function inner() {
-    console.log(x); // undefined
-  }
-
-  inner();
-}
-
-outer();
-
-// In this example, the x variable is declared inside the outer function, so the inner function does not have access to it. If you want to give the inner function access to x, you can pass it in as a parameter or return it from the outer function:
-
-function outer() {
-  var x = 10;
-
-  function inner(y) {
-    console.log(y); // 10
-  }
-
-  inner(x);
-}
-
-outer();
-
-// In this example, the x variable is passed in as a parameter to the inner function, so it has access to its value.
-
 // A closure is a function that has access to variables in its outer lexical environment, even after the outer function has returned. This happens because the closure "closes over" (or captures) the variables from the outer scope, allowing them to be used within the closure.
 
 // A closure has three scopes:

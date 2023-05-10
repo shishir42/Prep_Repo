@@ -5,6 +5,7 @@
 Array.prototype.map = function(callback) {
     const newArray = [];
     for(let i=0; i<this.length; i++) {
+      // (callbackfn: (value: any, index: number, array: any[])
       newArray.push(callback(this[i], i, this));
     }
     return newArray;

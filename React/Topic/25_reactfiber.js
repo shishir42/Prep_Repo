@@ -11,3 +11,7 @@
 // Error boundaries: Fiber introduces the concept of "error boundaries", which are components that can catch and handle errors that occur during rendering. This can help prevent errors from crashing the entire UI and allow developers to handle errors in a more graceful way.
 
 // Overall, React Fiber is a significant improvement over the previous rendering algorithm in React and is a major reason why React 16 and above are able to handle larger and more complex applications with ease.
+
+// https://blog.logrocket.com/deep-dive-react-fiber/
+// https://www.codingninjas.com/codestudio/library/react-fiber-architecture
+// https://github.com/acdlite/react-fiber-architecture
