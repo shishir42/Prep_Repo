@@ -1,0 +1,15 @@
+Intent Extras: You can pass data through intent extras when starting an activity. Use the putExtra() method of the Intent class to add data, and retrieve it in the target activity using the getIntent().getExtras() method. This method is suitable for passing small amounts of simple data, such as strings, integers, or booleans.
+
+Parcelable/Serializable: For passing complex custom objects or larger sets of data, you can implement the Parcelable or Serializable interfaces in your custom class to enable serialization. This allows you to add the object as an extra to an Intent using putExtra() and retrieve it in the target activity.
+
+Application Class: If the data needs to be accessed by multiple activities or has a global scope, you can store it in the Application class. The Application class is a base class for maintaining global application state and can be accessed from any activity or component within your app.
+
+Singleton Class: Another option is to create a singleton class that holds the data you want to pass between activities. The singleton class provides a single instance accessible from any activity, allowing you to set and retrieve the data as needed.
+
+SharedPreferences: If you need to pass small amounts of data that need to persist across app restarts, you can use SharedPreferences. This allows you to store key-value pairs and access them from any activity within your app.
+
+Database: If you have a large amount of structured data or need to persist data across multiple sessions, you can use a database such as SQLite. Store the data in the database and retrieve it in the target activity based on specific criteria.
+
+Content Provider: Content Providers are primarily used for sharing data between different apps. However, you can also use them to pass data between activities within the same app by querying and retrieving data from the provider in the target activity.
+
+Event Bus: Libraries like EventBus or RxJava can be used to implement an event-driven architecture. You can post events containing data from one activity and subscribe to those events in the target activity to receive the data.

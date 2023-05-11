@@ -1,0 +1,181 @@
+When building a scalable mobile app infrastructure, several design patterns can be applied to ensure the system's scalability, performance, and manageability. Here are some design patterns commonly used in building scalable mobile app infrastructures:
+
+Microservices Architecture: In this pattern, the app is divided into smaller, loosely coupled services, each responsible for specific functions. Microservices allow for independent scaling, deployment, and maintenance of different components of the app, promoting agility and scalability.
+
+Serverless Computing: The serverless pattern eliminates the need for provisioning and managing servers. Instead, the app runs on a cloud provider's infrastructure, and developers focus on writing the app's code. This pattern provides automatic scalability, as the cloud provider handles the scaling based on demand.
+
+Load Balancing: Load balancing distributes incoming network traffic across multiple servers or instances to ensure optimal resource utilization and prevent overloading of individual components. Load balancing patterns, such as Round Robin, Least Connections, or Dynamic Load Balancing, help distribute the workload and improve scalability.
+
+Caching: Caching patterns, like Content Delivery Networks (CDNs) or in-memory caches, store frequently accessed data closer to the user, reducing latency and relieving the backend systems. Caching improves performance and scalability by reducing the load on the underlying infrastructure.
+
+Asynchronous Messaging: The Asynchronous Messaging pattern allows systems to communicate asynchronously using messages. It decouples components, promotes loose coupling, and enables scaling by handling heavy workloads more effectively. Messaging systems like RabbitMQ or Apache Kafka facilitate this pattern.
+
+Database Scaling Patterns: Database scaling patterns, such as sharding, partitioning, or replication, enable horizontal scaling of databases to handle increased data volume and concurrent requests. These patterns distribute data across multiple database instances and improve the overall scalability and performance of the app.
+
+Event-Driven Architecture: Event-driven architecture allows components to produce and consume events, enabling loose coupling and scalability. Components react to events asynchronously, reducing dependencies and enabling independent scaling of event producers and consumers.
+
+Auto-Scaling: Auto-scaling patterns automatically adjust resources based on demand. By monitoring metrics like CPU usage, request rate, or queue length, the system scales up or down dynamically. Cloud providers like AWS or Azure offer auto-scaling capabilities for mobile app infrastructure.
+
+Circuit Breaker: The Circuit Breaker pattern helps prevent cascading failures in distributed systems. It monitors services and automatically opens the circuit (stops calling a service) when it detects failures, preventing overloading of the system. This pattern enhances resiliency and scalability.
+
+Stateless Architecture: Stateless architecture ensures that each request can be processed independently, without relying on previous requests' state. By eliminating session dependencies, the system becomes more scalable, as requests can be processed by any available server.
+
+It's important to note that the selection and combination of design patterns may vary depending on the specific requirements, technologies, and constraints of your mobile app infrastructure. It's recommended to analyze your app's needs and consult with experienced architects or developers to determine the most suitable design patterns for your scalability requirements.
+
+**************************************************************************************************************
+
+There are several ways to notify a mobile app from the backend. Here are some common methods:
+
+Push Notifications: Push notifications are a widely used method to notify mobile apps. The backend can send push notifications to devices using platforms like Firebase Cloud Messaging (FCM) for Android or Apple Push Notification Service (APNS) for iOS. Push notifications can be triggered based on specific events or updates on the backend, and they appear as alerts or messages on the user's device.
+
+WebSockets: WebSockets provide a bidirectional communication channel between the backend and the mobile app. The backend can establish a WebSocket connection with the app, enabling real-time communication. When an event occurs on the backend that requires notifying the app, the backend can send a message through the WebSocket connection, and the app receives it instantly.
+
+Long Polling: Long polling is a technique where the mobile app sends a request to the backend, and instead of immediately responding, the backend holds the request open until new data or an event is available. Once the backend has the relevant information to notify the app, it responds with the data. The app can then initiate a new long polling request.
+
+Server-Sent Events (SSE): SSE is a technology that enables the server to send real-time updates to the mobile app over a single HTTP connection. The backend can establish a persistent connection with the app, and when an event occurs that requires notifying the app, the server can send the event data as an SSE message. The app receives the messages in real-time.
+
+Polling: In the polling approach, the mobile app periodically sends requests to the backend to check for updates. The backend responds with the latest data or status information. The app can set a fixed interval for polling or dynamically adjust the polling frequency based on the app's needs.
+
+SMS or Email Notifications: If push notifications or real-time updates are not feasible or necessary for your app, you can consider sending notifications via SMS or email. The backend can trigger SMS or email notifications to inform the user about specific events or updates. This method doesn't require a real-time connection between the backend and the app.
+
+The choice of notification method depends on factors such as the type of app, the nature of the updates, real-time requirements, and the capabilities and limitations of the mobile platform. It's important to consider the user experience, privacy concerns, and the impact on battery life when deciding which notification method to implement.
+
+**************************************************************************************************************
+
+To build a high-end and scalable mobile app on AWS (Amazon Web Services), you can leverage several key services that provide the necessary infrastructure, scalability, and performance. Here are some AWS services commonly used for building scalable mobile apps:
+
+Amazon EC2 (Elastic Compute Cloud): EC2 provides scalable virtual server instances on the cloud. You can use EC2 to host the backend server components of your mobile app. EC2 instances can be scaled up or down based on demand to handle varying levels of traffic and workload.
+
+Amazon S3 (Simple Storage Service): S3 offers scalable and highly durable object storage for storing static assets like images, videos, or files used by your mobile app. S3 provides high availability and supports seamless scalability, ensuring reliable storage for your app's content.
+
+AWS Lambda: Lambda is a serverless computing service that allows you to run code without provisioning or managing servers. You can use Lambda for executing backend functions or processing tasks triggered by events from your mobile app. Lambda scales automatically based on the incoming workload.
+
+Amazon API Gateway: API Gateway enables you to create, deploy, and manage APIs for your mobile app. It acts as a front door to your backend services, allowing you to define and expose RESTful APIs to interact with your app. API Gateway provides scalability, security, and handles API management tasks.
+
+Amazon RDS (Relational Database Service): RDS is a managed database service that supports multiple database engines like MySQL, PostgreSQL, or Amazon Aurora. It provides scalable, high-performance databases for your app's backend. RDS takes care of routine database management tasks, including backups, patches, and scaling.
+
+Amazon DynamoDB: DynamoDB is a fully managed NoSQL database service that provides fast and scalable storage for structured data. DynamoDB offers low latency and automatic scaling, making it suitable for handling high read and write workloads from mobile apps.
+
+Amazon Cognito: Cognito provides user authentication, authorization, and user management capabilities for your mobile app. It enables you to handle user sign-up, sign-in, and secure access control. Cognito supports various authentication methods, including social logins and federated identities.
+
+AWS AppSync: AppSync is a fully managed GraphQL service that simplifies real-time data synchronization and offline capabilities for mobile and web apps. It allows your app to retrieve and update data from multiple sources efficiently, with built-in support for real-time subscriptions and offline synchronization.
+
+Amazon CloudFront: CloudFront is a content delivery network (CDN) service that delivers content, including static assets and API responses, with low latency and high transfer speeds. CloudFront caches your app's content at edge locations worldwide, reducing latency and enhancing scalability.
+
+AWS Amplify: Amplify is a comprehensive set of tools and services for building mobile and web apps. It provides a unified development experience, including authentication, storage, APIs, and notifications. Amplify simplifies the integration of AWS services into your mobile app and supports popular frontend frameworks like React Native and Flutter.
+
+These are just a few examples of AWS services that can help you build a high-end and scalable mobile app. Depending on your app's specific requirements, you may also consider services like AWS Step Functions, AWS SQS (Simple Queue Service), AWS Kinesis, or AWS Elasticsearch, among others, to further enhance scalability and functionality.
+
+**************************************************************************************************************
+
+//Implement authentication and authorization 
+ API security (Oauth, Jwt token)
+
+Exposure to latest software security industry standards e.g. Crypto techniques, SAML, OpenID, OAuth, JWT, XACML etc.
+Knowledge of Identity and Access Management methodologies
+
+*********************
+
+There are several ways to implement authentication mechanisms in an application. The choice of authentication method depends on various factors, including the specific requirements of your application and the level of security needed. Here are some common authentication mechanisms:
+
+Username and Password: This is the most common form of authentication where users provide a username and password combination to authenticate themselves.
+
+Token-based Authentication: In this approach, a token (e.g., JSON Web Token or JWT) is generated upon successful login and sent to the client. The client then includes this token in subsequent requests to authenticate itself. The server verifies the token to grant access.
+
+OAuth: OAuth is an open standard for authorization that allows users to authenticate using their existing accounts on platforms like Google, Facebook, or Twitter. It involves obtaining an access token from the identity provider and using it to access protected resources.
+
+OpenID Connect: OpenID Connect is an authentication layer built on top of OAuth 2.0. It provides a standardized way for applications to authenticate users by verifying the identity issued by an OpenID provider.
+
+Multi-factor Authentication (MFA): MFA adds an extra layer of security by requiring users to provide multiple pieces of evidence to authenticate, such as a password, a fingerprint, or a one-time verification code sent to their mobile device.
+
+Biometric Authentication: This mechanism uses biometric data, such as fingerprints or facial recognition, to authenticate users. It provides convenience and enhanced security for supported devices.
+
+Single Sign-On (SSO): SSO enables users to authenticate once and gain access to multiple applications or services without the need to re-enter their credentials. It streamlines the authentication process and improves user experience.
+
+The choice of authentication mechanism depends on factors such as the sensitivity of the data, the type of application (web, mobile, or API), user experience requirements, and the integration capabilities with external identity providers. It's important to consider security best practices and implement the appropriate level of authentication based on your application's needs.
+
+**********************
+
+There are several ways to implement Token-based Authentication in an application. Here are some common approaches:
+
+JSON Web Tokens (JWT): JWT is a popular token-based authentication mechanism. It involves issuing a JSON Web Token containing user claims and signing it with a secret key. The token is then sent to the client, typically in the response body or as a response header. The client includes the token in subsequent requests, and the server verifies the token's signature to authenticate and authorize the user.
+
+OAuth 2.0: OAuth 2.0 is a widely-used authorization framework that can be leveraged for token-based authentication. It involves obtaining an access token from an authorization server after the user authenticates. The access token is then sent with subsequent requests to access protected resources.
+
+Token-Based APIs: Some APIs use token-based authentication where the client exchanges a username and password for an authentication token. The token is then included in subsequent requests as a form of authentication.
+
+Session Tokens: In this approach, a session token is generated upon successful authentication and stored on the server. The token is associated with the authenticated user and can be used to validate subsequent requests.
+
+Secure Cookies: Cookies can be used to implement token-based authentication. Upon successful authentication, a session identifier or token is stored in a secure cookie on the client-side. The server can then validate the token sent in subsequent requests.
+
+Third-Party Authentication Providers: Leveraging third-party authentication providers (e.g., social media platforms like Google or Facebook) is another way to implement token-based authentication. After the user authenticates with the third-party provider, an authentication token is obtained and used for subsequent requests.
+
+The choice of token-based authentication implementation depends on factors such as the specific requirements of your application, the level of security needed, and integration capabilities with external services or frameworks.
+
+It's important to implement token-based authentication securely by considering measures such as token expiration, token refreshing, token revocation, secure storage of tokens, and protection against token misuse or tampering. Additionally, always follow best practices and guidelines provided by the authentication framework or service you choose to implement.
+
+**************************************************************************************************************
+
+When loading a large number of images from a server in a mobile app, it's important to consider a design that prioritizes performance, responsiveness, and efficient memory usage. Here's a suggested design approach:
+
+Pagination or Infinite Scrolling: Instead of loading all the images at once, consider implementing pagination or infinite scrolling. Load a subset of images initially and load additional images as the user scrolls or requests more content. This approach helps reduce the initial load time and memory usage while providing a smooth user experience.
+
+Thumbnail Previews: Display thumbnail versions of the images initially, and load full-size versions when the user selects or zooms in on a specific image. Thumbnails are smaller in size, load faster, and help optimize the initial rendering of the image list.
+
+Lazy Loading: Implement lazy loading to load images as they become visible on the screen. As the user scrolls, load the images that are currently in the viewport or just about to enter it. This technique reduces the initial load time and improves overall app performance.
+
+Caching: Utilize caching mechanisms to store images locally on the device after they have been downloaded. This allows for faster subsequent loading of the images, especially if the user navigates back to a previously viewed image.
+
+Image Compression and Optimization: Optimize the images for web delivery by compressing them without significant loss of quality. Tools like ImageMagick or libraries like libjpeg-turbo can help with image compression and optimization. Smaller image sizes reduce download times and improve performance.
+
+Progressive Loading: Use progressive loading techniques to display low-quality versions of the images initially, and progressively enhance the image quality as more data is loaded. This technique provides a better user experience by showing a preview quickly while the full image is being downloaded.
+
+CDN (Content Delivery Network): Utilize a CDN to distribute your images globally and reduce latency. CDNs cache images in multiple server locations worldwide, ensuring faster and more reliable image delivery to users across different regions.
+
+Placeholder Images: Display placeholder images or loading spinners while images are being loaded or processed. This provides visual feedback to the user and indicates that content is being fetched.
+
+Image Pooling: Implement an image pooling mechanism to reuse image views and reduce memory overhead. Instead of creating new image views for each image, recycle and update existing views with new image data as the user scrolls.
+
+Background Image Loading: Use background threads or asynchronous tasks to load images in the background without blocking the main user interface thread. This ensures that the app remains responsive during image loading and prevents any UI freezes or delays.
+
+By combining these design approaches, you can efficiently load and display a large number of images from a server in your mobile app while maintaining optimal performance and responsiveness. Remember to profile and test your app's performance on various devices and network conditions to ensure the best user experience.
+
+
+
+https://www.youtube.com/results?search_query=How+to+build+a+scalable+mobile+app+project
+https://gearheart.io/articles/how-build-scalable-web-applications/
+https://www.bridge-global.com/blog/how-to-scale-mobile-apps-with-mobile-app-redesign/
+https://www.altogic.com/blog/how-to-build-a-scalable-mobile-app-infra
+https://imaginovation.net/blog/building-scalable-mobile-app-architecture-large-projects/
+https://applover.com/blog/how-do-you-build-scalable-mobile-apps/
+https://www.nomtek.com/blog/building-scalable-mobile-apps
+https://www.dhiwise.com/post/build-scalable-android-application
+https://www.smashingmagazine.com/2011/07/seven-guidelines-for-designing-high-performance-mobile-user-experiences/
+https://engineering.shipsy.io/monitoring-on-the-move-a-developers-guide-to-mobile-app-stability-and-scalability
+https://blog.back4app.com/mobile-app-infrastructure/
+https://proandroiddev.com/building-scalable-android-apps-88ba1e96aa83
+https://proandroiddev.com/scalable-architecture-for-big-mobile-projects-c48f329a2275
+https://medium.com/swlh/scalable-highly-available-web-mobile-app-architecture-d803b8ba56e
+https://www.slideshare.net/MohamedAboelFetouh1/build-a-scalable-mobile-app
+
+
+https://www.udemy.com/course/amazon-web-services-aws-interview-preparation/
+https://www.udemy.com/course/mastering-architecting-applications-using-aws/
+https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+
+https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/ (later)
+
+https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/
+https://www.udemy.com/course/ios-13-app-development-bootcamp/
+https://www.udemy.com/course/deep-dive-ios-16-swiftui-programming/
+
+https://www.youtube.com/watch?v=KCgYDCKqato&t=1426s
+
+
+https://www.youtube.com/watch?v=q-0yzA3WgXc&list=PL9nWRykSBSFgPhu5u5-ci5U45OOO9np5q&index=2
+
+
+
+https://ourcodeworld.com/articles/read/929/top-10-best-android-image-loading-and-caching-libraries
+https://medium.com/@haxzie/best-image-loading-libraries-for-android-analyzed-36b4781b4f16
+https://www.geeksforgeeks.org/top-5-image-loading-libraries-in-android/
