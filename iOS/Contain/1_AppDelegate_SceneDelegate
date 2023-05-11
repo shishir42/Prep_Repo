@@ -1,0 +1,11 @@
+In iOS, the AppDelegate and SceneDelegate are important classes that manage the lifecycle and behavior of an iOS application. However, their roles and responsibilities have changed with the introduction of multiple scenes in iOS 13 and later.
+
+AppDelegate:
+The AppDelegate class has been present in iOS since the early versions and is responsible for managing the application's overall lifecycle. It handles events like launching the app, handling remote notifications, handling background tasks, and more. In older versions of iOS (before iOS 13), the AppDelegate was the primary class responsible for managing the user interface and window of the app.
+
+SceneDelegate:
+Starting from iOS 13, Apple introduced multiple scene support, allowing an application to have multiple instances of UI simultaneously. Each instance represents a different window and can have its own UI state. With this change, the role of managing the user interface and windows was moved from AppDelegate to the new SceneDelegate class.
+
+The SceneDelegate class is responsible for managing the life cycle events and UI appearance of a specific instance of the app's interface, known as a "scene." It handles events such as creating a new scene, connecting to an existing scene, or disconnecting from a scene. It also manages the configuration of the scene's user interface and responds to events specific to that scene.
+
+In summary, the AppDelegate manages the overall application lifecycle, while the SceneDelegate manages the lifecycle and UI appearance of individual instances or scenes within the application. The SceneDelegate is used when your app supports multiple windows or multiple scenes, while the AppDelegate is still important for handling events that are not specific to any particular scene, such as handling app-level notifications.
