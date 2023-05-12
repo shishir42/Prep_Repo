@@ -1,3 +1,81 @@
+***********
+1.Modules - like a namespace 
+
+Every statement in file is wrapped under a module and if you want to access then import and if you need to export
+
+example export.sum = (a,b)=> a+b
+
+CommonJS module
+ESJS module
+
+package.json
+{
+  "type":"module" //ESModule
+}
+
+2. nodemon
+
+3. npm run start
+
+4. npm outdated
+
+5. node api - get, post, patch, put, delete
+
+6. express 
+
+7. middleware - 
+    * Execute any code
+    * Make changes to the request and response object
+    * End the request-response cycle
+    * Call the next middleware in the stack
+
+8. express.json() -> read body 
+
+9. morgan -> third party middleware (for logger)
+
+10. url parameter -> '/product/:id'
+
+11. mvc
+
+12. router
+
+13. dotenv library 
+
+14.MERN stands for MongoDB, Express, React, Node, 
+
+15. cors middleware
+
+Scalable Apps:
+https://www.youtube.com/watch?v=RCyR5_9djik&list=PLrwNNiB6YOA3xc1dfQpHuaU8HsKxkEgiQ
+https://www.youtube.com/watch?v=6lHvks6R6cI
+https://www.youtube.com/watch?v=nC5UbrpbD5E
+https://www.youtube.com/watch?v=9RLeLngtQ3A
+https://www.youtube.com/watch?v=w1IzRF6AkuI
+https://www.youtube.com/watch?v=3g7EzpF2jaE
+https://www.youtube.com/watch?v=lB3Ip0Yn-Zs
+https://www.youtube.com/watch?v=11axb6y_MTE
+https://www.youtube.com/watch?v=gzIcGhJC8hA
+https://www.youtube.com/watch?v=INM6TybFV9Q
+
+
+Microservices:
+https://www.youtube.com/results?search_query=microservices+in+node+js
+
+
+real time:
+https://www.youtube.com/watch?v=RqiU5nzj_nU&list=PLXQpH_kZIxTVRmXQN9J0Az76te5mAreLV
+
+
+Auth:
+https://www.youtube.com/watch?v=SnoAwLP1a-0&list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+https://www.youtube.com/watch?v=KiNBhjeMI4Y&list=PLdHg5T0SNpN0ygjV4yGXNct25jY_ue70U
+https://www.youtube.com/watch?v=mbsmsi7l3r4
+https://www.youtube.com/watch?v=S20PCL9e_ks
+https://www.youtube.com/watch?v=OWeruyqhiTo
+https://www.youtube.com/watch?v=b4H9EOKc910
+https://www.youtube.com/watch?v=ICMnoKxlYYg
+
+***********
 A blocking function in Node.js is a function that can potentially block the execution of the entire Node.js process until it completes its operation. This means that while the blocking function is executing, the event loop, which is responsible for handling incoming requests and executing callback functions, is paused, and no new requests can be handled.
 
 Some examples of blocking functions in Node.js include synchronous file I/O operations and network operations that don't use asynchronous APIs. If these operations take a long time to complete, it can lead to poor performance and unresponsiveness in a Node.js application.

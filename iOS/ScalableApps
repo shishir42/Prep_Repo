@@ -74,6 +74,8 @@ These are just a few examples of AWS services that can help you build a high-end
 Exposure to latest software security industry standards e.g. Crypto techniques, SAML, OpenID, OAuth, JWT, XACML etc.
 Knowledge of Identity and Access Management methodologies
 
+Understanding of Security best practices
+
 *********************
 
 There are several ways to implement authentication mechanisms in an application. The choice of authentication method depends on various factors, including the specific requirements of your application and the level of security needed. Here are some common authentication mechanisms:

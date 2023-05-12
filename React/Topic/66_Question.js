@@ -41,8 +41,8 @@
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=177s - node
 // https://www.youtube.com/watch?v=XQJNVF9pFYs&t=52390s  - react and node
 // https://www.youtube.com/watch?v=GKYr5eWm8EY - react
-// https://www.youtube.com/watch?v=VLgVw2NEqCM - react & redux
-// https://www.youtube.com/watch?v=ChVE-JbtYbM&t=260s - node
+// https://www.youtube.com/watch?v=VLgVw2NEqCM - react & redux ******
+// https://www.youtube.com/watch?v=ChVE-JbtYbM&t=260s - node ******
 // https://www.youtube.com/watch?v=5RPBP1gafnw - node
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=197s - node
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=185s - node
