@@ -40,9 +40,12 @@
 // https://www.youtube.com/watch?v=ym3aaodVQIU - react and redux
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=177s - node
 // https://www.youtube.com/watch?v=XQJNVF9pFYs&t=52390s  - react and node
-// https://www.youtube.com/watch?v=GKYr5eWm8EY - react
+// https://www.youtube.com/watch?v=GKYr5eWm8EY - react  1111
+// https://www.youtube.com/watch?v=8xf78RNtfHY - react 2222
+// https://www.youtube.com/watch?v=8HTYXNLLLSQ - react 3333
+// https://www.youtube.com/watch?v=wFaPrqi1YFQ - react 4444
 // https://www.youtube.com/watch?v=VLgVw2NEqCM - react & redux ******
-// https://www.youtube.com/watch?v=ChVE-JbtYbM&t=260s - node ******
+// https://www.youtube.com/watch?v=ChVE-JbtYbM&t=260s - node ****** (done)
 // https://www.youtube.com/watch?v=5RPBP1gafnw - node
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=197s - node
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=185s - node
@@ -54,3 +57,12 @@
 // https://www.youtube.com/watch?v=T-Pum2TraX4 - aws  
 // https://www.youtube.com/watch?v=vM7X9AO7r6c&list=PLLh98oBzdb7bAuR9Nv-iGzTAxo0e1CRq3 - aws 
 // https://www.youtube.com/watch?v=WFPFqj1XJqs&list=PL7foQG1Y7xk-kM32_Vkeh0tob8sb9cGbY - aws
+
+// https://www.udemy.com/course/amazon-web-services-aws-interview-preparation/
+// https://www.udemy.com/course/mastering-architecting-applications-using-aws/
+// https://www.udemy.com/course/aws-certified-cloud-practitioner-new/
+
+
+// https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/
+// https://www.udemy.com/course/ios-13-app-development-bootcamp/
+// https://www.udemy.com/course/deep-dive-ios-16-swiftui-programming/
