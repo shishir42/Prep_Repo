@@ -856,7 +856,6 @@ Mobile app scale
 
 check that the code follows security best practices, such as using secure communication protocols, avoiding injection attacks, and properly sanitizing user input.
 
-
 https://levelup.gitconnected.com/restful-api-patterns-81930c43e494
 
 https://www.clariontech.com/blog/evaluating-design-patterns-for-mobile-development

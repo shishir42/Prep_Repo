@@ -1,0 +1,403 @@
+## ***What is an iframe and how it works?***
+
+* An iframe is an HTML document which can be embedded inside another HTML page **Example:*
+
+<iframe src="https://github.com" height="300px" width="300px"></iframe>
+
+
+## ***How do you set language in HTML?***
+
+There are multiple ways to set language in HTML
+
+* By setting content-language in headers for language of the page
+* By setting accept-language in headers for list of language that a page accept
+* Setting lang attribute in html tag
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+## ***What is the DOM? How does the DOM work?***
+The DOM (Document Object Model) is a programming interface for HTML and XML documents. It represents the structure of a web page as a hierarchical tree-like structure, where each element, attribute, and text node in the document is represented as an object.
+
+The DOM provides a way for programs (such as JavaScript) to dynamically access and manipulate the content, structure, and style of a web page. It allows developers to interact with the elements on a page, modify their properties, add or remove elements, and respond to user events.
+
+Here's an overview of how the DOM works:
+
+Parsing HTML: When a web page is loaded, the browser's HTML parser reads and interprets the HTML code, creating a representation of the document in memory.
+
+Document Object: The top-level object in the DOM is called the "document" object. It represents the entire web page and serves as the entry point for interacting with the document.
+
+Node Tree: The DOM organizes the elements of the document in a tree-like structure called the "node tree." Each element, attribute, and text node is represented by a "node" object in the tree.
+
+Node Types: Different types of nodes exist in the DOM tree, such as "element nodes" representing HTML elements, "text nodes" representing textual content, "attribute nodes" representing HTML attributes, and more.
+
+Parent-Child Relationships: Elements in the DOM tree have parent-child relationships. For example, the <body> element is the child of the <html> element, and other elements can be children of the <body> element.
+
+Accessing and Manipulating Nodes: Through JavaScript or other programming languages, you can use DOM APIs to access and manipulate nodes. You can query elements by their tag names, classes, IDs, or other attributes. Once you have a reference to a node, you can modify its properties, add or remove classes, change its style, or append new child nodes.
+
+Event Handling: The DOM provides mechanisms to handle user events, such as clicks, keystrokes, or form submissions. Event listeners can be attached to elements, allowing you to respond to specific events and perform actions accordingly.
+
+Rendering: As the DOM is manipulated, the browser's rendering engine updates the visual representation of the web page accordingly. The rendered output reflects the changes made to the DOM.
+
+It's important to note that the DOM represents the structure and content of a web page, but it is separate from the actual HTML source code. The DOM can be modified dynamically, and those changes are reflected in the rendered page. However, modifying the DOM does not directly affect the original HTML file.
+
+By providing a standardized way to access and modify web page content, the DOM enables interactive web applications and dynamic updates to the user interface.
+
+Now, when a web page is loaded, the browser creates such a document every time which is called, Document Object Model (DOM) of the page.
+The DOM represents the document as nodes and objects so that programs can change the document structure, style, and content. In that hat way, programming languages connect to the webpage.
+
+## ***How does the browser rendering engine work?***
+
+The browser rendering engine, also known as the layout engine or rendering pipeline, plays a crucial role in displaying web pages by interpreting HTML, CSS, and other web technologies. While different browsers have their own rendering engines, the overall process follows similar principles. Here's an overview of how a typical browser rendering engine works:
+
+Parsing HTML:
+The rendering engine starts by parsing the HTML code received from the network or retrieved from the browser's cache.
+The HTML parser reads the HTML markup and creates a DOM (Document Object Model) tree, representing the structure of the web page.
+
+Constructing the Render Tree:
+Once the DOM tree is built, the rendering engine creates another tree called the Render Tree.
+The Render Tree contains only the elements that need to be displayed on the screen, skipping non-visible elements like <head>, <script>, or elements with display: none CSS property.
+Each node in the Render Tree corresponds to a visible element and includes information about how it should be rendered.
+
+Applying CSS:
+The rendering engine parses the CSS stylesheets associated with the web page.
+It matches the CSS rules to the elements in the Render Tree, determining the style properties that should be applied to each element.
+The computed styles, which include values such as colors, fonts, sizes, and positions, are added to the Render Tree nodes.
+
+Layout (or Reflow):
+The layout phase calculates the position and size of each element in the Render Tree.
+It determines the dimensions and placement of elements based on the box model, CSS properties, and other factors.
+Layout is also known as "reflow" and can be an expensive operation, especially when the web page undergoes changes.
+
+Painting:
+The rendering engine traverses the Render Tree and paints each element on the screen.
+It determines the appropriate rendering layers and applies visual styles such as backgrounds, borders, and shadows.
+The painted elements are typically stored in GPU memory for efficient rendering and performance.
+
+Compositing:
+Compositing involves layering and blending the painted elements to create the final display.
+The browser's compositor uses hardware acceleration to combine the visual layers efficiently.
+The final composited result is sent to the display, creating the visual output that the user sees on the screen.
+
+Handling Interactivity and Events:
+The rendering engine also handles user interactions and events, such as mouse clicks or keyboard input.
+It listens for user actions and triggers appropriate responses or updates to the DOM or Render Tree, initiating the rendering process again if necessary.
+
+Throughout these steps, the rendering engine ensures responsiveness by rendering and updating the web page at a high frame rate, typically targeting 60 frames per second (FPS) to provide smooth user experience.
+
+It's worth noting that modern rendering engines employ optimizations, such as caching, incremental rendering, or lazy loading, to improve performance and efficiently handle complex web pages and interactions.
+
+Examples of popular rendering engines include Blink (used in Google Chrome and Opera), WebKit (used in Safari), and Gecko (used in Firefox).
+
+In order to render content the browser has to go through a series of steps:
+
+Document Object Model(DOM)
+CSS object model(CSSOM)
+Render Tree
+Layout
+Paint
+
+************************************************************************
+
+
+Block-level Elements
+A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+Two commonly used block elements are: <p> and <div>.
+The <p> element defines a paragraph in an HTML document.
+The <div> element defines a division or a section in an HTML document
+
+Inline Elements
+An inline element does not start on a new line.
+An inline element only takes up as much width as necessary.
+This is a <span> element inside a paragraph.
+
+block elements <h1>, <p>, <ul>, <ol>, <li>,
+inline elements <span>, <a>, <strong>, <i>, <img>
+
+************************************************************************
+
+Semantic elements in HTML are those that convey meaning and represent different sections or types of content on a web page. They provide contextual information about the content they contain, making the structure and purpose of the page more explicit. On the other hand, non-semantic elements do not carry inherent meaning or convey any specific information about the content. Let's explore both types:
+
+Semantic Elements:
+
+Semantic HTML tags are tags that define the meaning of the content they contain. For example, tags like <header>, <article>, and <footer> are semantic HTML tags. They clearly indicate the role of the content they contain. On the other hand, tags like<div> and <span> are typical examples of non-semantic HTML elements.
+
+<header>: Represents the introductory section or a container for the header content of a page or section.
+<nav>: Represents a section containing navigation links.
+<main>: Represents the main content area of the document.
+<article>: Represents a self-contained composition, such as a blog post, news article, or comment.
+<section>: Represents a standalone section of content within a document.
+<aside>: Represents content that is tangentially related to the main content, often presented as a sidebar or callout.
+<footer>: Represents the footer of a document or section, typically containing copyright, contact information, or related links.
+
+Semantic elements improve the accessibility, search engine optimization (SEO), and maintainability of a web page. They help screen readers and other assistive technologies understand the structure and purpose of the content, and search engines can better index and interpret the page.
+
+Non-semantic Elements:
+
+<div>: A generic container for grouping and styling content without any inherent meaning.
+<span>: A generic inline container often used for styling or targeting specific parts of the text.
+<div> and <span> elements are non-semantic because they do not convey any specific information or indicate the purpose of their contents.
+
+Non-semantic elements are often used for layout purposes, applying styling, or targeting elements through CSS or JavaScript. While they are useful for organizing and manipulating the presentation of content, they do not provide any inherent meaning to the content itself.
+
+It is generally recommended to use semantic elements whenever possible as they contribute to a more structured and accessible web page. By using semantic elements, developers can improve the document's readability, maintainability, and understandability by both humans and machines. However, non-semantic elements still have their place in web development for non-structural and presentational purposes.
+
+The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+While the content of the <figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+Tip: The <figcaption> element is used to add a caption for the <figure> element.
+
+************************************************************************
+
+What is the purpose of main element?
+The <main> element in HTML is a semantic element that represents the main content area of a document. It is designed to encapsulate the primary content of a web page, excluding any content that is repeated across a set of documents (such as site navigation, headers, footers, etc.).
+
+The purpose of the <main> element is to provide clarity and improve the accessibility and structure of a web page. Here are some key points regarding its purpose:
+
+Primary Content Container: The <main> element serves as a container for the main content of a document. It represents the core information that the page is intended to convey to the users.
+
+Accessibility: By using the <main> element, developers can indicate to assistive technologies (e.g., screen readers) that the content within this element is the primary content of the page. This helps users navigate directly to the main content and skip over repetitive elements.
+
+SEO (Search Engine Optimization): Search engines consider the content within the <main> element to be important for indexing and ranking purposes. Using the <main> element can enhance the search engine's understanding of the page's primary content and potentially improve its visibility in search results.
+
+Document Structure: The <main> element contributes to the overall structure and semantics of the document. It helps developers and other individuals reading the code to identify and distinguish the main content from other sections of the page.
+
+It's important to note that according to the HTML specification, a web page should have only one <main> element per document. The <main> element should not be nested within other <main> elements or placed inside certain sections, such as <article>, <section>, or <header>.
+
+Using the <main> element appropriately can provide clarity, improve accessibility, and enhance the overall structure and semantics of your HTML documents.
+
+************************************************************************
+
+When deciding between using <section>, <div>, or <article> elements in HTML, it's important to understand their intended purposes and choose the one that best represents the content you are working with. Here are guidelines for when to use each element:
+
+<section>:
+
+Use <section> when you have a distinct, standalone section of content within a document.
+<section> is intended for grouping related content thematically, such as chapters, topics, or different parts of a page.
+It helps organize content and contributes to the overall document structure.
+Avoid using <section> if a more specific semantic element (like <article> or <nav>) would be more appropriate.
+<div>:
+
+Use <div> when you need a generic container to group elements or apply styling.
+<div> has no inherent meaning and is commonly used for layout purposes or to create custom divisions within a page.
+It is a versatile element that can be used when no other semantic element conveys the desired meaning or purpose.
+<article>:
+
+Use <article> when you have a self-contained and independently distributable piece of content.
+<article> is suitable for blog posts, news articles, comments, forum posts, or similar content that can stand alone.
+It should make sense on its own and be potentially syndicated or distributed separately from the surrounding content.
+
+************************************************************************
+
+CORS stands for Cross-Origin Resource Sharing. It is a mechanism that allows web browsers to securely make cross-origin HTTP requests, meaning requests for resources from a different domain, port, or protocol than the one serving the web page. CORS addresses the issue of enforcing same-origin policy, which is a fundamental security measure implemented by web browsers to protect users from malicious attacks.
+
+The same-origin policy prevents JavaScript code running in a web page from making requests to resources (such as APIs or web services) on a different origin (domain, port, or protocol) than the one from which the web page was served. This policy helps prevent unauthorized access to sensitive data and protects users from cross-site scripting (XSS) attacks.
+
+However, there are legitimate use cases where web applications need to interact with resources from different origins. For example, a web page hosted on https://www.example.com may need to make AJAX requests to an API hosted on https://api.example.com. This is where CORS comes into play.
+
+CORS enables server-side control over cross-origin requests by adding additional HTTP headers to the server's response. These headers inform the browser whether the requested resource should be accessible or not from the requesting origin. The headers include:
+
+Access-Control-Allow-Origin: Specifies which origins are allowed to access the resource. It can be a specific origin or "*" to allow any origin.
+Access-Control-Allow-Methods: Specifies the HTTP methods (e.g., GET, POST, PUT, DELETE) allowed for the request.
+Access-Control-Allow-Headers: Specifies which HTTP headers can be included in the request.
+Access-Control-Allow-Credentials: Indicates whether the browser should include credentials (such as cookies or HTTP authentication) in the request.
+Access-Control-Max-Age: Specifies how long the preflight response (an initial request to check permissions) can be cached.
+By receiving and validating these CORS headers, the browser determines whether to allow or block the cross-origin request. If the server includes the appropriate headers allowing the request, the browser proceeds with the request; otherwise, it blocks the request and throws a CORS error.
+
+CORS provides a standardized way for web developers to control cross-origin requests while maintaining security. It enables web applications to securely interact with APIs and resources from different origins, expanding the possibilities of modern web development.
+
+************************************************************************
+
+Web Workers are a feature of modern web browsers that allow JavaScript code to run in the background, separate from the main browser thread. They enable concurrent execution of tasks, improving the responsiveness and performance of web applications.
+
+Here are key points about Web Workers:
+
+Background Execution: Normally, JavaScript code runs on the main thread of the browser, which is responsible for handling user interactions, rendering the page, and executing JavaScript code. This single-threaded nature can sometimes lead to blocking scenarios where computationally intensive tasks or long-running scripts can slow down the user interface and make the application less responsive.
+
+Separate Thread: Web Workers introduce additional threads, known as worker threads, that run in the background. These worker threads are separate from the main thread, allowing them to execute tasks concurrently without blocking the user interface.
+
+Parallelism: Web Workers enable parallel execution of tasks by utilizing multi-core processors and taking advantage of modern hardware capabilities. This makes it possible to perform computationally intensive operations, such as complex calculations or data processing, without impacting the responsiveness of the web page.
+
+Communication: Web Workers communicate with the main thread using an event-based messaging system. They can exchange data and messages with the main thread asynchronously, enabling coordination and sharing of information between the worker and the main application.
+
+Limitations: Web Workers have some limitations to ensure security and prevent shared access to critical resources. They cannot directly access the DOM, manipulate the user interface, or access certain APIs restricted to the main thread. However, they can perform computations, handle data, make network requests, and perform other tasks that don't require direct access to the DOM.
+
+Types of Web Workers: There are two types of Web Workers: Dedicated Workers and Shared Workers.
+
+Dedicated Workers: Each Dedicated Worker is associated with a specific script file and runs in its own thread.
+Shared Workers: Shared Workers are designed to be shared among multiple browsing contexts (e.g., multiple tabs or windows) within the same origin. They provide a way for multiple scripts to communicate and coordinate their work.
+Web Workers are particularly useful in scenarios where JavaScript code needs to perform heavy computations, process large amounts of data, or carry out background tasks while keeping the user interface responsive. They are commonly used in applications that involve data visualization, real-time updates, complex calculations, or offline data processing.
+
+By leveraging Web Workers, web developers can enhance the performance and user experience of their applications by offloading intensive tasks to separate background threads, resulting in smoother interactions and faster response times.
+
+
+************************************************************************
+
+Why to use HTML5 semantic tags?
+Using HTML5 semantic tags provides several benefits for web development:
+
+Improved Document Structure: Semantic tags give meaning and structure to the different sections and elements of a web page. They provide a clear and logical hierarchy, making it easier for developers to understand and maintain the code. Semantic markup enhances the readability of the HTML document, making it more accessible and maintainable in the long run.
+
+Accessibility: Semantic tags play a crucial role in web accessibility. They help assistive technologies, such as screen readers, understand the structure and purpose of the content. This enables users with disabilities to navigate and interact with web pages more effectively. Semantic markup ensures that the content is properly conveyed to assistive technologies, improving the accessibility of the website.
+
+Search Engine Optimization (SEO): Search engines aim to understand the content and context of web pages. Semantic tags provide additional clues about the content's relevance and importance. By using semantic elements correctly, search engine crawlers can better index and understand the page's structure and content. This can positively impact the website's search engine rankings and visibility.
+
+Styling and CSS: Semantic tags can make styling and CSS targeting more intuitive. With semantic elements, developers can apply styles more precisely and create consistent layouts across different pages. Semantic tags also offer a more straightforward approach to targeting specific sections of a page using CSS selectors, improving code maintainability and reducing the need for excessive class or ID attributes.
+
+Future Compatibility: HTML5 semantic tags provide a forward-looking approach to web development. They are part of the HTML5 specification, which is widely adopted and supported by modern web browsers. By using semantic tags, developers ensure that their websites are compatible with current and future web standards, enhancing the longevity and compatibility of their code.
+
+Overall, using HTML5 semantic tags improves the structure, accessibility, search engine optimization, and maintainability of web pages. They provide a standardized and meaningful way to describe the content and purpose of elements, contributing to a better user experience and making the web more accessible to a wider audience.
+
+************************************************************************
+
+HTML tags and elements are related but not exactly the same thing.
+
+In HTML, tags are the markup symbols that define the beginning and end of an element. They consist of angled brackets (< and >) and are used to enclose and identify elements within an HTML document. For example, <p> is a tag used to define a paragraph element, and <img> is a tag used to define an image element.
+
+On the other hand, HTML elements refer to the complete entity that includes both the opening and closing tags, as well as the content between them. An HTML element consists of the opening tag, the content (if any), and the closing tag. For example, the <p> element encompasses the opening tag <p>, the content (the text or other elements within the paragraph), and the closing tag </p>. Together, these form the complete <p> element.
+
+To summarize:
+
+Tags: HTML markup symbols (< and >) used to define the beginning and end of an element.
+Elements: Complete entities that include the opening and closing tags, as well as the content between them.
+
+************************************************************************
+
+What are different approaches to make an image responsive?
+
+There are several approaches to make an image responsive in web development, ensuring it adapts and scales appropriately across different screen sizes and devices. Here are some common techniques:
+
+1. CSS Max-Width: Set the CSS max-width property of the image to 100% to ensure it scales down proportionally based on the width of its container. This allows the image to adjust its size to fit different screen widths while maintaining its aspect ratio. For example:
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+2. CSS Flexbox: Use CSS flexbox to create flexible and responsive layouts, including images. By applying flexbox properties to the container of the image, you can control its sizing and positioning within the layout. This approach is particularly useful when dealing with multiple images or complex layouts.
+
+3. CSS Grid: Similar to flexbox, CSS grid layout provides a powerful way to create responsive designs. By defining a grid container and placing images within its grid cells, you can control their sizing, placement, and responsiveness. Grid layout offers more fine-grained control over the placement and alignment of images compared to flexbox.
+
+4. Responsive Images with srcset and sizes: HTML5 introduced the srcset and sizes attributes for the <img> tag, allowing you to provide multiple image sources and specify different sizes based on the viewport. By providing different versions of the image with varying resolutions, you can let the browser choose the most appropriate image based on the device's screen size. For example:
+
+<img src="small.jpg" srcset="medium.jpg 1000w, large.jpg 2000w" sizes="(max-width: 600px) 100vw, 50vw" alt="Responsive Image">
+
+In the above example, the browser can choose between the medium.jpg or large.jpg based on the viewport width, and the sizes attribute provides hints on the image size relative to the viewport.
+
+5. CSS Media Queries: Use CSS media queries to apply different styles to images based on the device's screen size or other conditions. By defining specific CSS rules for different screen widths, you can adjust the image's size, positioning, or even replace it with a different image altogether. Media queries allow for highly customizable and targeted responsiveness.
+
+************************************************************************
+
+When is it appropriate to use the small element?
+The <small> element in HTML is used to indicate that the enclosed text is smaller or less important than the surrounding content. It is typically used for fine print, disclaimers, copyright notices, legal information, or any text that is less significant but still relevant to the overall context.
+
+************************************************************************
+
+How do you serve a page with content in multiple languages?
+Serving a web page with content in multiple languages involves several considerations, including HTML markup, server-side configuration, and content translation. Here are the key steps to serve a multilingual page:
+
+HTML Markup: Ensure your HTML markup is properly structured to support multilingual content. Use the lang attribute to specify the language of each section or element. 
+Content Translation: Translate your content into the desired languages. This can involve hiring professional translators or using automated translation services. Ensure the translations accurately convey the meaning and context of the original content.
+URL Structure: Decide on the URL structure for your multilingual pages. You can use different subdirectories or subdomains to represent each language. For example:
+
+English: https://example.com/en/page
+French: https://example.com/fr/page
+Alternatively, you can use language parameter in the query string, like: https://example.com/page?lang=en.
+
+Server-Side Configuration: Configure your web server to handle language-specific URLs and provide proper content negotiation. This can involve setting up language-specific routing rules, utilizing server-side technologies like PHP, Node.js, or using content management systems (CMS) that support multilingual content.
+
+Language Switching: Provide a way for users to switch between languages. This can be done through language selection buttons, dropdown menus, or flags. Ensure that the language switcher updates the language preferences and redirects the user to the appropriate language version of the page.
+
+Localization: Consider localizing other aspects of your website, such as date and time formats, currencies, units of measurement, and other language-specific formatting conventions. Use appropriate localization libraries or frameworks to handle these aspects.
+
+SEO Considerations: Implement proper hreflang tags in your HTML to indicate the language and regional targeting of your pages. This helps search engines understand and index your multilingual content correctly.
+
+
+************************************************************************
+
+Certainly! Here's a concise explanation of the differences between <section> and <div> in bullet points:
+
+<section>:
+
+Represents a standalone section or thematic grouping of content.
+Has semantic meaning and contributes to the document outline.
+Typically includes a heading element to summarize the section's content.
+Provides contextual integrity, with content that makes sense on its own.
+Helps organize the structure of the page and is beneficial for accessibility and SEO.
+
+<div>:
+
+Serves as a generic container without specific semantic meaning.
+Used for grouping and styling content blocks or sections.
+Does not contribute to the document outline.
+Commonly used for applying CSS styles and creating layout structures.
+Does not require a specific heading element and is neutral in terms of content hierarchy.
+In summary, <section> is used for thematic grouping and structural organization of content, contributing to the document outline, while <div> is a versatile container primarily used for styling and layout purposes without carrying any specific semantic meaning.
+
+
+************************************************************************
+
+What is accessibility & ARIA role means in a web application?
+
+Accessibility and ARIA (Accessible Rich Internet Applications) roles are important concepts in web development that aim to ensure inclusive and barrier-free experiences for users with disabilities. Here's an explanation of each term:
+
+Accessibility:
+
+Accessibility refers to the design and development of websites and applications that can be used and accessed by people with disabilities, including those with visual, auditory, physical, or cognitive impairments.
+It involves creating an inclusive digital environment where all users, regardless of their abilities, can perceive, understand, navigate, and interact with the content effectively.
+Accessible websites and applications follow certain guidelines and standards (such as Web Content Accessibility Guidelines - WCAG) to ensure compatibility with assistive technologies and provide alternative ways for users to access the information.
+ARIA Roles:
+
+ARIA (Accessible Rich Internet Applications) is a set of attributes and roles defined by the W3C (World Wide Web Consortium) to enhance the accessibility of web content and applications.
+ARIA roles provide additional semantic information to assistive technologies (such as screen readers) to interpret and convey the purpose and structure of interactive elements on a web page.
+ARIA roles can be applied to HTML elements to indicate their behavior, purpose, and relationships within the document.
+For example, the role="button" attribute can be added to a <div> or <span> element to indicate that it behaves like a button, allowing assistive technologies to convey its interactive nature to users.
+By incorporating ARIA roles appropriately, developers can ensure that assistive technologies can provide accurate and meaningful information to users with disabilities, enabling them to understand and interact with web applications effectively.
+
+It's important to note that while ARIA roles can enhance accessibility, they should be used judiciously and in combination with proper semantic HTML. Whenever possible, developers should aim to use native HTML elements and attributes that inherently convey the desired behavior and meaning, as they are generally better understood by both assistive technologies and search engines. ARIA roles should be used as a supplement to fill in the gaps where native HTML falls short in conveying accessibility information.
+
+
+************************************************************************
+
+
+
+
+
+************************************************************************
+
+
+
+
+SEO - Search engine optimization: the process of making your site better for search engines. 
+
+
+
+
+
+
+https://codedamn.com/news/javascript/async-and-defer-in-script-tag
+
+
+https://github.com/adwaitya/html5-interview-questions
+https://github.com/Devinterview-io/html5-interview-questions
+https://www.interviewbit.com/html-interview-questions/
+https://www.frontendinterviewhandbook.com/html-questions
+https://devinterview.io/dev/html5-interview-questions
+
+https://github.com/learning-zone/html-basics
+https://www.upgrad.com/blog/html-interview-questions-answers/
+https://www.softwaretestinghelp.com/html-interview-questions/
+https://hackr.io/blog/html-interview-questions
+
+
+CSS
+https://gist.github.com/marko-jankovic/22ad55fae467e72d0312
+https://www.frontendinterviewhandbook.com/css-questions

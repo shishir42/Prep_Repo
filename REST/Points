@@ -65,3 +65,70 @@ Log API requests, errors, and performance metrics. Set up monitoring tools for p
 
 [22.] Follow RESTful URI conventions -
 Use hierarchical URIs like /users/{id}/orders to represent resource relationships.  
+
+
+Stateful vs stateless
+Explain http methods 
+Explain http status code 
+explain URI - uniform resource identifiers identify every resource in the REST architecture 
+What are the best practices in making the URI for RESTful web services 
+REST vs SOAP 
+REST vs ajax
+What are some tools used to develop and test REST APIs-> Postman
+example of REST API-> 
+Advantage 
+1. Easy to learn 
+2. Wide range of data transfer 
+3. Statelessness 
+4, Scalability 
+
+Disadvantage:
+1. Lack of built-in security 
+2. Need to be versioned for backwards compatibility 
+3. Consistency in URI difficult to maintain for complex projects
+
+<protocol>://<service>/<ResourceType>/<ResourceId>
+
+Get, Head, options are safe and idempotent methods where as Put and delete methods are only idempotent. Post and patch methods are neither safe nor idempotent
+
+https://www.linkedin.com/feed/update/urn:li:activity:7064106120977502208/
+
+
+Principle:
+1. Client-server decoupling 
+2. Uniform interface
+3. Stateless
+4. Layered System
+5. Cacheable 
+
+API vs web service
+
+
+Idempotent methods: Methods that return the same outcome irrespective of how many times the same request has been made 
+
+HTTP response status 
+1xx -> (information response) the request was received, continuing process
+2xx -> (successful) the request was successfully received, understood and accepted 
+3xx -> (redirection) further action need to be taken to complete the request
+4xx -> (client side error) the request contains bad syntax or cannot be fulfilled
+5xx -> (server error) the server failed to fulfill a valid request 
+
+Authentication mechanism -> oAuth, Basic Authentication (base64 encoding), 2F Authentication 
+
+How to secure REST api 
+1. Authentication and authorization 
+2. Validation 
+3. Encryption 
+4. Rate-limiting 
+5. No sensitive information in URI 
+
+
+
+
+
+
+https://www.youtube.com/@CodeDecode/playlists
+
+https://dotnet.microsoft.com/en-us/apps/aspnet/apis
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio
+

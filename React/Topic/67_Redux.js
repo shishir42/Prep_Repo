@@ -64,6 +64,10 @@
 
 // UseDispatch is the alternative to mapDispatchToProps; We can use useDispatch and then put the result into the dispatch variable. The dispatch variable can work with all Actions imported from the actions folder.
 
+// Redux Thunk is middleware that allows you to return functions, rather than just actions, within Redux. This allows for delayed actions, including working with promises.
+
+// One of the main use cases for this middleware is for handling actions that might not be synchronous, for example, using axios to send a GET request. Redux Thunk allows us to dispatch those actions asynchronously and resolve each promise that gets returned.
+
 // https://www.interviewbit.com/redux-interview-questions/
 // https://mindmajix.com/redux-interview-questions
 // https://www.knowledgehut.com/interview-questions/redux-interview-questions

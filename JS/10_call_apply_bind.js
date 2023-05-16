@@ -179,3 +179,6 @@ boundSayHello(); // Output: Hello, my name is John
 // In this example, we have an object person with a sayHello method. When we assign the sayHello method to a new variable sayHello and invoke it, the this value becomes undefined, resulting in an error. However, when we use bind to create a new function boundSayHello with the person object as its context, invoking boundSayHello correctly outputs the expected result.
 
 // Overall, the bind method is useful for controlling the execution context of a function, creating partially applied functions, and ensuring the correct this value is maintained when using methods as callbacks.
+
+
+// https://betterprogramming.pub/how-and-why-to-use-call-apply-and-bind-in-javascript-17d50d5a1eb0

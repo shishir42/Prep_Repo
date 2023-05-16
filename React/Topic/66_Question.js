@@ -14,6 +14,8 @@
 // Native modules 
 // Component life cycle 
 // typescript 
+// how javascript is single thread compare to other language, which is faster 
+// how many  threads are used in reactjs
 
 // what will happen if child component has heavy operation and its called from parent functional in react and how to avoid UI block and if parent render then child should render only once
 
@@ -66,3 +68,5 @@
 // https://www.udemy.com/course/swiftui-masterclass-course-ios-development-with-swift/
 // https://www.udemy.com/course/ios-13-app-development-bootcamp/
 // https://www.udemy.com/course/deep-dive-ios-16-swiftui-programming/
+
+// https://www.geeksforgeeks.org/android-tutorial/
