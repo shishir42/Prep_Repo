@@ -1,0 +1,292 @@
+1. advantage of css
+2. CSS components
+3. Different kind of selectors: tag, id and classes 
+4. CSS Box model: Margin, Border, Padding and content
+
+(element of css box model)
+
+The CSS box model is a container that contains multiple properties including borders, margins, padding, and the content itself.
+
+Margin: Topmost layer and in which overall structure are defined 
+Border: Between margin and padding or it can be defined as the padding and content around with a border
+Padding: Space between border and content 
+Content: It is actual data shown 
+
+
+
+5. Preferred way to used font size (px, em, rem, %, vs, vh)
+
+6. Universal selector: selector that matches any element type's name instead of selecting elements of any particular type 
+
+<style>
+    *{
+        color: blue;
+        font-size:10px
+    }
+</style>
+
+7. CSS integration into an HTML pages 
+    a. using style tags in head section
+    b. using inline-style
+    c. linking html page with css
+
+8. class vs id
+    class: It is way of using HTML elements for styling. They are not unique and have multiple elements
+    Id: Unique and it can be assigned to a single element 
+
+9. z-index: specify the stack order of elements that overlap each other 
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+
+Manage z-index:
+modal: 100;
+overlay: 75;
+header: 25;
+
+10. CSS sprites -> loading multiple images, blinking is not seen 
+
+11. Multiple elements can be targeted by separating with a comma: h2,h3{color: red;}
+
+12. CSS media types (speech, handheld, print, projection, screen, speech,tty, tv )
+
+13. CSS image repetition 
+   background-repeat: none
+
+14. when should you use translate() instead of absolute positioning
+    Use translate() when you want smoother animations, better performance, responsive design, relative positioning, and when combining multiple transformations. Use absolute positioning when you need precise positioning or want to remove an element from the document flow entirely.
+
+15. Position property 
+    Fixed, static, absolute, relative, sticky 
+
+    default: position: static 
+
+    Static - this is the default value, all elements are in order as they appear in the document.
+    Relative - the element is positioned relative to its normal position.
+    Absolute - the element is positioned absolutely to its first positioned parent.
+    Fixed - the element is positioned related to the browser window.
+    Sticky - the element is positioned based on the user’s scroll position.
+
+16. mixins-> function block of code returning a single value - mixing output lines of SASS code that directly compiles into CSS style
+
+17. absolute vs relative positioning 
+
+    absolute position is used to position an element relative to its containing element 
+    relative position is used to position an element relative to it normal position on the web page
+
+18. CSS selector is a pattern is used to select and style specific html elements. It can be element selector, class selector, id selector, universal selector, attribute selector combination of these.
+
+//Set a background color on all <div> elements that have a class attribute value containing "test":
+
+div[class*="test"] {
+  background: #ffff00;
+}
+
+https://www.dofactory.com/css/ref/selectors
+
+19. display: none, visibility: hidden 
+
+20. display: inline -> Displays an element as an inline element. Any height and width properties will have no effect.
+Here are a few elements that have a default inline property: span, a, img
+
+    display: inline-block -> Displays an element as an inline-level block container. You CAN set height and width values.
+
+    display: block -> It starts a new line and takes  up the whole width.
+
+21. remove space from display inline-block
+
+22.  checklist for accessibility 
+    - keyboard navigation 
+    - text alternatives for images/icon(alt tag)
+    - sufficient contrast 
+    - size of element, space between element 
+    - readable font size
+
+23. pseudo element vs pseudo class
+
+    A pseudo-class represents a state of a selector like :hover, :active, :last-child,etc. These start with a single colon(:)
+
+    :pseudo-class{
+          attribute: /*value*/
+    }
+
+    :link
+    :visited
+    :hover
+    :active
+    :focus
+
+    a pseudo-element is used to select virtual elements like ::after, ::before, ::first-line, etc.
+    These start with a double colon(::)
+
+    ::before
+    ::after
+    ::first-letter
+    ::first-line
+
+https://www.growingwiththeweb.com/2012/08/pseudo-classes-vs-pseudo-elements.html
+
+24. what is specificity and how to calculate it.
+    If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+
+
+25. approach to implement responsive design using css3    
+
+To implement responsive design using CSS3, you can follow the following approach:
+
+Use Media Queries: Media queries are a fundamental aspect of responsive design in CSS3. They allow you to apply different styles based on the characteristics of the user's device, such as screen size, orientation, and resolution. By using media queries, you can adjust the layout, typography, and other CSS properties to ensure optimal display across various devices.
+
+Fluid Layouts: Instead of fixed-width layouts, use relative units such as percentages or viewport units (vw, vh) for widths, heights, and margins. This enables your layout to adapt and scale based on the available screen space. Combine this with CSS Grid or Flexbox for flexible and responsive grid systems.
+
+Flexible Images and Media: Prevent images and media from overflowing their containers by setting their max-width property to 100%. This ensures they scale proportionally within their parent containers on different screen sizes.
+
+Breakpoints and Breakpoint Design: Identify logical breakpoints in your design where the layout needs to change to accommodate different screen sizes. At each breakpoint, use media queries to adjust the CSS styles to provide the best user experience. Consider rearranging or stacking elements, modifying font sizes, and adjusting margins and padding.
+
+Mobile-First Approach: Start designing and styling for smaller screens first, then use media queries to add styles for larger screens. This approach ensures a solid foundation for mobile devices and allows for progressive enhancement as the screen size increases.
+
+Flexible Typography: Use relative units like em or rem for font sizes, line heights, and spacing. This enables the text to adjust dynamically based on the user's preferred font size and the available space.
+
+Testing and Debugging: Regularly test your design on different devices and screen sizes to ensure it behaves as intended. Use browser developer tools, online emulators, or real devices for testing and debugging.
+
+Accessibility Considerations: Ensure your responsive design is accessible to users with disabilities. Test for readability, contrast ratios, and ensure interactive elements are easily clickable and usable on various devices.
+
+26. em vs rem
+    em is a CSS unit relative to the font size of the parent element, while rem is a CSS unit relative to the font size of an html element.
+
+    https://blog.logrocket.com/using-em-vs-rem-css/
+
+27. How to make your CSS cross browser compatible
+    To make CSS cross-browser compatible, use CSS resets/normalization, validate code, apply vendor prefixes, utilize feature detection, test in multiple browsers, follow progressive enhancement, and stay updated with web standards and browser updates.
+
+28. bold vs strong
+
+    strong tag is one of the element of HTML used in formatting HTML texts. It is used to show importance of the text by making it bold or highlighting it semantically.
+
+    bold tag or <b> is also one of the formatting elements of HTML. The text written under <b> tag makes the text bold presentationally to draw attention.
+
+29. How to make 3 divs in parallel 
+
+    First:
+
+    <div class="container">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+    </div>
+
+    .container {
+      display: flex;
+    }
+
+    .box {
+        flex: 1;
+        height: 200px;
+        background-color: #f1f1f1;
+        /* Add other styles as needed */
+    }
+
+    Second: 
+    <div style="width: 500px;">
+        <div style="float: left; width: 200px;">Left Stuff</div>
+        <div style="float: left; width: 100px;">Middle Stuff</div>
+        <div style="float: left; width: 200px;">Right Stuff</div>
+        <br style="clear: left;" />
+    </div>
+
+    Third:
+    .container {
+         display: flex;
+    }
+    .container > div {
+        flex: 1; /*grow*/
+    }   
+
+
+
+
+30. How can you center an element horizontally and vertically using CSS3?
+
+    .element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+31. how to create slide menu using css
+
+<div class="menu-container">
+  <div class="menu">
+    <!-- Menu content goes here -->
+  </div>
+  <button class="toggle-button">Toggle Menu</button>
+</div>
+
+body {
+  overflow: hidden;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: width 0.3s ease-out;
+}
+
+.menu.open {
+  width: 300px; /* Adjust the width of the menu */
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px; /* Adjust the width of the menu */
+  height: 100vh; /* Adjust the height of the menu */
+  background-color: #f1f1f1; /* Adjust the background color */
+  transition: transform 0.3s ease-out;
+  transform: translateX(-100%);
+}
+
+.menu.open {
+  transform: translateX(0%);
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+const menuContainer = document.querySelector('.menu-container');
+const toggleButton = document.querySelector('.toggle-button');
+
+toggleButton.addEventListener('click', function() {
+  menuContainer.classList.toggle('open');
+});
+
+menuContainer.addEventListener('click', function(event) {
+  if (event.target === this) {
+    menuContainer.classList.remove('open');
+  }
+});
+
+
+
+
+
+
+
+
+https://www.w3schools.com/css/default.asp

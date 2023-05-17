@@ -268,8 +268,6 @@ It's important to note that the steps mentioned above may vary depending on the 
 
 These are just a few examples of authentication mechanisms, and there may be additional methods or variations used in specific contexts or industries.
 
-
-
 ###### Securing a REST API involves implementing various mechanisms to protect the API from unauthorized access, ensure data confidentiality, integrity, and prevent attacks. Here are some mechanisms commonly used to secure REST APIs:
 
 1. HTTPS (TLS/SSL): Use secure HTTP (HTTPS) for communication between the client and the server. It encrypts the data transmitted over the network, ensuring confidentiality and integrity.

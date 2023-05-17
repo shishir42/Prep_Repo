@@ -14,13 +14,28 @@ Compatibility with existing JavaScript code: TypeScript is designed to be compat
 
 Overall, TypeScript can help improve the quality and maintainability of your code, and make development faster and more efficient.
 
-
 Setup
-----------------
+-----
 
 tsc --init
 
 watch mode --> tsc -w
 
-
 https://www.youtube.com/watch?v=30LWjhZzg50
+
+https://github.com/aershov24/typescript-interview-questions
+
+https://github.com/topics/typescript-interview-questions
+
+https://github.com/FAQGURU/FAQGURU/blob/master/topics/en/typeScript.md
+
+
+https://betterprogramming.pub/typescript-any-vs-unknown-vs-never-9d0eb7416b2b
+
+https://www.educative.io/answers/what-are-private-keywords-vs-private-fields-in-typescript
+
+https://medium.com/redox-techblog/structural-typing-in-typescript-4b89f21d6004
+
+https://blog.bitsrc.io/type-vs-interface-in-typescript-cf3c00bc04ae
+
+https://www.youtube.com/watch?v=CqzsdfxYnm0
