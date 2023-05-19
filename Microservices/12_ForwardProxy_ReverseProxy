@@ -1,0 +1,30 @@
+[ Forward Proxy vs Reverse Proxy ]
+
+Let's understand in Layman's term (analogy) -
+
+~ A Forward Proxy is like a server that sits between your computer and the internet, and forwards your requests to the websites you want to visit.
+
+It is like a middleman who helps you communicate with someone else.
+
+For example -
+[1.] Let's say you want to talk to your friend, but your friend is far away and you can't reach them directly. So, you ask your other friend (the proxy) to help you pass on your message to your friend. Your friend sends their message back to the proxy, and then the proxy sends it back to you.
+
+[2.] Another example could be - Think of a proxy as a mail carrier who delivers your letters to their destination.
+
+
+~ A Reverse Proxy, on the other hand, sits in front of a server and forwards requests from the internet to the server, and returns the responses from the server to the internet.
+
+- It is often used to protect a server from direct internet access, to provide load balancing and failover capabilities, and to enable caching and SSL termination.
+
+For Example -
+[1.] Imagine that you are a Celebrity/Influencer and you have a lot of fans who want to talk to you, but you don't want to talk to all of them directly.
+
+So, you hire a bodyguard (the reverse proxy) who stands between you and your fans. The bodyguard decides which fans are allowed to talk to you and which ones are not. If a fan is allowed to talk to you, the bodyguard passes on their message to you. If not, the bodyguard sends them away.
+
+- So, itt is like a bodyguard who protects a VIP.
+
+[2.] Another example could be - Think of a reverse proxy as a receptionist who sits at the front desk of a company and receives calls from clients on behalf of the employees.
+
+The receptionist then forwards the calls to the appropriate employee who can help the client.
+
+https://media.licdn.com/dms/image/D4D22AQFQvJQl0AWXOw/feedshare-shrink_800/0/1683966099219?e=1687392000&v=beta&t=PNnWR3_k7XVi5Tm6ibaDP5PhPRY9AbhZc-SEheW9do8

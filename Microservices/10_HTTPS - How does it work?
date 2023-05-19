@@ -1,0 +1,35 @@
+[ HTTPS - How does it work? ]
+
+HTTPS (HyperText Transfer Protocol Secure) is typically used for websites that require sensitive information.
+
+Let's see how it works -
+
+[1.] When you visit an HTTPS website, your browser first sends a request to the website's server.
+- This request includes the name of the website, the type of browser that you are using, and the version of HTTPS that you support.
+
+[2.] The server then responds with a certificate.
+- A certificate is a digital document that contains the server's public key.
+- The public key is used to encrypt data that is sent to the server.
+
+[3.] Your browser then uses the server's public key to encrypt all of the data that it sends to the server.
+- This data includes the name of the user, the user's password, and any other information that the user enters on the website.
+
+[4.] The server then decrypts the data using its own private key.
+- The private key is a secret code that is only known to the server.
+
+[5.] Once the data has been decrypted, the server can process it.
+- This may involve storing the user's password, logging the user's activity, or processing a purchase.
+
+[6.] Once the server has finished processing the data, it sends a response back to the browser.
+- This response is also encrypted using the server's public key.
+
+[7.] Your browser then decrypts the response using its own private key.
+- This allows the browser to display the website's content to the user.
+
+
+An actual example -
+
+- Let's say that you want to log in to your bank's website.
+- When you enter your username and password, your browser encrypts the data using the bank's public key.
+- The bank then decrypts the data using its own private key.
+- Once the bank has verified your identity, it allows you to log in to your account.

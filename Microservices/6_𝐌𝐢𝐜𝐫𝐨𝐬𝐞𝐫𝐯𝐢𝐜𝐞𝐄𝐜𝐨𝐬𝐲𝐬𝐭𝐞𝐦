@@ -1,0 +1,43 @@
+Companies like Netflix, Uber, Adobe, Coca-Cola, and others have adopted the concept of micro services in their products due to their immense benefits.
+
+The ecosystem of micro services is quite vast. As per my experience, I have created a diagram that covers the major components of the systems
+
+Please find the components of the ecosystem.
+
+Container: A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
+
+𝗖𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿 𝗢𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 automates containers' deployment, management, scaling, and networking. Enterprises that need to deploy and manage hundreds or thousands of Linux® containers and hosts can benefit from container orchestration.
+
+𝐋𝗼𝗮𝗱 𝐁𝗮𝗹𝗮𝗻𝗰𝗲𝗿 that acts as a reverse proxy and distributes network or application traffic across several servers are used to increase applications' capacity (concurrent users) and reliability. 
+ 
+𝗠𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴 𝗮𝗻𝗱 𝗔𝗹𝗲𝗿𝘁𝗶𝗻𝗴 In a micro service architecture, if you want a reliable application or service, you must monitor the functionality, performance, communication, and any other aspect of your application to achieve a responsible application.
+
+𝗗𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝗱 𝗧𝗿𝗮𝗰𝗶𝗻𝗴 - when it comes to micro service architecture, a request may be passed through different services, which makes it difficult to debug and trace because the codebase is not in one place, so here distributed tracing tool can be helpful.
+
+𝗠𝗲𝘀𝘀𝗮𝗴𝗲 𝗕𝗿𝗼𝗸𝗲𝗿 - A message broker is software that facilitates the exchange of messages between applications, systems, and services.
+
+𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲 - in most systems, we need to persist data because we would need the data for further processes or reporting, etc.
+
+𝗖𝗮𝗰𝗵𝗶𝗻𝗴 - Caching reduces latency in service-to-service communication of micro service architectures.
+
+𝐂𝐥𝐨𝐮𝐝 𝐬𝐞𝐫𝐯𝐢𝐜𝐞 𝐩𝐫𝐨𝐯𝐢𝐝𝐞𝐫-is a third-party company offering a cloud-based platform, infrastructure, application, or storage services.
+
+API Management: API management is designing, publishing, documenting, and analysing APIs in a secure environment.
+
+𝗔𝗽𝗽𝗹𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 -An application or application-level gateway (ALG) is a firewall proxy providing network security. It filters incoming node traffic to certain specifications, meaning only transmitted network application data is filtered.
+
+𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻 -A service registry is a database used to keep track of the available instances of each micro service in an application.
+
+https://media.licdn.com/dms/image/D4D22AQEcq0oAQNJa9w/feedshare-shrink_800/0/1683727103598?e=1687392000&v=beta&t=nBUIqcmCgZ06A0QY0Qp8_CPRRVwgJN0f9vUHQ2wZn8Q
+
+
+Few Benefits of Microservices
+
+Scalability: Microservices can be easily scaled up or down depending on the demand for each service.
+Flexibility: Microservices can be developed, deployed, and updated independently of each other.
+Resilience: If one microservice fails, it does not affect the functioning of the entire system. This makes it easier to identify and fix problems, reducing downtime and increasing overall system reliability.
+Agility: Microservices allow for faster development and deployment cycles, making it easier to respond to changing business requirements and market conditions.
+Maintainability: Because micro services are small and independent, they are easier to maintain and update.
+Technology diversity: Microservices allow for the use of different programming languages, frameworks, and technologies for each service.
+Team autonomy: Microservices allow for smaller teams to work on individual services, giving them greater autonomy and ownership over their work. This can lead to increased innovation and productivity.
+

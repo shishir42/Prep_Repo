@@ -222,6 +222,13 @@ export default MyComponent;
 
 // useMemo() is a React Hook that we can use to wrap functions within a component. We can use this to ensure that the values within that function are re-computed only when one of its dependencies change
 
+/***********/
+// Memo is a higher-order component that is used to memoize a component, which means it caches the output of the component and only re-renders it if its props have changed. This can be useful when a component's rendering is expensive, and you want to avoid unnecessary re-renders. Memo can be imported from 'react' and wrapped around a functional component.
+
+// useMemo() is a hook that lets you cache the result of a calculation between re-renders. It takes a function and an array of dependencies as input and returns a cached value that will be re-used between renders as long as the dependencies do not change. This is useful when you have a computation that is expensive and needs to be run only when its dependencies change.
+
+// In summary, Memo is used for caching an entire component, while useMemo() is used for caching a specific calculation or value. Memo caches a component's output based on its props, while useMemo() caches a value based on its dependencies.
+
 //********************/
 // useRef
 // In React, useRef is a Hook that provides a way to access and manipulate a DOM element or a value that persists between re-renders of a component without triggering a re-render.

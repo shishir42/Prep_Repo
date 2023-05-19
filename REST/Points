@@ -123,7 +123,117 @@ How to secure REST api
 5. No sensitive information in URI 
 
 
+GET used to retrieve
+POST is used to save
+PUT is used to update
+DELETE is used to delete
+PATCH is lighter version of PUT , it gives us the facility to update just a specific information instead of updating all data.
 
+In CRUD operations
+C stands for create : POST
+R stands for read : GET
+U stands for update : PUT/PATCH
+D stands for delete : DELETE
+
+Safe or Unsafe Methods?
+A method is known as safe method if it doesn't change the resource representation.
+
+GET is a safe method and PUT/POST/PATCH/DELETE are not methods.
+
+What is method Idempotency?
+If calling a method multiple times doesn't effect our data it is idempotent.
+
+GET/PUT/DELETE methods are idempotent and POST/PATCH are non idempotent.
+
+Let's say you have added someone as friend, suppose facebook used a post request to save them as your friend. What if we send that request 10 times then it would be weird when you see a same person 10 times in your friends list.
+
+Suppose you were updating facebook profile name, even if you update it n times it will set it same, so no problem, sending a request to update n time is problem obviously but for idempotent POV no problem.
+
+You were going to delete a record against a specific Id so record would be deleted first time then after that even if you make n requests no harm.
+
+9 HTTP Request Methods You Should Know About:
+
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- CONNECT
+- OPTIONS
+- TRACE
+
+HTTP request methods are essential for performing specific actions on the client-side.
+
+While you may not use all of them daily, it's still important to know what they do. Let's take a closer look at what they do.
+
+🌟 GET:
+
+The GET method is used to request a representation of the specified resource from the server. GET requests should only retrieve data, not modify it. Think of it like browsing through your LinkedIn feed.
+
+✉️ POST:
+
+The POST method sends data to the server with the Content-Type header specifying the type of the request's body. Submitting a contact form is an example of a POST request.
+
+⛳️ PUT:
+
+The PUT request method either creates a new resource or replaces the target resource's representation with the request payload. Unlike POST, PUT is idempotent, meaning multiple calls produce the same result.
+
+❌ DELETE:
+
+The DELETE request method removes the specified resource from the server. When you delete a photo from social media, a DELETE request is used.
+
+😊 HEAD:
+
+The HEAD method requests the headers that would be returned if the URL of the HEAD request had been requested with the HTTP GET method instead. HEAD requests can check file size without downloading the file.
+
+🤕 PATCH:
+
+The PATCH request method is used to make partial changes to a resource.
+
+🗣🙊 CONNECT:
+
+The CONNECT method initiates two-way communication with the resource requested and can open a tunnel. HTTPS connections can use CONNECT method to connect through an HTTP Proxy server.
+
+📌 OPTIONS:
+
+The OPTIONS method requests communication options for a specific URL or server, allowing clients to specify either a URL or an asterisk (*) to refer to the entire server.
+
+🔭 TRACE:
+
+The TRACE method performs a message loop-back test along the path to the target resource. TRACE requests can be helpful when debugging.
+
+Designing effective and safe APIs (Application Programming Interfaces) involves careful consideration of various factors. Here is a list of points to help you design effective and safe APIs:
+
+Consistent and Intuitive Interface: Design the API with a clear and intuitive interface that follows standard conventions and is consistent across endpoints. This helps developers understand and use the API more easily.
+
+Security Measures: Implement proper security measures such as authentication, authorization, and encryption to protect sensitive data and prevent unauthorized access to the API.
+
+Use Standard Protocols: Utilize widely adopted and standardized protocols such as HTTPS for secure communication, JSON or XML for data serialization, and REST or GraphQL for API architecture. Standard protocols promote interoperability and ease of integration.
+
+Versioning: Plan for versioning the API to ensure backward compatibility and allow for future enhancements without breaking existing integrations. This allows developers to migrate to newer versions at their own pace.
+
+Error Handling: Define clear and meaningful error messages and error codes to guide developers when errors occur. Include relevant information in error responses to assist in troubleshooting and debugging.
+
+Rate Limiting and Throttling: Implement rate limiting and throttling mechanisms to prevent abuse, ensure fair usage, and protect the API server from being overwhelmed with excessive requests.
+
+Comprehensive Documentation: Provide thorough and up-to-date documentation that explains the API endpoints, request and response formats, authentication methods, error handling, and any specific usage guidelines. Good documentation facilitates understanding and accelerates development.
+
+Consistent Data Formats: Use consistent and well-defined data formats throughout the API, ensuring that data structures and types remain consistent across different endpoints. This promotes ease of use and reduces confusion.
+
+Input Validation and Sanitization: Validate and sanitize all user inputs to prevent security vulnerabilities like injection attacks. Ensure that the API rejects invalid or malicious inputs and provides appropriate error messages.
+
+Performance Considerations: Optimize the API for performance by minimizing response times, caching frequently accessed data, and using efficient algorithms and data structures. This helps provide a smooth and responsive experience for API consumers.
+
+API Analytics and Monitoring: Implement analytics and monitoring capabilities to track API usage, performance metrics, and error rates. This helps identify issues, optimize performance, and make informed decisions for future enhancements.
+
+Version Control and Deployment Strategy: Establish a robust version control system for the API codebase, and implement a reliable deployment strategy to ensure smooth updates and rollbacks as needed.
+
+Testing and Quality Assurance: Thoroughly test the API using different scenarios, including positive and negative test cases, to ensure correct behavior and robustness. Conduct security audits and code reviews to identify and address potential vulnerabilities.
+
+Feedback and Community Support: Encourage feedback from API users and provide a support channel for developers to ask questions, report issues, and suggest improvements. Actively engage with the developer community to address concerns and foster a collaborative environment.
+
+Remember that these points are general guidelines, and the specific requirements of your API may vary depending on the context and use case.
 
 
 

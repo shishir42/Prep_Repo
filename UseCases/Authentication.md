@@ -1,5 +1,7 @@
 ###### JWT, OAuth, and OpenID are all related to authentication and authorization mechanisms, but they serve different purposes. Let's explore each of them:
 
+OAuth2/OpenID Connect/JWT
+
 1. JSON Web Token (JWT):
    JWT is a compact, URL-safe means of representing claims between two parties. It is often used for authentication and authorization purposes in modern web applications. A JWT consists of three parts: a header, a payload, and a signature. The header contains metadata about the token, the payload includes claims or statements about the user, and the signature is used to verify the integrity of the token.
 
@@ -249,7 +251,6 @@ If the refresh token is expired, the typical flow would be as follows:
 9. Access Granted: If the new access token is valid, the server grants access to the requested resources and processes the API request.
 
 It's important to note that the steps mentioned above may vary depending on the specific implementation, the authentication framework or library being used, and the server's configuration. Additionally, the expiration time of refresh tokens can vary based on security requirements and system design.
-
 
 ###### There are various authentication mechanisms used in computer systems and applications to verify the identity of users. Here is a list of commonly used authentication mechanisms:
 

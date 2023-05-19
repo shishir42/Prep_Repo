@@ -1,0 +1,11 @@
+What are the differences between a load balancer, a reverse proxy, and an API gateway?
+
+All three are used to optimize and manage web traffic. However, they vary in their function and use cases:
+
+A 𝗹𝗼𝗮𝗱 𝗯𝗮𝗹𝗮𝗻𝗰𝗲𝗿 is a device that distributes incoming network traffic across multiple servers. The goal is to ensure that no single server is overwhelmed with traffic, which can lead to slow response times or even downtime. Load balancers are ideal for high-traffic websites or applications that need to handle a large volume of requests.
+
+A 𝗿𝗲𝘃𝗲𝗿𝘀𝗲 𝗽𝗿𝗼𝘅𝘆, on the other hand, is a server that sits between the client and the webserver. The reverse proxy intercepts requests from clients and forwards them to the appropriate server. The reverse proxy can also cache frequently requested content, which can help improve performance and reduce server load. Reverse proxies are ideal for websites or applications that need to handle a large number of concurrent connections.
+
+An 𝗔𝗣𝗜 𝗴𝗮𝘁𝗲𝘄𝗮𝘆 is a server that acts as an intermediary between clients and backend servers. The API gateway is responsible for managing API requests, enforcing security policies, and handling authentication and authorization. API gateways are ideal for microservices architectures, where multiple services need to be accessed through a single API.
+
+https://www.designgurus.io/blog/Load-Balancer-Reverse-Proxy-API-Gateway

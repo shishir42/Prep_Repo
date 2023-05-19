@@ -17,6 +17,8 @@ function App() {
 
 // When this code is compiled, it is transformed into regular JavaScript function calls that create and manipulate React elements. Here's the compiled code for the example above:
 
+// https://stackoverflow.com/questions/39246498/compiler-vs-interpreter-vs-transpiler
+
 import React from 'react';
 
 function App() {

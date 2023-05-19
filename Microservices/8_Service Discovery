@@ -1,0 +1,20 @@
+System Design Basics: Service Discovery
+
+Service discovery is a process used in distributed systems, microservices architectures, and service-oriented architectures to automatically detect, locate, and communicate with services or components within the system. It enables applications and services to dynamically discover the available instances of other services, their network locations, and metadata without relying on hardcoded configurations or manual intervention.
+
+➡ There are two primary approaches to service discovery:
+𝗖𝗹𝗶𝗲𝗻𝘁-𝘀𝗶𝗱𝗲 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝗱𝗶𝘀𝗰𝗼𝘃𝗲𝗿𝘆: In this approach, clients (services or applications that consume other services) are responsible for discovering the available service instances, typically by querying a service registry or using a discovery agent. Once the client obtains the necessary information, it can directly communicate with the desired service instance. This approach can offer lower latency and more control over load balancing but increases the complexity on the client side.
+
+𝗦𝗲𝗿𝘃𝗲𝗿-𝘀𝗶𝗱𝗲 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝗱𝗶𝘀𝗰𝗼𝘃𝗲𝗿𝘆: In this approach, a load balancer or a proxy is placed between the clients and services. Clients send requests to the load balancer, which is responsible for discovering the available service instances and forwarding the request to the appropriate instance. This approach offloads discovery and load balancing responsibilities from clients but may introduce additional latency.
+
+➡ Key components of a service discovery system include:
+𝐒𝐞𝐫𝐯𝐢𝐜𝐞 𝐫𝐞𝐠𝐢𝐬𝐭𝐫𝐲: A centralized repository that maintains information about the available services, their instances, network locations, and metadata. Services typically register themselves with the registry upon startup and update their information as needed.
+
+𝗗𝗶𝘀𝗰𝗼𝘃𝗲𝗿𝘆 𝗺𝗲𝗰𝗵𝗮𝗻𝗶𝘀𝗺: The process or protocol used by clients or load balancers to query the service registry and obtain information about the available service instances.
+
+➡ Some popular service discovery tools and platforms include:
+1) 𝗔𝗽𝗮𝗰𝗵𝗲 𝗭𝗼𝗼𝗞𝗲𝗲𝗽𝗲𝗿: An open-source distributed coordination service that can be used for service discovery and managing configuration information in distributed applications.
+2) 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀: A container orchestration platform that includes built-in service discovery mechanisms, such as DNS-based service discovery and environment variables, allowing services to discover and communicate with each other within the Kubernetes cluster.
+3) 𝗖𝗼𝗻𝘀𝘂𝗹: A distributed service mesh solution developed by HashiCorp that provides service discovery, configuration, and orchestration capabilities for distributed systems.
+
+https://media.licdn.com/dms/image/D4D22AQHt4GFDXx8JPw/feedshare-shrink_2048_1536/0/1683792410264?e=1687392000&v=beta&t=ZPkFLiJTsVYnLj2RtWgN1r3B3V_0XVMS-6HkQPZWQ3w

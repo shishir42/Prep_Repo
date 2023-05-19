@@ -29,7 +29,6 @@ https://github.com/topics/typescript-interview-questions
 
 https://github.com/FAQGURU/FAQGURU/blob/master/topics/en/typeScript.md
 
-
 https://betterprogramming.pub/typescript-any-vs-unknown-vs-never-9d0eb7416b2b
 
 https://www.educative.io/answers/what-are-private-keywords-vs-private-fields-in-typescript
@@ -39,3 +38,12 @@ https://medium.com/redox-techblog/structural-typing-in-typescript-4b89f21d6004
 https://blog.bitsrc.io/type-vs-interface-in-typescript-cf3c00bc04ae
 
 https://www.youtube.com/watch?v=CqzsdfxYnm0
+
+
+https://www.interviewbit.com/typescript-interview-questions/
+
+https://www.simplilearn.com/tutorials/typescript-tutorial/typescript-interview-questions
+
+https://www.javatpoint.com/typescript-interview-questions
+
+https://mindmajix.com/typescript-interview-questions

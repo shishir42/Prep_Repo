@@ -1,0 +1,13 @@
+𝗪𝗵𝘆 𝗔𝗺𝗮𝘇𝗼𝗻 𝗔𝗯𝗮𝗻𝗱𝗼𝗻𝗲𝗱 𝗠𝗶𝗰𝗿𝗼𝘀𝗲𝗿𝘃𝗶𝗰𝗲𝘀 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗶𝗻 𝗙𝗮𝘃𝗼𝗿 𝗢𝗳 𝗠𝗼𝗻𝗼𝗹𝗶𝘁𝗵?
+
+In the latest post (check in the comments), a team that works on Prime Video explained their approach to ensuring that customers receive high-quality content. They use a tool to monitor every stream viewed by customers and use it to identify quality issues.
+
+The tool was intended to run on a small scale, so they noticed that 𝗼𝗻𝗯𝗼𝗮𝗿𝗱𝗶𝗻𝗴 𝗺𝗼𝗿𝗲 𝘀𝘁𝗿𝗲𝗮𝗺𝘀 𝘁𝗼 𝘁𝗵𝗲 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝘄𝗮𝘀 𝘃𝗲𝗿𝘆 𝗲𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲. So, they decided to revise the architecture.
+
+The initial architecture consisted of 𝘀𝗲𝗿𝘃𝗲𝗿𝗹𝗲𝘀𝘀 𝗰𝗼𝗺𝗽𝗼𝗻𝗲𝗻𝘁𝘀 𝗼𝗿𝗰𝗵𝗲𝘀𝘁𝗿𝗮𝘁𝗲𝗱 𝗯𝘆 𝗔𝗪𝗦 𝗦𝘁𝗲𝗽 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀. What they did here is to move expensive operations between components into a single process to keep the data more trans within process memory.
+
+Building initial solutions with serverless components was a good choice because it enabled it to be done quickly and scale each component, yet such a way of using some components 𝗰𝗮𝘂𝘀𝗲𝗱 𝗶𝘀𝘀𝘂𝗲𝘀 𝗮𝘁 𝟱% 𝗼𝗳 𝘁𝗵𝗲 𝗲𝘅𝗽𝗲𝗰𝘁𝗲𝗱 𝗹𝗼𝗮𝗱.
+
+After the analysis, they concluded that the distributed approach didn't bring many benefits, so they packed all the components into a single process. 𝗠𝗼𝘃𝗶𝗻𝗴 𝘁𝗵𝗲𝗶𝗿 𝘀𝗲𝗿𝘃𝗶𝗰𝗲 𝘁𝗼 𝗮 𝗺𝗼𝗻𝗼𝗹𝗶𝘁𝗵 𝗿𝗲𝗱𝘂𝗰𝗲𝗱 𝘁𝗵𝗲𝗶𝗿 𝗶𝗻𝗳𝗿𝗮𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲 𝗰𝗼𝘀𝘁 𝗯𝘆 𝗼𝘃𝗲𝗿 𝟵𝟬% 𝗮𝗻𝗱 𝗶𝗻𝗰𝗿𝗲𝗮𝘀𝗲𝗱 𝘀𝗰𝗮𝗹𝗶𝗻𝗴 𝗰𝗮𝗽𝗮𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀.
+
+https://media.licdn.com/dms/image/D4D22AQHMwtUXyBBefA/feedshare-shrink_800/0/1683199996359?e=1687392000&v=beta&t=ZyRR9j2xrBO2yKHOe8G7Ax5B2wBFMlhvLRX2JasdMJg

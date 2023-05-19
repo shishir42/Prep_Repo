@@ -1,0 +1,33 @@
+What is API Gateway?
+
+What are the key features?
+
+An API Gateway is a server that acts as an intermediary between an application and a set of microservices. Its main responsibilities are to handle request routing, composition, and protocol translation, which is essential for large microservice-based applications.
+
+Some of the key features of an API Gateway are:
+
+• Request Routing:
+
+The API Gateway is responsible for routing requests from clients to the appropriate microservice. This allows for a clean separation of concerns and decoupling of the client from the underlying microservices.
+
+• Protocol Translation:
+
+An API Gateway can translate between different protocols, such as HTTP and gRPC, making it easier to expose microservices over a variety of interfaces.
+
+• Load Balancing:
+
+The API Gateway can also distribute incoming requests evenly across multiple instances of a microservice to improve performance and resilience.
+
+• Caching:
+
+The API Gateway can cache frequently-requested data to reduce the load on the microservices and improve response times.
+
+• Security:
+
+An API Gateway can provide security features, such as authentication, authorization, and encryption, to protect microservices from unauthorized access.
+
+• Monitoring:
+
+The API Gateway can collect and aggregate metrics and logs from the microservices and provide visibility into the health and performance of the system as a whole.
+
+Overall, the API Gateway pattern provides a convenient and centralized way for developers to expose, secure, and manage microservices, allowing for easier evolution and maintenance of large and complex systems.

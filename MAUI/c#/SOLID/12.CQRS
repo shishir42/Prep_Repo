@@ -1,5 +1,21 @@
 CQRS stands for Command Query Responsibility Segregation. It is a design pattern that separates the read and write operations of an application into two different models: a Command model for write operations (e.g. updating data), and a Query model for read operations (e.g. retrieving data).
 
+
+There are many misconceptions about CQRS. 
+ 
+Here's what CQRS is: 
+ 
+- Logical separation of reads & writes 
+- Commands change state, return void 
+- Queries don't change state, return data 
+ 
+Here's what CQRS isn't: 
+ 
+- Separate read/write databases 
+- Event sourcing 
+ 
+CQRS is simple.
+
 Here's an example of how CQRS can be implemented in C#:
 
 // Command model
@@ -49,3 +65,40 @@ Disadvantages of CQRS:
 Increased complexity: CQRS introduces additional complexity to the system, as it requires the creation of separate models for read and write operations, and additional code for handling commands and queries.
 Potential data inconsistency: Since read and write operations are handled separately, there is a potential risk of data inconsistency between the two models if they are not kept in sync.
 Overkill for simple applications: CQRS is a pattern that is most useful in large, complex applications where there is a clear need for separation of concerns. For small, simple applications, the additional complexity of CQRS may not be necessary.
+
+What is CQRS? Simplified. 💡 
+
+Let's go to the kitchen, again. 😅 
+
+"𝐇𝐢, 𝐒𝐭𝐞𝐟𝐚𝐧. 𝐈 𝐤𝐞𝐞𝐩 𝐬𝐞𝐞𝐢𝐧𝐠 𝐩𝐨𝐬𝐭𝐬 𝐚𝐛𝐨𝐮𝐭 𝐂𝐐𝐑𝐒, 𝐛𝐮𝐭 𝐜𝐚𝐧 𝐲𝐨𝐮 𝐞𝐱𝐩𝐥𝐚𝐢𝐧 𝐢𝐧 𝐲𝐨𝐮𝐫 𝐰𝐚𝐲, 𝐢𝐧 𝐚 𝐬𝐢𝐦𝐩𝐥𝐢𝐟𝐢𝐞𝐝 𝐰𝐚𝐲, 𝐡𝐨𝐰 𝐢𝐭 𝐰𝐨𝐫𝐤𝐬?" - Sure.
+
+So, CQRS stands for 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐐𝐮𝐞𝐫𝐲 𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐛𝐢𝐥𝐢𝐭𝐲 𝐒𝐞𝐠𝐫𝐞𝐠𝐚𝐭𝐢𝐨𝐧.
+CQRS is an architectural pattern that separates the concerns of reading data from the concerns of updating data, by having different objects handle reading and updating data.
+
+In .NET, we can implement CQRS using the 𝐌𝐞𝐝𝐢𝐚𝐭𝐑 𝐥𝐢𝐛𝐫𝐚𝐫𝐲, which provides a simple way to handle commands and queries in a decoupled way.
+
+MediatR defines two main classes: 𝐈𝐑𝐞𝐪𝐮𝐞𝐬𝐭 and 𝐈𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐇𝐚𝐧𝐝𝐥𝐞𝐫. 
+• A class that implements IRequest represents the command.
+• A class that implements IRequestHandler represents the query.
+
+The MediatR library includes a mediator class that can be used to send commands and queries to the appropriate handlers.
+
+Great. Okay, let's make it more clear.
+
+𝐓𝐡𝐞 𝐚𝐧𝐚𝐥𝐨𝐠𝐲 𝐟𝐨𝐫 𝐂𝐐𝐑𝐒 𝐜𝐨𝐮𝐥𝐝 𝐛𝐞 𝐚 𝐜𝐡𝐞𝐟 𝐢𝐧 𝐚 𝐤𝐢𝐭𝐜𝐡𝐞𝐧. 
+The chef is responsible for executing commands (cooking orders) and querying the kitchen state (checking if ingredients are available).
+
+The chef would have 𝐚 𝐬𝐞𝐩𝐚𝐫𝐚𝐭𝐞 𝐬𝐞𝐭 𝐨𝐟 𝐭𝐨𝐨𝐥𝐬 for:
+• executing commands (a stove, oven)
+• querying the kitchen state (a fridge, pantry).
+
+The chef would have 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐬𝐤𝐢𝐥𝐥𝐬 𝐚𝐧𝐝 𝐤𝐧𝐨𝐰𝐥𝐞𝐝𝐠𝐞 for:
+• executing commands (cooking techniques)
+• querying the kitchen state (inventory management).
+
+The chef would use 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐩𝐫𝐨𝐜𝐞𝐬𝐬𝐞𝐬 for:
+• executing commands ( following a recipe)
+• querying the state of the kitchen (checking inventory levels).
+
+By separating the concerns of reading and updating data, the chef's work is more organized, manageable, and less prone to errors.
+And the same applies to software systems that use CQRS, which makes the code more organized, and less prone to errors.

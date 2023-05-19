@@ -1,0 +1,47 @@
+1️⃣ 𝗔𝗣𝗜 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Acts as the traffic controller for all incoming requests, routing them to the appropriate service.
+
+2️⃣ 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗠𝗲𝘀𝗵 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Orchestrates inter-service communication, managing load balancing, service discovery, and security.
+
+3️⃣ 𝗕𝘂𝗹𝗸𝗵𝗲𝗮𝗱 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Isolates each service in a separate "compartment" for failure resilience.
+
+4️⃣ 𝗖𝗶𝗿𝗰𝘂𝗶𝘁 𝗕𝗿𝗲𝗮𝗸𝗲𝗿 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Prevents system-wide failures by halting requests to a failing or unresponsive service.
+
+5️⃣ 𝗘𝘃𝗲𝗻𝘁-𝗗𝗿𝗶𝘃𝗲𝗻 𝗔𝗿𝗰𝗵𝗶𝘁𝗲𝗰𝘁𝘂𝗿𝗲 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Facilitates communication between services through event publishing and subscribing.
+
+6️⃣ 𝗦𝗶𝗱𝗲𝗰𝗮𝗿 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Deploys an auxiliary "sidecar" service alongside each microservice to handle tasks like logging, monitoring, and security.
+
+7️⃣ 𝗦𝘁𝗿𝗮𝗻𝗴𝗹𝗲𝗿 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Gradually replaces a monolithic application with microservices.
+
+8️⃣ 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝘆 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Acts as a phonebook for microservices, facilitating inter-service communication.
+
+9️⃣ 𝗦𝗮𝗴𝗮 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Manages transactions spanning multiple services by breaking them into steps and providing compensating actions if something goes wrong.
+
+🔟 𝗖𝗤𝗥𝗦 𝗣𝗮𝘁𝘁𝗲𝗿𝗻: Separates the read and write operations for data, allowing independent optimization and scaling.
+
+https://media.licdn.com/dms/image/D4E22AQFuiY3rfFZEpg/feedshare-shrink_800/0/1683729704839?e=1687392000&v=beta&t=fCLhvffGEumEWA-JqDNjy4ZJ_uE-iWt1YR7Qxwv2cC4
+
+https://learn.microsoft.com/en-us/azure/architecture/patterns/#catalog-of-patterns
+
+1. API Gateway Pattern: Centralizes external access to your microservices, simplifying communication and providing a single entry point for client requests.
+
+2. Service Discovery Pattern: Enables microservices to dynamically discover and communicate with each other, simplifying service orchestration and enhancing system scalability.
+
+3. Circuit Breaker Pattern: Implements a fault-tolerant mechanism for microservices, preventing cascading failures by automatically detecting and isolating faulty services.
+
+4. Load Balancing Pattern: Distributes incoming traffic among multiple instances of a microservice, improving system performance, resilience, and resource utilization.
+
+5. Bulkhead Pattern: Isolates microservices into separate partitions, preventing failures in one partition from affecting the entire system and enhancing system resilience.
+
+6. CQRS (Command Query Responsibility Segregation) Pattern: Separates the read and write operations in a microservice, improving performance, scalability, and maintainability.
+
+7. Event-Driven Architecture Pattern: Leverages events to trigger actions in your services, promoting loose coupling between services and enabling real-time responsiveness.
+
+8. Saga Pattern: Manages distributed transactions across multiple microservices, ensuring data consistency while maintaining the autonomy of your services.
+
+9. Retry Pattern: Enhances microservices' resilience by automatically retrying failed operations, increasing the chances of successful execution and minimizing transient issues.
+
+10. Backends for Frontends Pattern (BFF): Creates dedicated backend services for each frontend, optimizing performance and user experience tailored to each platform.
+
+11. Sidecar Pattern: Attaches additional components to your microservices, providing modular functionality without altering the core service itself.
+
+12. Strangler Pattern: Facilitates the gradual replacement of a monolithic system with microservices, ensuring a smooth and risk-free transition.

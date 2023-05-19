@@ -1,0 +1,50 @@
+Choosing microservice architecture for software development without sufficient familiarity(at least relative to its complexity) can create problems for developers. The following list outlines the key factors that can assist in implementing software using a microservice architecture:
+
+1 - Keep services small and focused on doing one thing well.
+https://lnkd.in/eB63WTA8
+
+2 - Use an API gateway for request management.
+https://lnkd.in/ecnRxYtr
+
+3 - Async communication with message brokers between services.
+https://lnkd.in/ed45WYrY
+
+4 - Prioritize Docker for portable containerization.
+https://lnkd.in/eNjp5CZM
+
+5 - Use a service registry to keep track of running services and their endpoints.
+https://lnkd.in/eFrtFf5P
+
+6 - Implement fault tolerance with circuit breakers and bulkheads.
+https://lnkd.in/eexEJeXc
+
+7 - Choose appropriate tech stacks per service, avoiding one-size-fits-all.
+https://lnkd.in/ewh8XJkG
+
+8 - Implement logging and monitoring for service performance and issue detection.
+https://lnkd.in/eihmCK3t
+
+Examples of high-star microservices projects in github:
+
+Java(Spring Boot):
+https://lnkd.in/e9PePxUW
+
+C#(.NET):
+https://lnkd.in/ew_G8Wvz
+
+PHP(Laravel):
+https://lnkd.in/eS6BZUBG
+
+My Github: https://github.com/kavaan
+My Medium: https://lnkd.in/esQhC2nP
+
+8 Microservice Tips:
+1. Service size: keep services small and focused on doing one thing well.
+2. Asynchronous communication: Async communication with message broker between services
+3. Containerization: Prioritize Docker for portable containerization
+4. API Gateway: Use an API gateway for request management
+5. Service registry: Use a service registry to keep track of running services and their endpoints 
+6. Fault tolerance: Implement fault tolerance with circuit breakers and bulkheads
+7. Technology stack: Choose appropriate tech stacks per service, avoiding one-size-fits-all
+8. Logging and Monitoring: Implement logging and monitoring for service performance and issue detection
+
