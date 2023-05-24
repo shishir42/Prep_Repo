@@ -40,6 +40,15 @@
 // https://www.youtube.com/watch?v=FiWby-T0Ec0 - react
 // https://www.youtube.com/watch?v=FjBJJepT6Ts&list=PLfhDYRr-FofnXgQ3ZDfepp1RsqkoqzByF - react
 // https://www.youtube.com/watch?v=ym3aaodVQIU - react and redux
+// https://www.youtube.com/results?search_query=redux+toolkit+project - react redux toolkit
+
+/***********/
+// https://www.youtube.com/watch?v=UB0o1GkOf9E&list=PL8p2I9GklV44lOq17oCf9_f40oXPWvwyS
+// https://www.youtube.com/watch?v=6_a27O2WFR0&list=PL8p2I9GklV47TDYUq8RmFzeI9CgOoVgpJ
+// https://www.youtube.com/watch?v=px5dfmvlAds&list=PL8p2I9GklV44NMx-i9-A0EN3X-s7cDdty
+// https://www.youtube.com/watch?v=z1qG80Jkzi8&list=PL8p2I9GklV468O2wk-n8Q1KmtMhnHHj4C
+/***********/
+
 // https://www.youtube.com/watch?v=S6Yd5cPtXr4&t=177s - node
 // https://www.youtube.com/watch?v=XQJNVF9pFYs&t=52390s  - react and node
 // https://www.youtube.com/watch?v=GKYr5eWm8EY - react  1111

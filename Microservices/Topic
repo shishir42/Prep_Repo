@@ -1,0 +1,207 @@
+https://www.youtube.com/watch?v=uPndlp0kbok&list=PLq3uEqRnr_2EDsuxPboP9_WtVRR_TaMrF
+https://www.codeproject.com/Articles/1248381/Microservices-Service-Discovery
+https://www.youtube.com/watch?v=CqCDOosvZIk
+https://microservices.io/patterns/microservices.html
+https://learn.microsoft.com/en-us/training/paths/create-microservices-with-dotnet/
+
+
+1. Monolithic vs Microservices
+2. Boundaries around microservice [Guidelines to follow when design microservices application]
+3. [Scalability | Availbility | Resiliency | Isolating Failure | Continuous delivery]
+4. How to make microservice configurable - cloud config, vault
+5. Communication among microservices
+    * REST endpoints - Synchronous 
+    * Messaging - Asynchroonous 
+6. Service registry and discovery 
+7. Circuit Breaking | Fault Tolerance pattern 
+8. Load Balancer 
+9. Log aggregation & Distributed Tracing
+10. API gateway
+11. Securing microservices
+12. Health checker and exception tracking 
+13. Deployment pattern 
+    * Multiple service instance per host 
+    * Service instance per VM
+    * Service instance per container 
+    * Serverless deployment 
+14. Testing microservices
+15. Event Souring 
+    * https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing
+16. [Design patterns for microservices]
+    * https://dzone.com/articles/design-patterns-for-microservices
+    * https://microservices.io/patterns/microservices.html
+17. [Event loop]
+18. [Reactive microservices]
+
+
+👉 Microservices : Design Patterns
+
+Microservices Characteristics : Scalability | Availability | Resiliency | Isolating Failures | Continuous delivery
+
+⌨ Microservices Decomposition Pattern : By Domain and Subdomain
+
+⌨ Microservices Decomposition Pattern : Strangler Vine Pattern
+
+⌨ Microservices Decomposition Pattern : Sidecar Pattern
+
+⌨ Microservices Decomposition Pattern : Service Mesh
+
+💾 Microservices Database Pattern : Database per service & Shared Database per service
+
+💾 Microservices Database Pattern : CQRS - Command Query Responsibility Segregation
+
+💾 Microservices Database Pattern : Data Consistency - Eventual vs Strong Consistency
+
+💾 Microservices Database Pattern : Event-Driven Architecture
+
+💾 Microservices Database Pattern : Event Sourcing
+
+💾 Microservices Database Pattern : 2 Phase Commit
+
+💾 Microservices Database Pattern : SAGA
+
+💾 Microservices Database Pattern : Summary
+
+📞 Microservices Communication : How microservices talk to each other
+
+📞 Microservices Communication : Synchronous vs Asyncronous
+
+📞 Microservices Communication :HTTP & REST
+
+📞 Microservices Communication: Message Based Communication
+
+📞 Microservices Communication: GraphQL
+
+🌠 Microservices Integration Patterns : API Gateway
+
+🌠 Microservices Integration Patterns : Aggregator Pattern
+
+Chained Pattern
+
+Branch Pattern
+
+🌠 Microservices Integration Patterns : Clientside UI Composition Pattern
+
+🍁 Microservices Observable Patterns : Log Aggregation & Distributed Tracing
+
+🍁 Microservices Observable Patterns : Health Check & Performance Metrics
+
+🔥 Microservices Cross Cutting Concern Patterns : Circuit Breaker Pattern
+
+🔥 Microservices Cross Cutting Concern Patterns : Service Registry & Discovery
+
+🔥 Microservices Cross Cutting Concern Patterns : Load Balancer
+
+🔥 Microservices Cross Cutting Concern Patterns : External Configuration
+
+🌈 Microservices Deployment Patterns : What is Container | What is VM | Container vs VM
+
+🌈 Microservices Deployment Patterns : Multiple service instances per host & Service instance per host | Service Instance per VM | Service Instance per Container
+
+🌈 Microservices Deployment Patterns : Serverless pattern
+
+🌈 Microservices Deployment Patterns : Blue-Green | Cananry | Rolling Patterns
+
+
+Design Principle 
+1. Independent/Autonomous 
+    - Small team size
+    - Parallem development 
+    - Clear contracts
+    - Individual deployable 
+
+2. Resilient/Fault tolerant/Design for failure
+    - Avoid single point of failure 
+    - Avoid cascading failure 
+    - Consider failure as events and analyse it properly
+
+3. Observable 
+    - Centralized monitorning
+    - Centralized logging
+    - Health check system
+
+4. Discoverable  
+    - All service should be registered at one place 
+    - It make client's life easy when looking for specific service 
+
+5. Domain Driven 
+    - Focuessed on business 
+    - Focuessed on core domain 
+    - Foucs on Domain logic 
+
+6. Decentralization 
+    - Database for each service 
+    - Choice of database depends on the nature of particular service 
+
+7. High Cohesion 
+    - Do one thing only 
+    - SRP 
+    - A business function 
+    - A busniness domain 
+    - Easy to take new similar feature 
+    - Why -> Scalability and Availability
+
+8. Single Source of Truth 
+    - There should be only one source to get the complete information 
+    - This helps in avoiding the duplicity 
+
+
+Why??
+* We need our services to be highly 
+    - Available 
+    - Scalable 
+    - Resilient to failures
+    - Efficient 
+* Design patterns help in solving the specific microservice architecture challenge
+* Design patterns help in reducing risk of failure in microservices
+* Decomposition, Database, Communication Among Services, Integration, Deployment, Observbility and Cross-cutting concern
+
+Architecture Patterns->
+1. Decomposition patterns
+    - By business capabilities
+    - By subdomain 
+    - Strangler pattern 
+    - Sidecar pattern/ Service mesh 
+
+2. Database pattern 
+    - Database per service 
+    - Shared Database 
+    - CQRS
+    - SAGA
+    - Event Souring 
+
+3. Communication Among Services
+    - Synchronous 
+    - Async-event/message based 
+    - Communication medium 
+        - HTTP REST- xml/json 
+        - Graphql
+        - grpc
+
+4. Integration patterns
+    - API gateway 
+    - Aggregator pattern 
+        - Chained pattern 
+        - Branch pattern 
+    - cliend side UI composition patterns 
+
+5. Deployement patterns
+    - Multiple service Instances per host
+    - Service instance per host 
+    - Service instance per VM
+    - Service instance per container 
+    - Serverless
+    - Blue green 
+    - Canary
+
+6. Observbility
+    - Log aggregagtion 
+    - Performance metrics
+    - Distributed tracing 
+    - health check 
+
+7. Cross-cutting concern
+    - External configuration 
+    - Service discovery pattern 
+    - Circuit breaker pattern 
+

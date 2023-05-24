@@ -55,6 +55,79 @@ Kubernetes
 https://github.com/veggiemonk/awesome-docker
 
 
+Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine.
+
+command:
+docker image ls
+docker pull nginx
+docker image rm imageId
+
+container:
+docker ps 
+all container -> docker ps -a
+docker container ls
+
+docker run -d -p 8080:80 nginx
+--> container will create with unique id 
+
+docker run -d --name my-ngnix -p 8080:80 nginx: 1.20.1
+
+stop container 
+docker container stop containerId
+
+remove container 
+docker rm containername
+docker rm -f containername
+docker rm containername1 containername2
+
+
+-d - detach 
+-p - port
+8080 - localhost port
+80 - container port 
+
+Docker Image
+It's a container blueprint
+It's immutable
+It can exist without a container
+Does not need computing resources to operate
+It can de shared via a public or private registry platform
+Created only once
+
+Docker Container
+It's an image Instance
+It's writable
+A container must run an image to exist
+Need computing resources to run-containers run as Docker virtual machines
+No need to share an already running entity
+Multiple containers can be created from the same Image
+
+
+docker ps (List Containers)
+docker pull ( pull image from docker daemon)
+docker image (manage image)
+docker run (run a command in a new container)
+docker exec (Run a command in a running container)
+docker stop, start and restart container
+
+Access container:
+docker exec -it containername /bin/bash
+enter ls 
+exit
+
+docker container restart containername
+
+docker volume ls 
+docker volume create volumename
+
+
+
+
+
+
+
+
+
 IQ
 https://www.simplilearn.com/tutorials/docker-tutorial/docker-interview-questions
 https://www.edureka.co/blog/interview-questions/docker-interview-questions/
@@ -76,7 +149,7 @@ https://www.youtube.com/watch?v=s_o8dwzRlu4
 https://www.youtube.com/watch?v=VnvRFRk_51k&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC
 
 
-
+https://www.youtube.com/watch?v=CqCDOosvZIk
 https://www.youtube.com/watch?v=ztWZQ8sgCQI&list=PLefG3VDSLxSzboMuyD1BNfa3_yNWthR7r
 https://www.youtube.com/watch?v=nUp6ToMYcvQ
 https://www.youtube.com/watch?v=O3y-I_6OAW8

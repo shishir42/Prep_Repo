@@ -39,7 +39,6 @@ https://blog.bitsrc.io/type-vs-interface-in-typescript-cf3c00bc04ae
 
 https://www.youtube.com/watch?v=CqzsdfxYnm0
 
-
 https://www.interviewbit.com/typescript-interview-questions/
 
 https://www.simplilearn.com/tutorials/typescript-tutorial/typescript-interview-questions
@@ -47,3 +46,7 @@ https://www.simplilearn.com/tutorials/typescript-tutorial/typescript-interview-q
 https://www.javatpoint.com/typescript-interview-questions
 
 https://mindmajix.com/typescript-interview-questions
+
+
+
+https://www.udemy.com/course/understanding-typescript/learn/lecture/17751414#overview

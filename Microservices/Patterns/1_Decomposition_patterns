@@ -1,0 +1,47 @@
+Monolithic to Microservices - Brown Field Projects
+Microservices in nature from scratch - Green Field Projects
+
+
+
+- By business capabilities
+    * How to decide the size of microservice 
+        - Business functionality 
+
+- By subdomain 
+    * God classes 
+        - shared among different modules 
+    * Sub domain 
+        - Domain Driven Design 
+        - Bounded context
+    Ex: 
+    Order Management 
+        - Placing order
+        - Order tracking 
+        - Invoice generation 
+
+- Strangler pattern    
+    * Only when converting Monolithic to Microservices architecture 
+
+- Sidecar pattern
+    * Common features reuse from each services
+    * Product Management <---> Order Management <---> Login Management <----> Account Management <---> Payment Management
+
+- Service mesh
+    * Communication complexity 
+    * Failure Isolation 
+    * Service Discovery 
+    * Config changes 
+
+    * It's dedicated infrastructure layer for service-to-service communication 
+    * It's a way to control how different parts of an application share the data among themselves 
+    * Array of network proxies 
+    * Best suited for cloud native application 
+
+    Roles
+    * Service Discovery 
+    * Fault tolerance 
+    * Routing (Sidecar)
+    * Observability (logging and monitoring )(Sidecar)
+    * Security (Sidecar)
+    * Access control (Sidecar)
+    * Deployment (Sidecar)

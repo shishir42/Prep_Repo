@@ -1,0 +1,43 @@
+Challenges with microservices architecture
+* Developed independently 
+* Deployed independently 
+* Scaled independently 
+
+Unique requirement for each service
+* Different data
+* Different storage type
+
+1. Database Per service
+    Benefits:
+    * Loosely coupled 
+    * Free to choose database type e.g, RDBMS, mongo, Cassandra etc.
+
+    If you using a relational database then the options are:
+        * Private-table-per-service
+            - each service owns a set of tables that must only be accessed by that service 
+        * Schema-per-service
+            - each service has a database schema that's private to that service 
+        * Database-service-per-service
+            - each service has it's own database server
+
+    Challenges
+        * Queries that needs join over multiple database 
+        * Transaction across multiple database
+
+    Solution 
+        * Queries that needs join over multiple database 
+            - CQRS
+            - Event Souring
+            - API Composition 
+        * Transaction across multiple database
+            - Saga Pattern 
+
+    Shared DB per service
+    
+
+2.CQRS (Command query responsibility segregation)
+3. Data consistency in distributed system 
+    * Eventual Consistency 
+    * 
+
+
