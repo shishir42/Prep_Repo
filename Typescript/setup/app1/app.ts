@@ -1,6 +1,10 @@
 console.log('Your code goes here...!!!');
 
 function add(n1: number, n2: number){
+    if(n1 === 0){
+        return 0;
+    }
+
     return n1+n2;
 }
 
@@ -157,3 +161,12 @@ console.log("Ending--");
 
 //tsc config
 //tsc --init
+
+//V1591233
+// Thank you for completing the questionnaire required to proceed with your background screening.
+
+// Please note, we will reach out if further information is required. 
+
+// If you have any queries, please contact us via help@sterlingrisq.com quoting your Username.
+
+//CBA9084

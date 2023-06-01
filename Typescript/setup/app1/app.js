@@ -1,6 +1,9 @@
 "use strict";
 console.log('Your code goes here...!!!');
 function add(n1, n2) {
+    if (n1 === 0) {
+        return 0;
+    }
     return n1 + n2;
 }
 const num1 = 5;
