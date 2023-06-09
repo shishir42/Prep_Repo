@@ -5,6 +5,10 @@ https://microservices.io/patterns/microservices.html
 https://learn.microsoft.com/en-us/training/paths/create-microservices-with-dotnet/
 
 
+https://scoutapm.com/blog/nodejs-architecture-and-12-best-practices-for-nodejs-development
+
+https://dev.to/gbengelebs/netflix-system-design-backend-architecture-10i3
+
 1. Monolithic vs Microservices
 2. Boundaries around microservice [Guidelines to follow when design microservices application]
 3. [Scalability | Availbility | Resiliency | Isolating Failure | Continuous delivery]
